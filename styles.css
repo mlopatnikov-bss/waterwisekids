@@ -56,6 +56,7 @@ nav a{
   box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
+.card h2,
 .card h3{
   margin-top:0;
 }
