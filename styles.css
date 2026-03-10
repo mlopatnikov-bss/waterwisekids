@@ -6,25 +6,42 @@ color:#333;
 line-height:1.7;
 }
 
+/* HEADER */
+
 header{
 background:#2c6fa3;
 color:white;
-padding:30px;
 text-align:center;
+padding:25px 20px;
 }
+
+header h1{
+margin:0;
+font-size:34px;
+}
+
+header p{
+margin:6px 0 0 0;
+font-size:16px;
+opacity:0.95;
+}
+
+/* NAV */
 
 nav{
 text-align:center;
-padding:15px;
 background:#e9ecef;
+padding:14px 0;
 }
 
 nav a{
-margin:0 12px;
+margin:0 14px;
 text-decoration:none;
 color:#2c6fa3;
 font-weight:bold;
 }
+
+/* PAGE CONTAINER */
 
 .container{
 max-width:900px;
@@ -32,29 +49,14 @@ margin:auto;
 padding:40px 20px;
 }
 
+/* CARDS */
+
 .card{
 background:white;
 padding:25px;
-margin-bottom:20px;
+margin-bottom:22px;
 border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-.article{
-background:white;
-padding:30px;
-margin-bottom:20px;
-border-radius:8px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-.article h1{
-margin-top:0;
-}
-
-.article h2{
-margin-top:30px;
-color:#2c6fa3;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
 .card h3{
@@ -66,6 +68,39 @@ text-decoration:none;
 color:#2c6fa3;
 }
 
+/* ARTICLE PAGE */
+
+.article{
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.article h1{
+margin-top:0;
+}
+
+.article h2{
+margin-top:30px;
+color:#2c6fa3;
+}
+
+/* BUTTONS */
+
+.button{
+display:inline-block;
+margin-top:12px;
+padding:12px 20px;
+background:#1aa7c9;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+/* CTA BOX */
+
 .cta{
 background:#eef7fb;
 border-left:4px solid #2c6fa3;
@@ -74,16 +109,7 @@ margin-top:30px;
 border-radius:6px;
 }
 
-.button{
-display:inline-block;
-margin-top:10px;
-padding:12px 20px;
-background:#1aa7c9;
-color:white;
-text-decoration:none;
-border-radius:6px;
-font-weight:bold;
-}
+/* LOCATION SECTIONS */
 
 .location{
 padding:15px 0;
@@ -93,6 +119,8 @@ border-top:1px solid #ddd;
 .location:first-of-type{
 border-top:none;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
