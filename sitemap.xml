@@ -1,124 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://waterwisekids.com/</loc>
-  </url>
+  <url><loc>https://waterwisekids.com/</loc></url>
+  <url><loc>https://waterwisekids.com/index.html</loc></url>
+  <url><loc>https://waterwisekids.com/about.html</loc></url>
+  <url><loc>https://waterwisekids.com/articles.html</loc></url>
+  <url><loc>https://waterwisekids.com/find-swim-lessons.html</loc></url>
 
-  <url>
-    <loc>https://waterwisekids.com/index.html</loc>
-  </url>
+  <url><loc>https://waterwisekids.com/when-should-kids-start-swimming.html</loc></url>
+  <url><loc>https://waterwisekids.com/best-age-for-swim-lessons.html</loc></url>
+  <url><loc>https://waterwisekids.com/can-babies-swim.html</loc></url>
+  <url><loc>https://waterwisekids.com/water-safety-for-toddlers.html</loc></url>
+  <url><loc>https://waterwisekids.com/how-to-teach-a-child-to-float.html</loc></url>
+  <url><loc>https://waterwisekids.com/how-long-does-it-take-a-child-to-learn-to-swim.html</loc></url>
+  <url><loc>https://waterwisekids.com/signs-your-child-is-ready-for-swim-lessons.html</loc></url>
+  <url><loc>https://waterwisekids.com/what-happens-at-a-childs-first-swim-lesson.html</loc></url>
+  <url><loc>https://waterwisekids.com/are-infant-swim-lessons-safe.html</loc></url>
+  <url><loc>https://waterwisekids.com/how-to-prevent-child-drowning.html</loc></url>
+  <url><loc>https://waterwisekids.com/how-often-should-kids-take-swim-lessons.html</loc></url>
+  <url><loc>https://waterwisekids.com/why-year-round-swim-lessons-matter.html</loc></url>
+  <url><loc>https://waterwisekids.com/pool-safety-rules-for-kids.html</loc></url>
+  <url><loc>https://waterwisekids.com/how-to-help-a-child-overcome-fear-of-water.html</loc></url>
+  <url><loc>https://waterwisekids.com/do-swim-lessons-reduce-drowning-risk.html</loc></url>
+  <url><loc>https://waterwisekids.com/how-to-teach-kids-to-swim.html</loc></url>
+  <url><loc>https://waterwisekids.com/what-should-kids-wear-to-swim-lessons.html</loc></url>
+  <url><loc>https://waterwisekids.com/private-vs-group-swim-lessons-for-kids.html</loc></url>
+  <url><loc>https://waterwisekids.com/why-swimming-is-an-important-life-skill.html</loc></url>
+  <url><loc>https://waterwisekids.com/swim-safety-tips-for-parents.html</loc></url>
+  <url><loc>https://waterwisekids.com/how-long-should-swim-lessons-last.html</loc></url>
+  <url><loc>https://waterwisekids.com/what-age-can-toddlers-start-swimming.html</loc></url>
+  <url><loc>https://waterwisekids.com/benefits-of-swimming-for-kids.html</loc></url>
+  <url><loc>https://waterwisekids.com/how-to-prepare-kids-for-first-swim-lesson.html</loc></url>
+  <url><loc>https://waterwisekids.com/common-swimming-mistakes-kids-make.html</loc></url>
 
-  <url>
-    <loc>https://waterwisekids.com/about.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/articles.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/find-swim-lessons.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/when-should-kids-start-swimming.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/best-age-for-swim-lessons.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/can-babies-swim.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/water-safety-for-toddlers.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/how-to-teach-a-child-to-float.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/how-long-does-it-take-a-child-to-learn-to-swim.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/signs-your-child-is-ready-for-swim-lessons.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/what-happens-at-a-childs-first-swim-lesson.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/are-infant-swim-lessons-safe.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/how-to-prevent-child-drowning.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/how-often-should-kids-take-swim-lessons.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/why-year-round-swim-lessons-matter.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/pool-safety-rules-for-kids.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/how-to-help-a-child-overcome-fear-of-water.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/do-swim-lessons-reduce-drowning-risk.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/how-to-teach-kids-to-swim.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/what-should-kids-wear-to-swim-lessons.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/private-vs-group-swim-lessons-for-kids.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/why-swimming-is-an-important-life-skill.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/swim-safety-tips-for-parents.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/how-long-should-swim-lessons-last.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/what-age-can-toddlers-start-swimming.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/benefits-of-swimming-for-kids.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/how-to-prepare-kids-for-first-swim-lesson.html</loc>
-  </url>
-
-  <url>
-    <loc>https://waterwisekids.com/common-swimming-mistakes-kids-make.html</loc>
-  </url>
+  <url><loc>https://waterwisekids.com/how-to-get-kids-comfortable-in-water.html</loc></url>
+  <url><loc>https://waterwisekids.com/why-kids-need-swim-lessons-even-if-they-have-a-pool.html</loc></url>
+  <url><loc>https://waterwisekids.com/how-to-choose-swim-lessons-for-kids.html</loc></url>
+  <url><loc>https://waterwisekids.com/questions-to-ask-a-swim-school.html</loc></url>
+  <url><loc>https://waterwisekids.com/is-it-ever-too-late-for-a-child-to-learn-to-swim.html</loc></url>
+  <url><loc>https://waterwisekids.com/signs-a-swim-program-is-good-for-beginners.html</loc></url>
+  <url><loc>https://waterwisekids.com/why-floating-is-important-for-kids.html</loc></url>
+  <url><loc>https://waterwisekids.com/how-parents-can-support-swim-lessons-at-home.html</loc></url>
+  <url><loc>https://waterwisekids.com/what-to-do-if-your-child-hates-swim-lessons.html</loc></url>
+  <url><loc>https://waterwisekids.com/how-to-build-water-confidence-in-children.html</loc></url>
 
 </urlset>
