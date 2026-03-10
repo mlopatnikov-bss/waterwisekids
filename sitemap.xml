@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
@@ -7,35 +6,59 @@
   </url>
 
   <url>
-    <loc>https://waterwisekids.com/articles</loc>
+    <loc>https://waterwisekids.com/index.html</loc>
   </url>
 
   <url>
-    <loc>https://waterwisekids.com/about</loc>
+    <loc>https://waterwisekids.com/about.html</loc>
   </url>
 
   <url>
-    <loc>https://waterwisekids.com/find-swim-lessons</loc>
+    <loc>https://waterwisekids.com/articles.html</loc>
   </url>
 
   <url>
-    <loc>https://waterwisekids.com/when-should-kids-start-swimming</loc>
+    <loc>https://waterwisekids.com/find-swim-lessons.html</loc>
   </url>
 
   <url>
-    <loc>https://waterwisekids.com/best-age-for-swim-lessons</loc>
+    <loc>https://waterwisekids.com/when-should-kids-start-swimming.html</loc>
   </url>
 
   <url>
-    <loc>https://waterwisekids.com/water-safety-for-toddlers</loc>
+    <loc>https://waterwisekids.com/best-age-for-swim-lessons.html</loc>
   </url>
 
   <url>
-    <loc>https://waterwisekids.com/how-to-teach-a-child-to-float</loc>
+    <loc>https://waterwisekids.com/can-babies-swim.html</loc>
   </url>
 
   <url>
-    <loc>https://waterwisekids.com/can-babies-swim</loc>
+    <loc>https://waterwisekids.com/water-safety-for-toddlers.html</loc>
+  </url>
+
+  <url>
+    <loc>https://waterwisekids.com/how-to-teach-a-child-to-float.html</loc>
+  </url>
+
+  <url>
+    <loc>https://waterwisekids.com/how-long-does-it-take-a-child-to-learn-to-swim.html</loc>
+  </url>
+
+  <url>
+    <loc>https://waterwisekids.com/signs-your-child-is-ready-for-swim-lessons.html</loc>
+  </url>
+
+  <url>
+    <loc>https://waterwisekids.com/what-happens-at-a-childs-first-swim-lesson.html</loc>
+  </url>
+
+  <url>
+    <loc>https://waterwisekids.com/are-infant-swim-lessons-safe.html</loc>
+  </url>
+
+  <url>
+    <loc>https://waterwisekids.com/how-to-prevent-child-drowning.html</loc>
   </url>
 
 </urlset>
