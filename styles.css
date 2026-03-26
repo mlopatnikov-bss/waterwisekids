@@ -735,6 +735,340 @@ img {
   font-weight: 700;
 }
 
+/* ── Intro/Content Boxes (swim-lesson, article pages) ──── */
+.wwk-intro-box {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid var(--gray-200);
+  margin-bottom: 2rem;
+}
+
+.wwk-intro-box p:last-child,
+.wwk-info-box p:last-child,
+.wwk-highlight-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Featured School (swim-lesson pages) ────────────────── */
+.wwk-featured-school .wwk-stars {
+  margin-bottom: 0.5rem;
+}
+
+.wwk-featured-school .btn-primary {
+  background: white;
+  color: var(--blue-800);
+}
+
+.wwk-featured-school .btn-primary:hover {
+  background: var(--gray-100);
+}
+
+/* ── School Listing (directory pages) ───────────────────── */
+.wwk-school-listing {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+}
+
+.wwk-school-listing:last-child {
+  border-bottom: none;
+}
+
+.wwk-school-listing h4 {
+  color: var(--blue-700);
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.wwk-school-listing p {
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Page Hero Banner ──────────────────────────────────── */
+.wwk-page-hero {
+  background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-700) 100%);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.wwk-page-hero h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.wwk-page-hero p {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ── Search Box ────────────────────────────────────────── */
+.wwk-search-box {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin: -1.5rem auto 2rem;
+  max-width: var(--container-max);
+  position: relative;
+  z-index: 10;
+}
+
+.wwk-search-box input[type="text"],
+.wwk-search-box input[type="search"],
+.wwk-search-box select {
+  padding: 0.875rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--gray-800);
+  background: var(--gray-50);
+  width: 100%;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.wwk-search-box input:focus,
+.wwk-search-box select:focus {
+  outline: none;
+  border-color: var(--blue-600);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+  background: white;
+}
+
+.wwk-search-box ::placeholder {
+  color: var(--gray-400);
+}
+
+/* ── Grid Layouts ──────────────────────────────────────── */
+.wwk-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.wwk-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.wwk-grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── Error Page ────────────────────────────────────────── */
+.wwk-error-page {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.wwk-error-code {
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--blue-600);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+/* ── Stat Card ─────────────────────────────────────────── */
+.wwk-stat-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.wwk-stat-card .stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--blue-600);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.wwk-stat-card .stat-label {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+/* ── Form Elements (shared) ────────────────────────────── */
+.wwk-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.wwk-form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--gray-800);
+  font-size: 0.95rem;
+}
+
+.wwk-form-group input[type="text"],
+.wwk-form-group input[type="email"],
+.wwk-form-group input[type="url"],
+.wwk-form-group input[type="tel"],
+.wwk-form-group input[type="number"],
+.wwk-form-group select,
+.wwk-form-group textarea {
+  width: 100%;
+  padding: 0.875rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--gray-800);
+  background: var(--gray-50);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.wwk-form-group input:focus,
+.wwk-form-group select:focus,
+.wwk-form-group textarea:focus {
+  outline: none;
+  border-color: var(--blue-600);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+  background: white;
+}
+
+.wwk-form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ── Pricing Cards ─────────────────────────────────────── */
+.wwk-pricing-card {
+  background: white;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.wwk-pricing-card:hover,
+.wwk-pricing-card.active {
+  border-color: var(--blue-600);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.15);
+}
+
+.wwk-pricing-card .price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--orange-500);
+  margin: 1rem 0;
+}
+
+/* ── Program Cards ─────────────────────────────────────── */
+.wwk-program-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.wwk-program-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.wwk-program-card h3 {
+  color: var(--blue-800);
+  margin-bottom: 0.75rem;
+}
+
+/* ── Article Layout (education pages) ──────────────────── */
+.wwk-article-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 3rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 2rem 20px;
+}
+
+.wwk-sidebar {
+  position: sticky;
+  top: calc(var(--nav-height) + 20px);
+  align-self: start;
+}
+
+.wwk-sidebar-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.wwk-sidebar-card h4 {
+  color: var(--blue-800);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.wwk-sidebar-card a {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--blue-600);
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+
+.wwk-sidebar-card a:hover {
+  color: var(--blue-800);
+}
+
+/* ── Review/Testimonial Cards ──────────────────────────── */
+.wwk-review-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.wwk-review-card .reviewer {
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* ── Tag/Chip Elements ─────────────────────────────────── */
+.wwk-tag {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+
+.wwk-tag:hover {
+  background: var(--blue-50);
+  color: var(--blue-700);
+}
+
+.wwk-tag.active {
+  background: var(--blue-600);
+  color: white;
+}
+
 /* ── Responsive Utilities ─────────────────────────────── */
 @media (max-width: 768px) {
   .wwk-local-content h1 {
@@ -752,4 +1086,2871 @@ img {
   .wwk-section {
     padding: 40px 20px;
   }
+  .wwk-page-hero h1 {
+    font-size: 1.75rem;
+  }
+  .wwk-grid-2,
+  .wwk-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .wwk-article-layout {
+    grid-template-columns: 1fr;
+  }
+  .wwk-sidebar {
+    position: static;
+  }
+  .wwk-school-listing {
+    flex-direction: column;
+  }
+  .wwk-error-code {
+    font-size: 3.5rem;
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   COMPONENT STYLES — unprefixed classes used across
+   swim-lesson pages, education articles, hub pages,
+   british-swim-school pages, and specialty pages.
+   ══════════════════════════════════════════════════════ */
+
+/* ── Footer Column (universal) ───────────────────────── */
+.wwk-footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Hero Sections (hub/index pages) ─────────────────── */
+.hero {
+  background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-700) 100%);
+  color: white;
+  padding: 3.5rem 2rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.hero p,
+.hero-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 600px;
+  margin: 0.5rem auto 0;
+}
+
+/* ── Featured School Card (swim-lesson pages) ────────── */
+.featured-school {
+  background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-700) 100%);
+  color: white;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+}
+
+.featured-school h2 {
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.featured-school p {
+  color: rgba(255,255,255,0.9);
+  line-height: 1.7;
+}
+
+.featured-school ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem;
+}
+
+.featured-school li {
+  padding: 0.4rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: rgba(255,255,255,0.9);
+}
+
+.featured-school li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--teal-500);
+  font-weight: 700;
+}
+
+.featured-badge {
+  display: inline-block;
+  background: var(--teal-500);
+  color: var(--blue-800);
+  padding: 0.4rem 0.875rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.stars {
+  color: #fbbf24;
+  letter-spacing: 2px;
+}
+
+/* ── Other Schools / School Listings ─────────────────── */
+.other-schools {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid var(--gray-200);
+  margin-bottom: 2rem;
+}
+
+.school-listing {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.school-listing:last-child {
+  border-bottom: none;
+}
+
+.school-info h4 {
+  color: var(--blue-700);
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.school-info p {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+/* ── FAQ Accordion (cheltenham, philadelphia, etc.) ──── */
+.faq-section {
+  margin: 2rem 0;
+}
+
+.faq-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--gray-200);
+  padding: 1.25rem 0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h4 {
+  font-weight: 600;
+  color: var(--blue-700);
+  cursor: pointer;
+  font-size: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  margin: 0;
+}
+
+.faq-item h4::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  color: var(--teal-500);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.faq-item.active h4::before {
+  content: "−";
+}
+
+.faq-answer {
+  display: none;
+  padding: 0.75rem 0 0 1.5rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-question {
+  font-weight: 600;
+  color: var(--blue-700);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.75rem 0;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.faq-grid {
+  display: grid;
+  gap: 0;
+}
+
+/* ── Breadcrumb (unprefixed, education articles) ─────── */
+.breadcrumb {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 12px 20px;
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+.breadcrumb a {
+  color: var(--blue-600);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.breadcrumb a:hover {
+  color: var(--blue-800);
+}
+
+/* ── Article Layout (education article pages) ────────── */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 3rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 2rem 20px;
+}
+
+.article {
+  min-width: 0;
+}
+
+.article-header {
+  margin-bottom: 1.5rem;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: var(--gray-500);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.article-excerpt {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--gray-600);
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.article-body {
+  line-height: 1.8;
+  color: var(--gray-700);
+}
+
+.article-body h2 {
+  font-size: 1.5rem;
+  color: var(--blue-800);
+  margin: 2.5rem 0 1rem;
+  font-weight: 700;
+}
+
+.article-body h3 {
+  font-size: 1.2rem;
+  color: var(--blue-700);
+  margin: 2rem 0 0.75rem;
+  font-weight: 600;
+}
+
+.article-body p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.article-body ul,
+.article-body ol {
+  margin: 0 0 1.25rem 1.5rem;
+  color: var(--gray-700);
+}
+
+.article-body li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.article-body strong {
+  color: var(--gray-800);
+}
+
+/* ── Sidebar (education articles) ────────────────────── */
+.sidebar {
+  position: sticky;
+  top: calc(var(--nav-height) + 20px);
+  align-self: start;
+}
+
+.sidebar-box {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-title {
+  color: var(--blue-800);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.sidebar-box a {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--blue-600);
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+
+.sidebar-box a:hover {
+  color: var(--blue-800);
+}
+
+/* ── Table of Contents (articles) ────────────────────── */
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-item {
+  padding: 0.5rem 0;
+}
+
+.toc-item a {
+  color: var(--blue-600);
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+
+.toc-item a:hover {
+  color: var(--blue-800);
+}
+
+/* ── CTA Box (article bottoms) ───────────────────────── */
+.cta-box {
+  background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-700) 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  margin: 2rem 0;
+}
+
+.cta-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cta-desc {
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.cta-box .btn-primary {
+  background: white;
+  color: var(--blue-800);
+}
+
+.cta-box .btn-primary:hover {
+  background: var(--gray-100);
+}
+
+/* ── CTA Section (generic) ───────────────────────────── */
+.cta-section {
+  background: linear-gradient(135deg, var(--teal-500) 0%, #0d9488 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.cta-section p {
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1.5rem;
+}
+
+/* ── Related Articles Grid ───────────────────────────── */
+.related {
+  margin: 3rem 0 2rem;
+}
+
+.related-title {
+  font-size: 1.25rem;
+  color: var(--blue-800);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.related-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.related-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.related-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--blue-700);
+  margin-bottom: 0.5rem;
+}
+
+.related-card-link {
+  color: var(--blue-600);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.related-card-link:hover {
+  color: var(--blue-800);
+}
+
+/* ── Callout Boxes (articles) ────────────────────────── */
+.callout {
+  background: var(--blue-50);
+  border-left: 4px solid var(--blue-600);
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  margin: 1.5rem 0;
+}
+
+.callout-title {
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.callout-text {
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Alert Boxes ─────────────────────────────────────── */
+.alert {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  margin: 1.5rem 0;
+}
+
+.alert-title {
+  font-weight: 700;
+  color: #92400e;
+  margin-bottom: 0.5rem;
+}
+
+.alert-text {
+  color: #78350f;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Checklist Items ─────────────────────────────────── */
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--gray-100);
+  line-height: 1.6;
+  color: var(--gray-700);
+}
+
+.checklist-item:last-child {
+  border-bottom: none;
+}
+
+.checklist-icon {
+  color: var(--teal-500);
+  font-weight: 700;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+
+/* ── Step/Process Lists ──────────────────────────────── */
+.step-box {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--blue-600);
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.step:last-child {
+  border-bottom: none;
+}
+
+.steps {
+  margin: 1.5rem 0;
+}
+
+.steps-list {
+  margin: 1.5rem 0;
+}
+
+/* ── Quick Reference / Tips ──────────────────────────── */
+.quick-ref {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.quick-ref-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.quick-ref-item:last-child {
+  border-bottom: none;
+}
+
+.quick-tip,
+.quick-tips {
+  margin: 1.5rem 0;
+}
+
+.tip-box {
+  background: var(--blue-50);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.tip-title {
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Milestone/Timeline Sections ─────────────────────── */
+.milestone-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+}
+
+.milestone-age {
+  display: inline-block;
+  background: var(--blue-600);
+  color: white;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.milestone-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.75rem;
+}
+
+.milestone-content {
+  color: var(--gray-700);
+  line-height: 1.7;
+}
+
+.timeline-note {
+  font-style: italic;
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.tips {
+  margin: 1.5rem 0;
+}
+
+.tips-item {
+  padding: 0.5rem 0;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+/* ── Age Sections (toddler-water-safety, when-to-start) ─ */
+.age-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+}
+
+.age-section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 1rem;
+}
+
+.age-badge {
+  display: inline-block;
+  background: var(--teal-500);
+  color: white;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Info Box (unprefixed, various pages) ────────────── */
+.info-box {
+  background: var(--blue-50);
+  border-left: 4px solid var(--blue-600);
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  margin: 1.5rem 0;
+}
+
+.info-text {
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.info-title {
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.info-item {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.info-item h3 {
+  color: var(--blue-700);
+  margin-bottom: 0.5rem;
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Hazard Box (lake-ocean-safety) ──────────────────── */
+.hazard-box {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  margin: 1.5rem 0;
+}
+
+.hazard-title {
+  font-weight: 700;
+  color: #92400e;
+  margin-bottom: 0.5rem;
+}
+
+.hazard-text {
+  color: #78350f;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Rule Cards (pool-safety-rules) ──────────────────── */
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.rule-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.rule-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--blue-600);
+  color: white;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.rule-title {
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+}
+
+.rule-text {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ── Printable Box ───────────────────────────────────── */
+.printable-box {
+  background: var(--gray-50);
+  border: 2px dashed var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.printable-title {
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+}
+
+.printable-desc {
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+}
+
+.print-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--blue-600);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.15s;
+}
+
+.print-button:hover {
+  background: var(--blue-700);
+}
+
+/* ── Internal Links ──────────────────────────────────── */
+.internal-link {
+  color: var(--blue-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.internal-link:hover {
+  color: var(--blue-800);
+}
+
+/* ── Stat Boxes ──────────────────────────────────────── */
+.stat-box {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.stat-box .value,
+.stat-box .stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--blue-600);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Newsletter Boxes ────────────────────────────────── */
+.newsletter-box {
+  background: var(--blue-50);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-title {
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-desc {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--blue-600);
+}
+
+.newsletter-button {
+  background: var(--blue-600);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.newsletter-button:hover {
+  background: var(--blue-700);
+}
+
+/* ── Most-Read Sidebar ───────────────────────────────── */
+.most-read-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.most-read-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.most-read-item:last-child {
+  border-bottom: none;
+}
+
+.most-read-rank {
+  font-weight: 800;
+  color: var(--blue-600);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+/* ── Article Cards (education index) ─────────────────── */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.article-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.article-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.article-card-image {
+  width: 100%;
+  height: 180px;
+  background: var(--gray-100);
+  overflow: hidden;
+}
+
+.article-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-card-body {
+  padding: 1.5rem;
+}
+
+.article-card-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--teal-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.article-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.article-card-excerpt {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.article-card-link {
+  color: var(--blue-600);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.article-card-link:hover {
+  color: var(--blue-800);
+}
+
+/* ── Filter Pills ────────────────────────────────────── */
+.filters {
+  margin: 1.5rem 0;
+}
+
+.filter-label {
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-right: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.filter-pill,
+.pill {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.filter-pill:hover,
+.pill:hover {
+  background: var(--blue-50);
+  color: var(--blue-700);
+}
+
+.filter-pill.active,
+.pill.active {
+  background: var(--blue-600);
+  color: white;
+}
+
+/* ── British Swim School Pages ───────────────────────── */
+.tagline {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  margin-top: 0.5rem;
+}
+
+.rating-banner {
+  background: rgba(255,255,255,0.1);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.program-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.program-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.program-card h3 {
+  color: var(--blue-800);
+  margin-bottom: 0.75rem;
+}
+
+.programs {
+  margin: 2rem 0;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.why-choose {
+  margin: 2rem 0;
+}
+
+.service-area {
+  margin: 2rem 0;
+}
+
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.area-item {
+  padding: 1rem;
+  text-align: center;
+  background: var(--gray-100);
+  border-radius: var(--radius-sm);
+  color: var(--blue-600);
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.area-item:hover {
+  background: var(--gray-200);
+}
+
+.reviews {
+  margin: 2rem 0;
+}
+
+.review {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.review-text {
+  color: var(--gray-700);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.review-author {
+  font-weight: 600;
+  color: var(--gray-800);
+  font-size: 0.9rem;
+}
+
+/* ── Contact Page ────────────────────────────────────── */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 2rem 20px;
+}
+
+.contact-info-section {
+  padding: 2rem 0;
+}
+
+.contact-form-section {
+  padding: 2rem 0;
+}
+
+.contact-info-box {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.email-link {
+  color: var(--blue-600);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.advertise-link {
+  color: var(--blue-600);
+  font-weight: 600;
+}
+
+/* ── Form Elements (unprefixed) ──────────────────────── */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--gray-800);
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="url"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.875rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--gray-800);
+  background: var(--gray-50);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--blue-600);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+  background: white;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-600);
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.form-button:hover {
+  background: var(--blue-700);
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid var(--gray-200);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.form-section:last-child {
+  border-bottom: none;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.submit-button {
+  background: var(--blue-600);
+  color: white;
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.15s;
+}
+
+.submit-button:hover {
+  background: var(--blue-700);
+}
+
+.cancel-button {
+  background: var(--gray-100);
+  color: var(--gray-600);
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.15s;
+}
+
+.cancel-button:hover {
+  background: var(--gray-200);
+}
+
+/* ── Checkbox Groups ─────────────────────────────────── */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--gray-700);
+}
+
+/* ── 404 Page ────────────────────────────────────────── */
+.error-code {
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--blue-600);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.error-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.error-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.75rem;
+}
+
+.error-message {
+  color: var(--gray-600);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.search-section {
+  margin: 2rem 0;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.popular-section {
+  margin-top: 2rem;
+}
+
+.popular-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.popular-links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+  color: var(--blue-600);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.popular-links a:hover {
+  background: var(--gray-200);
+}
+
+/* ── Jobs Hub Page ───────────────────────────────────── */
+.hero-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem 0;
+  margin: 1.5rem 0;
+}
+
+.stat-item,
+.stat {
+  text-align: center;
+}
+
+.stat-value,
+.stat .value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--blue-600);
+  line-height: 1;
+}
+
+.stat .label {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 0.75rem;
+  align-items: end;
+}
+
+.search-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  color: var(--gray-700);
+}
+
+.search-group input,
+.search-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.search-button {
+  background: var(--blue-600);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.search-button:hover {
+  background: var(--blue-700);
+}
+
+.search-box {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin: -1.5rem auto 2rem;
+  max-width: var(--container-max);
+  position: relative;
+  z-index: 10;
+}
+
+.search-input {
+  padding: 0.875rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: inherit;
+  width: 100%;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.job-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.job-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.job-card.featured {
+  border-color: var(--blue-600);
+  border-width: 2px;
+}
+
+.job-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+}
+
+.job-company {
+  color: var(--blue-600);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.job-location {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.job-description {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.job-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge-fulltime {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-parttime {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-seasonal {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.pay-range {
+  font-weight: 600;
+  color: var(--teal-500);
+  font-size: 0.95rem;
+}
+
+.job-posted {
+  color: var(--gray-400);
+  font-size: 0.8rem;
+}
+
+.apply-button {
+  display: inline-flex;
+  align-items: center;
+  background: var(--blue-600);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.apply-button:hover {
+  background: var(--blue-700);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.pagination a,
+.pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.15s;
+}
+
+.pagination a {
+  background: var(--gray-100);
+  color: var(--gray-600);
+}
+
+.pagination a:hover {
+  background: var(--blue-50);
+  color: var(--blue-700);
+}
+
+.pagination .active {
+  background: var(--blue-600);
+  color: white;
+}
+
+.post-job-section {
+  background: var(--gray-50);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.post-button {
+  display: inline-flex;
+  align-items: center;
+  background: var(--orange-500);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.post-button:hover {
+  background: #ea580c;
+}
+
+.teen-section {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: var(--blue-50);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.teen-button {
+  display: inline-flex;
+  align-items: center;
+  background: var(--teal-500);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.teen-button:hover {
+  background: #0d9488;
+}
+
+/* ── Jobs Post Page ──────────────────────────────────── */
+.page-header {
+  background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-700) 100%);
+  color: white;
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.page-header-content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.page-header h1 {
+  color: white;
+}
+
+.main-content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 2rem 20px;
+}
+
+.pricing-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.pricing-card {
+  background: white;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.pricing-card:hover {
+  border-color: var(--blue-600);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.15);
+}
+
+.pricing-card.featured {
+  border-color: var(--blue-600);
+  position: relative;
+}
+
+.pricing-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+}
+
+.pricing-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--orange-500);
+  margin: 1rem 0;
+}
+
+.pricing-duration {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.pricing-features li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--gray-700);
+  font-size: 0.95rem;
+}
+
+.pricing-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--teal-500);
+  font-weight: 700;
+}
+
+.pricing-comparison {
+  margin: 2rem 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.comparison-table th {
+  background: var(--gray-50);
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--gray-800);
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.comparison-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--gray-100);
+  color: var(--gray-700);
+}
+
+.comparison-table tr:hover td {
+  background: var(--gray-50);
+}
+
+.checkmark {
+  color: var(--teal-500);
+  font-weight: 700;
+}
+
+.why-item {
+  margin-bottom: 1.5rem;
+}
+
+.why-title {
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.25rem;
+}
+
+.why-desc {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ── Swim Lessons Index Page ─────────────────────────── */
+.featured-regions {
+  margin: 2rem 0;
+}
+
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.region-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.region-header {
+  background: var(--blue-800);
+  color: white;
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+}
+
+.region-body {
+  padding: 1.5rem;
+}
+
+.cities-list,
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.city-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  background: var(--gray-50);
+  border-radius: var(--radius-sm);
+  color: var(--blue-600);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.15s;
+}
+
+.city-link:hover {
+  background: var(--gray-200);
+}
+
+.most-searched {
+  margin: 2rem 0;
+}
+
+/* ── Swim Schools Directory ──────────────────────────── */
+.featured-schools {
+  margin: 2rem 0;
+}
+
+.school-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.school-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.school-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.school-body {
+  padding: 1.5rem;
+}
+
+.school-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.25rem;
+}
+
+.school-location {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+.school-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.rating-text {
+  font-weight: 600;
+  color: var(--gray-800);
+  font-size: 0.9rem;
+}
+
+.review-count {
+  color: var(--gray-500);
+  font-size: 0.85rem;
+}
+
+.school-cta {
+  display: inline-flex;
+  align-items: center;
+  color: var(--blue-600);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+
+.school-cta:hover {
+  color: var(--blue-800);
+}
+
+.add-school-cta {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.add-school-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--teal-500);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.add-school-button:hover {
+  background: #0d9488;
+}
+
+.how-it-works {
+  margin: 3rem 0;
+}
+
+.quality-factors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.quality-factor {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.quality-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.quality-text {
+  flex: 1;
+}
+
+.quality-title {
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.25rem;
+}
+
+.quality-desc {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.state-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.state-chip {
+  display: inline-block;
+  padding: 0.4rem 0.875rem;
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+  color: var(--blue-600);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.state-chip:hover {
+  background: var(--blue-50);
+}
+
+.section {
+  margin: 3rem 0;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 1.5rem;
+}
+
+.section-light {
+  background: var(--gray-50);
+  padding: 3rem 2rem;
+  margin: 2rem -2rem;
+  border-radius: var(--radius-md);
+}
+
+.section-white {
+  background: white;
+  padding: 3rem 2rem;
+}
+
+/* ── Gear Hub Page ───────────────────────────────────── */
+.categories {
+  margin: 2rem 0;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.category-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.category-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.category-title {
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.25rem;
+}
+
+.category-desc {
+  color: var(--gray-600);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.category-section {
+  margin: 2rem 0;
+}
+
+.featured-picks {
+  margin: 2rem 0;
+}
+
+.picks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.gear-item {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.gear-item-name {
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.25rem;
+}
+
+.gear-item-desc {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.gear-item-age {
+  color: var(--gray-500);
+  font-size: 0.8rem;
+}
+
+.gear-link {
+  color: var(--blue-600);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.buying-guides {
+  margin: 2rem 0;
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.guide-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.guide-header {
+  background: var(--blue-50);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.guide-icon {
+  font-size: 1.5rem;
+}
+
+.guide-body {
+  padding: 1.5rem;
+}
+
+/* ── Advertise Hub Page ──────────────────────────────── */
+.why-advertise {
+  margin: 2rem 0;
+}
+
+.why-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.audience-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.packages {
+  margin: 2rem 0;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.package-card {
+  background: white;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.package-card:hover {
+  border-color: var(--blue-600);
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.15);
+}
+
+.package-card.featured {
+  border-color: var(--blue-600);
+}
+
+.package-badge {
+  display: inline-block;
+  background: var(--teal-500);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.package-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+}
+
+.package-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--orange-500);
+  margin: 0.75rem 0;
+}
+
+.package-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.package-features li {
+  padding: 0.4rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--gray-700);
+  font-size: 0.95rem;
+}
+
+.package-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--teal-500);
+  font-weight: 700;
+}
+
+.package-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-600);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s;
+  width: 100%;
+}
+
+.package-button:hover {
+  background: var(--blue-700);
+}
+
+.contact-cta {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.testimonials {
+  margin: 2rem 0;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonial {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--gray-800);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+/* ── Teens Hub Page ──────────────────────────────────── */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.feature-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.feature-link {
+  color: var(--blue-600);
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-top: 0.75rem;
+}
+
+.salary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin: 1.5rem 0;
+}
+
+.salary-table th {
+  background: var(--gray-50);
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--gray-800);
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.salary-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--gray-100);
+  color: var(--gray-700);
+}
+
+.salary-table tr:hover td {
+  background: var(--gray-50);
+}
+
+.checklist-box {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.arrow {
+  margin-left: 0.25rem;
+}
+
+/* ── Teens Subpages ──────────────────────────────────── */
+.career-section {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+}
+
+.career-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 1rem;
+}
+
+.career-section-content {
+  color: var(--gray-700);
+  line-height: 1.7;
+}
+
+.career-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.career-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blue-800);
+  margin-bottom: 0.5rem;
+}
+
+.career-description {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.career-salary {
+  color: var(--teal-500);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.career-requirements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.career-level {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.level-1 { background: #d1fae5; color: #065f46; }
+.level-2 { background: #dbeafe; color: #1e40af; }
+.level-3 { background: #fef3c7; color: #92400e; }
+.level-4 { background: #fce7f3; color: #9d174d; }
+
+.requirement-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  color: var(--gray-600);
+}
+
+.advancement-box {
+  background: var(--blue-50);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.settings-section {
+  margin: 1.5rem 0;
+}
+
+.setting-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.tips-section {
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.cert-box {
+  background: var(--blue-50);
+  border-left: 4px solid var(--blue-600);
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  margin: 1.5rem 0;
+}
+
+.cert-box h3 {
+  color: var(--blue-800);
+  margin: 0 0 0.5rem 0;
+}
+
+.scholarship-item {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Swim Schools Add Page ───────────────────────────── */
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--gray-50);
+  border-radius: var(--radius-sm);
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.info-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.price-highlight {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--orange-500);
+}
+
+.what-you-get {
+  margin: 1.5rem 0;
+}
+
+/* ── Special Needs Swimming Page ─────────────────────── */
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--gray-700);
+  margin-bottom: 1.5rem;
+}
+
+.highlight-box {
+  background: var(--blue-50);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--blue-600);
+  margin: 1.5rem 0;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.condition-list {
+  margin: 1.5rem 0;
+}
+
+.condition-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.condition-item:last-child {
+  border-bottom: none;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--blue-600);
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.button:hover {
+  background: var(--blue-700);
+}
+
+/* ── NW Philadelphia Swim Lessons (programs grid) ────── */
+.age-range {
+  display: inline-block;
+  background: var(--teal-500);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Featured badge in listings ──────────────────────── */
+.featured {
+  border-color: var(--blue-600);
+  border-width: 2px;
+}
+
+/* ── Responsive: all new components ──────────────────── */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  .hero {
+    padding: 2.5rem 1.5rem;
+  }
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+  }
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-bar {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .region-grid,
+  .program-grid,
+  .programs-grid,
+  .pricing-options,
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+  .rules-grid,
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-grid,
+  .quality-factors,
+  .why-benefits,
+  .testimonial-grid,
+  .categories-grid,
+  .guides-grid,
+  .picks-container,
+  .benefits-list,
+  .info-cards,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  .error-code {
+    font-size: 3.5rem;
+  }
+  .newsletter-form {
+    flex-direction: column;
+  }
+  .search-form {
+    flex-direction: column;
+  }
+  .audience-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured-school {
+    padding: 1.5rem;
+  }
+  .page-header {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ── Final Missing Classes ───────────────────────────── */
+.school-info {
+  flex: 1;
+}
+
+.school-info h4 {
+  color: var(--blue-700);
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.school-info p {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.faq {
+  margin: 2rem 0;
+}
+
+.search-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.search-group label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--gray-700);
+}
+
+.search-group input,
+.search-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: inherit;
 }

@@ -10,280 +10,7 @@
   <meta property="og:description" content="Find kids and adult swim lessons in your area. Browse our national directory of swim lesson pages across all 50 states. Filter by city, age, and program type.">
   <meta property="og:type" content="website">
     <meta name="keywords" content="swim lessons near me, kids swim lessons, adult swim lessons, swim schools, local swim lessons">
-<style>
-        
-
-        
-
-        /* Header/Nav */
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .search-box {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .search-box input {
-            padding: 0.75rem 1rem;
-            border: none;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            min-width: 250px;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .search-box button {
-            padding: 0.75rem 2rem;
-            background-color: #14b8a6;
-            color: white;
-            border: none;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .search-box button:hover {
-            background-color: #0d9488;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-
-        /* Featured Regions */
-        .featured-regions {
-            margin-bottom: 4rem;
-        }
-
-        .featured-regions h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #075985;
-        }
-
-        .region-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .region-card {
-            background: white;
-            border-radius: 0.75rem;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .region-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-        }
-
-        .region-
-
-        .region-header h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .region-
-
-        .region-body p {
-            color: #6b7280;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-
-        .cities-list {
-            margin: 1rem 0;
-        }
-
-        .cities-list li {
-            list-style: none;
-            padding: 0.35rem 0;
-            color: #0284c7;
-            font-weight: 500;
-        }
-
-        .region-card a {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.6rem 1.5rem;
-            background-color: #14b8a6;
-            color: white;
-            text-decoration: none;
-            border-radius: 0.4rem;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-
-        .region-card a:hover {
-            background-color: #0d9488;
-        }
-
-        /* Most Searched */
-        .most-searched {
-            background: white;
-            padding: 3rem 2rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            margin-bottom: 3rem;
-        }
-
-        .most-searched h2 {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            color: #075985;
-        }
-
-        .cities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-        }
-
-        .city-link {
-            display: block;
-            padding: 1rem;
-            text-align: center;
-            background-color: #f3f4f6;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            color: #0284c7;
-            font-weight: 500;
-            transition: background-color 0.3s;
-        }
-
-        .city-link:hover {
-            background-color: #e5e7eb;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 0.75rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .cta-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background-color: white;
-            color: #14b8a6;
-            text-decoration: none;
-            border-radius: 0.5rem;
-            font-weight: 700;
-            font-size: 1.05rem;
-            transition: transform 0.3s;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-        }
-
-        /* Footer */
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            
-
-            
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .search-box {
-                flex-direction: column;
-            }
-
-            .search-box input {
-                min-width: 100%;
-            }
-
-            .region-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cities-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
-  <link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
   <!-- End Google Tag Manager -->
@@ -317,16 +44,16 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Find Swim Lessons Near You</h1>
-            <p>Discover beginner-friendly swim programs across all 50 states. Safety-first lessons for infants, children, and adults.</p>
+            <p>Discover beginner-friendly swim programs across all 50 states nationwide. Safety-first lessons for infants, children, teens, and adults in your community.</p>
             <div class="search-box">
-                <input type="text" placeholder="Enter city or state...">
+                <input type="text" placeholder="Enter city, ZIP, or state...">
                 <button>Search</button>
             </div>
         </div>
     </section>
 
     <!-- Main Content -->
-    <main>
+    <main class="wwk-local-content">
         <!-- Featured Regions -->
         <section class="featured-regions">
             <h2>Featured Regions</h2>
@@ -390,6 +117,66 @@
             </div>
         </section>
 
+        <!-- All States Coverage -->
+        <section style="background: #f0f7fd; padding: 48px 20px; margin: 48px 0; border-radius: 12px;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="text-align: center; margin: 0 0 16px 0; color: #0d4d77;">Coverage Across All 50 States</h2>
+                <p style="text-align: center; color: var(--gray-600); margin: 0 0 32px 0; font-size: 0.95rem;">We have swim lesson resources and program information for every state. Click to browse your region:</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 8px;">
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">AL</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">AK</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">AZ</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">AR</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">CA</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">CO</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">CT</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">DE</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">FL</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">GA</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">HI</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">ID</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">IL</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">IN</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">IA</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">KS</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">KY</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">LA</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">ME</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">MD</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">MA</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">MI</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">MN</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">MS</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">MO</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">MT</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">NE</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">NV</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">NH</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">NJ</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">NM</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">NY</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">NC</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">ND</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">OH</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">OK</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">OR</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">PA</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">RI</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">SC</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">SD</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">TN</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">TX</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">UT</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">VT</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">VA</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">WA</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">WV</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">WI</div>
+                    <div style="background: white; padding: 12px; text-align: center; border-radius: 8px; border: 2px solid #dbe8f0; font-weight: 600; color: #0f5f94; font-size: 0.85rem;">WY</div>
+                </div>
+            </div>
+        </section>
+
         <!-- Most Searched Cities -->
         <section class="most-searched">
             <h2>Most Searched Cities</h2>
@@ -413,7 +200,7 @@
         <section class="cta-section">
             <h2>Ready to Start Swimming?</h2>
             <p>Browse our featured swim schools and find the perfect program for your family.</p>
-            <a href="#featured-schools" class="cta-button">Explore Schools</a>
+            <a href="#featured-schools" class="btn-primary">Explore Schools</a>
         </section>
     </main>
 

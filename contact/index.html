@@ -9,259 +9,21 @@
   <meta property="og:title" content="Contact WaterWiseKids | Get in Touch | National Aquatics Hub">
   <meta property="og:description" content="Contact the WaterWiseKids team for advertising inquiries, school listings, article suggestions, or general questions about our national aquatics hub.">
   <meta property="og:type" content="website">
-<style>
-    
-
-    html, 
-
-    /* Navigation */
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, #075985 0%, #0369a1 100%);
-      color: white;
-      padding: 4rem 2rem;
-      text-align: center;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact WaterWiseKids",
+    "description": "Contact the WaterWiseKids team",
+    "url": "https://www.waterwisekids.com/contact/",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@waterwisekids.com",
+      "contactType": "General Support"
     }
-
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      opacity: 0.95;
-    }
-
-    /* Main Content */
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-
-    .contact-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 3rem;
-    }
-
-    /* Contact Form */
-    .contact-form-section {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .contact-form-section h2 {
-      color: #075985;
-      font-size: 1.3rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    .form-group label {
-      display: block;
-      color: #475569;
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 0.75rem;
-      border: 2px solid #e2e8f0;
-      border-radius: 6px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      transition: border-color 0.2s;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: #0284c7;
-      background-color: #f0f9ff;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 150px;
-    }
-
-    .form-button {
-      background-color: #0284c7;
-      color: white;
-      padding: 0.75rem 2rem;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.2s;
-      width: 100%;
-    }
-
-    .form-button:hover {
-      background-color: #075985;
-    }
-
-    /* Contact Info */
-    .contact-info-section {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .contact-info-box {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .contact-info-box h3 {
-      color: #075985;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact-info-box p {
-      color: #475569;
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-info-box p:last-child {
-      margin-bottom: 0;
-    }
-
-    .email-link {
-      color: #0284c7;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .email-link:hover {
-      text-decoration: underline;
-    }
-
-    .advertise-link {
-      display: inline-block;
-      color: #0284c7;
-      text-decoration: none;
-      font-weight: 500;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #e0f2fe;
-      border-radius: 6px;
-      transition: background-color 0.2s;
-    }
-
-    .advertise-link:hover {
-      background-color: #0284c7;
-      color: white;
-    }
-
-    /* FAQ Section */
-    .faq-section {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      margin-bottom: 3rem;
-    }
-
-    .faq-section h2 {
-      color: #075985;
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .faq-item {
-      margin-bottom: 2rem;
-    }
-
-    .faq-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .faq-question {
-      color: #075985;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      font-size: 1rem;
-    }
-
-    .faq-answer {
-      color: #475569;
-      line-height: 1.7;
-    }
-
-    /* Footer */
-    
-
-    footer a {
-      color: #bfdbfe;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      
-
-      
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      main {
-        padding: 2rem 1rem;
-      }
-
-      .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .contact-form-section,
-      .contact-info-box,
-      .faq-section {
-        padding: 1.5rem;
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="/styles.css">
+  }
+  </script>
+<link rel="stylesheet" href="/styles.css">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
   <!-- End Google Tag Manager -->
@@ -296,11 +58,11 @@
     </div>
   </div>
 
-  <main>
+  <main class="wwk-local-content">
     <div class="contact-container">
       <div class="contact-form-section">
         <h2>Send us a Message</h2>
-        <form method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+        <form method="POST" action="https://formspree.io/f/mblrwzea">
           <div class="form-group">
             <label for="name">Your Name *</label>
             <input type="text" id="name" name="name" required>

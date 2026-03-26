@@ -10,75 +10,7 @@
   <meta property="og:description" content="British Swim School of Northwest Philadelphia offers safety-first swim lessons for infants through adults in Philadelphia, Cheltenham, Glenside, Ambler, and nearby suburbs.">
   <meta property="og:type" content="website">
     <meta name="keywords" content="British Swim School, swim lessons Northwest Philadelphia, kids swim lessons, certified swimming instructors">
-<style>
-        
-        
-        
-        
-        
-        nav ul { display: flex; list-style: none; gap: 2rem; align-items: center; }
-        
-        
-        .breadcrumbs { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; font-size: 0.9rem; color: #6b7280; }
-        .breadcrumbs a { color: #0284c7; text-decoration: none; }
-        .hero { background: linear-gradient(135deg, #075985 0%, #0369a1 100%); color: white; padding: 4rem 2rem; text-align: center; }
-        .hero-content { max-width: 900px; margin: 0 auto; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 700; }
-        .hero .tagline { font-size: 1.1rem; margin-bottom: 1rem; opacity: 0.95; }
-        .rating-banner { background-color: rgba(255,255,255,0.15); padding: 1rem; border-radius: 0.5rem; display: inline-block; margin-bottom: 1rem; }
-        .stars { color: #fbbf24; font-size: 1.3rem; }
-        main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        h1 { font-size: 2.5rem; color: #075985; margin-bottom: 1.5rem; font-weight: 700; }
-        h2 { font-size: 2rem; color: #075985; margin-top: 3rem; margin-bottom: 1.5rem; font-weight: 700; }
-        h3 { font-size: 1.3rem; color: #0369a1; margin-bottom: 1rem; font-weight: 600; }
-        p, li { font-size: 1rem; line-height: 1.7; color: #374151; margin-bottom: 1rem; }
-        .info-box { background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem; }
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
-        .info-item { background: white; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #0284c7; }
-        .info-item h4 { color: #075985; margin-bottom: 0.5rem; }
-        .info-item p { font-size: 0.95rem; color: #6b7280; margin: 0; }
-        .why-choose { background: #f0f9ff; padding: 2rem; border-radius: 0.75rem; border-left: 4px solid #0284c7; margin-bottom: 2rem; }
-        .why-choose ul { list-style: none; }
-        .why-choose li { padding: 0.75rem 0; color: #374151; font-weight: 500; }
-        .why-choose li:before { content: "✓ "; color: #14b8a6; font-weight: bold; margin-right: 0.75rem; font-size: 1.2rem; }
-        .programs { background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem; }
-        .program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .program-card { background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%); padding: 1.5rem; border-radius: 0.5rem; border-top: 4px solid #0284c7; }
-        .program-card h4 { color: #0369a1; margin-bottom: 0.5rem; }
-        .program-card p { font-size: 0.95rem; color: #1f2937; margin: 0; }
-        .age-badge { display: inline-block; background-color: #0284c7; color: white; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; }
-        .service-area { background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem; }
-        .area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
-        .area-item { padding: 1rem; background: #f3f4f6; border-radius: 0.5rem; color: #0284c7; font-weight: 500; }
-        .area-item:before { content: "→ "; margin-right: 0.5rem; }
-        .reviews { background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem; }
-        .review { background: #f9fafb; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1rem; border-left: 4px solid #14b8a6; }
-        .review:last-child { margin-bottom: 0; }
-        .review-author { font-weight: 600; color: #0369a1; margin-bottom: 0.5rem; }
-        .review-text { color: #6b7280; font-style: italic; }
-        .faq-section { background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem; }
-        .faq-item { border-bottom: 1px solid #e5e7eb; padding: 1.5rem 0; }
-        .faq-item:last-child { border-bottom: none; }
-        .faq-item h4 { color: #0369a1; margin-bottom: 0.75rem; cursor: pointer; display: flex; align-items: center; font-weight: 600; }
-        .faq-item h4:before { content: "+ "; margin-right: 0.5rem; font-weight: bold; color: #14b8a6; }
-        .faq-item.active h4:before { content: "- "; }
-        .faq-answer { display: none; color: #6b7280; padding-left: 1.5rem; }
-        .faq-item.active .faq-answer { display: block; }
-        .cta-section { background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%); color: white; padding: 3rem 2rem; border-radius: 0.75rem; text-align: center; margin-bottom: 3rem; }
-        .cta-section h2 { color: white; margin-top: 0; }
-        .cta-section p { color: white; opacity: 0.95; }
-        .cta-button { display: inline-block; padding: 1rem 2.5rem; background-color: white; color: #14b8a6; text-decoration: none; border-radius: 0.5rem; font-weight: 700; font-size: 1.05rem; transition: background-color 0.3s, transform 0.3s; margin-top: 1rem; }
-        .cta-button:hover { background-color: #f3f4f6; transform: scale(1.02); }
-        
-        
-        
-        
-        
-        
-        
-        @media (max-width: 768px) {  nav ul { flex-direction: column; gap: 1rem; width: 100%; } .hero h1 { font-size: 2rem; } main { padding: 1rem; } }
-    </style>
-  <link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
   <!-- End Google Tag Manager -->
@@ -106,7 +38,7 @@
     </div>
   </nav>
 
-    <div class="breadcrumbs">
+    <div class="wwk-breadcrumbs">
         <a href="/">Home</a> > <a href="/swim-lessons/">Swim Lessons</a> > <a href="/british-swim-school/northwest-philadelphia.html">British Swim School</a>
     </div>
 
@@ -121,7 +53,7 @@
         </div>
     </section>
 
-    <main>
+    <main class="wwk-local-content">
         <!-- Info Box -->
         <section class="info-box">
             <h2>Welcome to British Swim School of Northwest Philadelphia</h2>
@@ -292,7 +224,12 @@
         <section class="cta-section">
             <h2>Ready to Start Your Child's Swimming Journey?</h2>
             <p>Schedule a free consultation and trial lesson today. Discover why thousands of Philadelphia-area families trust British Swim School for expert, safety-first water instruction.</p>
-            <a href="#" class="cta-button">Book Your Free Trial Lesson</a>
+            <a href="/contact/index.html" class="btn-primary">Book Your Free Trial Lesson</a>
+        </section>
+
+        <!-- WaterWiseKids Badge -->
+        <section class="wwk-listing-badge">
+            <p>Listed on WaterWiseKids.com - America's National Aquatics Hub for water safety education and swim school directories.</p>
         </section>
     </main>
 

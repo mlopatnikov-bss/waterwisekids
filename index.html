@@ -9,10 +9,71 @@
   <meta property="og:description" content="Water safety education, swim school ratings, aquatics jobs, and teen career guides — everything aquatics, free for every family.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://www.waterwisekids.com/">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
   <style>
+    /* Homepage-specific overrides */
+    .hp-hero { background: linear-gradient(180deg,#0d4d77 0%,#146695 62%,#1c7db0 100%); color: white; padding: 80px 20px; text-align: center; }
+    .hp-hero h1 { font-size: 2.75rem; font-weight: 700; color: white; margin: 0 0 16px 0; }
+    .hp-hero p { font-size: 1.1rem; margin: 0 0 40px 0; opacity: 0.95; line-height: 1.6; color: white; }
+    .hp-hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+    .hp-hero-actions .btn-primary { background: white; color: #0d4d77; }
+    .hp-hero-actions .btn-primary:hover { background: #f0f9ff; }
+    .hp-hero-actions .btn-outline { background: rgba(255,255,255,0.15); color: white; border: 2px solid rgba(255,255,255,0.5); }
+    .hp-hero-actions .btn-outline:hover { background: rgba(255,255,255,0.25); }
+    .hp-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+    .hp-stat { background: rgba(255,255,255,0.12); padding: 16px; border-radius: var(--radius-full); font-weight: 600; font-size: 0.9rem; }
+    .hp-search { padding: 40px 20px; background: #f4f8fb; }
+    .hp-search-box { background: white; padding: 36px; border-radius: var(--radius-lg); box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid #dbe8f0; }
+    .hp-search-box h2 { text-align: center; margin: 0 0 24px 0; font-size: 1.25rem; }
+    .hp-filters { display: flex; gap: 12px; justify-content: center; margin-bottom: 24px; flex-wrap: wrap; }
+    .hp-filter-btn { border: none; padding: 8px 16px; border-radius: var(--radius-full); cursor: pointer; font-weight: 600; font-size: 0.875rem; font-family: inherit; transition: background 0.15s; }
+    .hp-filter-btn.active { background: #0f5f94; color: white; }
+    .hp-filter-btn:not(.active) { background: var(--blue-50); color: #114c76; }
+    .hp-filter-btn:not(.active):hover { background: var(--blue-100); }
+    .hp-search-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .hp-search-grid input, .hp-search-grid select { padding: 12px 16px; border: 1.5px solid #dbe8f0; border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; }
+    .hp-search-grid input:focus, .hp-search-grid select:focus { outline: none; border-color: var(--blue-600); box-shadow: 0 0 0 3px rgba(2,132,199,0.1); }
+    .hp-hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
+    .hp-hub-card { background: white; border: 1px solid #dbe8f0; border-radius: var(--radius-lg); padding: 32px; text-decoration: none; color: var(--gray-800); transition: box-shadow 0.2s, transform 0.2s; display: block; }
+    .hp-hub-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .hp-hub-card .icon { font-size: 2.25rem; margin-bottom: 12px; display: block; }
+    .hp-hub-card h3 { margin: 0 0 12px 0; font-size: 1.1rem; font-weight: 700; color: #0d4d77; }
+    .hp-hub-card p { margin: 0 0 12px 0; font-size: 0.875rem; line-height: 1.7; color: var(--gray-600); }
+    .hp-hub-card .link { color: #0f5f94; font-weight: 700; font-size: 0.85rem; }
+    .hp-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .hp-article-card { background: white; border: 1px solid #dbe8f0; border-radius: var(--radius-lg); overflow: hidden; text-decoration: none; color: var(--gray-800); transition: box-shadow 0.2s, transform 0.2s; display: block; }
+    .hp-article-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .hp-article-card .thumb { height: 120px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+    .hp-article-card .body { padding: 20px; }
+    .hp-article-card .tag { display: inline-block; background: var(--blue-50); color: #114c76; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600; margin-bottom: 12px; }
+    .hp-article-card h3 { margin: 0 0 8px 0; font-size: 1rem; font-weight: 700; color: #0d4d77; }
+    .hp-article-card p { margin: 0 0 12px 0; font-size: 0.85rem; line-height: 1.6; color: var(--gray-600); }
+    .hp-article-card .link { color: #0f5f94; font-weight: 600; font-size: 0.85rem; }
+    .hp-jobs { background: #0d4d77; color: white; }
+    .hp-jobs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .hp-jobs h2 { color: white; margin: 0 0 16px 0; font-size: 2rem; }
+    .hp-jobs p { color: rgba(255,255,255,0.9); margin: 0 0 20px 0; font-size: 1rem; line-height: 1.7; }
+    .hp-jobs-stats { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 20px; border-radius: var(--radius-md); margin-bottom: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .hp-jobs-stats .label { opacity: 0.8; font-size: 0.75rem; margin-bottom: 4px; }
+    .hp-jobs-stats .value { font-size: 1.25rem; font-weight: 700; }
+    .hp-job-card { display: block; background: white; color: var(--gray-800); padding: 16px; border-radius: var(--radius-md); text-decoration: none; transition: transform 0.15s; }
+    .hp-job-card:hover { transform: translateY(-1px); }
+    .hp-job-card .title { font-weight: 700; margin-bottom: 4px; color: var(--gray-800); }
+    .hp-job-card .location { font-size: 0.85rem; opacity: 0.7; margin-bottom: 8px; }
+    .hp-job-card .pay { font-weight: 600; color: #0f5f94; font-size: 0.9rem; }
+    .hp-job-card .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; margin-left: 8px; color: white; }
+    .hp-newsletter { text-align: center; }
+    .hp-newsletter h2 { margin: 0 0 16px 0; font-size: 1.75rem; }
+    .hp-newsletter p { margin: 0 0 24px 0; font-size: 1rem; color: var(--gray-600); }
+    .hp-newsletter form { display: flex; gap: 12px; justify-content: center; max-width: 400px; margin: 0 auto; }
+    .hp-newsletter input { flex: 1; padding: 12px 16px; border: 1.5px solid #dbe8f0; border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; }
+    .hp-newsletter input:focus { outline: none; border-color: var(--blue-600); box-shadow: 0 0 0 3px rgba(2,132,199,0.1); }
     @media (max-width: 768px) {
-      .stat-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      .hp-hero h1 { font-size: 1.75rem; }
+      .hp-stats { grid-template-columns: repeat(2, 1fr); }
+      .hp-hub-grid { grid-template-columns: 1fr; }
+      .hp-jobs-grid { grid-template-columns: 1fr; }
+      .hp-newsletter form { flex-direction: column; }
     }
   </style>
   <!-- Google Tag Manager -->
@@ -54,7 +115,7 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="wwk-nav-links">
-        <li><a href="/">Home</a></li>
+        <li><a href="/" class="active">Home</a></li>
         <li><a href="/education.html">Water Safety</a></li>
         <li><a href="/swim-schools.html">Find Schools</a></li>
         <li><a href="/jobs.html">Aquatics Jobs</a></li>
@@ -67,123 +128,118 @@
   </nav>
 
   <!-- Hero Section -->
-  <section style="background: linear-gradient(180deg,#0d4d77 0%,#146695 62%,#1c7db0 100%); color: white; padding: 80px 20px; text-align: center;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <h1 style="font-size: 48px; font-weight: 700; margin: 0 0 16px 0; font-family: inherit;">America's National Aquatics Hub</h1>
-      <p style="font-size: 18px; margin: 0 0 40px 0; opacity: 0.95; line-height: 1.6; font-family: inherit;">Water safety education · Swim school ratings · Aquatics jobs · Teen career guides · Gear reviews — everything aquatics, free for every family.</p>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
-        <a href="/swim-schools.html" style="background: white; color: #0d4d77; padding: 12px 26px; border-radius: 999px; text-decoration: none; font-weight: 700; transition: opacity 0.2s; font-family: inherit;">Find Swim Schools Near Me</a>
-        <a href="/jobs.html" style="background: rgba(255,255,255,0.2); color: white; padding: 12px 26px; border-radius: 999px; text-decoration: none; font-weight: 700; border: 2px solid white; transition: background 0.2s; font-family: inherit;">Browse Aquatics Jobs</a>
+  <section class="hp-hero">
+    <div class="container">
+      <h1>America's National Aquatics Hub</h1>
+      <p>Water safety education, swim school ratings, aquatics jobs, teen career guides, and gear reviews — everything aquatics, free for every family.</p>
+      <div class="hp-hero-actions">
+        <a href="/swim-schools.html" class="btn-primary">Find Swim Schools Near Me</a>
+        <a href="/jobs.html" class="btn-outline">Browse Aquatics Jobs</a>
       </div>
-      <div class="stat-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px;">
-        <div style="background: rgba(255,255,255,0.15); padding: 16px; border-radius: 999px; font-weight: 600; font-family: inherit;">🛡️ 500+ Safety Articles</div>
-        <div style="background: rgba(255,255,255,0.15); padding: 16px; border-radius: 999px; font-weight: 600; font-family: inherit;">⭐ 10,000+ Schools</div>
-        <div style="background: rgba(255,255,255,0.15); padding: 16px; border-radius: 999px; font-weight: 600; font-family: inherit;">💼 2,400+ Jobs</div>
-        <div style="background: rgba(255,255,255,0.15); padding: 16px; border-radius: 999px; font-weight: 600; font-family: inherit;">🗺️ All 50 States</div>
+      <div class="hp-stats">
+        <div class="hp-stat">500+ Safety Articles</div>
+        <div class="hp-stat">10,000+ Schools</div>
+        <div class="hp-stat">2,400+ Jobs</div>
+        <div class="hp-stat">All 50 States</div>
       </div>
     </div>
   </section>
 
   <!-- Search Bar Section -->
-  <section style="padding: 40px 20px; background: #f4f8fb;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <div style="background: white; padding: 36px; border-radius: 22px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid #dbe8f0;">
-        <h2 style="text-align: center; margin: 0 0 24px 0; color: #13304a; font-size: 20px; font-weight: 700; font-family: inherit;">Find what you're looking for</h2>
-        <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 24px; flex-wrap: wrap;">
-          <button aria-label="Filter by Swim Schools" style="background: #0f5f94; color: white; border: none; padding: 8px 16px; border-radius: 999px; cursor: pointer; font-weight: 600; font-family: inherit;">🏊 Swim Schools</button>
-          <button aria-label="Filter by Aquatics Jobs" style="background: #eaf4fb; color: #114c76; border: none; padding: 8px 16px; border-radius: 999px; cursor: pointer; font-weight: 600; font-family: inherit;">💼 Aquatics Jobs</button>
-          <button aria-label="Filter by Articles" style="background: #eaf4fb; color: #114c76; border: none; padding: 8px 16px; border-radius: 999px; cursor: pointer; font-weight: 600; font-family: inherit;">📚 Articles</button>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
-          <input type="text" placeholder="City or ZIP code" aria-label="City or ZIP code" style="padding: 12px 16px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit;">
-          <select aria-label="Select state" style="padding: 12px 16px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit;">
-            <option>Select State</option>
+  <section class="hp-search">
+    <div class="container">
+      <div class="hp-search-box">
+        <h2>Find Swim Schools Near You</h2>
+        <div class="hp-search-grid">
+          <input type="text" placeholder="City or ZIP code" aria-label="City or ZIP code">
+          <select aria-label="Select state">
+            <option>All States</option>
             <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
           </select>
-          <select aria-label="Select age group" style="padding: 12px 16px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit;">
+          <select aria-label="Select age group">
             <option>Any Age</option><option>Toddler (0-3)</option><option>Preschool (3-5)</option><option>Child (6-12)</option><option>Teen (13-18)</option><option>Adult</option>
           </select>
-          <button aria-label="Search for swim schools" style="background: #0f5f94; color: white; border: none; padding: 12px 26px; border-radius: 999px; font-weight: 700; cursor: pointer; font-family: inherit;">Search</button>
+          <button class="btn-primary" aria-label="Search for swim schools">Search</button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Hub Cards Grid -->
-  <section style="padding: 64px 20px; background: white;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <h2 style="text-align: center; margin: 0 0 48px 0; color: #13304a; font-size: 32px; font-weight: 700; font-family: inherit;">Everything aquatics, in one place</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px;">
-        <a href="/education.html" style="background: white; border: 1px solid #dbe8f0; border-radius: 22px; padding: 32px; text-decoration: none; color: #13304a; transition: all 0.2s;">
-          <div style="font-size: 36px; margin-bottom: 12px;">📚</div>
-          <h3 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: #0d4d77; font-family: inherit;">Water Safety Education</h3>
-          <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.7; color: #13304a; font-family: inherit;">500+ articles on pool, lake & ocean safety, drowning prevention, CPR, and swim readiness for every age.</p>
-          <span style="color:#0f5f94;font-weight:700;font-size:13px;font-family: inherit;">Browse articles &rarr;</span>
+  <section class="wwk-section">
+    <div class="container">
+      <h2 style="text-align: center; margin: 0 0 48px 0; font-size: 2rem;">Everything aquatics, in one place</h2>
+      <div class="hp-hub-grid">
+        <a href="/education.html" class="hp-hub-card">
+          <span class="icon">📚</span>
+          <h3>Water Safety Education</h3>
+          <p>500+ articles on pool, lake &amp; ocean safety, drowning prevention, CPR, and swim readiness for every age.</p>
+          <span class="link">Browse articles &rarr;</span>
         </a>
-        <a href="/swim-schools.html" style="background: white; border: 1px solid #dbe8f0; border-radius: 22px; padding: 32px; text-decoration: none; color: #13304a; transition: all 0.2s;">
-          <div style="font-size: 36px; margin-bottom: 12px;">⭐</div>
-          <h3 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: #0d4d77; font-family: inherit;">Swim School Finder</h3>
-          <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.7; color: #13304a; font-family: inherit;">The first national swim school directory with real parent ratings. Search 10,000+ schools across all 50 states.</p>
-          <span style="color:#0f5f94;font-weight:700;font-size:13px;font-family: inherit;">Find schools &rarr;</span>
+        <a href="/swim-schools.html" class="hp-hub-card">
+          <span class="icon">⭐</span>
+          <h3>Swim School Finder</h3>
+          <p>The first national swim school directory with real parent ratings. Search 10,000+ schools across all 50 states.</p>
+          <span class="link">Find schools &rarr;</span>
         </a>
-        <a href="/jobs.html" style="background: white; border: 1px solid #dbe8f0; border-radius: 22px; padding: 32px; text-decoration: none; color: #13304a; transition: all 0.2s;">
-          <div style="font-size: 36px; margin-bottom: 12px;">💼</div>
-          <h3 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: #0d4d77; font-family: inherit;">Aquatics Jobs Board</h3>
-          <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.7; color: #13304a; font-family: inherit;">The only national job board for aquatics. Lifeguard, instructor, coach, and director jobs. Free to search and apply.</p>
-          <span style="color:#0f5f94;font-weight:700;font-size:13px;font-family: inherit;">Browse jobs &rarr;</span>
+        <a href="/jobs.html" class="hp-hub-card">
+          <span class="icon">💼</span>
+          <h3>Aquatics Jobs Board</h3>
+          <p>The only national job board for aquatics. Lifeguard, instructor, coach, and director jobs. Free to search and apply.</p>
+          <span class="link">Browse jobs &rarr;</span>
         </a>
-        <a href="/teens.html" style="background: white; border: 1px solid #dbe8f0; border-radius: 22px; padding: 32px; text-decoration: none; color: #13304a; transition: all 0.2s;">
-          <div style="font-size: 36px; margin-bottom: 12px;">🎓</div>
-          <h3 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: #0d4d77; font-family: inherit;">Teen & Young Adult Hub</h3>
-          <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.7; color: #13304a; font-family: inherit;">How to become a lifeguard, swim instructor, or aquatics director. Certifications, salaries, scholarships, and career guides.</p>
-          <span style="color:#0f5f94;font-weight:700;font-size:13px;font-family: inherit;">Explore careers &rarr;</span>
+        <a href="/teens.html" class="hp-hub-card">
+          <span class="icon">🎓</span>
+          <h3>Teen &amp; Young Adult Hub</h3>
+          <p>How to become a lifeguard, swim instructor, or aquatics director. Certifications, salaries, scholarships, and career guides.</p>
+          <span class="link">Explore careers &rarr;</span>
         </a>
-        <a href="/gear.html" style="background: white; border: 1px solid #dbe8f0; border-radius: 22px; padding: 32px; text-decoration: none; color: #13304a; transition: all 0.2s;">
-          <div style="font-size: 36px; margin-bottom: 12px;">🛒</div>
-          <h3 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: #0d4d77; font-family: inherit;">Gear & Product Guide</h3>
-          <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.7; color: #13304a; font-family: inherit;">Expert-curated swim gear for every age. Goggles, safety equipment, training tools, and honest gear reviews.</p>
-          <span style="color:#0f5f94;font-weight:700;font-size:13px;font-family: inherit;">Browse gear &rarr;</span>
+        <a href="/gear.html" class="hp-hub-card">
+          <span class="icon">🛒</span>
+          <h3>Gear &amp; Product Guide</h3>
+          <p>Expert-curated swim gear for every age. Goggles, safety equipment, training tools, and honest gear reviews.</p>
+          <span class="link">Browse gear &rarr;</span>
         </a>
-        <a href="/advertise.html" style="background: white; border: 1px solid #dbe8f0; border-radius: 22px; padding: 32px; text-decoration: none; color: #13304a; transition: all 0.2s;">
-          <div style="font-size: 36px; margin-bottom: 12px;">📣</div>
-          <h3 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: #0d4d77; font-family: inherit;">Advertise With Us</h3>
-          <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.7; color: #13304a; font-family: inherit;">Reach parents searching for swim lessons right now. Local, regional, and national ad packages starting at $49/month.</p>
-          <span style="color:#0f5f94;font-weight:700;font-size:13px;font-family: inherit;">Learn more &rarr;</span>
+        <a href="/advertise.html" class="hp-hub-card">
+          <span class="icon">📣</span>
+          <h3>Advertise With Us</h3>
+          <p>Reach parents searching for swim lessons right now. Local, regional, and national ad packages starting at $49/month.</p>
+          <span class="link">Learn more &rarr;</span>
         </a>
       </div>
     </div>
   </section>
 
   <!-- Featured Articles -->
-  <section style="padding: 64px 20px; background: #f4f8fb;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <h2 style="text-align: center; margin: 0 0 48px 0; color: #13304a; font-size: 32px; font-weight: 700; font-family: inherit;">Start with the essentials</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-        <a href="/education/drowning-prevention-guide.html" style="background: white; border: 1px solid #dbe8f0; border-radius: 22px; overflow: hidden; text-decoration: none; color: #13304a; transition: all 0.2s;">
-          <div style="background: linear-gradient(135deg, #ff6b6b, #ff8c8c); height: 120px; display: flex; align-items: center; justify-content: center; font-size: 48px;">🛡️</div>
-          <div style="padding: 20px;">
-            <span style="display: inline-block; background: #eaf4fb; color: #114c76; padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 12px; font-family: inherit;">Safety</span>
-            <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: 700; color: #0d4d77; font-family: inherit;">The Complete Guide to Drowning Prevention</h3>
-            <p style="margin: 0 0 12px 0; font-size: 13px; line-height: 1.6; color: #13304a; font-family: inherit;">Essential strategies for keeping children safe in and around water.</p>
-            <div style="color: #0f5f94; font-weight: 600; font-size: 13px; font-family: inherit;">Read article &rarr;</div>
+  <section class="wwk-section wwk-section-alt">
+    <div class="container">
+      <h2 style="text-align: center; margin: 0 0 48px 0; font-size: 2rem;">Start with the essentials</h2>
+      <div class="hp-articles">
+        <a href="/education/drowning-prevention-guide.html" class="hp-article-card">
+          <div class="thumb" style="background: linear-gradient(135deg, #ff6b6b, #ff8c8c);">🛡</div>
+          <div class="body">
+            <span class="tag">Safety</span>
+            <h3>The Complete Guide to Drowning Prevention</h3>
+            <p>Essential strategies for keeping children safe in and around water.</p>
+            <span class="link">Read article &rarr;</span>
           </div>
         </a>
-        <a href="/education/when-to-start-swim-lessons.html" style="background: white; border: 1px solid #dbe8f0; border-radius: 22px; overflow: hidden; text-decoration: none; color: #13304a; transition: all 0.2s;">
-          <div style="background: linear-gradient(135deg, #4ecdc4, #6ee7d7); height: 120px; display: flex; align-items: center; justify-content: center; font-size: 48px;">👶</div>
-          <div style="padding: 20px;">
-            <span style="display: inline-block; background: #eaf4fb; color: #114c76; padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 12px; font-family: inherit;">Readiness</span>
-            <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: 700; color: #0d4d77; font-family: inherit;">When Should Kids Start Swim Lessons?</h3>
-            <p style="margin: 0 0 12px 0; font-size: 13px; line-height: 1.6; color: #13304a; font-family: inherit;">Signs your child is developmentally ready for swim instruction.</p>
-            <div style="color: #0f5f94; font-weight: 600; font-size: 13px; font-family: inherit;">Read article &rarr;</div>
+        <a href="/education/when-to-start-swim-lessons.html" class="hp-article-card">
+          <div class="thumb" style="background: linear-gradient(135deg, #4ecdc4, #6ee7d7);">👶</div>
+          <div class="body">
+            <span class="tag">Readiness</span>
+            <h3>When Should Kids Start Swim Lessons?</h3>
+            <p>Signs your child is developmentally ready for swim instruction.</p>
+            <span class="link">Read article &rarr;</span>
           </div>
         </a>
-        <a href="/education/fear-of-water.html" style="background: white; border: 1px solid #dbe8f0; border-radius: 22px; overflow: hidden; text-decoration: none; color: #13304a; transition: all 0.2s;">
-          <div style="background: linear-gradient(135deg, #ffd93d, #ffed66); height: 120px; display: flex; align-items: center; justify-content: center; font-size: 48px;">😊</div>
-          <div style="padding: 20px;">
-            <span style="display: inline-block; background: #eaf4fb; color: #114c76; padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; margin-bottom: 12px; font-family: inherit;">Confidence</span>
-            <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: 700; color: #0d4d77; font-family: inherit;">How to Help a Child Overcome Fear of Water</h3>
-            <p style="margin: 0 0 12px 0; font-size: 13px; line-height: 1.6; color: #13304a; font-family: inherit;">Proven techniques to build water confidence gradually and safely.</p>
-            <div style="color: #0f5f94; font-weight: 600; font-size: 13px; font-family: inherit;">Read article &rarr;</div>
+        <a href="/education/fear-of-water.html" class="hp-article-card">
+          <div class="thumb" style="background: linear-gradient(135deg, #ffd93d, #ffed66);">😊</div>
+          <div class="body">
+            <span class="tag">Confidence</span>
+            <h3>How to Help a Child Overcome Fear of Water</h3>
+            <p>Proven techniques to build water confidence gradually and safely.</p>
+            <span class="link">Read article &rarr;</span>
           </div>
         </a>
       </div>
@@ -191,46 +247,44 @@
   </section>
 
   <!-- Jobs Preview Section -->
-  <section style="background: #0d4d77; color: white; padding: 64px 20px;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+  <section class="wwk-section hp-jobs">
+    <div class="container">
+      <div class="hp-jobs-grid">
         <div>
-          <h2 style="margin: 0 0 16px 0; font-size: 32px; font-weight: 700; font-family: inherit;">Find your next aquatics job</h2>
-          <p style="margin: 0 0 20px 0; font-size: 16px; line-height: 1.7; opacity: 0.9; font-family: inherit;">The only national job board built for the water — lifeguard, instructor, coach, director roles across America. Free to search.</p>
-          <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 20px; border-radius: 12px; margin-bottom: 24px;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 14px; font-family: inherit;">
-              <div>
-                <div style="opacity: 0.8; font-size: 12px; margin-bottom: 4px;">Average Hourly Pay</div>
-                <div style="font-size: 20px; font-weight: 700;">$17-22/hr</div>
-              </div>
-              <div>
-                <div style="opacity: 0.8; font-size: 12px; margin-bottom: 4px;">Total Listings</div>
-                <div style="font-size: 20px; font-weight: 700;">2,400+</div>
-              </div>
+          <h2>Find your next aquatics job</h2>
+          <p>The only national job board built for the water — lifeguard, instructor, coach, director roles across America. Free to search.</p>
+          <div class="hp-jobs-stats">
+            <div>
+              <div class="label">Average Hourly Pay</div>
+              <div class="value">$17-22/hr</div>
+            </div>
+            <div>
+              <div class="label">Total Listings</div>
+              <div class="value">2,400+</div>
             </div>
           </div>
-          <a href="/jobs.html" style="background: white; color: #0d4d77; padding: 12px 26px; border-radius: 999px; text-decoration: none; font-weight: 700; display: inline-block; font-family: inherit;">View All Jobs</a>
+          <a href="/jobs.html" class="btn-primary" style="background: white; color: #0d4d77;">View All Jobs</a>
         </div>
-        <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
-          <a href="/jobs.html" style="display:block;background: white; color: #13304a; padding: 16px; border-radius: 12px; border-left: 4px solid #ff6b6b; font-family: inherit; text-decoration:none;">
-            <div style="font-weight: 700; margin-bottom: 4px;">🏖️ Lifeguard — Summer Seasonal</div>
-            <div style="font-size: 13px; opacity: 0.8; margin-bottom: 8px;">Philadelphia area</div>
-            <div style="font-weight: 600; color: #0f5f94; font-size: 14px;">$17-19/hr <span style="background: #ff6b6b; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px;">🔥 Hot</span></div>
+        <div style="display: grid; gap: 12px;">
+          <a href="/jobs.html" class="hp-job-card" style="border-left: 4px solid #ff6b6b;">
+            <div class="title">Lifeguard — Summer Seasonal</div>
+            <div class="location">Philadelphia area</div>
+            <div class="pay">$17-19/hr <span class="badge" style="background: #ff6b6b;">Hot</span></div>
           </a>
-          <a href="/jobs.html" style="display:block;background: white; color: #13304a; padding: 16px; border-radius: 12px; border-left: 4px solid #4ecdc4; font-family: inherit; text-decoration:none;">
-            <div style="font-weight: 700; margin-bottom: 4px;">🏊 Swim Instructor — Part Time</div>
-            <div style="font-size: 13px; opacity: 0.8; margin-bottom: 8px;">Jersey Shore NJ</div>
-            <div style="font-weight: 600; color: #0f5f94; font-size: 14px;">$18-22/hr <span style="background: #4ecdc4; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px;">✨ New</span></div>
+          <a href="/jobs.html" class="hp-job-card" style="border-left: 4px solid #4ecdc4;">
+            <div class="title">Swim Instructor — Part Time</div>
+            <div class="location">Jersey Shore NJ</div>
+            <div class="pay">$18-22/hr <span class="badge" style="background: #4ecdc4;">New</span></div>
           </a>
-          <a href="/jobs.html" style="display:block;background: white; color: #13304a; padding: 16px; border-radius: 12px; border-left: 4px solid #4ecdc4; font-family: inherit; text-decoration:none;">
-            <div style="font-weight: 700; margin-bottom: 4px;">🏅 Aquatics Director</div>
-            <div style="font-size: 13px; opacity: 0.8; margin-bottom: 8px;">Chicago IL</div>
-            <div style="font-weight: 600; color: #0f5f94; font-size: 14px;">$52-68K/yr <span style="background: #4ecdc4; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px;">✨ New</span></div>
+          <a href="/jobs.html" class="hp-job-card" style="border-left: 4px solid #4ecdc4;">
+            <div class="title">Aquatics Director</div>
+            <div class="location">Chicago IL</div>
+            <div class="pay">$52-68K/yr <span class="badge" style="background: #4ecdc4;">New</span></div>
           </a>
-          <a href="/jobs.html" style="display:block;background: white; color: #13304a; padding: 16px; border-radius: 12px; border-left: 4px solid #4ecdc4; font-family: inherit; text-decoration:none;">
-            <div style="font-weight: 700; margin-bottom: 4px;">🎓 Head Swim Coach — Youth</div>
-            <div style="font-size: 13px; opacity: 0.8; margin-bottom: 8px;">Austin TX</div>
-            <div style="font-weight: 600; color: #0f5f94; font-size: 14px;">$45-60K/yr <span style="background: #4ecdc4; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 8px;">✨ New</span></div>
+          <a href="/jobs.html" class="hp-job-card" style="border-left: 4px solid #4ecdc4;">
+            <div class="title">Head Swim Coach — Youth</div>
+            <div class="location">Austin TX</div>
+            <div class="pay">$45-60K/yr <span class="badge" style="background: #4ecdc4;">New</span></div>
           </a>
         </div>
       </div>
@@ -238,13 +292,13 @@
   </section>
 
   <!-- Newsletter Section -->
-  <section style="padding: 64px 20px; background: white;">
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-      <h2 style="margin: 0 0 16px 0; font-size: 28px; font-weight: 700; color: #13304a; font-family: inherit;">The WaterWise Weekly</h2>
-      <p style="margin: 0 0 24px 0; font-size: 16px; color: #13304a; font-family: inherit;">Join 40,000+ parents and aquatics pros.</p>
-      <form action="https://formspree.io/f/waterwisekids" method="post" style="display: flex; gap: 12px; justify-content: center; max-width: 400px; margin: 0 auto;">
-        <input type="email" name="email" placeholder="Enter your email" aria-label="Enter your email" required style="flex: 1; padding: 12px 16px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit;">
-        <button type="submit" aria-label="Subscribe to newsletter" style="background: #0f5f94; color: white; border: none; padding: 12px 26px; border-radius: 999px; font-weight: 700; cursor: pointer; font-family: inherit;">Subscribe</button>
+  <section class="wwk-section hp-newsletter">
+    <div class="container">
+      <h2>The WaterWise Weekly</h2>
+      <p>Join 40,000+ parents and aquatics pros.</p>
+      <form action="https://formspree.io/f/waterwisekids" method="post">
+        <input type="email" name="email" placeholder="Enter your email" aria-label="Enter your email" required>
+        <button type="submit" class="btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
       </form>
     </div>
   </section>

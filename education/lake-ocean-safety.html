@@ -9,86 +9,7 @@
   <meta property="og:title" content="Lake & Ocean Safety: What Pool Swimmers Don't Know | WaterWiseKids">
   <meta property="og:description" content="Waves, currents, and hidden dangers in natural water. Learn ocean safety, rip current escape, cold water survival, and how to prepare kids who know how to swim in pools.">
   <meta property="og:type" content="website">
-<style>
-    
-    :root { --blue-50: #eff8ff; --blue-100: #dbeffe; --blue-200: #b9e0fd; --blue-300: #7cc8fb; --blue-400: #38b6f1; --blue-500: #0ea5e9; --blue-600: #0284c7; --blue-700: #0369a1; --blue-800: #075985; --blue-900: #0c4a6e; --teal-400: #2dd4bf; --teal-500: #14b8a6; --teal-600: #0d9488; --cyan-400: #22d3ee; --cyan-500: #06b6d4; --orange-400: #fb923c; --orange-500: #f97316; --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-200: #e5e7eb; --gray-300: #d1d5db; --gray-400: #9ca3af; --gray-500: #6b7280; --gray-600: #4b5563; --gray-700: #374151; --gray-800: #1f2937; --gray-900: #111827; --white: #ffffff; --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 20px; --r-full: 9999px; --sh-sm: 0 1px 3px rgba(0,0,0,.08); --sh-md: 0 4px 16px rgba(0,0,0,.10); }
-    
-    
-    
-    
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-    
-    
-    
-    
-    
-    
-    
-    .nav-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-    .btn-sm { padding: 8px 16px; border-radius: var(--r-sm); font-size: .85rem; font-weight: 600; cursor: pointer; border: none; transition: all .15s; display: inline-flex; align-items: center; gap: 6px; }
-    .btn-primary-sm { background: var(--blue-600); color: white; box-shadow: var(--sh-sm); }
-    .btn-primary-sm:hover { background: var(--blue-700); transform: translateY(-1px); }
-    .breadcrumb { display: flex; align-items: center; gap: 8px; padding: 24px 0; font-size: .85rem; color: var(--gray-600); }
-    .breadcrumb a { color: var(--blue-600); transition: color .2s; }
-    .breadcrumb a:hover { color: var(--blue-700); }
-    .breadcrumb span { color: var(--gray-400); }
-    .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 40px; padding: 48px 0; }
-    .article h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; color: var(--gray-900); line-height: 1.15; letter-spacing: -.04em; margin-bottom: 16px; }
-    .article-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-size: .85rem; color: var(--gray-600); margin-bottom: 24px; }
-    .article-excerpt { font-size: 1.1rem; color: var(--gray-700); line-height: 1.7; max-width: 700px; margin-bottom: 32px; }
-    .callout { background: var(--orange-500); color: white; border-radius: var(--r-lg); padding: 24px; margin: 32px 0; }
-    .callout-title { font-weight: 700; margin-bottom: 8px; font-size: 1.05rem; }
-    .callout-text { font-size: .95rem; line-height: 1.6; }
-    .article-body { color: var(--gray-800); line-height: 1.8; }
-    .article-body h2 { font-size: 1.6rem; font-weight: 800; color: var(--gray-900); margin: 40px 0 20px; padding-top: 20px; border-top: 1px solid var(--gray-200); }
-    .article-body h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
-    .article-body h3 { font-size: 1.2rem; font-weight: 700; color: var(--blue-700); margin: 24px 0 12px; }
-    .article-body p { margin-bottom: 16px; font-size: 1rem; }
-    .article-body ul { margin-left: 20px; margin-bottom: 16px; }
-    .article-body ol { margin-left: 20px; margin-bottom: 16px; }
-    .article-body li { margin-bottom: 10px; font-size: 1rem; }
-    .article-body strong { color: var(--blue-700); font-weight: 700; }
-    .article-body em { color: var(--gray-700); font-style: italic; }
-    .hazard-box { background: var(--orange-50); border: 1px solid var(--orange-300); border-radius: var(--r-lg); padding: 20px; margin: 24px 0; }
-    .hazard-title { font-weight: 700; color: var(--orange-500); margin-bottom: 8px; }
-    .hazard-text { color: var(--gray-700); font-size: .95rem; line-height: 1.6; }
-    .related { margin-top: 60px; padding-top: 40px; border-top: 2px solid var(--gray-200); }
-    .related-title { font-size: 1.4rem; font-weight: 800; color: var(--gray-900); margin-bottom: 24px; }
-    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-    .related-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--r-lg); padding: 20px; transition: all .2s; cursor: pointer; }
-    .related-card:hover { border-color: var(--blue-400); background: var(--blue-50); transform: translateY(-2px); }
-    .related-card-title { font-size: .95rem; font-weight: 700; color: var(--gray-900); margin-bottom: 12px; line-height: 1.4; }
-    .related-card-link { display: inline-flex; align-items: center; gap: 4px; color: var(--blue-600); font-size: .85rem; font-weight: 600; }
-    .sidebar { display: flex; flex-direction: column; gap: 32px; }
-    .sidebar-box { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--r-lg); padding: 24px; position: sticky; top: 100px; }
-    .sidebar-title { font-size: .95rem; font-weight: 700; color: var(--gray-900); margin-bottom: 16px; }
-    .checklist { display: flex; flex-direction: column; gap: 10px; }
-    .checklist-item { display: flex; align-items: flex-start; gap: 10px; font-size: .9rem; line-height: 1.5; }
-    .checklist-icon { color: var(--teal-500); font-weight: 800; flex-shrink: 0; margin-top: 2px; }
-    .cta-box { background: linear-gradient(135deg, var(--teal-500), var(--blue-600)); color: white; border: none; padding: 28px 24px; }
-    .cta-title { color: white; margin-bottom: 8px; }
-    .cta-desc { font-size: .9rem; color: rgba(255,255,255,.85); margin-bottom: 16px; line-height: 1.5; }
-    .cta-button { display: block; width: 100%; padding: 12px; border: none; border-radius: var(--r-lg); background: white; color: var(--blue-600); font-size: .9rem; font-weight: 700; cursor: pointer; transition: all .2s; text-align: center; }
-    .cta-button:hover { transform: translateY(-2px); box-shadow: var(--sh-md); }
-    
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
-    .footer-col h3 { font-size: .9rem; font-weight: 700; color: white; margin-bottom: 14px; }
-    .footer-col ul { list-style: none; }
-    .footer-col li { margin-bottom: 8px; }
-    .footer-col a { color: var(--gray-400); font-size: .85rem; transition: color .2s; }
-    .footer-col a:hover { color: white; }
-    
-    @media (max-width: 768px) {
-      .main-layout { grid-template-columns: 1fr; }
-      
-      .article h1 { font-size: 1.6rem; }
-      .article-body h2 { font-size: 1.3rem; }
-      .sidebar-box { position: static; }
-      .related-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-    }
-  </style>
-  <link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
   <!-- End Google Tag Manager -->
@@ -133,7 +54,7 @@
         <div>
           <div class="article-meta">
             <div>📅 May 20, 2025</div>
-            <div>✏️ Updated March 25, 2026</div>
+            <div>✏ Updated March 25, 2026</div>
             <div>👤 WaterWiseKids Editorial Team</div>
           </div>
           <h1>Lake & Ocean Safety: What Pool Swimmers Don't Know</h1>
@@ -356,7 +277,7 @@
         <div class="sidebar-box cta-box">
           <h3 class="cta-title">Find Swim Programs</h3>
           <p class="cta-desc">Prepare kids for natural water with advanced swim lessons.</p>
-          <a href="/swim-schools/" class="cta-button">Find Schools</a>
+          <a href="/swim-schools/" class="btn-primary">Find Schools</a>
         </div>
       </aside>
     </div>

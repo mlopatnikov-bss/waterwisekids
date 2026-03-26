@@ -9,413 +9,7 @@
   <meta property="og:title" content="Find Swim Schools Near Me | Ratings & Parent Reviews | WaterWiseKids National Directory">
   <meta property="og:description" content="Search 10,000+ swim schools across all 50 states. Read verified parent ratings and reviews. Filter by age group, program type, price, and location. Find the perfect swim school.">
   <meta property="og:type" content="website">
-<style>
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        .hero {
-            background: linear-gradient(135deg, #0369a1 0%, #14b8a6 100%);
-            color: white;
-            padding: 3rem 1.5rem;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: clamp(1.8rem, 4vw, 3rem);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .search-box {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .search-input {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .search-input label {
-            font-weight: 600;
-            color: #075985;
-            font-size: 0.9rem;
-        }
-
-        .search-input input,
-        .search-input select {
-            padding: 0.75rem;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-        }
-
-        .search-input input:focus,
-        .search-input select:focus {
-            outline: none;
-            border-color: #0284c7;
-            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
-        }
-
-        .search-button {
-            display: flex;
-            align-items: flex-end;
-            padding: 0 1.5rem;
-        }
-
-        .search-button button {
-            background: #f97316;
-            color: white;
-            border: none;
-            padding: 0.75rem 2rem;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 0.95rem;
-            width: 100%;
-        }
-
-        .search-button button:hover {
-            background: #ea580c;
-            transform: translateY(-2px);
-        }
-
-        .main-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
-
-        .section {
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            color: #075985;
-        }
-
-        .how-it-works {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .step {
-            background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid #d1fae5;
-        }
-
-        .step-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #0284c7;
-            margin-bottom: 0.75rem;
-        }
-
-        .step h3 {
-            color: #075985;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        .step p {
-            color: #6b7280;
-            font-size: 0.95rem;
-        }
-
-        .featured-schools {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .school-card {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .school-card:hover {
-            border-color: #0284c7;
-            box-shadow: 0 12px 32px rgba(2, 132, 199, 0.15);
-            transform: translateY(-4px);
-        }
-
-        .school-
-
-        .school-name {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .school-location {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .featured-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-top: 0.5rem;
-        }
-
-        .school-body {
-            padding: 1.5rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .school-rating {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .stars {
-            color: #f97316;
-            font-size: 1.1rem;
-        }
-
-        .rating-text {
-            font-weight: 600;
-            color: #075985;
-        }
-
-        .review-count {
-            color: #6b7280;
-            font-size: 0.85rem;
-        }
-
-        .school-info {
-            margin-bottom: 1.5rem;
-        }
-
-        .info-item {
-            display: flex;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            font-size: 0.95rem;
-            color: #4b5563;
-        }
-
-        .info-icon {
-            color: #14b8a6;
-            font-weight: 600;
-            min-width: 1.5rem;
-        }
-
-        .school-cta {
-            display: inline-block;
-            background: #f97316;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            margin-top: auto;
-            text-align: center;
-        }
-
-        .school-cta:hover {
-            background: #ea580c;
-        }
-
-        .state-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-
-        .state-chip {
-            background: white;
-            border: 2px solid #e5e7eb;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 500;
-            color: #075985;
-        }
-
-        .state-chip:hover {
-            border-color: #0284c7;
-            background: #f0f9ff;
-            transform: translateY(-2px);
-        }
-
-        .quality-factors {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
-            padding: 2.5rem;
-            border-radius: 12px;
-            border: 1px solid #d1fae5;
-        }
-
-        .quality-factor {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .quality-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-
-        .quality-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .quality-title {
-            font-weight: 600;
-            color: #075985;
-            margin-bottom: 0.25rem;
-        }
-
-        .quality-desc {
-            font-size: 0.9rem;
-            color: #6b7280;
-        }
-
-        .add-school-cta {
-            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-            color: white;
-            padding: 2.5rem;
-            border-radius: 12px;
-            text-align: center;
-            margin: 3rem 0;
-        }
-
-        .add-school-cta h2 {
-            color: white;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .add-school-cta p {
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 1.5rem;
-        }
-
-        .add-school-button {
-            display: inline-block;
-            background: white;
-            color: #f97316;
-            padding: 0.875rem 2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .add-school-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        @media (max-width: 768px) {
-            
-
-            .hero h1 {
-                font-size: 1.5rem;
-            }
-
-            .search-box {
-                grid-template-columns: 1fr;
-            }
-
-            .search-button {
-                padding: 0;
-            }
-
-            .featured-schools {
-                grid-template-columns: 1fr;
-            }
-
-            .state-grid {
-                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-            }
-
-            .quality-factors {
-                grid-template-columns: 1fr;
-            }
-
-            .how-it-works {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
-  <link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
   <!-- End Google Tag Manager -->
@@ -446,7 +40,8 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Find & Rate Swim Schools Across America</h1>
-            <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 0;">Search 10,000+ schools. Read real parent reviews. Find your perfect fit.</p>
+            <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 0.5rem;">Search 10,000+ schools across all 50 states. Read real parent reviews. Find your perfect fit.</p>
+            <p style="font-size: 0.95rem; opacity: 0.85; margin-bottom: 0;">Browse swim schools in every state, every region, and every community nationwide</p>
 
             <div class="search-box">
                 <div class="search-input">
@@ -488,6 +83,15 @@
     </section>
 
     <div class="main-content">
+        <section class="section" style="background: #f0f7fd; border-radius: var(--radius-lg); padding: 24px; margin-bottom: 48px; border-left: 4px solid #0f5f94;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                <span style="font-size: 1.3rem;">📍</span>
+                <h3 style="margin: 0; color: #0d4d77; font-size: 1rem;">Directory Updated Regularly</h3>
+            </div>
+            <p style="margin: 0 0 12px 0; color: var(--gray-700); font-size: 0.95rem;">Can't find a swim school in your area? We're constantly adding new schools and updating information.</p>
+            <a href="/swim-schools/add.html" style="color: #0f5f94; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">Know a school we're missing? Help us grow →</a>
+        </section>
+
         <section class="section">
             <h2 class="section-title">How It Works</h2>
             <div class="how-it-works">
@@ -696,96 +300,119 @@
 
         <section class="section">
             <h2 class="section-title">Browse by State</h2>
+            <p style="text-align: center; margin: 0 0 24px 0; color: var(--gray-600);">All 50 US States Covered</p>
             <div class="state-grid">
-                <div class="state-chip">Alabama</div>
-                <div class="state-chip">Alaska</div>
-                <div class="state-chip">Arizona</div>
-                <div class="state-chip">Arkansas</div>
-                <div class="state-chip">California</div>
-                <div class="state-chip">Colorado</div>
-                <div class="state-chip">Connecticut</div>
-                <div class="state-chip">Delaware</div>
-                <div class="state-chip">Florida</div>
-                <div class="state-chip">Georgia</div>
-                <div class="state-chip">Hawaii</div>
-                <div class="state-chip">Idaho</div>
-                <div class="state-chip">Illinois</div>
-                <div class="state-chip">Indiana</div>
-                <div class="state-chip">Iowa</div>
-                <div class="state-chip">Kansas</div>
-                <div class="state-chip">Kentucky</div>
-                <div class="state-chip">Louisiana</div>
-                <div class="state-chip">Maine</div>
-                <div class="state-chip">Maryland</div>
-                <div class="state-chip">Massachusetts</div>
-                <div class="state-chip">Michigan</div>
-                <div class="state-chip">Minnesota</div>
-                <div class="state-chip">Mississippi</div>
-                <div class="state-chip">Missouri</div>
-                <div class="state-chip">Montana</div>
-                <div class="state-chip">Nebraska</div>
-                <div class="state-chip">Nevada</div>
-                <div class="state-chip">New Hampshire</div>
-                <div class="state-chip">New Jersey</div>
-                <div class="state-chip">New Mexico</div>
-                <div class="state-chip">New York</div>
-                <div class="state-chip">North Carolina</div>
-                <div class="state-chip">North Dakota</div>
-                <div class="state-chip">Ohio</div>
-                <div class="state-chip">Oklahoma</div>
-                <div class="state-chip">Oregon</div>
-                <div class="state-chip">Pennsylvania</div>
-                <div class="state-chip">Rhode Island</div>
-                <div class="state-chip">South Carolina</div>
-                <div class="state-chip">South Dakota</div>
-                <div class="state-chip">Tennessee</div>
-                <div class="state-chip">Texas</div>
-                <div class="state-chip">Utah</div>
-                <div class="state-chip">Vermont</div>
-                <div class="state-chip">Virginia</div>
-                <div class="state-chip">Washington</div>
-                <div class="state-chip">West Virginia</div>
-                <div class="state-chip">Wisconsin</div>
-                <div class="state-chip">Wyoming</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">AL</span> Alabama</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">AK</span> Alaska</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">AZ</span> Arizona</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">AR</span> Arkansas</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">CA</span> California</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">CO</span> Colorado</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">CT</span> Connecticut</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">DE</span> Delaware</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">FL</span> Florida</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">GA</span> Georgia</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">HI</span> Hawaii</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">ID</span> Idaho</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">IL</span> Illinois</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">IN</span> Indiana</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">IA</span> Iowa</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">KS</span> Kansas</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">KY</span> Kentucky</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">LA</span> Louisiana</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">ME</span> Maine</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">MD</span> Maryland</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">MA</span> Massachusetts</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">MI</span> Michigan</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">MN</span> Minnesota</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">MS</span> Mississippi</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">MO</span> Missouri</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">MT</span> Montana</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">NE</span> Nebraska</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">NV</span> Nevada</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">NH</span> New Hampshire</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">NJ</span> New Jersey</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">NM</span> New Mexico</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">NY</span> New York</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">NC</span> North Carolina</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">ND</span> North Dakota</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">OH</span> Ohio</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">OK</span> Oklahoma</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">OR</span> Oregon</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">PA</span> Pennsylvania</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">RI</span> Rhode Island</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">SC</span> South Carolina</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">SD</span> South Dakota</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">TN</span> Tennessee</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">TX</span> Texas</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">UT</span> Utah</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">VT</span> Vermont</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">VA</span> Virginia</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">WA</span> Washington</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">WV</span> West Virginia</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">WI</span> Wisconsin</div>
+                <div class="state-chip"><span style="font-weight: 700; color: #0f5f94;">WY</span> Wyoming</div>
             </div>
         </section>
 
         <section class="section">
             <h2 class="section-title">What Makes a 5-Star Swim School?</h2>
+            <p style="text-align: center; color: var(--gray-600); margin-bottom: 32px;">The highest-rated schools across our national directory share these key qualities:</p>
             <div class="quality-factors">
                 <div class="quality-factor">
-                    <div class="quality-icon">🛡️</div>
+                    <div class="quality-icon">🛡</div>
                     <div class="quality-text">
                         <div class="quality-title">Safety-First Approach</div>
-                        <div class="quality-desc">Certified lifeguards, small class sizes, and constant supervision.</div>
+                        <div class="quality-desc">Certified lifeguards, small class sizes, and constant supervision in every lesson.</div>
                     </div>
                 </div>
                 <div class="quality-factor">
-                    <div class="quality-icon">👨‍🏫</div>
+                    <div class="quality-icon">👨</div>
                     <div class="quality-text">
                         <div class="quality-title">Qualified Instructors</div>
-                        <div class="quality-desc">WSI-certified or equivalent training with years of experience.</div>
+                        <div class="quality-desc">WSI-certified or equivalent training. Background checked with years of experience teaching diverse ages.</div>
                     </div>
                 </div>
                 <div class="quality-factor">
                     <div class="quality-icon">👥</div>
                     <div class="quality-text">
                         <div class="quality-title">Small Class Sizes</div>
-                        <div class="quality-desc">6–8 students per instructor for personalized attention.</div>
+                        <div class="quality-desc">Typically 6–8 students per instructor for personalized attention and individual progress tracking.</div>
                     </div>
                 </div>
                 <div class="quality-factor">
                     <div class="quality-icon">📈</div>
                     <div class="quality-text">
-                        <div class="quality-title">Clear Progression</div>
-                        <div class="quality-desc">Well-defined levels from beginner to advanced swimmer.</div>
+                        <div class="quality-title">Clear Level Progression</div>
+                        <div class="quality-desc">Well-defined curriculum from water comfort to advanced stroke technique and water safety.</div>
                     </div>
                 </div>
                 <div class="quality-factor">
                     <div class="quality-icon">💬</div>
                     <div class="quality-text">
                         <div class="quality-title">Parent Communication</div>
-                        <div class="quality-desc">Regular feedback and progress updates from instructors.</div>
+                        <div class="quality-desc">Regular updates on progress, skill development, and next steps between instructor and parent.</div>
+                    </div>
+                </div>
+                <div class="quality-factor">
+                    <div class="quality-icon">🏊</div>
+                    <div class="quality-text">
+                        <div class="quality-title">Age-Appropriate Programs</div>
+                        <div class="quality-desc">Specialized classes for infants, toddlers, preschool, school age, teens, and adults with tailored curricula.</div>
+                    </div>
+                </div>
+                <div class="quality-factor">
+                    <div class="quality-icon">🏅</div>
+                    <div class="quality-text">
+                        <div class="quality-title">Verified Parent Reviews</div>
+                        <div class="quality-desc">Transparent, honest feedback from real families who've taken lessons at the school.</div>
+                    </div>
+                </div>
+                <div class="quality-factor">
+                    <div class="quality-icon">🌟</div>
+                    <div class="quality-text">
+                        <div class="quality-title">Flexibility & Accessibility</div>
+                        <div class="quality-desc">Varied session times, makeup lesson policies, and welcoming approach for all abilities.</div>
                     </div>
                 </div>
             </div>
