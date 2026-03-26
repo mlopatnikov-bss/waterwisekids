@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CPR Basics Every Pool Parent Must Know | WaterWiseKids</title>
+  <meta name="description" content="Step-by-step CPR instructions for children and infants, when to call 911, recovery position, and life-saving techniques every parent should know." />
+<style>
+    
+    :root { --blue-50: #eff8ff; --blue-100: #dbeffe; --blue-200: #b9e0fd; --blue-300: #7cc8fb; --blue-400: #38b6f1; --blue-500: #0ea5e9; --blue-600: #0284c7; --blue-700: #0369a1; --blue-800: #075985; --blue-900: #0c4a6e; --teal-400: #2dd4bf; --teal-500: #14b8a6; --teal-600: #0d9488; --cyan-400: #22d3ee; --cyan-500: #06b6d4; --orange-400: #fb923c; --orange-500: #f97316; --green-500: #22c55e; --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-200: #e5e7eb; --gray-300: #d1d5db; --gray-400: #9ca3af; --gray-500: #6b7280; --gray-600: #4b5563; --gray-700: #374151; --gray-800: #1f2937; --gray-900: #111827; --white: #ffffff; --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 20px; --r-full: 9999px; --sh-sm: 0 1px 3px rgba(0,0,0,.08); --sh-md: 0 4px 16px rgba(0,0,0,.10); }
+    
+    
+    
+    
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    
+    
+    
+    
+    
+    
+    
+    .nav-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .btn-sm { padding: 8px 16px; border-radius: var(--r-sm); font-size: .85rem; font-weight: 600; cursor: pointer; border: none; transition: all .15s; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-primary-sm { background: var(--blue-600); color: white; box-shadow: var(--sh-sm); }
+    .btn-primary-sm:hover { background: var(--blue-700); transform: translateY(-1px); }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; padding: 24px 0; font-size: .85rem; color: var(--gray-600); }
+    .breadcrumb a { color: var(--blue-600); transition: color .2s; }
+    .breadcrumb a:hover { color: var(--blue-700); }
+    .breadcrumb span { color: var(--gray-400); }
+    .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 40px; padding: 48px 0; }
+    .article h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; color: var(--gray-900); line-height: 1.15; letter-spacing: -.04em; margin-bottom: 16px; }
+    .article-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-size: .85rem; color: var(--gray-600); margin-bottom: 24px; }
+    .article-excerpt { font-size: 1.1rem; color: var(--gray-700); line-height: 1.7; max-width: 700px; margin-bottom: 32px; }
+    .alert { background: var(--green-500); color: white; border-radius: var(--r-lg); padding: 24px; margin: 32px 0; }
+    .alert-title { font-weight: 700; margin-bottom: 8px; font-size: 1.05rem; }
+    .alert-text { font-size: .95rem; line-height: 1.6; }
+    .article-body { color: var(--gray-800); line-height: 1.8; }
+    .article-body h2 { font-size: 1.6rem; font-weight: 800; color: var(--gray-900); margin: 40px 0 20px; padding-top: 20px; border-top: 1px solid var(--gray-200); }
+    .article-body h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+    .article-body h3 { font-size: 1.2rem; font-weight: 700; color: var(--blue-700); margin: 24px 0 12px; }
+    .article-body p { margin-bottom: 16px; font-size: 1rem; }
+    .article-body ul { margin-left: 20px; margin-bottom: 16px; }
+    .article-body ol { margin-left: 20px; margin-bottom: 16px; }
+    .article-body li { margin-bottom: 10px; font-size: 1rem; }
+    .article-body strong { color: var(--blue-700); font-weight: 700; }
+    .step-box { background: var(--blue-50); border: 1px solid var(--blue-200); border-radius: var(--r-lg); padding: 24px; margin: 24px 0; }
+    .step-title { font-size: 1.1rem; font-weight: 800; color: var(--blue-900); margin-bottom: 12px; }
+    .step-content { color: var(--gray-800); }
+    .related { margin-top: 60px; padding-top: 40px; border-top: 2px solid var(--gray-200); }
+    .related-title { font-size: 1.4rem; font-weight: 800; color: var(--gray-900); margin-bottom: 24px; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .related-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--r-lg); padding: 20px; transition: all .2s; cursor: pointer; }
+    .related-card:hover { border-color: var(--blue-400); background: var(--blue-50); transform: translateY(-2px); }
+    .related-card-title { font-size: .95rem; font-weight: 700; color: var(--gray-900); margin-bottom: 12px; line-height: 1.4; }
+    .related-card-link { display: inline-flex; align-items: center; gap: 4px; color: var(--blue-600); font-size: .85rem; font-weight: 600; }
+    .sidebar { display: flex; flex-direction: column; gap: 32px; }
+    .sidebar-box { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--r-lg); padding: 24px; position: sticky; top: 100px; }
+    .sidebar-title { font-size: .95rem; font-weight: 700; color: var(--gray-900); margin-bottom: 16px; }
+    .quick-ref { display: flex; flex-direction: column; gap: 12px; }
+    .quick-ref-item { padding: 10px 0; border-bottom: 1px solid var(--gray-100); font-size: .9rem; line-height: 1.5; }
+    .quick-ref-item:last-child { border-bottom: none; }
+    .cta-box { background: linear-gradient(135deg, var(--teal-500), var(--blue-600)); color: white; border: none; padding: 28px 24px; }
+    .cta-title { color: white; margin-bottom: 8px; }
+    .cta-desc { font-size: .9rem; color: rgba(255,255,255,.85); margin-bottom: 16px; line-height: 1.5; }
+    .cta-button { display: block; width: 100%; padding: 12px; border: none; border-radius: var(--r-lg); background: white; color: var(--blue-600); font-size: .9rem; font-weight: 700; cursor: pointer; transition: all .2s; text-align: center; }
+    .cta-button:hover { transform: translateY(-2px); box-shadow: var(--sh-md); }
+    
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+    .footer-col h3 { font-size: .9rem; font-weight: 700; color: white; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a { color: var(--gray-400); font-size: .85rem; transition: color .2s; }
+    .footer-col a:hover { color: white; }
+    
+    @media (max-width: 768px) {
+      .main-layout { grid-template-columns: 1fr; }
+      
+      .article h1 { font-size: 1.6rem; }
+      .article-body h2 { font-size: 1.3rem; }
+      .sidebar-box { position: static; }
+      .related-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Navigation -->
+  <nav class="wwk-nav">
+    <div class="wwk-nav-inner">
+      <a href="/" class="wwk-nav-logo">WaterWiseKids</a>
+      <button class="wwk-nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="wwk-nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/education.html">Water Safety</a></li>
+        <li><a href="/swim-schools.html">Find Schools</a></li>
+        <li><a href="/jobs.html">Aquatics Jobs</a></li>
+        <li><a href="/teens.html">Teen Hub</a></li>
+        <li><a href="/gear.html">Gear Guide</a></li>
+        <li><a href="/advertise.html">Advertise</a></li>
+        <li><a href="/jobs/post.html" class="wwk-nav-cta">Post a Job</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/education/">Education</a>
+      <span>/</span>
+      <span>CPR Basics</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="main-layout">
+      <main class="article">
+        <div>
+          <div class="article-meta">
+            <div>📅 November 2, 2025</div>
+            <div>✏️ Updated March 25, 2026</div>
+            <div>👤 WaterWiseKids Editorial Team</div>
+          </div>
+          <h1>CPR Basics Every Pool Parent Must Know</h1>
+          <p class="article-excerpt">Knowing CPR can mean the difference between life and death in a water emergency. Here are step-by-step instructions, when to call 911, and why hands-on training is critical.</p>
+        </div>
+
+        <div class="alert">
+          <div class="alert-title">✓ Important Note</div>
+          <div class="alert-text">This article is educational only and not a substitute for hands-on CPR certification. Every pool parent should take a certified CPR course (American Red Cross, American Heart Association, or equivalent). This guide provides reference information only.</div>
+        </div>
+
+        <div class="article-body">
+          <h2>When to Call 911 First</h2>
+          <p>
+            If you encounter an unresponsive child in or near water, your first action is usually to <strong>call 911 immediately</strong>.
+          </p>
+          <h3>Call 911 Immediately If:</h3>
+          <ul>
+            <li>Child is unresponsive or unconscious</li>
+            <li>Child is not breathing normally (gasping is not normal breathing)</li>
+            <li>Child pulled from water and appears to be drowning</li>
+            <li>You're unsure about the severity (when in doubt, call)</li>
+          </ul>
+          <p>
+            <strong>Exception:</strong> If you're alone with a child who is unresponsive, provide CPR for 2 minutes first (about 5 cycles of compression-rescue breath), then call 911 if possible. If a second person is present, one should call while the other begins CPR.
+          </p>
+
+          <h2>CPR for Children Ages 1-8</h2>
+          <p>
+            CPR for children differs slightly from adult CPR. These are the basic steps:
+          </p>
+
+          <div class="step-box">
+            <div class="step-title">Step 1: Ensure Safety</div>
+            <div class="step-content">
+              <p>Make sure the scene is safe (no danger to you) and the child is on a firm, flat surface. If in water, get the child out first.</p>
+            </div>
+          </div>
+
+          <div class="step-box">
+            <div class="step-title">Step 2: Check Responsiveness</div>
+            <div class="step-content">
+              <p>Tap the child on the shoulders and shout "Are you okay?" Look for any response—movement, sounds, or opening eyes.</p>
+            </div>
+          </div>
+
+          <div class="step-box">
+            <div class="step-title">Step 3: Check for Breathing</div>
+            <div class="step-content">
+              <p>Look for normal chest rise, listen for breath sounds, feel for breath on your cheek. You have about 10 seconds. <strong>Important:</strong> Gasping is NOT normal breathing. If you see gasping or no breathing, begin CPR.</p>
+            </div>
+          </div>
+
+          <div class="step-box">
+            <div class="step-title">Step 4: Hand Position for Compressions</div>
+            <div class="step-content">
+              <p><strong>For ages 1-8:</strong> Place the heel of one hand on the center of the chest (between the nipples). For very small children, you can use two fingers instead. Keep the other hand on the forehead to maintain airway position.</p>
+            </div>
+          </div>
+
+          <div class="step-box">
+            <div class="step-title">Step 5: Compressions</div>
+            <div class="step-content">
+              <ul>
+                <li><strong>Depth:</strong> Push hard and fast, compressing the chest at least 2 inches deep</li>
+                <li><strong>Rate:</strong> 100-120 compressions per minute (roughly the beat of the song "Stayin' Alive")</li>
+                <li><strong>Release:</strong> Let the chest recoil completely between compressions</li>
+              </ul>
+              <p>Push hard. Many people don't push hard enough. Breaking a rib is not your primary concern—the child is already not breathing.</p>
+            </div>
+          </div>
+
+          <div class="step-box">
+            <div class="step-title">Step 6: Rescue Breaths (After Every 30 Compressions)</div>
+            <div class="step-content">
+              <ul>
+                <li>After 30 compressions, open the airway by tilting the head back slightly and lifting the chin</li>
+                <li>Pinch the child's nose closed</li>
+                <li>Seal your mouth over the child's mouth</li>
+                <li>Give 2 gentle breaths—watch for chest rise but don't overfill</li>
+                <li>Return to compressions immediately</li>
+              </ul>
+              <p><strong>Note:</strong> If you're uncomfortable giving rescue breaths, compression-only CPR (just pushing on the chest) is also effective and recommended.</p>
+            </div>
+          </div>
+
+          <div class="step-box">
+            <div class="step-title">Step 7: Continue CPR</div>
+            <div class="step-content">
+              <p>Continue CPR (30 compressions + 2 breaths, repeat) until:</p>
+              <ul>
+                <li>Emergency responders arrive and take over</li>
+                <li>The child shows signs of life (coughing, moving, opening eyes)</li>
+                <li>You're too exhausted to continue safely</li>
+              </ul>
+              <p>Do NOT stop CPR to check if they're breathing unless emergency services have arrived.</p>
+            </div>
+          </div>
+
+          <h2>CPR for Infants (Ages 0-1)</h2>
+          <p>
+            CPR for infants is slightly different due to their smaller size:
+          </p>
+          <ul>
+            <li><strong>Hand position:</strong> Use 2-3 fingers (index and middle finger) instead of the heel of your hand</li>
+            <li><strong>Compression depth:</strong> At least 1.5 inches (about 1/3 the depth of the chest)</li>
+            <li><strong>Rate:</strong> 100-120 compressions per minute (same as older children)</li>
+            <li><strong>Rescue breaths:</strong> Give gentle breaths—your mouth covers both the nose and mouth of the infant</li>
+          </ul>
+
+          <h2>Recovery Position</h2>
+          <p>
+            If a child is breathing and responsive but still unconscious, place them in the recovery position to keep the airway open:
+          </p>
+          <ol>
+            <li>Turn the child on their side</li>
+            <li>Tilt the head back slightly to open the airway</li>
+            <li>Place one arm under the head for support</li>
+            <li>Bend one leg to prevent rolling</li>
+            <li>Monitor breathing continuously</li>
+          </ol>
+          <p>
+            <strong>Never leave a child in the recovery position alone.</strong> Stay until emergency responders arrive.
+          </p>
+
+          <h2>Common CPR Mistakes</h2>
+          <p>
+            These are mistakes people commonly make during CPR:
+          </p>
+          <ul>
+            <li><strong>Not pushing hard enough:</strong> Compressions should be vigorous and deep. The child is already not breathing—you can't make it worse.</li>
+            <li><strong>Pushing too slowly:</strong> 100-120 compressions per minute. Faster is better than slower.</li>
+            <li><strong>Stopping to check for responsiveness:</strong> Once you start CPR, continue until responders arrive. Only stop for rescue breaths.</li>
+            <li><strong>Not opening the airway:</strong> Tilt the head back to open the airway for rescue breaths.</li>
+            <li><strong>Giving up too quickly:</strong> CPR should continue for several minutes. A child's heart can restart after many minutes without oxygen.</li>
+          </ul>
+
+          <h2>After Emergency Services Arrive</h2>
+          <p>
+            When 911 responders arrive:
+          </p>
+          <ul>
+            <li>Explain what happened (pulled from water, found unresponsive, etc.)</li>
+            <li>Tell them how long CPR was performed</li>
+            <li>Describe any medications or treatments given</li>
+            <li>Step back and let professionals take over</li>
+            <li>Provide contact information for parents/guardians</li>
+          </ul>
+
+          <h2>Drowning Doesn't End at the Hospital</h2>
+          <p>
+            <strong>"Dry drowning" or "secondary drowning"</strong> can occur hours after a water incident. Symptoms include:
+          </p>
+          <ul>
+            <li>Difficulty breathing or shortness of breath hours later</li>
+            <li>Chest pain or coughing</li>
+            <li>Lethargy or behavioral changes</li>
+            <li>Fever</li>
+            <li>Vomiting</li>
+          </ul>
+          <p>
+            If a child has been rescued from water, monitor them closely for 24 hours and seek medical attention immediately if any of these symptoms appear.
+          </p>
+
+          <h2>Getting Certified: Why It Matters</h2>
+          <p>
+            This article provides basic information, but <strong>hands-on training is essential</strong>. Certification courses include:
+          </p>
+          <ul>
+            <li>Supervised practice on CPR mannequins</li>
+            <li>Feedback on compression depth and rate</li>
+            <li>Practice giving rescue breaths</li>
+            <li>Scenario training (real-world situations)</li>
+            <li>Official certification card upon completion</li>
+          </ul>
+          <p>
+            <strong>Recommended certifications:</strong> American Red Cross, American Heart Association, or equivalent recognized organization.
+          </p>
+
+          <!-- RELATED ARTICLES -->
+          <div class="related">
+            <h3 class="related-title">Related Water Safety Topics</h3>
+            <div class="related-grid">
+              <a href="/education/drowning-prevention-guide.html" class="related-card">
+                <div class="related-card-title">Complete Drowning Prevention</div>
+                <span class="related-card-link">Read Article →</span>
+              </a>
+              <a href="/education/toddler-water-safety.html" class="related-card">
+                <div class="related-card-title">Toddler Water Safety</div>
+                <span class="related-card-link">Read Article →</span>
+              </a>
+              <a href="/education/pool-safety-rules.html" class="related-card">
+                <div class="related-card-title">Pool Safety Rules</div>
+                <span class="related-card-link">Read Article →</span>
+              </a>
+              <a href="/education/when-to-start-swim-lessons.html" class="related-card">
+                <div class="related-card-title">When to Start Swim Lessons</div>
+                <span class="related-card-link">Read Article →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">🚨 Quick Reference</h3>
+          <div class="quick-ref">
+            <div class="quick-ref-item"><strong>1.</strong> Call 911 immediately</div>
+            <div class="quick-ref-item"><strong>2.</strong> Get child out of water</div>
+            <div class="quick-ref-item"><strong>3.</strong> Check responsiveness</div>
+            <div class="quick-ref-item"><strong>4.</strong> Check breathing</div>
+            <div class="quick-ref-item"><strong>5.</strong> Start compressions</div>
+            <div class="quick-ref-item"><strong>Rate:</strong> 100-120/min</div>
+            <div class="quick-ref-item"><strong>Depth:</strong> 2+ inches</div>
+            <div class="quick-ref-item"><strong>Breaths:</strong> After every 30 compressions</div>
+            <div class="quick-ref-item"><strong>Continue until:</strong> Help arrives or child responds</div>
+          </div>
+        </div>
+
+        <div class="sidebar-box cta-box">
+          <h3 class="cta-title">Get Certified</h3>
+          <p class="cta-desc">Sign up for hands-on CPR training with a certified instructor.</p>
+          <a href="/swim-schools/" class="cta-button">Find Courses</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="wwk-footer">
+    <div class="wwk-footer-grid">
+      <div class="wwk-footer-col">
+        <h4>Learn</h4>
+        <a href="/education.html">Water Safety Education</a>
+        <a href="/education/drowning-prevention-guide.html">Drowning Prevention</a>
+        <a href="/education/cpr-basics-parents.html">CPR for Parents</a>
+        <a href="/education/pool-safety-rules.html">Pool Safety Rules</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>Find</h4>
+        <a href="/swim-schools.html">Swim School Directory</a>
+        <a href="/swim-lessons/philadelphia.html">Philadelphia Lessons</a>
+        <a href="/swim-lessons/jersey-shore.html">Jersey Shore Lessons</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>Careers</h4>
+        <a href="/jobs.html">Aquatics Jobs</a>
+        <a href="/teens.html">Teen Hub</a>
+        <a href="/teens/lifeguard-certification.html">Lifeguard Certification</a>
+        <a href="/jobs/post.html">Post a Job</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>More</h4>
+        <a href="/gear.html">Gear Guide</a>
+        <a href="/advertise.html">Advertise</a>
+        <a href="/about.html">About Us</a>
+      </div>
+    </div>
+    <div class="wwk-footer-bottom">
+      &copy; 2026 WaterWiseKids.com &mdash; America&#39;s National Aquatics Hub
+    </div>
+  </footer>
+<script src="/site-nav.js" defer></script>
+</body>
+</html>

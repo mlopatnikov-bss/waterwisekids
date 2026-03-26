@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Safety Education Hub | Expert Articles for Parents & Families | WaterWiseKids</title>
+  <meta name="description" content="Browse 500+ expert water safety articles for parents. Pool safety, drowning prevention, swim lesson guides, ocean safety, CPR basics, and more. Free resources." />
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["CollectionPage", "WebPage"],
+    "name": "Water Safety Education Hub",
+    "description": "Browse expert water safety articles for parents and families",
+    "url": "https://www.waterwisekids.com/education/",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.waterwisekids.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Water Safety Education",
+          "item": "https://www.waterwisekids.com/education/"
+        }
+      ]
+    }
+  }
+  </script>
+  <style>
+    
+
+    :root {
+      --blue-50: #eff8ff; --blue-100: #dbeffe; --blue-200: #b9e0fd;
+      --blue-300: #7cc8fb; --blue-400: #38b6f1; --blue-500: #0ea5e9;
+      --blue-600: #0284c7; --blue-700: #0369a1; --blue-800: #075985;
+      --blue-900: #0c4a6e;
+      --teal-400: #2dd4bf; --teal-500: #14b8a6; --teal-600: #0d9488;
+      --cyan-400: #22d3ee; --cyan-500: #06b6d4;
+      --orange-400: #fb923c; --orange-500: #f97316;
+      --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-200: #e5e7eb;
+      --gray-300: #d1d5db; --gray-400: #9ca3af; --gray-500: #6b7280;
+      --gray-600: #4b5563; --gray-700: #374151; --gray-800: #1f2937;
+      --gray-900: #111827;
+      --white: #ffffff;
+      --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 20px; --r-2xl: 28px; --r-full: 9999px;
+      --sh-sm: 0 1px 3px rgba(0,0,0,.08);
+      --sh-md: 0 4px 16px rgba(0,0,0,.10);
+      --sh-lg: 0 8px 32px rgba(0,0,0,.12);
+    }
+
+    
+    
+    
+    
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+    /* HEADER */
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    .btn-sm {
+      padding: 8px 16px; border-radius: var(--r-sm);
+      font-size: .85rem; font-weight: 600; cursor: pointer;
+      border: none; transition: all .15s; display: inline-flex; align-items: center; gap: 6px;
+    }
+    .btn-primary-sm { background: var(--blue-600); color: white; box-shadow: var(--sh-sm); }
+    .btn-primary-sm:hover { background: var(--blue-700); transform: translateY(-1px); }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      padding: 24px 0 0; font-size: .85rem; color: var(--gray-600);
+    }
+    .breadcrumb a { color: var(--blue-600); transition: color .2s; }
+    .breadcrumb a:hover { color: var(--blue-700); }
+    .breadcrumb span { color: var(--gray-400); }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(150deg, #0c4a6e 0%, #075985 35%, #0d9488 75%, #0f766e 100%);
+      padding: 80px 0 60px; position: relative; overflow: hidden;
+    }
+    .hero::after {
+      content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 60px;
+      background: linear-gradient(to bottom, transparent, var(--white));
+    }
+
+    .hero-content { position: relative; z-index: 1; }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 900;
+      color: white; line-height: 1.15; letter-spacing: -.04em; margin-bottom: 16px;
+    }
+    .hero-sub {
+      font-size: 1.05rem; color: rgba(255,255,255,.8);
+      max-width: 600px; line-height: 1.6;
+    }
+
+    /* CATEGORY FILTERS */
+    .filters {
+      padding: 48px 0 40px; border-bottom: 1px solid var(--gray-200);
+    }
+    .filter-label {
+      font-size: .75rem; font-weight: 700;
+      color: var(--gray-600); text-transform: uppercase; letter-spacing: .06em;
+      margin-bottom: 16px;
+    }
+    .filter-pills {
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+    .filter-pill {
+      padding: 8px 14px; border-radius: var(--r-full);
+      border: 1.5px solid var(--gray-200); background: var(--white);
+      color: var(--gray-700); font-size: .85rem; font-weight: 500;
+      cursor: pointer; transition: all .2s;
+    }
+    .filter-pill:hover, .filter-pill.active {
+      border-color: var(--blue-600); background: var(--blue-50);
+      color: var(--blue-700);
+    }
+
+    /* MAIN LAYOUT */
+    .main-layout { display: grid; grid-template-columns: 1fr 300px; gap: 40px; padding: 48px 0; }
+
+    /* FEATURED ARTICLES GRID */
+    .articles-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .article-card {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--r-lg); overflow: hidden;
+      transition: all .2s; cursor: pointer;
+    }
+    .article-card:hover {
+      border-color: var(--blue-400); box-shadow: var(--sh-md);
+      transform: translateY(-4px);
+    }
+    .article-card-image {
+      width: 100%; height: 180px; background: linear-gradient(135deg, #0284c7, #14b8a6);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; color: rgba(255,255,255,.3);
+    }
+    .article-card-body { padding: 20px; }
+    .article-card-category {
+      display: inline-block; padding: 4px 10px; border-radius: 4px;
+      background: var(--blue-50); color: var(--blue-700);
+      font-size: .7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .04em; margin-bottom: 8px;
+    }
+    .article-card-title {
+      font-size: .95rem; font-weight: 700; color: var(--gray-900);
+      margin-bottom: 8px; line-height: 1.4;
+    }
+    .article-card-excerpt {
+      font-size: .8rem; color: var(--gray-600); line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .article-card-link {
+      display: inline-flex; align-items: center; gap: 4px;
+      color: var(--blue-600); font-size: .85rem; font-weight: 600;
+      transition: gap .2s;
+    }
+    .article-card:hover .article-card-link { gap: 8px; }
+
+    /* SIDEBAR */
+    .sidebar {
+      display: flex; flex-direction: column; gap: 32px;
+    }
+
+    .sidebar-box {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--r-lg); padding: 24px;
+    }
+    .sidebar-title {
+      font-size: .95rem; font-weight: 700; color: var(--gray-900);
+      margin-bottom: 16px;
+    }
+
+    .most-read-list {
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .most-read-item {
+      padding: 12px 0; border-bottom: 1px solid var(--gray-100);
+      font-size: .85rem; line-height: 1.5;
+    }
+    .most-read-item:last-child { border-bottom: none; }
+    .most-read-item a {
+      color: var(--blue-600); font-weight: 500; transition: color .2s;
+    }
+    .most-read-item a:hover { color: var(--blue-700); }
+    .most-read-rank {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--blue-100); color: var(--blue-700);
+      font-size: .7rem; font-weight: 800; margin-right: 8px;
+    }
+
+    /* NEWSLETTER */
+    .newsletter-box {
+      background: linear-gradient(135deg, var(--blue-600), var(--teal-500));
+      color: white; border: none;
+    }
+    .newsletter-title { color: white; margin-bottom: 8px; }
+    .newsletter-desc {
+      font-size: .8rem; color: rgba(255,255,255,.8); margin-bottom: 16px;
+    }
+    .newsletter-form {
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .newsletter-input {
+      padding: 10px 12px; border: none; border-radius: var(--r-sm);
+      font-size: .85rem; background: rgba(255,255,255,.1);
+      color: white; font-family: inherit;
+    }
+    .newsletter-input::placeholder { color: rgba(255,255,255,.5); }
+    .newsletter-button {
+      padding: 10px 12px; border: none; border-radius: var(--r-sm);
+      background: white; color: var(--blue-600); font-size: .85rem;
+      font-weight: 700; cursor: pointer; transition: all .2s;
+    }
+    .newsletter-button:hover { transform: translateY(-2px); box-shadow: var(--sh-md); }
+
+    /* FOOTER */
+    
+    
+    
+    
+    
+    
+    
+    
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .main-layout { grid-template-columns: 1fr; }
+      
+      .articles-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.8rem; }
+      
+    }
+  </style>
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <nav class="wwk-nav">
+    <div class="wwk-nav-inner">
+      <a href="/" class="wwk-nav-logo">WaterWiseKids</a>
+      <button class="wwk-nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="wwk-nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/education.html">Water Safety</a></li>
+        <li><a href="/swim-schools.html">Find Schools</a></li>
+        <li><a href="/jobs.html">Aquatics Jobs</a></li>
+        <li><a href="/teens.html">Teen Hub</a></li>
+        <li><a href="/gear.html">Gear Guide</a></li>
+        <li><a href="/advertise.html">Advertise</a></li>
+        <li><a href="/jobs/post.html" class="wwk-nav-cta">Post a Job</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/education/">Water Safety Education</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Water Safety Education Hub</h1>
+        <p class="hero-sub">Explore 500+ expert articles, guides, and resources from pediatricians, swim instructors, and lifeguards. Learn what every parent and caregiver needs to know about keeping children safe in and around water.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <!-- FILTERS -->
+    <section class="filters">
+      <div class="filter-label">Browse by Category</div>
+      <div class="filter-pills">
+        <button class="filter-pill active">All</button>
+        <button class="filter-pill">Pool Safety</button>
+        <button class="filter-pill">Ocean & Lakes</button>
+        <button class="filter-pill">Drowning Prevention</button>
+        <button class="filter-pill">Toddlers</button>
+        <button class="filter-pill">CPR & First Aid</button>
+        <button class="filter-pill">Special Needs</button>
+        <button class="filter-pill">Adult Swimming</button>
+        <button class="filter-pill">Swim Milestones</button>
+      </div>
+    </section>
+
+    <!-- MAIN LAYOUT -->
+    <div class="main-layout">
+      <!-- FEATURED ARTICLES -->
+      <main>
+        <div class="articles-grid">
+          <!-- Article 1 -->
+          <a href="/education/drowning-prevention-guide.html" class="article-card">
+            <div class="article-card-image">🛡️</div>
+            <div class="article-card-body">
+              <span class="article-card-category">Safety Basics</span>
+              <h3 class="article-card-title">The Complete Parent's Guide to Drowning Prevention</h3>
+              <p class="article-card-excerpt">Learn the science of drowning and the 4 layers of protection every family needs.</p>
+              <span class="article-card-link">Read Article →</span>
+            </div>
+          </a>
+
+          <!-- Article 2 -->
+          <a href="/education/when-to-start-swim-lessons.html" class="article-card">
+            <div class="article-card-image">👶</div>
+            <div class="article-card-body">
+              <span class="article-card-category">Readiness</span>
+              <h3 class="article-card-title">When Should Kids Start Swim Lessons?</h3>
+              <p class="article-card-excerpt">Expert recommendations for the right age to begin swim lessons from birth to 5+.</p>
+              <span class="article-card-link">Read Article →</span>
+            </div>
+          </a>
+
+          <!-- Article 3 -->
+          <a href="/education/fear-of-water.html" class="article-card">
+            <div class="article-card-image">😨</div>
+            <div class="article-card-body">
+              <span class="article-card-category">Confidence</span>
+              <h3 class="article-card-title">How to Help a Child Overcome Fear of Water</h3>
+              <p class="article-card-excerpt">Proven techniques to build water confidence without pressure or tears.</p>
+              <span class="article-card-link">Read Article →</span>
+            </div>
+          </a>
+
+          <!-- Article 4 -->
+          <a href="/education/pool-safety-rules.html" class="article-card">
+            <div class="article-card-image">📋</div>
+            <div class="article-card-body">
+              <span class="article-card-category">Pool Safety</span>
+              <h3 class="article-card-title">10 Pool Safety Rules Every Family Must Know</h3>
+              <p class="article-card-excerpt">Essential safety rules with a free printable poster for your pool or backyard.</p>
+              <span class="article-card-link">Read Article →</span>
+            </div>
+          </a>
+
+          <!-- Article 5 -->
+          <a href="/education/lake-ocean-safety.html" class="article-card">
+            <div class="article-card-image">🌊</div>
+            <div class="article-card-body">
+              <span class="article-card-category">Open Water</span>
+              <h3 class="article-card-title">Lake & Ocean Safety: What Pool Swimmers Don't Know</h3>
+              <p class="article-card-excerpt">Waves, currents, and dangers unique to natural water bodies every parent should understand.</p>
+              <span class="article-card-link">Read Article →</span>
+            </div>
+          </a>
+
+          <!-- Article 6 -->
+          <a href="/education/toddler-water-safety.html" class="article-card">
+            <div class="article-card-image">👧</div>
+            <div class="article-card-body">
+              <span class="article-card-category">Toddlers</span>
+              <h3 class="article-card-title">Toddler Water Safety: A Complete Guide for Ages 1-3</h3>
+              <p class="article-card-excerpt">Toddlers are at highest risk. Learn supervision, fencing, and swim lessons for this age.</p>
+              <span class="article-card-link">Read Article →</span>
+            </div>
+          </a>
+
+          <!-- Article 7 -->
+          <a href="/education/cpr-basics-parents.html" class="article-card">
+            <div class="article-card-image">❤️</div>
+            <div class="article-card-body">
+              <span class="article-card-category">CPR & First Aid</span>
+              <h3 class="article-card-title">CPR Basics Every Pool Parent Must Know</h3>
+              <p class="article-card-excerpt">Step-by-step CPR instructions and when to call emergency services.</p>
+              <span class="article-card-link">Read Article →</span>
+            </div>
+          </a>
+
+          <!-- Article 8 -->
+          <a href="/education/swim-milestones-by-age.html" class="article-card">
+            <div class="article-card-image">📈</div>
+            <div class="article-card-body">
+              <span class="article-card-category">Development</span>
+              <h3 class="article-card-title">Swim Milestones by Age: What to Expect</h3>
+              <p class="article-card-excerpt">Realistic expectations for water skills at every age from 6 months to 5+.</p>
+              <span class="article-card-link">Read Article →</span>
+            </div>
+          </a>
+        </div>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <!-- Most Read -->
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">📚 Most Read</h3>
+          <div class="most-read-list">
+            <div class="most-read-item">
+              <span class="most-read-rank">1</span>
+              <a href="/education/drowning-prevention-guide.html">Drowning Prevention Guide</a>
+            </div>
+            <div class="most-read-item">
+              <span class="most-read-rank">2</span>
+              <a href="/education/when-to-start-swim-lessons.html">When to Start Lessons</a>
+            </div>
+            <div class="most-read-item">
+              <span class="most-read-rank">3</span>
+              <a href="/education/toddler-water-safety.html">Toddler Water Safety</a>
+            </div>
+            <div class="most-read-item">
+              <span class="most-read-rank">4</span>
+              <a href="/education/fear-of-water.html">Overcoming Water Fear</a>
+            </div>
+            <div class="most-read-item">
+              <span class="most-read-rank">5</span>
+              <a href="/education/cpr-basics-parents.html">CPR Basics</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="sidebar-box newsletter-box">
+          <h3 class="newsletter-title">📧 Weekly Safety Tips</h3>
+          <p class="newsletter-desc">Get expert water safety tips in your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for signing up!');">
+            <input type="email" class="newsletter-input" placeholder="Your email" required />
+            <button type="submit" class="newsletter-button">Subscribe</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="wwk-footer">
+    <div class="wwk-footer-grid">
+      <div class="wwk-footer-col">
+        <h4>Learn</h4>
+        <a href="/education.html">Water Safety Education</a>
+        <a href="/education/drowning-prevention-guide.html">Drowning Prevention</a>
+        <a href="/education/cpr-basics-parents.html">CPR for Parents</a>
+        <a href="/education/pool-safety-rules.html">Pool Safety Rules</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>Find</h4>
+        <a href="/swim-schools.html">Swim School Directory</a>
+        <a href="/swim-lessons/philadelphia.html">Philadelphia Lessons</a>
+        <a href="/swim-lessons/jersey-shore.html">Jersey Shore Lessons</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>Careers</h4>
+        <a href="/jobs.html">Aquatics Jobs</a>
+        <a href="/teens.html">Teen Hub</a>
+        <a href="/teens/lifeguard-certification.html">Lifeguard Certification</a>
+        <a href="/jobs/post.html">Post a Job</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>More</h4>
+        <a href="/gear.html">Gear Guide</a>
+        <a href="/advertise.html">Advertise</a>
+        <a href="/about.html">About Us</a>
+      </div>
+    </div>
+    <div class="wwk-footer-bottom">
+      &copy; 2026 WaterWiseKids.com &mdash; America&#39;s National Aquatics Hub
+    </div>
+  </footer>
+<script src="/site-nav.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Your Swim School | Free Listing | WaterWiseKids National Directory</title>
+  <meta name="description" content="List your swim school in America's largest aquatics directory. Free basic listings. Reach parents searching for swim lessons in your area.">
+<style>
+    
+
+    html, 
+
+    /* Navigation */
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #075985 0%, #0369a1 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    /* Main Content */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    /* Info Section */
+    .info-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .info-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .info-card h3 {
+      color: #075985;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-card p {
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    .price-highlight {
+      color: #0284c7;
+      font-weight: 700;
+    }
+
+    /* Form Section */
+    .form-container {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 3rem;
+    }
+
+    .form-container h2 {
+      color: #075985;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      color: #475569;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #0284c7;
+      background-color: #f0f9ff;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .form-row .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+      width: auto;
+      margin-right: 0.5rem;
+      cursor: pointer;
+    }
+
+    .checkbox-item label {
+      margin: 0;
+      color: #475569;
+      font-weight: 400;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .form-button {
+      background-color: #0284c7;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      width: 100%;
+    }
+
+    .form-button:hover {
+      background-color: #075985;
+    }
+
+    /* What You Get Section */
+    .what-you-get {
+      background: #e0f2fe;
+      padding: 2.5rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      border-left: 5px solid #0284c7;
+    }
+
+    .what-you-get h2 {
+      color: #075985;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .benefits-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .benefit-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .benefit-item h3 {
+      color: #075985;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .benefit-item p {
+      color: #475569;
+      font-size: 0.9rem;
+    }
+
+    /* FAQ Section */
+    .faq {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .faq h2 {
+      color: #075985;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-question {
+      color: #075985;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .faq-answer {
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    
+
+    footer a {
+      color: #bfdbfe;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      
+
+      
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      main {
+        padding: 2rem 1rem;
+      }
+
+      .info-cards,
+      .benefits-list {
+        grid-template-columns: 1fr;
+      }
+
+      .form-container,
+      .what-you-get,
+      .faq {
+        padding: 1.5rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .checkbox-group {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <nav class="wwk-nav">
+    <div class="wwk-nav-inner">
+      <a href="/" class="wwk-nav-logo">WaterWiseKids</a>
+      <button class="wwk-nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="wwk-nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/education.html">Water Safety</a></li>
+        <li><a href="/swim-schools.html">Find Schools</a></li>
+        <li><a href="/jobs.html">Aquatics Jobs</a></li>
+        <li><a href="/teens.html">Teen Hub</a></li>
+        <li><a href="/gear.html">Gear Guide</a></li>
+        <li><a href="/advertise.html">Advertise</a></li>
+        <li><a href="/jobs/post.html" class="wwk-nav-cta">Post a Job</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Add Your Swim School</h1>
+      <p>Join America's national aquatics directory. Reach parents searching for swim lessons in your area.</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="info-cards">
+      <div class="info-card">
+        <h3>Free Listing</h3>
+        <p><span class="price-highlight">$0/month</span> for basic directory listing with school name, location, contact, and description.</p>
+      </div>
+      <div class="info-card">
+        <h3>Featured Listing</h3>
+        <p><span class="price-highlight">$49/month</span> for enhanced visibility with logo, badge, photos, and premium placement.</p>
+      </div>
+      <div class="info-card">
+        <h3>Get Visibility</h3>
+        <p>Reach hundreds of thousands of parents actively searching for swim lessons in your area every month.</p>
+      </div>
+    </div>
+
+    <form class="form-container" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+      <h2>School Information</h2>
+
+      <div class="form-group">
+        <label for="school-name">School Name *</label>
+        <input type="text" id="school-name" name="school_name" required placeholder="e.g., Aqua Splash Academy">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="address">Street Address *</label>
+          <input type="text" id="address" name="address" required placeholder="123 Main St">
+        </div>
+        <div class="form-group">
+          <label for="city">City *</label>
+          <input type="text" id="city" name="city" required placeholder="Philadelphia">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="state">State *</label>
+          <input type="text" id="state" name="state" required placeholder="PA" maxlength="2">
+        </div>
+        <div class="form-group">
+          <label for="zip">ZIP Code *</label>
+          <input type="text" id="zip" name="zip" required placeholder="19103">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="website">Website</label>
+          <input type="url" id="website" name="website" placeholder="https://www.yourschool.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required placeholder="contact@yourschool.com">
+      </div>
+
+      <div class="form-group">
+        <label>Age Groups Served</label>
+        <div class="checkbox-group">
+          <div class="checkbox-item">
+            <input type="checkbox" id="infants" name="age_groups" value="Infants">
+            <label for="infants">Infants (0-12 months)</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="toddlers" name="age_groups" value="Toddlers">
+            <label for="toddlers">Toddlers (1-3 years)</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="preschool" name="age_groups" value="Preschool">
+            <label for="preschool">Preschool (4-5 years)</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="school-age" name="age_groups" value="School Age">
+            <label for="school-age">School Age (6-12)</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="teens" name="age_groups" value="Teens">
+            <label for="teens">Teens (13+)</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="adults" name="age_groups" value="Adults">
+            <label for="adults">Adults</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Programs & Services</label>
+        <div class="checkbox-group">
+          <div class="checkbox-item">
+            <input type="checkbox" id="private" name="programs" value="Private Lessons">
+            <label for="private">Private Lessons</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="group" name="programs" value="Group Classes">
+            <label for="group">Group Classes</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="swim-team" name="programs" value="Swim Team">
+            <label for="swim-team">Swim Team</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="water-aerobics" name="programs" value="Water Aerobics">
+            <label for="water-aerobics">Water Aerobics</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="lifeguard" name="programs" value="Lifeguard Training">
+            <label for="lifeguard">Lifeguard Training</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="special-needs" name="programs" value="Special Needs">
+            <label for="special-needs">Special Needs Programs</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Brief Description</label>
+        <textarea id="description" name="description" placeholder="Tell parents about your school, teaching philosophy, and what makes you special."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="contact-name">Your Name / Contact Person *</label>
+        <input type="text" id="contact-name" name="contact_name" required placeholder="John Smith">
+      </div>
+
+      <button type="submit" class="form-button">Submit My School</button>
+    </form>
+
+    <section class="what-you-get">
+      <h2>What You Get with a Free Listing</h2>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <h3>School Profile</h3>
+          <p>Your name, location, contact info, and description visible to all site visitors.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>School Directory</h3>
+          <p>Listed in our national swim school directory, searchable by location.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Local City Pages</h3>
+          <p>Featured on your city's swim lesson page alongside other local schools.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Contact Form</h3>
+          <p>Parents can inquire about your programs directly from your profile.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Free Forever</h3>
+          <p>No credit card required. Basic listing is always free.</p>
+        </div>
+        <div class="benefit-item">
+          <h3>Easy Updates</h3>
+          <p>Keep your info current. Update hours, programs, and contact details anytime.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">How long does it take for my school to appear?</div>
+        <div class="faq-answer">Most schools appear in our directory within 24-48 business hours. We review all submissions to ensure accuracy and quality.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I upgrade to a Featured Listing later?</div>
+        <div class="faq-answer">Absolutely. You can start with a free listing and upgrade to Featured ($49/month) anytime through your account dashboard.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What if I have multiple locations?</div>
+        <div class="faq-answer">Submit a separate form for each location. Each gets its own profile. Contact us about multi-location pricing.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I edit my listing after it's live?</div>
+        <div class="faq-answer">Yes. You'll have access to an account dashboard where you can update your hours, programs, description, and contact info anytime.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do you charge a commission on inquiries?</div>
+        <div class="faq-answer">No. You only pay the listing fee (if you upgrade). We don't take a cut of your business. Every inquiry is yours to keep.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What information will be public?</div>
+        <div class="faq-answer">Your school name, location, phone, website, age groups, programs, and description will be public. Your email is private and only shown to parents who submit the contact form.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I remove my listing later?</div>
+        <div class="faq-answer">Of course. Contact us anytime to pause or delete your listing. No penalty.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wwk-footer">
+    <div class="wwk-footer-grid">
+      <div class="wwk-footer-col">
+        <h4>Learn</h4>
+        <a href="/education.html">Water Safety Education</a>
+        <a href="/education/drowning-prevention-guide.html">Drowning Prevention</a>
+        <a href="/education/cpr-basics-parents.html">CPR for Parents</a>
+        <a href="/education/pool-safety-rules.html">Pool Safety Rules</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>Find</h4>
+        <a href="/swim-schools.html">Swim School Directory</a>
+        <a href="/swim-lessons/philadelphia.html">Philadelphia Lessons</a>
+        <a href="/swim-lessons/jersey-shore.html">Jersey Shore Lessons</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>Careers</h4>
+        <a href="/jobs.html">Aquatics Jobs</a>
+        <a href="/teens.html">Teen Hub</a>
+        <a href="/teens/lifeguard-certification.html">Lifeguard Certification</a>
+        <a href="/jobs/post.html">Post a Job</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>More</h4>
+        <a href="/gear.html">Gear Guide</a>
+        <a href="/advertise.html">Advertise</a>
+        <a href="/about.html">About Us</a>
+      </div>
+    </div>
+    <div class="wwk-footer-bottom">
+      &copy; 2026 WaterWiseKids.com &mdash; America&#39;s National Aquatics Hub
+    </div>
+  </footer>
+<script src="/site-nav.js" defer></script>
+</body>
+</html>

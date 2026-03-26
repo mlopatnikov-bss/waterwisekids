@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Swim Schools Near Me | Ratings & Parent Reviews | WaterWiseKids National Directory</title>
+    <meta name="description" content="Search 10,000+ swim schools across all 50 states. Read verified parent ratings and reviews. Filter by age group, program type, price, and location. Find the perfect swim school.">
+<style>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        .hero {
+            background: linear-gradient(135deg, #0369a1 0%, #14b8a6 100%);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .search-box {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .search-input {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .search-input label {
+            font-weight: 600;
+            color: #075985;
+            font-size: 0.9rem;
+        }
+
+        .search-input input,
+        .search-input select {
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .search-input input:focus,
+        .search-input select:focus {
+            outline: none;
+            border-color: #0284c7;
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+        }
+
+        .search-button {
+            display: flex;
+            align-items: flex-end;
+            padding: 0 1.5rem;
+        }
+
+        .search-button button {
+            background: #f97316;
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+            width: 100%;
+        }
+
+        .search-button button:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #075985;
+        }
+
+        .how-it-works {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .step {
+            background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #d1fae5;
+        }
+
+        .step-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0284c7;
+            margin-bottom: 0.75rem;
+        }
+
+        .step h3 {
+            color: #075985;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .step p {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        .featured-schools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .school-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .school-card:hover {
+            border-color: #0284c7;
+            box-shadow: 0 12px 32px rgba(2, 132, 199, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .school-
+
+        .school-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .school-location {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .school-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .school-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .stars {
+            color: #f97316;
+            font-size: 1.1rem;
+        }
+
+        .rating-text {
+            font-weight: 600;
+            color: #075985;
+        }
+
+        .review-count {
+            color: #6b7280;
+            font-size: 0.85rem;
+        }
+
+        .school-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            color: #4b5563;
+        }
+
+        .info-icon {
+            color: #14b8a6;
+            font-weight: 600;
+            min-width: 1.5rem;
+        }
+
+        .school-cta {
+            display: inline-block;
+            background: #f97316;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: auto;
+            text-align: center;
+        }
+
+        .school-cta:hover {
+            background: #ea580c;
+        }
+
+        .state-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .state-chip {
+            background: white;
+            border: 2px solid #e5e7eb;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+            color: #075985;
+        }
+
+        .state-chip:hover {
+            border-color: #0284c7;
+            background: #f0f9ff;
+            transform: translateY(-2px);
+        }
+
+        .quality-factors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #d1fae5;
+        }
+
+        .quality-factor {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .quality-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .quality-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .quality-title {
+            font-weight: 600;
+            color: #075985;
+            margin-bottom: 0.25rem;
+        }
+
+        .quality-desc {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .add-school-cta {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .add-school-cta h2 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .add-school-cta p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 1.5rem;
+        }
+
+        .add-school-button {
+            display: inline-block;
+            background: white;
+            color: #f97316;
+            padding: 0.875rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .add-school-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        @media (max-width: 768px) {
+            
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .search-box {
+                grid-template-columns: 1fr;
+            }
+
+            .search-button {
+                padding: 0;
+            }
+
+            .featured-schools {
+                grid-template-columns: 1fr;
+            }
+
+            .state-grid {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            }
+
+            .quality-factors {
+                grid-template-columns: 1fr;
+            }
+
+            .how-it-works {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <nav class="wwk-nav">
+    <div class="wwk-nav-inner">
+      <a href="/" class="wwk-nav-logo">WaterWiseKids</a>
+      <button class="wwk-nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="wwk-nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/education.html">Water Safety</a></li>
+        <li><a href="/swim-schools.html">Find Schools</a></li>
+        <li><a href="/jobs.html">Aquatics Jobs</a></li>
+        <li><a href="/teens.html">Teen Hub</a></li>
+        <li><a href="/gear.html">Gear Guide</a></li>
+        <li><a href="/advertise.html">Advertise</a></li>
+        <li><a href="/jobs/post.html" class="wwk-nav-cta">Post a Job</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find & Rate Swim Schools Across America</h1>
+            <p style="font-size: 1.1rem; opacity: 0.95; margin-bottom: 0;">Search 10,000+ schools. Read real parent reviews. Find your perfect fit.</p>
+
+            <div class="search-box">
+                <div class="search-input">
+                    <label>City or ZIP</label>
+                    <input type="text" placeholder="Philadelphia, PA or 19102">
+                </div>
+                <div class="search-input">
+                    <label>State</label>
+                    <select>
+                        <option>Select State</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Delaware</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                    </select>
+                </div>
+                <div class="search-input">
+                    <label>Age Group</label>
+                    <select>
+                        <option>All Ages</option>
+                        <option>Infants (6m-2y)</option>
+                        <option>Toddlers (2-4y)</option>
+                        <option>Preschool (4-6y)</option>
+                        <option>School Age (6+)</option>
+                        <option>Teens</option>
+                    </select>
+                </div>
+                <div class="search-button">
+                    <button>Search Schools</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <section class="section">
+            <h2 class="section-title">How It Works</h2>
+            <div class="how-it-works">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Search by Location</h3>
+                    <p>Enter your city, ZIP code, or state to find swim schools near you.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Read Real Reviews</h3>
+                    <p>See verified parent ratings, detailed reviews, and program descriptions.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Book & Rate</h3>
+                    <p>Contact schools, enroll, and share your own experience to help others.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Featured Swim Schools</h2>
+            <div class="featured-schools">
+                <div class="school-card">
+                    <div class="school-header">
+                        <div class="school-name">British Swim School</div>
+                        <div class="school-location">NW Philadelphia, PA</div>
+                        <div class="featured-badge">FEATURED PARTNER</div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.9</span>
+                            <span class="review-count">(218 reviews)</span>
+                        </div>
+                        <div class="school-info">
+                            <div class="info-item">
+                                <span class="info-icon">📍</span>
+                                <span>Multiple locations</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">👧</span>
+                                <span>Ages 3 months–Adult</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">💰</span>
+                                <span>$120–$280/month</span>
+                            </div>
+                        </div>
+                        <a href="/swim-lessons/northwest-philadelphia.html" class="school-cta">View School</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <div class="school-name">British Swim School</div>
+                        <div class="school-location">Jersey Shore, NJ</div>
+                        <div class="featured-badge">FEATURED PARTNER</div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.8</span>
+                            <span class="review-count">(186 reviews)</span>
+                        </div>
+                        <div class="school-info">
+                            <div class="info-item">
+                                <span class="info-icon">📍</span>
+                                <span>Monmouth County, NJ</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">👧</span>
+                                <span>Ages 3 months–Adult</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">💰</span>
+                                <span>$110–$270/month</span>
+                            </div>
+                        </div>
+                        <a href="/swim-lessons/jersey-shore.html" class="school-cta">View School</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <div class="school-name">Goldfish Swim School</div>
+                        <div class="school-location">170+ Locations Nationwide</div>
+                        <div class="featured-badge">NATIONAL CHAIN</div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.8</span>
+                            <span class="review-count">(170 reviews)</span>
+                        </div>
+                        <div class="school-info">
+                            <div class="info-item">
+                                <span class="info-icon">📍</span>
+                                <span>All 50 states</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">👧</span>
+                                <span>Ages 4 months–12 years</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">💰</span>
+                                <span>$130–$320/month</span>
+                            </div>
+                        </div>
+                        <a href="https://goldfishswimschool.com/locations/" target="_blank" rel="noopener" class="school-cta">Find Near You</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <div class="school-name">Aqua-Tots Swim Schools</div>
+                        <div class="school-location">170+ Locations</div>
+                        <div class="featured-badge">NATIONAL CHAIN</div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-rating">
+                            <span class="stars">⭐⭐⭐⭐½</span>
+                            <span class="rating-text">4.7</span>
+                            <span class="review-count">(145 reviews)</span>
+                        </div>
+                        <div class="school-info">
+                            <div class="info-item">
+                                <span class="info-icon">📍</span>
+                                <span>All 50 states</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">👧</span>
+                                <span>Ages 8 weeks–12 years</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">💰</span>
+                                <span>$100–$260/month</span>
+                            </div>
+                        </div>
+                        <a href="https://www.aqua-tots.com/find-a-location/" target="_blank" rel="noopener" class="school-cta">Find Near You</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <div class="school-name">SafeSplash Swim School</div>
+                        <div class="school-location">150+ Locations</div>
+                        <div class="featured-badge">NATIONAL CHAIN</div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-rating">
+                            <span class="stars">⭐⭐⭐⭐½</span>
+                            <span class="rating-text">4.6</span>
+                            <span class="review-count">(128 reviews)</span>
+                        </div>
+                        <div class="school-info">
+                            <div class="info-item">
+                                <span class="info-icon">📍</span>
+                                <span>35+ states</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">👧</span>
+                                <span>Ages 4 months–Adult</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">💰</span>
+                                <span>$95–$240/month</span>
+                            </div>
+                        </div>
+                        <a href="https://www.safesplash.com/locations" target="_blank" rel="noopener" class="school-cta">Find Near You</a>
+                    </div>
+                </div>
+
+                <div class="school-card">
+                    <div class="school-header">
+                        <div class="school-name">YMCA Swim Lessons</div>
+                        <div class="school-location">Nationwide</div>
+                        <div class="featured-badge">TRUSTED</div>
+                    </div>
+                    <div class="school-body">
+                        <div class="school-rating">
+                            <span class="stars">⭐⭐⭐⭐</span>
+                            <span class="rating-text">4.4</span>
+                            <span class="review-count">(312 reviews)</span>
+                        </div>
+                        <div class="school-info">
+                            <div class="info-item">
+                                <span class="info-icon">📍</span>
+                                <span>All 50 states</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">👧</span>
+                                <span>All ages</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">💰</span>
+                                <span>$60–$180/month</span>
+                            </div>
+                        </div>
+                        <a href="https://www.ymca.org/find-your-y" target="_blank" rel="noopener" class="school-cta">Find YMCA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Browse by State</h2>
+            <div class="state-grid">
+                <div class="state-chip">Alabama</div>
+                <div class="state-chip">Alaska</div>
+                <div class="state-chip">Arizona</div>
+                <div class="state-chip">Arkansas</div>
+                <div class="state-chip">California</div>
+                <div class="state-chip">Colorado</div>
+                <div class="state-chip">Connecticut</div>
+                <div class="state-chip">Delaware</div>
+                <div class="state-chip">Florida</div>
+                <div class="state-chip">Georgia</div>
+                <div class="state-chip">Hawaii</div>
+                <div class="state-chip">Idaho</div>
+                <div class="state-chip">Illinois</div>
+                <div class="state-chip">Indiana</div>
+                <div class="state-chip">Iowa</div>
+                <div class="state-chip">Kansas</div>
+                <div class="state-chip">Kentucky</div>
+                <div class="state-chip">Louisiana</div>
+                <div class="state-chip">Maine</div>
+                <div class="state-chip">Maryland</div>
+                <div class="state-chip">Massachusetts</div>
+                <div class="state-chip">Michigan</div>
+                <div class="state-chip">Minnesota</div>
+                <div class="state-chip">Mississippi</div>
+                <div class="state-chip">Missouri</div>
+                <div class="state-chip">Montana</div>
+                <div class="state-chip">Nebraska</div>
+                <div class="state-chip">Nevada</div>
+                <div class="state-chip">New Hampshire</div>
+                <div class="state-chip">New Jersey</div>
+                <div class="state-chip">New Mexico</div>
+                <div class="state-chip">New York</div>
+                <div class="state-chip">North Carolina</div>
+                <div class="state-chip">North Dakota</div>
+                <div class="state-chip">Ohio</div>
+                <div class="state-chip">Oklahoma</div>
+                <div class="state-chip">Oregon</div>
+                <div class="state-chip">Pennsylvania</div>
+                <div class="state-chip">Rhode Island</div>
+                <div class="state-chip">South Carolina</div>
+                <div class="state-chip">South Dakota</div>
+                <div class="state-chip">Tennessee</div>
+                <div class="state-chip">Texas</div>
+                <div class="state-chip">Utah</div>
+                <div class="state-chip">Vermont</div>
+                <div class="state-chip">Virginia</div>
+                <div class="state-chip">Washington</div>
+                <div class="state-chip">West Virginia</div>
+                <div class="state-chip">Wisconsin</div>
+                <div class="state-chip">Wyoming</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">What Makes a 5-Star Swim School?</h2>
+            <div class="quality-factors">
+                <div class="quality-factor">
+                    <div class="quality-icon">🛡️</div>
+                    <div class="quality-text">
+                        <div class="quality-title">Safety-First Approach</div>
+                        <div class="quality-desc">Certified lifeguards, small class sizes, and constant supervision.</div>
+                    </div>
+                </div>
+                <div class="quality-factor">
+                    <div class="quality-icon">👨‍🏫</div>
+                    <div class="quality-text">
+                        <div class="quality-title">Qualified Instructors</div>
+                        <div class="quality-desc">WSI-certified or equivalent training with years of experience.</div>
+                    </div>
+                </div>
+                <div class="quality-factor">
+                    <div class="quality-icon">👥</div>
+                    <div class="quality-text">
+                        <div class="quality-title">Small Class Sizes</div>
+                        <div class="quality-desc">6–8 students per instructor for personalized attention.</div>
+                    </div>
+                </div>
+                <div class="quality-factor">
+                    <div class="quality-icon">📈</div>
+                    <div class="quality-text">
+                        <div class="quality-title">Clear Progression</div>
+                        <div class="quality-desc">Well-defined levels from beginner to advanced swimmer.</div>
+                    </div>
+                </div>
+                <div class="quality-factor">
+                    <div class="quality-icon">💬</div>
+                    <div class="quality-text">
+                        <div class="quality-title">Parent Communication</div>
+                        <div class="quality-desc">Regular feedback and progress updates from instructors.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="add-school-cta">
+            <h2>Are You a Swim School?</h2>
+            <p>List your school, reach thousands of families, and get verified reviews to grow your business.</p>
+            <a href="/swim-schools/add.html" class="add-school-button">Add Your School</a>
+        </section>
+    </div>
+
+    <footer class="wwk-footer">
+    <div class="wwk-footer-grid">
+      <div class="wwk-footer-col">
+        <h4>Learn</h4>
+        <a href="/education.html">Water Safety Education</a>
+        <a href="/education/drowning-prevention-guide.html">Drowning Prevention</a>
+        <a href="/education/cpr-basics-parents.html">CPR for Parents</a>
+        <a href="/education/pool-safety-rules.html">Pool Safety Rules</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>Find</h4>
+        <a href="/swim-schools.html">Swim School Directory</a>
+        <a href="/swim-lessons/philadelphia.html">Philadelphia Lessons</a>
+        <a href="/swim-lessons/jersey-shore.html">Jersey Shore Lessons</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>Careers</h4>
+        <a href="/jobs.html">Aquatics Jobs</a>
+        <a href="/teens.html">Teen Hub</a>
+        <a href="/teens/lifeguard-certification.html">Lifeguard Certification</a>
+        <a href="/jobs/post.html">Post a Job</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>More</h4>
+        <a href="/gear.html">Gear Guide</a>
+        <a href="/advertise.html">Advertise</a>
+        <a href="/about.html">About Us</a>
+      </div>
+    </div>
+    <div class="wwk-footer-bottom">
+      &copy; 2026 WaterWiseKids.com &mdash; America&#39;s National Aquatics Hub
+    </div>
+  </footer>
+<script src="/site-nav.js" defer></script>
+</body>
+</html>

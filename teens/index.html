@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teen Aquatics Hub | How to Become a Lifeguard, Swim Instructor & More | WaterWiseKids</title>
+    <meta name="description" content="Everything teens and young adults need to launch an aquatics career. Lifeguard certification, swim instructor guide, career paths, salaries, and scholarships. Ages 15+.">
+<style>
+        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        .hero {
+            background: linear-gradient(135deg, #0284c7 0%, #14b8a6 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #075985;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #0284c7, #14b8a6);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: #0284c7;
+            box-shadow: 0 10px 30px rgba(2, 132, 199, 0.15);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            color: #075985;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .feature-link {
+            display: inline-flex;
+            align-items: center;
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: 600;
+            gap: 0.5rem;
+            transition: gap 0.3s;
+        }
+
+        .feature-link:hover {
+            gap: 1rem;
+        }
+
+        .arrow {
+            display: inline-block;
+            font-size: 1.2rem;
+        }
+
+        .checklist-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%);
+            border-left: 4px solid #14b8a6;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .checklist-box h3 {
+            color: #075985;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .checklist-item::before {
+            content: '✓';
+            color: #14b8a6;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+        }
+
+        .salary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            overflow-x: auto;
+            display: block;
+        }
+
+        .salary-table thead {
+            background: #075985;
+            color: white;
+        }
+
+        .salary-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .salary-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .salary-table tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        .salary-table tbody tr:nth-child(even) {
+            background: #f3f4f6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #f97316;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.2);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .faq-section {
+            margin: 3rem 0;
+        }
+
+        .faq-item {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #075985;
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '▼';
+            transition: transform 0.3s;
+            font-size: 0.8rem;
+        }
+
+        .faq-item.open .faq-question::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            color: #6b7280;
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        @media (max-width: 768px) {
+            
+
+            .stats-bar {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .salary-table {
+                font-size: 0.85rem;
+            }
+
+            .salary-table th,
+            .salary-table td {
+                padding: 0.75rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+<nav class="wwk-nav">
+    <div class="wwk-nav-inner">
+      <a href="/" class="wwk-nav-logo">WaterWiseKids</a>
+      <button class="wwk-nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="wwk-nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/education.html">Water Safety</a></li>
+        <li><a href="/swim-schools.html">Find Schools</a></li>
+        <li><a href="/jobs.html">Aquatics Jobs</a></li>
+        <li><a href="/teens.html">Teen Hub</a></li>
+        <li><a href="/gear.html">Gear Guide</a></li>
+        <li><a href="/advertise.html">Advertise</a></li>
+        <li><a href="/jobs/post.html" class="wwk-nav-cta">Post a Job</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Launch Your Aquatics Career</h1>
+            <p>Everything you need to start working in swimming and aquatics—for ages 15–25</p>
+            <div class="stats-bar">
+                <div class="stat">
+                    <span class="stat-value">15+</span>
+                    <span class="stat-label">Minimum Age</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">$17–22/hr</span>
+                    <span class="stat-label">Average Pay</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">Flexible</span>
+                    <span class="stat-label">Hours</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">Real Impact</span>
+                    <span class="stat-label">Make a Difference</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <section class="section" id="features">
+            <h2 class="section-title">Start Your Journey</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏅</div>
+                    <h3>Lifeguard Certification</h3>
+                    <p>Get certified in 2–3 days. Learn rescue techniques, CPR, first aid, and water safety monitoring.</p>
+                    <a href="/teens/lifeguard-certification.html" class="feature-link">
+                        Complete Guide <span class="arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏊</div>
+                    <h3>Become a Swim Instructor</h3>
+                    <p>Teach swimming and water safety. Get WSI or YMCA certification and earn $18–22/hr.</p>
+                    <a href="/teens/swim-instructor.html" class="feature-link">
+                        Certification Paths <span class="arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Aquatics Career Paths</h3>
+                    <p>Explore all roles: lifeguard, instructor, coach, supervisor, manager, and director positions.</p>
+                    <a href="/teens/aquatics-careers.html" class="feature-link">
+                        Explore Careers <span class="arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Scholarships & College</h3>
+                    <p>Aquatics jobs boost college applications. Find scholarships and competitive programs.</p>
+                    <a href="/teens/scholarships.html" class="feature-link">
+                        Learn More <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Before Your First Job</h2>
+            <div class="checklist-box">
+                <h3>Get Started Checklist</h3>
+                <div class="checklist-item">Swim 300 yards comfortably</div>
+                <div class="checklist-item">Get your Red Cross CPR/AED certification ($40–60)</div>
+                <div class="checklist-item">Know basic first aid</div>
+                <div class="checklist-item">Pass a swim test at your facility</div>
+                <div class="checklist-item">Apply! Most employers hire before certification</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Salary & Career Overview</h2>
+            <div style="overflow-x: auto;">
+                <table class="salary-table">
+                    <thead>
+                        <tr>
+                            <th>Role</th>
+                            <th>Avg. Hourly</th>
+                            <th>Annual Range*</th>
+                            <th>Experience Needed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Lifeguard</strong></td>
+                            <td>$17–19/hr</td>
+                            <td>$35k–40k</td>
+                            <td>Certification only</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Swim Instructor</strong></td>
+                            <td>$18–22/hr</td>
+                            <td>$37k–46k</td>
+                            <td>WSI/Cert + swimming skill</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Head Lifeguard/Supervisor</strong></td>
+                            <td>$19–24/hr</td>
+                            <td>$40k–50k</td>
+                            <td>2+ years + leadership</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aquatics Director</strong></td>
+                            <td>$22–32/hr</td>
+                            <td>$46k–66k</td>
+                            <td>5+ years + management</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="font-size: 0.9rem; color: #6b7280; margin-top: 1rem;">*Based on full-time positions. Part-time and seasonal work varies. Salaries vary by location and employer.</p>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Apply?</h2>
+            <p>Browse 2,400+ open aquatics jobs across the country—lifeguard, instructor, coach, and more.</p>
+            <a href="/jobs.html" class="cta-button">Browse Open Jobs →</a>
+        </section>
+
+        <section class="section faq-section" id="faq">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How old do you have to be to be a lifeguard?
+                </div>
+                <div class="faq-answer">
+                    Most lifeguard certification programs require you to be at least 15–16 years old. Requirements vary by Red Cross, YMCA, and Ellis & Associates, but age 15 is the industry standard minimum. Check with your local pool or waterpark for their specific age policy.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How much does lifeguard certification cost?
+                </div>
+                <div class="faq-answer">
+                    Lifeguard certification costs $150–$350 depending on your provider (Red Cross, YMCA, Ellis & Associates) and location. Many employers will reimburse the cost or pay for your training before hire. CPR/AED certification is often included or costs $40–60 separately.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I get hired as a lifeguard without experience?
+                </div>
+                <div class="faq-answer">
+                    Yes! Most employers only require lifeguard certification and basic swimming ability (typically 300 yards). Many pools and waterparks will hire you before you're certified and may even pay for your training. Your ability to swim is more important than experience.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What's the difference between a lifeguard and a swim instructor?
+                </div>
+                <div class="faq-answer">
+                    A lifeguard monitors water safety, watches swimmers, performs rescues, and prevents drowning. A swim instructor teaches people how to swim, water safety skills, and stroke techniques. Instructors need additional certification (WSI or YMCA), while lifeguards only need lifeguard certification and CPR.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do aquatics jobs look good on a college application?
+                </div>
+                <div class="faq-answer">
+                    Absolutely! Aquatics jobs demonstrate responsibility, leadership, safety awareness, and dedication. Colleges value work experience, especially in roles that help others and require certification. It's also excellent for essays and interviews about why you're qualified for competitive programs.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="wwk-footer">
+    <div class="wwk-footer-grid">
+      <div class="wwk-footer-col">
+        <h4>Learn</h4>
+        <a href="/education.html">Water Safety Education</a>
+        <a href="/education/drowning-prevention-guide.html">Drowning Prevention</a>
+        <a href="/education/cpr-basics-parents.html">CPR for Parents</a>
+        <a href="/education/pool-safety-rules.html">Pool Safety Rules</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>Find</h4>
+        <a href="/swim-schools.html">Swim School Directory</a>
+        <a href="/swim-lessons/philadelphia.html">Philadelphia Lessons</a>
+        <a href="/swim-lessons/jersey-shore.html">Jersey Shore Lessons</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>Careers</h4>
+        <a href="/jobs.html">Aquatics Jobs</a>
+        <a href="/teens.html">Teen Hub</a>
+        <a href="/teens/lifeguard-certification.html">Lifeguard Certification</a>
+        <a href="/jobs/post.html">Post a Job</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>More</h4>
+        <a href="/gear.html">Gear Guide</a>
+        <a href="/advertise.html">Advertise</a>
+        <a href="/about.html">About Us</a>
+      </div>
+    </div>
+    <div class="wwk-footer-bottom">
+      &copy; 2026 WaterWiseKids.com &mdash; America&#39;s National Aquatics Hub
+    </div>
+  </footer>
+
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+<script src="/site-nav.js" defer></script>
+</body>
+</html>

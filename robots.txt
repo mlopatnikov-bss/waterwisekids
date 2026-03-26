@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Sitemap: https://www.waterwisekids.com/sitemap.xml
 
-Sitemap: https://waterwisekids.com/sitemap.xml
+User-agent: *
+Disallow: /assets/

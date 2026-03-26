@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Swim Lessons Near Me | All 50 States | WaterWiseKids</title>
+    <meta name="description" content="Find kids and adult swim lessons in your area. Browse our national directory of swim lesson pages across all 50 states. Filter by city, age, and program type.">
+    <meta name="keywords" content="swim lessons near me, kids swim lessons, adult swim lessons, swim schools, local swim lessons">
+<style>
+        
+
+        
+
+        /* Header/Nav */
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .search-box input {
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            min-width: 250px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .search-box button {
+            padding: 0.75rem 2rem;
+            background-color: #14b8a6;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: #0d9488;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Featured Regions */
+        .featured-regions {
+            margin-bottom: 4rem;
+        }
+
+        .featured-regions h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #075985;
+        }
+
+        .region-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .region-card {
+            background: white;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .region-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .region-
+
+        .region-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .region-
+
+        .region-body p {
+            color: #6b7280;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .cities-list {
+            margin: 1rem 0;
+        }
+
+        .cities-list li {
+            list-style: none;
+            padding: 0.35rem 0;
+            color: #0284c7;
+            font-weight: 500;
+        }
+
+        .region-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.6rem 1.5rem;
+            background-color: #14b8a6;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.4rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .region-card a:hover {
+            background-color: #0d9488;
+        }
+
+        /* Most Searched */
+        .most-searched {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 3rem;
+        }
+
+        .most-searched h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #075985;
+        }
+
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .city-link {
+            display: block;
+            padding: 1rem;
+            text-align: center;
+            background-color: #f3f4f6;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: #0284c7;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .city-link:hover {
+            background-color: #e5e7eb;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: white;
+            color: #14b8a6;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            
+
+            
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            .search-box input {
+                min-width: 100%;
+            }
+
+            .region-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+  <link rel="stylesheet" href="/styles.css">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <!-- Header/Navigation -->
+    <!-- Navigation -->
+  <nav class="wwk-nav">
+    <div class="wwk-nav-inner">
+      <a href="/" class="wwk-nav-logo">WaterWiseKids</a>
+      <button class="wwk-nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="wwk-nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/education.html">Water Safety</a></li>
+        <li><a href="/swim-schools.html">Find Schools</a></li>
+        <li><a href="/jobs.html">Aquatics Jobs</a></li>
+        <li><a href="/teens.html">Teen Hub</a></li>
+        <li><a href="/gear.html">Gear Guide</a></li>
+        <li><a href="/advertise.html">Advertise</a></li>
+        <li><a href="/jobs/post.html" class="wwk-nav-cta">Post a Job</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Swim Lessons Near You</h1>
+            <p>Discover beginner-friendly swim programs across all 50 states. Safety-first lessons for infants, children, and adults.</p>
+            <div class="search-box">
+                <input type="text" placeholder="Enter city or state...">
+                <button>Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Featured Regions -->
+        <section class="featured-regions">
+            <h2>Featured Regions</h2>
+
+            <div class="region-grid">
+                <!-- Pennsylvania -->
+                <div class="region-card">
+                    <div class="region-header">
+                        <h3>Pennsylvania</h3>
+                        <p>Philadelphia Area & Suburbs</p>
+                    </div>
+                    <div class="region-body">
+                        <p>Explore swim lessons across Southeast Pennsylvania's most popular communities.</p>
+                        <ul class="cities-list">
+                            <li>• Philadelphia</li>
+                            <li>• Northwest Philadelphia</li>
+                            <li>• Cheltenham</li>
+                            <li>• Ambler</li>
+                            <li>• Flourtown</li>
+                        </ul>
+                        <a href="/swim-lessons/philadelphia.html">View PA Programs</a>
+                    </div>
+                </div>
+
+                <!-- New Jersey -->
+                <div class="region-card">
+                    <div class="region-header">
+                        <h3>New Jersey</h3>
+                        <p>Jersey Shore & Monmouth County</p>
+                    </div>
+                    <div class="region-body">
+                        <p>Discover swim lessons throughout Monmouth and Ocean Counties.</p>
+                        <ul class="cities-list">
+                            <li>• Jersey Shore</li>
+                            <li>• Monmouth County</li>
+                            <li>• Ocean County</li>
+                            <li>• Howell</li>
+                            <li>• Brick</li>
+                        </ul>
+                        <a href="/swim-lessons/jersey-shore.html">View NJ Programs</a>
+                    </div>
+                </div>
+
+                <!-- National -->
+                <div class="region-card">
+                    <div class="region-header">
+                        <h3>All 50 States</h3>
+                        <p>Complete National Directory</p>
+                    </div>
+                    <div class="region-body">
+                        <p>Browse our comprehensive directory of swim lesson programs nationwide.</p>
+                        <ul class="cities-list">
+                            <li>• All States</li>
+                            <li>• Major Cities</li>
+                            <li>• Suburban Areas</li>
+                            <li>• Local Schools</li>
+                        </ul>
+                        <a href="#all-states">Explore All States</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Most Searched Cities -->
+        <section class="most-searched">
+            <h2>Most Searched Cities</h2>
+            <div class="cities-grid">
+                <a href="/swim-lessons/philadelphia.html" class="city-link">Philadelphia, PA</a>
+                <a href="/swim-lessons/northwest-philadelphia.html" class="city-link">NW Philadelphia, PA</a>
+                <a href="/swim-lessons/cheltenham-pa.html" class="city-link">Cheltenham, PA</a>
+                <a href="/swim-lessons/ambler-pa.html" class="city-link">Ambler, PA</a>
+                <a href="/swim-lessons/flourtown-pa.html" class="city-link">Flourtown, PA</a>
+                <a href="/swim-lessons/elkins-park-pa.html" class="city-link">Elkins Park, PA</a>
+                <a href="/swim-lessons/jersey-shore.html" class="city-link">Jersey Shore, NJ</a>
+                <a href="/swim-lessons/monmouth-county-nj.html" class="city-link">Monmouth County, NJ</a>
+                <a href="/swim-lessons/ocean-county-nj.html" class="city-link">Ocean County, NJ</a>
+                <a href="/swim-lessons/howell-nj.html" class="city-link">Howell, NJ</a>
+                <a href="/swim-lessons/brick-nj.html" class="city-link">Brick, NJ</a>
+                <a href="/swim-lessons/asbury-park-nj.html" class="city-link">Asbury Park, NJ</a>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to Start Swimming?</h2>
+            <p>Browse our featured swim schools and find the perfect program for your family.</p>
+            <a href="#featured-schools" class="cta-button">Explore Schools</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="wwk-footer">
+    <div class="wwk-footer-grid">
+      <div class="wwk-footer-col">
+        <h4>Learn</h4>
+        <a href="/education.html">Water Safety Education</a>
+        <a href="/education/drowning-prevention-guide.html">Drowning Prevention</a>
+        <a href="/education/cpr-basics-parents.html">CPR for Parents</a>
+        <a href="/education/pool-safety-rules.html">Pool Safety Rules</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>Find</h4>
+        <a href="/swim-schools.html">Swim School Directory</a>
+        <a href="/swim-lessons/philadelphia.html">Philadelphia Lessons</a>
+        <a href="/swim-lessons/jersey-shore.html">Jersey Shore Lessons</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>Careers</h4>
+        <a href="/jobs.html">Aquatics Jobs</a>
+        <a href="/teens.html">Teen Hub</a>
+        <a href="/teens/lifeguard-certification.html">Lifeguard Certification</a>
+        <a href="/jobs/post.html">Post a Job</a>
+      </div>
+      <div class="wwk-footer-col">
+        <h4>More</h4>
+        <a href="/gear.html">Gear Guide</a>
+        <a href="/advertise.html">Advertise</a>
+        <a href="/about.html">About Us</a>
+      </div>
+    </div>
+    <div class="wwk-footer-bottom">
+      &copy; 2026 WaterWiseKids.com &mdash; America&#39;s National Aquatics Hub
+    </div>
+  </footer>
+<script src="/site-nav.js" defer></script>
+</body>
+</html>
