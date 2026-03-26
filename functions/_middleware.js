@@ -161,7 +161,7 @@ form input[type="submit"]:hover {
 }
 
 /* Mobile hamburger menu styles */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .wwk-nav-links {
     display: none;
     flex-direction: column;
