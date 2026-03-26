@@ -90,20 +90,20 @@
       <div style="background: white; padding: 36px; border-radius: 22px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid #dbe8f0;">
         <h2 style="text-align: center; margin: 0 0 24px 0; color: #13304a; font-size: 20px; font-weight: 700; font-family: inherit;">Find what you're looking for</h2>
         <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 24px; flex-wrap: wrap;">
-          <button style="background: #0f5f94; color: white; border: none; padding: 8px 16px; border-radius: 999px; cursor: pointer; font-weight: 600; font-family: inherit;">🏊 Swim Schools</button>
-          <button style="background: #eaf4fb; color: #114c76; border: none; padding: 8px 16px; border-radius: 999px; cursor: pointer; font-weight: 600; font-family: inherit;">💼 Aquatics Jobs</button>
-          <button style="background: #eaf4fb; color: #114c76; border: none; padding: 8px 16px; border-radius: 999px; cursor: pointer; font-weight: 600; font-family: inherit;">📚 Articles</button>
+          <button aria-label="Filter by Swim Schools" style="background: #0f5f94; color: white; border: none; padding: 8px 16px; border-radius: 999px; cursor: pointer; font-weight: 600; font-family: inherit;">🏊 Swim Schools</button>
+          <button aria-label="Filter by Aquatics Jobs" style="background: #eaf4fb; color: #114c76; border: none; padding: 8px 16px; border-radius: 999px; cursor: pointer; font-weight: 600; font-family: inherit;">💼 Aquatics Jobs</button>
+          <button aria-label="Filter by Articles" style="background: #eaf4fb; color: #114c76; border: none; padding: 8px 16px; border-radius: 999px; cursor: pointer; font-weight: 600; font-family: inherit;">📚 Articles</button>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
-          <input type="text" placeholder="City or ZIP code" style="padding: 12px 16px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit;">
-          <select style="padding: 12px 16px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit;">
+          <input type="text" placeholder="City or ZIP code" aria-label="City or ZIP code" style="padding: 12px 16px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit;">
+          <select aria-label="Select state" style="padding: 12px 16px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit;">
             <option>Select State</option>
             <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
           </select>
-          <select style="padding: 12px 16px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit;">
+          <select aria-label="Select age group" style="padding: 12px 16px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit;">
             <option>Any Age</option><option>Toddler (0-3)</option><option>Preschool (3-5)</option><option>Child (6-12)</option><option>Teen (13-18)</option><option>Adult</option>
           </select>
-          <button style="background: #0f5f94; color: white; border: none; padding: 12px 26px; border-radius: 999px; font-weight: 700; cursor: pointer; font-family: inherit;">Search</button>
+          <button aria-label="Search for swim schools" style="background: #0f5f94; color: white; border: none; padding: 12px 26px; border-radius: 999px; font-weight: 700; cursor: pointer; font-family: inherit;">Search</button>
         </div>
       </div>
     </div>
@@ -243,8 +243,8 @@
       <h2 style="margin: 0 0 16px 0; font-size: 28px; font-weight: 700; color: #13304a; font-family: inherit;">The WaterWise Weekly</h2>
       <p style="margin: 0 0 24px 0; font-size: 16px; color: #13304a; font-family: inherit;">Join 40,000+ parents and aquatics pros.</p>
       <form action="https://formspree.io/f/waterwisekids" method="post" style="display: flex; gap: 12px; justify-content: center; max-width: 400px; margin: 0 auto;">
-        <input type="email" name="email" placeholder="Enter your email" required style="flex: 1; padding: 12px 16px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit;">
-        <button type="submit" style="background: #0f5f94; color: white; border: none; padding: 12px 26px; border-radius: 999px; font-weight: 700; cursor: pointer; font-family: inherit;">Subscribe</button>
+        <input type="email" name="email" placeholder="Enter your email" aria-label="Enter your email" required style="flex: 1; padding: 12px 16px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit;">
+        <button type="submit" aria-label="Subscribe to newsletter" style="background: #0f5f94; color: white; border: none; padding: 12px 26px; border-radius: 999px; font-weight: 700; cursor: pointer; font-family: inherit;">Subscribe</button>
       </form>
     </div>
   </section>
