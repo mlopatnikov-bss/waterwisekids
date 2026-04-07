@@ -1,318 +1,1090 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WaterWiseKids — America's National Aquatics Hub | Water Safety, Swim Schools & Jobs</title>
-  <meta name="description" content="The only national hub for water safety, swim school ratings, aquatics jobs, teen lifeguard guides, and gear. Serving families across all 50 states. Free public resource.">
-  <meta property="og:title" content="WaterWiseKids — America's National Aquatics Hub">
-  <meta property="og:description" content="Water safety education, swim school ratings, aquatics jobs, and teen career guides — everything aquatics, free for every family.">
-  <meta property="og:type" content="website">
-  <link rel="canonical" href="https://www.waterwisekids.com/">
-  <link rel="stylesheet" href="/styles.css">
-  <style>
-    /* Homepage-specific overrides */
-    .hp-hero { background: linear-gradient(180deg,#0d4d77 0%,#146695 62%,#1c7db0 100%); color: white; padding: 80px 20px; text-align: center; }
-    .hp-hero h1 { font-size: 2.75rem; font-weight: 700; color: white; margin: 0 0 16px 0; }
-    .hp-hero p { font-size: 1.1rem; margin: 0 0 40px 0; opacity: 0.95; line-height: 1.6; color: white; }
-    .hp-hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
-    .hp-hero-actions .btn-primary { background: white; color: #0d4d77; }
-    .hp-hero-actions .btn-primary:hover { background: #f0f9ff; }
-    .hp-hero-actions .btn-outline { background: rgba(255,255,255,0.15); color: white; border: 2px solid rgba(255,255,255,0.5); }
-    .hp-hero-actions .btn-outline:hover { background: rgba(255,255,255,0.25); }
-    .hp-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
-    .hp-stat { background: rgba(255,255,255,0.12); padding: 16px; border-radius: var(--radius-full); font-weight: 600; font-size: 0.9rem; }
-    .hp-search { padding: 40px 20px; background: #f4f8fb; }
-    .hp-search-box { background: white; padding: 36px; border-radius: var(--radius-lg); box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid #dbe8f0; }
-    .hp-search-box h2 { text-align: center; margin: 0 0 24px 0; font-size: 1.25rem; }
-    .hp-filters { display: flex; gap: 12px; justify-content: center; margin-bottom: 24px; flex-wrap: wrap; }
-    .hp-filter-btn { border: none; padding: 8px 16px; border-radius: var(--radius-full); cursor: pointer; font-weight: 600; font-size: 0.875rem; font-family: inherit; transition: background 0.15s; }
-    .hp-filter-btn.active { background: #0f5f94; color: white; }
-    .hp-filter-btn:not(.active) { background: var(--blue-50); color: #114c76; }
-    .hp-filter-btn:not(.active):hover { background: var(--blue-100); }
-    .hp-search-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-    .hp-search-grid input, .hp-search-grid select { padding: 12px 16px; border: 1.5px solid #dbe8f0; border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; }
-    .hp-search-grid input:focus, .hp-search-grid select:focus { outline: none; border-color: var(--blue-600); box-shadow: 0 0 0 3px rgba(2,132,199,0.1); }
-    .hp-hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
-    .hp-hub-card { background: white; border: 1px solid #dbe8f0; border-radius: var(--radius-lg); padding: 32px; text-decoration: none; color: var(--gray-800); transition: box-shadow 0.2s, transform 0.2s; display: block; }
-    .hp-hub-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
-    .hp-hub-card .icon { font-size: 2.25rem; margin-bottom: 12px; display: block; }
-    .hp-hub-card h3 { margin: 0 0 12px 0; font-size: 1.1rem; font-weight: 700; color: #0d4d77; }
-    .hp-hub-card p { margin: 0 0 12px 0; font-size: 0.875rem; line-height: 1.7; color: var(--gray-600); }
-    .hp-hub-card .link { color: #0f5f94; font-weight: 700; font-size: 0.85rem; }
-    .hp-articles { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-    .hp-article-card { background: white; border: 1px solid #dbe8f0; border-radius: var(--radius-lg); overflow: hidden; text-decoration: none; color: var(--gray-800); transition: box-shadow 0.2s, transform 0.2s; display: block; }
-    .hp-article-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
-    .hp-article-card .thumb { height: 120px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
-    .hp-article-card .body { padding: 20px; }
-    .hp-article-card .tag { display: inline-block; background: var(--blue-50); color: #114c76; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600; margin-bottom: 12px; }
-    .hp-article-card h3 { margin: 0 0 8px 0; font-size: 1rem; font-weight: 700; color: #0d4d77; }
-    .hp-article-card p { margin: 0 0 12px 0; font-size: 0.85rem; line-height: 1.6; color: var(--gray-600); }
-    .hp-article-card .link { color: #0f5f94; font-weight: 600; font-size: 0.85rem; }
-    .hp-jobs { background: #0d4d77; color: white; }
-    .hp-jobs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-    .hp-jobs h2 { color: white; margin: 0 0 16px 0; font-size: 2rem; }
-    .hp-jobs p { color: rgba(255,255,255,0.9); margin: 0 0 20px 0; font-size: 1rem; line-height: 1.7; }
-    .hp-jobs-stats { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 20px; border-radius: var(--radius-md); margin-bottom: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .hp-jobs-stats .label { opacity: 0.8; font-size: 0.75rem; margin-bottom: 4px; }
-    .hp-jobs-stats .value { font-size: 1.25rem; font-weight: 700; }
-    .hp-job-card { display: block; background: white; color: var(--gray-800); padding: 16px; border-radius: var(--radius-md); text-decoration: none; transition: transform 0.15s; }
-    .hp-job-card:hover { transform: translateY(-1px); }
-    .hp-job-card .title { font-weight: 700; margin-bottom: 4px; color: var(--gray-800); }
-    .hp-job-card .location { font-size: 0.85rem; opacity: 0.7; margin-bottom: 8px; }
-    .hp-job-card .pay { font-weight: 600; color: #0f5f94; font-size: 0.9rem; }
-    .hp-job-card .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; margin-left: 8px; color: white; }
-    .hp-newsletter { text-align: center; }
-    .hp-newsletter h2 { margin: 0 0 16px 0; font-size: 1.75rem; }
-    .hp-newsletter p { margin: 0 0 24px 0; font-size: 1rem; color: var(--gray-600); }
-    .hp-newsletter form { display: flex; gap: 12px; justify-content: center; max-width: 400px; margin: 0 auto; }
-    .hp-newsletter input { flex: 1; padding: 12px 16px; border: 1.5px solid #dbe8f0; border-radius: var(--radius-sm); font-family: inherit; font-size: 0.95rem; }
-    .hp-newsletter input:focus { outline: none; border-color: var(--blue-600); box-shadow: 0 0 0 3px rgba(2,132,199,0.1); }
-    @media (max-width: 768px) {
-      .hp-hero h1 { font-size: 1.75rem; }
-      .hp-stats { grid-template-columns: repeat(2, 1fr); }
-      .hp-hub-grid { grid-template-columns: 1fr; }
-      .hp-jobs-grid { grid-template-columns: 1fr; }
-      .hp-newsletter form { flex-direction: column; }
-    }
-  </style>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
   <!-- End Google Tag Manager -->
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Free water safety guides, drowning prevention tips, and help finding quality swim lessons near you. Built by swim school professionals for families." />
+  <meta name="keywords" content="water safety, swim lessons, drowning prevention, swim schools, water safety guides, swimming lessons for kids" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0284c7" />
+  <meta name="author" content="WaterWiseKids" />
+
+  <!-- Title -->
+  <title>WaterWiseKids — Free Water Safety Guides & Swim School Directory</title>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.waterwisekids.com/" />
+
+  <!-- Open Graph (Social Media) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.waterwisekids.com/" />
+  <meta property="og:title" content="WaterWiseKids — Free Water Safety Guides & Swim School Directory" />
+  <meta property="og:description" content="Free water safety guides, drowning prevention tips, and help finding quality swim lessons near you. Built by swim school professionals for families." />
+  <meta property="og:image" content="https://www.waterwisekids.com/og-image.png" />
+  <meta property="og:site_name" content="WaterWiseKids" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.waterwisekids.com/" />
+  <meta name="twitter:title" content="WaterWiseKids — Water Safety Education & Swim Lesson Resources" />
+  <meta name="twitter:description" content="Free water safety guides, drowning prevention tips, and help finding quality swim lessons near you. Built by swim school professionals." />
+  <meta name="twitter:image" content="https://www.waterwisekids.com/og-image.png" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- JSON-LD Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "WaterWiseKids",
     "url": "https://www.waterwisekids.com",
-    "description": "America's National Aquatics Hub",
-    "publisher": {
-      "@type": "Organization",
-      "name": "WaterWiseKids",
-      "url": "https://www.waterwisekids.com"
+    "description": "Water safety education and swim lesson resources for families"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WaterWiseKids",
+    "url": "https://www.waterwisekids.com",
+    "description": "Water safety education and swim lesson resources",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "waterwisekids.com@gmail.com"
     }
   }
   </script>
+
+  <style>
+    /* ══════════════════════════════════════
+       HOMEPAGE-SPECIFIC STYLES
+       Base, nav, footer styles come from main.css
+    ══════════════════════════════════════ */
+
+    /* ══════════════════════════════════════
+       HERO SECTION
+    ══════════════════════════════════════ */
+    .hero {
+      background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-800) 100%);
+      color: var(--white);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--white);
+      color: var(--blue-800);
+    }
+
+    .btn-primary:hover {
+      background: var(--gray-50);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-secondary {
+      background: var(--blue-600);
+      color: var(--white);
+      border: 2px solid var(--blue-600);
+    }
+
+    .btn-secondary:hover {
+      background: var(--blue-700);
+      border-color: var(--blue-700);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(7, 89, 133, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 24px;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .hero-ctas {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+
+    /* ══════════════════════════════════════
+       NATIONAL STATS BAR
+    ══════════════════════════════════════ */
+    .stats-bar {
+      background: var(--blue-900);
+      padding: 20px 24px;
+    }
+
+    .stats-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+      color: #e0f2fe;
+    }
+
+    .stat-number {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: #93c5fd;
+      font-weight: 500;
+    }
+
+    @media (max-width: 480px) {
+      .stats-bar-inner {
+        gap: 24px;
+      }
+      .stat-number {
+        font-size: 1.25rem;
+      }
+    }
+
+    /* ══════════════════════════════════════
+       WHAT WE OFFER SECTION
+    ══════════════════════════════════════ */
+    .what-we-offer {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-header h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: var(--gray-600);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .offer-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .offer-card {
+      background: var(--gray-50);
+      padding: 40px 30px;
+      border-radius: 12px;
+      border: 1px solid var(--gray-100);
+      transition: all 0.3s;
+    }
+
+    .offer-card:hover {
+      border-color: var(--blue-500);
+      box-shadow: 0 8px 32px rgba(14, 165, 233, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .offer-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .offer-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+    }
+
+    .offer-card p {
+      color: var(--gray-600);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .offer-card a {
+      display: inline-block;
+      color: var(--blue-600);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .offer-card a:hover {
+      color: var(--blue-800);
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 768px) {
+      .what-we-offer {
+        padding: 48px 16px;
+      }
+      .section-header h2 {
+        font-size: 1.6rem;
+      }
+      .offer-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .offer-card {
+        padding: 28px 20px;
+      }
+    }
+
+    /* ══════════════════════════════════════
+       FEATURED ARTICLES SECTION
+    ══════════════════════════════════════ */
+    .featured-articles {
+      padding: 80px 24px;
+      background: var(--gray-50);
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .article-card {
+      background: var(--white);
+      padding: 28px;
+      border-radius: 12px;
+      border: 1px solid var(--gray-100);
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-card:hover {
+      border-color: var(--blue-500);
+      box-shadow: 0 8px 32px rgba(14, 165, 233, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .article-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .article-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .article-card p {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .article-card a {
+      color: var(--blue-600);
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+
+    .article-card a:hover {
+      color: var(--blue-800);
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 768px) {
+      .featured-articles {
+        padding: 60px 24px;
+      }
+      .article-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    /* ══════════════════════════════════════
+       FEATURED SWIM PROGRAMS SECTION
+    ══════════════════════════════════════ */
+    .featured-programs {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .state-directory-module {
+      max-width: 1100px;
+      margin: 0 auto 48px;
+    }
+
+    .state-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .state-grid a {
+      display: block;
+      padding: 10px 12px;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-100);
+      border-radius: 8px;
+      color: var(--gray-700);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .state-grid a:hover {
+      background: #eff8ff;
+      border-color: var(--blue-500);
+      color: var(--blue-600);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
+    }
+
+    .directory-cta {
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .directory-cta a {
+      display: inline-block;
+      color: var(--blue-600);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+
+    .directory-cta a:hover {
+      color: var(--blue-800);
+      transform: translateX(4px);
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      max-width: 1100px;
+      margin: 0 auto 48px;
+    }
+
+    .program-card {
+      background: var(--gray-50);
+      padding: 32px;
+      border-radius: 12px;
+      border: 1px solid var(--gray-100);
+      transition: all 0.3s;
+    }
+
+    .program-card:hover {
+      border-color: var(--blue-500);
+      box-shadow: 0 8px 32px rgba(14, 165, 233, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .program-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+    }
+
+    .program-card p {
+      color: var(--gray-600);
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .program-location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+    }
+
+    .program-card a {
+      display: inline-block;
+      color: var(--blue-600);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .program-card a:hover {
+      color: var(--blue-800);
+      transform: translateX(4px);
+    }
+
+    .partnership-note {
+      background: var(--blue-50, #eff8ff);
+      padding: 24px;
+      border-radius: 12px;
+      border-left: 4px solid var(--blue-500);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .partnership-note p {
+      color: var(--gray-700);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .partnership-note a {
+      color: var(--blue-600);
+      font-weight: 600;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+
+    .partnership-note a:hover {
+      color: var(--blue-800);
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 768px) {
+      .featured-programs {
+        padding: 48px 16px;
+      }
+      .state-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+      }
+      .state-grid a {
+        padding: 8px 6px;
+        font-size: 0.8rem;
+      }
+      .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    /* ══════════════════════════════════════
+       ABOUT SNIPPET SECTION
+    ══════════════════════════════════════ */
+    .about-snippet {
+      padding: 60px 24px;
+      background: var(--gray-50);
+    }
+
+    .about-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-content h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--gray-600);
+      margin-bottom: 16px;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .about-content a {
+      display: inline-block;
+      color: var(--blue-600);
+      font-weight: 600;
+      margin-top: 12px;
+      transition: all 0.2s;
+    }
+
+    .about-content a:hover {
+      color: var(--blue-800);
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 768px) {
+      .about-snippet {
+        padding: 50px 24px;
+      }
+      .about-content h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* ══════════════════════════════════════
+       NEWSLETTER SECTION (HOMEPAGE)
+    ══════════════════════════════════════ */
+    .newsletter-section {
+      padding: 60px 24px;
+      background: var(--white);
+    }
+
+    .newsletter-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .newsletter-content h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+    }
+
+    .newsletter-content p {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .newsletter-form input[type="email"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 12px 16px;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 0.95rem;
+      color: var(--gray-800);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .newsletter-form input[type="email"]:focus {
+      outline: none;
+      border-color: var(--blue-600);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+    }
+
+    .newsletter-form input[type="email"]::placeholder {
+      color: #9ca3af;
+    }
+
+    .newsletter-form button {
+      padding: 12px 28px;
+      background: var(--blue-600);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .newsletter-form button:hover {
+      background: var(--blue-800);
+    }
+
+    .newsletter-privacy {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+      margin-top: 12px;
+    }
+
+    .newsletter-fallback-message {
+      background: #dcfce7;
+      color: #166534;
+      padding: 16px;
+      border-radius: 8px;
+      text-align: center;
+      display: none;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .newsletter-section {
+        padding: 50px 24px;
+      }
+      .newsletter-content h2 {
+        font-size: 1.5rem;
+      }
+      .newsletter-form {
+        flex-direction: column;
+      }
+      .newsletter-form input[type="email"] {
+        width: 100%;
+      }
+      .newsletter-form button {
+        width: 100%;
+      }
+    }
+
+    /* ══════════════════════════════════════
+       B2B CALLOUT SECTION
+    ══════════════════════════════════════ */
+    .b2b-callout {
+      padding: 60px 24px;
+      background: var(--blue-800);
+      color: var(--white);
+    }
+
+    .b2b-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .b2b-content p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .btn-b2b {
+      display: inline-block;
+      padding: 12px 28px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 8px;
+      background: var(--white);
+      color: var(--blue-800);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-b2b:hover {
+      background: var(--gray-50);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      .b2b-callout {
+        padding: 50px 24px;
+      }
+      .b2b-content p {
+        font-size: 1rem;
+      }
+    }
+</style>
+
+  <!--
+    GTM CONTAINER: GTM-5DN8B3QT installed sitewide (all pages)
+    GA4 NOT YET CONNECTED — GTM is deployed, GA4 property must be configured in GTM.
+    dataLayer events ready: checklist_signup, contact_form_submit, checklist_print
+    CTA click tracking: all major CTAs have data-cta="[page]-[action]" attributes.
+    See TRACKING-REFERENCE.md for full setup instructions.
+  -->
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Navigation -->
-  <nav class="wwk-nav">
-    <div class="wwk-nav-inner">
-      <a href="/" class="wwk-nav-logo">WaterWiseKids</a>
-      <button class="wwk-nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="wwk-nav-links">
-        <li><a href="/" class="active">Home</a></li>
-        <li><a href="/education.html">Water Safety</a></li>
-        <li><a href="/swim-schools.html">Find Schools</a></li>
-        <li><a href="/jobs.html">Aquatics Jobs</a></li>
-        <li><a href="/teens.html">Teen Hub</a></li>
-        <li><a href="/gear.html">Gear Guide</a></li>
-        <li><a href="/advertise.html">Advertise</a></li>
-        <li><a href="/jobs/post.html" class="wwk-nav-cta">Post a Job</a></li>
+  <!-- ════════════════════════════════════════
+       HEADER & NAVIGATION
+  ════════════════════════════════════════ -->
+  <header>
+    <div class="container">
+    <nav>
+      <a href="/" class="nav-logo"><img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids</a>
+      <ul class="nav-links">
+        <li><a href="/education/">Water Safety</a></li>
+        <li><a href="/swim-lessons/">Find Lessons</a></li>
+        <li><a href="/scholarships/">Scholarships</a></li>
+        <li><a href="/aquatic-jobs/">Aquatic Jobs</a></li>
+        <li><a href="/for-swim-schools/">For Swim Schools</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
       </ul>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero Section -->
-  <section class="hp-hero">
-    <div class="container">
-      <h1>America's National Aquatics Hub</h1>
-      <p>Water safety education, swim school ratings, aquatics jobs, teen career guides, and gear reviews — everything aquatics, free for every family.</p>
-      <div class="hp-hero-actions">
-        <a href="/swim-schools.html" class="btn-primary">Find Swim Schools Near Me</a>
-        <a href="/jobs.html" class="btn-outline">Browse Aquatics Jobs</a>
-      </div>
-      <div class="hp-stats">
-        <div class="hp-stat">Safety Articles</div>
-        <div class="hp-stat">Schools Nationwide</div>
-        <div class="hp-stat">Aquatics Jobs</div>
-        <div class="hp-stat">Nationwide</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Search Bar Section -->
-  <section class="hp-search">
-    <div class="container">
-      <div class="hp-search-box">
-        <h2>Find Swim Schools Near You</h2>
-        <div class="hp-search-grid">
-          <input type="text" placeholder="City or ZIP code" aria-label="City or ZIP code">
-          <select aria-label="Select state">
-            <option>All States</option>
-            <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
-          </select>
-          <select aria-label="Select age group">
-            <option>Any Age</option><option>Toddler (0-3)</option><option>Preschool (3-5)</option><option>Child (6-12)</option><option>Teen (13-18)</option><option>Adult</option>
-          </select>
-          <button class="btn-primary" aria-label="Search for swim schools">Search</button>
-        </div>
+  <!-- ════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Water Safety Education for Every Family</h1>
+      <p>Free guides on drowning prevention, pool safety, and when to start swim lessons — plus a nationwide directory to help you find quality programs near you. Built by swim school professionals.</p>
+      <div class="hero-ctas">
+        <a href="/education/" class="btn btn-primary" data-cta="home-safety-guides">Read Our Safety Guides</a>
+        <a href="/swim-lessons/" class="btn btn-secondary" data-cta="home-find-lessons">Find Swim Lessons</a>
       </div>
     </div>
   </section>
 
-  <!-- Hub Cards Grid -->
-  <section class="wwk-section">
+  <!-- ════════════════════════════════════════
+       NATIONAL STATS BAR
+  ════════════════════════════════════════ -->
+  <section class="stats-bar">
+    <div class="stats-bar-inner">
+      <div class="stat-item">
+        <span class="stat-number">44</span>
+        <span class="stat-label">Free Safety Guides</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">50</span>
+        <span class="stat-label">States Covered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">300+</span>
+        <span class="stat-label">Schools Listed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       WHAT WE OFFER
+  ════════════════════════════════════════ -->
+  <section class="what-we-offer">
     <div class="container">
-      <h2 style="text-align: center; margin: 0 0 48px 0; font-size: 2rem;">Everything aquatics, in one place</h2>
-      <div class="hp-hub-grid">
-        <a href="/education.html" class="hp-hub-card">
-          <span class="icon">📚</span>
+      <div class="section-header">
+        <h2>What We Offer</h2>
+        <p>Resources built by swim professionals for families who care about water safety</p>
+      </div>
+
+      <div class="offer-cards">
+        <div class="offer-card">
+          <div class="offer-icon"><img src="/assets/images/icons/icon-education.svg" alt="Education" style="width:48px;height:48px;"></div>
           <h3>Water Safety Education</h3>
-          <p>Articles on pool, lake &amp; ocean safety, drowning prevention, CPR, and swim readiness for every age.</p>
-          <span class="link">Browse articles &rarr;</span>
-        </a>
-        <a href="/swim-schools.html" class="hp-hub-card">
-          <span class="icon">⭐</span>
-          <h3>Swim School Finder</h3>
-          <p>The first national swim school directory with real parent ratings. Search schools across all 50 states.</p>
-          <span class="link">Find schools &rarr;</span>
-        </a>
-        <a href="/jobs.html" class="hp-hub-card">
-          <span class="icon">💼</span>
-          <h3>Aquatics Jobs Board</h3>
-          <p>The only national job board for aquatics. Lifeguard, instructor, coach, and director jobs. Free to search and apply.</p>
-          <span class="link">Browse jobs &rarr;</span>
-        </a>
-        <a href="/teens.html" class="hp-hub-card">
-          <span class="icon">🎓</span>
-          <h3>Teen &amp; Young Adult Hub</h3>
-          <p>How to become a lifeguard, swim instructor, or aquatics director. Certifications, salaries, scholarships, and career guides.</p>
-          <span class="link">Explore careers &rarr;</span>
-        </a>
-        <a href="/gear.html" class="hp-hub-card">
-          <span class="icon">🛒</span>
-          <h3>Gear &amp; Product Guide</h3>
-          <p>Expert-curated swim gear for every age. Goggles, safety equipment, training tools, and honest gear reviews.</p>
-          <span class="link">Browse gear &rarr;</span>
-        </a>
-        <a href="/advertise.html" class="hp-hub-card">
-          <span class="icon">📣</span>
-          <h3>Advertise With Us</h3>
-          <p>Reach parents searching for swim lessons right now. Local, regional, and national ad packages starting at $49/month.</p>
-          <span class="link">Learn more &rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Articles -->
-  <section class="wwk-section wwk-section-alt">
-    <div class="container">
-      <h2 style="text-align: center; margin: 0 0 48px 0; font-size: 2rem;">Start with the essentials</h2>
-      <div class="hp-articles">
-        <a href="/education/drowning-prevention-guide.html" class="hp-article-card">
-          <div class="thumb" style="background: linear-gradient(135deg, #ff6b6b, #ff8c8c);">🛡</div>
-          <div class="body">
-            <span class="tag">Safety</span>
-            <h3>The Complete Guide to Drowning Prevention</h3>
-            <p>Essential strategies for keeping children safe in and around water.</p>
-            <span class="link">Read article &rarr;</span>
-          </div>
-        </a>
-        <a href="/education/when-to-start-swim-lessons.html" class="hp-article-card">
-          <div class="thumb" style="background: linear-gradient(135deg, #4ecdc4, #6ee7d7);">👶</div>
-          <div class="body">
-            <span class="tag">Readiness</span>
-            <h3>When Should Kids Start Swim Lessons?</h3>
-            <p>Signs your child is developmentally ready for swim instruction.</p>
-            <span class="link">Read article &rarr;</span>
-          </div>
-        </a>
-        <a href="/education/fear-of-water.html" class="hp-article-card">
-          <div class="thumb" style="background: linear-gradient(135deg, #ffd93d, #ffed66);">😊</div>
-          <div class="body">
-            <span class="tag">Confidence</span>
-            <h3>How to Help a Child Overcome Fear of Water</h3>
-            <p>Proven techniques to build water confidence gradually and safely.</p>
-            <span class="link">Read article &rarr;</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Jobs Preview Section -->
-  <section class="wwk-section hp-jobs">
-    <div class="container">
-      <div class="hp-jobs-grid">
-        <div>
-          <h2>Find your next aquatics job</h2>
-          <p>The only national job board built for the water — lifeguard, instructor, coach, director roles across America. Free to search.</p>
-          <div class="hp-jobs-stats">
-            <div>
-              <div class="label">Average Hourly Pay</div>
-              <div class="value">—</div>
-            </div>
-            <div>
-              <div class="label">Total Listings</div>
-              <div class="value">—</div>
-            </div>
-          </div>
-          <a href="/jobs.html" class="btn-primary" style="background: white; color: #0d4d77;">View All Jobs</a>
+          <p>Free, expert guides covering drowning prevention, water survival skills, pool rules, and age-appropriate safety lessons. Everything families need to create a water-safe home and lifestyle.</p>
+          <a href="/education/" data-cta="home-offer-guides">Explore Guides →</a>
         </div>
-        <div style="display: grid; gap: 12px;">
-          <div style="text-align:center; padding:2rem 1.5rem; background:rgba(255,255,255,0.08); border-radius:16px; border:1px dashed rgba(255,255,255,0.2);">
-            <p style="color:rgba(255,255,255,0.7); font-size:0.95rem; margin-bottom:1rem;">Job listings coming soon.</p>
-            <a href="/jobs/post.html" style="color:white; font-weight:700; font-size:0.9rem;">Post a Job &rarr;</a>
-          </div>
+
+        <div class="offer-card">
+          <div class="offer-icon"><img src="/assets/images/icons/icon-find-lessons.svg" alt="Find Lessons" style="width:48px;height:48px;"></div>
+          <h3>Find Swim Lessons</h3>
+          <p>Browse our nationwide directory of 300+ safety-focused swim schools with experienced, certified instructors across all 50 states.</p>
+          <a href="/swim-lessons/" data-cta="home-offer-programs">Browse Programs →</a>
+        </div>
+
+        <div class="offer-card">
+          <div class="offer-icon"><img src="/assets/images/icons/icon-partnerships.svg" alt="Partnerships" style="width:48px;height:48px;"></div>
+          <h3>Partnership for Swim Schools</h3>
+          <p>We partner with quality swim schools to help them reach more local families. Get a dedicated profile page, featured placement, and visibility on a growing national platform.</p>
+          <a href="/for-swim-schools/" data-cta="home-offer-partners">Learn More →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Newsletter Section -->
-  <section class="wwk-section hp-newsletter">
+  <!-- ════════════════════════════════════════
+       FEATURED ARTICLES
+  ════════════════════════════════════════ -->
+  <section class="featured-articles">
     <div class="container">
-      <h2>The WaterWise Weekly</h2>
-      <p>Join 40,000+ parents and aquatics pros.</p>
-      <form action="https://formspree.io/f/waterwisekids" method="post">
-        <input type="email" name="email" placeholder="Enter your email" aria-label="Enter your email" required>
-        <button type="submit" class="btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
+      <div class="section-header">
+        <h2>Featured Water Safety Guides</h2>
+        <p>Expert articles to help you and your family stay safe in and around water</p>
+      </div>
+
+      <div class="article-grid">
+        <div class="article-card">
+          <div class="article-icon"><img src="/assets/images/icons/icon-find-lessons.svg" alt="Swim lessons" style="width:36px;height:36px;"></div>
+          <h3>The Complete Guide to Drowning Prevention</h3>
+          <p>Learn the essential facts about drowning, how to recognize a drowning person, and proven prevention strategies.</p>
+          <a href="/education/drowning-prevention-guide.html">Read Guide →</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-icon"><img src="/assets/images/icons/icon-baby.svg" alt="Baby swimming" style="width:36px;height:36px;"></div>
+          <h3>When Should Kids Start Swim Lessons?</h3>
+          <p>Discover the right age to begin swim instruction and what to look for in a quality swim program for your child.</p>
+          <a href="/education/when-to-start-swim-lessons.html">Read Guide →</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-icon"><img src="/assets/images/icons/icon-swimmer-circle.svg" alt="Swimming" style="width:36px;height:36px;"></div>
+          <h3>Pool Safety Rules Every Family Should Know</h3>
+          <p>Essential safety protocols for supervised swimming, water activities, and creating a safe aquatic environment.</p>
+          <a href="/education/pool-safety-rules.html">Read Guide →</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-icon"><img src="/assets/images/icons/icon-sun.svg" alt="Summer" style="width:36px;height:36px;"></div>
+          <h3>Summer Water Safety Checklist</h3>
+          <p>Pools, beaches, lakes, and water parks — your complete checklist for keeping kids safe this summer.</p>
+          <a href="/education/summer-water-safety-checklist.html">Read Guide →</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="/education/" style="display: inline-block; color: var(--blue-600); font-weight: 600; font-size: 0.95rem; transition: all 0.2s;" data-cta="home-view-all-guides">View All 44 Guides →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FIND LESSONS IN YOUR STATE
+  ════════════════════════════════════════ -->
+  <section class="featured-programs">
+    <div class="container">
+      <div class="section-header">
+        <h2>Find Swim Lessons in Your State</h2>
+        <p>Browse our nationwide directory of 300+ swim schools across all 50 states</p>
+      </div>
+
+      <div class="state-directory-module">
+        <div class="state-grid">
+          <a href="/swim-lessons/directory/alabama.html">Alabama</a>
+          <a href="/swim-lessons/directory/alaska.html">Alaska</a>
+          <a href="/swim-lessons/directory/arizona.html">Arizona</a>
+          <a href="/swim-lessons/directory/arkansas.html">Arkansas</a>
+          <a href="/swim-lessons/directory/california.html">California</a>
+          <a href="/swim-lessons/directory/colorado.html">Colorado</a>
+          <a href="/swim-lessons/directory/connecticut.html">Connecticut</a>
+          <a href="/swim-lessons/directory/delaware.html">Delaware</a>
+          <a href="/swim-lessons/directory/florida.html">Florida</a>
+          <a href="/swim-lessons/directory/georgia.html">Georgia</a>
+          <a href="/swim-lessons/directory/hawaii.html">Hawaii</a>
+          <a href="/swim-lessons/directory/idaho.html">Idaho</a>
+          <a href="/swim-lessons/directory/illinois.html">Illinois</a>
+          <a href="/swim-lessons/directory/indiana.html">Indiana</a>
+          <a href="/swim-lessons/directory/iowa.html">Iowa</a>
+          <a href="/swim-lessons/directory/kansas.html">Kansas</a>
+          <a href="/swim-lessons/directory/kentucky.html">Kentucky</a>
+          <a href="/swim-lessons/directory/louisiana.html">Louisiana</a>
+          <a href="/swim-lessons/directory/maine.html">Maine</a>
+          <a href="/swim-lessons/directory/maryland.html">Maryland</a>
+          <a href="/swim-lessons/directory/massachusetts.html">Massachusetts</a>
+          <a href="/swim-lessons/directory/michigan.html">Michigan</a>
+          <a href="/swim-lessons/directory/minnesota.html">Minnesota</a>
+          <a href="/swim-lessons/directory/mississippi.html">Mississippi</a>
+          <a href="/swim-lessons/directory/missouri.html">Missouri</a>
+          <a href="/swim-lessons/directory/montana.html">Montana</a>
+          <a href="/swim-lessons/directory/nebraska.html">Nebraska</a>
+          <a href="/swim-lessons/directory/nevada.html">Nevada</a>
+          <a href="/swim-lessons/directory/new-hampshire.html">New Hampshire</a>
+          <a href="/swim-lessons/directory/new-jersey.html">New Jersey</a>
+          <a href="/swim-lessons/directory/new-mexico.html">New Mexico</a>
+          <a href="/swim-lessons/directory/new-york.html">New York</a>
+          <a href="/swim-lessons/directory/north-carolina.html">North Carolina</a>
+          <a href="/swim-lessons/directory/north-dakota.html">North Dakota</a>
+          <a href="/swim-lessons/directory/ohio.html">Ohio</a>
+          <a href="/swim-lessons/directory/oklahoma.html">Oklahoma</a>
+          <a href="/swim-lessons/directory/oregon.html">Oregon</a>
+          <a href="/swim-lessons/directory/pennsylvania.html">Pennsylvania</a>
+          <a href="/swim-lessons/directory/rhode-island.html">Rhode Island</a>
+          <a href="/swim-lessons/directory/south-carolina.html">South Carolina</a>
+          <a href="/swim-lessons/directory/south-dakota.html">South Dakota</a>
+          <a href="/swim-lessons/directory/tennessee.html">Tennessee</a>
+          <a href="/swim-lessons/directory/texas.html">Texas</a>
+          <a href="/swim-lessons/directory/utah.html">Utah</a>
+          <a href="/swim-lessons/directory/vermont.html">Vermont</a>
+          <a href="/swim-lessons/directory/virginia.html">Virginia</a>
+          <a href="/swim-lessons/directory/washington.html">Washington</a>
+          <a href="/swim-lessons/directory/west-virginia.html">West Virginia</a>
+          <a href="/swim-lessons/directory/wisconsin.html">Wisconsin</a>
+          <a href="/swim-lessons/directory/wyoming.html">Wyoming</a>
+        </div>
+        <div class="directory-cta">
+          <a href="/swim-lessons/directory/" data-cta="home-directory-browse">Browse Full Directory →</a>
+        </div>
+      </div>
+
+      <div class="partnership-note">
+        <p><strong>Are you a swim school?</strong> Join our growing nationwide network of partner programs.</p>
+        <a href="/for-swim-schools/" data-cta="home-partnership-link">Explore Partnership Opportunities →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ABOUT SNIPPET
+  ════════════════════════════════════════ -->
+  <section class="about-snippet">
+    <div class="about-content">
+      <h2>Built by Water Safety Professionals</h2>
+      <p>WaterWiseKids was created by certified swim instructors who teach water safety every day. What started as a way to share expert knowledge has grown into a national platform helping families across all 50 states stay safe in and around water.</p>
+      <p>Our goal: make practical water safety education free and accessible nationwide, and help families find swim programs they can trust.</p>
+      <a href="/about/" data-cta="home-about-link">Learn About Our Team →</a>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       NEWSLETTER SIGNUP
+  ════════════════════════════════════════ -->
+  <section class="newsletter-section">
+    <div class="newsletter-content">
+      <h2>Free Printable: Summer Water Safety Checklist</h2>
+      <p>Sign up and get instant access to our printable one-page checklist covering pool safety, beach rules, life jacket guidelines, and emergency prep. Plus weekly water safety tips from swim professionals.</p>
+      <form class="newsletter-form" data-form="newsletter-homepage" method="POST" action="https://formspree.io/f/mojpyqdo">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit">Get the Checklist</button>
+        <input type="hidden" name="source" value="homepage-checklist">
+        <input type="text" name="_gotcha" style="display:none">
       </form>
+      <p class="newsletter-privacy">Free forever. No spam. Unsubscribe anytime.</p>
+      <div class="newsletter-fallback-message"></div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="wwk-footer">
-    <div class="wwk-footer-grid">
-      <div class="wwk-footer-col">
-        <h4>Learn</h4>
-        <a href="/education.html">Water Safety Education</a>
-        <a href="/education/drowning-prevention-guide.html">Drowning Prevention</a>
-        <a href="/education/cpr-basics-parents.html">CPR for Parents</a>
-        <a href="/education/pool-safety-rules.html">Pool Safety Rules</a>
-      </div>
-      <div class="wwk-footer-col">
-        <h4>Find</h4>
-        <a href="/swim-schools.html">Swim School Directory</a>
-        <a href="/swim-lessons/philadelphia.html">Philadelphia Lessons</a>
-        <a href="/swim-lessons/jersey-shore.html">Jersey Shore Lessons</a>
-      </div>
-      <div class="wwk-footer-col">
-        <h4>Careers</h4>
-        <a href="/jobs.html">Aquatics Jobs</a>
-        <a href="/teens.html">Teen Hub</a>
-        <a href="/teens/lifeguard-certification.html">Lifeguard Certification</a>
-        <a href="/jobs/post.html">Post a Job</a>
-      </div>
-      <div class="wwk-footer-col">
-        <h4>More</h4>
-        <a href="/gear.html">Gear Guide</a>
-        <a href="/advertise.html">Advertise</a>
-        <a href="/about.html">About Us</a>
-      </div>
+  <!-- ════════════════════════════════════════
+       B2B CALLOUT (FOR SWIM SCHOOLS)
+  ════════════════════════════════════════ -->
+  <section class="b2b-callout">
+    <div class="b2b-content">
+      <p><strong>Own or manage a swim school?</strong> Get a free profile page and reach local families searching for swim lessons. Early partners get founding visibility as we grow.</p>
+      <a href="/for-swim-schools/" class="btn-b2b" data-cta="home-b2b-partnerships">Learn About Partnerships →</a>
     </div>
-    <div class="wwk-footer-bottom">
-      &copy; 2026 WaterWiseKids.com &mdash; America&#39;s National Aquatics Hub
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer>
+    <div class="container" style="text-align: center;">
+      <p class="footer-title"><img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids</p>
+      <p class="footer-tagline">Trusted water safety education for every family</p>
+      <div class="footer-links">
+        <a href="/education/">Water Safety</a>
+        <a href="/swim-lessons/">Find Lessons</a>
+        <a href="/scholarships/">Scholarships</a>
+        <a href="/for-swim-schools/">For Swim Schools</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <p class="footer-contact">Email: <a href="mailto:waterwisekids.com@gmail.com">waterwisekids.com@gmail.com</a></p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WaterWiseKids. All rights reserved. | <a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a></p>
+      </div>
     </div>
   </footer>
-<script src="/site-nav.js" defer></script>
+
+  <script>
+    // Formspree AJAX submission — stays on page instead of redirecting
+    const newsletterForms = document.querySelectorAll('[data-form*="newsletter"]');
+
+    newsletterForms.forEach(form => {
+      const fallbackMessage = form.parentElement.querySelector('.newsletter-fallback-message');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Subscribing...';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if (response.ok) {
+            form.style.display = 'none';
+            fallbackMessage.style.display = 'block';
+            fallbackMessage.innerHTML = 'You\'re in! <a href="/education/summer-safety-checklist-printable.html" style="color: #075985; font-weight: 600; text-decoration: underline;">View and print your Summer Safety Checklist here</a>. We\'ll also send you weekly water safety tips.';
+            if (window.dataLayer) { var src = form.querySelector('[name="source"]'); window.dataLayer.push({ event: 'checklist_signup', signup_source: src ? src.value : 'homepage' }); }
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Get the Checklist';
+            fallbackMessage.style.display = 'block';
+            fallbackMessage.textContent = 'Something went wrong. Please try again or email us at waterwisekids.com@gmail.com.';
+          }
+        }).catch(function() {
+          btn.disabled = false;
+          btn.textContent = 'Get the Checklist';
+          fallbackMessage.style.display = 'block';
+          fallbackMessage.textContent = 'Something went wrong. Please try again or email us at waterwisekids.com@gmail.com.';
+        });
+      });
+    });
+  </script>
+  <script src="/assets/js/main.js"></script>
+
 </body>
 </html>
