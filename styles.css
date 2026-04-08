@@ -6,7 +6,7 @@
  */
 
 /* ── Google Fonts ─────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=fallback');
 
 /* ── Reset ──────────────────────────────────────────── */
 *, *::before, *::after {
@@ -1351,6 +1351,7 @@ img {
 
 .article {
   min-width: 0;
+  min-height: 60vh;
 }
 
 .article-header {
@@ -2098,14 +2099,17 @@ img {
 .article-card-image {
   width: 100%;
   height: 180px;
+  aspect-ratio: 5 / 3;
   background: var(--gray-100);
   overflow: hidden;
+  contain: layout style paint;
 }
 
 .article-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  decoding: async;
 }
 
 .article-card-body {
