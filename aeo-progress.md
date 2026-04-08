@@ -54,11 +54,41 @@ Each article is checked against the full 8-point checklist:
 
 ---
 
+#### `education/signs-of-drowning.html`
+- **Status:** ✅ Optimized
+- **Changes made:**
+  - Added TL;DR box with CDC link and 20–60 second statistic
+  - Added FAQPage JSON-LD schema (5 Q&A pairs covering real drowning appearance, speed, IDR, aquatic distress, and emergency response)
+  - Converted all key H2s to question format: "What Does Real Drowning Look Like?", "What Is the Instinctive Drowning Response?", "What Are the Visible Signs of Drowning to Watch For?", "How Do Drowning Signs Differ Across Age Groups?", "What Are Secondary Drowning and Dry Drowning?", "How Do You Teach Children to Recognize Drowning Signs?", "What Should You Do After a Near-Drowning Incident?"
+  - Added direct answer-first bold sentence openers to each converted H2 section
+  - Added AAP hyperlink (drowning prevention page) in IDR section with #1 cause of death for ages 1-4 stat
+  - Added CDC hyperlink (drowning data) in age groups section with 970 deaths/year stat
+  - Added NDPA hyperlink in teaching children section
+  - Added American Red Cross hyperlink in "What to Do" section with CPR training recommendation
+
+#### `do-swim-lessons-reduce-drowning-risk.html`
+- **Status:** ✅ Optimized
+- **Changes made:**
+  - Article already had TL;DR box, FAQPage schema, question H2s, speakable, and answer-first lead
+  - Added American Red Cross hyperlink in "How Do Swim Lessons Build Foundational Safety Skills" with explicit 88% AAP stat
+  - Added AAP hyperlink in same section
+  - Added CDC hyperlink in "Why Does Supervision Still Matter Most" section with 970 deaths/year stat
+  - Added NDPA hyperlink in "How Do Swim Lessons Work with Other Safety Habits" section
+  - Updated dateModified
+
+#### `how-to-help-a-child-overcome-fear-of-water.html`
+- **Status:** ✅ Optimized
+- **Changes made:**
+  - Article already had TL;DR box, FAQPage schema, question H2s, speakable, and answer-first lead
+  - **Added HowTo JSON-LD schema** with 5 named steps matching the H2 structure (Start Small → Comfort Before Performance → Use Encouraging Language → Choose Right Environment → Consistent Practice)
+  - Added CDC hyperlink + drowning is #1 cause stat + 970 deaths/year in "Why Should You Start Small" section
+  - Added AAP hyperlink + 88% risk reduction stat in "How Important Is Choosing the Right Environment" section
+  - Updated dateModified
+
+---
+
 ## ⏳ Remaining Priority Articles
 
-4. `education/signs-of-drowning.html`
-5. `do-swim-lessons-reduce-drowning-risk.html`
-6. `how-to-help-a-child-overcome-fear-of-water.html`
 7. `pool-safety-rules-for-kids.html`
 8. `what-happens-at-a-childs-first-swim-lesson.html`
 9. `how-often-should-kids-take-swim-lessons.html`
