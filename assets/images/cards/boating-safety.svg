@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <path d="M0 115 Q36.0 107 75.0 115 T150.0 115 T225.0 115 T300 115" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 123 Q36.0 115 75.0 123 T150.0 123 T225.0 123 T300 123" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+  <!-- Boat hull -->
+  <path d="M60 100 L80 120 L230 120 L250 100 Z" fill="rgba(255,255,255,0.3)" stroke="white" stroke-width="2"/>
+  <!-- People in boat -->
+  <circle cx="120" cy="75" r="8" fill="white"/>
+  <path d="M120 83 L120 105" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="160" cy="78" r="7" fill="white"/>
+  <path d="M160 85 L160 105" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="195" cy="80" r="6" fill="white"/>
+  <path d="M195 86 L195 105" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <!-- Life jacket indicators -->
+  <rect x="115" y="90" width="10" height="12" rx="3" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+  <rect x="155" y="92" width="10" height="10" rx="3" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+  <path d="M0 140 Q36.0 132 75.0 140 T150.0 140 T225.0 140 T300 140" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 148 Q36.0 140 75.0 148 T150.0 148 T225.0 148 T300 148" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <!-- Pool fence -->
+  <line x1="10" y1="40" x2="10" y2="110" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <line x1="40" y1="40" x2="40" y2="110" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <line x1="70" y1="40" x2="70" y2="110" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <line x1="5" y1="50" x2="75" y2="50" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <line x1="5" y1="75" x2="75" y2="75" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <!-- Gate -->
+  <rect x="70" y="45" width="20" height="65" rx="2" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+  <circle cx="85" cy="78" r="2" fill="rgba(255,255,255,0.6)"/>
+  <path d="M0 115 Q36.0 107 75.0 115 T150.0 115 T225.0 115 T300 115" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 123 Q36.0 115 75.0 123 T150.0 123 T225.0 123 T300 123" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+  <!-- Parent watching from chair -->
+  <circle cx="140" cy="55" r="9" fill="white"/>
+  <path d="M140 64 L140 90 L148 90 L148 85 L133 85 L133 90 Z" fill="white"/>
+  <line x1="140" y1="72" x2="128" y2="80" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="140" y1="72" x2="152" y2="80" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <!-- Kids in pool -->
+  <circle cx="210" cy="105" r="6" fill="white"/>
+  <ellipse cx="210" cy="118" rx="7" ry="5" fill="white" opacity="0.7"/>
+  <circle cx="250" cy="108" r="5" fill="white" opacity="0.9"/>
+  <path d="M0 135 Q36.0 127 75.0 135 T150.0 135 T225.0 135 T300 135" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 143 Q36.0 135 75.0 143 T150.0 143 T225.0 143 T300 143" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+
+</svg>

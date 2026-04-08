@@ -1,0 +1,144 @@
+#!/bin/bash
+
+# Write the deploy watcher script to a temp file (avoids escaping hell)
+cat > /tmp/waterwisekids-deploy.sh << 'DEPLOY_SCRIPT'
+#!/bin/bash
+
+# ─── CONFIG ──────────────────────────────────────────────
+REPO_DIR="/Users/mike/Documents/Claude/Projects/waterwisekids.com"
+BRANCH="live"
+INTERVAL=60
+# ─────────────────────────────────────────────────────────
+
+# Colors
+BOLD="\033[1m"
+DIM="\033[2m"
+BLUE="\033[38;5;33m"
+GREEN="\033[38;5;40m"
+YELLOW="\033[38;5;220m"
+RED="\033[38;5;196m"
+CYAN="\033[38;5;45m"
+WHITE="\033[38;5;255m"
+RESET="\033[0m"
+
+clear
+
+# Banner
+echo ""
+echo -e "${BLUE}${BOLD}  ╔══════════════════════════════════════════════════╗${RESET}"
+echo -e "${BLUE}${BOLD}  ║         WATERWISEKIDS AUTO-DEPLOY                ║${RESET}"
+echo -e "${BLUE}${BOLD}  ╚══════════════════════════════════════════════════╝${RESET}"
+echo ""
+echo -e "  ${DIM}Repo:${RESET}     ${WHITE}${REPO_DIR}${RESET}"
+echo -e "  ${DIM}Branch:${RESET}   ${CYAN}${BRANCH}${RESET}"
+echo -e "  ${DIM}Interval:${RESET} ${CYAN}Every ${INTERVAL} seconds${RESET}"
+echo -e "  ${DIM}Stop:${RESET}     ${YELLOW}Ctrl+C${RESET}"
+echo ""
+echo -e "  ${BLUE}──────────────────────────────────────────────────${RESET}"
+
+# Navigate to repo
+cd "$REPO_DIR" 2>/dev/null
+if [ $? -ne 0 ]; then
+    echo ""
+    echo -e "  ${RED}${BOLD}ERROR:${RESET} Repo not found at ${REPO_DIR}"
+    echo -e "  ${DIM}Check that the folder exists and try again.${RESET}"
+    echo ""
+    read -p "  Press Enter to close..."
+    exit 1
+fi
+
+echo ""
+echo -e "  ${GREEN}${BOLD}CONNECTED${RESET} ${DIM}— watching for changes...${RESET}"
+echo ""
+
+CYCLE=0
+TOTAL_PUSHED=0
+
+while true; do
+    CYCLE=$((CYCLE + 1))
+    NOW=$(date '+%H:%M:%S')
+    TODAY=$(date '+%Y-%m-%d')
+
+    echo -e "  ${BLUE}──────────────────────────────────────────────────${RESET}"
+    echo -e "  ${BOLD}Cycle #${CYCLE}${RESET}  ${DIM}${TODAY} ${NOW}${RESET}"
+    echo ""
+
+    # Pull latest
+    echo -e "  ${DIM}Pulling from origin/${BRANCH}...${RESET}"
+    PULL_OUTPUT=$(git pull origin "$BRANCH" 2>&1)
+    if echo "$PULL_OUTPUT" | grep -q "Already up to date"; then
+        echo -e "  ${DIM}  Remote: up to date${RESET}"
+    else
+        echo -e "  ${CYAN}  Remote: pulled new changes${RESET}"
+        echo -e "  ${DIM}  ${PULL_OUTPUT}${RESET}"
+    fi
+    echo ""
+
+    # Check for local changes
+    CHANGES=$(git status --porcelain 2>/dev/null)
+    if [ -n "$CHANGES" ]; then
+        FILE_COUNT=$(echo "$CHANGES" | wc -l | tr -d ' ')
+        echo -e "  ${GREEN}${BOLD}  CHANGES DETECTED — ${FILE_COUNT} file(s)${RESET}"
+        echo ""
+
+        # List changed files
+        echo "$CHANGES" | while read -r line; do
+            STATUS="${line:0:2}"
+            FILE="${line:3}"
+            case "$STATUS" in
+                "M "| " M"|"MM") ICON="${YELLOW}modified${RESET}" ;;
+                "A "| "??")      ICON="${GREEN}new${RESET}" ;;
+                "D "| " D")      ICON="${RED}deleted${RESET}" ;;
+                *)               ICON="${DIM}changed${RESET}" ;;
+            esac
+            echo -e "    ${ICON}  ${WHITE}${FILE}${RESET}"
+        done
+        echo ""
+
+        # Commit and push
+        echo -e "  ${DIM}  Staging all changes...${RESET}"
+        git add -A
+
+        COMMIT_MSG="[deploy] Auto-commit $(date +%Y-%m-%d_%H:%M:%S)"
+        echo -e "  ${DIM}  Committing: ${COMMIT_MSG}${RESET}"
+        git commit -m "$COMMIT_MSG" --quiet
+
+        echo -e "  ${DIM}  Pushing to origin/${BRANCH}...${RESET}"
+        PUSH_OUTPUT=$(git push origin "$BRANCH" 2>&1)
+
+        if [ $? -eq 0 ]; then
+            TOTAL_PUSHED=$((TOTAL_PUSHED + FILE_COUNT))
+            echo ""
+            echo -e "  ${GREEN}${BOLD}  DEPLOYED${RESET} ${GREEN}— ${FILE_COUNT} file(s) pushed to ${BRANCH}${RESET}"
+            echo -e "  ${DIM}  Total files deployed this session: ${TOTAL_PUSHED}${RESET}"
+        else
+            echo ""
+            echo -e "  ${RED}${BOLD}  PUSH FAILED${RESET}"
+            echo -e "  ${DIM}  ${PUSH_OUTPUT}${RESET}"
+        fi
+    else
+        echo -e "  ${DIM}  No local changes detected.${RESET}"
+    fi
+
+    echo ""
+    echo -e "  ${DIM}Session stats: ${CYCLE} cycles | ${TOTAL_PUSHED} files deployed${RESET}"
+    echo ""
+
+    # Countdown timer
+    for i in $(seq "$INTERVAL" -1 1); do
+        MINS=$((i / 60))
+        SECS=$((i % 60))
+        BAR_TOTAL=40
+        BAR_FILLED=$(( (INTERVAL - i) * BAR_TOTAL / INTERVAL ))
+        BAR_EMPTY=$((BAR_TOTAL - BAR_FILLED))
+        FILLED=$(printf '█%.0s' $(seq 1 $BAR_FILLED) 2>/dev/null)
+        EMPTY=$(printf '░%.0s' $(seq 1 $BAR_EMPTY) 2>/dev/null)
+        printf "\r  ${CYAN}${FILLED}${DIM}${EMPTY}${RESET}  ${BOLD}%d:%02d${RESET}  " "$MINS" "$SECS"
+        sleep 1
+    done
+    printf "\r  %-60s\n" ""
+done
+DEPLOY_SCRIPT
+
+chmod +x /tmp/waterwisekids-deploy.sh
+open -a Terminal /tmp/waterwisekids-deploy.sh

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <!-- Inflatable pool shape -->
+  <ellipse cx="170" cy="110" rx="80" ry="35" fill="rgba(255,255,255,0.15)"/>
+  <ellipse cx="170" cy="105" rx="80" ry="10" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+  <ellipse cx="170" cy="115" rx="82" ry="10" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+  <!-- Child sitting in pool -->
+  <circle cx="170" cy="82" r="6" fill="white"/>
+  <ellipse cx="170" cy="95" rx="7" ry="6" fill="white" opacity="0.8"/>
+  <!-- Parent kneeling nearby -->
+  <circle cx="60" cy="60" r="9" fill="white"/>
+  <path d="M60 69 L60 100 L52 118 L56 118 L60 105 L64 118 L68 118 Z" fill="white"/>
+  <line x1="60" y1="80" x2="48" y2="88" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="60" y1="80" x2="72" y2="75" stroke="white" stroke-width="3" stroke-linecap="round"/>
+
+</svg>

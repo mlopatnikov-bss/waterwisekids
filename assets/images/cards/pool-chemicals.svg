@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <!-- Pool edge -->
+  <rect x="0" y="90" width="300" height="90" fill="rgba(255,255,255,0.1)"/>
+  <line x1="0" y1="90" x2="300" y2="90" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <!-- Person kneeling at pool edge testing water -->
+  <circle cx="150" cy="45" r="9" fill="white"/>
+  <path d="M150 54 L150 85 L142 90 L158 90 Z" fill="white"/>
+  <line x1="150" y1="65" x2="168" y2="80" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="150" y1="65" x2="135" y2="75" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <!-- Test kit -->
+  <rect x="170" y="76" width="12" height="16" rx="2" fill="rgba(255,255,255,0.5)"/>
+  <rect x="172" y="79" width="8" height="5" rx="1" fill="rgba(255,255,255,0.8)"/>
+  <!-- Chemical bottles -->
+  <rect x="50" y="55" width="14" height="25" rx="3" fill="rgba(255,255,255,0.35)"/>
+  <rect x="52" y="50" width="10" height="8" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <rect x="75" y="60" width="12" height="20" rx="3" fill="rgba(255,255,255,0.3)"/>
+  <rect x="77" y="55" width="8" height="8" rx="2" fill="rgba(255,255,255,0.35)"/>
+
+</svg>

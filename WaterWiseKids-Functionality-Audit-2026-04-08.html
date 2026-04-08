@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WaterWiseKids Functionality Audit — April 8, 2026</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f8fafc; color: #1e293b; }
+  h1 { color: #0369a1; border-bottom: 3px solid #0ea5e9; padding-bottom: 12px; }
+  h2 { color: #0284c7; margin-top: 32px; }
+  .pass { color: #16a34a; font-weight: 700; }
+  .warn { color: #d97706; font-weight: 700; }
+  .fail { color: #dc2626; font-weight: 700; }
+  .info { color: #6366f1; font-weight: 700; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid #cbd5e1; padding: 10px 14px; text-align: left; }
+  th { background: #e0f2fe; font-weight: 600; }
+  tr:nth-child(even) { background: #f1f5f9; }
+  .summary-box { background: #ecfdf5; border: 2px solid #16a34a; border-radius: 10px; padding: 20px; margin: 20px 0; }
+  .summary-box h3 { margin-top: 0; color: #16a34a; }
+  .warn-box { background: #fffbeb; border: 2px solid #d97706; border-radius: 10px; padding: 20px; margin: 20px 0; }
+  .warn-box h3 { margin-top: 0; color: #d97706; }
+  code { background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  .timestamp { color: #64748b; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<h1>WaterWiseKids.com — Daily Functionality Audit</h1>
+<p class="timestamp">Generated: Tuesday, April 8, 2026 | Automated scheduled task</p>
+
+<div class="summary-box">
+  <h3>Overall Status: ALL CORE FUNCTIONALITY PASSING</h3>
+  <p>No critical issues found. All forms, CTAs, review system, internal links, and JavaScript functions are working correctly. Two minor items flagged for awareness.</p>
+</div>
+
+<h2>1. Forms — Action URLs and Fields</h2>
+<table>
+  <tr><th>Form</th><th>Action URL</th><th>Submit Button</th><th>Email Type</th><th>Status</th></tr>
+  <tr><td>Contact (contact/index.html)</td><td><code>formspree.io/f/xzdkybrw</code></td><td>Yes</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>Newsletter — Homepage</td><td><code>formspree.io/f/mojpyqdo</code></td><td>Yes</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>Newsletter — Education Hub</td><td><code>formspree.io/f/mojpyqdo</code></td><td>Yes</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>Newsletter — Article Sidebars (18 articles)</td><td><code>formspree.io/f/mojpyqdo</code></td><td>Yes</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>Lead Magnet — Pool Safety Rules</td><td><code>formspree.io/f/mojpyqdo</code></td><td>Yes</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>Lead Magnet — Printable</td><td><code>formspree.io/f/mojpyqdo</code></td><td>Yes</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>Gear page notification</td><td><code>formspree.io/f/mblrwzea</code></td><td>Yes</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>Add Swim School (swim-schools/add.html)</td><td><code>formspree.io/f/waterwisekids</code></td><td>Yes</td><td>—</td><td class="warn">WARN</td></tr>
+</table>
+<p><span class="warn">Note:</span> The swim school submission form uses <code>formspree.io/f/waterwisekids</code> — a non-standard Formspree endpoint ID (typical format is alphanumeric like <code>xzdkybrw</code>). Verify this endpoint is active.</p>
+
+<h2>2. CTA Buttons and Links</h2>
+<table>
+  <tr><th>CTA</th><th>Page</th><th>Target</th><th>Target Exists</th><th>Status</th></tr>
+  <tr><td>Read Our Safety Guides</td><td>Homepage</td><td>/education/</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>Find Swim Lessons</td><td>Homepage</td><td>/swim-lessons/</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>Learn About Partnerships</td><td>Homepage</td><td>/for-swim-schools/</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>Find Swim Lessons</td><td>Education Hub</td><td>/swim-lessons/</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>Suggest a Topic</td><td>Education Hub</td><td>/contact/</td><td>Yes</td><td class="pass">PASS</td></tr>
+</table>
+<p>No <code>href="#"</code> found on any live pages. All CTAs resolve to existing targets.</p>
+
+<h2>3. Internal Link Integrity</h2>
+<p><span class="pass">PASS</span> — Sampled 10 education articles and checked all internal <code>&lt;a&gt;</code> tag links. Zero broken links found.</p>
+<p>Also verified: all article links on the Education Hub (<code>education/index.html</code>) point to existing files.</p>
+<p>Articles checked: drowning-prevention-guide, signs-of-drowning, backyard-pool-safety, life-jacket-guide, teach-child-to-float, water-park-safety, hotel-pool-safety, cold-water-shock, swim-lesson-faqs, when-to-start-swim-lessons.</p>
+
+<h2>4. Review System (State Directory Pages)</h2>
+<table>
+  <tr><th>Check</th><th>Expected</th><th>Actual</th><th>Status</th></tr>
+  <tr><td>localStorage key — write</td><td><code>swimSchoolReviews</code></td><td><code>swimSchoolReviews</code></td><td class="pass">PASS</td></tr>
+  <tr><td>localStorage key — read</td><td><code>swimSchoolReviews</code></td><td><code>swimSchoolReviews</code></td><td class="pass">PASS</td></tr>
+  <tr><td>National directory key</td><td><code>swimSchoolReviews</code></td><td><code>swimSchoolReviews</code></td><td class="pass">PASS</td></tr>
+  <tr><td>generate-state-pages.sh template</td><td><code>swimSchoolReviews</code></td><td><code>swimSchoolReviews</code></td><td class="pass">PASS</td></tr>
+  <tr><td><code>submitReview()</code> defined</td><td>Yes</td><td>Yes (all 3 state pages)</td><td class="pass">PASS</td></tr>
+  <tr><td><code>openReviewModal()</code> defined</td><td>Yes</td><td>Yes (all 3 state pages)</td><td class="pass">PASS</td></tr>
+  <tr><td><code>updateStarDisplay()</code> defined</td><td>Yes</td><td>Yes (all 3 state pages)</td><td class="pass">PASS</td></tr>
+  <tr><td>Star buttons wired to onclick</td><td>Yes</td><td>Yes</td><td class="pass">PASS</td></tr>
+</table>
+<p>Verified on: Pennsylvania, New Jersey, California state pages + national directory + generate script. All keys unified.</p>
+
+<h2>5. JavaScript Function Definitions</h2>
+<p><span class="pass">PASS</span> — All <code>onclick</code> and <code>onsubmit</code> handlers have matching function definitions on their respective pages.</p>
+<p>Mobile hamburger menu: handled by <code>assets/js/main.js</code> (loaded on all internal pages). Homepage and Education Hub override with bottom-nav pattern and hide hamburger via CSS.</p>
+
+<h2>6. Schema.org Markup</h2>
+<table>
+  <tr><th>Page</th><th>Schema Types</th><th>Valid JSON</th><th>Status</th></tr>
+  <tr><td>index.html</td><td>WebSite, Organization</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>education/drowning-prevention-guide.html</td><td>Article, BreadcrumbList</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>education/swim-lesson-faqs.html</td><td>FAQPage, BreadcrumbList</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>swim-lessons/directory/pennsylvania.html</td><td>WebPage</td><td>Yes</td><td class="pass">PASS</td></tr>
+  <tr><td>about.html</td><td>—</td><td>N/A</td><td class="info">INFO</td></tr>
+</table>
+<p><code>about.html</code> has no JSON-LD schema — not a functionality bug but a future SEO improvement opportunity.</p>
+
+<h2>7. External Resources</h2>
+<table>
+  <tr><th>Resource</th><th>Status</th></tr>
+  <tr><td>Formspree endpoints (4 unique IDs)</td><td class="pass">Valid URL format</td></tr>
+  <tr><td>Google Fonts</td><td class="pass">Present on all key pages</td></tr>
+  <tr><td>schools-data.js</td><td class="pass">File exists, referenced correctly on directory pages</td></tr>
+  <tr><td>GTM — Key pages (home, education, contact, directory)</td><td class="pass">Present</td></tr>
+  <tr><td>GTM — 12 older root-level pages</td><td class="warn">Missing</td></tr>
+</table>
+
+<div class="warn-box">
+  <h3>Minor Items (Non-Critical)</h3>
+  <ol>
+    <li><strong>12 root-level pages missing GTM:</strong> about.html, articles.html, and 10 older SEO/location pages (beginner-swim-lessons-*, how-to-*). These predate the template standardization. Consider adding GTM to these in a future template sweep.</li>
+    <li><strong>Formspree ID <code>waterwisekids</code></strong> on swim-schools/add.html uses a non-standard format. Verify it works by testing a submission.</li>
+  </ol>
+</div>
+
+<h2>Fixes Applied</h2>
+<p>None required — no critical functionality issues found in this audit.</p>
+
+<h2>Comparison to Previous Audit (April 6)</h2>
+<p>The localStorage key mismatch bug identified and fixed on April 6 remains fixed. All review system keys are unified on <code>swimSchoolReviews</code> across all state pages, the national directory, and the generator script.</p>
+
+</body>
+</html>

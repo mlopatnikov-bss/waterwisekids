@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <!-- Starting blocks -->
+  <rect x="55" y="65" width="30" height="25" rx="2" fill="rgba(255,255,255,0.3)"/>
+  <!-- Swimmer in dive position -->
+  <circle cx="70" cy="52" r="7" fill="white"/>
+  <path d="M72 58 Q80 62 85 72" stroke="white" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <line x1="76" y1="62" x2="90" y2="55" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="80" y1="70" x2="90" y2="80" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M0 95 Q36.0 87 75.0 95 T150.0 95 T225.0 95 T300 95" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 103 Q36.0 95 75.0 103 T150.0 103 T225.0 103 T300 103" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+  <!-- Swimmer racing in water -->
+  <circle cx="180" cy="88" r="6" fill="white"/>
+  <ellipse cx="195" cy="92" rx="18" ry="5" fill="white" opacity="0.8"/>
+  <line x1="205" y1="88" x2="218" y2="78" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Lane lines -->
+  <line x1="100" y1="110" x2="300" y2="110" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="6 4"/>
+  <line x1="100" y1="130" x2="300" y2="130" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="6 4"/>
+  <path d="M0 145 Q36.0 137 75.0 145 T150.0 145 T225.0 145 T300 145" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 153 Q36.0 145 75.0 153 T150.0 153 T225.0 153 T300 153" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <path d="M0 100 Q36.0 92 75.0 100 T150.0 100 T225.0 100 T300 100" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 108 Q36.0 100 75.0 108 T150.0 108 T225.0 108 T300 108" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+  <!-- Child on edge reaching with pole -->
+  <circle cx="100" cy="55" r="7" fill="white"/>
+  <path d="M100 62 L100 90 L94 105 L97 105 L100 93 L103 105 L106 105 Z" fill="white"/>
+  <line x1="100" y1="70" x2="170" y2="85" stroke="rgba(255,255,255,0.6)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="100" y1="70" x2="88" y2="78" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Person in water grabbing pole -->
+  <circle cx="185" cy="88" r="6" fill="white"/>
+  <line x1="185" y1="82" x2="175" y2="78" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="185" cy="100" rx="7" ry="5" fill="white" opacity="0.6"/>
+  <path d="M0 120 Q36.0 112 75.0 120 T150.0 120 T225.0 120 T300 120" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 128 Q36.0 120 75.0 128 T150.0 128 T225.0 128 T300 128" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+
+</svg>

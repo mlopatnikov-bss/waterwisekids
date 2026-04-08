@@ -1,0 +1,449 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   WaterWiseKids — ARTICLE TEMPLATE CSS
+   Styles specific to education/article pages (sidebar layout, article body,
+   related cards, CTA boxes, TOC, etc.)
+   Used WITH main.css — do NOT duplicate variables or base styles here.
+═══════════════════════════════════════════════════════════════════════════════ */
+
+/* MAIN LAYOUT — article + sidebar grid */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  padding: 48px 0;
+}
+
+/* ARTICLE HEADER */
+.article-header {
+  margin-bottom: 32px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  margin-bottom: 16px;
+}
+
+.article-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.article h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  color: var(--gray-900);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+
+.article-excerpt {
+  font-size: 1.1rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* ARTICLE BODY */
+.article-body {
+  color: var(--gray-800);
+  line-height: 1.8;
+}
+
+.article-body h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gray-900);
+  margin: 40px 0 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-200);
+}
+
+.article-body h2:first-child {
+  margin-top: 0;
+  border-top: none;
+  padding-top: 0;
+}
+
+.article-body h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 28px 0 12px;
+}
+
+.article-body p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.article-body ul,
+.article-body ol {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.article-body li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.article-body strong {
+  color: var(--blue-700);
+  font-weight: 700;
+}
+
+.article-body em {
+  color: var(--gray-700);
+  font-style: italic;
+}
+
+.article-body a {
+  color: var(--blue-600);
+  text-decoration: underline;
+}
+
+.article-body a:hover {
+  color: var(--blue-700);
+}
+
+/* CALLOUT BOXES (article-specific styling) */
+.callout-title {
+  font-weight: 700;
+  color: var(--blue-900);
+  margin-bottom: 8px;
+}
+
+.callout-text {
+  color: var(--blue-800);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* WARNING CALLOUT */
+.callout-warning {
+  border-color: var(--orange-500);
+  background: #fff7ed;
+}
+
+.callout-warning .callout-title {
+  color: #92400e;
+}
+
+.callout-warning .callout-text {
+  color: #78350f;
+}
+
+/* STAT BOX */
+.stat-box {
+  background: linear-gradient(135deg, var(--blue-600), var(--blue-700));
+  color: white;
+  padding: 24px;
+  border-radius: var(--r-lg);
+  margin: 32px 0;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* CHECKLIST BOXES */
+.checklist-box {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  margin: 24px 0;
+}
+
+.checklist-box h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.checklist-box li {
+  padding-left: 8px;
+}
+
+/* RELATED ARTICLES */
+.related {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 2px solid var(--gray-200);
+}
+
+.related-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--gray-900);
+  margin-bottom: 24px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.related-card,
+.article-body .related-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: block;
+}
+
+.related-card:hover {
+  border-color: var(--blue-400);
+  background: var(--blue-50);
+  transform: translateY(-2px);
+}
+
+.related-card-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--blue-50);
+  color: var(--blue-700);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.related-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.related-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--blue-600);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* SIDEBAR */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+.sidebar-box {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-lg);
+  padding: 24px;
+}
+
+.sidebar-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 16px;
+}
+
+/* TABLE OF CONTENTS */
+.toc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toc-item {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.toc-item a {
+  color: var(--blue-600);
+  transition: color 0.2s;
+}
+
+.toc-item a:hover {
+  color: var(--blue-700);
+}
+
+/* CTA BOX */
+.cta-box {
+  background: linear-gradient(135deg, var(--teal-500), var(--blue-600));
+  color: white;
+  border: none;
+  padding: 28px 24px;
+}
+
+.cta-title {
+  color: white;
+  margin-bottom: 8px;
+}
+
+.cta-desc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.cta-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: var(--r-lg);
+  background: white;
+  color: var(--blue-600);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sh-md);
+  color: var(--blue-600);
+}
+
+/* INLINE CTA BANNER (mid-article) */
+.inline-cta {
+  background: linear-gradient(135deg, var(--blue-600), var(--blue-800));
+  border-radius: var(--r-xl);
+  padding: 32px;
+  margin: 40px 0;
+  text-align: center;
+  color: white;
+}
+
+.inline-cta p {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.inline-cta .cta-sub {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 16px;
+}
+
+.inline-cta a {
+  display: inline-block;
+  background: white;
+  color: var(--blue-700);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 28px;
+  border-radius: var(--r-full);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.inline-cta a:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sh-md);
+}
+
+/* NEWSLETTER BOX (sidebar) */
+.newsletter-box {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+}
+
+.newsletter-box input[type="email"] {
+  margin-bottom: 8px;
+}
+
+/* FAQ SCHEMA SECTION */
+.faq-section {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-200);
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+/* Footer styles inherited from main.css — no overrides needed */
+
+/* RESPONSIVE — ARTICLE SPECIFIC */
+@media (max-width: 768px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .article h1 {
+    font-size: 1.6rem;
+  }
+
+  .article-body h2 {
+    font-size: 1.3rem;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .sidebar-box {
+    position: static;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-box {
+    padding: 20px;
+  }
+
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  .inline-cta {
+    padding: 24px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+}

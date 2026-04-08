@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <path d="M0 95 Q36.0 87 75.0 95 T150.0 95 T225.0 95 T300 95" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 103 Q36.0 95 75.0 103 T150.0 103 T225.0 103 T300 103" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+  <!-- Instructor supporting child -->
+  <circle cx="130" cy="55" r="10" fill="white"/>
+  <path d="M130 65 L130 100 L122 120 L126 120 L130 105 L134 120 L138 120 Z" fill="white"/>
+  <line x1="130" y1="75" x2="160" y2="72" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="130" y1="75" x2="118" y2="85" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <!-- Child being held/supported in water -->
+  <circle cx="165" cy="68" r="6" fill="white"/>
+  <ellipse cx="168" cy="82" rx="10" ry="5" fill="white" opacity="0.8"/>
+  <!-- Bubble effects -->
+  <circle cx="190" cy="100" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="200" cy="90" r="2" fill="rgba(255,255,255,0.25)"/>
+  <circle cx="185" cy="85" r="1.5" fill="rgba(255,255,255,0.2)"/>
+  <path d="M0 120 Q36.0 112 75.0 120 T150.0 120 T225.0 120 T300 120" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 128 Q36.0 120 75.0 128 T150.0 128 T225.0 128 T300 128" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+
+</svg>

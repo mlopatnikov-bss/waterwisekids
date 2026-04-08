@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <path d="M0 90 Q36.0 82 75.0 90 T150.0 90 T225.0 90 T300 90" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 98 Q36.0 90 75.0 98 T150.0 98 T225.0 98 T300 98" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+  <!-- Observer on shore/edge -->
+  <circle cx="70" cy="48" r="9" fill="white"/>
+  <path d="M70 57 L70 90 L62 112 L66 112 L70 95 L74 112 L78 112 Z" fill="white"/>
+  <line x1="70" y1="67" x2="90" y2="72" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="70" y1="67" x2="58" y2="75" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <!-- Alert/exclamation -->
+  <circle cx="105" cy="40" r="12" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <text x="105" y="45" text-anchor="middle" fill="white" font-size="16" font-weight="bold" font-family="sans-serif">!</text>
+  <!-- Person in distress in water - vertical, mouth at water level -->
+  <circle cx="200" cy="85" r="6" fill="white"/>
+  <path d="M200 91 L200 115" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  <!-- No waving - that's the point -->
+  <path d="M0 120 Q36.0 112 75.0 120 T150.0 120 T225.0 120 T300 120" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 128 Q36.0 120 75.0 128 T150.0 128 T225.0 128 T300 128" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+
+</svg>

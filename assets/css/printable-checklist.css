@@ -1,0 +1,153 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   WaterWiseKids — PRINTABLE CHECKLIST CSS
+   Styles for summer-safety-checklist-printable.html and similar checklists.
+   Screen layout (toolbar, nav), checklist card, print overrides.
+   Used WITH main.css — do NOT duplicate variables or base styles here.
+   ⚠️ DO NOT merge this into article.css — this is a CHECKLIST layout, not an article.
+═══════════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --cl-blue-800: #075985;
+  --cl-blue-600: #0284c7;
+  --cl-teal-500: #14b8a6;
+  --cl-gray-900: #1f2937;
+  --cl-gray-700: #374151;
+  --cl-gray-600: #475569;
+  --cl-gray-200: #e5e7eb;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--cl-gray-900);
+  line-height: 1.5;
+  background: #f9fafb;
+}
+
+/* SCREEN-ONLY HEADER */
+.screen-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #f3f4f6;
+  position: sticky; top: 0; z-index: 200;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.screen-header nav {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  height: 72px; display: flex; justify-content: space-between; align-items: center;
+}
+.screen-header .nav-logo { font-size: 1.1rem; font-weight: 700; color: #075985; text-decoration: none; }
+.screen-header .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+.screen-header .nav-links a { text-decoration: none; color: var(--cl-gray-700); font-size: 0.9rem; font-weight: 500; border-radius: 6px; padding: 8px 14px; transition: background 0.15s, color 0.15s; }
+.screen-header .nav-links a:hover { background: #f3f4f6; color: #075985; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.hamburger span { width: 24px; height: 2px; background: #374151; border-radius: 2px; transition: all 0.3s; }
+
+/* SCREEN-ONLY TOOLBAR */
+.print-toolbar {
+  max-width: 800px; margin: 24px auto 0; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.print-toolbar a { color: var(--cl-blue-600); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+.print-btn {
+  padding: 10px 24px; background: var(--cl-blue-600); color: white;
+  border: none; border-radius: 8px; font-weight: 600; font-size: 0.95rem;
+  cursor: pointer; transition: background 0.2s;
+}
+.print-btn:hover { background: var(--cl-blue-800); }
+
+/* CHECKLIST CONTAINER */
+.checklist-page {
+  max-width: 800px; margin: 24px auto; padding: 0 24px 60px;
+}
+.checklist-card {
+  background: white; border-radius: 12px; padding: 40px 36px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 1px solid var(--cl-gray-200);
+}
+
+/* HEADER SECTION */
+.cl-header { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 2px solid #e0f2fe; }
+.cl-header h1 { font-size: 1.6rem; font-weight: 800; color: var(--cl-blue-800); margin-bottom: 6px; }
+.cl-header .cl-subtitle { font-size: 0.95rem; color: var(--cl-gray-600); }
+.cl-header .cl-brand { font-size: 0.85rem; color: var(--cl-blue-600); margin-top: 8px; font-weight: 600; }
+
+/* SECTIONS */
+.cl-section { margin-bottom: 28px; }
+.cl-section-title {
+  font-size: 1rem; font-weight: 700; color: var(--cl-blue-800);
+  margin-bottom: 12px; padding-bottom: 6px;
+  border-bottom: 1px solid #e0f2fe;
+  display: flex; align-items: center; gap: 8px;
+}
+.cl-section-icon { font-size: 1.1rem; }
+
+/* CHECKLIST ITEMS */
+.cl-items { list-style: none; }
+.cl-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 6px 0; font-size: 0.88rem; color: var(--cl-gray-700); line-height: 1.45;
+}
+.cl-checkbox {
+  flex-shrink: 0; width: 16px; height: 16px;
+  border: 2px solid #94a3b8; border-radius: 3px; margin-top: 2px;
+}
+.cl-item strong { color: var(--cl-gray-900); font-weight: 600; }
+
+/* EMERGENCY CALLOUT */
+.cl-emergency {
+  background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px;
+  padding: 16px 20px; margin-top: 24px;
+}
+.cl-emergency-title { font-size: 0.9rem; font-weight: 700; color: #991b1b; margin-bottom: 8px; }
+.cl-emergency .cl-items .cl-item { color: #7f1d1d; }
+.cl-emergency .cl-checkbox { border-color: #dc2626; }
+
+/* FOOTER NOTE */
+.cl-footer {
+  text-align: center; margin-top: 28px; padding-top: 20px;
+  border-top: 2px solid #e0f2fe; font-size: 0.8rem; color: var(--cl-gray-600);
+}
+.cl-footer a { color: var(--cl-blue-600); text-decoration: none; }
+
+/* SCREEN-ONLY BOTTOM CTA */
+.screen-cta {
+  max-width: 800px; margin: 0 auto 60px; padding: 0 24px;
+}
+.screen-cta-card {
+  background: linear-gradient(135deg, var(--cl-teal-500), var(--cl-blue-600));
+  color: white; padding: 32px; border-radius: 12px; text-align: center;
+}
+.screen-cta-card h2 { font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 8px; }
+.screen-cta-card p { font-size: 0.95rem; color: rgba(255,255,255,0.9); margin-bottom: 16px; }
+.screen-cta-card a {
+  display: inline-block; padding: 12px 28px; background: white;
+  color: var(--cl-teal-500); border-radius: 8px; font-weight: 700;
+  text-decoration: none; font-size: 0.95rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+  .screen-header .nav-links { display: none; flex-direction: column; width: 100%; gap: 0; padding: 1rem 0 0; }
+  .screen-header .nav-links a { display: block; padding: 0.5rem 0; }
+  nav.mobile-open .nav-links { display: flex; }
+  .screen-header nav { flex-wrap: wrap; }
+  .checklist-card { padding: 24px 20px; }
+  .cl-header h1 { font-size: 1.3rem; }
+  .print-toolbar { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
+
+/* PRINT STYLES */
+@media print {
+  body { background: white; }
+  .screen-header, .print-toolbar, .screen-cta, .screen-footer { display: none !important; }
+  .checklist-page { margin: 0; padding: 0; max-width: 100%; }
+  .checklist-card { box-shadow: none; border: none; padding: 0; border-radius: 0; }
+  .cl-header { border-bottom: 2px solid #075985; }
+  .cl-section-title { border-bottom: 1px solid #ccc; }
+  .cl-checkbox { border-color: #333; }
+  .cl-emergency { border: 2px solid #dc2626; }
+  .cl-footer a { color: #333; }
+  .cl-item { page-break-inside: avoid; }
+  .cl-section { page-break-inside: avoid; }
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <!-- Person thinking -->
+  <circle cx="150" cy="55" r="10" fill="white"/>
+  <path d="M150 65 L150 100 L142 125 L146 125 L150 108 L154 125 L158 125 Z" fill="white"/>
+  <line x1="150" y1="75" x2="138" y2="85" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="150" y1="75" x2="162" y2="68" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <!-- Question marks -->
+  <text x="60" y="60" fill="rgba(255,255,255,0.4)" font-size="36" font-weight="bold" font-family="sans-serif">?</text>
+  <text x="230" y="50" fill="rgba(255,255,255,0.3)" font-size="28" font-weight="bold" font-family="sans-serif">?</text>
+  <text x="80" y="130" fill="rgba(255,255,255,0.25)" font-size="24" font-weight="bold" font-family="sans-serif">?</text>
+  <text x="250" y="120" fill="rgba(255,255,255,0.35)" font-size="32" font-weight="bold" font-family="sans-serif">?</text>
+  <!-- X marks for myths busted -->
+  <line x1="50" y1="85" x2="70" y2="105" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+  <line x1="70" y1="85" x2="50" y2="105" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+
+</svg>

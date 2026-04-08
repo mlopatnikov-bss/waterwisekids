@@ -1,0 +1,26 @@
+#!/bin/bash
+# ============================================================
+# WaterWiseKids AutoDeploy v2.0 — Launcher
+# Double-click this app to start the deploy watcher.
+# Delegates to .deploy/waterwisekids-deploy.sh (10s cycle)
+# ============================================================
+
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+
+REPO_DIR="/Users/bss/Documents/Claude/Projects/waterwisekids.com"
+SCRIPT="$REPO_DIR/.deploy/waterwisekids-deploy.sh"
+
+if [[ ! -f "$SCRIPT" ]]; then
+    osascript -e 'display alert "AutoDeploy Error" message "Could not find waterwisekids-deploy.sh in .deploy folder."'
+    exit 1
+fi
+
+chmod +x "$SCRIPT" 2>/dev/null
+
+# Open a new Terminal window and run the v2 deploy script
+osascript <<'APPLESCRIPT'
+tell application "Terminal"
+    activate
+    do script "bash '/Users/bss/Documents/Claude/Projects/waterwisekids.com/.deploy/waterwisekids-deploy.sh'"
+end tell
+APPLESCRIPT

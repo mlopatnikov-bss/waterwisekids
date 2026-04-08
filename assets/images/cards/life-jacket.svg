@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <!-- Adult kneeling -->
+  <circle cx="120" cy="45" r="9" fill="white"/>
+  <path d="M120 54 L120 90 L112 115 L116 115 L120 95 L124 115 L128 115 Z" fill="white"/>
+  <line x1="120" y1="65" x2="155" y2="68" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="120" y1="65" x2="108" y2="75" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <!-- Child standing with life jacket -->
+  <circle cx="170" cy="55" r="7" fill="white"/>
+  <rect x="162" y="68" width="16" height="20" rx="4" fill="none" stroke="white" stroke-width="2.5"/>
+  <line x1="170" y1="68" x2="170" y2="88" stroke="white" stroke-width="1.5"/>
+  <path d="M170 88 L164 110 L167 110 L170 95 L173 110 L176 110 Z" fill="white"/>
+  <!-- Water in background -->
+  <path d="M0 130 Q36.0 122 75.0 130 T150.0 130 T225.0 130 T300 130" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 138 Q36.0 130 75.0 138 T150.0 138 T225.0 138 T300 138" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+
+</svg>

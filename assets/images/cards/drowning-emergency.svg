@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <path d="M0 90 Q36.0 82 75.0 90 T150.0 90 T225.0 90 T300 90" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 98 Q36.0 90 75.0 98 T150.0 98 T225.0 98 T300 98" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+  <!-- Person on edge reaching out -->
+  <circle cx="80" cy="50" r="9" fill="white"/>
+  <path d="M80 59 L80 90 L72 110 L76 110 L80 95 L84 110 L88 110 Z" fill="white"/>
+  <line x1="80" y1="68" x2="130" y2="75" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="80" y1="68" x2="65" y2="78" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <!-- Rescue pole/ring -->
+  <line x1="130" y1="75" x2="180" y2="85" stroke="rgba(255,255,255,0.6)" stroke-width="2.5"/>
+  <!-- Person in water needing help -->
+  <circle cx="200" cy="82" r="7" fill="white"/>
+  <line x1="200" y1="75" x2="190" y2="65" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="200" y1="75" x2="210" y2="65" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="200" cy="95" rx="8" ry="5" fill="white" opacity="0.6"/>
+  <path d="M0 115 Q36.0 107 75.0 115 T150.0 115 T225.0 115 T300 115" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 123 Q36.0 115 75.0 123 T150.0 123 T225.0 123 T300 123" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <path d="M0 100 Q36.0 92 75.0 100 T150.0 100 T225.0 100 T300 100" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 108 Q36.0 100 75.0 108 T150.0 108 T225.0 108 T300 108" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+  <!-- Instructor close to child, supportive -->
+  <circle cx="120" cy="55" r="9" fill="white"/>
+  <path d="M120 64 L120 95 L112 115 L116 115 L120 100 L124 115 L128 115 Z" fill="white"/>
+  <line x1="120" y1="74" x2="108" y2="84" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="120" y1="74" x2="140" y2="72" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <!-- Child in water, supported -->
+  <circle cx="160" cy="70" r="7" fill="white"/>
+  <ellipse cx="160" cy="85" rx="8" ry="6" fill="white" opacity="0.8"/>
+  <!-- Heart/care symbol -->
+  <path d="M220 45 C220 38 230 38 230 45 C230 38 240 38 240 45 C240 55 230 60 230 60 C230 60 220 55 220 45Z" fill="rgba(255,255,255,0.4)"/>
+  <path d="M0 125 Q36.0 117 75.0 125 T150.0 125 T225.0 125 T300 125" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 133 Q36.0 125 75.0 133 T150.0 133 T225.0 133 T300 133" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+
+</svg>

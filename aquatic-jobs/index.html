@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aquatic Jobs: Find Swim Instructor Jobs | WaterWiseKids</title>
+  <meta name="description" content="Post and discover aquatic industry jobs. Connect swim schools with qualified instructors and aquatic professionals on WaterWiseKids' free job board.">
+  <meta name="canonical" content="https://waterwisekids.com/aquatic-jobs/">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Aquatic Jobs — Find & Post Swim Instructor Positions | WaterWiseKids">
+  <meta property="og:description" content="Post and discover aquatic industry jobs. Connect swim schools with qualified instructors and aquatic professionals on WaterWiseKids' job board.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://waterwisekids.com/aquatic-jobs/">
+  <meta property="og:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png">
+  <meta property="og:site_name" content="WaterWiseKids">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
+
+  <!-- Page-specific styles -->
+  <style>
+    .job-board-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .job-controls {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .job-search-bar {
+      flex: 1;
+      min-width: 250px;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .job-search-bar input {
+      flex: 1;
+      padding: 0.75rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      font-family: Inter, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .job-search-bar input:focus {
+      outline: none;
+      border-color: #0284c7;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+    }
+
+    .job-filters {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .job-filters select {
+      padding: 0.75rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      font-family: Inter, sans-serif;
+      background-color: #ffffff;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .job-filters select:focus {
+      outline: none;
+      border-color: #0284c7;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+    }
+
+    .btn-post-job {
+      padding: 0.75rem 1.5rem;
+      background-color: #0284c7;
+      color: #ffffff;
+      border: none;
+      border-radius: 0.375rem;
+      font-family: Inter, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background-color 0.2s;
+    }
+
+    .btn-post-job:hover {
+      background-color: #075985;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: #f9fafb;
+      border-radius: 0.5rem;
+      margin: 2rem 0;
+    }
+
+    .empty-state h3 {
+      font-size: 1.5rem;
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+    }
+
+    .empty-state p {
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .job-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .job-card {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .job-card:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-color: #0284c7;
+    }
+
+    .job-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      gap: 1rem;
+    }
+
+    .job-card-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin: 0;
+    }
+
+    .job-type-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .badge-full-time {
+      background-color: #dcfce7;
+      color: #166534;
+    }
+
+    .badge-part-time {
+      background-color: #dbeafe;
+      color: #0c4a6e;
+    }
+
+    .badge-seasonal {
+      background-color: #fed7aa;
+      color: #92400e;
+    }
+
+    .badge-contract {
+      background-color: #e9d5ff;
+      color: #6b21a8;
+    }
+
+    .job-company {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-bottom: 0.5rem;
+    }
+
+    .job-location {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-bottom: 0.75rem;
+    }
+
+    .job-pay {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #0284c7;
+      margin-bottom: 0.75rem;
+    }
+
+    .job-description-excerpt {
+      font-size: 0.9rem;
+      color: #374151;
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .job-posted-date {
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow-y: auto;
+    }
+
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      max-width: 700px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1rem;
+    }
+
+    .modal-header h2 {
+      font-size: 1.5rem;
+      color: #1f2937;
+      margin: 0;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 0;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-close:hover {
+      color: #1f2937;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .form-group .required {
+      color: #dc2626;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      font-family: Inter, sans-serif;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #0284c7;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .job-controls {
+        flex-direction: column;
+      }
+
+      .job-search-bar {
+        width: 100%;
+      }
+
+      .job-filters {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .job-filters select {
+        width: 100%;
+      }
+
+      .btn-post-job {
+        width: 100%;
+      }
+    }
+
+    .pay-options {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .radio-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 400;
+    }
+
+    .radio-label input[type="radio"] {
+      width: auto;
+      margin: 0;
+    }
+
+    .pay-input-group {
+      display: none;
+    }
+
+    .pay-input-group.active {
+      display: block;
+    }
+
+    .pay-input-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .btn-submit {
+      flex: 1;
+      padding: 0.875rem;
+      background-color: #0284c7;
+      color: #ffffff;
+      border: none;
+      border-radius: 0.375rem;
+      font-family: Inter, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background-color 0.2s;
+    }
+
+    .btn-submit:hover {
+      background-color: #075985;
+    }
+
+    .btn-cancel {
+      flex: 1;
+      padding: 0.875rem;
+      background-color: #f3f4f6;
+      color: #1f2937;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      font-family: Inter, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .btn-cancel:hover {
+      background-color: #e5e7eb;
+    }
+
+    .job-detail-modal .job-detail-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .job-detail-modal .job-detail-title {
+      font-size: 1.75rem;
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+    }
+
+    .job-detail-modal .job-detail-company {
+      font-size: 1.1rem;
+      color: #6b7280;
+      margin-bottom: 1rem;
+    }
+
+    .job-detail-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .job-detail-meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .job-detail-meta-label {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .job-detail-meta-value {
+      font-size: 1rem;
+      color: #1f2937;
+      margin-top: 0.25rem;
+    }
+
+    .job-detail-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .job-detail-section h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    .job-detail-section p {
+      color: #374151;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+
+    .job-detail-contact {
+      background-color: #f0f9ff;
+      padding: 1.5rem;
+      border-radius: 0.375rem;
+      margin-top: 1.5rem;
+    }
+
+    .job-detail-contact h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin: 0 0 0.75rem 0;
+    }
+
+    .job-detail-contact p {
+      margin: 0.25rem 0;
+      color: #374151;
+    }
+
+    .job-detail-contact a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+
+    .job-detail-contact a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-back {
+      padding: 0.75rem 1.5rem;
+      background-color: #f3f4f6;
+      color: #1f2937;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      font-family: Inter, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-back:hover {
+      background-color: #e5e7eb;
+    }
+
+    .form-error {
+      color: #dc2626;
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    .alert {
+      padding: 1rem;
+      border-radius: 0.375rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .alert-success {
+      background-color: #dcfce7;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+    }
+
+    /* Manage Posting Button */
+    .btn-manage {
+      padding: 0.75rem 1.5rem;
+      background-color: #f3f4f6;
+      color: #1f2937;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      font-family: Inter, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .btn-manage:hover {
+      background-color: #e5e7eb;
+    }
+
+    /* Management Code Success Display */
+    .manage-code-display {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 2px solid #0284c7;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
+    .manage-code-display .code-label {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 0.5rem;
+    }
+
+    .manage-code-display .code-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0284c7;
+      font-family: 'Courier New', monospace;
+      letter-spacing: 0.15em;
+      margin: 0.5rem 0;
+    }
+
+    .manage-code-display .code-warning {
+      font-size: 0.85rem;
+      color: #dc2626;
+      font-weight: 600;
+      margin-top: 0.75rem;
+    }
+
+    .btn-copy-code {
+      margin-top: 0.75rem;
+      padding: 0.5rem 1.5rem;
+      background-color: #0284c7;
+      color: #fff;
+      border: none;
+      border-radius: 0.375rem;
+      font-family: Inter, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background-color 0.2s;
+    }
+
+    .btn-copy-code:hover {
+      background-color: #075985;
+    }
+
+    /* Manage Code Entry */
+    .manage-code-input {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-end;
+    }
+
+    .manage-code-input .form-group {
+      flex: 1;
+      margin-bottom: 0;
+    }
+
+    .manage-code-input .btn-submit {
+      flex: none;
+      padding: 0.75rem 1.5rem;
+      height: fit-content;
+    }
+
+    /* Edit/Delete action area */
+    .manage-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .btn-delete {
+      flex: 1;
+      padding: 0.875rem;
+      background-color: #fef2f2;
+      color: #dc2626;
+      border: 1px solid #fecaca;
+      border-radius: 0.375rem;
+      font-family: Inter, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .btn-delete:hover {
+      background-color: #dc2626;
+      color: #fff;
+    }
+
+    .delete-confirm {
+      background-color: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 0.375rem;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .delete-confirm p {
+      color: #991b1b;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .delete-confirm-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    @media (max-width: 640px) {
+      .manage-code-input {
+        flex-direction: column;
+      }
+
+      .manage-code-input .btn-submit {
+        width: 100%;
+      }
+
+      .btn-manage {
+        width: 100%;
+      }
+
+      .manage-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+    <link rel="canonical" href="https://www.waterwisekids.com/aquatic-jobs/">
+</head>
+<body>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/" class="nav-logo">
+          <img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids
+        </a>
+        <ul class="nav-links">
+          <li><a href="/education/">Water Safety</a></li>
+          <li><a href="/swim-lessons/">Find Lessons</a></li>
+          <li><a href="/scholarships/">Scholarships</a></li>
+        <li><a href="/aquatic-jobs/">Aquatic Jobs</a></li>
+          <li><a href="/for-swim-schools/">For Swim Schools</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero" style="background: linear-gradient(135deg, #0284c7 0%, #075985 100%);">
+    <div class="container">
+      <h1 style="color: #ffffff;">Aquatic Jobs Board</h1>
+      <p style="color: #ffffff;">Connect swim schools with qualified aquatic professionals. Post open positions and discover talent in the aquatic industry.</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="job-board-container">
+      <div class="job-controls">
+        <div class="job-search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search jobs by title, company, or location..."
+            aria-label="Search jobs"
+          >
+        </div>
+        <div class="job-filters">
+          <select id="jobTypeFilter" aria-label="Filter by job type">
+            <option value="">All Job Types</option>
+            <option value="Full-Time">Full-Time</option>
+            <option value="Part-Time">Part-Time</option>
+            <option value="Seasonal">Seasonal</option>
+            <option value="Contract">Contract</option>
+          </select>
+          <select id="locationFilter" aria-label="Filter by location">
+            <option value="">All Locations</option>
+          </select>
+          <button class="btn-post-job" id="postJobBtn" aria-label="Post a new job">+ Post a Job</button>
+          <button class="btn-manage" id="manageJobBtn" aria-label="Manage your posting">Manage My Posting</button>
+        </div>
+      </div>
+
+      <div id="jobListingsView">
+        <div id="emptyState" class="empty-state">
+          <h3>No jobs posted yet</h3>
+          <p>Be the first swim school to post a position and connect with talented aquatic professionals!</p>
+          <button class="btn-post-job" id="postJobBtnEmpty">Post a Job</button>
+        </div>
+        <div id="jobGrid" class="job-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Post Job Modal -->
+  <div id="postJobModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Post a New Job</h2>
+        <button class="modal-close" id="closePostJobModal" aria-label="Close modal">×</button>
+      </div>
+
+      <form id="jobPostForm">
+        <div class="form-group">
+          <label for="jobTitle">Job Title <span class="required">*</span></label>
+          <input type="text" id="jobTitle" name="jobTitle" required aria-required="true">
+          <div class="form-error" id="jobTitleError"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="companyName">Company/School Name <span class="required">*</span></label>
+          <input type="text" id="companyName" name="companyName" required aria-required="true">
+          <div class="form-error" id="companyNameError"></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="jobCity">City <span class="required">*</span></label>
+            <input type="text" id="jobCity" name="jobCity" required aria-required="true">
+            <div class="form-error" id="jobCityError"></div>
+          </div>
+          <div class="form-group">
+            <label for="jobState">State <span class="required">*</span></label>
+            <select id="jobState" name="jobState" required aria-required="true">
+              <option value="">Select State</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
+            <div class="form-error" id="jobStateError"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="jobType">Job Type <span class="required">*</span></label>
+          <select id="jobType" name="jobType" required aria-required="true">
+            <option value="">Select Job Type</option>
+            <option value="Full-Time">Full-Time</option>
+            <option value="Part-Time">Part-Time</option>
+            <option value="Seasonal">Seasonal</option>
+            <option value="Contract">Contract</option>
+          </select>
+          <div class="form-error" id="jobTypeError"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Pay Type <span class="required">*</span></label>
+          <div class="pay-options">
+            <label class="radio-label">
+              <input type="radio" name="payType" value="Fixed Rate" required> Fixed Rate
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="payType" value="Hourly Range"> Hourly Range
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="payType" value="Salary Range"> Salary Range
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="payType" value="DOE/Negotiable"> DOE/Negotiable
+            </label>
+          </div>
+          <div class="form-error" id="payTypeError"></div>
+        </div>
+
+        <div id="payInputContainer"></div>
+
+        <div class="form-group">
+          <label for="jobDescription">Job Description <span class="required">*</span></label>
+          <textarea id="jobDescription" name="jobDescription" required aria-required="true" placeholder="Describe the position, responsibilities, and requirements..."></textarea>
+          <div class="form-error" id="jobDescriptionError"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="jobRequirements">Requirements</label>
+          <textarea id="jobRequirements" name="jobRequirements" placeholder="List specific qualifications, certifications, and experience needed..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="jobBenefits">Benefits</label>
+          <textarea id="jobBenefits" name="jobBenefits" placeholder="Describe benefits, perks, and compensation details..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="contactEmail">Contact Email <span class="required">*</span></label>
+          <input type="email" id="contactEmail" name="contactEmail" required aria-required="true">
+          <div class="form-error" id="contactEmailError"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="contactPhone">Contact Phone</label>
+          <input type="tel" id="contactPhone" name="contactPhone">
+        </div>
+
+        <div class="form-group">
+          <label for="howToApply">How to Apply <span class="required">*</span></label>
+          <textarea id="howToApply" name="howToApply" required aria-required="true" placeholder="Explain how candidates should apply (e.g., 'Send resume to jobs@school.com', 'Apply through our website', etc.)..."></textarea>
+          <div class="form-error" id="howToApplyError"></div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">Post Job</button>
+          <button type="button" class="btn-cancel" id="cancelPostJobBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Job Detail Modal -->
+  <div id="jobDetailModal" class="modal">
+    <div class="modal-content job-detail-modal">
+      <button class="btn-back" id="backFromDetail">← Back to Listings</button>
+      <div id="jobDetailContent"></div>
+    </div>
+  </div>
+
+  <!-- Management Code Success Modal -->
+  <div id="codeSuccessModal" class="modal">
+    <div class="modal-content" style="max-width:500px;">
+      <div class="modal-header">
+        <h2>Job Posted!</h2>
+        <button class="modal-close" id="closeCodeSuccess" aria-label="Close">x</button>
+      </div>
+      <p>Your job has been posted successfully. Save this management code to edit or delete your listing later:</p>
+      <div class="manage-code-display">
+        <div class="code-label">Your Management Code</div>
+        <div class="code-value" id="newManageCode"></div>
+        <div class="code-warning">Save this code! It will not be shown again.</div>
+        <button class="btn-copy-code" id="copyCodeBtn">Copy Code</button>
+      </div>
+      <div class="form-actions">
+        <button class="btn-submit" id="codeSuccessDone">Got It</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Manage Posting Modal (code entry) -->
+  <div id="manageModal" class="modal">
+    <div class="modal-content" style="max-width:500px;">
+      <div class="modal-header">
+        <h2>Manage My Posting</h2>
+        <button class="modal-close" id="closeManageModal" aria-label="Close">x</button>
+      </div>
+      <p>Enter the management code you received when you posted your job.</p>
+      <div class="manage-code-input">
+        <div class="form-group">
+          <label for="manageCodeInput">Management Code</label>
+          <input type="text" id="manageCodeInput" placeholder="e.g., MGT-7K9X2P" style="text-transform:uppercase; letter-spacing:0.1em;">
+          <div class="form-error" id="manageCodeError"></div>
+        </div>
+        <button class="btn-submit" id="lookupJobBtn">Look Up</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Job Modal -->
+  <div id="editJobModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Your Job Posting</h2>
+        <button class="modal-close" id="closeEditModal" aria-label="Close">x</button>
+      </div>
+      <form id="editJobForm">
+        <input type="hidden" id="editManageCode">
+        <input type="hidden" id="editJobId">
+        <div class="form-group">
+          <label for="editJobTitle">Job Title <span class="required">*</span></label>
+          <input type="text" id="editJobTitle" name="jobTitle" required>
+        </div>
+        <div class="form-group">
+          <label for="editCompanyName">Company/School Name <span class="required">*</span></label>
+          <input type="text" id="editCompanyName" name="companyName" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="editJobCity">City <span class="required">*</span></label>
+            <input type="text" id="editJobCity" name="jobCity" required>
+          </div>
+          <div class="form-group">
+            <label for="editJobState">State <span class="required">*</span></label>
+            <input type="text" id="editJobState" name="jobState" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="editJobType">Job Type <span class="required">*</span></label>
+          <select id="editJobType" name="jobType" required>
+            <option value="Full-Time">Full-Time</option>
+            <option value="Part-Time">Part-Time</option>
+            <option value="Seasonal">Seasonal</option>
+            <option value="Contract">Contract</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="editPay">Pay</label>
+          <input type="text" id="editPay" name="pay">
+        </div>
+        <div class="form-group">
+          <label for="editDescription">Job Description <span class="required">*</span></label>
+          <textarea id="editDescription" name="jobDescription" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="editRequirements">Requirements</label>
+          <textarea id="editRequirements" name="jobRequirements"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="editBenefits">Benefits</label>
+          <textarea id="editBenefits" name="jobBenefits"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="editEmail">Contact Email <span class="required">*</span></label>
+          <input type="email" id="editEmail" name="contactEmail" required>
+        </div>
+        <div class="form-group">
+          <label for="editPhone">Contact Phone</label>
+          <input type="tel" id="editPhone" name="contactPhone">
+        </div>
+        <div class="form-group">
+          <label for="editHowToApply">How to Apply <span class="required">*</span></label>
+          <textarea id="editHowToApply" name="howToApply" required></textarea>
+        </div>
+        <div class="manage-actions">
+          <button type="submit" class="btn-submit">Save Changes</button>
+          <button type="button" class="btn-delete" id="deleteJobBtn">Delete This Job</button>
+        </div>
+        <div id="deleteConfirmArea"></div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container" style="text-align: center;">
+      <p class="footer-title"><img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids</p>
+      <p class="footer-tagline">Trusted water safety education for every family</p>
+      <div class="footer-links">
+        <a href="/education/">Water Safety</a>
+        <a href="/swim-lessons/">Find Lessons</a>
+        <a href="/scholarships/">Scholarships</a>
+        <a href="/aquatic-jobs/">Aquatic Jobs</a>
+        <a href="/for-swim-schools/">For Swim Schools</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <p class="footer-contact">Email: <a href="mailto:waterwisekids.com@gmail.com">waterwisekids.com@gmail.com</a></p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WaterWiseKids. All rights reserved. | <a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Aquatic Jobs Board",
+    "description": "Post and discover aquatic industry jobs. Connect swim schools with qualified instructors and aquatic professionals.",
+    "url": "https://waterwisekids.com/aquatic-jobs/",
+    "breadcrumb": {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://waterwisekids.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aquatic Jobs",
+          "item": "https://waterwisekids.com/aquatic-jobs/"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <script src="/assets/js/main.js?v=20260407b"></script>
+  <script>
+    // ============================================================
+    // Aquatic Jobs Board — powered by Google Sheets
+    // ============================================================
+    // IMPORTANT: Replace this URL with your deployed Apps Script URL
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxccVXUowlVtXXjxyphF3uNocSTP_CQOVI5DAfR4PvJC4mXHSxv3U6pTvOLYQcsBRs/exec';
+
+    // In-memory cache of jobs fetched from the sheet
+    let allJobs = [];
+    let isLoading = false;
+
+    // DOM Elements
+    const postJobBtn = document.getElementById('postJobBtn');
+    const postJobBtnEmpty = document.getElementById('postJobBtnEmpty');
+    const postJobModal = document.getElementById('postJobModal');
+    const closePostJobModal = document.getElementById('closePostJobModal');
+    const cancelPostJobBtn = document.getElementById('cancelPostJobBtn');
+    const jobPostForm = document.getElementById('jobPostForm');
+    const jobDetailModal = document.getElementById('jobDetailModal');
+    const backFromDetail = document.getElementById('backFromDetail');
+    const searchInput = document.getElementById('searchInput');
+    const jobTypeFilter = document.getElementById('jobTypeFilter');
+    const locationFilter = document.getElementById('locationFilter');
+    const jobGrid = document.getElementById('jobGrid');
+    const emptyState = document.getElementById('emptyState');
+    const payInputContainer = document.getElementById('payInputContainer');
+    const manageJobBtn = document.getElementById('manageJobBtn');
+    const manageModal = document.getElementById('manageModal');
+    const editJobModal = document.getElementById('editJobModal');
+    const codeSuccessModal = document.getElementById('codeSuccessModal');
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      loadJobs();
+      setupEventListeners();
+    });
+
+    // Event Listeners
+    function setupEventListeners() {
+      postJobBtn.addEventListener('click', openPostJobModal);
+      postJobBtnEmpty.addEventListener('click', openPostJobModal);
+      closePostJobModal.addEventListener('click', closeModal);
+      cancelPostJobBtn.addEventListener('click', closeModal);
+      backFromDetail.addEventListener('click', () => {
+        jobDetailModal.classList.remove('active');
+      });
+
+      jobPostForm.addEventListener('submit', handleJobSubmit);
+      searchInput.addEventListener('input', filterJobs);
+      jobTypeFilter.addEventListener('change', filterJobs);
+      locationFilter.addEventListener('change', filterJobs);
+
+      // Pay type radio buttons
+      document.querySelectorAll('input[name="payType"]').forEach(radio => {
+        radio.addEventListener('change', updatePayInputs);
+      });
+
+      // Manage posting flow
+      manageJobBtn.addEventListener('click', openManageModal);
+      document.getElementById('closeManageModal').addEventListener('click', () => manageModal.classList.remove('active'));
+      document.getElementById('lookupJobBtn').addEventListener('click', lookupJob);
+      document.getElementById('manageCodeInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') lookupJob(); });
+
+      // Edit job flow
+      document.getElementById('closeEditModal').addEventListener('click', () => { editJobModal.classList.remove('active'); document.body.style.overflow = 'auto'; });
+      document.getElementById('editJobForm').addEventListener('submit', handleEditSubmit);
+      document.getElementById('deleteJobBtn').addEventListener('click', showDeleteConfirm);
+
+      // Code success modal
+      document.getElementById('closeCodeSuccess').addEventListener('click', () => codeSuccessModal.classList.remove('active'));
+      document.getElementById('codeSuccessDone').addEventListener('click', () => codeSuccessModal.classList.remove('active'));
+      document.getElementById('copyCodeBtn').addEventListener('click', copyManageCode);
+
+      // Close modal when clicking outside
+      window.addEventListener('click', function(event) {
+        if (event.target === postJobModal) {
+          closeModal();
+        }
+        if (event.target === jobDetailModal) {
+          jobDetailModal.classList.remove('active');
+        }
+        if (event.target === manageModal) {
+          manageModal.classList.remove('active');
+        }
+        if (event.target === editJobModal) {
+          editJobModal.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+        if (event.target === codeSuccessModal) {
+          codeSuccessModal.classList.remove('active');
+        }
+      });
+    }
+
+    function openPostJobModal() {
+      postJobModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      postJobModal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+      jobPostForm.reset();
+      clearFormErrors();
+    }
+
+    function updatePayInputs() {
+      const selectedPayType = document.querySelector('input[name="payType"]:checked').value;
+      payInputContainer.innerHTML = '';
+
+      if (selectedPayType === 'Fixed Rate') {
+        payInputContainer.innerHTML = `
+          <div class="form-group">
+            <label for="payAmount">Fixed Rate <span class="required">*</span></label>
+            <input type="text" id="payAmount" name="payAmount" placeholder="e.g., $35/hour, $18/class, etc." required>
+          </div>
+        `;
+      } else if (selectedPayType === 'Hourly Range') {
+        payInputContainer.innerHTML = `
+          <div class="form-row">
+            <div class="form-group">
+              <label for="payMin">Minimum Hourly Rate <span class="required">*</span></label>
+              <input type="text" id="payMin" name="payMin" placeholder="e.g., $20" required>
+            </div>
+            <div class="form-group">
+              <label for="payMax">Maximum Hourly Rate <span class="required">*</span></label>
+              <input type="text" id="payMax" name="payMax" placeholder="e.g., $35" required>
+            </div>
+          </div>
+        `;
+      } else if (selectedPayType === 'Salary Range') {
+        payInputContainer.innerHTML = `
+          <div class="form-row">
+            <div class="form-group">
+              <label for="payMin">Minimum Annual Salary <span class="required">*</span></label>
+              <input type="text" id="payMin" name="payMin" placeholder="e.g., $40000" required>
+            </div>
+            <div class="form-group">
+              <label for="payMax">Maximum Annual Salary <span class="required">*</span></label>
+              <input type="text" id="payMax" name="payMax" placeholder="e.g., $60000" required>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // ---- FETCH JOBS FROM GOOGLE SHEETS ----
+    async function loadJobs() {
+      isLoading = true;
+      jobGrid.innerHTML = '<div class="loading-state" style="grid-column:1/-1; text-align:center; padding:3rem;"><p style="color:#64748b; font-size:1.1rem;">Loading jobs...</p></div>';
+      emptyState.style.display = 'none';
+
+      try {
+        const response = await fetch(APPS_SCRIPT_URL);
+        const data = await response.json();
+
+        if (data.success && data.jobs) {
+          // Sort newest first
+          allJobs = data.jobs.sort((a, b) =>
+            new Date(b.postedDate) - new Date(a.postedDate)
+          );
+        } else {
+          allJobs = [];
+          console.error('Jobs API error:', data.error);
+        }
+      } catch (err) {
+        console.error('Failed to fetch jobs:', err);
+        allJobs = [];
+        jobGrid.innerHTML = '<div class="empty-state" style="grid-column:1/-1; text-align:center; padding:3rem;"><h3>Unable to load jobs</h3><p>Please try refreshing the page.</p></div>';
+        isLoading = false;
+        return;
+      }
+
+      isLoading = false;
+      updateLocationFilter(allJobs);
+
+      if (allJobs.length === 0) {
+        emptyState.style.display = 'block';
+        jobGrid.innerHTML = '';
+      } else {
+        emptyState.style.display = 'none';
+        displayJobs(allJobs);
+      }
+    }
+
+    // ---- SUBMIT JOB TO GOOGLE SHEETS ----
+    async function handleJobSubmit(e) {
+      e.preventDefault();
+
+      if (!validateForm()) {
+        return;
+      }
+
+      const formData = new FormData(jobPostForm);
+      const payType = formData.get('payType');
+
+      const jobData = {
+        title: formData.get('jobTitle'),
+        company: formData.get('companyName'),
+        city: formData.get('jobCity'),
+        state: formData.get('jobState'),
+        type: formData.get('jobType'),
+        payType: payType,
+        pay: payType === 'DOE/Negotiable' ? 'DOE/Negotiable' :
+             payType === 'Fixed Rate' ? formData.get('payAmount') :
+             `${formData.get('payMin')} - ${formData.get('payMax')}`,
+        description: formData.get('jobDescription'),
+        requirements: formData.get('jobRequirements') || '',
+        benefits: formData.get('jobBenefits') || '',
+        email: formData.get('contactEmail'),
+        phone: formData.get('contactPhone') || '',
+        howToApply: formData.get('howToApply')
+      };
+
+      // Disable submit button while posting
+      const submitBtn = jobPostForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Posting...';
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          body: JSON.stringify(jobData),
+          headers: { 'Content-Type': 'text/plain' } // Apps Script requires text/plain for CORS
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          closeModal();
+          // Show management code modal
+          if (result.manageCode) {
+            document.getElementById('newManageCode').textContent = result.manageCode;
+            codeSuccessModal.classList.add('active');
+          } else {
+            showToast('Job posted successfully!');
+          }
+          // Reload jobs from the sheet
+          await loadJobs();
+          filterJobs();
+        } else {
+          showToast('Error posting job: ' + (result.error || 'Unknown error'), true);
+        }
+      } catch (err) {
+        console.error('Failed to post job:', err);
+        showToast('Failed to post job. Please try again.', true);
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    }
+
+    // Simple toast notification
+    function showToast(message, isError) {
+      const toast = document.createElement('div');
+      toast.style.cssText = `
+        position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
+        padding: 1rem 2rem; border-radius: 0.5rem; color: #fff; font-family: Inter, sans-serif;
+        font-size: 0.95rem; z-index: 10000; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        background: ${isError ? '#dc2626' : '#16a34a'}; transition: opacity 0.3s;
+      `;
+      toast.textContent = message;
+      document.body.appendChild(toast);
+      setTimeout(() => { toast.style.opacity = '0'; }, 3000);
+      setTimeout(() => { toast.remove(); }, 3500);
+    }
+
+    function validateForm() {
+      clearFormErrors();
+      let isValid = true;
+
+      const requiredFields = ['jobTitle', 'companyName', 'jobCity', 'jobState', 'jobType', 'jobDescription', 'contactEmail', 'howToApply'];
+      const payType = document.querySelector('input[name="payType"]:checked');
+
+      requiredFields.forEach(field => {
+        const element = document.getElementById(field);
+        if (!element.value.trim()) {
+          showError(field + 'Error', 'This field is required');
+          isValid = false;
+        }
+      });
+
+      if (!payType) {
+        showError('payTypeError', 'Please select a pay type');
+        isValid = false;
+      }
+
+      if (payType && payType.value !== 'DOE/Negotiable') {
+        const payInputs = document.querySelectorAll('#payInputContainer input');
+        payInputs.forEach(input => {
+          if (!input.value.trim()) {
+            isValid = false;
+          }
+        });
+      }
+
+      return isValid;
+    }
+
+    function showError(errorElementId, message) {
+      const errorElement = document.getElementById(errorElementId);
+      if (errorElement) {
+        errorElement.textContent = message;
+      }
+    }
+
+    function clearFormErrors() {
+      document.querySelectorAll('.form-error').forEach(el => {
+        el.textContent = '';
+      });
+    }
+
+    function updateLocationFilter(jobs) {
+      const locations = [...new Set(jobs.map(job => job.city + ', ' + job.state))].sort();
+      const currentValue = locationFilter.value;
+
+      locationFilter.innerHTML = '<option value="">All Locations</option>';
+      locations.forEach(location => {
+        const option = document.createElement('option');
+        option.value = location;
+        option.textContent = location;
+        locationFilter.appendChild(option);
+      });
+
+      locationFilter.value = currentValue;
+    }
+
+    function displayJobs(jobs) {
+      jobGrid.innerHTML = '';
+
+      jobs.forEach(job => {
+        const jobCard = createJobCard(job);
+        jobGrid.appendChild(jobCard);
+      });
+    }
+
+    function createJobCard(job) {
+      const card = document.createElement('div');
+      card.className = 'job-card';
+
+      const badgeClass = `badge-${job.type.toLowerCase().replace('-', '-')}`;
+      const excerpt = job.description.substring(0, 120) + (job.description.length > 120 ? '...' : '');
+      const postedDate = formatDate(new Date(job.postedDate));
+
+      card.innerHTML = `
+        <div class="job-card-header">
+          <h3 class="job-card-title">${escapeHtml(job.title)}</h3>
+          <span class="job-type-badge ${badgeClass}">${escapeHtml(job.type)}</span>
+        </div>
+        <p class="job-company">${escapeHtml(job.company)}</p>
+        <p class="job-location">${escapeHtml(job.city)}, ${escapeHtml(job.state)}</p>
+        <p class="job-pay">${escapeHtml(job.pay)}</p>
+        <p class="job-description-excerpt">${escapeHtml(excerpt)}</p>
+        <p class="job-posted-date">Posted ${postedDate}</p>
+      `;
+
+      card.addEventListener('click', () => showJobDetail(job));
+
+      return card;
+    }
+
+    function showJobDetail(job) {
+      const detailContent = document.getElementById('jobDetailContent');
+
+      const requirementsHtml = job.requirements ? `
+        <div class="job-detail-section">
+          <h3>Requirements</h3>
+          <p>${escapeHtml(job.requirements)}</p>
+        </div>
+      ` : '';
+
+      const benefitsHtml = job.benefits ? `
+        <div class="job-detail-section">
+          <h3>Benefits</h3>
+          <p>${escapeHtml(job.benefits)}</p>
+        </div>
+      ` : '';
+
+      const phoneHtml = job.phone ? `<p><strong>Phone:</strong> <a href="tel:${escapeHtml(job.phone)}">${escapeHtml(job.phone)}</a></p>` : '';
+
+      const badgeClass = `badge-${job.type.toLowerCase().replace('-', '-')}`;
+
+      detailContent.innerHTML = `
+        <div class="job-detail-header">
+          <h1 class="job-detail-title">${escapeHtml(job.title)}</h1>
+          <p class="job-detail-company">${escapeHtml(job.company)}</p>
+        </div>
+
+        <div class="job-detail-meta">
+          <div class="job-detail-meta-item">
+            <span class="job-detail-meta-label">Location</span>
+            <span class="job-detail-meta-value">${escapeHtml(job.city)}, ${escapeHtml(job.state)}</span>
+          </div>
+          <div class="job-detail-meta-item">
+            <span class="job-detail-meta-label">Job Type</span>
+            <span class="job-detail-meta-value"><span class="job-type-badge ${badgeClass}">${escapeHtml(job.type)}</span></span>
+          </div>
+          <div class="job-detail-meta-item">
+            <span class="job-detail-meta-label">Pay</span>
+            <span class="job-detail-meta-value">${escapeHtml(job.pay)}</span>
+          </div>
+          <div class="job-detail-meta-item">
+            <span class="job-detail-meta-label">Posted</span>
+            <span class="job-detail-meta-value">${formatDate(new Date(job.postedDate))}</span>
+          </div>
+        </div>
+
+        <div class="job-detail-section">
+          <h3>Job Description</h3>
+          <p>${escapeHtml(job.description)}</p>
+        </div>
+
+        ${requirementsHtml}
+        ${benefitsHtml}
+
+        <div class="job-detail-section">
+          <h3>How to Apply</h3>
+          <p>${escapeHtml(job.howToApply)}</p>
+        </div>
+
+        <div class="job-detail-contact">
+          <h4>Contact Information</h4>
+          <p><strong>Email:</strong> <a href="mailto:${escapeHtml(job.email)}">${escapeHtml(job.email)}</a></p>
+          ${phoneHtml}
+        </div>
+      `;
+
+      jobDetailModal.classList.add('active');
+    }
+
+    function filterJobs() {
+      if (isLoading) return;
+
+      const searchTerm = searchInput.value.toLowerCase();
+      const selectedType = jobTypeFilter.value;
+      const selectedLocation = locationFilter.value;
+
+      const filtered = allJobs.filter(job => {
+        const matchesSearch = !searchTerm ||
+          job.title.toLowerCase().includes(searchTerm) ||
+          job.company.toLowerCase().includes(searchTerm) ||
+          job.city.toLowerCase().includes(searchTerm) ||
+          job.state.toLowerCase().includes(searchTerm);
+
+        const matchesType = !selectedType || job.type === selectedType;
+
+        const matchesLocation = !selectedLocation ||
+          (job.city + ', ' + job.state) === selectedLocation;
+
+        return matchesSearch && matchesType && matchesLocation;
+      });
+
+      if (filtered.length === 0) {
+        jobGrid.innerHTML = '<div class="empty-state" style="grid-column: 1 / -1;"><h3>No jobs found</h3><p>Try adjusting your search or filters.</p></div>';
+      } else {
+        displayJobs(filtered);
+      }
+    }
+
+    function formatDate(date) {
+      const now = new Date();
+      const diffTime = Math.abs(now - date);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      if (diffDays === 0) {
+        return 'today';
+      } else if (diffDays === 1) {
+        return 'yesterday';
+      } else if (diffDays < 7) {
+        return `${diffDays} days ago`;
+      } else if (diffDays < 30) {
+        const weeks = Math.floor(diffDays / 7);
+        return `${weeks} week${weeks > 1 ? 's' : ''} ago`;
+      } else {
+        const months = Math.floor(diffDays / 30);
+        return `${months} month${months > 1 ? 's' : ''} ago`;
+      }
+    }
+
+    // ---- MANAGE POSTING FUNCTIONS ----
+    function openManageModal() {
+      document.getElementById('manageCodeInput').value = '';
+      document.getElementById('manageCodeError').textContent = '';
+      manageModal.classList.add('active');
+      setTimeout(() => document.getElementById('manageCodeInput').focus(), 100);
+    }
+
+    function copyManageCode() {
+      const code = document.getElementById('newManageCode').textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        document.getElementById('copyCodeBtn').textContent = 'Copied!';
+        setTimeout(() => { document.getElementById('copyCodeBtn').textContent = 'Copy Code'; }, 2000);
+      });
+    }
+
+    async function lookupJob() {
+      const code = document.getElementById('manageCodeInput').value.trim().toUpperCase();
+      if (!code) {
+        document.getElementById('manageCodeError').textContent = 'Please enter your management code.';
+        return;
+      }
+
+      const btn = document.getElementById('lookupJobBtn');
+      btn.textContent = 'Looking up...';
+      btn.disabled = true;
+
+      try {
+        const response = await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          body: JSON.stringify({ action: 'lookup', manageCode: code }),
+          headers: { 'Content-Type': 'text/plain' }
+        });
+        const result = await response.json();
+
+        if (result.success && result.job) {
+          manageModal.classList.remove('active');
+          openEditModal(result.job, code);
+        } else {
+          document.getElementById('manageCodeError').textContent = result.error || 'No job found with that code.';
+        }
+      } catch (err) {
+        document.getElementById('manageCodeError').textContent = 'Connection error. Please try again.';
+      } finally {
+        btn.textContent = 'Look Up';
+        btn.disabled = false;
+      }
+    }
+
+    function openEditModal(job, code) {
+      document.getElementById('editManageCode').value = code;
+      document.getElementById('editJobId').value = job.id;
+      document.getElementById('editJobTitle').value = job.title || '';
+      document.getElementById('editCompanyName').value = job.company || '';
+      document.getElementById('editJobCity').value = job.city || '';
+      document.getElementById('editJobState').value = job.state || '';
+      document.getElementById('editJobType').value = job.type || 'Full-Time';
+      document.getElementById('editPay').value = job.pay || '';
+      document.getElementById('editDescription').value = job.description || '';
+      document.getElementById('editRequirements').value = job.requirements || '';
+      document.getElementById('editBenefits').value = job.benefits || '';
+      document.getElementById('editEmail').value = job.email || '';
+      document.getElementById('editPhone').value = job.phone || '';
+      document.getElementById('editHowToApply').value = job.howToApply || '';
+      document.getElementById('deleteConfirmArea').innerHTML = '';
+      editJobModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    async function handleEditSubmit(e) {
+      e.preventDefault();
+      const code = document.getElementById('editManageCode').value;
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.textContent = 'Saving...';
+      btn.disabled = true;
+
+      const updatedData = {
+        action: 'edit',
+        manageCode: code,
+        title: document.getElementById('editJobTitle').value,
+        company: document.getElementById('editCompanyName').value,
+        city: document.getElementById('editJobCity').value,
+        state: document.getElementById('editJobState').value,
+        type: document.getElementById('editJobType').value,
+        pay: document.getElementById('editPay').value,
+        description: document.getElementById('editDescription').value,
+        requirements: document.getElementById('editRequirements').value,
+        benefits: document.getElementById('editBenefits').value,
+        email: document.getElementById('editEmail').value,
+        phone: document.getElementById('editPhone').value,
+        howToApply: document.getElementById('editHowToApply').value
+      };
+
+      try {
+        const response = await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          body: JSON.stringify(updatedData),
+          headers: { 'Content-Type': 'text/plain' }
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          editJobModal.classList.remove('active');
+          document.body.style.overflow = 'auto';
+          showToast('Job updated successfully!');
+          await loadJobs();
+          filterJobs();
+        } else {
+          showToast(result.error || 'Failed to update job.', true);
+        }
+      } catch (err) {
+        showToast('Connection error. Please try again.', true);
+      } finally {
+        btn.textContent = 'Save Changes';
+        btn.disabled = false;
+      }
+    }
+
+    function showDeleteConfirm() {
+      const area = document.getElementById('deleteConfirmArea');
+      area.innerHTML = '<div class="delete-confirm"><p>Are you sure? This cannot be undone.</p><div class="delete-confirm-buttons"><button class="btn-delete" id="confirmDeleteBtn">Yes, Delete My Job</button><button class="btn-cancel" id="cancelDeleteBtn">Cancel</button></div></div>';
+      document.getElementById('confirmDeleteBtn').addEventListener('click', handleDelete);
+      document.getElementById('cancelDeleteBtn').addEventListener('click', () => { area.innerHTML = ''; });
+    }
+
+    async function handleDelete() {
+      const code = document.getElementById('editManageCode').value;
+      const btn = document.getElementById('confirmDeleteBtn');
+      btn.textContent = 'Deleting...';
+      btn.disabled = true;
+
+      try {
+        const response = await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          body: JSON.stringify({ action: 'delete', manageCode: code }),
+          headers: { 'Content-Type': 'text/plain' }
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          editJobModal.classList.remove('active');
+          document.body.style.overflow = 'auto';
+          showToast('Job deleted successfully.');
+          await loadJobs();
+          filterJobs();
+        } else {
+          showToast(result.error || 'Failed to delete job.', true);
+        }
+      } catch (err) {
+        showToast('Connection error. Please try again.', true);
+      }
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      };
+      return text.replace(/[&<>"']/g, m => map[m]);
+    }
+  </script>
+</body>
+</html>

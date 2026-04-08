@@ -8,19 +8,19 @@
  */
 document.addEventListener('DOMContentLoaded', function () {
   initMobileNav();
-  initSearchTabs();
   initStickyHeader();
   initScrollToTop();
   initFormValidation();
   initSmoothScroll();
   initActiveNavLink();
+  initSidebarNewsletterForms();
 });
 
 /* ══════════════════════════════════════════════════════════════════════════════
    MOBILE NAVIGATION HAMBURGER TOGGLE
 ═══════════════════════════════════════════════════════════════════════════════ */
 function initMobileNav() {
-  const navToggle = document.querySelector('.nav-toggle');
+  const navToggle = document.querySelector('.hamburger');
   const nav = document.querySelector('nav');
 
   if (!navToggle) return;
@@ -51,45 +51,6 @@ function initMobileNav() {
       navToggle.setAttribute('aria-expanded', 'false');
     }
   });
-}
-
-/* ══════════════════════════════════════════════════════════════════════════════
-   SEARCH TAB SWITCHING
-═══════════════════════════════════════════════════════════════════════════════ */
-function initSearchTabs() {
-  const tabs = document.querySelectorAll('.search-tab');
-
-  if (tabs.length === 0) return;
-
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      // Remove active class from all tabs
-      tabs.forEach(function (t) {
-        t.classList.remove('active');
-      });
-
-      // Add active class to clicked tab
-      tab.classList.add('active');
-
-      // Update search placeholder based on active tab
-      const placeholder = getSearchPlaceholder(tab.textContent);
-      const searchInput = document.querySelector('.search-input');
-      if (searchInput) {
-        searchInput.placeholder = placeholder;
-      }
-    });
-  });
-}
-
-function getSearchPlaceholder(tabText) {
-  if (tabText.includes('Schools')) {
-    return 'City, zip code, or school name...';
-  } else if (tabText.includes('Jobs')) {
-    return 'Job title or location...';
-  } else if (tabText.includes('Articles')) {
-    return 'Search water safety articles...';
-  }
-  return 'Search...';
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
@@ -407,7 +368,81 @@ if ('IntersectionObserver' in window) {
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
+   SIDEBAR NEWSLETTER FORM AJAX HANDLER
+   Handles sidebar checklist signup forms on article pages
+═══════════════════════════════════════════════════════════════════════════════ */
+function initSidebarNewsletterForms() {
+  var sidebarForms = document.querySelectorAll('[data-form="newsletter-sidebar"]');
+
+  sidebarForms.forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      var originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          // Push dataLayer event for GTM tracking
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              event: 'checklist_signup',
+              signup_source: form.querySelector('[name="source"]')
+                ? form.querySelector('[name="source"]').value
+                : 'sidebar'
+            });
+          }
+          // Replace form with success message and printable link
+          var wrapper = form.parentElement;
+          form.style.display = 'none';
+          var msg = document.createElement('div');
+          msg.style.cssText = 'background:#dcfce7;color:#166534;padding:14px;border-radius:8px;font-size:.9rem;line-height:1.5;';
+          msg.innerHTML = 'You\'re in! <a href="/education/summer-safety-checklist-printable.html" style="color:#075985;font-weight:600;text-decoration:underline;">View &amp; print your checklist</a>';
+          wrapper.appendChild(msg);
+          // Hide the privacy note
+          var privacyNote = wrapper.querySelector('p:last-child');
+          if (privacyNote && privacyNote.textContent.indexOf('spam') > -1) {
+            privacyNote.style.display = 'none';
+          }
+        } else {
+          btn.disabled = false;
+          btn.textContent = originalText;
+          alert('Something went wrong. Please try again.');
+        }
+      }).catch(function () {
+        btn.disabled = false;
+        btn.textContent = originalText;
+        alert('Something went wrong. Please try again.');
+      });
+    });
+  });
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
    CONSOLE MESSAGES
 ═══════════════════════════════════════════════════════════════════════════════ */
 console.log('%cWaterWiseKids', 'color: #0284c7; font-size: 24px; font-weight: bold;');
-console.log('%cAmerica\'s National Aquatics Hub', 'color: #14b8a6; font-size: 14px; font-weight: 600;');
+console.log('%cBecause Water Safety Saves Lives', 'color: #14b8a6; font-size: 14px; font-weight: 600;');
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   MOBILE APP EXPERIENCE LOADER
+   Dynamically loads mobile-app CSS + JS on small screens only.
+   Desktop users never download these files.
+═══════════════════════════════════════════════════════════════════════════════ */
+(function () {
+  if (window.innerWidth <= 768) {
+    var css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = '/assets/css/m-app.css';
+    document.head.appendChild(css);
+
+    var js = document.createElement('script');
+    js.src = '/assets/js/m-app.js';
+    document.body.appendChild(js);
+  }
+})();

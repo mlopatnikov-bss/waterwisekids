@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact WaterWiseKids — Get in Touch</title>
+  <meta name="description" content="Get in touch with WaterWiseKids. Reach out with questions, partnership inquiries, or content suggestions about water safety education.">
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.waterwisekids.com/contact/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.waterwisekids.com/contact/" />
+  <meta property="og:title" content="Contact WaterWiseKids — Get in Touch" />
+  <meta property="og:description" content="Get in touch with WaterWiseKids. Reach out with questions, partnership inquiries, or content suggestions about water safety education." />
+  <meta property="og:site_name" content="WaterWiseKids" />
+  <meta property="og:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact WaterWiseKids",
+    "url": "https://www.waterwisekids.com/contact/",
+    "description": "Get in touch with WaterWiseKids for water safety questions, partnership inquiries, or content suggestions",
+    "contactType": "General",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "WaterWiseKids",
+      "url": "https://www.waterwisekids.com"
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <style>
+    /* Page-specific styles — nav, footer, and base styles come from main.css */
+
+    html, body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #f8fafc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+
+    /* Main Content */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .contact-intro {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .contact-intro h2 {
+      color: #075985;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-intro p {
+      color: #475569;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .contact-intro a {
+      display: inline-block;
+      background-color: #0284c7;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: background-color 0.2s;
+    }
+
+    .contact-intro a:hover {
+      background-color: #075985;
+    }
+
+    /* Contact Methods */
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-method {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .contact-method h3 {
+      color: #075985;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-method p {
+      color: #475569;
+      margin-bottom: 1rem;
+    }
+
+    .contact-method p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* What to Reach Out About */
+    .reach-out-section {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .reach-out-section h2 {
+      color: #075985;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .audience-sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .audience-section {
+      background: #f8fafc;
+      padding: 2rem;
+      border-radius: 12px;
+      border-left: 4px solid #0284c7;
+    }
+
+    .audience-section h3 {
+      color: #075985;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .audience-section ul {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .audience-section li {
+      color: #475569;
+      margin-bottom: 0.75rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .audience-section li:before {
+      content: "✓";
+      color: #0284c7;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .audience-section a {
+      display: inline-block;
+      background-color: #0284c7;
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background-color 0.2s;
+    }
+
+    .audience-section a:hover {
+      background-color: #075985;
+    }
+
+    /* Contact Form Styles */
+    .contact-form {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-form h2 {
+      color: #075985;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .contact-form-intro {
+      color: #475569;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      color: #1f2937;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.95rem;
+      color: #1f2937;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #0284c7;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-group input[required]::placeholder,
+    .form-group textarea[required]::placeholder {
+      color: #9ca3af;
+    }
+
+    .form-submit {
+      background-color: #0284c7;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      width: 100%;
+    }
+
+    .form-submit:hover {
+      background-color: #075985;
+    }
+
+    .form-fallback-message {
+      background-color: #dcfce7;
+      color: #166534;
+      padding: 1.5rem;
+      border-radius: 6px;
+      text-align: center;
+      margin-top: 1.5rem;
+      display: none;
+    }
+
+    .contact-form-fallback {
+      color: #475569;
+      font-size: 0.9rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .contact-form-fallback a {
+      color: #0284c7;
+      font-weight: 600;
+    }
+
+    .contact-form-fallback a:hover {
+      text-decoration: underline;
+    }
+
+    .partnership-callout {
+      background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+      padding: 2rem;
+      border-radius: 12px;
+      border-left: 4px solid #0284c7;
+      margin-top: 2rem;
+    }
+
+    .partnership-callout p {
+      color: #475569;
+      margin-bottom: 1rem;
+    }
+
+    .partnership-callout a {
+      display: inline-flex;
+      align-items: center;
+      color: #075985;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .partnership-callout a:hover {
+      color: #0284c7;
+    }
+
+    /* Footer */
+
+    @media (max-width: 768px) {
+
+      .hero p {
+        font-size: 1rem;
+      }
+      .hero {
+        padding: 48px 16px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      main {
+        padding: 2rem 1rem;
+      }
+
+      .contact-methods {
+        grid-template-columns: 1fr;
+      }
+
+      .audience-sections {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-intro,
+      .reach-out-section {
+        padding: 1.5rem;
+      }
+    }
+
+    /* Page Hero Banner */
+    .page-hero {
+      background: linear-gradient(135deg, #075985 0%, #0369a1 100%);
+      color: #ffffff;
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .page-hero .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .page-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .page-hero .hero-sub {
+      font-size: 1.1rem;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .page-breadcrumb {
+      background: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 10px 24px;
+      font-size: 0.85rem;
+    }
+    .page-breadcrumb a:hover { color: #0284c7; text-decoration: underline; }
+    .page-breadcrumb .sep { color: #9ca3af; margin: 0 6px; }
+    .page-breadcrumb .current { color: #1f2937; }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2rem; }
+      .page-hero .hero-sub { font-size: 1rem; }
+    }
+</style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="container">
+    <nav>
+      <a href="/" class="nav-logo"><img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids</a>
+      <ul class="nav-links">
+        <li><a href="/education/">Water Safety</a></li>
+        <li><a href="/swim-lessons/">Find Lessons</a></li>
+        <li><a href="/scholarships/">Scholarships</a></li>
+        <li><a href="/aquatic-jobs/">Aquatic Jobs</a></li>
+        <li><a href="/for-swim-schools/">For Swim Schools</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    </div>
+  </header>
+
+  <nav class="page-breadcrumb" aria-label="Breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <span class="current">Contact</span>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1>Get in Touch</h1>
+      <p class="hero-sub">Questions about water safety, partnership inquiries, or content suggestions — we'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <main>
+    <form class="contact-form" data-form="contact-main" method="POST" action="https://formspree.io/f/xzdkybrw">
+      <h2>Contact Us</h2>
+      <p class="contact-form-intro">We typically respond within 1-2 business days.</p>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="inquiry-type">Inquiry Type</label>
+        <select id="inquiry-type" name="inquiry_type" required>
+          <option value="">Select a topic</option>
+          <option value="family-general">Family / General Question</option>
+          <option value="swim-school-partnership">Swim School Partnership Inquiry</option>
+          <option value="content-suggestion">Content Suggestion</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <input type="hidden" name="_subject" value="WaterWiseKids Contact Form">
+      <input type="text" name="_gotcha" style="display:none">
+
+      <button type="submit" class="form-submit">Send Message</button>
+      <div class="form-fallback-message"></div>
+    </form>
+
+    <p class="contact-form-fallback">Prefer email? Reach us directly at <a href="mailto:waterwisekids.com@gmail.com">waterwisekids.com@gmail.com</a></p>
+
+    <div class="contact-methods">
+      <div class="contact-method">
+        <h3>Email</h3>
+        <p>Send us a message anytime:</p>
+      </div>
+      <div class="contact-method">
+        <h3>Response Time</h3>
+        <p>We aim to respond to all inquiries within 1-2 business days, depending on volume.</p>
+      </div>
+    </div>
+
+    <section class="reach-out-section">
+      <h2>What to Reach Out About</h2>
+      <div class="audience-sections">
+        <div class="audience-section">
+          <h3>For Families</h3>
+          <ul>
+            <li>Questions about water safety or swim readiness</li>
+            <li>Help finding swim lessons in your area</li>
+            <li>Content suggestions or feedback on our guides</li>
+          </ul>
+          <a href="mailto:waterwisekids.com@gmail.com?subject=Family%20Question" data-cta="contact-family-email">Get in Touch</a>
+        </div>
+        <div class="audience-section">
+          <h3>For Swim Schools</h3>
+          <ul>
+            <li>Partnership and featured placement inquiries</li>
+            <li>Getting your school listed on WaterWiseKids</li>
+            <li>Collaboration on water safety content</li>
+          </ul>
+          <a href="mailto:waterwisekids.com@gmail.com?subject=Swim%20School%20Partnership%20Inquiry" data-cta="contact-partner-email">Get in Touch</a>
+        </div>
+      </div>
+      <div class="partnership-callout">
+        <p><strong>Swim school owner?</strong> Learn more about our partnership program and how to get your school featured on WaterWiseKids.</p>
+        <a href="/for-swim-schools/">Explore Partnerships →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="text-align: center;">
+      <p class="footer-title"><img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids</p>
+      <p class="footer-tagline">Trusted water safety education for every family</p>
+      <div class="footer-links">
+        <a href="/education/">Water Safety</a>
+        <a href="/swim-lessons/">Find Lessons</a>
+        <a href="/scholarships/">Scholarships</a>
+        <a href="/for-swim-schools/">For Swim Schools</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <p class="footer-contact">Email: <a href="mailto:waterwisekids.com@gmail.com">waterwisekids.com@gmail.com</a></p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WaterWiseKids. All rights reserved. | <a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Formspree AJAX submission — stays on page instead of redirecting
+    const contactForm = document.querySelector('[data-form="contact-main"]');
+    const fallbackMessage = document.querySelector('.form-fallback-message');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = contactForm.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if (response.ok) {
+            contactForm.style.display = 'none';
+            fallbackMessage.style.display = 'block';
+            fallbackMessage.textContent = "Thank you! We'll be in touch within 1-2 business days.";
+            if (window.dataLayer) { window.dataLayer.push({ event: 'contact_form_submit', form_source: 'contact-page' }); }
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Send Message';
+            fallbackMessage.style.display = 'block';
+            fallbackMessage.textContent = 'Something went wrong. Please email us directly at waterwisekids.com@gmail.com.';
+          }
+        }).catch(function() {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+          fallbackMessage.style.display = 'block';
+          fallbackMessage.textContent = 'Something went wrong. Please email us directly at waterwisekids.com@gmail.com.';
+        });
+      });
+    }
+  </script>
+  <script src="/assets/js/main.js?v=20260407b"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <path d="M0 85 Q36.0 77 75.0 85 T150.0 85 T225.0 85 T300 85" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 93 Q36.0 85 75.0 93 T150.0 93 T225.0 93 T300 93" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+  <!-- Adult swimmer doing freestyle -->
+  <circle cx="100" cy="78" r="8" fill="white"/>
+  <ellipse cx="125" cy="83" rx="28" ry="7" fill="white" opacity="0.85"/>
+  <line x1="140" y1="78" x2="160" y2="65" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="115" y1="90" x2="105" y2="108" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="130" y1="90" x2="140" y2="108" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Lane lines -->
+  <line x1="0" y1="110" x2="300" y2="110" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="8 4"/>
+  <line x1="0" y1="130" x2="300" y2="130" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="8 4"/>
+  <path d="M0 150 Q36.0 142 75.0 150 T150.0 150 T225.0 150 T300 150" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 158 Q36.0 150 75.0 158 T150.0 158 T225.0 158 T300 158" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+
+</svg>

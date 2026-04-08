@@ -1,0 +1,57 @@
+#!/bin/bash
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+# Auto-detect repo path — find the .deploy folder relative to this app
+SCRIPT_DIR="$(cd "$(dirname "$0")/../../.." && pwd)"
+if [[ -f "$SCRIPT_DIR/.deploy/waterwisekids-push.sh" ]]; then
+    REPO_DIR="$SCRIPT_DIR"
+else
+    REPO_DIR="$HOME/Documents/Claude/Projects/waterwisekids.com"
+fi
+SCRIPT="$REPO_DIR/.deploy/waterwisekids-push.sh"
+LOG_DIR="$REPO_DIR/.deploy/logs"
+LOG_FILE="$LOG_DIR/launchd-out.log"
+INTERVAL=180
+mkdir -p "$LOG_DIR"
+chmod +x "$SCRIPT" 2>/dev/null
+rm -f "$REPO_DIR/.git/index.lock" "$REPO_DIR/.git/HEAD.lock" 2>/dev/null
+notify() {
+    osascript -e "display notification \"$1\" with title \"WaterWiseKids AutoDeploy\"" 2>/dev/null
+}
+clear
+echo "=============================================="
+echo "  WaterWiseKids AutoDeploy v2.0"
+echo "  Watching for changes every 3 minutes"
+echo "=============================================="
+echo ""
+echo "  Repo:     $REPO_DIR"
+echo "  Branch:   $(cd "$REPO_DIR" && git rev-parse --abbrev-ref HEAD 2>/dev/null || echo 'unknown')"
+echo "  Log:      $LOG_FILE"
+echo ""
+echo "  Press Ctrl+C to stop"
+echo "=============================================="
+echo ""
+notify "AutoDeploy started. Watching for changes every 3 minutes."
+CYCLE=0
+while true; do
+    CYCLE=$((CYCLE + 1))
+    TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
+    echo "[$TIMESTAMP] Cycle #$CYCLE — checking for changes..."
+    OUTPUT=$(bash "$SCRIPT" 2>&1)
+    EXIT_CODE=$?
+    echo "$OUTPUT" | while IFS= read -r line; do
+        echo "  $line"
+    done
+    if echo "$OUTPUT" | grep -q "SUCCESS: Pushed"; then
+        COMMIT_MSG=$(echo "$OUTPUT" | grep "tagged commit" | head -1 | sed 's/.*\]  //')
+        notify "Deployed: $COMMIT_MSG"
+        echo ""
+        echo "  ✓ Deploy successful!"
+    fi
+    if [[ $EXIT_CODE -ne 0 ]] && echo "$OUTPUT" | grep -q "ERROR"; then
+        notify "Deploy error — check terminal"
+    fi
+    echo ""
+    echo "  Next check in 3 minutes..."
+    echo "----------------------------------------------"
+    sleep $INTERVAL
+done

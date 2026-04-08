@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swim School Directory — Find Lessons Near You | WaterWiseKids</title>
+  <meta name="description" content="Search 400+ verified swim schools across all 50 states. Filter by state, city, or school name to find the best swim lessons for your family.">
+  <meta name="keywords" content="swim schools, swim lessons, swimming programs, find swim lessons near me, swim school directory">
+  <link rel="canonical" href="https://www.waterwisekids.com/swim-lessons/directory/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.waterwisekids.com/swim-lessons/directory/" />
+  <meta property="og:title" content="Swim School Directory — Find Lessons Near You" />
+  <meta property="og:description" content="Search 400+ verified swim schools across all 50 states. Filter by state, city, or school name." />
+  <meta property="og:site_name" content="WaterWiseKids" />
+  <meta property="og:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <style>
+    /* ── Header ────────────────────────────────────────── */
+    /* ── Breadcrumb ───────────────────────────────────── */
+    .page-breadcrumb { background: #f9fafb; padding: 12px 24px; font-size: 0.85rem; color: #6b7280; }
+    .page-breadcrumb 
+    .page-breadcrumb a:hover { color: #0284c7; text-decoration: underline; }
+    .page-breadcrumb .sep { color: #9ca3af; margin: 0 6px; }
+
+    /* ── Hero ─────────────────────────────────────────── */
+    .page-hero {
+      background: linear-gradient(135deg, #075985 0%, #0284c7 50%, #0ea5e9 100%);
+      color: #fff; padding: 3rem 1.5rem; text-align: center;
+    }
+    .page-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .page-hero .hero-sub { font-size: 1.15rem; color: #bae6fd; max-width: 600px; margin: 0 auto; }
+
+    /* ── Search Panel ─────────────────────────────────── */
+    .search-section { max-width: 900px; margin: -2rem auto 0; padding: 0 1.5rem; position: relative; z-index: 10; }
+    .search-panel {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      padding: 2rem;
+    }
+    .search-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .search-field { display: flex; flex-direction: column; gap: 0.35rem; }
+    .search-field label { font-size: 0.8rem; font-weight: 600; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; }
+    .search-field input,
+    .search-field select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: #1f2937;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      background: #fff;
+    }
+    .search-field input:focus,
+    .search-field select:focus {
+      outline: none;
+      border-color: #0284c7;
+      box-shadow: 0 0 0 3px rgba(2,132,199,0.15);
+    }
+    .search-actions { display: flex; gap: 0.75rem; align-items: flex-end; }
+    .btn-search {
+      padding: 0.75rem 2rem;
+      background: #0284c7;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .btn-search:hover { background: #075985; transform: translateY(-1px); }
+    .btn-clear {
+      padding: 0.75rem 1.25rem;
+      background: #f1f5f9;
+      color: #475569;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      white-space: nowrap;
+    }
+    .btn-clear:hover { background: #e2e8f0; }
+
+    /* ── Results ──────────────────────────────────────── */
+    .results-section { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    .results-
+    .results-count {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #075985;
+    }
+    .results-note {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+    .results-prompt {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      color: #94a3b8;
+    }
+    .results-prompt svg { margin-bottom: 1rem; }
+    .results-prompt h3 { color: #64748b; font-size: 1.15rem; margin-bottom: 0.5rem; }
+    .results-prompt p { font-size: 0.95rem; }
+
+    /* ── School Card ──────────────────────────────────── */
+    .school-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+    .school-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      border-color: #cbd5e1;
+    }
+    .school-name { font-size: 1.1rem; color: #075985; font-weight: 600; margin-bottom: 0.25rem; }
+    .school-chain {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .school-info { font-size: 0.9rem; color: #475569; margin-bottom: 0.75rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .school-programs { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .program-badge {
+      background: #f0fdf4;
+      color: #16a34a;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid #bbf7d0;
+    }
+    .school-actions { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+    .visit-site-btn {
+      display: inline-block;
+      background: #075985;
+      color: #fff !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: background 0.3s;
+    }
+    .visit-site-btn:hover { background: #0369a1; }
+    .state-link {
+      font-size: 0.85rem;
+      color: #0369a1;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .state-link:hover { text-decoration: underline; }
+    .review-btn {
+      background: #0369a1;
+      color: #fff;
+      padding: 0.5rem 1.25rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .review-btn:hover { background: #054373; }
+    .school-rating { display: flex; align-items: center; gap: 0.4rem; }
+    .school-rating .star { color: #14b8a6; font-size: 1rem; }
+
+    .no-results { text-align: center; padding: 3rem 1.5rem; color: #475569; }
+    .no-results h3 { color: #075985; margin-bottom: 0.5rem; }
+    .no-results 
+
+    /* ── Review Modal ─────────────────────────────────── */
+    .review-modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; }
+    .review-modal.active { display: flex; }
+    .review-form { background: #fff; border-radius: 8px; padding: 2rem; max-width: 500px; width: 90%; box-shadow: 0 20px 25px rgba(0,0,0,0.15); }
+    .review-form h3 { color: #075985; margin-bottom: 1.5rem; font-size: 1.3rem; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem; font-size: 0.9rem; }
+    .star-rating { display: flex; gap: 0.5rem; font-size: 2rem; }
+    .star-rating button { background: none; border: none; cursor: pointer; color: #d1d5db; transition: color 0.3s; padding: 0; }
+    .star-rating button:hover, .star-rating button.active { color: #14b8a6; }
+    .form-group textarea:focus { outline: none; border-color: #075985; box-shadow: 0 0 0 3px rgba(7,89,133,0.1); }
+    .form-actions { display: flex; gap: 1rem; justify-content: flex-end; }
+    .form-actions button { padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.95rem; }
+    .form-actions .submit { background: #0284c7; color: #fff; }
+    .form-actions .submit:hover { background: #075985; }
+    .form-actions .cancel { background: #e5e7eb; color: #1f2937; }
+    .form-actions .cancel:hover { background: #d1d5db; }
+
+    /* ── Footer ───────────────────────────────────────── */
+
+    /* ── Responsive ───────────────────────────────────── */
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2rem; }
+      .page-hero .hero-sub { font-size: 1rem; }
+      .search-row { grid-template-columns: 1fr; }
+      .search-actions { flex-direction: column; }
+      .btn-search, .btn-clear { width: 100%; text-align: center; }
+      .school-info { flex-direction: column; gap: 0.25rem; }
+    }
+</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Swim School Directory",
+    "description": "Search 400+ verified swim schools across all 50 states",
+    "url": "https://www.waterwisekids.com/swim-lessons/directory/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "WaterWiseKids",
+      "url": "https://www.waterwisekids.com/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+    <nav>
+      <a href="/" class="nav-logo"><img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids</a>
+      <ul class="nav-links">
+        <li><a href="/education/">Water Safety</a></li>
+        <li><a href="/swim-lessons/">Find Lessons</a></li>
+        <li><a href="/scholarships/">Scholarships</a></li>
+        <li><a href="/aquatic-jobs/">Aquatic Jobs</a></li>
+        <li><a href="/for-swim-schools/">For Swim Schools</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    </div>
+  </header>
+
+  <nav class="page-breadcrumb" aria-label="Breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="/">Home</a>
+      <span class="sep">&#8250;</span>
+      <a href="/swim-lessons/">Find Lessons</a>
+      <span class="sep">&#8250;</span>
+      <span class="current">School Directory</span>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1>Find Swim Lessons Near You</h1>
+      <p class="hero-sub">Search our directory of 400+ verified swim schools across all 50 states. Find lessons for every age and skill level.</p>
+    </div>
+  </section>
+
+  <!-- Search Panel -->
+  <section class="search-section">
+    <div class="search-panel">
+      <div class="search-row">
+        <div class="search-field">
+          <label for="stateFilter">State</label>
+          <select id="stateFilter">
+            <option value="">All states</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label for="citySearch">City</label>
+          <input type="text" id="citySearch" placeholder="e.g. Houston, Chicago...">
+        </div>
+        <div class="search-field">
+          <label for="schoolSearch">School Name</label>
+          <input type="text" id="schoolSearch" placeholder="e.g. Goldfish, British...">
+        </div>
+      </div>
+      <div class="search-actions">
+        <button class="btn-search" onclick="applySearch()">Search</button>
+        <button class="btn-clear" onclick="clearSearch()">Clear</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="results-section">
+    <div id="resultsArea">
+      <div class="results-prompt">
+        <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="#94a3b8" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+        </svg>
+        <h3>Select a state or search to get started</h3>
+        <p>Use the filters above to find swim lessons in your area.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review Modal -->
+  <div class="review-modal" id="reviewModal">
+    <div class="review-form">
+      <h3>Leave a Review</h3>
+      <form onsubmit="submitReview(event)">
+        <div class="form-group">
+          <label>Rating</label>
+          <div class="star-rating" id="starRating">
+            <button type="button" data-rating="1">&#9733;</button>
+            <button type="button" data-rating="2">&#9733;</button>
+            <button type="button" data-rating="3">&#9733;</button>
+            <button type="button" data-rating="4">&#9733;</button>
+            <button type="button" data-rating="5">&#9733;</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="reviewText">Your Review</label>
+          <textarea id="reviewText" placeholder="Share your experience with this swim school..." required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="cancel" onclick="closeReviewModal()">Cancel</button>
+          <button type="submit" class="submit">Submit Review</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-title"><img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids</p>
+      <p class="footer-subtitle">Trusted water safety education for every family</p>
+      <div class="footer-links">
+        <a href="/education/">Water Safety</a>
+        <a href="/swim-lessons/">Find Lessons</a>
+        <a href="/scholarships/">Scholarships</a>
+        <a href="/for-swim-schools/">For Swim Schools</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <p class="footer-email">Email: <a href="mailto:waterwisekids.com@gmail.com">waterwisekids.com@gmail.com</a></p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WaterWiseKids. All rights reserved. | <a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="schools-data.js?v=20260406"></script>
+  <script>
+    const STATE_NAMES = {
+      "AL":"Alabama","AK":"Alaska","AZ":"Arizona","AR":"Arkansas",
+      "CA":"California","CO":"Colorado","CT":"Connecticut","DE":"Delaware",
+      "DC":"Washington D.C.","FL":"Florida","GA":"Georgia","HI":"Hawaii",
+      "ID":"Idaho","IL":"Illinois","IN":"Indiana","IA":"Iowa",
+      "KS":"Kansas","KY":"Kentucky","LA":"Louisiana","ME":"Maine",
+      "MD":"Maryland","MA":"Massachusetts","MI":"Michigan","MN":"Minnesota",
+      "MS":"Mississippi","MO":"Missouri","MT":"Montana","NE":"Nebraska",
+      "NV":"Nevada","NH":"New Hampshire","NJ":"New Jersey","NM":"New Mexico",
+      "NY":"New York","NC":"North Carolina","ND":"North Dakota","OH":"Ohio",
+      "OK":"Oklahoma","OR":"Oregon","PA":"Pennsylvania","RI":"Rhode Island",
+      "SC":"South Carolina","SD":"South Dakota","TN":"Tennessee","TX":"Texas",
+      "UT":"Utah","VT":"Vermont","VA":"Virginia","WA":"Washington",
+      "WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming"
+    };
+
+    const STATE_SLUGS = {
+      "AL":"alabama","AK":"alaska","AZ":"arizona","AR":"arkansas",
+      "CA":"california","CO":"colorado","CT":"connecticut","DE":"delaware",
+      "DC":"washington-dc","FL":"florida","GA":"georgia","HI":"hawaii",
+      "ID":"idaho","IL":"illinois","IN":"indiana","IA":"iowa",
+      "KS":"kansas","KY":"kentucky","LA":"louisiana","ME":"maine",
+      "MD":"maryland","MA":"massachusetts","MI":"michigan","MN":"minnesota",
+      "MS":"mississippi","MO":"missouri","MT":"montana","NE":"nebraska",
+      "NV":"nevada","NH":"new-hampshire","NJ":"new-jersey","NM":"new-mexico",
+      "NY":"new-york","NC":"north-carolina","ND":"north-dakota","OH":"ohio",
+      "OK":"oklahoma","OR":"oregon","PA":"pennsylvania","RI":"rhode-island",
+      "SC":"south-carolina","SD":"south-dakota","TN":"tennessee","TX":"texas",
+      "UT":"utah","VT":"vermont","VA":"virginia","WA":"washington",
+      "WV":"west-virginia","WI":"wisconsin","WY":"wyoming"
+    };
+
+    let currentRating = 0;
+    let currentSchoolId = null;
+    let searchTriggered = false;
+
+    function init() {
+      populateStateFilter();
+      setupStarRating();
+      setupMobileMenu();
+      setupEnterKey();
+    }
+
+    function populateStateFilter() {
+      const select = document.getElementById('stateFilter');
+      const sorted = Object.entries(STATE_NAMES).sort((a, b) => a[1].localeCompare(b[1]));
+      select.innerHTML = '<option value="">All states</option>' +
+        sorted.map(([code, name]) => {
+          const count = (SWIM_SCHOOLS_DATA[code] || []).length;
+          return '<option value="' + code + '">' + name + ' (' + count + ')</option>';
+        }).join('');
+    }
+
+    function setupEnterKey() {
+      document.getElementById('schoolSearch').addEventListener('keydown', function(e) { if (e.key === 'Enter') applySearch(); });
+      document.getElementById('citySearch').addEventListener('keydown', function(e) { if (e.key === 'Enter') applySearch(); });
+      document.getElementById('stateFilter').addEventListener('change', applySearch);
+    }
+
+    function clearSearch() {
+      document.getElementById('schoolSearch').value = '';
+      document.getElementById('citySearch').value = '';
+      document.getElementById('stateFilter').value = '';
+      searchTriggered = false;
+      document.getElementById('resultsArea').innerHTML =
+        '<div class="results-prompt">' +
+        '<svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="#94a3b8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>' +
+        '<h3>Select a state or search to get started</h3>' +
+        '<p>Use the filters above to find swim lessons in your area.</p></div>';
+    }
+
+    function applySearch() {
+      searchTriggered = true;
+      const schoolName = document.getElementById('schoolSearch').value.toLowerCase().trim();
+      const city = document.getElementById('citySearch').value.toLowerCase().trim();
+      const stateFilter = document.getElementById('stateFilter').value;
+
+      var schools = [];
+      for (var state in SWIM_SCHOOLS_DATA) {
+        if (stateFilter && state !== stateFilter) continue;
+        var list = SWIM_SCHOOLS_DATA[state];
+        for (var i = 0; i < list.length; i++) {
+          var s = list[i];
+          if (schoolName && s.name.toLowerCase().indexOf(schoolName) === -1 && s.chain.toLowerCase().indexOf(schoolName) === -1) continue;
+          if (city && s.city.toLowerCase().indexOf(city) === -1) continue;
+          schools.push({ name: s.name, chain: s.chain, city: s.city, state: s.state, website: s.website, programs: s.programs, indoor: s.indoor, yearRound: s.yearRound, id: s.name + '-' + s.state });
+        }
+      }
+
+      var area = document.getElementById('resultsArea');
+
+      if (schools.length === 0) {
+        area.innerHTML =
+          '<div class="no-results">' +
+          '<h3>No schools found</h3>' +
+          '<p>Try broadening your search or selecting a different state. You can also check:</p>' +
+          '<ul style="list-style:none;padding:0;margin:1rem 0;">' +
+          '<li style="margin-bottom:0.5rem;"><a href="https://www.usswimschools.org/" target="_blank" rel="noopener">US Swim School Association &rarr;</a></li>' +
+          '<li style="margin-bottom:0.5rem;"><a href="https://www.usaswimming.org/safe-sport/swim-lessons" target="_blank" rel="noopener">USA Swimming - Find Lessons &rarr;</a></li></ul></div>';
+        return;
+      }
+
+      // Sort: state alpha, then city alpha
+      schools.sort(function(a, b) {
+        if (a.state !== b.state) return a.state.localeCompare(b.state);
+        return a.city.localeCompare(b.city);
+      });
+
+      var label = stateFilter ? STATE_NAMES[stateFilter] : 'all states';
+      var header =
+        '<div class="results-header">' +
+        '<span class="results-count">' + schools.length + ' swim school' + (schools.length !== 1 ? 's' : '') + ' found' + (stateFilter ? ' in ' + STATE_NAMES[stateFilter] : '') + '</span>' +
+        (stateFilter ? '<a class="state-link" href="/swim-lessons/directory/' + STATE_SLUGS[stateFilter] + '.html">View full ' + STATE_NAMES[stateFilter] + ' page &rarr;</a>' : '') +
+        '</div>';
+
+      area.innerHTML = header + '<div id="schoolsList">' + schools.map(renderSchoolCard).join('') + '</div>';
+    }
+
+    function renderSchoolCard(school) {
+      var programLabels = { 'infant': 'Infants', 'toddler': 'Toddlers', 'preschool': 'Preschool', 'school-age': 'School-age', 'adult': 'Adults' };
+
+      var allReviews = JSON.parse(localStorage.getItem('swimSchoolReviews') || '{}');
+      var storedReviews = allReviews[school.id] || [];
+      var ratingHTML = '';
+      if (storedReviews.length > 0) {
+        var avgRating = storedReviews.reduce(function(sum, r) { return sum + r.rating; }, 0) / storedReviews.length;
+        var full = Math.round(avgRating);
+        var userStars = '';
+        for (var i = 0; i < 5; i++) userStars += i < full ? '\u2605' : '\u2606';
+        ratingHTML = '<div class="school-rating"><span class="star">' + userStars + '</span><span>' + avgRating.toFixed(1) + ' (' + storedReviews.length + ' review' + (storedReviews.length !== 1 ? 's' : '') + ')</span></div>';
+      }
+
+      var badges = '';
+      for (var i = 0; i < school.programs.length; i++) {
+        var p = school.programs[i];
+        badges += '<span class="program-badge">' + (programLabels[p] || p) + '</span>';
+      }
+
+      var safeName = school.name.replace(/'/g, "\\'");
+
+      return '<div class="school-card">' +
+        '<div class="school-header"><div>' +
+        '<h3 class="school-name">' + school.name + '</h3>' +
+        '<span class="school-chain">' + school.chain + '</span>' +
+        '</div>' + ratingHTML + '</div>' +
+        '<div class="school-info">' +
+        '<div><strong>Location:</strong> ' + school.city + ', ' + (STATE_NAMES[school.state] || school.state) + '</div>' +
+        '<div><strong>Type:</strong> ' + (school.indoor ? 'Indoor' : 'Outdoor') + (school.yearRound ? ' &bull; Year-round' : '') + '</div>' +
+        '</div>' +
+        '<div class="school-programs">' + badges + '</div>' +
+        '<div class="school-actions">' +
+        '<a href="' + school.website + '" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a>' +
+        '<button class="review-btn" onclick="openReviewModal(\'' + school.id + '\', \'' + safeName + '\')">Leave a Review</button>' +
+        '</div></div>';
+    }
+
+    function openReviewModal(schoolId, schoolName) {
+      currentSchoolId = schoolId;
+      document.getElementById('reviewModal').classList.add('active');
+      document.querySelector('.review-form h3').textContent = 'Review: ' + schoolName;
+      currentRating = 0;
+      document.getElementById('reviewText').value = '';
+      updateStarDisplay();
+    }
+
+    function closeReviewModal() {
+      document.getElementById('reviewModal').classList.remove('active');
+      currentRating = 0;
+      currentSchoolId = null;
+    }
+
+    function setupStarRating() {
+      var btns = document.querySelectorAll('#starRating button');
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('click', function(e) {
+          e.preventDefault();
+          currentRating = parseInt(this.getAttribute('data-rating'));
+          updateStarDisplay();
+        });
+      }
+    }
+
+    function updateStarDisplay() {
+      var btns = document.querySelectorAll('#starRating button');
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.toggle('active', i + 1 <= currentRating);
+      }
+    }
+
+    function submitReview(e) {
+      e.preventDefault();
+      if (currentRating === 0) { alert('Please select a rating'); return; }
+      var text = document.getElementById('reviewText').value.trim();
+      if (!text) { alert('Please write a review'); return; }
+      var reviews = JSON.parse(localStorage.getItem('swimSchoolReviews') || '{}');
+      if (!reviews[currentSchoolId]) { reviews[currentSchoolId] = []; }
+      reviews[currentSchoolId].push({ rating: currentRating, text: text, date: new Date().toISOString() });
+      localStorage.setItem('swimSchoolReviews', JSON.stringify(reviews));
+      alert('Thank you for your review!');
+      closeReviewModal();
+      if (searchTriggered) applySearch();
+    }
+
+    function setupMobileMenu() {
+      var hamburger = document.querySelector('.hamburger');
+      var nav = document.querySelector('nav');
+      hamburger.addEventListener('click', function() {
+        nav.classList.toggle('mobile-open');
+        this.setAttribute('aria-expanded', nav.classList.contains('mobile-open'));
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+  <script src="/assets/js/main.js?v=20260407b"></script>
+</body>
+</html>

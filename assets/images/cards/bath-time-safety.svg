@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <!-- Bathtub outline -->
+  <path d="M80 85 Q80 130 150 130 Q220 130 220 85" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+  <line x1="75" y1="85" x2="225" y2="85" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+  <!-- Water in tub -->
+  <path d="M85 95 Q150 90 215 95 Q215 125 150 125 Q85 125 85 95Z" fill="rgba(255,255,255,0.2)"/>
+  <!-- Baby in tub -->
+  <circle cx="150" cy="82" r="7" fill="white"/>
+  <ellipse cx="150" cy="95" rx="8" ry="6" fill="white" opacity="0.8"/>
+  <!-- Parent kneeling beside tub -->
+  <circle cx="60" cy="55" r="9" fill="white"/>
+  <path d="M60 64 L60 95 L52 115 L56 115 L60 100 L64 115 L68 115 Z" fill="white"/>
+  <line x1="60" y1="74" x2="85" y2="90" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="60" y1="74" x2="48" y2="82" stroke="white" stroke-width="3" stroke-linecap="round"/>
+
+</svg>

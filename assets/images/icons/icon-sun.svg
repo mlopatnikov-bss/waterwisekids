@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <circle cx="24" cy="24" r="22" fill="url(#bg)"/>
+  <!-- Person with sun -->
+  <circle cx="20" cy="22" r="5" fill="white"/>
+  <path d="M20 27 L20 38 L16 44 L18 44 L20 40 L22 44 L24 44 Z" fill="white"/>
+  <!-- Sun -->
+  <circle cx="36" cy="14" r="5" fill="rgba(255,255,255,0.7)"/>
+  <line x1="36" y1="6" x2="36" y2="8" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="36" y1="20" x2="36" y2="22" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="28" y1="14" x2="30" y2="14" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="42" y1="14" x2="44" y2="14" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+
+</svg>

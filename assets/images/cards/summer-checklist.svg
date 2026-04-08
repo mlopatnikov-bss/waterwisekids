@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <!-- Checklist -->
+  <rect x="30" y="30" width="80" height="120" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+  <line x1="45" y1="55" x2="95" y2="55" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+  <line x1="45" y1="75" x2="95" y2="75" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+  <line x1="45" y1="95" x2="95" y2="95" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+  <line x1="45" y1="115" x2="95" y2="115" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+  <path d="M40 52 L44 56 L52 48" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M40 72 L44 76 L52 68" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M40 92 L44 96 L52 88" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <!-- Family group -->
+  <circle cx="180" cy="50" r="9" fill="white"/>
+  <path d="M180 59 L180 90 L172 110 L176 110 L180 95 L184 110 L188 110 Z" fill="white"/>
+  <circle cx="210" cy="55" r="8" fill="white"/>
+  <path d="M210 63 L210 88 L204 108 L207 108 L210 93 L213 108 L216 108 Z" fill="white"/>
+  <circle cx="240" cy="65" r="6" fill="white"/>
+  <path d="M240 71 L240 92 L236 108 L238 108 L240 95 L242 108 L244 108 Z" fill="white"/>
+
+</svg>

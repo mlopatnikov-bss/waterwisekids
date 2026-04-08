@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WaterWiseKids Functionality Audit — 2026-04-06</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; color: #1e293b; line-height: 1.6; }
+  h1 { color: #0284c7; border-bottom: 3px solid #0284c7; padding-bottom: 10px; }
+  h2 { color: #0369a1; margin-top: 32px; }
+  .pass { color: #16a34a; font-weight: 600; }
+  .warn { color: #d97706; font-weight: 600; }
+  .fail { color: #dc2626; font-weight: 600; }
+  .badge-pass { background: #dcfce7; color: #16a34a; padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 700; }
+  .badge-warn { background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 700; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.92rem; }
+  th { background: #f1f5f9; text-align: left; padding: 10px 12px; border: 1px solid #e2e8f0; }
+  td { padding: 9px 12px; border: 1px solid #e2e8f0; vertical-align: top; }
+  tr:nth-child(even) td { background: #f8fafc; }
+  .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+  .summary-card { background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 16px; text-align: center; }
+  .summary-card.warn { background: #fffbeb; border-color: #fcd34d; }
+  .summary-card .big { font-size: 2rem; font-weight: 800; color: #16a34a; }
+  .summary-card.warn .big { color: #d97706; }
+  .summary-card .label { font-size: 0.85rem; color: #64748b; margin-top: 4px; }
+  code { background: #f1f5f9; padding: 1px 5px; border-radius: 3px; font-size: 0.88rem; }
+</style>
+</head>
+<body>
+
+<h1>🔍 WaterWiseKids Functionality Audit</h1>
+<p><strong>Date:</strong> April 6, 2026 &nbsp;|&nbsp; <strong>Scope:</strong> Interactive element functionality — forms, links, review system, JS, schema, external resources</p>
+
+<div class="summary-grid">
+  <div class="summary-card">
+    <div class="big">7/7</div>
+    <div class="label">Check Categories Passed</div>
+  </div>
+  <div class="summary-card">
+    <div class="big">0</div>
+    <div class="label">Critical Issues Found</div>
+  </div>
+  <div class="summary-card warn">
+    <div class="big">1</div>
+    <div class="label">Advisory Notes</div>
+  </div>
+</div>
+
+<h2>1. Forms — Action URLs &amp; Fields</h2>
+<table>
+  <tr><th>Form</th><th>Location</th><th>Action URL</th><th>Required Fields</th><th>Status</th></tr>
+  <tr>
+    <td>Contact Form</td>
+    <td><code>contact/index.html</code></td>
+    <td><code>formspree.io/f/xzdkybrw</code></td>
+    <td>name, email (type=email), inquiry_type, message — all required</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td>Newsletter (homepage)</td>
+    <td><code>index.html</code></td>
+    <td><code>formspree.io/f/mojpyqdo</code></td>
+    <td>email (type=email, required)</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td>Newsletter (education hub)</td>
+    <td><code>education/index.html</code></td>
+    <td><code>formspree.io/f/mojpyqdo</code></td>
+    <td>email (type=email, required)</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td>Newsletter (article sidebars)</td>
+    <td>All 20+ education articles</td>
+    <td><code>formspree.io/f/mojpyqdo</code></td>
+    <td>email (type=email, required)</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td>Lead Magnet (printable)</td>
+    <td><code>pool-safety-rules-printable.html</code>, <code>pool-safety-rules.html</code></td>
+    <td><code>formspree.io/f/mojpyqdo</code></td>
+    <td>email (type=email, required)</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+</table>
+<p><span class="pass">✔ All 78 forms have valid Formspree action URLs. Zero forms with empty or missing action attributes.</span></p>
+
+<h2>2. CTA Buttons &amp; Links</h2>
+<table>
+  <tr><th>Item</th><th>Finding</th><th>Status</th></tr>
+  <tr>
+    <td>"Find Swim Lessons" CTA — Education Hub</td>
+    <td>Properly linked: <code>href="/swim-lessons/"</code> with visible button</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td><code>href="#"</code> on live pages</td>
+    <td>Zero instances on any live page. Found only in <code>/samples/photo-styles.html</code> (demo/template file, not served to users)</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td>CTA buttons (sidebar .cta-button, .cta-suggest-btn)</td>
+    <td>All checked — all point to valid destinations: <code>/swim-lessons/</code>, <code>/contact/</code></td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+</table>
+
+<h2>3. Internal Link Integrity (10 Education Articles Sampled)</h2>
+<p>Articles checked: drowning-prevention-guide, signs-of-drowning, backyard-pool-safety, when-to-start-swim-lessons, cold-water-shock, life-jacket-guide, swim-lesson-faqs, water-safety-babies-under-1, hotel-pool-safety, water-park-safety.</p>
+<table>
+  <tr><th>Check</th><th>Result</th><th>Status</th></tr>
+  <tr>
+    <td>All <code>/education/*.html</code> internal links (37 unique paths)</td>
+    <td>Every linked file confirmed to exist. Zero 404s.</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td>Breadcrumb links</td>
+    <td>All articles breadcrumb to <code>/education/</code> and <code>/</code> — both exist</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td>Site-wide internal link sweep</td>
+    <td>One pseudo-result was a JS template literal (<code>STATE_SLUGS[stateFilter]</code>), not an actual broken link</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td>All CSS asset references</td>
+    <td>main.css, article.css, education-hub.css, printable variants — all files confirmed present</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+</table>
+
+<h2>4. Review System — localStorage Key Consistency</h2>
+<table>
+  <tr><th>File</th><th>getItem key</th><th>setItem key</th><th>Status</th></tr>
+  <tr>
+    <td><code>texas.html</code></td>
+    <td><code>swimSchoolReviews</code></td>
+    <td><code>swimSchoolReviews</code></td>
+    <td><span class="badge-pass">MATCH</span></td>
+  </tr>
+  <tr>
+    <td><code>florida.html</code></td>
+    <td><code>swimSchoolReviews</code></td>
+    <td><code>swimSchoolReviews</code></td>
+    <td><span class="badge-pass">MATCH</span></td>
+  </tr>
+  <tr>
+    <td><code>california.html</code></td>
+    <td><code>swimSchoolReviews</code></td>
+    <td><code>swimSchoolReviews</code></td>
+    <td><span class="badge-pass">MATCH</span></td>
+  </tr>
+  <tr>
+    <td><code>directory/index.html</code> (national)</td>
+    <td><code>swimSchoolReviews</code></td>
+    <td><code>swimSchoolReviews</code></td>
+    <td><span class="badge-pass">MATCH</span></td>
+  </tr>
+  <tr>
+    <td><code>generate-state-pages.sh</code> template</td>
+    <td><code>swimSchoolReviews</code></td>
+    <td><code>swimSchoolReviews</code></td>
+    <td><span class="badge-pass">MATCH</span></td>
+  </tr>
+</table>
+<p><span class="pass">✔ <code>openReviewModal()</code> exists and is wired to Leave a Review button onclick.<br>✔ <code>submitReview()</code> exists and is wired to form onsubmit.<br>✔ <code>updateStarDisplay()</code> exists and is called by star rating buttons.</span></p>
+
+<h2>5. JavaScript Function Definitions</h2>
+<table>
+  <tr><th>Function</th><th>Called From</th><th>Defined In</th><th>Status</th></tr>
+  <tr>
+    <td><code>openReviewModal()</code></td>
+    <td>onclick on .review-btn in state pages</td>
+    <td>Inline script in state pages</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td><code>closeReviewModal()</code></td>
+    <td>onclick cancel button</td>
+    <td>Inline script in state pages</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td><code>submitReview()</code></td>
+    <td>form onsubmit</td>
+    <td>Inline script in state pages</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td><code>updateStarDisplay()</code></td>
+    <td>Star button clicks, openReviewModal</td>
+    <td>Inline script in state pages</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td><code>applySearch()</code> / <code>clearSearch()</code></td>
+    <td>Search buttons &amp; Enter key in directory</td>
+    <td>Inline script in <code>directory/index.html</code></td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td>Mobile hamburger menu</td>
+    <td>Hamburger button click — all pages</td>
+    <td><code>main.js → initMobileNav()</code> via DOMContentLoaded</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+</table>
+
+<h2>6. Schema.org JSON-LD Markup (5 Pages Spot-Checked)</h2>
+<table>
+  <tr><th>Page</th><th>Schema Type(s)</th><th>Valid JSON</th><th>Status</th></tr>
+  <tr>
+    <td><code>index.html</code></td>
+    <td>WebSite, Organization</td>
+    <td>Yes</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td><code>education/drowning-prevention-guide.html</code></td>
+    <td>Article, BreadcrumbList</td>
+    <td>Yes</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td><code>education/swim-lesson-faqs.html</code></td>
+    <td>FAQPage, BreadcrumbList</td>
+    <td>Yes</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td><code>swim-lessons/directory/texas.html</code></td>
+    <td>WebPage</td>
+    <td>Yes</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td><code>education/index.html</code></td>
+    <td>CollectionPage, WebPage</td>
+    <td>Yes</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+</table>
+
+<h2>7. External Resources</h2>
+<table>
+  <tr><th>Resource</th><th>Finding</th><th>Status</th></tr>
+  <tr>
+    <td>Formspree endpoints</td>
+    <td>Two endpoints in use: <code>xzdkybrw</code> (contact) and <code>mojpyqdo</code> (newsletter). URL format is valid.</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td>Google Fonts</td>
+    <td>Present on all 5 sampled pages</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td>GTM (Google Tag Manager)</td>
+    <td>Present on 101 of 114 HTML pages. The 13 without GTM are all <strong>orphaned legacy root-level pages</strong> (not linked from any nav or current page, not in sitemap). No active user-facing page is missing GTM.</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td><code>schools-data.js</code></td>
+    <td>File confirmed at <code>swim-lessons/directory/schools-data.js</code> (107KB). All state pages reference it via relative path <code>src="schools-data.js"</code> — correct for their serving location.</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+  <tr>
+    <td><code>main.js</code></td>
+    <td>File confirmed at <code>assets/js/main.js</code>. Referenced as absolute path on all pages.</td>
+    <td><span class="badge-pass">PASS</span></td>
+  </tr>
+</table>
+
+<h2>Advisory Notes (No Action Required)</h2>
+<table>
+  <tr><th>Item</th><th>Detail</th><th>Recommendation</th></tr>
+  <tr>
+    <td>13 orphaned legacy pages without GTM</td>
+    <td>Root-level files like <code>how-to-prepare-kids-for-first-swim-lesson.html</code>, <code>articles.html</code>, <code>beginner-swim-lessons-*.html</code> etc. are not linked from any current page and not in the sitemap.</td>
+    <td>Consider adding to robots.txt disallow or deleting to reduce site clutter. Not urgent — these get zero organic traffic via current navigation.</td>
+  </tr>
+  <tr>
+    <td>WaterWiseKids-Site-Audit-2026-04-06.html in repo root</td>
+    <td>An internal audit report file was found at the repo root and is publicly accessible.</td>
+    <td>Consider moving to a non-public location or adding a noindex meta tag.</td>
+  </tr>
+</table>
+
+<h2>Fixes Applied This Run</h2>
+<p><strong>None.</strong> All interactive elements are functioning correctly. No broken links, key mismatches, missing functions, or invalid JSON-LD were found.</p>
+
+<hr>
+<p style="font-size: 0.85rem; color: #94a3b8; text-align: center;">Generated automatically by WaterWiseKids AutoDeploy · April 6, 2026</p>
+
+</body>
+</html>

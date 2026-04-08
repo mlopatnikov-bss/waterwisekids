@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  
+  <path d="M0 100 Q36.0 92 75.0 100 T150.0 100 T225.0 100 T300 100" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 108 Q36.0 100 75.0 108 T150.0 108 T225.0 108 T300 108" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+  <!-- Child sitting on edge, nervous -->
+  <circle cx="100" cy="55" r="7" fill="white"/>
+  <path d="M100 62 L100 85 L94 100 L97 100 L100 88 L103 100 L106 100 Z" fill="white"/>
+  <line x1="100" y1="70" x2="90" y2="78" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="100" y1="70" x2="110" y2="78" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Instructor in water, arms up welcoming -->
+  <circle cx="180" cy="88" r="9" fill="white"/>
+  <ellipse cx="180" cy="108" rx="10" ry="8" fill="white" opacity="0.7"/>
+  <line x1="180" y1="95" x2="165" y2="80" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="180" y1="95" x2="195" y2="80" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <path d="M0 120 Q36.0 112 75.0 120 T150.0 120 T225.0 120 T300 120" stroke="rgba(255,255,255,0.3)" fill="none" stroke-width="2"/>
+    <path d="M0 128 Q36.0 120 75.0 128 T150.0 128 T225.0 128 T300 128" stroke="rgba(255,255,255,0.2)" fill="none" stroke-width="1.5"/>
+
+</svg>

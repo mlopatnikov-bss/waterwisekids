@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Swim Schools — Partner With WaterWiseKids</title>
+  <meta name="description" content="Join WaterWiseKids as a featured swim school partner. Reach families searching for quality swim lessons. A growing national platform built by swim school p...">
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.waterwisekids.com/for-swim-schools/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.waterwisekids.com/for-swim-schools/" />
+  <meta property="og:title" content="For Swim Schools — Partner With WaterWiseKids" />
+  <meta property="og:description" content="Join WaterWiseKids as a featured swim school partner. Reach families searching for quality swim lessons." />
+  <meta property="og:site_name" content="WaterWiseKids" />
+  <meta property="og:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <style>
+    /* Page-specific styles — nav, footer, and base styles come from main.css */
+
+    @media (max-width: 768px) {
+
+      .hero p {
+        font-size: 1rem;
+      }
+      .hero {
+        padding: 48px 16px;
+      }
+    }
+    .section {
+      padding: 3.5rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-alt {
+      background: #f8fafc;
+    }
+    .section h2 {
+      font-size: 2rem;
+      color: #075985;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-weight: 700;
+    }
+    .section p {
+      color: #475569;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+    .benefits {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 768px) {
+      .benefits {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .benefit-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      border-left: 4px solid #0284c7;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+    .benefit-card h3 {
+      color: #075985;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .benefit-card p {
+      color: #475569;
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+    .cta-section {
+      background: #0284c7;
+      color: #fff;
+      padding: 2.5rem 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .cta-section h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .cta-section p {
+      color: #e0f2fe;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+    }
+    @media (min-width: 768px) {
+      .cta-buttons {
+        flex-direction: row;
+      }
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #0284c7, #075985);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #075985, #0c4a6e);
+    }
+    .btn-secondary {
+      background: #fff;
+      color: #0284c7;
+      border: 2px solid #fff;
+    }
+    .btn-secondary:hover {
+      background: #f0f9ff;
+    }
+
+    /* Page Hero Banner */
+    .page-hero {
+      background: linear-gradient(135deg, #075985 0%, #0369a1 100%);
+      color: #ffffff;
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .page-hero .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .page-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .page-hero .hero-sub {
+      font-size: 1.1rem;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .page-breadcrumb {
+      background: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 10px 24px;
+      font-size: 0.85rem;
+    }
+    .page-breadcrumb a:hover { color: #0284c7; text-decoration: underline; }
+    .page-breadcrumb .sep { color: #9ca3af; margin: 0 6px; }
+    .page-breadcrumb .current { color: #1f2937; }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2rem; }
+      .page-hero .hero-sub { font-size: 1rem; }
+    }
+</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "For Swim Schools — Partner With WaterWiseKids",
+    "description": "Join WaterWiseKids as a featured swim school partner. Reach families searching for quality swim lessons. A growing national platform built by swim school professionals.",
+    "url": "https://www.waterwisekids.com/for-swim-schools/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "WaterWiseKids",
+      "url": "https://www.waterwisekids.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WaterWiseKids",
+    "url": "https://www.waterwisekids.com",
+    "logo": "https://www.waterwisekids.com/assets/images/icons/logo-swimmer.svg",
+    "description": "National water safety education platform connecting families with quality swim schools and water safety resources",
+    "sameAs": [
+      "https://www.waterwisekids.com"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!--
+    PARTNER ONBOARDING FLOW
+    1. Swim school contacts waterwisekids.com@gmail.com
+    2. Team reviews and vets the school
+    3. Team creates a profile page using the partner template
+    4. Profile is added to /swim-lessons/ featured programs grid
+    5. Profile is optionally featured on homepage
+    6. Sitemap is updated
+
+    Future: Self-serve application form, automated profile creation, partner dashboard
+  -->
+
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+    <nav>
+      <a href="/" class="nav-logo"><img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids</a>
+      <ul class="nav-links">
+        <li><a href="/education/">Water Safety</a></li>
+        <li><a href="/swim-lessons/">Find Lessons</a></li>
+        <li><a href="/scholarships/">Scholarships</a></li>
+        <li><a href="/aquatic-jobs/">Aquatic Jobs</a></li>
+        <li><a href="/for-swim-schools/">For Swim Schools</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    </div>
+  </header>
+
+  <nav class="page-breadcrumb" aria-label="Breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <span class="current">For Swim Schools</span>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1>Get Your Swim School in Front of Local Families</h1>
+      <p class="hero-sub">WaterWiseKids helps families find quality swim programs. We'll build you a dedicated profile page, feature your school on our Find Lessons directory, and drive traffic through our water safety education content.</p>
+    </div>
+  </section>
+
+  <!-- What You Get Section -->
+  <section class="section">
+    <h2>What Partners Get</h2>
+    <div class="benefits">
+      <div class="benefit-card">
+        <h3>Dedicated Profile Page</h3>
+        <p>A full-page profile featuring your programs by age group, service areas, instructor credentials, FAQs, and direct contact paths. See an example: <a href="/british-swim-school/northwest-philadelphia.html" style="color: #0284c7; font-weight: 600;">British Swim School of NW Philadelphia</a>.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Featured on Find Lessons</h3>
+        <p>Your school appears on our <a href="/swim-lessons/" style="color: #0284c7; font-weight: 600;">Find Lessons</a> directory and homepage — the pages families land on when searching for local swim instruction.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Traffic From Our Content</h3>
+        <p>Our <a href="/education/" style="color: #0284c7; font-weight: 600;">education library</a> currently has 43 in-depth articles on topics parents actively search — drowning prevention, when to start lessons, choosing a school. Every article links to partner profiles, turning readers into inquiries.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Post Jobs on Our Aquatic Jobs Board</h3>
+        <p>Need swim instructors or lifeguards? Post open positions on our <a href="/aquatic-jobs/" style="color: #0284c7; font-weight: 600;">Aquatic Jobs Board</a> — a free tool built for the aquatics industry to connect schools with qualified candidates.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Built by Swim Instructors</h3>
+        <p>We're certified swim instructors who built this platform because we understand what swim schools need — local visibility and trust with families.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUTURE: Partner testimonials section — add when real partner quotes are available
+  <section class="section">
+    <h2>What Our Partners Say</h2>
+    <div class="partner-testimonials">
+      Template for each testimonial:
+      <div class="testimonial" data-partner="school-name">
+        <blockquote>"Quote from partner"</blockquote>
+        <cite>Name, School Name, Location</cite>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Where We Are Section -->
+  <section class="section section-alt">
+    <h2>Where We Are Today</h2>
+    <p>WaterWiseKids is growing steadily as a national platform. We currently feature partner schools across the United States, with new schools joining regularly. Our <a href="/education/" style="color: #0284c7; font-weight: 600;">education library</a> has 43 in-depth guides on topics from <a href="/education/drowning-prevention-guide.html" style="color: #0284c7;">drowning prevention</a> to <a href="/education/choosing-a-swim-school.html" style="color: #0284c7;">choosing a swim school</a>, and our <a href="/swim-lessons/directory/" style="color: #0284c7; font-weight: 600;">nationwide directory</a> covers all 50 states.</p>
+    <p>New partners get prominent placement and help shape how the platform evolves. We're building this with swim schools, not just for them.</p>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section">
+    <h2>How It Works</h2>
+    <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 700px; margin: 1.5rem auto 0;">
+      <div style="display: flex; gap: 1rem; align-items: flex-start;">
+        <div style="background: #075985; color: #fff; font-weight: 700; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem;">1</div>
+        <div>
+          <h4 style="color: #075985; font-weight: 600; margin-bottom: 0.25rem;">You reach out</h4>
+          <p style="color: #475569; font-size: 0.95rem; margin: 0;">Email us your school name, location, and programs. Takes two minutes.</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 1rem; align-items: flex-start;">
+        <div style="background: #075985; color: #fff; font-weight: 700; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem;">2</div>
+        <div>
+          <h4 style="color: #075985; font-weight: 600; margin-bottom: 0.25rem;">We build your profile</h4>
+          <p style="color: #475569; font-size: 0.95rem; margin: 0;">We create a dedicated page with your programs, service areas, credentials, and contact info. You review it before it goes live.</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 1rem; align-items: flex-start;">
+        <div style="background: #075985; color: #fff; font-weight: 700; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem;">3</div>
+        <div>
+          <h4 style="color: #075985; font-weight: 600; margin-bottom: 0.25rem;">Families find you</h4>
+          <p style="color: #475569; font-size: 0.95rem; margin: 0;">Your school appears on our <a href="/swim-lessons/" style="color: #0284c7;">Find Lessons</a> directory, homepage, and in related education articles — reaching parents actively researching swim programs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section section-alt">
+    <h2>Common Questions</h2>
+    <div style="max-width: 750px; margin: 1.5rem auto 0;">
+      <div style="border-bottom: 1px solid #e5e7eb; padding: 1.25rem 0;">
+        <h4 style="color: #075985; font-weight: 600; margin-bottom: 0.5rem;">What does it cost?</h4>
+        <p style="color: #475569; font-size: 0.95rem; margin: 0;">Nothing right now. Founding partners get listed at no cost. As the platform grows, we may introduce premium placement or lead-tracking features — but your founding profile stays active.</p>
+      </div>
+      <div style="border-bottom: 1px solid #e5e7eb; padding: 1.25rem 0;">
+        <h4 style="color: #075985; font-weight: 600; margin-bottom: 0.5rem;">Do we need to be part of a specific franchise?</h4>
+        <p style="color: #475569; font-size: 0.95rem; margin: 0;">No. We partner with any quality swim school that meets basic safety and certification standards. The platform is open to all qualified programs — independent schools, franchises, and community programs alike.</p>
+      </div>
+      <div style="border-bottom: 1px solid #e5e7eb; padding: 1.25rem 0;">
+        <h4 style="color: #075985; font-weight: 600; margin-bottom: 0.5rem;">What does "founding partner" mean?</h4>
+        <p style="color: #475569; font-size: 0.95rem; margin: 0;">It means you're among the first schools on the platform. You get prominent placement, input on features, and your profile stays listed as the site grows — you're grandfathered in.</p>
+      </div>
+      <div style="border-bottom: 1px solid #e5e7eb; padding: 1.25rem 0;">
+        <h4 style="color: #075985; font-weight: 600; margin-bottom: 0.5rem;">How do families reach us through the site?</h4>
+        <p style="color: #475569; font-size: 0.95rem; margin: 0;">Your profile page includes your phone number, website link, and any booking links you provide. Families contact you directly — we don't sit in the middle.</p>
+      </div>
+      <div style="padding: 1.25rem 0;">
+        <h4 style="color: #075985; font-weight: 600; margin-bottom: 0.5rem;">How quickly can we get listed?</h4>
+        <p style="color: #475569; font-size: 0.95rem; margin: 0;">Most profiles go live within a week of initial contact. We'll need your program details, service areas, and any photos or credentials you'd like included.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founding Partner Invitation -->
+  <section class="section">
+    <h2>Become a Founding Partner</h2>
+    <p>We're selectively adding swim schools as founding partners. That means prominent, permanent placement on the platform as it grows — and a voice in how we build it.</p>
+    <p><strong>No cost to get started.</strong> Send us a quick email with your school name, location, and what programs you offer. We'll follow up within two business days to discuss your profile.</p>
+
+    <div class="cta-section">
+      <h3>Ready to Get Listed?</h3>
+      <p>Email us your school name and location. We'll build your profile and have it live within a week.</p>
+      <div class="cta-buttons">
+        <a href="mailto:waterwisekids.com@gmail.com?subject=Partnership%20Inquiry%20—%20[Your%20School%20Name]&body=School%20Name:%0ALocation:%0APrograms%20Offered:%0AWebsite%20(if%20any):" class="btn btn-primary" data-cta="partners-email-cta">Email Us to Get Started</a>
+        <a href="/contact/" class="btn btn-secondary" data-cta="partners-contact-cta">Or Use Our Contact Form</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="text-align: center;">
+      <p class="footer-title"><img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids</p>
+      <p class="footer-tagline">Trusted water safety education for every family</p>
+      <div class="footer-links">
+        <a href="/education/">Water Safety</a>
+        <a href="/swim-lessons/">Find Lessons</a>
+        <a href="/scholarships/">Scholarships</a>
+        <a href="/for-swim-schools/">For Swim Schools</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <p class="footer-contact">Email: <a href="mailto:waterwisekids.com@gmail.com">waterwisekids.com@gmail.com</a></p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WaterWiseKids. All rights reserved. | <a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/js/main.js?v=20260407b"></script>
+</body>
+</html>

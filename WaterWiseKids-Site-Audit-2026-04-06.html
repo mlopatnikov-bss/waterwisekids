@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WaterWiseKids.com — Full Site Audit & Growth Roadmap</title>
+<style>
+  :root {
+    --blue: #0077B6;
+    --dark: #1B2A4A;
+    --orange: #FF6B35;
+    --green: #2D9C4A;
+    --red: #E53E3E;
+    --yellow: #ECC94B;
+    --gray: #718096;
+    --light: #F7FAFC;
+    --card: #FFFFFF;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--light); color: #2D3748; line-height: 1.6; }
+  .header { background: linear-gradient(135deg, var(--dark) 0%, var(--blue) 100%); color: white; padding: 48px 32px; text-align: center; }
+  .header h1 { font-size: 2.2rem; margin-bottom: 8px; }
+  .header p { opacity: 0.85; font-size: 1.1rem; }
+  .header .date { margin-top: 12px; font-size: 0.9rem; opacity: 0.7; }
+  .container { max-width: 960px; margin: 0 auto; padding: 32px 24px; }
+  .scorecard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 32px 0; }
+  .score-box { background: var(--card); border-radius: 12px; padding: 24px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .score-box .score { font-size: 2.5rem; font-weight: 800; }
+  .score-box .label { font-size: 0.85rem; color: var(--gray); margin-top: 4px; }
+  .score-good { color: var(--green); }
+  .score-ok { color: var(--yellow); }
+  .score-bad { color: var(--red); }
+  .section { background: var(--card); border-radius: 12px; padding: 32px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .section h2 { font-size: 1.5rem; color: var(--dark); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid #E2E8F0; }
+  .section h3 { font-size: 1.15rem; color: var(--blue); margin: 20px 0 8px; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+  .badge-high { background: #FED7D7; color: #C53030; }
+  .badge-med { background: #FEFCBF; color: #975A16; }
+  .badge-low { background: #C6F6D5; color: #276749; }
+  .badge-quick { background: #BEE3F8; color: #2A69AC; }
+  .finding { padding: 16px; border-left: 4px solid #E2E8F0; margin: 12px 0; background: #FAFAFA; border-radius: 0 8px 8px 0; }
+  .finding.good { border-left-color: var(--green); }
+  .finding.warn { border-left-color: var(--yellow); }
+  .finding.bad { border-left-color: var(--red); }
+  .finding strong { display: block; margin-bottom: 4px; }
+  .roadmap-item { display: grid; grid-template-columns: 48px 1fr 100px; gap: 16px; align-items: start; padding: 16px 0; border-bottom: 1px solid #E2E8F0; }
+  .roadmap-item:last-child { border-bottom: none; }
+  .roadmap-num { width: 40px; height: 40px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; }
+  .roadmap-item .title { font-weight: 700; color: var(--dark); }
+  .roadmap-item .desc { font-size: 0.95rem; color: #4A5568; margin-top: 2px; }
+  .impact { font-size: 0.85rem; padding: 4px 12px; border-radius: 20px; text-align: center; font-weight: 600; }
+  .impact-high { background: #FED7D7; color: #C53030; }
+  .impact-med { background: #FEFCBF; color: #975A16; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th { text-align: left; padding: 10px 12px; background: #EDF2F7; font-size: 0.85rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 10px 12px; border-bottom: 1px solid #E2E8F0; font-size: 0.95rem; }
+  .progress-bar { height: 8px; background: #E2E8F0; border-radius: 4px; overflow: hidden; margin-top: 6px; }
+  .progress-fill { height: 100%; border-radius: 4px; }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  .exec-summary { font-size: 1.05rem; line-height: 1.8; }
+  @media (max-width: 700px) {
+    .scorecard { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .roadmap-item { grid-template-columns: 40px 1fr; }
+    .roadmap-item .impact { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>WaterWiseKids.com — Full Site Audit</h1>
+  <p>SEO &bull; Content &bull; Design &bull; Growth &bull; Competitive Analysis</p>
+  <div class="date">April 6, 2026 &mdash; WaterWiseKids Internal Audit</div>
+</div>
+
+<div class="container">
+
+<!-- SCORECARD -->
+<div class="scorecard">
+  <div class="score-box">
+    <div class="score score-good">89</div>
+    <div class="label">Mobile Performance</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:89%;background:var(--green)"></div></div>
+  </div>
+  <div class="score-box">
+    <div class="score score-good">98</div>
+    <div class="label">Desktop SEO</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:98%;background:var(--green)"></div></div>
+  </div>
+  <div class="score-box">
+    <div class="score score-good">93</div>
+    <div class="label">Accessibility</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:93%;background:var(--green)"></div></div>
+  </div>
+  <div class="score-box">
+    <div class="score score-good">36</div>
+    <div class="label">Guides Published</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:72%;background:var(--blue)"></div></div>
+  </div>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="section">
+  <h2>Executive Summary</h2>
+  <div class="exec-summary">
+    <p>WaterWiseKids.com has a <strong>strong technical foundation</strong> — fast load times, solid accessibility, clean design, and 36 well-written educational guides covering the major water safety topics. Google is indexing the site well, showing sitelinks and rich snippets in search results.</p>
+    <br>
+    <p>However, the site is <strong>leaving significant growth on the table</strong> in three key areas: (1) on-page SEO gaps that prevent individual guides from ranking for high-volume keywords, (2) no real lead capture funnel beyond a single newsletter form, and (3) a swim school directory that lacks the interactive features (search, maps, reviews) that would make it a destination rather than a static list.</p>
+    <br>
+    <p>The roadmap below prioritizes <strong>20 specific actions</strong> ranked by impact and effort. The first 5 "quick wins" can be implemented this week and should produce measurable search ranking improvements within 30 days.</p>
+  </div>
+</div>
+
+<!-- SEO AUDIT -->
+<div class="section">
+  <h2>1. SEO Audit</h2>
+
+  <h3>What's Working</h3>
+  <div class="finding good">
+    <strong>Google SERP Presence</strong>
+    Site shows rich sitelinks in search results (Scholarships, Education, Swim Lessons, etc.). Google clearly understands the site structure.
+  </div>
+  <div class="finding good">
+    <strong>PageSpeed Scores</strong>
+    Desktop: 92 performance, 98 SEO. Mobile: 89 performance, 92 SEO. Best Practices: 100. These are strong scores.
+  </div>
+  <div class="finding good">
+    <strong>Schema Markup</strong>
+    Article, BreadcrumbList, WebSite, and Organization schemas are present. Google is interpreting them correctly.
+  </div>
+
+  <h3>Critical SEO Gaps</h3>
+  <div class="finding bad">
+    <strong>Missing/Weak Meta Descriptions</strong> <span class="badge badge-high">HIGH</span>
+    Many guides have generic or missing meta descriptions. These are the "ad copy" that appears in Google results — every guide needs a unique, keyword-rich description under 155 characters that compels clicks.
+  </div>
+  <div class="finding bad">
+    <strong>Image Alt Text Missing</strong> <span class="badge badge-high">HIGH</span>
+    Feature images on guide pages lack descriptive alt text. This hurts both accessibility and image search rankings. Each image needs a descriptive alt tag with the target keyword.
+  </div>
+  <div class="finding warn">
+    <strong>No FAQ Schema on Guides</strong> <span class="badge badge-med">MEDIUM</span>
+    Guides like "Swim Lesson FAQs" and "When to Start Swim Lessons" are perfect candidates for FAQ structured data. This can earn rich snippets (expandable answers directly in Google results).
+  </div>
+  <div class="finding warn">
+    <strong>No Date/Freshness Signals</strong> <span class="badge badge-med">MEDIUM</span>
+    No publication dates or "last updated" stamps visible on guides. Google favors fresh content — showing dates builds trust and signals recency.
+  </div>
+  <div class="finding warn">
+    <strong>No Open Graph Tags</strong> <span class="badge badge-med">MEDIUM</span>
+    Social sharing previews (Facebook, Twitter/X, LinkedIn) won't show optimized images or descriptions without OG meta tags.
+  </div>
+  <div class="finding warn">
+    <strong>.html Extensions in URLs</strong> <span class="badge badge-low">LOW</span>
+    Clean URLs (without .html) are slightly preferred by modern SEO standards, though this is cosmetic and low priority given the site is on GitHub Pages.
+  </div>
+
+  <h3>Keyword Opportunities</h3>
+  <table>
+    <tr><th>Target Keyword</th><th>Monthly Searches (est.)</th><th>Current Page</th><th>Gap</th></tr>
+    <tr><td>"when to start swim lessons"</td><td>6,600</td><td>Has page</td><td>Needs stronger title tag + FAQ schema</td></tr>
+    <tr><td>"drowning prevention"</td><td>4,400</td><td>Has page</td><td>Meta description too generic</td></tr>
+    <tr><td>"swim lessons near me"</td><td>33,100</td><td>Directory</td><td>Needs local landing pages + map</td></tr>
+    <tr><td>"pool safety rules"</td><td>2,900</td><td>Has page</td><td>Add FAQ schema for featured snippet</td></tr>
+    <tr><td>"signs of drowning"</td><td>3,600</td><td>Has page</td><td>Optimize for featured snippet format</td></tr>
+    <tr><td>"baby swim lessons"</td><td>5,400</td><td>Partial</td><td>Create dedicated page targeting this term</td></tr>
+    <tr><td>"swim school vs YMCA"</td><td>1,900</td><td>Missing</td><td>High-intent comparison page opportunity</td></tr>
+    <tr><td>"how to teach kid to swim"</td><td>8,100</td><td>Partial</td><td>Existing content needs keyword alignment</td></tr>
+    <tr><td>"water safety for kids"</td><td>2,400</td><td>Homepage</td><td>Needs a dedicated comprehensive page</td></tr>
+    <tr><td>"free swim lessons for kids"</td><td>3,200</td><td>Scholarships</td><td>Optimize scholarships page for this term</td></tr>
+  </table>
+</div>
+
+<!-- CONTENT STRATEGY -->
+<div class="section">
+  <h2>2. Content Strategy</h2>
+
+  <h3>Current State: 36 Guides Across 6 Categories</h3>
+  <p>The content library is solid but there are clear gaps and opportunities to expand reach.</p>
+
+  <h3>What's Working</h3>
+  <div class="finding good">
+    <strong>Comprehensive Topic Coverage</strong>
+    Age-specific guides (babies through adults), location-specific (pools, lakes, oceans), seasonal content, and special needs — most major bases are covered.
+  </div>
+  <div class="finding good">
+    <strong>Professional Credibility</strong>
+    "Built by swim school professionals" messaging is clear and differentiated from generic parenting blogs.
+  </div>
+
+  <h3>Content Gaps to Fill</h3>
+  <div class="two-col">
+    <div>
+      <h3>Missing High-Value Topics</h3>
+      <ul>
+        <li><strong>"Swim School vs YMCA vs Private Lessons"</strong> — comparison content converts</li>
+        <li><strong>"How Much Do Swim Lessons Cost?"</strong> — huge search volume, no page</li>
+        <li><strong>"Weather & Water Safety"</strong> — lightning, flash floods, storms</li>
+        <li><strong>"Swim Lesson Red Flags"</strong> — warning signs of bad programs</li>
+        <li><strong>"Water Safety for Babysitters"</strong> — shareable, high-demand</li>
+        <li><strong>"Supervision Strategies"</strong> — managing multiple kids at pools</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Content Format Gaps</h3>
+      <ul>
+        <li><strong>Video content</strong> — competitor Aqua-Tots uses video; even simple "safety tip" clips would help</li>
+        <li><strong>Printable checklists</strong> — only 1 exists; create seasonal/age-specific versions</li>
+        <li><strong>Infographics</strong> — shareable visual content for social + backlinks</li>
+        <li><strong>Interactive quiz</strong> — "Is Your Child Ready for Swim Lessons?" drives engagement</li>
+        <li><strong>Parent testimonials / stories</strong> — Aqua-Tots' "Swim Stories" section is powerful</li>
+        <li><strong>Email course</strong> — "5-Day Water Safety Bootcamp" as lead magnet</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Internal Linking Weaknesses</h3>
+  <div class="finding warn">
+    <strong>Guides Are Siloed</strong> <span class="badge badge-med">MEDIUM</span>
+    Individual guide pages link to 2-3 related articles at most. Each guide should link to 5-8 related guides with contextual anchor text. This helps Google understand topic clusters and keeps users on the site longer.
+  </div>
+  <div class="finding warn">
+    <strong>No "Related Reading" Automation</strong> <span class="badge badge-med">MEDIUM</span>
+    Add a "You Might Also Like" section to every guide showing 3-4 related articles based on category tags.
+  </div>
+</div>
+
+<!-- DESIGN & UX -->
+<div class="section">
+  <h2>3. Design & User Experience</h2>
+
+  <h3>Strengths</h3>
+  <div class="finding good">
+    <strong>Clean, Professional Design</strong>
+    Blue/white/orange color scheme is trustworthy and appropriate. Layout is modern with good whitespace and visual hierarchy.
+  </div>
+  <div class="finding good">
+    <strong>Mobile Responsive</strong>
+    Mobile-first CSS with proper breakpoints. Grid collapses to single column. Hamburger menu works.
+  </div>
+  <div class="finding good">
+    <strong>Fast Load Times</strong>
+    Desktop LCP at 0.7s is excellent. Mobile at 2.6s is good (just barely above the 2.5s "good" threshold).
+  </div>
+
+  <h3>Areas for Improvement</h3>
+  <div class="finding warn">
+    <strong>Swim School Directory Has No Search/Map</strong> <span class="badge badge-high">HIGH</span>
+    Users must click through state-by-state. A search box ("Find lessons near [zip code]") and embedded map would dramatically improve the user experience and conversion rate.
+  </div>
+  <div class="finding warn">
+    <strong>Education Page Has No Filtering</strong> <span class="badge badge-med">MEDIUM</span>
+    36 guides displayed as a flat grid. Add category filters (by age, by topic, by location type) so parents can quickly find what's relevant to them.
+  </div>
+  <div class="finding warn">
+    <strong>CLS on Mobile: 0.126</strong> <span class="badge badge-med">MEDIUM</span>
+    Layout shift exceeds Google's 0.1 threshold. Likely caused by images loading without explicit dimensions or late-loading elements. Fix by adding width/height attributes to all images.
+  </div>
+  <div class="finding warn">
+    <strong>Emoji Icons Inconsistency</strong> <span class="badge badge-low">LOW</span>
+    Some sections use emoji (🏊 👶 ☀️) while others use proper SVG icons. Standardize to SVG for professional consistency across all devices.
+  </div>
+</div>
+
+<!-- LEAD GENERATION -->
+<div class="section">
+  <h2>4. Lead Generation & Growth</h2>
+
+  <h3>Current State</h3>
+  <p>The site has exactly <strong>one lead capture mechanism</strong>: a newsletter signup form offering a free Summer Water Safety Checklist. This is a good start but leaves enormous growth potential untapped.</p>
+
+  <h3>What's Missing</h3>
+  <div class="finding bad">
+    <strong>No Lead Magnets on Guide Pages</strong> <span class="badge badge-high">HIGH</span>
+    Each of the 36 guides gets traffic but has no way to capture those visitors. Add topic-specific downloadable PDFs (e.g., "Download our Pool Safety Checklist" on the pool safety page). This is the #1 growth lever.
+  </div>
+  <div class="finding bad">
+    <strong>No Email Welcome Sequence</strong> <span class="badge badge-high">HIGH</span>
+    After someone signs up for the newsletter, what happens? A 5-7 email drip sequence ("Water Safety Week" course) would nurture subscribers and drive them to the swim school directory.
+  </div>
+  <div class="finding warn">
+    <strong>Directory Has No Conversion Tracking</strong> <span class="badge badge-med">MEDIUM</span>
+    When someone clicks "View Program Details" on a swim school listing, are we tracking that? This data is essential for understanding which content drives real action.
+  </div>
+  <div class="finding warn">
+    <strong>No Exit-Intent or Scroll-Triggered CTAs</strong> <span class="badge badge-med">MEDIUM</span>
+    A tasteful popup when users are about to leave ("Before you go — grab our free safety checklist") can capture 3-5% of abandoning visitors.
+  </div>
+  <div class="finding warn">
+    <strong>Social Sharing Not Prominent</strong> <span class="badge badge-med">MEDIUM</span>
+    Water safety content is highly shareable (parents share for other parents). Add floating share buttons to every guide page. Each share is free distribution.
+  </div>
+</div>
+
+<!-- COMPETITIVE ANALYSIS -->
+<div class="section">
+  <h2>5. Competitive Landscape</h2>
+
+  <h3>How We Compare</h3>
+  <table>
+    <tr><th>Feature</th><th>WaterWiseKids</th><th>Aqua-Tots</th><th>SafeSplash</th><th>Red Cross</th></tr>
+    <tr><td>Educational guides</td><td style="color:var(--green)">36 guides ✓✓</td><td>~20 blog posts</td><td>~10 posts</td><td>Programs only</td></tr>
+    <tr><td>National directory</td><td style="color:var(--green)">50 states ✓✓</td><td>Own locations</td><td>Own locations</td><td>Class finder</td></tr>
+    <tr><td>Video content</td><td style="color:var(--red)">None ✗</td><td>Yes ✓</td><td>Yes ✓</td><td>Yes ✓</td></tr>
+    <tr><td>Lead magnets</td><td>1 checklist</td><td>Coloring book + checklist</td><td>Assessment tool</td><td>Course completion</td></tr>
+    <tr><td>Customer stories</td><td style="color:var(--red)">None ✗</td><td style="color:var(--green)">Dedicated section ✓</td><td>Testimonials</td><td>N/A</td></tr>
+    <tr><td>Interactive tools</td><td style="color:var(--red)">None ✗</td><td>Level Finder ✓</td><td>Assessment ✓</td><td>N/A</td></tr>
+    <tr><td>Email sequences</td><td style="color:var(--red)">None ✗</td><td>Unknown</td><td>Unknown</td><td>N/A</td></tr>
+    <tr><td>Site speed</td><td style="color:var(--green)">89/100 ✓</td><td>Average</td><td>Average</td><td>Average</td></tr>
+  </table>
+
+  <p style="margin-top:16px"><strong>Our edge:</strong> We have the most comprehensive free educational content and the only independent national swim school directory. No competitor matches both. The opportunity is to layer engagement tools (video, interactive quizzes, email sequences) on top of this strong content foundation.</p>
+</div>
+
+<!-- PRIORITY ROADMAP -->
+<div class="section">
+  <h2>6. Priority Roadmap — 20 Actions</h2>
+  <p style="margin-bottom:20px; color: var(--gray);">Ranked by impact. Items marked <span class="badge badge-quick">QUICK WIN</span> can be done this week.</p>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">1</div>
+    <div>
+      <div class="title">Fix Meta Descriptions on All 36 Guides <span class="badge badge-quick">QUICK WIN</span></div>
+      <div class="desc">Write unique, keyword-rich meta descriptions (under 155 chars) for every guide page. This alone can increase click-through rates from Google by 20-30%.</div>
+    </div>
+    <div class="impact impact-high">HIGH</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">2</div>
+    <div>
+      <div class="title">Add Alt Text to All Images <span class="badge badge-quick">QUICK WIN</span></div>
+      <div class="desc">Every feature image needs a descriptive alt tag with the guide's target keyword. Fixes accessibility violations AND opens image search traffic.</div>
+    </div>
+    <div class="impact impact-high">HIGH</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">3</div>
+    <div>
+      <div class="title">Add FAQ Schema to Top 10 Guides <span class="badge badge-quick">QUICK WIN</span></div>
+      <div class="desc">Add FAQPage structured data to guides that answer common questions. Targets "People Also Ask" boxes and rich snippets in Google.</div>
+    </div>
+    <div class="impact impact-high">HIGH</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">4</div>
+    <div>
+      <div class="title">Add "Last Updated" Dates to All Guides <span class="badge badge-quick">QUICK WIN</span></div>
+      <div class="desc">Show publication and last-updated dates. Signals freshness to Google and builds user trust. Update the dateModified in Article schema too.</div>
+    </div>
+    <div class="impact impact-med">MED</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">5</div>
+    <div>
+      <div class="title">Add Open Graph Tags to All Pages <span class="badge badge-quick">QUICK WIN</span></div>
+      <div class="desc">Add og:title, og:description, og:image to every page so social shares show rich previews instead of blank cards.</div>
+    </div>
+    <div class="impact impact-med">MED</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">6</div>
+    <div>
+      <div class="title">Build Topic-Specific Lead Magnets</div>
+      <div class="desc">Create 5 downloadable PDF checklists matched to top guides: Pool Safety, Babysitter Water Safety, Vacation Water Safety, Age-by-Age Milestones, Swim Lesson Prep. Gate behind email capture.</div>
+    </div>
+    <div class="impact impact-high">HIGH</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">7</div>
+    <div>
+      <div class="title">Strengthen Internal Linking Across All Guides</div>
+      <div class="desc">Add 5-8 contextual links per guide to related content. Add a "Related Guides" section at the bottom of every article. Build topic clusters.</div>
+    </div>
+    <div class="impact impact-high">HIGH</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">8</div>
+    <div>
+      <div class="title">Create "Swim Lessons Cost Guide" Page</div>
+      <div class="desc">High-search-volume topic with no current page. Cover average costs by type (group, private, YMCA, swim school), what affects pricing, and how to find affordable options.</div>
+    </div>
+    <div class="impact impact-high">HIGH</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">9</div>
+    <div>
+      <div class="title">Create "Swim School vs YMCA" Comparison Page</div>
+      <div class="desc">High-intent comparison keyword. Parents actively deciding where to enroll = high conversion potential to directory listings.</div>
+    </div>
+    <div class="impact impact-high">HIGH</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">10</div>
+    <div>
+      <div class="title">Build Interactive "Is My Child Ready?" Quiz</div>
+      <div class="desc">Simple age/comfort assessment quiz that recommends appropriate swim programs. Captures email + drives to directory. Competitors Aqua-Tots and SafeSplash both have assessment tools.</div>
+    </div>
+    <div class="impact impact-high">HIGH</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">11</div>
+    <div>
+      <div class="title">Add Category Filters to Education Page</div>
+      <div class="desc">Let users filter 36 guides by age group, topic, or location type. Reduces bounce rate and helps parents find relevant content faster.</div>
+    </div>
+    <div class="impact impact-med">MED</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">12</div>
+    <div>
+      <div class="title">Add Search + Zip Code Finder to Directory</div>
+      <div class="desc">Replace state-by-state browsing with a search box: "Find swim lessons near [zip code]." Add embedded map view. This is the single biggest UX improvement possible.</div>
+    </div>
+    <div class="impact impact-high">HIGH</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">13</div>
+    <div>
+      <div class="title">Add Social Share Buttons to All Guides</div>
+      <div class="desc">Floating share buttons (Facebook, Pinterest, X, email) on every guide. Water safety content is naturally shareable among parent communities.</div>
+    </div>
+    <div class="impact impact-med">MED</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">14</div>
+    <div>
+      <div class="title">Build Email Welcome Drip Sequence</div>
+      <div class="desc">5-email "Water Safety Essentials" series sent after newsletter signup. Delivers value, builds trust, and funnels to the swim school directory for conversions.</div>
+    </div>
+    <div class="impact impact-high">HIGH</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">15</div>
+    <div>
+      <div class="title">Create a "Success Stories" Section</div>
+      <div class="desc">Collect and publish parent/family stories about swim lesson experiences. Aqua-Tots' "Swim Stories" section is one of their most engaging features. Builds emotional connection and trust.</div>
+    </div>
+    <div class="impact impact-med">MED</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">16</div>
+    <div>
+      <div class="title">Fix Mobile CLS (Layout Shift)</div>
+      <div class="desc">Add explicit width/height to all images and reserve space for late-loading elements. Get CLS under 0.1 to pass Core Web Vitals "good" threshold.</div>
+    </div>
+    <div class="impact impact-med">MED</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">17</div>
+    <div>
+      <div class="title">Create Printable Resources Library</div>
+      <div class="desc">Expand from 1 checklist to 8-10 printables: age-specific safety cards, babysitter info sheet, pool rules poster, vacation safety card. Each one is a lead magnet and a backlink opportunity.</div>
+    </div>
+    <div class="impact impact-med">MED</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">18</div>
+    <div>
+      <div class="title">Publish 4 New High-Value Guides</div>
+      <div class="desc">Target gaps: "Water Safety for Babysitters," "Weather & Water Safety," "How Much Do Swim Lessons Cost," "Supervision Strategies for Multiple Kids at the Pool."</div>
+    </div>
+    <div class="impact impact-med">MED</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">19</div>
+    <div>
+      <div class="title">Add Conversion Tracking to Directory CTAs</div>
+      <div class="desc">Track "View Program Details" clicks as GA4 custom events. This data tells us which content actually drives swim school inquiries.</div>
+    </div>
+    <div class="impact impact-med">MED</div>
+  </div>
+
+  <div class="roadmap-item">
+    <div class="roadmap-num">20</div>
+    <div>
+      <div class="title">Standardize Icons (Replace Emoji with SVG)</div>
+      <div class="desc">Replace all emoji usage with consistent SVG icons from a single icon set. Ensures visual consistency across all devices and operating systems.</div>
+    </div>
+    <div class="impact impact-med">MED</div>
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="section">
+  <h2>Recommended Next Steps</h2>
+  <p><strong>This week:</strong> I can start executing items 1-5 (the quick wins) immediately through the AutoDeploy pipeline. These are all code changes to existing HTML files that I can commit and push automatically.</p>
+  <br>
+  <p><strong>This month:</strong> Items 6-10 are the highest-impact growth initiatives. The interactive quiz (#10), lead magnets (#6), and new comparison pages (#8, #9) would be the biggest movers for traffic and engagement.</p>
+  <br>
+  <p><strong>Ongoing:</strong> Items 11-20 build out the ecosystem — email sequences, success stories, printable resources, and directory improvements that turn one-time visitors into engaged subscribers and swim school leads.</p>
+</div>
+
+</div>
+</body>
+</html>

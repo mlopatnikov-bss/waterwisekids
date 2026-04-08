@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Safety Education — Free Guides for Parents | WaterWiseKids</title>
+  <meta name="description" content="Free water safety guides covering drowning prevention, pool safety rules, when to start swim lessons, and how to keep kids safe around water." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.waterwisekids.com/education/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.waterwisekids.com/education/" />
+  <meta property="og:title" content="Water Safety Education — Free Guides for Parents | WaterWiseKids" />
+  <meta property="og:description" content="Free water safety guides covering drowning prevention, pool safety rules, when to start swim lessons, and how to keep kids safe around water." />
+  <meta property="og:site_name" content="WaterWiseKids" />
+  <meta property="og:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["CollectionPage", "WebPage"],
+    "name": "Water Safety Education",
+    "description": "Free water safety guides for parents and families",
+    "url": "https://www.waterwisekids.com/education/",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.waterwisekids.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Water Safety Education",
+          "item": "https://www.waterwisekids.com/education/"
+        }
+      ]
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/education-hub.css" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DN8B3QT"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+    <nav>
+      <a href="/" class="nav-logo">
+        <img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids
+      </a>
+      <ul class="nav-links">
+        <li><a href="/education/">Water Safety</a></li>
+        <li><a href="/swim-lessons/">Find Lessons</a></li>
+        <li><a href="/scholarships/">Scholarships</a></li>
+        <li><a href="/aquatic-jobs/">Aquatic Jobs</a></li>
+        <li><a href="/for-swim-schools/">For Swim Schools</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    </div>
+  </header>
+
+  <nav class="page-breadcrumb" aria-label="Breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <span class="current">Water Safety Education</span>
+    </div>
+  </nav>
+
+  <section class="page-hero page-hero--edu">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Water Safety Education</h1>
+        <p class="hero-sub">Expert guides on drowning prevention, pool safety, swim readiness, and more — free resources for every family.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH & FILTER -->
+  <div class="container">
+    <div class="search-filter-bar">
+      <div class="search-box">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="articleSearch" placeholder="Search guides — e.g. drowning prevention, pool safety, CPR…" autocomplete="off">
+        <button class="search-clear" id="searchClear" aria-label="Clear search">&times;</button>
+      </div>
+      <div class="category-filters" id="categoryFilters">
+        <button class="cat-btn active" data-cat="all">All Guides</button>
+      </div>
+      <p class="search-results-count" id="resultsCount"></p>
+    </div>
+  </div>
+
+  <!-- ARTICLES -->
+  <div class="container">
+    <section class="articles-section">
+      <h2 class="section-title">Featured Guides</h2>
+      <div class="articles-grid" id="articlesGrid">
+        <!-- Article 1 -->
+        <a href="/education/drowning-prevention-guide.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/5425095/pexels-photo-5425095.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Boy with lifebuoy learning pool safety" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Safety Basics</span>
+            <h3 class="article-card-title">The Complete Guide to Drowning Prevention</h3>
+            <p class="article-card-excerpt">Learn the science of drowning and the 4 layers of protection every family needs.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a href="/education/when-to-start-swim-lessons.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/4668939/pexels-photo-4668939.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Mother holding baby in swimming pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Readiness</span>
+            <h3 class="article-card-title">When Should Kids Start Swim Lessons?</h3>
+            <p class="article-card-excerpt">Expert recommendations for the right age to begin swim lessons from birth to 5+.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 3 -->
+        <a href="/education/fear-of-water.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/346779/pexels-photo-346779.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Confident boy with goggles in swimming pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Confidence</span>
+            <h3 class="article-card-title">Helping Children Overcome Fear of Water</h3>
+            <p class="article-card-excerpt">Proven techniques to build water confidence without pressure or tears.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 4 -->
+        <a href="/education/pool-safety-rules.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/32898641/pexels-photo-32898641.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Young child with float ring at swimming pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Pool Safety</span>
+            <h3 class="article-card-title">Pool Safety Rules Every Family Should Know</h3>
+            <p class="article-card-excerpt">Essential safety rules with a free printable poster for your pool or backyard.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 5 -->
+        <a href="/education/toddler-water-safety.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/17680143/pexels-photo-17680143.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Toddler girl sitting safely by pool edge" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Toddlers</span>
+            <h3 class="article-card-title">Toddler Water Safety</h3>
+            <p class="article-card-excerpt">Toddlers are at highest risk. Learn supervision, fencing, and swim lessons for ages 1-3.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 6 -->
+        <a href="/education/swim-milestones-by-age.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/12918939/pexels-photo-12918939.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Children of different ages in swimming pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Development</span>
+            <h3 class="article-card-title">Swim Milestones by Age</h3>
+            <p class="article-card-excerpt">Realistic expectations for water skills at every age from 6 months to 5+.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 7 -->
+        <a href="/education/cpr-basics-parents.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/6296027/pexels-photo-6296027.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Person practicing CPR on training dummy" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">CPR & First Aid</span>
+            <h3 class="article-card-title">CPR Basics for Parents</h3>
+            <p class="article-card-excerpt">Step-by-step CPR instructions and when to call emergency services.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 8 -->
+        <a href="/education/lake-ocean-safety.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/29124852/pexels-photo-29124852.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Family at the beach with ocean waves" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Open Water</span>
+            <h3 class="article-card-title">Lake and Ocean Safety</h3>
+            <p class="article-card-excerpt">Waves, currents, and dangers unique to natural water bodies every parent should understand.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 9 -->
+        <a href="/education/bath-time-safety-infants.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/914253/pexels-photo-914253.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Baby being bathed safely by parent" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Bath Safety</span>
+            <h3 class="article-card-title">Bath Time Safety for Infants and Toddlers</h3>
+            <p class="article-card-excerpt">Essential bath safety rules including water temperature, supervision, and drowning prevention for babies and toddlers.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+        <!-- Article 10 -->
+        <a href="/education/choosing-a-swim-school.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/31522680/pexels-photo-31522680.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Swim instructor teaching child in pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Choosing a Program</span>
+            <h3 class="article-card-title">How to Choose a Swim School</h3>
+            <p class="article-card-excerpt">10 things to evaluate before enrolling — from certifications and class sizes to red flags to avoid.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 11 -->
+        <a href="/education/water-safety-special-needs.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/6539735/pexels-photo-6539735.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Child in aquatic therapy session" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Special Needs</span>
+            <h3 class="article-card-title">Water Safety for Children with Special Needs</h3>
+            <p class="article-card-excerpt">Adapted strategies, swim programs, and supervision essentials for children with autism, Down syndrome, and other conditions.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 12 -->
+        <a href="/education/summer-water-safety-checklist.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/27594326/pexels-photo-27594326.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Family enjoying summer pool day together" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Seasonal Safety</span>
+            <h3 class="article-card-title">Summer Water Safety Checklist</h3>
+            <p class="article-card-excerpt">Your complete summer checklist for pools, beaches, lakes, and water parks — with supervision rules and emergency prep.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 13 -->
+        <a href="/education/adult-learn-to-swim.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/6539742/pexels-photo-6539742.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Adult taking swimming lesson in pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Adult Swimming</span>
+            <h3 class="article-card-title">Adult Learn-to-Swim Guide</h3>
+            <p class="article-card-excerpt">It's never too late. Learn how adult swim lessons work, what to expect, and how to overcome fear of the water.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 14 -->
+        <a href="/education/vacation-water-safety.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/16042557/pexels-photo-16042557.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Family at hotel pool on vacation" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Travel Safety</span>
+            <h3 class="article-card-title">Water Safety While Traveling</h3>
+            <p class="article-card-excerpt">Hotels, resorts, beaches, and rental homes all present unique water risks. Stay safe on your family vacation.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 15 -->
+        <a href="/education/first-swim-lesson.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/12940785/pexels-photo-12940785.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Child learning to float during first swim lesson" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Getting Started</span>
+            <h3 class="article-card-title">Your Child's First Swim Lesson</h3>
+            <p class="article-card-excerpt">What to bring, what the instructor will do, and how to set your child up for success on day one.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 16 -->
+        <a href="/education/teach-child-to-float.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/8688530/pexels-photo-8688530.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Boy floating peacefully on his back in a swimming pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Survival Skills</span>
+            <h3 class="article-card-title">How to Teach Your Child to Float</h3>
+            <p class="article-card-excerpt">Back floating is the #1 survival skill. Learn age-appropriate techniques and common mistakes to avoid.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 17 -->
+        <a href="/education/water-safety-teens.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/9044071/pexels-photo-9044071.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Teenager swimming in pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Teen Safety</span>
+            <h3 class="article-card-title">Water Safety for Teens</h3>
+            <p class="article-card-excerpt">Peer pressure, overconfidence, and unsupervised swimming — what parents of teenagers need to know.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 18: Boating Safety (added Sprint 4) -->
+        <a href="/education/boating-safety-children.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/11158623/pexels-photo-11158623.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Family on boat with children wearing life jackets" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Seasonal Safety</span>
+            <h3 class="article-card-title">Boating Safety with Children</h3>
+            <p class="article-card-excerpt">Life jacket requirements, age-appropriate guidelines, and emergency procedures for family boating.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 19: Drowning Emergency Response (added Sprint 5) -->
+        <a href="/education/what-to-do-drowning-emergency.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/33425559/pexels-photo-33425559.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Lifeguard at pool ready for rescue" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Emergency Response</span>
+            <h3 class="article-card-title">What to Do If You See Someone Drowning</h3>
+            <p class="article-card-excerpt">Recognize real drowning signs, learn the Reach-Throw-Row-Go sequence, and know the critical mistakes to avoid in a water emergency.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 20: Backyard Pool Safety -->
+        <a href="/education/backyard-pool-safety.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/27594322/pexels-photo-27594322.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Family backyard pool with safety fence" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Home Safety</span>
+            <h3 class="article-card-title">Backyard Pool Safety: The Complete Parent's Guide</h3>
+            <p class="article-card-excerpt">Pool fencing requirements, water watcher systems, drain safety, chemical storage, and the layers of protection every pool owner needs.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 21: Water Safety Myths -->
+        <a href="/education/water-safety-myths.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/9044049/pexels-photo-9044049.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Child swimming underwater in pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Myth Busting</span>
+            <h3 class="article-card-title">10 Water Safety Myths That Put Kids at Risk</h3>
+            <p class="article-card-excerpt">Debunking dangerous misconceptions about drowning, floaties, swim lessons, and water safety that every parent should know.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 22: Rip Current Safety -->
+        <a href="/education/rip-current-safety.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/34277040/pexels-photo-34277040.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Ocean waves and rip current warning" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Beach Safety</span>
+            <h3 class="article-card-title">Rip Current Safety: How to Spot, Escape, and Survive</h3>
+            <p class="article-card-excerpt">Learn to identify rip currents, escape techniques that save lives, beach flag systems, and how to teach children about ocean safety.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 23: Summer Safety Checklist Printable -->
+        <a href="/education/summer-safety-checklist-printable.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/6363013/pexels-photo-6363013.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Kids having fun at summer pool party" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Printable Resource</span>
+            <h3 class="article-card-title">Summer Water Safety Checklist (Printable)</h3>
+            <p class="article-card-excerpt">A ready-to-print one-page checklist covering pool rules, beach essentials, emergency contacts, and daily water safety reminders.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 24: Inflatable Pool Safety -->
+        <a href="/education/inflatable-pool-safety.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/8887564/pexels-photo-8887564.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Children playing in inflatable pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Home Safety</span>
+            <h3 class="article-card-title">Inflatable Pool Safety: What Parents Need to Know</h3>
+            <p class="article-card-excerpt">Why kiddie pools are surprisingly dangerous and the supervision, storage, and water quality rules every family needs.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 25: Hotel Pool Safety -->
+        <a href="/education/hotel-pool-safety.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/34640971/pexels-photo-34640971.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Resort swimming pool with children" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Travel Safety</span>
+            <h3 class="article-card-title">Hotel & Resort Pool Safety: A Family Travel Guide</h3>
+            <p class="article-card-excerpt">How to assess hotel pool safety features, manage supervision in unfamiliar environments, and handle hot tub dangers for kids.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 26: Water Park Safety -->
+        <a href="/education/water-park-safety.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/15756917/pexels-photo-15756917.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Children on water park slides" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Recreation Safety</span>
+            <h3 class="article-card-title">Water Park Safety: How to Keep Kids Safe on Slides and Splash Pads</h3>
+            <p class="article-card-excerpt">Wave pool risks, water slide rules, splash pad hazards for toddlers, and how to pick a safe water park for your family.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 27: Cold Water Shock -->
+        <a href="/education/cold-water-shock.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/14815624/pexels-photo-14815624.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Cold water lake swimming" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Open Water Safety</span>
+            <h3 class="article-card-title">Cold Water Shock: The Hidden Danger Every Family Should Understand</h3>
+            <p class="article-card-excerpt">Learn the 1-10-1 principle, why spring and early summer are highest risk, and how to protect children in cold water situations.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 28: Swim Lesson FAQs -->
+        <a href="/education/swim-lesson-faqs.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/6011945/pexels-photo-6011945.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Child learning to swim with instructor guidance in indoor pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Parent Resources</span>
+            <h3 class="article-card-title">Swim Lesson FAQs: 15 Questions Every Parent Asks</h3>
+            <p class="article-card-excerpt">Expert answers on lesson timing, cost, group vs. private, progress expectations, and whether swim lessons prevent drowning.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 29: Water Rescue Skills for Kids -->
+        <a href="/education/water-rescue-skills-for-kids.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/14117466/pexels-photo-14117466.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Pool rescue ring life saver equipment" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Emergency Skills</span>
+            <h3 class="article-card-title">Water Rescue Skills for Kids: Reach-Throw-Don't-Go</h3>
+            <p class="article-card-excerpt">Teach children age-appropriate rescue skills, how to call 911, and why they should never attempt in-water rescues.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 30: Spring Break Water Safety -->
+        <a href="/education/spring-break-water-safety.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/1712837/pexels-photo-1712837.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Family enjoying vacation pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Seasonal Safety</span>
+            <h3 class="article-card-title">Spring Break Water Safety: How to Keep Kids Safe on Vacation</h3>
+            <p class="article-card-excerpt">Beach, resort pool, cruise, and lake safety essentials for spring break trips with children.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 31: Competitive Swimming Safety -->
+        <a href="/education/competitive-swimming-safety.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/31821293/pexels-photo-31821293.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Young competitive swimmer in lane" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Sports Safety</span>
+            <h3 class="article-card-title">Competitive Swimming Safety: Protecting Young Athletes</h3>
+            <p class="article-card-excerpt">Overtraining prevention, injury awareness, mental health support, and what parents should expect from swim coaches.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 32: Life Jacket Guide -->
+        <a href="/education/life-jacket-guide.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/12453010/pexels-photo-12453010.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Child wearing life jacket on boat" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Equipment Safety</span>
+            <h3 class="article-card-title">Life Jacket Guide: How to Choose, Fit, and Use PFDs</h3>
+            <p class="article-card-excerpt">PFD types explained, proper fit testing, Coast Guard approval, and why water wings are never a substitute.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 33: Signs of Drowning -->
+        <a href="/education/signs-of-drowning.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/13085643/pexels-photo-13085643.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Parent watching child at swimming pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Recognition & Response</span>
+            <h3 class="article-card-title">Signs of Drowning: What It Really Looks Like</h3>
+            <p class="article-card-excerpt">Real drowning is silent, not dramatic. Learn the Instinctive Drowning Response and how to spot distress in seconds.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 34: Pool Chemical Safety -->
+        <a href="/education/pool-chemical-safety.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/7223304/pexels-photo-7223304.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Pool water testing and chemical safety" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Pool Health</span>
+            <h3 class="article-card-title">Pool Chemical Safety: A Parent's Guide to Water Quality</h3>
+            <p class="article-card-excerpt">Chlorine levels, pH testing, recreational water illness prevention, and when to keep kids out of the pool.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 35: Water Safety for Babies -->
+        <a href="/education/water-safety-babies-under-1.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/4668953/pexels-photo-4668953.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Baby swimming with parent in pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Infant Safety</span>
+            <h3 class="article-card-title">Water Safety for Babies Under 1: New Parent Guide</h3>
+            <p class="article-card-excerpt">Bath safety, bucket hazards, baby swim classes, and building early water comfort for your infant.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 36: How Much Do Swim Lessons Cost -->
+        <a href="/education/swim-lessons-cost.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/32928609/pexels-photo-32928609.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Father and child bonding during a swim lesson at indoor pool" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Parent Resources</span>
+            <h3 class="article-card-title">How Much Do Swim Lessons Cost? (2026 Guide)</h3>
+            <p class="article-card-excerpt">Group lessons average $15–$55 per session; private lessons run $65–$100+. Learn what drives the price and how to find affordable options.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+        <!-- Article 37: Water Safety Month Guide -->
+        <a href="/education/water-safety-month-guide.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/5425095/pexels-photo-5425095.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Family learning water safety together" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Awareness</span>
+            <h3 class="article-card-title">Water Safety Month: Your Complete Family Guide for May 2026</h3>
+            <p class="article-card-excerpt">Activities, pledges, and resources to make the most of National Water Safety Month with your family.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 38: Secondary Drowning -->
+        <a href="/education/secondary-drowning-dry-drowning.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/6011945/pexels-photo-6011945.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Parent watching child after swimming" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Medical Safety</span>
+            <h3 class="article-card-title">Secondary Drowning & Dry Drowning: What Parents Need to Know</h3>
+            <p class="article-card-excerpt">Understand delayed drowning symptoms, when to seek emergency care, and what the medical evidence actually says.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 39: Pool Fence Laws -->
+        <a href="/education/swimming-pool-fence-laws-by-state.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/27594322/pexels-photo-27594322.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Pool with safety fence in backyard" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Legal & Safety</span>
+            <h3 class="article-card-title">Swimming Pool Fence Laws by State</h3>
+            <p class="article-card-excerpt">State-by-state pool barrier requirements, fence height rules, and what makes a compliant pool enclosure.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 40: Water Safety at Daycare -->
+        <a href="/education/water-safety-daycare-schools.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Children at daycare water play activity" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Childcare Safety</span>
+            <h3 class="article-card-title">Water Safety at Daycare & Schools</h3>
+            <p class="article-card-excerpt">Questions to ask your daycare about water activities, field trip policies, and supervision standards.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 41: Drowning Statistics -->
+        <a href="/education/drowning-statistics-facts.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/5425095/pexels-photo-5425095.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Water safety awareness infographic" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Data & Research</span>
+            <h3 class="article-card-title">Drowning Statistics & Facts: Understanding the Numbers</h3>
+            <p class="article-card-excerpt">CDC data on drowning by age group, location, season, and demographics — and what the numbers tell us about prevention.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+
+        <!-- Article 42: Water Safety for Grandparents -->
+        <a href="/education/water-safety-for-grandparents.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/5637746/pexels-photo-5637746.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Grandmother with granddaughter on waterfront pier" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Family Safety</span>
+            <h3 class="article-card-title">Water Safety for Grandparents</h3>
+            <p class="article-card-excerpt">Updated safety knowledge, supervision responsibilities, and emergency preparation for grandparents caring for grandchildren around water.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+        <!-- Article 43: Family Water Safety Plan -->
+        <a href="/education/family-water-safety-plan.html" class="article-card">
+          <div class="article-card-image"><img src="https://images.pexels.com/photos/5163369/pexels-photo-5163369.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="Mother and daughter sitting together at poolside discussing water safety" loading="lazy"></div>
+          <div class="article-card-body">
+            <span class="article-card-category">Family Safety</span>
+            <h3 class="article-card-title">How to Create a Family Water Safety Plan</h3>
+            <p class="article-card-excerpt">Build a step-by-step plan with supervision rules, swim skill assessments, emergency protocols, and seasonal checklists for every caregiver.</p>
+            <span class="article-card-link">Read Guide →</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- FIND LESSONS CTA -->
+      <div style="background: linear-gradient(135deg, #14b8a6, #0284c7); padding: 2rem; border-radius: 12px; text-align: center; margin-bottom: 2rem; color: white;">
+        <h2 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; color: white;">Looking for Swim Lessons?</h2>
+        <p style="font-size: 0.95rem; margin-bottom: 1rem; color: rgba(255,255,255,0.9);">Find quality, safety-focused swim programs near you.</p>
+        <a href="/swim-lessons/" style="display: inline-block; padding: 12px 28px; background: white; color: #0284c7; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s;" data-cta="edu-hub-find-lessons">Find Swim Lessons →</a>
+      </div>
+
+      <!-- NEWSLETTER SIGNUP -->
+      <div class="newsletter-section">
+        <h2>Free Printable: Summer Water Safety Checklist</h2>
+        <p>Instant access to our printable one-page checklist covering pool safety, beach rules, life jacket guidelines, and emergency prep. Plus weekly water safety tips.</p>
+        <form class="newsletter-form" data-form="newsletter-education" method="POST" action="https://formspree.io/f/mojpyqdo">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit">Get the Checklist</button>
+          <input type="hidden" name="source" value="education-hub-checklist">
+          <input type="text" name="_gotcha" style="display:none">
+        </form>
+        <p class="newsletter-privacy">Free forever. No spam. Unsubscribe anytime.</p>
+        <div class="newsletter-fallback-message"></div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-section">
+        <h2>We publish new guides regularly</h2>
+        <p>Have a topic you'd like us to cover? Let us know.</p>
+        <a href="/contact/" class="cta-link" data-cta="edu-hub-suggest-topic">Suggest a topic →</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="text-align: center;">
+      <p class="footer-title"><img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids</p>
+      <p class="footer-tagline">Trusted water safety education for every family</p>
+      <div class="footer-links">
+        <a href="/education/">Water Safety</a>
+        <a href="/swim-lessons/">Find Lessons</a>
+        <a href="/scholarships/">Scholarships</a>
+        <a href="/for-swim-schools/">For Swim Schools</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <p class="footer-contact">Email: <a href="mailto:waterwisekids.com@gmail.com">waterwisekids.com@gmail.com</a></p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WaterWiseKids. All rights reserved. | <a href="/privacy/">Privacy Policy</a> | <a href="/terms/">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Formspree AJAX submission — stays on page instead of redirecting
+    const newsletterForms = document.querySelectorAll('[data-form*="newsletter"]');
+
+    newsletterForms.forEach(form => {
+      const fallbackMessage = form.parentElement.querySelector('.newsletter-fallback-message');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Subscribing...';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if (response.ok) {
+            form.style.display = 'none';
+            fallbackMessage.style.display = 'block';
+            fallbackMessage.innerHTML = 'You\'re in! <a href="/education/summer-safety-checklist-printable.html" style="color: #075985; font-weight: 600; text-decoration: underline;">View and print your Summer Safety Checklist here</a>. We\'ll also send you weekly water safety tips.';
+            if (window.dataLayer) { var src = form.querySelector('[name="source"]'); window.dataLayer.push({ event: 'checklist_signup', signup_source: src ? src.value : 'education-hub' }); }
+          } else {
+            btn.disabled = false;
+            btn.textContent = 'Get the Checklist';
+            fallbackMessage.style.display = 'block';
+            fallbackMessage.textContent = 'Something went wrong. Please try again or email us at waterwisekids.com@gmail.com.';
+          }
+        }).catch(function() {
+          btn.disabled = false;
+          btn.textContent = 'Get the Checklist';
+          fallbackMessage.style.display = 'block';
+          fallbackMessage.textContent = 'Something went wrong. Please try again or email us at waterwisekids.com@gmail.com.';
+        });
+      });
+    });
+  </script>
+  <script>
+  // ── Search & Category Filter ──
+  (function() {
+    var searchInput = document.getElementById('articleSearch');
+    var clearBtn = document.getElementById('searchClear');
+    var grid = document.getElementById('articlesGrid');
+    var cards = Array.from(grid.querySelectorAll('.article-card'));
+    var filtersWrap = document.getElementById('categoryFilters');
+    var resultsCount = document.getElementById('resultsCount');
+    var activeCat = 'all';
+
+    // Build category buttons from actual card data
+    var cats = {};
+    cards.forEach(function(c) {
+      var tag = c.querySelector('.article-card-category');
+      if (tag) { var t = tag.textContent.trim(); cats[t] = (cats[t] || 0) + 1; }
+    });
+    var sorted = Object.keys(cats).sort();
+    sorted.forEach(function(name) {
+      var btn = document.createElement('button');
+      btn.className = 'cat-btn';
+      btn.setAttribute('data-cat', name);
+      btn.textContent = name;
+      filtersWrap.appendChild(btn);
+    });
+
+    function filterCards() {
+      var q = searchInput.value.toLowerCase().trim();
+      clearBtn.style.display = q ? 'flex' : 'none';
+      var shown = 0;
+      cards.forEach(function(c) {
+        var title = (c.querySelector('.article-card-title') || {}).textContent || '';
+        var excerpt = (c.querySelector('.article-card-excerpt') || {}).textContent || '';
+        var cat = (c.querySelector('.article-card-category') || {}).textContent || '';
+        var matchSearch = !q || title.toLowerCase().indexOf(q) !== -1 || excerpt.toLowerCase().indexOf(q) !== -1 || cat.toLowerCase().indexOf(q) !== -1;
+        var matchCat = activeCat === 'all' || cat.trim() === activeCat;
+        if (matchSearch && matchCat) { c.style.display = ''; shown++; } else { c.style.display = 'none'; }
+      });
+      if (q || activeCat !== 'all') {
+        resultsCount.textContent = shown + ' guide' + (shown !== 1 ? 's' : '') + ' found';
+        resultsCount.style.display = 'block';
+      } else {
+        resultsCount.style.display = 'none';
+      }
+      // Show / hide no-results message
+      var noMsg = document.getElementById('noResults');
+      if (shown === 0) {
+        if (!noMsg) {
+          noMsg = document.createElement('div');
+          noMsg.id = 'noResults';
+          noMsg.className = 'no-results';
+          noMsg.innerHTML = '<p><strong>No guides found.</strong></p><p>Try a different search term or clear your filters.</p>';
+          grid.parentNode.insertBefore(noMsg, grid.nextSibling);
+        }
+        noMsg.style.display = 'block';
+      } else if (noMsg) { noMsg.style.display = 'none'; }
+    }
+
+    searchInput.addEventListener('input', filterCards);
+    clearBtn.addEventListener('click', function() { searchInput.value = ''; filterCards(); searchInput.focus(); });
+
+    filtersWrap.addEventListener('click', function(e) {
+      if (e.target.classList.contains('cat-btn')) {
+        filtersWrap.querySelectorAll('.cat-btn').forEach(function(b) { b.classList.remove('active'); });
+        e.target.classList.add('active');
+        activeCat = e.target.getAttribute('data-cat');
+        filterCards();
+      }
+    });
+  })();
+  </script>
+  <script src="/assets/js/main.js?v=20260407b"></script>
+<!-- INLINE MOBILE CSS (temporary CDN cache bypass) -->
+<style id="mobile-inline-css" media="(max-width: 768px)">
+/* ══════════════════════════════════════════════════════════════════════════════
+   WaterWiseKids — MOBILE APP EXPERIENCE v3
+   Airbnb-inspired: minimal header, search pill, category icons, card feed,
+   offer rows, stat chips, section dividers, polished bottom nav.
+   Only active at ≤768px — desktop is completely untouched.
+   2026-04-07
+═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Hidden on desktop */
+.mobile-bottom-nav,
+.mobile-app-search-header,
+.mobile-category-bar,
+.mobile-divider,
+.mobile-header-action { display: none; }
+
+@media (max-width: 768px) {
+
+  /* ═══════════════════════════════════
+     GLOBAL
+  ═══════════════════════════════════ */
+  * { -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+
+  body {
+    padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+    background: #fff;
+    animation: appFadeIn 0.3s ease-out;
+  }
+
+  @keyframes appFadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ═══════════════════════════════════
+     HEADER — Minimal sticky app bar
+  ═══════════════════════════════════ */
+  .hamburger { display: none !important; }
+  .nav-links { display: none !important; }
+
+  header {
+    padding: 0 !important;
+    background: rgba(255,255,255,0.97) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: none !important;
+    box-shadow: none !important;
+    position: sticky !important;
+    top: 0;
+    z-index: 200;
+  }
+
+  header .container {
+    padding: 0 16px !important;
+  }
+
+  header nav {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-size: 0.95rem !important;
+    font-weight: 800 !important;
+    color: #0284c7 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .nav-logo img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* Header action button (injected by JS) */
+  .mobile-header-action {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    align-items: center;
+    justify-content: center;
+    color: #525252;
+  }
+
+  .mobile-header-action svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2;
+  }
+
+  /* ═══════════════════════════════════
+     HERO — Compact, content-first
+  ═══════════════════════════════════ */
+  .hero {
+    padding: 16px 20px 8px !important;
+    background: #fff !important;
+    color: #171717 !important;
+    text-align: left !important;
+  }
+
+  .hero-content {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    color: #171717 !important;
+    margin-bottom: 6px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.3px !important;
+  }
+
+  .hero p {
+    font-size: 0.85rem !important;
+    color: #737373 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  .hero-ctas { display: none !important; }
+
+  /* Page Hero (education hub, etc.) */
+  .page-hero,
+  .page-hero--edu {
+    padding: 12px 20px 8px !important;
+    min-height: auto !important;
+    background: #fff !important;
+    text-align: left !important;
+  }
+
+  .page-hero h1,
+  .page-hero--edu h1 {
+    font-size: 1.35rem !important;
+    color: #171717 !important;
+    margin-bottom: 2px !important;
+    font-weight: 800 !important;
+  }
+
+  .page-hero .hero-sub,
+  .page-hero--edu .hero-sub {
+    font-size: 0.8rem !important;
+    color: #737373 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Breadcrumb — minimal */
+  .page-breadcrumb {
+    padding: 6px 20px 0 !important;
+    background: #fff !important;
+    font-size: 0.7rem !important;
+  }
+
+  /* ═══════════════════════════════════
+     SEARCH PILL — Airbnb style
+  ═══════════════════════════════════ */
+  .mobile-app-search-header {
+    display: block;
+    padding: 4px 16px 12px;
+    background: #fff;
+  }
+
+  .mobile-app-search-pill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 32px;
+    padding: 12px 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s;
+  }
+
+  .mobile-app-search-pill:active {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+
+  .mobile-app-search-pill svg {
+    width: 18px;
+    height: 18px;
+    color: #0284c7;
+    flex-shrink: 0;
+  }
+
+  .search-pill-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+  }
+
+  .search-pill-title {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #171717;
+  }
+
+  .search-pill-sub {
+    font-size: 0.68rem;
+    color: #a3a3a3;
+  }
+
+  /* ═══════════════════════════════════
+     CATEGORY BAR — Horizontal scroll icons
+  ═══════════════════════════════════ */
+  .mobile-category-bar {
+    display: flex;
+    gap: 0;
+    padding: 0 16px;
+    overflow-x: auto;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 48px;
+    z-index: 190;
+  }
+
+  .mobile-category-bar::-webkit-scrollbar { display: none; }
+  .mobile-category-bar { scrollbar-width: none; }
+
+  .mobile-cat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px 8px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: #a3a3a3;
+    white-space: nowrap;
+    flex-shrink: 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s;
+    text-decoration: none;
+  }
+
+  .mobile-cat-item.active {
+    color: #171717;
+    border-bottom-color: #171717;
+  }
+
+  .mobile-cat-item:active { opacity: 0.7; }
+
+  .mobile-cat-item svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.5;
+  }
+
+  /* ═══════════════════════════════════
+     STATS BAR — Horizontal chip pills
+  ═══════════════════════════════════ */
+  .stats-bar {
+    background: #fff !important;
+    padding: 12px 0 12px 20px !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .stats-bar::-webkit-scrollbar { display: none; }
+  .stats-bar { scrollbar-width: none; }
+
+  .stats-bar-inner {
+    display: flex !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    padding-right: 20px;
+  }
+
+  .stat-item {
+    background: #e0f2fe;
+    padding: 12px 20px;
+    border-radius: 14px;
+    min-width: 110px;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .stat-number {
+    color: #075985 !important;
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+  }
+
+  .stat-label {
+    color: #0284c7 !important;
+    font-size: 0.62rem !important;
+    font-weight: 600 !important;
+    margin-top: 2px;
+  }
+
+  /* ═══════════════════════════════════
+     SECTION DIVIDERS
+  ═══════════════════════════════════ */
+  .mobile-divider {
+    display: block;
+    height: 8px;
+    background: #fafafa;
+    border: none;
+    margin: 0;
+  }
+
+  /* ═══════════════════════════════════
+     SECTION HEADERS
+  ═══════════════════════════════════ */
+  .section-header {
+    text-align: left !important;
+    margin-bottom: 16px !important;
+    padding: 0 4px;
+  }
+
+  .section-header h2 {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.3px;
+  }
+
+  .section-header p {
+    font-size: 0.81rem !important;
+    margin: 0 !important;
+  }
+
+  .section-title {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.3px;
+    margin-bottom: 16px !important;
+  }
+
+  /* ═══════════════════════════════════
+     CONTENT SECTIONS — Clean spacing
+  ═══════════════════════════════════ */
+  .what-we-offer,
+  .featured-articles,
+  .about-snippet {
+    padding: 20px !important;
+    background: #fff;
+  }
+
+  /* ═══════════════════════════════════
+     OFFER CARDS — Row layout with chevron
+     (iOS Settings style)
+  ═══════════════════════════════════ */
+  .offer-cards {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .offer-card {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    background: #fff !important;
+    border: 1px solid #f5f5f5 !important;
+    border-radius: 16px !important;
+    padding: 16px !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04) !important;
+    transition: transform 0.1s !important;
+  }
+
+  .offer-card:active { transform: scale(0.98); }
+
+  .offer-card:hover {
+    transform: none !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04) !important;
+    border-color: #f5f5f5 !important;
+  }
+
+  .offer-icon {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 14px;
+    background: #e0f2fe;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem !important;
+    margin-bottom: 0 !important;
+    flex-shrink: 0;
+  }
+
+  .offer-card h3 {
+    font-size: 0.88rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .offer-card p {
+    font-size: 0.75rem !important;
+    color: #737373 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Hide the original CTA button in offer cards */
+  .offer-card .btn,
+  .offer-card .offer-cta {
+    display: none !important;
+  }
+
+  /* ═══════════════════════════════════
+     ARTICLE CARDS — Large image, clean
+  ═══════════════════════════════════ */
+  .articles-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .article-card {
+    background: #fff !important;
+    border: none !important;
+    border-radius: 16px !important;
+    overflow: hidden;
+    box-shadow: none !important;
+    transition: transform 0.15s !important;
+  }
+
+  .article-card:active { transform: scale(0.98); }
+
+  .article-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+  }
+
+  .article-card-image {
+    height: 200px !important;
+    border-radius: 16px !important;
+    overflow: hidden;
+  }
+
+  .article-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .article-card-body {
+    padding: 14px 4px 4px !important;
+  }
+
+  .article-card-category {
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    color: #0284c7 !important;
+    background: none !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin-bottom: 4px !important;
+    display: inline-block;
+  }
+
+  .article-card-title {
+    font-size: 0.94rem !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+    color: #171717 !important;
+  }
+
+  .article-card-excerpt {
+    font-size: 0.81rem !important;
+    color: #737373 !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Hide "Read Guide →" — whole card is tappable */
+  .article-card-link { display: none !important; }
+
+  /* ═══════════════════════════════════
+     SEARCH BAR (education hub)
+  ═══════════════════════════════════ */
+  .search-filter-bar {
+    padding: 12px 0 !important;
+    border: none !important;
+    margin-top: 0 !important;
+  }
+
+  .search-box input {
+    border-radius: 24px !important;
+    padding: 12px 40px 12px 42px !important;
+    font-size: 0.88rem !important;
+    background: #f5f5f5 !important;
+    border: 1px solid #e5e5e5 !important;
+    box-shadow: none !important;
+  }
+
+  .search-box input:focus {
+    border-color: #0284c7 !important;
+    background: #fff !important;
+    box-shadow: 0 0 0 3px rgba(2,132,199,0.1) !important;
+  }
+
+  .category-filters {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .category-filters::-webkit-scrollbar { display: none; }
+
+  .cat-btn {
+    border-radius: 20px !important;
+    padding: 7px 16px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    white-space: nowrap;
+    border: 1px solid #e5e5e5 !important;
+    background: #fff !important;
+    color: #525252 !important;
+    transition: all 0.15s !important;
+  }
+
+  .cat-btn.active {
+    background: #171717 !important;
+    color: #fff !important;
+    border-color: #171717 !important;
+  }
+
+  /* Sticky search */
+  .search-filter-bar.sticky {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    right: 0;
+    z-index: 199;
+    background: rgba(255,255,255,0.98) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 10px 16px 6px !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  }
+
+  .search-sticky-spacer { display: none; }
+  .search-sticky-spacer.active { display: block; }
+
+  /* ═══════════════════════════════════
+     NEWSLETTER — Rounded card
+  ═══════════════════════════════════ */
+  .newsletter-section,
+  .newsletter,
+  section[class*="newsletter"] {
+    margin: 16px 20px !important;
+    border-radius: 20px !important;
+    padding: 24px 22px !important;
+    background: #e0f2fe !important;
+    border: none !important;
+  }
+
+  .newsletter-section h2,
+  .newsletter h2,
+  section[class*="newsletter"] h2 {
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+    color: #171717 !important;
+  }
+
+  .newsletter-section p,
+  .newsletter p {
+    font-size: 0.75rem !important;
+    text-align: left !important;
+    color: #525252 !important;
+  }
+
+  .newsletter-section input[type="email"],
+  .newsletter input[type="email"],
+  section[class*="newsletter"] input[type="email"] {
+    border-radius: 24px !important;
+    padding: 11px 16px !important;
+    font-size: 0.81rem !important;
+    border: 1px solid #e5e5e5 !important;
+    background: #fff !important;
+  }
+
+  .newsletter-section button[type="submit"],
+  .newsletter button[type="submit"],
+  section[class*="newsletter"] button[type="submit"] {
+    border-radius: 24px !important;
+    padding: 11px 18px !important;
+    font-size: 0.81rem !important;
+    font-weight: 700 !important;
+  }
+
+  /* ═══════════════════════════════════
+     B2B CALLOUT
+  ═══════════════════════════════════ */
+  .b2b-callout,
+  section[class*="b2b"] {
+    margin: 0 20px 16px !important;
+    border-radius: 20px !important;
+    padding: 24px 22px !important;
+  }
+
+  /* ═══════════════════════════════════
+     PROGRAMS GRID
+  ═══════════════════════════════════ */
+  .state-grid,
+  .programs-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .state-card,
+  .program-card {
+    border-radius: 16px !important;
+    padding: 16px !important;
+    border: none !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04) !important;
+  }
+
+  /* ═══════════════════════════════════
+     BOTTOM NAVIGATION BAR
+  ═══════════════════════════════════ */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 300;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 -1px 8px rgba(0,0,0,0.04);
+    padding: 6px 0 calc(6px + env(safe-area-inset-bottom, 0px));
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .mobile-bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+    color: #a3a3a3;
+    font-size: 0.62rem;
+    font-weight: 500;
+    padding: 4px 12px 2px;
+    position: relative;
+    transition: color 0.2s;
+  }
+
+  .mobile-bottom-nav a.active {
+    color: #0284c7;
+    font-weight: 700;
+  }
+
+  .mobile-bottom-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #0284c7;
+  }
+
+  .mobile-bottom-nav svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.6;
+    transition: transform 0.15s;
+  }
+
+  .mobile-bottom-nav a.active svg {
+    stroke-width: 2.2;
+    transform: scale(1.05);
+  }
+
+  .mobile-bottom-nav span { display: block; }
+
+  /* ═══════════════════════════════════
+     FOOTER — Minimal
+  ═══════════════════════════════════ */
+  footer {
+    background: #fff !important;
+    padding: 20px !important;
+    text-align: center;
+  }
+
+  footer .footer-links { display: none !important; }
+
+  footer .footer-bottom {
+    font-size: 0.68rem;
+    color: #a3a3a3;
+  }
+
+  /* ═══════════════════════════════════
+     GENERAL OVERRIDES
+  ═══════════════════════════════════ */
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .btn {
+    border-radius: 24px !important;
+    font-weight: 700 !important;
+  }
+
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Back-to-top above bottom nav */
+  .back-to-top,
+  [class*="back-to-top"],
+  a[href="#top"] {
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    border-radius: 50% !important;
+  }
+
+} /* end @media (max-width: 768px) */
+</style>
+<script id="mobile-inline-js">
+if(window.innerWidth<=768){
+/* ══════════════════════════════════════════════════════════════════════════════
+   WaterWiseKids — Mobile App Experience v3
+   Airbnb-inspired: search pill, category bar, header action, bottom nav,
+   section dividers, offer chevrons, sticky search.
+   Only runs at ≤768px — no effect on desktop.
+   2026-04-07
+═══════════════════════════════════════════════════════════════════════════════ */
+(function () {
+  'use strict';
+  if (window.innerWidth > 768) return;
+
+  var path = window.location.pathname;
+  var isHome = (path === '/' || path === '/index.html');
+  var isEdu = (path.indexOf('/education') === 0 && (path === '/education/' || path === '/education/index.html'));
+
+  // ═══════════════════════════════════
+  // HEADER ACTION BUTTON (notification or search icon)
+  // ═══════════════════════════════════
+  var headerNav = document.querySelector('header nav');
+  if (headerNav) {
+    var actionBtn = document.createElement('div');
+    actionBtn.className = 'mobile-header-action';
+    if (isHome) {
+      // Bell icon
+      actionBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/></svg>';
+    } else {
+      // Search icon — tapping goes to education hub
+      actionBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/></svg>';
+      actionBtn.style.cursor = 'pointer';
+      actionBtn.addEventListener('click', function () {
+        window.location.href = '/education/';
+      });
+    }
+    headerNav.appendChild(actionBtn);
+  }
+
+  // ═══════════════════════════════════
+  // SEARCH PILL (homepage only)
+  // ═══════════════════════════════════
+  if (isHome) {
+    var hero = document.querySelector('.hero');
+    if (hero) {
+      var searchHeader = document.createElement('div');
+      searchHeader.className = 'mobile-app-search-header';
+      searchHeader.innerHTML =
+        '<a href="/education/" class="mobile-app-search-pill">' +
+          '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">' +
+            '<circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/>' +
+          '</svg>' +
+          '<div class="search-pill-text">' +
+            '<span class="search-pill-title">Search safety guides</span>' +
+            '<span class="search-pill-sub">Drowning prevention \u00b7 Pool safety \u00b7 CPR</span>' +
+          '</div>' +
+        '</a>';
+      hero.parentNode.insertBefore(searchHeader, hero.nextSibling);
+    }
+  }
+
+  // ═══════════════════════════════════
+  // HORIZONTAL CATEGORY BAR (homepage)
+  // ═══════════════════════════════════
+  if (isHome) {
+    var categories = [
+      { label: 'All',           icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>', href: '/education/', active: true },
+      { label: 'Pool Safety',   icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z"/></svg>', href: '/education/pool-safety-rules.html' },
+      { label: 'Toddlers',      icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"/></svg>', href: '/education/toddler-water-safety.html' },
+      { label: 'CPR',            icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>', href: '/education/cpr-basics-parents.html' },
+      { label: 'Lessons',       icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/></svg>', href: '/education/when-to-start-swim-lessons.html' },
+      { label: 'Open Water',    icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.485 0 4.5 4.03 4.5 9s-2.015 9-4.5 9m0-18c-2.485 0-4.5 4.03-4.5 9s2.015 9 4.5 9M3.25 8.25h17.5M3.25 15.75h17.5"/></svg>', href: '/education/lake-ocean-safety.html' },
+      { label: 'Bath Time',     icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>', href: '/education/bath-time-safety-infants.html' }
+    ];
+
+    var catBar = document.createElement('div');
+    catBar.className = 'mobile-category-bar';
+
+    categories.forEach(function (cat) {
+      var a = document.createElement('a');
+      a.href = cat.href;
+      a.className = 'mobile-cat-item' + (cat.active ? ' active' : '');
+      a.innerHTML = cat.icon + '<span>' + cat.label + '</span>';
+      catBar.appendChild(a);
+    });
+
+    // Insert after search pill or after hero
+    var insertTarget = document.querySelector('.mobile-app-search-header') || document.querySelector('.hero');
+    if (insertTarget && insertTarget.parentNode) {
+      insertTarget.parentNode.insertBefore(catBar, insertTarget.nextSibling);
+    }
+  }
+
+  // ═══════════════════════════════════
+  // SECTION DIVIDERS (homepage)
+  // ═══════════════════════════════════
+  if (isHome) {
+    var dividerTargets = document.querySelectorAll('.stats-bar, .what-we-offer, .featured-articles, .newsletter-section, .b2b-callout, .about-snippet');
+    dividerTargets.forEach(function (sec) {
+      if (sec.previousElementSibling && !sec.previousElementSibling.classList.contains('mobile-divider')) {
+        var divider = document.createElement('div');
+        divider.className = 'mobile-divider';
+        sec.parentNode.insertBefore(divider, sec);
+      }
+    });
+  }
+
+  // ═══════════════════════════════════
+  // OFFER CARD CHEVRONS
+  // ═══════════════════════════════════
+  var offerCards = document.querySelectorAll('.offer-card');
+  offerCards.forEach(function (card) {
+    // Wrap existing content in a flex container if not already
+    var existingArrow = card.querySelector('.mobile-offer-arrow');
+    if (!existingArrow) {
+      var arrow = document.createElement('span');
+      arrow.className = 'mobile-offer-arrow';
+      arrow.style.cssText = 'margin-left:auto;color:#a3a3a3;flex-shrink:0;display:flex;';
+      arrow.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>';
+      card.appendChild(arrow);
+    }
+  });
+
+  // ═══════════════════════════════════
+  // BOTTOM NAVIGATION BAR
+  // ═══════════════════════════════════
+  var nav = document.createElement('nav');
+  nav.className = 'mobile-bottom-nav';
+  nav.setAttribute('aria-label', 'Mobile navigation');
+
+  var items = [
+    { label: 'Home',    href: '/',              icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>' },
+    { label: 'Guides',  href: '/education/',    icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>' },
+    { label: 'Lessons', href: '/swim-lessons/',  icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>' },
+    { label: 'Jobs',    href: '/aquatic-jobs/',  icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75a23.978 23.978 0 01-7.577-1.22 2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0"/></svg>' },
+    { label: 'About',   href: '/about/',         icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"/></svg>' }
+  ];
+
+  items.forEach(function (item) {
+    var a = document.createElement('a');
+    a.href = item.href;
+    a.innerHTML = item.icon + '<span>' + item.label + '</span>';
+
+    var isActive = false;
+    if (item.href === '/' && (path === '/' || path === '/index.html')) isActive = true;
+    else if (item.href !== '/' && path.indexOf(item.href) === 0) isActive = true;
+
+    if (isActive) a.classList.add('active');
+    nav.appendChild(a);
+  });
+
+  document.body.appendChild(nav);
+
+  // ═══════════════════════════════════
+  // STICKY SEARCH (education hub)
+  // ═══════════════════════════════════
+  var searchBar = document.querySelector('.search-filter-bar');
+  if (searchBar) {
+    var spacer = document.createElement('div');
+    spacer.className = 'search-sticky-spacer';
+    searchBar.parentNode.insertBefore(spacer, searchBar.nextSibling);
+
+    var stickyOffset = searchBar.offsetTop;
+
+    function checkSticky() {
+      if (window.pageYOffset > stickyOffset - 48) {
+        searchBar.classList.add('sticky');
+        spacer.classList.add('active');
+        spacer.style.height = searchBar.offsetHeight + 'px';
+      } else {
+        searchBar.classList.remove('sticky');
+        spacer.classList.remove('active');
+        spacer.style.height = '0';
+      }
+    }
+
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          checkSticky();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+})();
+}
+</script>
+<!-- END INLINE MOBILE -->
+</body>
+</html>
