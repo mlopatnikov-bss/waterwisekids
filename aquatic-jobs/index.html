@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aquatic Jobs: Find Swim Instructor Jobs | WaterWiseKids</title>
   <meta name="description" content="Post and discover aquatic industry jobs. Connect swim schools with qualified instructors and aquatic professionals on WaterWiseKids' free job board.">
+  <meta name="canonical" content="https://waterwisekids.com/aquatic-jobs/">
+
   <!-- Open Graph Tags -->
   <meta property="og:title" content="Aquatic Jobs — Find & Post Swim Instructor Positions | WaterWiseKids">
   <meta property="og:description" content="Post and discover aquatic industry jobs. Connect swim schools with qualified instructors and aquatic professionals on WaterWiseKids' job board.">
@@ -746,10 +748,10 @@
     </div>
   </header>
 
-  <section class="page-hero" style="background: linear-gradient(135deg, #0284c7 0%, #075985 100%);">
-    <div class="container">
-      <h1 style="color: #ffffff;">Aquatic Jobs Board</h1>
-      <p style="color: #ffffff;">Connect swim schools with qualified aquatic professionals. Post open positions and discover talent in the aquatic industry.</p>
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1>Aquatic Jobs Board</h1>
+      <p class="hero-sub">Connect swim schools with qualified aquatic professionals. Post open positions and discover talent in the aquatic industry.</p>
     </div>
   </section>
 
@@ -1474,7 +1476,7 @@
         </div>
         <p class="job-company">${escapeHtml(job.company)}</p>
         <p class="job-location">${escapeHtml(job.city)}, ${escapeHtml(job.state)}</p>
-        <p class="job-pay">${escapeHtml(job.pay)}</p>
+        ${job.pay ? `<p class="job-pay">💰 ${escapeHtml(job.pay)}</p>` : ''}
         <p class="job-description-excerpt">${escapeHtml(excerpt)}</p>
         <p class="job-posted-date">Posted ${postedDate}</p>
       `;
