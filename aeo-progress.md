@@ -15,7 +15,7 @@ Each article is checked against the full 8-point checklist:
 
 ## ✅ Optimized Articles
 
-### Run 1 — 2026-04-08
+### Run 1 — 2026-04-08 (articles 1–3)
 
 #### `best-age-for-swim-lessons.html`
 - **Status:** ✅ Optimized
@@ -53,6 +53,8 @@ Each article is checked against the full 8-point checklist:
   - Speakable metadata confirmed present
 
 ---
+
+### Run 2 — 2026-04-09 (articles 4–6)
 
 #### `education/signs-of-drowning.html`
 - **Status:** ✅ Optimized
