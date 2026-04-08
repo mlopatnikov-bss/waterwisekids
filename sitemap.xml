@@ -1,1453 +1,1713 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.waterwisekids.com/about.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.waterwisekids.com/about/</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/adult-swimming-lessons.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/advertise.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/advertise/</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/aquatic-jobs/</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/are-infant-swim-lessons-safe.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/articles.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-abington-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-ambler-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-andorra-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-asbury-park-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-belmar-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-brick-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-brick-township-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-brielle-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-cheltenham-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-elkins-park-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-flourtown-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-glenside-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-howell-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-jenkintown-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-jersey-shore-beaches.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-jersey-shore.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-monmouth-county-beaches.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-monmouth-county-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-monmouth-county-shore-towns.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-mount-airy-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-northwest-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-oakhurst-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-ocean-county-beaches.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-ocean-county-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-ocean-grove-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-sea-girt-beaches.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-sea-girt-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-spring-house-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-toms-river-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-wyndmoor-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/benefits-of-swimming-for-kids.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/best-age-for-swim-lessons.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/british-swim-school/jersey-shore.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/british-swim-school/northwest-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/can-babies-swim.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/common-swimming-mistakes-kids-make.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/contact/</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/do-swim-lessons-reduce-drowning-risk.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/adult-learn-to-swim.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/backyard-pool-safety.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/bath-time-safety-infants.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/boating-safety-children.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/choosing-a-swim-school.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/cold-water-shock.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/competitive-swimming-safety.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/cpr-basics-parents.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/drowning-prevention-guide.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/drowning-statistics-facts.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/family-water-safety-plan.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/fear-of-water.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/first-swim-lesson.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/hotel-pool-safety.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/adult-learn-to-swim.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/backyard-pool-safety.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/bath-time-safety-infants.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/boating-safety-children.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/choosing-a-swim-school.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/cold-water-shock.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/competitive-swimming-safety.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/cpr-basics-parents.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/drowning-prevention-guide.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/drowning-statistics-facts.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/family-water-safety-plan.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/fear-of-water.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/first-swim-lesson.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/hotel-pool-safety.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/inflatable-pool-safety.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/lake-ocean-safety.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/life-jacket-guide.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/pool-chemical-safety.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/pool-party-safety.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/swimmers-ear-prevention.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/water-wings-vs-life-jackets.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/lightning-pool-safety.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/shallow-water-blackout.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/summer-camp-water-safety.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/pool-alarms-safety-devices.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/natural-swimming-holes-safety.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/swim-lesson-levels-explained.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/renting-home-with-pool-safety.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/open-water-survival-skills.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/pool-alarms-safety-devices.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/pool-chemical-safety.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/pool-party-safety.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/pool-safety-rules-printable.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/pool-safety-rules.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/renting-home-with-pool-safety.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/rip-current-safety.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/secondary-drowning-dry-drowning.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/shallow-water-blackout.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/signs-of-drowning.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/spring-break-water-safety.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/summer-camp-water-safety.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/summer-safety-checklist-printable.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/summer-water-safety-checklist.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/swim-lesson-faqs.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/swim-lesson-levels-explained.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/swim-lesson-readiness-checklist.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/swim-lesson-readiness-printable.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/swim-lessons-cost.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/swim-milestones-by-age.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/swimmers-ear-prevention.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/swimming-pool-fence-laws-by-state.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/teach-child-to-float.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/toddler-water-safety.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/vacation-water-safety.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/water-park-safety.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/water-rescue-skills-for-kids.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/water-safety-babies-under-1.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/water-safety-daycare-schools.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/water-safety-for-grandparents.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/water-safety-month-guide.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/water-safety-myths.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/water-safety-special-needs.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/water-safety-teens.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/water-wings-vs-life-jackets.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/what-to-do-drowning-emergency.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/when-to-start-swim-lessons.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/find-swim-lessons.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/for-swim-schools/</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/gear.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/gear/</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/how-long-does-it-take-a-child-to-learn-to-swim.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/how-long-should-swim-lessons-last.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/how-often-should-kids-take-swim-lessons.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/how-parents-can-support-swim-lessons-at-home.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/how-to-build-water-confidence-in-children.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/how-to-choose-swim-lessons-for-kids.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/how-to-get-kids-comfortable-in-water.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/how-to-help-a-child-overcome-fear-of-water.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/how-to-prepare-kids-for-first-swim-lesson.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/how-to-prevent-child-drowning.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/how-to-teach-a-child-to-float.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/how-to-teach-kids-to-swim.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.waterwisekids.com/index.html</loc>
+    <loc>https://www.waterwisekids.com/</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/is-it-ever-too-late-for-a-child-to-learn-to-swim.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/jobs.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/jobs/</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/jobs/post.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-abington-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-ambler-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-andorra-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-asbury-park-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-belmar-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-brick-beaches.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-brick-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-brick-township-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-brielle-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-cheltenham-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-cheltenham-township-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-elkins-park-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-flourtown-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-glenside-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-howell-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-jenkintown-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-jersey-shore-beaches.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-monmouth-county-beaches.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-monmouth-county-shore-towns.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-mount-airy-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-northwest-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-oakhurst-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-ocean-county-beaches.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-ocean-county-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-ocean-grove-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-sea-girt-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-spring-house-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-toms-river-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-wyndmoor-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/pool-safety-rules-for-kids.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/privacy/</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/private-vs-group-swim-lessons-for-kids.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/questions-to-ask-a-swim-school.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/scholarships/</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/signs-a-swim-program-is-good-for-beginners.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/signs-your-child-is-ready-for-swim-lessons.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/special-needs-swimming.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons-andorra-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons-asbury-park-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons-brick-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons-cheltenham-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons-howell-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons-jersey-shore.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons-monmouth-county-kids.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons-monmouth-county-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons-ocean-county-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons-toms-river-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/swim-lessons/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/ambler-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/asbury-park-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/brick-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/cheltenham-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/swim-lessons/directory/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/alabama.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/alaska.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/arizona.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/arkansas.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/california.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/colorado.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/connecticut.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/delaware.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/florida.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/georgia.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/hawaii.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/idaho.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/illinois.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/swim-lessons/directory/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/indiana.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/iowa.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/kansas.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/kentucky.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/louisiana.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/maine.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/maryland.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/massachusetts.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/michigan.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/minnesota.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/mississippi.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/missouri.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/montana.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/nebraska.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/nevada.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/new-hampshire.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/new-jersey.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/new-mexico.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/new-york.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/north-carolina.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/north-dakota.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/ohio.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/oklahoma.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/oregon.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/pennsylvania.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/rhode-island.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/south-carolina.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/south-dakota.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/tennessee.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/texas.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/utah.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/vermont.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/virginia.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/washington-dc.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/washington.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/west-virginia.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/wisconsin.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/directory/wyoming.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/elkins-park-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/flourtown-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/glenside-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/howell-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/swim-lessons/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/jersey-shore.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/monmouth-county-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/northwest-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/ocean-county-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-safety-tips-for-parents.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-schools.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/swim-schools/add.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-schools/</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/teens.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/teens/aquatics-careers.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/teens/</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/teens/aquatics-careers.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/teens/lifeguard-certification.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/teens/scholarships.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/teens/swim-instructor.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/terms/</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-abington-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-ambler-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-andorra-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-asbury-park-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-belmar-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-brick-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-brick-township-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-brielle-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-cheltenham-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-elkins-park-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-flourtown-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-glenside-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-howell-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-jenkintown-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-jersey-shore-beaches.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-jersey-shore.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-monmouth-county-beaches.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-monmouth-county-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-monmouth-county-shore-towns.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-mount-airy-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-northwest-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-oakhurst-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-ocean-county-beaches.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-ocean-county-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-ocean-grove-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-philadelphia.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-sea-girt-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-spring-house-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-toms-river-nj.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-wyndmoor-pa.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/water-safety-for-toddlers.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/what-age-can-toddlers-start-swimming.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/what-happens-at-a-childs-first-swim-lesson.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/what-should-kids-wear-to-swim-lessons.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/what-to-do-if-your-child-hates-swim-lessons.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/when-should-kids-start-swimming.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/why-floating-is-important-for-kids.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/why-kids-need-swim-lessons-even-if-they-have-a-pool.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/why-swimming-is-an-important-life-skill.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/why-year-round-swim-lessons-matter.html</loc>
     <lastmod>2026-04-08</lastmod>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
