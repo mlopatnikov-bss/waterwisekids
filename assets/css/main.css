@@ -620,6 +620,10 @@ nav {
   flex-direction: column;
   gap: 5px;
   padding: 8px;
+  min-height: 44px;
+  min-width: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .hamburger span {
