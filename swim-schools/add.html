@@ -7,10 +7,192 @@
   <meta name="description" content="List your swim school in America's largest aquatics directory. Free basic listings. Reach parents searching for swim lessons in your area.">
   <link rel="canonical" href="https://www.waterwisekids.com/swim-schools/add.html">
   <meta property="og:title" content="Add Your Swim School | Free Listing | WaterWiseKids National Directory">
-  <meta property="og:description" content="List your swim school in America">
+  <meta property="og:description" content="List your swim school in America's largest aquatics directory. Free basic listings. Reach parents searching for swim lessons in your area.">
   <meta property="og:type" content="website">
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <meta property="og:url" content="https://www.waterwisekids.com/swim-schools/add.html">
+  <meta property="og:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/main.css" />
+  <style>
+    /* Page-specific styles: hero, form, listings */
+    .hero {
+      background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-700) 100%);
+      color: white;
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: white;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.9);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .wwk-local-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 20px;
+    }
+    .wwk-local-content h2 {
+      font-size: 1.5rem;
+      color: var(--blue-800);
+      margin: 2.5rem 0 1rem;
+      font-weight: 700;
+    }
+    .wwk-local-content h3 {
+      font-size: 1.15rem;
+      color: var(--blue-700);
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    .wwk-local-content p, .wwk-local-content li {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--gray-700);
+      margin-bottom: 1rem;
+    }
+    .info-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .info-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+    }
+    .price-highlight {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--orange-500);
+    }
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: white;
+      border-radius: var(--radius-md);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border: 1px solid var(--gray-200);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--gray-800);
+      font-size: 0.95rem;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="url"],
+    .form-group input[type="tel"],
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.875rem;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: var(--gray-800);
+      background: var(--gray-50);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--blue-600);
+      box-shadow: 0 0 0 3px rgba(2,132,199,0.1);
+      background: white;
+    }
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 0.75rem 0;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--gray-700);
+    }
+    .form-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue-600);
+      color: white;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 12px 32px;
+      border-radius: var(--radius-full);
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-top: 0.5rem;
+    }
+    .form-button:hover { background: var(--blue-700); }
+    .what-you-get { margin: 2rem 0; }
+    .benefits-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .benefit-item {
+      padding: 1rem;
+      background: var(--gray-50);
+      border-radius: var(--radius-sm);
+    }
+    .faq { margin: 2rem 0; }
+    .faq-item {
+      border-bottom: 1px solid var(--gray-200);
+      padding: 1.25rem 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question {
+      font-weight: 600;
+      color: var(--blue-700);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .faq-answer {
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 1.85rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .info-cards, .benefits-list { grid-template-columns: 1fr; }
+    }
+  </style>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DN8B3QT');</script>
   <!-- End Google Tag Manager -->
@@ -255,7 +437,7 @@
   </main>
 
     <footer>
-    <div class="container" style="text-align: center;">
+    <div class="container">
       <p class="footer-title"><img src="/assets/images/icons/logo-swimmer.svg" alt="WaterWiseKids" style="width:28px;height:28px;vertical-align:middle;"> WaterWiseKids</p>
       <p class="footer-tagline">Trusted water safety education for every family</p>
       <div class="footer-links">
