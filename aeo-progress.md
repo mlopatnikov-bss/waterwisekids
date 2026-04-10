@@ -169,6 +169,12 @@ Each article is checked against the full 8-point checklist:
 - `education/shallow-water-blackout.html` ✅ (added CDC, Red Cross, NDPA, YMCA citations; question H2s; bold leads)
 - `education/open-water-survival-skills.html` ✅ (added AAP, Red Cross, CDC citations; question H2s; bold leads)
 
+### Run 5 — 2026-04-10 — Authoritative Hyperlink Upgrade
+These articles already had TL;DR boxes, FAQPage JSON-LD, question H2s, and speakable metadata, but lacked hyperlinked authoritative citations. Run 5 added direct hyperlinks to AAP, CDC, and Red Cross.
+- `education/pediatricians-guide-swim-lessons.html` ✅ (added hyperlinked AAP water safety guidance, CDC drowning stats, Red Cross water safety)
+- `education/winter-swim-lessons.html` ✅ (added hyperlinked Red Cross Learn-to-Swim, CDC drowning stats, AAP 88% stat)
+- `education/sunscreen-swimmers-guide.html` ✅ (added hyperlinked CDC skin cancer prevention, AAP sun safety guidance)
+
 ### Newer Articles — Already Had AEO Built-In (created after Run 3)
 - `education/natural-swimming-holes-safety.html` ✅
 - `education/pool-alarms-safety-devices.html` ✅
