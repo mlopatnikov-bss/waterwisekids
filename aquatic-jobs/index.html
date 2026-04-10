@@ -37,16 +37,31 @@
     }
 
     .job-controls {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 1rem;
       margin-bottom: 2rem;
-      flex-wrap: wrap;
+      padding: 1.5rem;
+      background-color: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+    }
+
+    .job-controls-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 0.75rem;
       align-items: center;
     }
 
+    .job-controls-actions {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
     .job-search-bar {
-      flex: 1;
-      min-width: 250px;
       display: flex;
       gap: 0.5rem;
       align-items: center;
@@ -68,10 +83,7 @@
     }
 
     .job-filters {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      align-items: center;
+      display: contents;
     }
 
     .job-filters select {
@@ -211,6 +223,25 @@
       font-weight: 600;
       color: #0284c7;
       margin-bottom: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background-color: #e0f2fe;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+    }
+
+    .job-pay-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.15rem;
+      height: 1.15rem;
+      background-color: #0284c7;
+      color: #ffffff;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 700;
     }
 
     .job-description-excerpt {
@@ -344,25 +375,21 @@
         grid-template-columns: 1fr;
       }
 
-      .job-controls {
-        flex-direction: column;
+      .job-controls-row {
+        grid-template-columns: 1fr;
       }
 
       .job-search-bar {
         width: 100%;
       }
 
-      .job-filters {
-        width: 100%;
-        flex-direction: column;
-      }
-
       .job-filters select {
         width: 100%;
       }
 
-      .btn-post-job {
-        width: 100%;
+      .job-controls-actions .btn-post-job,
+      .job-controls-actions .btn-manage {
+        flex: 1;
       }
     }
 
@@ -748,6 +775,14 @@
     </div>
   </header>
 
+  <nav class="page-breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="/">Home</a>
+      <span class="sep" aria-hidden="true">›</span>
+      <span aria-current="page">Aquatic Jobs</span>
+    </div>
+  </nav>
+
   <section class="page-hero">
     <div class="hero-content">
       <h1>Aquatic Jobs Board</h1>
@@ -758,25 +793,29 @@
   <main>
     <div class="job-board-container">
       <div class="job-controls">
-        <div class="job-search-bar">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Search jobs by title, company, or location..."
-            aria-label="Search jobs"
-          >
+        <div class="job-controls-row">
+          <div class="job-search-bar">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search jobs by title, company, or location..."
+              aria-label="Search jobs"
+            >
+          </div>
+          <div class="job-filters">
+            <select id="jobTypeFilter" aria-label="Filter by job type">
+              <option value="">All Job Types</option>
+              <option value="Full-Time">Full-Time</option>
+              <option value="Part-Time">Part-Time</option>
+              <option value="Seasonal">Seasonal</option>
+              <option value="Contract">Contract</option>
+            </select>
+            <select id="locationFilter" aria-label="Filter by location">
+              <option value="">All Locations</option>
+            </select>
+          </div>
         </div>
-        <div class="job-filters">
-          <select id="jobTypeFilter" aria-label="Filter by job type">
-            <option value="">All Job Types</option>
-            <option value="Full-Time">Full-Time</option>
-            <option value="Part-Time">Part-Time</option>
-            <option value="Seasonal">Seasonal</option>
-            <option value="Contract">Contract</option>
-          </select>
-          <select id="locationFilter" aria-label="Filter by location">
-            <option value="">All Locations</option>
-          </select>
+        <div class="job-controls-actions">
           <button class="btn-post-job" id="postJobBtn" aria-label="Post a new job">+ Post a Job</button>
           <button class="btn-manage" id="manageJobBtn" aria-label="Manage your posting">Manage My Posting</button>
         </div>
@@ -1476,7 +1515,7 @@
         </div>
         <p class="job-company">${escapeHtml(job.company)}</p>
         <p class="job-location">${escapeHtml(job.city)}, ${escapeHtml(job.state)}</p>
-        ${job.pay ? `<p class="job-pay">💰 ${escapeHtml(job.pay)}</p>` : ''}
+        ${job.pay ? `<p class="job-pay"><span class="job-pay-icon" aria-hidden="true">$</span>${escapeHtml(formatPay(job.pay))}</p>` : ''}
         <p class="job-description-excerpt">${escapeHtml(excerpt)}</p>
         <p class="job-posted-date">Posted ${postedDate}</p>
       `;
@@ -1524,7 +1563,7 @@
           </div>
           <div class="job-detail-meta-item">
             <span class="job-detail-meta-label">Pay</span>
-            <span class="job-detail-meta-value">${escapeHtml(job.pay)}</span>
+            <span class="job-detail-meta-value">${escapeHtml(formatPay(job.pay))}</span>
           </div>
           <div class="job-detail-meta-item">
             <span class="job-detail-meta-label">Posted</span>
@@ -1767,6 +1806,21 @@
         "'": '&#039;'
       };
       return text.replace(/[&<>"']/g, m => map[m]);
+    }
+
+    // Normalize pay string for display. Adds a "/hr" suffix to bare hourly rates
+    // (e.g. "18" -> "18/hr") while leaving values that already look formatted alone.
+    function formatPay(pay) {
+      if (!pay) return '';
+      const raw = String(pay).trim();
+      // Already contains a time unit, range marker, or word -> leave it
+      if (/\/(hr|hour|yr|year|wk|week|mo|month)\b/i.test(raw)) return raw;
+      if (/(per |annual|salary|range|k\b|\+)/i.test(raw)) return raw;
+      // Bare number like "18" or "18.50" or "18-22" -> append /hr
+      if (/^\$?\d+(\.\d+)?(\s*[–-]\s*\d+(\.\d+)?)?$/.test(raw)) {
+        return raw.replace(/^\$/, '') + '/hr';
+      }
+      return raw;
     }
   </script>
 </body>
