@@ -175,6 +175,12 @@ These articles already had TL;DR boxes, FAQPage JSON-LD, question H2s, and speak
 - `education/winter-swim-lessons.html` ✅ (added hyperlinked Red Cross Learn-to-Swim, CDC drowning stats, AAP 88% stat)
 - `education/sunscreen-swimmers-guide.html` ✅ (added hyperlinked CDC skin cancer prevention, AAP sun safety guidance)
 
+### Run 6 — 2026-04-11 — Newer Articles Citation + Question H2 Upgrade
+These articles had TL;DR boxes, FAQPage JSON-LD, and speakable metadata built-in from creation but had statement-style H2s and no hyperlinked authoritative citations. Run 6 converted all H2s to question format with bold direct answers and added 3+ AAP/CDC/Red Cross hyperlinks each.
+- `education/pool-opening-season-safety.html` ✅ (12/12 question H2s; added CDC 83% fencing stat, AAP 88% stat, Red Cross rescue equipment + CPR; HowTo schema already present)
+- `education/water-safety-apps-technology.html` ✅ (14/14 question H2s; added CDC layered protection, AAP supervision guidance, Red Cross CPR certification)
+- `education/family-swim-time-guide.html` ✅ (16/16 question H2s; added AAP water safety, CDC distracted supervision, Red Cross life jacket guidance)
+
 ### Newer Articles — Already Had AEO Built-In (created after Run 3)
 - `education/natural-swimming-holes-safety.html` ✅
 - `education/pool-alarms-safety-devices.html` ✅
