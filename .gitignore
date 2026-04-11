@@ -4,3 +4,6 @@ Thumbs.db
 node_modules/
 .env
 .deploy/
+
+# FUSE filesystem artifacts (from sandbox mounts)
+.fuse_hidden*
