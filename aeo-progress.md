@@ -198,3 +198,14 @@ These articles had TL;DR boxes, FAQPage JSON-LD, and speakable metadata built-in
 - Monitor AI citation performance via ChatGPT/Perplexity spot checks
 - Add HowTo schemas to any new step-by-step articles
 - Update statistics when new CDC annual data is released
+
+### Run 7 — 2026-04-12 — Citation + Question H2 Upgrade (Batch 2)
+These articles had TL;DR boxes, FAQPage JSON-LD, and speakable metadata built-in from creation but had statement-style H2s, no hyperlinked authoritative citations, and no bold direct answers. Run 7 converted H2s to question format with bold direct answers and added 3+ hyperlinked authority citations each.
+- `education/babysitter-water-safety-checklist.html` ✅ (8/9 question H2s; added CDC drowning stats, AAP supervision guidance, Red Cross babysitter training, NDPA layers of protection; hyperlinked sources section)
+- `education/bright-swimsuit-safety.html` ✅ (10/11 question H2s; added bold direct answers to all 10 Q-H2s; CDC drowning stats, AAP 88% stat, Red Cross water safety)
+- `education/swim-team-readiness.html` ✅ (16/17 question H2s; added bold direct answers to all 16 Q-H2s; CDC drowning data, AAP development guidance, Red Cross water safety)
+
+### Remaining Un-Tracked Articles (2)
+These articles have basic AEO (TL;DR, FAQ schema, speakable) but may benefit from citation + H2 upgrade in a future run:
+- `education/free-water-safety-resources.html`
+- `education/water-safety-activities-schools.html`
