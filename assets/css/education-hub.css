@@ -174,7 +174,7 @@
   font-size: 3rem;
   color: rgba(255, 255, 255, 0.3);
   overflow: hidden;
-  border-radius: var(--r-md) var(--r-md) 0 0;
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
 }
 
 .article-card-image img {
