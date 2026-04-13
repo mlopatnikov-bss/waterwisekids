@@ -10,8 +10,7 @@
 .mobile-bottom-nav,
 .mobile-app-search-header,
 .mobile-category-bar,
-.mobile-divider,
-.mobile-header-action { display: none; }
+.mobile-divider { display: none; }
 
 @media (max-width: 768px) {
 
@@ -97,23 +96,6 @@
     height: 24px !important;
   }
 
-  /* Header action button (injected by JS) */
-  .mobile-header-action {
-    display: flex;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: #f5f5f5;
-    align-items: center;
-    justify-content: center;
-    color: #525252;
-  }
-
-  .mobile-header-action svg {
-    width: 18px;
-    height: 18px;
-    stroke-width: 2;
-  }
 
   /* ═══════════════════════════════════
      HERO — Compact, content-first

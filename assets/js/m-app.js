@@ -19,26 +19,7 @@
   var isHome = (path === '/' || path === '/index.html');
   var isEdu = (path.indexOf('/education') === 0 && (path === '/education/' || path === '/education/index.html'));
 
-  // ═══════════════════════════════════
-  // HEADER ACTION BUTTON (notification or search icon)
-  // ═══════════════════════════════════
-  var headerNav = document.querySelector('header nav');
-  if (headerNav && !headerNav.querySelector('.mobile-header-action')) {
-    var actionBtn = document.createElement('div');
-    actionBtn.className = 'mobile-header-action';
-    if (isHome) {
-      // Bell icon
-      actionBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/></svg>';
-    } else {
-      // Search icon — tapping goes to education hub
-      actionBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/></svg>';
-      actionBtn.style.cursor = 'pointer';
-      actionBtn.addEventListener('click', function () {
-        window.location.href = '/education/';
-      });
-    }
-    headerNav.appendChild(actionBtn);
-  }
+  // HEADER ACTION BUTTON — removed; hamburger menu handles navigation
 
   // ═══════════════════════════════════
   // SEARCH PILL (homepage only)
