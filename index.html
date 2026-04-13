@@ -1129,8 +1129,29 @@
   /* ═══════════════════════════════════
      HEADER — Minimal sticky app bar
   ═══════════════════════════════════ */
-  .hamburger { display: none !important; }
+  .hamburger { display: flex !important; padding: 8px; min-height: 44px; min-width: 44px; align-items: center; justify-content: center; background: transparent; border: none; }
   .nav-links { display: none !important; }
+  nav.mobile-open .nav-links {
+    display: flex !important;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 8px 16px;
+    gap: 0;
+    z-index: 199;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  nav.mobile-open .nav-links > li > a {
+    padding: 12px 0;
+    border-bottom: 1px solid #f3f4f6;
+    display: block;
+    color: #374151;
+    font-size: 15px;
+  }
 
   header {
     padding: 0 !important;
