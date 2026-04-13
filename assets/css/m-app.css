@@ -35,6 +35,7 @@
   /* ═══════════════════════════════════
      HEADER — Minimal sticky app bar
   ═══════════════════════════════════ */
+  /* PROTECTED: hamburger MUST remain display:flex on mobile. Do NOT hide it. */
   .hamburger { display: flex !important; padding: 8px; min-height: 44px; min-width: 44px; align-items: center; justify-content: center; background: transparent; border: none; }
   .nav-links { display: none !important; }
   nav.mobile-open .nav-links {
