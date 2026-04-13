@@ -9,6 +9,12 @@
   'use strict';
   if (window.innerWidth > 768) return;
 
+  // ═══════════════════════════════════
+  // DEDUP GUARD — prevent double injection if inline script also ran
+  // ═══════════════════════════════════
+  if (window.__wwkMobileAppLoaded) return;
+  window.__wwkMobileAppLoaded = true;
+
   var path = window.location.pathname;
   var isHome = (path === '/' || path === '/index.html');
   var isEdu = (path.indexOf('/education') === 0 && (path === '/education/' || path === '/education/index.html'));
@@ -17,7 +23,7 @@
   // HEADER ACTION BUTTON (notification or search icon)
   // ═══════════════════════════════════
   var headerNav = document.querySelector('header nav');
-  if (headerNav) {
+  if (headerNav && !headerNav.querySelector('.mobile-header-action')) {
     var actionBtn = document.createElement('div');
     actionBtn.className = 'mobile-header-action';
     if (isHome) {
@@ -39,7 +45,7 @@
   // ═══════════════════════════════════
   if (isHome) {
     var hero = document.querySelector('.hero');
-    if (hero) {
+    if (hero && !document.querySelector('.mobile-app-search-header')) {
       var searchHeader = document.createElement('div');
       searchHeader.className = 'mobile-app-search-header';
       searchHeader.innerHTML =
@@ -70,6 +76,7 @@
       { label: 'Bath Time',     icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>', href: '/education/bath-time-safety-infants.html' }
     ];
 
+    if (!document.querySelector('.mobile-category-bar')) {
     var catBar = document.createElement('div');
     catBar.className = 'mobile-category-bar';
 
@@ -86,6 +93,7 @@
     if (insertTarget && insertTarget.parentNode) {
       insertTarget.parentNode.insertBefore(catBar, insertTarget.nextSibling);
     }
+    } // end catBar dedup guard
   }
 
   // ═══════════════════════════════════
@@ -121,6 +129,7 @@
   // ═══════════════════════════════════
   // BOTTOM NAVIGATION BAR
   // ═══════════════════════════════════
+  if (!document.querySelector('.mobile-bottom-nav')) {
   var nav = document.createElement('nav');
   nav.className = 'mobile-bottom-nav';
   nav.setAttribute('aria-label', 'Mobile navigation');
@@ -147,6 +156,7 @@
   });
 
   document.body.appendChild(nav);
+  } // end bottom-nav dedup guard
 
   // ═══════════════════════════════════
   // STICKY SEARCH (education hub)
