@@ -209,3 +209,35 @@ These articles had TL;DR boxes, FAQPage JSON-LD, and speakable metadata built-in
 These articles have basic AEO (TL;DR, FAQ schema, speakable) but may benefit from citation + H2 upgrade in a future run:
 - `education/free-water-safety-resources.html`
 - `education/water-safety-activities-schools.html`
+
+### Run 8 — 2026-04-13 — Citation + Question H2 Upgrade (Batch 3)
+These articles had TL;DR boxes, FAQPage JSON-LD, and speakable metadata built-in from creation but had statement-style H2s, no hyperlinked authoritative citations, and no bold direct answers. Run 8 converted H2s to question format with bold direct answers and added 3+ hyperlinked authority citations each.
+- `education/free-water-safety-resources.html` ✅ (12/13 question H2s; added bold direct answers; hyperlinked CDC drowning stats, AAP 88% stat, Red Cross water safety, NDPA resources)
+- `education/water-safety-activities-schools.html` ✅ (11/12 question H2s; added bold direct answers; hyperlinked CDC drowning stats, AAP 88% stat, Red Cross CPR + water safety)
+- `education/pool-drain-safety.html` ✅ (12/12 question H2s; added bold direct answers; hyperlinked CPSC Pool Safely, CDC drowning data, AAP drain cover recommendation, Red Cross CPR; also fixed missing Swimmer's Hub nav link)
+
+### Remaining Un-Tracked Newer Articles
+These articles have basic AEO (TL;DR, FAQ schema, speakable) but may benefit from citation + H2 upgrade in future runs:
+- `education/adaptive-swimming-special-needs.html`
+- `education/distance-vs-skill-based-swim-progress.html`
+- `education/flow-pools-vs-traditional-pools.html`
+- `education/free-trial-swim-lessons-guide.html`
+- `education/home-water-safety-framework.html`
+- `education/intensive-vs-weekly-swim-lessons.html`
+- `education/life-skills-from-swimming.html`
+- `education/measuring-swimming-progress.html`
+- `education/perpetual-vs-session-swim-lessons.html`
+- `education/swim-clinics-intensive-camps.html`
+- `education/swim-instructor-certifications-decoded.html`
+- `education/swim-level-assessment.html`
+- `education/swim-school-apps-progress-tracking.html`
+- `education/swimming-achievement-milestones.html`
+- `education/swimming-ear-infections-guide.html`
+- `education/swimming-progress-tracker.html`
+- `education/video-analysis-swim-lessons.html`
+- `education/warm-water-swim-lessons.html`
+- `education/water-safety-during-pregnancy.html`
+- `swimmers-hub/backstroke-complete-guide.html`
+- `swimmers-hub/breaststroke-complete-guide.html`
+- `swimmers-hub/butterfly-complete-guide.html`
+- `swimmers-hub/freestyle-complete-guide.html`
