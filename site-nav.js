@@ -24,15 +24,22 @@
 
   /* ── Mobile nav hamburger ────────────────────────── */
   function initMobileNav() {
-    var hamburger = document.querySelector('.wwk-nav-hamburger');
-    var navLinks = document.querySelector('.wwk-nav-links');
+    var hamburger = document.querySelector('.wwk-nav-hamburger') || document.querySelector('.hamburger');
+    var navLinks = document.querySelector('.wwk-nav-links') || document.querySelector('.nav-links');
     if (!hamburger || !navLinks) return;
 
     hamburger.setAttribute('aria-label', 'Toggle navigation');
     hamburger.setAttribute('aria-expanded', 'false');
 
     hamburger.addEventListener('click', function () {
-      var isOpen = navLinks.classList.toggle('open');
+      // Support both 'open' on navLinks and 'mobile-open' on parent nav
+      var nav = hamburger.closest('nav');
+      var isOpen;
+      if (navLinks.classList.contains('wwk-nav-links')) {
+        isOpen = navLinks.classList.toggle('open');
+      } else {
+        isOpen = nav ? nav.classList.toggle('mobile-open') : navLinks.classList.toggle('open');
+      }
       hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       // Animate hamburger → X
       var spans = hamburger.querySelectorAll('span');
@@ -53,6 +60,8 @@
     document.addEventListener('click', function (e) {
       if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
         navLinks.classList.remove('open');
+        var nav = hamburger.closest('nav');
+        if (nav) nav.classList.remove('mobile-open');
         hamburger.setAttribute('aria-expanded', 'false');
         var spans = hamburger.querySelectorAll('span');
         spans.forEach(function (s) { s.style.transform = ''; s.style.opacity = ''; });
@@ -63,6 +72,8 @@
     navLinks.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () {
         navLinks.classList.remove('open');
+        var nav = hamburger.closest('nav');
+        if (nav) nav.classList.remove('mobile-open');
         hamburger.setAttribute('aria-expanded', 'false');
         var spans = hamburger.querySelectorAll('span');
         spans.forEach(function (s) { s.style.transform = ''; s.style.opacity = ''; });
