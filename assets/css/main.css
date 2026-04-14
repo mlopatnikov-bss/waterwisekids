@@ -646,7 +646,6 @@ footer {
   background: #0c4a6e;
   color: #e0f2fe;
   padding: 2.5rem 1.5rem 1.5rem;
-  text-align: center;
 }
 
 .footer-grid {
@@ -1583,6 +1582,289 @@ table tbody tr:hover {
   table th,
   table td {
     padding: var(--spacing-sm);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   LOCAL LANDING PAGE COMPONENTS
+   Shared classes for root-level landing pages (local, topical, guide pages)
+   that use main.css only (no article.css). Added 2026-04-14.
+═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Compact hero variant — less padding than full .page-hero */
+.page-hero.compact {
+  padding: 2.5rem 1.5rem;
+}
+
+/* Kicker — small uppercase label above headings */
+.kicker {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue-400);
+  margin-bottom: 0.5rem;
+}
+.page-hero .kicker,
+.page-hero.compact .kicker {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Meta chips — pill badges in page hero */
+.meta-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.meta-chip {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Lead paragraph */
+.lead {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
+}
+.page-hero .lead,
+.page-hero.compact .lead {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Hero action buttons row */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  align-items: center;
+}
+
+/* Button — primary (blue) */
+.button {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  background: var(--blue-600);
+  color: var(--white);
+  border-radius: var(--r-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.button:hover {
+  background: var(--blue-700);
+  color: var(--white);
+}
+
+/* Button secondary — outline style */
+.button-secondary {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  background: transparent;
+  color: var(--blue-700);
+  border: 2px solid var(--blue-300);
+  border-radius: var(--r-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.button-secondary:hover {
+  border-color: var(--blue-600);
+  color: var(--blue-700);
+}
+.page-hero .button-secondary,
+.page-hero.compact .button-secondary {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.page-hero .button-secondary:hover,
+.page-hero.compact .button-secondary:hover {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+/* Content grid — main + sidebar layout */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  align-items: start;
+}
+.content-grid.article-shell {
+  padding-top: 2rem;
+}
+
+/* Article content area */
+.content-grid .article {
+  min-width: 0;
+}
+
+/* Back link */
+.back-link {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+  transition: color 0.15s;
+}
+.back-link:hover {
+  color: var(--blue-600);
+}
+
+/* Local note — context callout */
+.local-note {
+  background: var(--blue-50);
+  border-left: 4px solid var(--blue-400);
+  padding: 0.9rem 1.1rem;
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* TL;DR box */
+.tldr-box {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.75rem;
+}
+.tldr-box strong {
+  color: var(--blue-700);
+}
+
+/* Inline CTA box */
+.inline-cta {
+  background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-700) 100%);
+  color: var(--white);
+  padding: 1.75rem 2rem;
+  border-radius: var(--r-lg);
+  margin: 2rem 0;
+}
+.inline-cta .kicker {
+  color: var(--blue-300);
+}
+.inline-cta h3 {
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.inline-cta p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Sidebar card */
+.sidebar-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.sidebar-card h3 {
+  font-size: 1rem;
+  color: var(--gray-800);
+  margin-bottom: 0.5rem;
+}
+.sidebar-card p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  margin-bottom: 0.75rem;
+}
+
+/* Note list — styled bullet list */
+.note-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.note-list li {
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  border-bottom: 1px solid var(--gray-100);
+}
+.note-list li:last-child {
+  border-bottom: none;
+}
+.note-list li a {
+  color: var(--blue-600);
+  text-decoration: none;
+}
+.note-list li a:hover {
+  text-decoration: underline;
+}
+
+/* CTA section */
+.cta {
+  background: var(--blue-900);
+  color: var(--white);
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.cta h2,
+.cta h3 {
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+.cta p {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.25rem;
+}
+
+/* Card */
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* Responsive: stack grid on tablet */
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1rem;
+  }
+  .content-grid .sidebar {
+    order: -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+  .hero-actions .button,
+  .hero-actions .button-secondary {
+    width: 100%;
+    text-align: center;
+  }
+  .meta-chip-row {
+    gap: 0.375rem;
   }
 }
 
