@@ -241,3 +241,9 @@ These articles have basic AEO (TL;DR, FAQ schema, speakable) but may benefit fro
 - `swimmers-hub/breaststroke-complete-guide.html`
 - `swimmers-hub/butterfly-complete-guide.html`
 - `swimmers-hub/freestyle-complete-guide.html`
+
+### Run 7 — 2026-04-14 — Newer Articles Citation + Question H2 Upgrade
+These articles had TL;DR boxes, FAQPage JSON-LD, and speakable metadata but lacked hyperlinked authoritative citations. Run 7 added AAP/CDC/Red Cross hyperlinks plus key drowning statistics, and converted remaining statement-style H2s to question format.
+- `education/swim-instructor-certifications-decoded.html` ✅ (added AAP + CDC hyperlinks with 88% drowning-risk-reduction stat; converted 4 statement H2s to questions)
+- `education/realistic-swim-progress-timelines.html` ✅ (added AAP + CDC + Red Cross hyperlinks with CDC #1 cause of death stat + Red Cross Learn-to-Swim reference; converted 11 statement H2s to questions)
+- `education/home-water-safety-framework.html` ✅ (added AAP + CDC + Red Cross hyperlinks emphasizing layered protection + CPR certification; converted 12 statement H2s to questions)
