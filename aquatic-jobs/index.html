@@ -1201,6 +1201,8 @@
     document.addEventListener('DOMContentLoaded', function() {
       loadJobs();
       setupEventListeners();
+      // Auto-open post-job modal if redirected from jobs/post.html
+      if (window.location.hash === '#post-job') { setTimeout(openPostJobModal, 400); }
     });
 
     // Event Listeners
