@@ -247,3 +247,30 @@ These articles had TL;DR boxes, FAQPage JSON-LD, and speakable metadata but lack
 - `education/swim-instructor-certifications-decoded.html` ✅ (added AAP + CDC hyperlinks with 88% drowning-risk-reduction stat; converted 4 statement H2s to questions)
 - `education/realistic-swim-progress-timelines.html` ✅ (added AAP + CDC + Red Cross hyperlinks with CDC #1 cause of death stat + Red Cross Learn-to-Swim reference; converted 11 statement H2s to questions)
 - `education/home-water-safety-framework.html` ✅ (added AAP + CDC + Red Cross hyperlinks emphasizing layered protection + CPR certification; converted 12 statement H2s to questions)
+
+### Run 9 — 2026-04-15 — Citation + Question H2 Upgrade (Batch 4)
+These articles had TL;DR boxes, FAQPage JSON-LD, and speakable metadata built-in from creation but had statement-style H2s, no hyperlinked authoritative citations, and no bold direct answers. Run 9 converted all H2s to question format with bold direct answers and added 3–4 hyperlinked authority citations each.
+- `education/adaptive-swimming-special-needs.html` ✅ (8/8 H2s converted to question format; added bold direct answers; hyperlinked CDC autism drowning stat in stat-box; added AAP/CDC/Red Cross/NDPA citations section)
+- `education/distance-vs-skill-based-swim-progress.html` ✅ (8/8 H2s converted to question format; added bold direct answers; corrected stat from 80%→88% (AAP); added hyperlinked CDC+AAP in body text; added full AAP/CDC/Red Cross/NDPA citations section)
+- `education/flow-pools-vs-traditional-pools.html` ✅ (8/8 H2s converted to question format; added bold direct answers; added 88% AAP stat box with hyperlink; added AAP/CDC/Red Cross citations section)
+
+### Remaining Un-Tracked Newer Articles
+These articles have basic AEO (TL;DR, FAQ schema, speakable) but need citation + H2 upgrade in future runs:
+- `education/free-trial-swim-lessons-guide.html`
+- `education/intensive-vs-weekly-swim-lessons.html`
+- `education/life-skills-from-swimming.html`
+- `education/measuring-swimming-progress.html`
+- `education/perpetual-vs-session-swim-lessons.html`
+- `education/swim-clinics-intensive-camps.html`
+- `education/swim-level-assessment.html`
+- `education/swim-school-apps-progress-tracking.html`
+- `education/swimming-achievement-milestones.html`
+- `education/swimming-ear-infections-guide.html`
+- `education/swimming-progress-tracker.html`
+- `education/video-analysis-swim-lessons.html`
+- `education/warm-water-swim-lessons.html`
+- `education/water-safety-during-pregnancy.html`
+- `swimmers-hub/backstroke-complete-guide.html`
+- `swimmers-hub/breaststroke-complete-guide.html`
+- `swimmers-hub/butterfly-complete-guide.html`
+- `swimmers-hub/freestyle-complete-guide.html`
