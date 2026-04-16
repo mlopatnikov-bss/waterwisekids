@@ -414,7 +414,6 @@
     function init() {
       populateStateFilter();
       setupStarRating();
-      setupMobileMenu();
       setupEnterKey();
     }
 
@@ -578,15 +577,7 @@
       if (searchTriggered) applySearch();
     }
 
-    function setupMobileMenu() {
-      var hamburger = document.querySelector('.hamburger');
-      var nav = document.querySelector('nav');
-      hamburger.addEventListener('click', function() {
-        nav.classList.toggle('mobile-open');
-        this.setAttribute('aria-expanded', nav.classList.contains('mobile-open'));
-      });
-    }
-
+    
     document.addEventListener('DOMContentLoaded', init);
   </script>
   <script src="/assets/js/main.js?v=20260413"></script>
