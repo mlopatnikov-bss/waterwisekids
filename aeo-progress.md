@@ -274,3 +274,27 @@ These articles have basic AEO (TL;DR, FAQ schema, speakable) but need citation +
 - `swimmers-hub/breaststroke-complete-guide.html`
 - `swimmers-hub/butterfly-complete-guide.html`
 - `swimmers-hub/freestyle-complete-guide.html`
+
+### Run 10 — 2026-04-16 — Citation + Question H2 Upgrade (Batch 5)
+These articles had TL;DR boxes, FAQPage JSON-LD, and speakable metadata built-in from creation but had statement-style H2s, no hyperlinked authoritative citations, and no bold direct answers. Run 10 converted all H2s to question format with bold direct answers and added 3–4 hyperlinked authority citations each.
+- `education/free-trial-swim-lessons-guide.html` ✅ (7/7 H2s converted to question format; added bold direct answers; replaced fake "88% of parents" stat box with real AAP 88% drowning-risk-reduction stat with hyperlink; added full AAP/CDC/Red Cross/NDPA citations section)
+- `education/intensive-vs-weekly-swim-lessons.html` ✅ (10/10 H2s converted to question format; added bold direct answers; added hyperlinked AAP, CDC, Red Cross, NDPA citations embedded in body text + full citations section)
+- `education/life-skills-from-swimming.html` ✅ (10/10 H2s converted to question format; added bold direct answers; added hyperlinked AAP, CDC, Red Cross, NDPA citations in body text + full citations section; added CDC drowning stat in context of swimming's importance)
+
+### Remaining Un-Tracked Newer Articles
+These articles have basic AEO (TL;DR, FAQ schema, speakable) but need citation + H2 upgrade in future runs:
+- `education/measuring-swimming-progress.html`
+- `education/perpetual-vs-session-swim-lessons.html`
+- `education/swim-clinics-intensive-camps.html`
+- `education/swim-level-assessment.html`
+- `education/swim-school-apps-progress-tracking.html`
+- `education/swimming-achievement-milestones.html`
+- `education/swimming-ear-infections-guide.html`
+- `education/swimming-progress-tracker.html`
+- `education/video-analysis-swim-lessons.html`
+- `education/warm-water-swim-lessons.html`
+- `education/water-safety-during-pregnancy.html`
+- `swimmers-hub/backstroke-complete-guide.html`
+- `swimmers-hub/breaststroke-complete-guide.html`
+- `swimmers-hub/butterfly-complete-guide.html`
+- `swimmers-hub/freestyle-complete-guide.html`
