@@ -24,6 +24,27 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ===== SITE NAV (shared pattern — hamburger toggle via main.js) ===== */
+header nav {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  height: 64px; display: flex; justify-content: space-between; align-items: center;
+  background: white; border-bottom: 1px solid #e5e7eb;
+  position: relative;
+}
+header nav .nav-logo { font-size: 1rem; font-weight: 700; color: #075985; text-decoration: none; }
+header nav .nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
+header nav .nav-links a { text-decoration: none; color: #374151; font-size: 0.85rem; font-weight: 500; }
+header nav .nav-links a:hover { color: #075985; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; min-height: 44px; min-width: 44px; align-items: center; justify-content: center; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #374151; border-radius: 2px; transition: all 0.3s; }
+
+@media (max-width: 768px) {
+  header nav .nav-links { display: none; flex-direction: column; width: 100%; gap: 0; padding: 0.5rem 0; position: absolute; top: 64px; left: 0; right: 0; background: white; border-bottom: 1px solid #e5e7eb; z-index: 100; }
+  header nav .nav-links a { display: block; padding: 0.75rem 24px; border-bottom: 1px solid #f3f4f6; }
+  header nav.mobile-open .nav-links { display: flex; }
+  .hamburger { display: flex; }
+}
+
 /* ===== SCREEN WRAPPER ===== */
 .screen-wrapper {
   max-width: 820px;

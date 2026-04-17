@@ -40,7 +40,7 @@ body {
 .screen-header .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
 .screen-header .nav-links a { text-decoration: none; color: var(--cl-gray-700); font-size: 0.9rem; font-weight: 500; border-radius: 6px; padding: 8px 14px; transition: background 0.15s, color 0.15s; }
 .screen-header .nav-links a:hover { background: #f3f4f6; color: #075985; }
-.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; min-height: 44px; min-width: 44px; align-items: center; justify-content: center; }
 .hamburger span { width: 24px; height: 2px; background: #374151; border-radius: 2px; transition: all 0.3s; }
 
 /* SCREEN-ONLY TOOLBAR */
@@ -127,7 +127,7 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .hamburger { display: block; }
+  .hamburger { display: flex; }
   .screen-header .nav-links { display: none; flex-direction: column; width: 100%; gap: 0; padding: 1rem 0 0; }
   .screen-header .nav-links a { display: block; padding: 0.5rem 0; }
   nav.mobile-open .nav-links { display: flex; }
