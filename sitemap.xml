@@ -446,7 +446,7 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/swim-lesson-faqs.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1999,18 +1999,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.waterwisekids.com/about.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/advertise.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.waterwisekids.com/are-infant-swim-lessons-safe.html</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -2047,28 +2035,10 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.waterwisekids.com/education.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/babysitter-water-safety-checklist-printable.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.waterwisekids.com/education/backyard-pool-fence-requirements.html</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/family-pool-safety-checklist-printable.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/parent-cpr-water-rescue-basics.html</loc>
@@ -2125,12 +2095,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.waterwisekids.com/gear.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.waterwisekids.com/how-to-choose-swim-lessons-for-kids.html</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -2159,18 +2123,6 @@
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/jobs.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/teens.html</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/aap-infant-swim-lessons-research.html</loc>
