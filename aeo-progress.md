@@ -298,3 +298,24 @@ These articles have basic AEO (TL;DR, FAQ schema, speakable) but need citation +
 - `swimmers-hub/breaststroke-complete-guide.html`
 - `swimmers-hub/butterfly-complete-guide.html`
 - `swimmers-hub/freestyle-complete-guide.html`
+
+### Run 11 — 2026-04-17 — Citation + Question H2 Upgrade (Batch 6)
+These articles had TL;DR boxes, FAQPage JSON-LD, and speakable metadata built-in from creation but had statement-style H2s, no hyperlinked authoritative citations, and fake fabricated statistics in stat boxes. Run 11 converted all H2s to question format with bold direct answers, replaced fake percentage stats with the real AAP 88% drowning-risk-reduction figure (with hyperlinks), and added full AAP/CDC/Red Cross/NDPA citations sections.
+- `education/measuring-swimming-progress.html` ✅ (10/10 content H2s converted to question format; bold direct answers; replaced fake "91% of instructors" stat with real AAP 88% stat + hyperlink; added CDC #1 cause of death stat in body; added full AAP/CDC/Red Cross/NDPA citations section)
+- `education/perpetual-vs-session-swim-lessons.html` ✅ (8/8 content H2s converted to question format; bold direct answers; replaced fake "72% of parents" stat with real AAP 88% stat + hyperlink; added CDC drowning stat + AAP 88% stat in body intro; added full AAP/CDC/Red Cross/NDPA citations section)
+- `education/swim-clinics-intensive-camps.html` ✅ (8/8 content H2s converted to question format; bold direct answers; replaced fake "60%" stat with real AAP 88% stat + hyperlink; added CDC #1 cause of death + AAP 88% stat in body intro; added full AAP/CDC/Red Cross/NDPA citations section)
+
+### Remaining Un-Tracked Newer Articles
+These articles have basic AEO (TL;DR, FAQ schema, speakable) but need citation + H2 upgrade in future runs:
+- `education/swim-level-assessment.html`
+- `education/swim-school-apps-progress-tracking.html`
+- `education/swimming-achievement-milestones.html`
+- `education/swimming-ear-infections-guide.html`
+- `education/swimming-progress-tracker.html`
+- `education/video-analysis-swim-lessons.html`
+- `education/warm-water-swim-lessons.html`
+- `education/water-safety-during-pregnancy.html`
+- `swimmers-hub/backstroke-complete-guide.html`
+- `swimmers-hub/breaststroke-complete-guide.html`
+- `swimmers-hub/butterfly-complete-guide.html`
+- `swimmers-hub/freestyle-complete-guide.html`
