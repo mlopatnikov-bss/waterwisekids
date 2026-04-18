@@ -378,6 +378,7 @@ img {
   border: 1px solid var(--gray-200);
   border-radius: var(--r-xl);
   padding: var(--spacing-2xl);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   transition: all 0.2s ease;
 }
 
@@ -1834,14 +1835,7 @@ table tbody tr:hover {
   margin-bottom: 1.25rem;
 }
 
-/* Card */
-.card {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--r-lg);
-  padding: 1.5rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-}
+/* Card — styles defined globally above in the CARDS section */
 
 /* Responsive: stack grid on tablet */
 @media (max-width: 900px) {
