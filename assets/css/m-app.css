@@ -662,6 +662,7 @@
     font-size: 0.62rem;
     font-weight: 500;
     padding: 4px 12px 2px;
+    min-height: 44px;
     position: relative;
     transition: color 0.2s;
   }
@@ -734,7 +735,9 @@
   /* Back-to-top above bottom nav */
   .back-to-top,
   [class*="back-to-top"],
-  a[href="#top"] {
+  a[href="#top"],
+  .scroll-top-btn,
+  #scrollTopBtn {
     bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
     border-radius: 50% !important;
   }
