@@ -319,3 +319,21 @@ These articles have basic AEO (TL;DR, FAQ schema, speakable) but need citation +
 - `swimmers-hub/breaststroke-complete-guide.html`
 - `swimmers-hub/butterfly-complete-guide.html`
 - `swimmers-hub/freestyle-complete-guide.html`
+
+### Run 12 — 2026-04-18 — Citation + Question H2 Upgrade (Batch 7)
+These articles had TL;DR boxes, FAQPage JSON-LD, and speakable metadata built-in from creation but had statement-style H2s, no hyperlinked authoritative citations, and fake/unverified statistics in stat boxes. Run 12 converted all content H2s to question format with bold direct answers, replaced fake stats with the real AAP 88% drowning-risk-reduction figure (with hyperlinks), and added full AAP/CDC/Red Cross/NDPA citations sections.
+- `education/swim-level-assessment.html` ✅ (11/11 H2s converted to question format; bold direct answers on all; replaced fake "85% of drowning deaths in unsupervised settings" stat with real AAP 88% stat + hyperlink; added hyperlinked AAP/CDC/Red Cross/NDPA citations section)
+- `education/swimming-achievement-milestones.html` ✅ (11/11 content H2s converted to question format; bold direct answers on all age-group sections; replaced fake "72% of parents" stat with real AAP 88% stat + hyperlink; added hyperlinked AAP/CDC/Red Cross/NDPA citations section)
+- `education/warm-water-swim-lessons.html` ✅ (6/6 statement H2s converted to question format; bold direct answers added; existing inline AAP/Red Cross mentions hyperlinked; added full AAP/CDC/Red Cross/NDPA hyperlinked citations section; stat box (86-90°F from AAP) was already legitimate — retained as-is)
+
+### Remaining Un-Tracked Newer Articles
+These articles have basic AEO (TL;DR, FAQ schema, speakable) but need citation + H2 upgrade in future runs:
+- `education/swim-school-apps-progress-tracking.html`
+- `education/swimming-ear-infections-guide.html`
+- `education/swimming-progress-tracker.html`
+- `education/video-analysis-swim-lessons.html`
+- `education/water-safety-during-pregnancy.html`
+- `swimmers-hub/backstroke-complete-guide.html`
+- `swimmers-hub/breaststroke-complete-guide.html`
+- `swimmers-hub/butterfly-complete-guide.html`
+- `swimmers-hub/freestyle-complete-guide.html`
