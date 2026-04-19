@@ -489,6 +489,8 @@
   justify-content: center;
   margin-bottom: 1rem;
   opacity: 0.85;
+  padding: 0;           /* override main.css base padding */
+  border-bottom: none;  /* override main.css border-bottom */
 }
 
 /* Subtitle line below h1 inside photo hero */
