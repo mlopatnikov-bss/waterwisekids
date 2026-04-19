@@ -186,27 +186,27 @@
   <section id="contact-form" style="padding: 64px 20px; background: #f4f8fb;">
     <div style="max-width: 600px; margin: 0 auto;">
       <h2 style="text-align: center; margin: 0 0 32px 0; color: #13304a; font-size: 24px; font-weight: 700; font-family: inherit;">Get Started Today</h2>
-      <form action="mailto:advertise@waterwisekids.com" method="post" enctype="text/plain" style="background: white; padding: 32px; border-radius: 22px; border: 1px solid #dbe8f0; font-family: inherit;">
+      <form action="https://formspree.io/f/mblrwzea" method="POST" style="background: white; padding: 32px; border-radius: 22px; border: 1px solid #dbe8f0; font-family: inherit;" id="advertiseForm">
         <div style="margin-bottom: 16px;">
           <label style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Name *</label>
-          <input type="text" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+          <input type="text" name="name" required style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
         </div>
         <div style="margin-bottom: 16px;">
           <label style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">School Name *</label>
-          <input type="text" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+          <input type="text" name="school_name" required style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
         </div>
         <div style="margin-bottom: 16px;">
           <label style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Email *</label>
-          <input type="email" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+          <input type="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
         </div>
         <div style="margin-bottom: 16px;">
           <label style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Phone</label>
-          <input type="phone" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+          <input type="tel" name="phone" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
         </div>
         <div style="margin-bottom: 16px;">
           <label style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Interested In *</label>
-          <select style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
-            <option>Select Package</option>
+          <select name="package" required style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+            <option value="">Select Package</option>
             <option>Local Listing ($49/mo)</option>
             <option>Regional Package ($199/mo)</option>
             <option>National Sponsorship ($999/mo)</option>
@@ -215,10 +215,46 @@
         </div>
         <div style="margin-bottom: 24px;">
           <label style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Message</label>
-          <textarea style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box; height: 100px;"></textarea>
+          <textarea name="message" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box; height: 100px;"></textarea>
         </div>
-        <button type="submit" style="width: 100%; background: #0f5f94; color: white; border: none; padding: 12px 16px; border-radius: 999px; font-weight: 700; cursor: pointer; font-family: inherit;">Submit Inquiry</button>
+        <input type="hidden" name="_subject" value="WaterWiseKids Advertising Inquiry">
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit" id="advertiseSubmit" style="width: 100%; background: #0f5f94; color: white; border: none; padding: 12px 16px; border-radius: 999px; font-weight: 700; cursor: pointer; font-family: inherit;">Submit Inquiry</button>
+        <div id="advertiseMsg" style="display:none; margin-top:12px; text-align:center; font-weight:600;"></div>
       </form>
+      <script>
+        document.getElementById('advertiseForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var btn = document.getElementById('advertiseSubmit');
+          var msg = document.getElementById('advertiseMsg');
+          btn.disabled = true;
+          btn.textContent = 'Sending...';
+          fetch(this.action, {
+            method: 'POST',
+            body: new FormData(this),
+            headers: { 'Accept': 'application/json' }
+          }).then(function(r) {
+            if (r.ok) {
+              btn.style.display = 'none';
+              msg.style.display = 'block';
+              msg.style.color = '#0d4d77';
+              msg.textContent = 'Thank you! We\'ll be in touch within 1-2 business days.';
+            } else {
+              btn.disabled = false;
+              btn.textContent = 'Submit Inquiry';
+              msg.style.display = 'block';
+              msg.style.color = '#dc2626';
+              msg.textContent = 'Something went wrong. Please email advertise@waterwisekids.com directly.';
+            }
+          }).catch(function() {
+            btn.disabled = false;
+            btn.textContent = 'Submit Inquiry';
+            msg.style.display = 'block';
+            msg.style.color = '#dc2626';
+            msg.textContent = 'Something went wrong. Please email advertise@waterwisekids.com directly.';
+          });
+        });
+      </script>
     </div>
   </section>
 
