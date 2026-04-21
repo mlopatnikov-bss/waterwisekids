@@ -1207,6 +1207,8 @@
     function setupEventListeners() {
       postJobBtn.addEventListener('click', openPostJobModal);
       postJobBtnEmpty.addEventListener('click', openPostJobModal);
+      // Auto-open modal when arriving via /aquatic-jobs/#post-job
+      if (window.location.hash === '#post-job') { openPostJobModal(); }
       closePostJobModal.addEventListener('click', closeModal);
       cancelPostJobBtn.addEventListener('click', closeModal);
       backFromDetail.addEventListener('click', () => {
