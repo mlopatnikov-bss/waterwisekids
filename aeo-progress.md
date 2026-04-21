@@ -359,8 +359,13 @@ These articles had TL;DR boxes, FAQPage JSON-LD, and speakable metadata built-in
 - `education/water-safety-during-pregnancy.html` ✅ (13/13 H2s converted to question format; bold direct answers on all; fixed brand voice violation ("Endorsed by certified swim professionals" in meta + "As certified swim professionals, we've" in body → third-person); replaced fake "72% of pregnant women" stat with real ACOG 150 min/week recommendation + hyperlink; hyperlinked ACOG, AAP, CDC, Red Cross in body text; added full ACOG/AAP/CDC/Red Cross hyperlinked citations section)
 - `swimmers-hub/backstroke-complete-guide.html` ✅ (10/10 H2s converted to question format; bold direct answers on all; added speakable metadata to Article JSON-LD; replaced fake "92% of swimmers" stat with real AAP 88% drowning-risk-reduction stat + hyperlink; added World Aquatics + AAP/CDC/Red Cross hyperlinked citations section)
 
-### Remaining Un-Tracked Newer Articles
-These articles have basic AEO (TL;DR, FAQ schema, speakable) but need citation + H2 upgrade in future runs:
-- `swimmers-hub/breaststroke-complete-guide.html`
-- `swimmers-hub/butterfly-complete-guide.html`
-- `swimmers-hub/freestyle-complete-guide.html`
+### Run 15 — 2026-04-21 — Citation + Question H2 Upgrade (Batch 10) — Swimmers Hub Strokes
+Completed the swimmers-hub stroke guide series. These articles had TL;DR, FAQPage JSON-LD, and basic AEO built-in, but had statement-style H2s, fake/unverified stats in stat boxes, and no hyperlinked authoritative citations block. Run 15 converted H2s to question format with bold direct answers, replaced fake stats with the AAP 88% drowning-risk-reduction figure (hyperlinked), added mainEntityOfPage + speakable to Article JSON-LD, and appended full AAP/CDC/Red Cross/USA Swimming/World Aquatics hyperlinked Authoritative Sources sections.
+- `swimmers-hub/breaststroke-complete-guide.html` ✅ (9 content H2s converted to question format; bold direct answers on all; fixed broken FAQ entry #4 (missing acceptedAnswer wrapper); replaced fake "25% of competitive swimmers" stat with real AAP 88% stat + hyperlink; added speakable metadata; added full AAP/CDC/Red Cross/USA Swimming/World Aquatics hyperlinked citations section)
+- `swimmers-hub/butterfly-complete-guide.html` ✅ (10 content H2s converted to question format; bold direct answers on all; replaced fake "22.5 seconds" world record stat with real AAP 88% stat + hyperlink; added mainEntityOfPage + speakable metadata; updated dateModified to 2026-04-21; added full AAP/CDC/Red Cross/USA Swimming/World Aquatics hyperlinked citations section)
+- `swimmers-hub/freestyle-complete-guide.html` ✅ (9 content H2s converted to question format; bold direct answers on first paragraph; replaced fake "28% faster than backstroke" stat with real AAP 88% stat + hyperlink; added mainEntityOfPage + speakable metadata; updated dateModified to 2026-04-21; added full AAP/CDC/Red Cross/USA Swimming/World Aquatics hyperlinked citations section)
+
+### AEO Coverage Status
+Core article library now has full AEO optimization (question H2s, bold direct answers, AAP 88% stat with hyperlink, authoritative citations section, FAQPage + speakable schemas) across education/ and swimmers-hub/ sections. Future runs should focus on:
+- Newly published articles from daily content pipeline (check against this progress log before optimizing)
+- Any legacy articles still using statement-style H2s or fake/unverified statistics
