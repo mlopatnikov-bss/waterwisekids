@@ -2016,12 +2016,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/pool-party-host-safety-checklist-printable.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
 
   <url><loc>https://www.waterwisekids.com/education/beach-safety-tips-kids.html</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/kids-swim-caps-guide.html</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -2074,12 +2068,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.waterwisekids.com/education/babysitter-water-safety-checklist-printable.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.waterwisekids.com/education/backyard-pool-fence-requirements.html</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -2105,12 +2093,6 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/deep-water-readiness-kids.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/family-pool-safety-checklist-printable.html</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2248,12 +2230,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.waterwisekids.com/education/vet-swim-instructor-safety-checklist-printable.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.waterwisekids.com/education/video-feedback-youth-sports.html</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -2261,12 +2237,6 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/water-anxious-kids-preparation.html</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/education/water-safety-month-action-plan-printable.html</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2338,5 +2308,4 @@
     <priority>0.8</priority>
   </url>
   <url><loc>https://www.waterwisekids.com/education/vacation-water-safety-checklist.html</loc><lastmod>2026-04-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.waterwisekids.com/education/vacation-water-safety-checklist-printable.html</loc><lastmod>2026-04-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
