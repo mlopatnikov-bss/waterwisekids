@@ -365,7 +365,28 @@ Completed the swimmers-hub stroke guide series. These articles had TL;DR, FAQPag
 - `swimmers-hub/butterfly-complete-guide.html` ✅ (10 content H2s converted to question format; bold direct answers on all; replaced fake "22.5 seconds" world record stat with real AAP 88% stat + hyperlink; added mainEntityOfPage + speakable metadata; updated dateModified to 2026-04-21; added full AAP/CDC/Red Cross/USA Swimming/World Aquatics hyperlinked citations section)
 - `swimmers-hub/freestyle-complete-guide.html` ✅ (9 content H2s converted to question format; bold direct answers on first paragraph; replaced fake "28% faster than backstroke" stat with real AAP 88% stat + hyperlink; added mainEntityOfPage + speakable metadata; updated dateModified to 2026-04-21; added full AAP/CDC/Red Cross/USA Swimming/World Aquatics hyperlinked citations section)
 
+### Run 16 — 2026-04-22 — Citation + Question H2 Upgrade (Batch 11) — Newer Articles
+These articles had TL;DR boxes, FAQPage JSON-LD, and basic speakable metadata built-in from creation but had statement-style H2s, no hyperlinked authoritative citations, and a weaker speakable cssSelector. Run 16 converted all content H2s to question format with bold direct answers, added hyperlinked AAP/CDC/Red Cross/NDPA citations in body text, upgraded the speakable cssSelector to the standardized pattern (`.tldr-box`, `.article h1`, `.article-excerpt`, `.article > p:first-of-type`), bumped dateModified to 2026-04-22, and appended full Authoritative Sources sections.
+- `education/what-to-expect-isr-lessons.html` ✅ (6/6 content H2s converted to question format; bold direct answers; added AAP 88% stat + CDC #1 cause of death stat with hyperlinks; upgraded speakable selector; added full AAP/CDC/Red Cross/NDPA Authoritative Sources section)
+- `education/dual-safety-foundation-survival-swim.html` ✅ (6/6 content H2s converted to question format; bold direct answers; hyperlinked CDC drowning stat + AAP 88% stat + CDC 83% pool fencing stat + NDPA layered protection; upgraded speakable selector; added full Authoritative Sources section)
+- `education/adaptive-aquatics-first-session-prep.html` ✅ (6/6 content H2s converted to question format; bold direct answers; added CDC ASD drowning risk reference + AAP developmental disabilities guidance; hyperlinked USA Swimming + Red Cross adaptive training; upgraded speakable selector; added full Authoritative Sources section including USA Swimming)
+
+### Remaining Un-Tracked Newer Articles (Apr 2026 publishing batch)
+These articles have basic AEO (TL;DR, FAQ schema, speakable) but need citation + question H2 upgrade in future runs:
+- `education/thirty-minute-swim-lesson-science.html`
+- `education/swimtastic-safesplash-swimlabs-comparison.html`
+- `education/swim-school-level-count-explained.html`
+- `education/swim-school-consolidation-explained.html`
+- `education/private-equity-swim-school-ownership.html`
+- `education/pool-types-home-swim-lessons.html`
+- `education/home-pool-liability-swim-lessons.html`
+- `education/celebrity-swim-school-endorsements.html`
+- `education/ymca-vs-private-swim-school.html`
+- `education/ymca-open-doors-swim-lesson-assistance.html`
+- `education/year-round-vs-seasonal-swim-lessons.html`
+- plus open-water, pool-party-host, vacation-water, vet-swim-instructor, and water-safety-month-action-plan checklist printables
+
 ### AEO Coverage Status
-Core article library now has full AEO optimization (question H2s, bold direct answers, AAP 88% stat with hyperlink, authoritative citations section, FAQPage + speakable schemas) across education/ and swimmers-hub/ sections. Future runs should focus on:
+Core article library has full AEO optimization (question H2s, bold direct answers, AAP 88% stat with hyperlink, authoritative citations section, FAQPage + speakable schemas) across education/ and swimmers-hub/ sections. Daily pipeline is backfilling newly published articles (one batch of 3 per day). Future runs should focus on:
 - Newly published articles from daily content pipeline (check against this progress log before optimizing)
 - Any legacy articles still using statement-style H2s or fake/unverified statistics
