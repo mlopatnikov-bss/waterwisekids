@@ -371,11 +371,14 @@ These articles had TL;DR boxes, FAQPage JSON-LD, and basic speakable metadata bu
 - `education/dual-safety-foundation-survival-swim.html` ✅ (6/6 content H2s converted to question format; bold direct answers; hyperlinked CDC drowning stat + AAP 88% stat + CDC 83% pool fencing stat + NDPA layered protection; upgraded speakable selector; added full Authoritative Sources section)
 - `education/adaptive-aquatics-first-session-prep.html` ✅ (6/6 content H2s converted to question format; bold direct answers; added CDC ASD drowning risk reference + AAP developmental disabilities guidance; hyperlinked USA Swimming + Red Cross adaptive training; upgraded speakable selector; added full Authoritative Sources section including USA Swimming)
 
+### Run 17 — 2026-04-23 — Citation + Question H2 Upgrade (Batch 12) — Apr 2026 publishing batch
+These articles had TL;DR boxes, FAQPage JSON-LD, and basic speakable metadata built-in from creation but had statement-style H2s, no hyperlinked authoritative citations, and a weaker speakable cssSelector. Run 17 converted all content H2s to question format with bold direct answers, added hyperlinked AAP/CDC/Red Cross citations in body text, upgraded the speakable cssSelector to the standardized pattern (`.tldr-box`, `.article h1`, `.article-excerpt`, `.article > p:first-of-type`), bumped dateModified to 2026-04-23, and appended full Authoritative Sources sections.
+- `education/thirty-minute-swim-lesson-science.html` ✅ (6/6 content H2s converted to question format; bold direct answers; added AAP 88% stat, CDC #1 cause of death stat, Red Cross home reinforcement reference with hyperlinks; upgraded speakable selector; added full AAP/CDC/Red Cross/NDPA Authoritative Sources section)
+- `education/swim-school-level-count-explained.html` ✅ (6/6 content H2s converted to question format; bold direct answers; hyperlinked AAP 88% stat, CDC drowning stat, Red Cross Learn-to-Swim curriculum framework; upgraded speakable selector; added full Authoritative Sources section)
+- `education/swimtastic-safesplash-swimlabs-comparison.html` ✅ (7/8 content H2s converted to question format; bold direct answers on all 8 sections; hyperlinked AAP 88% stat, CDC drowning stat, Red Cross benchmark framework; upgraded speakable selector; added full Authoritative Sources section with brand-neutrality disclaimer — WaterWiseKids does not own or operate any swim school)
+
 ### Remaining Un-Tracked Newer Articles (Apr 2026 publishing batch)
 These articles have basic AEO (TL;DR, FAQ schema, speakable) but need citation + question H2 upgrade in future runs:
-- `education/thirty-minute-swim-lesson-science.html`
-- `education/swimtastic-safesplash-swimlabs-comparison.html`
-- `education/swim-school-level-count-explained.html`
 - `education/swim-school-consolidation-explained.html`
 - `education/private-equity-swim-school-ownership.html`
 - `education/pool-types-home-swim-lessons.html`
