@@ -83,10 +83,16 @@
     }
 
     .popular-links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 1rem;
       margin-top: 1rem;
+    }
+
+    .popular-links a {
+      min-width: 180px;
+      text-align: center;
     }
 
     .popular-links a {
@@ -126,8 +132,8 @@
         padding: 1.5rem;
       }
 
-      .popular-links {
-        grid-template-columns: 1fr;
+      .popular-links a {
+        min-width: 140px;
       }
     }
 </style>
