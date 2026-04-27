@@ -1,0 +1,32 @@
+{
+  "date": "2026-04-27",
+  "scanned": 459,
+  "modified": 10,
+  "summary": {
+    "meta_desc_added": 0,
+    "alt_files_fixed": 0,
+    "og_title_added": 0,
+    "og_desc_added": 0,
+    "og_image_added": 0,
+    "og_type_added": 0,
+    "og_url_added": 0,
+    "twitter_card_added": 10,
+    "missing_schema_count": 0,
+    "duplicate_desc_sets": 0
+  },
+  "samples": {
+    "meta_desc_added": [],
+    "alt_fixed": [],
+    "og_added": [
+      "education/swim-school-ownership-models.html",
+      "education/why-swim-lessons-are-30-minutes.html",
+      "education/mastery-based-vs-session-advancement.html",
+      "education/swim-instructor-training-hours-compared.html",
+      "education/proprietary-vs-red-cross-wsi-curriculum.html",
+      "... +5 more"
+    ],
+    "missing_schema": [],
+    "duplicate_descs_top": []
+  },
+  "errors": []
+}
