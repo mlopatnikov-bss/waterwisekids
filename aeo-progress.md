@@ -393,3 +393,18 @@ These articles have basic AEO (TL;DR, FAQ schema, speakable) but need citation +
 Core article library has full AEO optimization (question H2s, bold direct answers, AAP 88% stat with hyperlink, authoritative citations section, FAQPage + speakable schemas) across education/ and swimmers-hub/ sections. Daily pipeline is backfilling newly published articles (one batch of 3 per day). Future runs should focus on:
 - Newly published articles from daily content pipeline (check against this progress log before optimizing)
 - Any legacy articles still using statement-style H2s or fake/unverified statistics
+
+### Run 18 — 2026-06-11 — Citation + Question H2 Upgrade (Batch 13) — First run after 7-week deploy outage
+These articles had TL;DR boxes, FAQPage JSON-LD, and basic speakable metadata built-in from creation but had statement-style H2s, no hyperlinked authoritative citations, and a weaker speakable cssSelector. Run 18 converted all content H2s to question format with bold direct answers, added hyperlinked AAP/CDC/Red Cross/NDPA citations in body text, upgraded the speakable cssSelector to the standardized pattern, bumped dateModified to 2026-06-11, and appended full Authoritative Sources sections.
+- `education/swim-school-consolidation-explained.html` ✅ (6/6 content H2s converted to question format; bold direct answers; hyperlinked AAP 88% stat, CDC #1 cause of death stat, Red Cross Learn-to-Swim benchmark, NDPA layered protection; brand-neutrality disclaimer added — WaterWiseKids does not own or operate any swim school)
+- `education/private-equity-swim-school-ownership.html` ✅ (6/6 content H2s converted to question format — one was already a question; bold direct answers; hyperlinked CDC drowning stat + AAP 88% stat + Red Cross + NDPA; brand-neutrality disclaimer added)
+- `education/pool-types-home-swim-lessons.html` ✅ (6/6 content H2s converted to question format; bold direct answers; hyperlinked CDC #1 cause of death + CDC 83% four-sided fencing stat + AAP 88% stat + Red Cross/NDPA layered protection; citations placed in safety-prerequisites section)
+
+### Remaining Un-Tracked Newer Articles (after Run 18)
+- `education/home-pool-liability-swim-lessons.html`
+- `education/celebrity-swim-school-endorsements.html`
+- `education/ymca-vs-private-swim-school.html`
+- `education/ymca-open-doors-swim-lesson-assistance.html`
+- `education/year-round-vs-seasonal-swim-lessons.html`
+- plus open-water, pool-party-host, vacation-water, vet-swim-instructor, and water-safety-month-action-plan checklist printables
+- NOTE: also re-check any articles published during the Apr 23 – Jun 11 deploy outage window against this log.
