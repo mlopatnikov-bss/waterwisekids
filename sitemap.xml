@@ -649,12 +649,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.waterwisekids.com/how-to-help-a-child-overcome-fear-of-water.html</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.waterwisekids.com/how-to-teach-kids-to-swim.html</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -2331,13 +2325,6 @@
   <url><loc>https://www.waterwisekids.com/education/backyard-pool-safety-layers-explained.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/silent-drowning-what-it-looks-like.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/swim-readiness-indicators-age-4.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.waterwisekids.com/education/babysitter-water-safety-checklist-printable.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.waterwisekids.com/education/family-pool-safety-checklist-printable.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.waterwisekids.com/education/open-water-safety-checklist-printable.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.waterwisekids.com/education/pool-party-host-safety-checklist-printable.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.waterwisekids.com/education/vacation-water-safety-checklist-printable.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.waterwisekids.com/education/vet-swim-instructor-safety-checklist-printable.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.waterwisekids.com/education/water-safety-month-action-plan-printable.html</loc><lastmod>2026-04-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/indoor-vs-outdoor-swim-lessons.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/usa-swimming-safe-sport-explained.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/proprietary-vs-red-cross-wsi-curriculum.html</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -2408,8 +2395,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://www.waterwisekids.com/education/grandparent-water-safety-checklist-printable.html</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.waterwisekids.com/education/pool-fence-gate-inspection-checklist-printable.html</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/swim-float-swim-method-explained.html</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/swim-school-survival-tests-explained.html</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/olympic-founder-swim-schools.html</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -2420,4 +2405,10 @@
   <url><loc>https://www.waterwisekids.com/education/swimmers-itch-prevention.html</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/safe-diving-rules-kids.html</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/fourth-of-july-water-safety.html</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/water-watcher-card.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
