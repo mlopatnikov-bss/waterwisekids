@@ -408,3 +408,15 @@ These articles had TL;DR boxes, FAQPage JSON-LD, and basic speakable metadata bu
 - `education/year-round-vs-seasonal-swim-lessons.html`
 - plus open-water, pool-party-host, vacation-water, vet-swim-instructor, and water-safety-month-action-plan checklist printables
 - NOTE: also re-check any articles published during the Apr 23 – Jun 11 deploy outage window against this log.
+
+### Run 19 — 2026-06-12 — Citation + Question H2 Upgrade (Batch 14)
+These articles had TL;DR boxes, FAQPage JSON-LD, and basic speakable metadata built-in from creation but had statement-style H2s, no hyperlinked authoritative citations, and the weaker speakable cssSelector. Run 19 converted all content H2s to question format with bold direct answers, added hyperlinked AAP/CDC/Red Cross/NDPA citations in body text, upgraded the speakable cssSelector to the standardized pattern, bumped dateModified to 2026-06-12, and appended full Authoritative Sources sections.
+- `education/home-pool-liability-swim-lessons.html` ✅ (6/6 H2s converted to question format; bold direct answers; hyperlinked CDC #1 cause of death stat, CDC 83% four-sided fencing stat, AAP 88% stat, Red Cross water-watcher rotation, NDPA layers of protection; full Authoritative Sources section)
+- `education/celebrity-swim-school-endorsements.html` ✅ (6/6 H2s converted to question format; bold direct answers; hyperlinked AAP 88% stat + Red Cross Learn-to-Swim certification benchmark; full AAP/CDC/Red Cross/NDPA Authoritative Sources section; brand-neutrality disclaimer added — WaterWiseKids does not own or operate any swim school and has no relationship with any endorser)
+- `education/ymca-vs-private-swim-school.html` ✅ (8/8 H2s in question format incl. 2 converted-and-strengthened existing questions; bold direct answers; hyperlinked AAP warm-water + 88% stat, Red Cross Learn-to-Swim benchmark; full Authoritative Sources section; brand-neutrality disclaimer added)
+
+### Remaining Un-Tracked Newer Articles (after Run 19)
+- `education/ymca-open-doors-swim-lesson-assistance.html`
+- `education/year-round-vs-seasonal-swim-lessons.html`
+- plus open-water, pool-party-host, vacation-water, vet-swim-instructor, and water-safety-month-action-plan checklist printables
+- NOTE: also re-check any articles published during the Apr 23 – Jun 11 deploy outage window against this log.
