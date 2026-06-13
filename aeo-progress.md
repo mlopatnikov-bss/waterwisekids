@@ -420,3 +420,21 @@ These articles had TL;DR boxes, FAQPage JSON-LD, and basic speakable metadata bu
 - `education/year-round-vs-seasonal-swim-lessons.html`
 - plus open-water, pool-party-host, vacation-water, vet-swim-instructor, and water-safety-month-action-plan checklist printables
 - NOTE: also re-check any articles published during the Apr 23 – Jun 11 deploy outage window against this log.
+
+---
+
+## Run — 2026-06-13 (Teen Aquatics Career Hub pass)
+
+**Context:** The full water-safety education corpus (238+ indexable articles) plus root content was confirmed fully AEO-optimized (tldr-box + FAQPage + speakable all present). The remaining indexable real-content pages lacking AEO markers were the `/teens/` career guides. Optimized 3 this run.
+
+| Article | Optimizations applied |
+|---------|----------------------|
+| `teens/lifeguard-certification.html` | Answer-first opening, TL;DR box, question H2s, **HowTo** schema (8 steps), **FAQPage** (5 Q&A), speakable, Red Cross + BLS citations/stats |
+| `teens/swim-instructor.html` | Answer-first opening, TL;DR box, question H2s, **HowTo** schema (5 steps), **FAQPage** (5 Q&A), speakable, Red Cross WSI citation |
+| `teens/aquatics-careers.html` | Answer-first opening, TL;DR box, question H2s, **FAQPage** (5 Q&A), speakable, BLS + Red Cross citations/stats |
+
+**Verified facts (web):** Red Cross lifeguard min age 15 (last day of class); Red Cross WSI min age 16; BLS lifeguards median wage $16.57/hr ($34,470/yr), mean >$21/hr in CA, HI, DC.
+
+**Note (scope choice):** These are aquatics-career pages, not water-safety Q&A. Used career-appropriate authoritative sources (American Red Cross, U.S. BLS) rather than drowning statistics. All 3 pages are indexable (no noindex). JSON-LD validated, tags balanced, internal links verified.
+
+**Remaining un-optimized indexable real content:** none identified at root/teens. Hub/index pages (gear, education, swim-schools, find-swim-lessons, jobs) and `-printable.html` worksheets intentionally left as-is (functional pages, not Q&A articles). Future runs: re-audit citation depth on older education articles.
