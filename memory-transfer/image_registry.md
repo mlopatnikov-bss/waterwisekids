@@ -50,3 +50,18 @@ All photo IDs used in education/index.html article cards. Run this to get curren
 - 8688541 → kayak-canoe-safety-kids.html
 - 9044070 → swimming-after-eating-myth.html
 - 17680146 → pool-floaties-dangers.html
+
+## AI-Generated Cards Added 2026-06-13 (10 articles — self-hosted, NOT Pexels)
+Self-hosted at /assets/images/cards/<slug>.jpg via .deploy/gen-card-image.py. No Pexels IDs.
+3 originally-planned slugs (homeschool-swim-lessons-pe, story-based-swim-lessons,
+swim-school-cancellation-policies) were already live, so were swapped for 3 new ones.
+- kick-first-vs-survival-curricula.jpg
+- recreational-water-illness-prevention.jpg
+- swim-school-facility-models.jpg
+- free-baby-swim-classes-funnel.jpg
+- swim-school-annual-fees.jpg
+- post-lesson-practice-time.jpg
+- swim-school-superlative-claims.jpg
+- swim-instructor-turnover-continuity.jpg
+- swim-school-referral-programs.jpg
+- swim-lesson-makeup-tokens.jpg
