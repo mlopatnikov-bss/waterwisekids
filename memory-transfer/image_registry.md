@@ -65,3 +65,16 @@ swim-school-cancellation-policies) were already live, so were swapped for 3 new 
 - swim-instructor-turnover-continuity.jpg
 - swim-school-referral-programs.jpg
 - swim-lesson-makeup-tokens.jpg
+
+## AI-Generated Cards Added 2026-06-14 (10 articles — self-hosted, NOT Pexels)
+Self-hosted at /assets/images/cards/<slug>.jpg via .deploy/gen-card-image.py. No Pexels IDs.
+- play-based-swim-lessons-decoded.jpg
+- swim-school-amenities-decoded.jpg
+- free-water-safety-presentations-schools.jpg
+- six-beat-kick-swim-science.jpg
+- lifeguards-dont-replace-supervision.jpg
+- swim-curriculum-credentials-decoded.jpg
+- floating-water-park-safety.jpg
+- towable-tube-tubing-safety.jpg
+- jet-ski-pwc-safety-families.jpg
+- touch-supervision-explained.jpg
