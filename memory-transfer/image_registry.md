@@ -78,3 +78,16 @@ Self-hosted at /assets/images/cards/<slug>.jpg via .deploy/gen-card-image.py. No
 - towable-tube-tubing-safety.jpg
 - jet-ski-pwc-safety-families.jpg
 - touch-supervision-explained.jpg
+
+## 2026-06-15 — 10 new AI-generated card images (gen-card-image.py, self-hosted /assets/images/cards/)
+These are AI-generated cartoon illustrations, NOT Pexels photos (no Pexels IDs to track):
+- autism-wandering-water-safety.jpg
+- ice-safety-cold-weather-kids.jpg
+- how-to-teach-treading-water.jpg
+- older-siblings-water-supervision.jpg
+- are-puddle-jumpers-safe.jpg
+- epilepsy-swimming-safety.jpg
+- nose-clips-ear-plugs-kids.jpg
+- swimming-with-eczema-kids.jpg
+- aed-water-emergencies.jpg
+- cruise-ship-water-safety-families.jpg
