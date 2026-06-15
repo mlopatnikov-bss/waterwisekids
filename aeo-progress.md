@@ -447,3 +447,17 @@ These articles already had TL;DR boxes, FAQPage JSON-LD, question-format H2s, an
 
 ### Remaining Un-Tracked Articles (after Run 20)
 ~135 education articles still have basic AEO (TL;DR, FAQ schema, speakable) but lack hyperlinked authoritative citations / bold direct answers — these are the deeper "citation + bold-answer upgrade" candidates for future runs (e.g. at-what-age-can-kids-swim-alone, deep-water-readiness-kids, drown-proofing-techniques, five-layers-protection-drowning-prevention, emergency-pool-action-plan, etc.). All core/priority articles remain fully optimized. Continue ~3 per run.
+
+### Run 19 — 2026-06-15 — Citation + Question H2 Upgrade (Batch 14) — Mac Mini permanent host
+First run from the Mac Mini after project transfer. Focused on the newest/high-value supervision + drowning-prevention articles still missing hyperlinked authoritative citations and an Authoritative Sources section. For each: converted statement H2s to question format with bold direct-answer leads, added hyperlinked AAP/CDC/Red Cross/NDPA/USCG citations in body text, appended a full Authoritative Sources section, standardized the speakable cssSelector (`.tldr-box`, `.article h1`, `.article-excerpt`, `.article > p:first-of-type`), and bumped dateModified to 2026-06-15. All three validated: JSON-LD parses clean, HTML tag stack balanced, FAQPage + Article + BreadcrumbList schemas intact.
+- `education/lifeguards-dont-replace-supervision.html` ✅ (newest article, was fully unoptimized — 7/7 content H2s converted to questions with bold answers; added CDC #1-cause-of-death stat + AAP 88% stat with hyperlinks; full Authoritative Sources section; upgraded speakable from 2-selector to standardized 4-selector)
+- `education/touch-supervision-explained.html` ✅ (3 remaining statement H2s converted to questions; bold answer leads added to all 7 content sections; hyperlinked existing AAP + CDC prose mentions; added AAP 88% stat; full Authoritative Sources section; standardized speakable)
+- `education/five-layers-protection-drowning-prevention.html` ✅ (2 statement H2s converted to questions; bold answer leads added to all 8 sections; hyperlinked NDPA + AAP x2 + USCG + Red Cross prose mentions; added CDC to sources; full Authoritative Sources section; standardized speakable; preserved accurate Brenner-et-al 88% caveat)
+
+### Remaining High-Value Un-Cited Articles (after Run 19)
+Large backlog still has TL;DR + FAQ + speakable but no hyperlinked authoritative citations / Authoritative Sources section. Priority safety topics to target next:
+- `education/swim-school-membership-tiers.html` (newest, has question H2s but cites=0)
+- `education/drown-proofing-techniques.html`
+- `education/emergency-pool-action-plan.html`
+- `education/touch-supervision`-adjacent: `community-pool-safety-rules.html`, `family-pool-safety-checklist.html`, `nighttime-pool-safety.html`
+- NOTE: progress file's "full-site pass complete" (Apr 9) overstated coverage — ~140 education articles carry a TL;DR box but cites=0. Many are lifestyle/product articles where drowning stats don't apply, but safety/supervision/drowning articles should be prioritized for the citation upgrade.
