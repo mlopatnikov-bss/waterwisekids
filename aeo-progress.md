@@ -461,3 +461,11 @@ Large backlog still has TL;DR + FAQ + speakable but no hyperlinked authoritative
 - `education/emergency-pool-action-plan.html`
 - `education/touch-supervision`-adjacent: `community-pool-safety-rules.html`, `family-pool-safety-checklist.html`, `nighttime-pool-safety.html`
 - NOTE: progress file's "full-site pass complete" (Apr 9) overstated coverage — ~140 education articles carry a TL;DR box but cites=0. Many are lifestyle/product articles where drowning stats don't apply, but safety/supervision/drowning articles should be prioritized for the citation upgrade.
+
+### Run 7 — 2026-06-16 — Authoritative Citation Hyperlinks (newer articles)
+Daily aeo-optimizer run. The full educational corpus already carries TL;DR boxes, FAQPage JSON-LD, question H2s, and speakable metadata. The remaining gap on ~155 newer articles is **hyperlinked** authoritative citations (they mentioned AAP/CDC/Red Cross in plain text only). This run converted those to live links and confirmed stat attribution.
+- `education/are-puddle-jumpers-safe.html` ✅ (linked AAP water-safety guidance + U.S. Coast Guard life-jacket page; added attributed CDC stat — drowning is #1 cause of unintentional injury death ages 1–4)
+- `education/at-what-age-can-kids-swim-alone.html` ✅ (linked AAP + American Red Cross in intro; hyperlinked CDC on the leading-cause Key Stat; linked AAP touch-supervision recommendation)
+- `education/swimming-after-eating-myth.html` ✅ (linked American Red Cross + AAP; attributed the 83% four-sided-fencing stat to CDC with link)
+
+All JSON-LD revalidated error-free (3 schemas/article); anchor tags balanced; no brand-voice violations (WaterWiseKids does not own or operate any swim school).
