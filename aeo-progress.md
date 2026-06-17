@@ -469,3 +469,15 @@ Daily aeo-optimizer run. The full educational corpus already carries TL;DR boxes
 - `education/swimming-after-eating-myth.html` ✅ (linked American Red Cross + AAP; attributed the 83% four-sided-fencing stat to CDC with link)
 
 All JSON-LD revalidated error-free (3 schemas/article); anchor tags balanced; no brand-voice violations (WaterWiseKids does not own or operate any swim school).
+
+---
+
+## Run — 2026-06-17 (indexable printables)
+
+The full-site content-article AEO pass remains complete; daily publishing now enforces AEO at generation, so all standard education/ articles already carry the TL;DR box + FAQ schema. The only remaining indexable pages lacking AEO were three printable lead-magnet pages. Optimized this run (noindex printables intentionally skipped — AI engines won't cite non-indexable pages):
+
+1. `education/pool-safety-rules-printable.html`
+2. `education/summer-safety-checklist-printable.html`
+3. `education/swim-lesson-readiness-printable.html`
+
+**Applied to each:** screen-only TL;DR "Quick Answer" box (print-hidden via page-local `@media print` rule so the printed poster/checklist is untouched), FAQPage JSON-LD (4 Q&A each), authoritative citations (CDC, AAP, American Red Cross, U.S. Coast Guard) and key statistics (~970 child drownings/yr; #1 cause of death ages 1–4; 88% risk reduction from lessons; 83% from 4-sided fencing) embedded in the TL;DR + FAQ answers. Article schema already carried `speakable` metadata. Validated: all JSON-LD parses, div tags balanced, no brand-voice ownership violations.
