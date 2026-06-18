@@ -481,3 +481,15 @@ The full-site content-article AEO pass remains complete; daily publishing now en
 3. `education/swim-lesson-readiness-printable.html`
 
 **Applied to each:** screen-only TL;DR "Quick Answer" box (print-hidden via page-local `@media print` rule so the printed poster/checklist is untouched), FAQPage JSON-LD (4 Q&A each), authoritative citations (CDC, AAP, American Red Cross, U.S. Coast Guard) and key statistics (~970 child drownings/yr; #1 cause of death ages 1–4; 88% risk reduction from lessons; 83% from 4-sided fencing) embedded in the TL;DR + FAQ answers. Article schema already carried `speakable` metadata. Validated: all JSON-LD parses, div tags balanced, no brand-voice ownership violations.
+
+### Run 21 — 2026-06-18 — Citation + Bold-Answer + Question-H2 Upgrade (high-value safety backlog)
+First run from the Mac Mini permanent host this date. Targeted three high-value supervision/survival-skill articles that carried TL;DR + FAQPage + speakable but had cites=0, statement-style H2s, no bold direct answers, and the weaker speakable cssSelector. For each: converted all content H2s to question format with bold direct-answer lead sentences, added hyperlinked CDC/AAP/Red Cross/NDPA citations in body text, appended a full "📚 Authoritative Sources" section, standardized the speakable cssSelector (`.tldr-box`, `.article h1`, `.article-excerpt`, `.article > p:first-of-type`), and bumped dateModified to 2026-06-18. Validated with BeautifulSoup: all 3 JSON-LD schemas per page (Article + FAQPage + BreadcrumbList) parse clean; div/p/h2/ul/li/a tag stacks balanced; no brand-voice ownership violations.
+- `education/drown-proofing-techniques.html` ✅ (8/8 content H2s → questions with bold answers; hyperlinked CDC Key Stat + AAP 88% stat in body; full Authoritative Sources section; speakable upgraded; dateModified 2026-06-18)
+- `education/emergency-pool-action-plan.html` ✅ (6/6 content H2s → questions with bold answers; hyperlinked CDC submersion-timing stat, Red Cross residential-pool stat, Red Cross CPR class; full Authoritative Sources section; speakable upgraded)
+- `education/nighttime-pool-safety.html` ✅ (6/6 content H2s → questions with bold answers; hyperlinked NDPA nighttime-access risk, CDC 83% four-sided-fencing stat, AAP touch-supervision; full Authoritative Sources section; speakable upgraded from 2-selector to standardized 4-selector)
+
+### Remaining High-Value Un-Cited Articles (after Run 21)
+- `education/swim-school-membership-tiers.html` (has question H2s but cites=0)
+- `education/community-pool-safety-rules.html`
+- `education/family-pool-safety-checklist.html`
+- plus the large backlog of ~130 education articles carrying TL;DR + FAQ + speakable but cites=0 (prioritize safety/supervision/drowning topics; many lifestyle/product articles don't need drowning stats).
