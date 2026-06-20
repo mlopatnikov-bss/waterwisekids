@@ -91,3 +91,15 @@ These are AI-generated cartoon illustrations, NOT Pexels photos (no Pexels IDs t
 - swimming-with-eczema-kids.jpg
 - aed-water-emergencies.jpg
 - cruise-ship-water-safety-families.jpg
+
+## AI-generated card images added 2026-06-20 (no Pexels IDs — self-hosted /assets/images/cards/)
+- in-home-swim-lessons-explained
+- self-rescue-home-pool-practice
+- back-float-first-infant-swim
+- wave-pool-safety-kids
+- apartment-pool-safety-kids
+- renting-private-pool-hourly-safety
+- lake-house-water-safety-families
+- backward-design-swim-curriculum
+- quarterly-vs-monthly-swim-lessons
+- group-vs-continuous-swim-advancement
