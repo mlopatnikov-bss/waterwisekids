@@ -511,3 +511,21 @@ Daily aeo-optimizer run from the Mac Mini permanent host. Targeted three high-va
 
 ### Remaining High-Value Un-Cited Articles (after Run 23)
 - Large backlog of ~124 education articles carrying TL;DR + FAQ + speakable but cites=0; prioritize remaining safety/supervision/drowning topics (e.g. `deep-water-readiness-kids.html`, `electric-shock-drowning-docks.html`, `child-wont-wear-life-jacket.html`, `older-siblings-water-supervision.html`, `how-to-teach-treading-water.html` — the last is a HowTo-schema candidate). Lifestyle/product articles generally don't need drowning stats.
+
+---
+
+## Run 24 — 2026-06-20 — FULL BACKLOG CLEARED (305 articles, 4 deploy waves)
+
+User directive: "address everything in the backlog." A fresh audit of `live` found the prior "full-site pass complete" notes overstated coverage: **305 indexable content articles** carried a TL;DR box + FAQ schema but lacked an "📚 Authoritative Sources" section (194 had zero authority citations; 111 had some inline links but no sources section). 8 redirect stubs / non-article hub pages were correctly excluded.
+
+**Method:** Parallel subagents ran the standardized Run-23 playbook on safety-topic articles first, in 4 deploy waves (70 + 80 + 80 + 75 = 305). Each article received: statement H2s → question format (ids preserved) with bold direct-answer leads; 2+ hyperlinked authoritative citations woven into the body (approved URLs only: CDC, AAP/HealthyChildren, American Red Cross, NDPA, CPSC, USCG, AHA, USA Swimming); a tailored "📚 Authoritative Sources" section; standardized 4-selector speakable cssSelector; `dateModified` → 2026-06-20. Topic-appropriate authorities used for non-drowning articles (lessons, progress, credentials, swimmer-health) — drowning stats were NOT force-fit where irrelevant.
+
+**Statistics hygiene:** Agents removed/corrected multiple fabricated or mis-attributed stats found in pre-existing content (e.g. invented "42%", "72% of parents", "91% of instructors", "5–10x", a mislabeled CDC→AAP 88% attribution). Only the approved attributed stat set was used going forward.
+
+**Validation (all 305):** JSON-LD parses clean (Article + FAQPage + BreadcrumbList per page); h2/div tag stacks balanced; speakable standardized; ≥2 authority citations + sources section present; dateModified = 2026-06-20; 0 broken internal links. Brand-voice check: my run introduced **0** new ownership phrases (global ownership-phrase count unchanged 71→71).
+
+**Deploy commits to `live`:** 84cfef6 (wave 1, 70), bbef172 (wave 2, 80), 563074c (wave 3, 80), bcc3771 (wave 4, 75). Each rebased onto concurrent AutoDeploy/footer-fix commits before pushing.
+
+**Backlog status after Run 24:** Re-running the detector (indexable article with tldr-box but no Authoritative Sources section) returns **0**. The education/, swimmers-hub/, teens/, and root content corpora are now fully AEO-optimized with hyperlinked authoritative sources.
+
+**Open item (pre-existing, NOT introduced here):** ~30 articles contain pre-existing first-person "our instructors/our program/our lessons/we teach" phrasing in body copy or example quotes (many are "y*our program*" false positives). These predate this run and are a brand-voice cleanup candidate for a future pass — flagged to Michael.
