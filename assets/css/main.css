@@ -2132,3 +2132,112 @@ table tbody tr:hover {
   transform: translateY(-2px);
 }
 
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   AQUATICS JOBS PAGE — search form, filter pills, CTA sections
+   Restores styling for /jobs/ classes that were previously orphaned
+   (hero now uses shared .page-hero). Added by visual-design-auditor 2026-06-20.
+═══════════════════════════════════════════════════════════════════════════════ */
+.search-section {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+  margin: 2rem 0 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.search-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 1rem;
+  align-items: end;
+}
+.search-group { display: flex; flex-direction: column; }
+.search-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 0.35rem;
+}
+.search-group input,
+.search-group select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--r-md);
+  font-size: 0.95rem;
+  background: var(--white);
+  color: var(--gray-900);
+}
+.search-button {
+  background: var(--blue-700);
+  color: var(--white);
+  border: none;
+  border-radius: var(--r-md);
+  padding: 0.65rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+.search-button:hover { background: var(--blue-800); }
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.filter-pills .pill {
+  background: var(--white);
+  border-color: var(--gray-300);
+  color: var(--gray-700);
+}
+.filter-pills .pill:hover { border-color: var(--blue-500); color: var(--blue-700); }
+.filter-pills .pill.active {
+  background: var(--blue-700);
+  border-color: var(--blue-700);
+  color: var(--white);
+}
+.jobs-grid { display: block; }
+.post-job-section,
+.teen-section {
+  text-align: center;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--r-lg);
+  padding: 2.5rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.post-job-section h2,
+.teen-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0.75rem;
+}
+.post-job-section p,
+.teen-section p {
+  color: var(--gray-600);
+  font-size: 1.05rem;
+  max-width: 560px;
+  margin: 0 auto 1.5rem;
+}
+.post-button,
+.teen-button {
+  display: inline-block;
+  background: var(--blue-700);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--r-md);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+.post-button:hover,
+.teen-button:hover { background: var(--blue-800); }
+
+@media (max-width: 768px) {
+  .search-grid { grid-template-columns: 1fr; }
+  .search-button { width: 100%; }
+}
