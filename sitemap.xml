@@ -290,9 +290,15 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/drowning-prevention-guide.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterwisekids.com/education/water-safety-for-kids.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/drowning-statistics-facts.html</loc>
@@ -878,8 +884,8 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/scholarships/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
