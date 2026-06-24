@@ -289,13 +289,15 @@
     text-align: center;
   }
 
-  .stat-item .stat-number {
+  .stat-item .stat-number,
+  .stat-card .stat-number {
     color: #075985 !important;
     font-size: 1.25rem !important;
     font-weight: 800 !important;
   }
 
-  .stat-item .stat-label {
+  .stat-item .stat-label,
+  .stat-card .stat-label {
     color: #0284c7 !important;
     font-size: 0.62rem !important;
     font-weight: 600 !important;
