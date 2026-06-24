@@ -289,13 +289,13 @@
     text-align: center;
   }
 
-  .stat-number {
+  .stat-item .stat-number {
     color: #075985 !important;
     font-size: 1.25rem !important;
     font-weight: 800 !important;
   }
 
-  .stat-label {
+  .stat-item .stat-label {
     color: #0284c7 !important;
     font-size: 0.62rem !important;
     font-weight: 600 !important;
