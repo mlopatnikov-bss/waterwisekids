@@ -573,3 +573,16 @@ Daily aeo-optimizer run from the Mac Mini permanent host. Structural AEO backlog
 **Audited but skipped (not genuinely procedural):** `secondary-drowning-dry-drowning.html` (symptom-recognition checklist + when-to-seek-care decision criteria using `<ul>`, not a sequential procedure — left for non-HowTo treatment, consistent with Run-27 discipline).
 
 **Next HowTo candidates (genuinely sequential procedures still lacking HowTo schema):** `drown-proofing-techniques.html` (back-float / jellyfish-float teaching progression — would need step markup added), `what-to-do-drowning-emergency.html` already has HowTo. Continue picking only genuine step-by-step procedures; prefer articles with existing ordered-list or numbered-heading structure to anchor steps.
+
+### Run — 2026-06-25 — Location landing pages (AEO buildout, Batch 1)
+Re-audited against **origin/live** (not the stale local workspace, which was ~weeks behind). Confirmed the entire `education/` corpus is now fully AEO-optimized on live — every content article carries TL;DR + FAQPage + speakable + hyperlinked authoritative citations + a sources section, and all how-to articles have HowTo schema (0 gaps found). The remaining indexable real-content gap is the **98 local "swim-lessons-/beginner-/kids-/toddler-" landing pages**, which had FAQPage + BreadcrumbList but **no TL;DR box and no speakable metadata**. Began the location-page AEO buildout (~3/run):
+
+- `swim-lessons-philadelphia.html` ✅
+- `swim-lessons-toms-river-nj.html` ✅
+- `swim-lessons-monmouth-county-nj.html` ✅
+
+**Applied to each:** a TL;DR "Quick Answer" box after the hero (answer-first guidance on choosing a local program, AAP age-4 recommendation, AAP 88% risk-reduction + CDC leading-cause stats, both hyperlinked); a `WebPage` JSON-LD node with standardized `speakable` cssSelector (`.tldr-box`, `.page-hero h1`, `.lead`); and all 5 statement H2s converted to question format matching real search queries. Brand voice preserved — pages give guidance and point families to British Swim School; no ownership/operation claims. Validated: FAQPage + BreadcrumbList + WebPage JSON-LD all parse, div/section/h2 tags balanced, no brand violations.
+
+**Backlog:** 95 remaining location landing pages need the same TL;DR + speakable + question-H2 pass; plus 12 education articles still use a non-standardized speakable cssSelector (missing `.article-excerpt`) — minor cleanup for a future run.
+
+**Note:** The local Mac Mini workspace git tree is badly diverged from origin/live (≈200 ahead / 126 behind) and its file copies are stale; this run was done from a fresh `live` clone and pushed directly, per the deploy-safety memory. Workspace-side edits made earlier this run were discarded as redundant (those 3 education articles were already fully optimized on live).
