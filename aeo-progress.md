@@ -586,3 +586,15 @@ Re-audited against **origin/live** (not the stale local workspace, which was ~we
 **Backlog:** 95 remaining location landing pages need the same TL;DR + speakable + question-H2 pass; plus 12 education articles still use a non-standardized speakable cssSelector (missing `.article-excerpt`) — minor cleanup for a future run.
 
 **Note:** The local Mac Mini workspace git tree is badly diverged from origin/live (≈200 ahead / 126 behind) and its file copies are stale; this run was done from a fresh `live` clone and pushed directly, per the deploy-safety memory. Workspace-side edits made earlier this run were discarded as redundant (those 3 education articles were already fully optimized on live).
+
+### Run — 2026-06-26 — Location landing pages (AEO buildout, Batch 2)
+Daily aeo-optimizer run from the Mac Mini permanent host, off a fresh `origin/live` clone. The `education/` + `swimmers-hub/` + `teens/` corpus remains fully AEO-optimized. Continued the location-page buildout started 2026-06-25 (~3/run). Target backlog: **95 indexable** local landing pages that carry FAQPage + BreadcrumbList but lack a TL;DR box, speakable metadata, and question-format H2s. (The 4 `*-philadelphia.html` short-slug stubs are noindex redirects to `/swim-lessons/` and are intentionally skipped — AI engines won't cite non-indexable pages.) Optimized this run:
+- `beginner-swim-lessons-abington-pa.html` ✅
+- `kids-swim-lessons-abington-pa.html` ✅
+- `toddler-swim-lessons-abington-pa.html` ✅
+
+**Applied to each:** TL;DR "Quick Answer" box after the hero (answer-first local-program guidance + audience-appropriate AAP age guidance + AAP 88% risk-reduction & CDC leading-cause stats, both hyperlinked); a `WebPage` JSON-LD node with the standardized `speakable` cssSelector (`.tldr-box`, `.page-hero h1`, `.lead`); all 5 statement H2s converted to question format with bold direct-answer leads. Brand voice preserved — guidance only, families pointed to British Swim School; no ownership/operation claims.
+
+**Validation (json + regex):** all 3 JSON-LD schemas/page parse clean (FAQPage + BreadcrumbList + WebPage); 5/5 question H2s/page; div open/close balanced (15/15 each); 2 hyperlinked authoritative citations/page (AAP + CDC); 0 brand-voice ownership violations. Files staged as Modified (not new) — no duplicate-slug risk.
+
+**Backlog:** 92 indexable location landing pages remain for the same TL;DR + speakable + question-H2 pass (continue ~3/run). Plus the minor cleanup item: 12 education articles still use a non-standardized speakable cssSelector (missing `.article-excerpt`).
