@@ -598,3 +598,15 @@ Daily aeo-optimizer run from the Mac Mini permanent host, off a fresh `origin/li
 **Validation (json + regex):** all 3 JSON-LD schemas/page parse clean (FAQPage + BreadcrumbList + WebPage); 5/5 question H2s/page; div open/close balanced (15/15 each); 2 hyperlinked authoritative citations/page (AAP + CDC); 0 brand-voice ownership violations. Files staged as Modified (not new) — no duplicate-slug risk.
 
 **Backlog:** 92 indexable location landing pages remain for the same TL;DR + speakable + question-H2 pass (continue ~3/run). Plus the minor cleanup item: 12 education articles still use a non-standardized speakable cssSelector (missing `.article-excerpt`).
+
+### Run — 2026-06-27 — Location landing pages (AEO buildout, Batch 3)
+Daily aeo-optimizer run from the Mac Mini permanent host, off a fresh `origin/live` clone. The `education/` corpus remains fully AEO-optimized (TL;DR + FAQ + speakable + HowTo where procedural + hyperlinked citations). Continued the location-page buildout (~3/run). Target backlog: indexable local landing pages carrying FAQPage + BreadcrumbList but lacking a TL;DR box, speakable metadata, and question-format H2s. Optimized this run (the Ambler, PA trio):
+- `beginner-swim-lessons-ambler-pa.html` ✅
+- `kids-swim-lessons-ambler-pa.html` ✅
+- `toddler-swim-lessons-ambler-pa.html` ✅
+
+**Applied to each:** TL;DR "Quick Answer" box after the hero (answer-first local guidance + audience-appropriate AAP age guidance + AAP 88% risk-reduction & CDC leading-cause stats, both hyperlinked to healthychildren.org and cdc.gov/drowning); a `WebPage` JSON-LD node with the standardized `speakable` cssSelector (`.tldr-box`, `.page-hero h1`, `.lead`); all 5 statement H2s converted to question format with bold direct-answer leads on the 4 content sections. Brand voice preserved — guidance only, no ownership/operation claims.
+
+**Validation (json + HTMLParser):** all 3 JSON-LD schemas/page parse clean (FAQPage + BreadcrumbList + WebPage); 5/5 question H2s/page; div open/close balanced (15/15 each); 2 hyperlinked authoritative citations/page (AAP + CDC); meta descriptions ≤160 (131/116/121); 0 brand-voice ownership violations. Files staged as Modified (not new) — no duplicate-slug risk. JSON built with json.dumps.
+
+**Backlog:** ~89 indexable location landing pages remain for the same TL;DR + speakable + question-H2 pass (continue ~3/run). Plus the minor cleanup item: 12 education articles still use a non-standardized speakable cssSelector (missing `.article-excerpt`).
