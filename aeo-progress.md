@@ -622,3 +622,18 @@ Daily aeo-optimizer run from the Mac Mini permanent host, off a fresh `origin/li
 **Validation (json + HTMLParser):** all 3 JSON-LD schemas/page parse clean (FAQPage + BreadcrumbList + WebPage); 4/4 question H2s/page; div tags balanced (final 0); 2 hyperlinked authoritative citations/page (AAP + CDC); meta descriptions ≤160 (142/127/132); 0 brand-voice ownership violations. Files staged as Modified (not new) — no duplicate-slug risk. JSON built with json.dumps-safe literals.
 
 **Backlog:** ~86 indexable location landing pages remain for the same TL;DR + speakable + question-H2 pass (continue ~3/run; next alphabetical: Asbury Park, NJ trio). Plus the minor cleanup item: 12 education articles still use a non-standardized speakable cssSelector (missing `.article-excerpt`).
+
+---
+
+## Run — 2026-06-29 (Local hub pages: TL;DR + speakable)
+
+**Finding:** Full indexable content corpus (373 education/ articles, 1,120 JSON-LD blocks) is already AEO-complete — every non-printable article has tldr-box, FAQPage, and speakable, and all JSON-LD validates clean. Remaining gap was in **local landing/hub pages** (root level), which had FAQPage but lacked the TL;DR Quick Answer box and speakable metadata.
+
+**Optimized 3 highest-intent local hub pages** (added answer-first TL;DR box with AAP + CDC citations and 88%/ages-1–4 stats, plus WebPage speakable JSON-LD targeting `.tldr-box`, `.page-hero h1`, `.lead`):
+- `swim-lessons-ocean-county-nj.html`
+- `swim-lessons-monmouth-county-kids.html`
+- `swim-lessons-jersey-shore.html`
+
+Brand-safe phrasing preserved (WWK guides families to options; references British Swim School of Jersey Shore as a local option, does not claim to operate it). All 3 validated: JSON-LD 0 errors, balanced tags, TL;DR placed after hero before content-grid.
+
+**Remaining un-optimized (deferred, low AEO value):** ~27 noindex printable checklists/worksheets — noindex pages aren't cited by answer engines, so AEO markers add little; indexability is a deliberate prior decision (leave to Michael). Several more indexable local town pages still lack TL;DR/speakable — next runs.
