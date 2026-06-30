@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="Layers of protection water safety: a shield over a backyard pool with a fence, life ring, and swimmer">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#sky)"/>
+  <!-- sun -->
+  <circle cx="510" cy="70" r="34" fill="#fde68a"/>
+  <!-- ground -->
+  <rect y="250" width="600" height="110" fill="#bbf7d0"/>
+  <!-- pool -->
+  <rect x="60" y="262" width="300" height="80" rx="14" fill="url(#water)"/>
+  <path d="M70 300 q22 -12 44 0 t44 0 t44 0 t44 0 t44 0" fill="none" stroke="#e0f2fe" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  <!-- fence (barrier layer) -->
+  <g stroke="#475569" stroke-width="6" stroke-linecap="round">
+    <line x1="40" y1="230" x2="40" y2="300"/>
+    <line x1="40" y1="246" x2="375" y2="246"/>
+    <line x1="40" y1="272" x2="375" y2="272"/>
+    <line x1="90" y1="230" x2="90" y2="300"/>
+    <line x1="140" y1="230" x2="140" y2="300"/>
+    <line x1="190" y1="230" x2="190" y2="300"/>
+    <line x1="240" y1="230" x2="240" y2="300"/>
+    <line x1="290" y1="230" x2="290" y2="300"/>
+    <line x1="340" y1="230" x2="340" y2="300"/>
+    <line x1="375" y1="230" x2="375" y2="300"/>
+  </g>
+  <!-- life ring (life jacket / rescue layer) -->
+  <g transform="translate(300,318)">
+    <circle r="30" fill="#ef4444"/>
+    <circle r="14" fill="url(#water)"/>
+    <g fill="#ffffff">
+      <rect x="-4" y="-32" width="8" height="14" rx="2"/>
+      <rect x="-4" y="18" width="8" height="14" rx="2"/>
+      <rect x="-32" y="-4" width="14" height="8" rx="2"/>
+      <rect x="18" y="-4" width="14" height="8" rx="2"/>
+    </g>
+  </g>
+  <!-- shield with checkmark (overall protection) -->
+  <g transform="translate(450,205)">
+    <path d="M0 -78 L70 -50 L70 12 C70 60 38 92 0 108 C-38 92 -70 60 -70 12 L-70 -50 Z" fill="url(#shield)" stroke="#ffffff" stroke-width="6"/>
+    <path d="M-32 6 L-8 32 L36 -28" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- title band -->
+  <rect x="0" y="0" width="600" height="58" fill="#0c4a6e" opacity="0.92"/>
+  <text x="28" y="38" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800" fill="#ffffff">Layers of Protection</text>
+  <text x="430" y="38" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#bae6fd">WaterWiseKids</text>
+</svg>
