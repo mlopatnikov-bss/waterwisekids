@@ -116,6 +116,8 @@ body {
   font-size: 1rem;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 h1,
