@@ -637,3 +637,15 @@ Daily aeo-optimizer run from the Mac Mini permanent host, off a fresh `origin/li
 Brand-safe phrasing preserved (WWK guides families to options; references British Swim School of Jersey Shore as a local option, does not claim to operate it). All 3 validated: JSON-LD 0 errors, balanced tags, TL;DR placed after hero before content-grid.
 
 **Remaining un-optimized (deferred, low AEO value):** ~27 noindex printable checklists/worksheets — noindex pages aren't cited by answer engines, so AEO markers add little; indexability is a deliberate prior decision (leave to Michael). Several more indexable local town pages still lack TL;DR/speakable — next runs.
+
+### Run — 2026-06-30 — Location landing pages (AEO buildout, Batch 5)
+Daily aeo-optimizer run from the Mac Mini permanent host, off a fresh `origin/live` clone. The `education/` + `swimmers-hub/` + `teens/` corpus remains fully AEO-optimized. Continued the location-page buildout (~3/run), next alphabetical town trio (Asbury Park, NJ):
+- `beginner-swim-lessons-asbury-park-nj.html` ✅
+- `kids-swim-lessons-asbury-park-nj.html` ✅
+- `toddler-swim-lessons-asbury-park-nj.html` ✅
+
+**Applied to each:** TL;DR "Quick Answer" box after the hero (answer-first local guidance + audience-appropriate AAP age guidance — age 4 for beginner/kids, as-early-as-age-1 for toddler — plus AAP 88% risk-reduction & CDC leading-cause stats, both hyperlinked to healthychildren.org and cdc.gov/drowning); a `WebPage` JSON-LD node with the standardized `speakable` cssSelector (`.tldr-box`, `.page-hero h1`, `.lead`); all 4 content-section H2s converted to question format with bold direct-answer leads (5th "Explore…" CTA H2 left as-is). Brand voice preserved — guidance only, families pointed to British Swim School; no ownership/operation claims.
+
+**Validation (json + HTMLParser):** all 3 JSON-LD schemas/page parse clean (FAQPage + BreadcrumbList + WebPage); 4/4 question H2s/page; div tags balanced (15/15 each); 0 unbalanced end tags / 0 left-open; 2 hyperlinked authoritative citations/page (AAP + CDC); meta descriptions ≤160 (136/121/126); 0 brand-voice ownership violations. Files staged as Modified (not new) — no duplicate-slug risk.
+
+**Backlog:** ~75 indexable location landing pages remain for the same TL;DR + speakable + question-H2 pass (continue ~3/run; next alphabetical: Belmar, NJ). Plus the minor cleanup item: 12 education articles still use a non-standardized speakable cssSelector (missing `.article-excerpt`).
