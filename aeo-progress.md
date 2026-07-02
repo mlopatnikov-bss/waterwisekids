@@ -661,3 +661,24 @@ Daily aeo-optimizer run from the Mac Mini permanent host, off a fresh `origin/li
 **Validation (json + HTMLParser):** all 3 JSON-LD schemas/page parse clean (FAQPage + BreadcrumbList + WebPage); 4/4 question H2s/page; 0 tag errors / 0 left-open; 1 speakable + 1 tldr-box/page; 2 hyperlinked authoritative citations/page (AAP + CDC); meta descriptions ≤160 (131/116/121); 0 brand-voice ownership violations. Files staged as Modified (not new) — no duplicate-slug risk.
 
 **Backlog:** ~72 indexable location landing pages remain for the same TL;DR + speakable + question-H2 pass (continue ~3/run; next alphabetical: Brick, NJ). Plus the minor cleanup item: 12 education articles still use a non-standardized speakable cssSelector (missing `.article-excerpt`).
+
+---
+
+## Run 5 — 2026-07-02: Citation-link pass on post-April articles
+
+Audit of all 382 education pages found every non-printable article already carries TL;DR, FAQPage schema, and speakable metadata (generator now bakes them in). However, **8 newer authority/standards articles had zero external citation hyperlinks** (orgs named in text only). Fixed 3 this run:
+
+| Article | Links added |
+|---|---|
+| who-sets-water-safety-standards.html | Red Cross, NDPA, CDC/drowning, CPSC (poolsafely.gov) |
+| national-water-safety-action-plan-explained.html | Water Safety USA (NWSAP), CDC data page, USCG life jackets |
+| what-is-the-model-aquatic-health-code-mahc.html | CDC MAHC page, Red Cross, NDPA |
+
+All HTML + JSON-LD validated; URLs return 200 (poolsafely.gov 403s to bots only — canonical CPSC URL, kept).
+
+**Remaining queue (no external citations yet):**
+- free-reduced-swim-lessons-make-a-splash.html
+- home-water-safety-room-by-room-checklist.html
+- make-a-splash-local-partner-badge-decoded.html
+- new-jersey-pool-fence-law.html
+- what-is-usa-swimming-make-a-splash.html
