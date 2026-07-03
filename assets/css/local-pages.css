@@ -1,0 +1,191 @@
+/* ============================================================
+   Local landing page components (swim-lessons/*.html city pages)
+   These classes were shipped in HTML with no definitions in any
+   loaded stylesheet (orphaned after inline-CSS strip).
+   Added 2026-07-03 by visual-design-auditor.
+   ============================================================ */
+
+.wwk-breadcrumbs {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 0;
+  font-size: 0.9rem;
+  color: var(--gray-500, #6b7280);
+}
+.wwk-breadcrumbs a { color: var(--blue-700, #0369a1); text-decoration: none; }
+.wwk-breadcrumbs a:hover { text-decoration: underline; }
+
+.wwk-local-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4rem;
+}
+.wwk-local-content h1 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+  color: var(--blue-900, #0c4a6e);
+  margin: 0.75rem 0 1.5rem;
+}
+.wwk-local-content h2 { color: var(--blue-800, #075985); font-size: 1.5rem; margin: 0 0 0.75rem; }
+.wwk-local-content section { margin: 0 0 1.75rem; }
+.wwk-local-content p { line-height: 1.65; }
+
+/* Content boxes */
+.wwk-intro-box,
+.wwk-info-box {
+  background: var(--white, #fff);
+  border: 1px solid var(--gray-200, #e5e7eb);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 1px 3px rgba(12, 74, 110, 0.06);
+}
+.wwk-highlight-box {
+  background: var(--blue-50, #eff8ff);
+  border-left: 4px solid var(--blue-600, #0284c7);
+  border-radius: 0 12px 12px 0;
+  padding: 1.5rem 1.75rem;
+}
+.wwk-warning-box {
+  background: #fff7ed;
+  border-left: 4px solid var(--orange-500, #f97316);
+  border-radius: 0 12px 12px 0;
+  padding: 1.5rem 1.75rem;
+}
+.wwk-info-box ul { list-style: none; margin: 0.75rem 0 0; padding: 0; }
+.wwk-info-box ul li { padding: 0.6rem 0; border-bottom: 1px solid var(--gray-100, #f3f4f6); }
+.wwk-info-box ul li:last-child { border-bottom: none; }
+.wwk-info-box ul li strong { display: block; color: var(--blue-800, #075985); margin-bottom: 0.15rem; }
+
+/* Featured school card */
+.featured-school {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 1px solid var(--blue-200, #b9e0fd);
+  border-radius: 16px;
+  padding: 2rem;
+}
+.featured-badge {
+  display: inline-block;
+  background: var(--blue-700, #0369a1);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1rem;
+  color: var(--blue-900, #0c4a6e);
+  font-weight: 600;
+}
+.stars { color: #f59e0b; letter-spacing: 0.1em; }
+.featured-school ul { margin: 1rem 0 1.5rem; padding-left: 1.25rem; }
+.featured-school ul li { margin: 0.4rem 0; }
+
+/* Primary button (shared) */
+.btn-primary {
+  display: inline-block;
+  background: var(--blue-600, #0284c7);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.btn-primary:hover { background: var(--blue-700, #0369a1); color: #fff; }
+
+/* Nearby-communities chips */
+.wwk-city-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.75rem; }
+.wwk-city-link,
+.related-area-inactive {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+.wwk-city-link {
+  background: var(--white, #fff);
+  border: 1px solid var(--blue-300, #7cc8fb);
+  color: var(--blue-700, #0369a1);
+  text-decoration: none;
+}
+.wwk-city-link:hover { background: var(--blue-50, #eff8ff); }
+.related-area-inactive {
+  background: var(--gray-100, #f3f4f6);
+  border: 1px solid var(--gray-200, #e5e7eb);
+  color: var(--gray-500, #6b7280);
+}
+
+/* CTA banner */
+.wwk-cta-banner {
+  background: linear-gradient(135deg, var(--blue-800, #075985) 0%, var(--blue-600, #0284c7) 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+.wwk-cta-banner h2 { color: #fff; }
+.wwk-cta-banner p { margin: 0.5rem auto 1.25rem; max-width: 560px; color: var(--blue-100, #dbeffe); }
+.wwk-cta-banner .btn-primary { background: #fff; color: var(--blue-800, #075985); }
+.wwk-cta-banner .btn-primary:hover { background: var(--blue-50, #eff8ff); }
+
+/* FAQ */
+.faq-section h2 { margin-bottom: 1rem; }
+.faq-item { border-bottom: 1px solid var(--gray-200, #e5e7eb); padding: 1rem 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3,
+.faq-item h4 { margin: 0 0 0.4rem; color: var(--blue-800, #075985); font-size: 1.05rem; }
+.faq-answer { color: var(--gray-700, #374151); }
+.faq-answer p { margin: 0; }
+
+/* Other schools listings */
+.other-schools .school-listing {
+  background: var(--white, #fff);
+  border: 1px solid var(--gray-200, #e5e7eb);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1rem;
+}
+.school-info h3,
+.school-info h4 { margin: 0 0 0.4rem; color: var(--blue-800, #075985); }
+.school-info p { margin: 0; }
+
+/* Programs grid */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.program-card {
+  background: var(--white, #fff);
+  border: 1px solid var(--gray-200, #e5e7eb);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.program-card h3 { margin: 0.25rem 0 0.5rem; color: var(--blue-800, #075985); font-size: 1.1rem; }
+.program-card p { margin: 0; font-size: 0.95rem; }
+.age-range {
+  display: inline-block;
+  background: var(--blue-100, #dbeffe);
+  color: var(--blue-800, #075985);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .wwk-local-content { padding: 0.75rem 1rem 3rem; }
+  .wwk-local-content h1 { font-size: 1.8rem; }
+  .featured-school { padding: 1.5rem; }
+  .wwk-cta-banner { padding: 2rem 1.25rem; }
+}
