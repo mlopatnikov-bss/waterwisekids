@@ -682,3 +682,19 @@ All HTML + JSON-LD validated; URLs return 200 (poolsafely.gov 403s to bots only 
 - make-a-splash-local-partner-badge-decoded.html
 - new-jersey-pool-fence-law.html
 - what-is-usa-swimming-make-a-splash.html
+
+### Run — 2026-07-03 — Citation-link pass (Batch 2 of post-April queue)
+Daily aeo-optimizer run from the Mac Mini, off a fresh `origin/live` clone. Continued the 07-02 citation-hyperlink queue — 3 of the 5 remaining zero-external-citation articles fixed:
+
+| Article | Links added |
+|---|---|
+| free-reduced-swim-lessons-make-a-splash.html | CDC drowning facts, AAP (healthychildren.org, 88% stat), USA Swimming Foundation ×2, YMCA Safety Around Water, Red Cross Learn-to-Swim |
+| home-water-safety-room-by-room-checklist.html | CDC drowning facts ×2 (TL;DR + body), AAP 88% stat, Red Cross CPR classes |
+| make-a-splash-local-partner-badge-decoded.html | USA Swimming Foundation, NDPA, Red Cross Learn-to-Swim |
+
+All dateModified bumped to 2026-07-03. Validation: 3/3 JSON-LD schemas parse clean per page (Article + BreadcrumbList + FAQPage); 0 tag errors; anchors balanced (54/54, 53/53, 50/50); meta descriptions ≤160 (137/151/158); 0 brand-voice ownership violations; files staged as Modified (no duplicate-slug risk). All URLs are the site-canonical citation URLs (used 100–400× site-wide).
+
+**Remaining queue (no external citations yet):**
+- new-jersey-pool-fence-law.html
+- what-is-usa-swimming-make-a-splash.html
+Then resume the location-landing-page TL;DR buildout (next alphabetical: Brick, NJ; ~72 pages remain).
