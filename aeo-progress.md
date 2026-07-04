@@ -698,3 +698,26 @@ All dateModified bumped to 2026-07-03. Validation: 3/3 JSON-LD schemas parse cle
 - new-jersey-pool-fence-law.html
 - what-is-usa-swimming-make-a-splash.html
 Then resume the location-landing-page TL;DR buildout (next alphabetical: Brick, NJ; ~72 pages remain).
+
+### Run — 2026-07-04 — Citation queue closed + Location landing pages (Batch 7)
+Daily aeo-optimizer run from the Mac Mini, off a fresh `origin/live` clone. Two workstreams:
+
+**1. Citation-link pass — post-April queue COMPLETE.** The last 2 zero-external-citation articles fixed:
+
+| Article | Links added |
+|---|---|
+| new-jersey-pool-fence-law.html | CDC drowning facts ×2 (leading-cause stat + four-sided-fencing stat box), AAP 88% stat (healthychildren.org), CPSC Pool Safely (poolsafely.gov) |
+| what-is-usa-swimming-make-a-splash.html | AAP attribution on 88% stat box, CDC leading-cause stat (new, hyperlinked), USA Swimming Foundation, usaswimming.org (age-group clubs), SafeSport standard page |
+
+Both dateModified bumped to 2026-07-04. The entire 07-02 citation queue is now done — every post-April authority/standards article carries hyperlinked citations.
+
+**2. Location landing pages (AEO buildout, Batch 7) — Brick, NJ trio:**
+- `beginner-swim-lessons-brick-nj.html` ✅
+- `kids-swim-lessons-brick-nj.html` ✅
+- `toddler-swim-lessons-brick-nj.html` ✅
+
+Applied the standard pattern: TL;DR "Quick Answer" box after the hero (audience-appropriate AAP age guidance — age 4 for beginner/kids, as-early-as-age-1 for toddler — plus hyperlinked AAP 88% + CDC leading-cause stats); `WebPage` JSON-LD with standardized `speakable` cssSelector (`.tldr-box`, `.page-hero h1`, `.lead`); all 4 content H2s converted to question format with bold direct-answer leads ("Explore…" CTA H2 left as-is).
+
+**Validation (json + HTMLParser):** all JSON-LD parses clean on all 5 files (Article/FAQPage/BreadcrumbList/WebPage as applicable); 0 tag errors / 0 left-open; meta descriptions ≤160; internal link targets all exist; 0 brand-voice ownership violations; all files staged as Modified (no duplicate-slug risk).
+
+**Backlog:** ~69 indexable location landing pages remain for the TL;DR + speakable + question-H2 pass. Note Brick has extra variants beyond the base trio (`-brick-township-nj` ×3, `kids-swim-lessons-brick-beaches`, `swim-lessons-brick-nj`) — pick these up next before moving to the next town alphabetically. Minor cleanup item still open: 12 education articles use a non-standardized speakable cssSelector (missing `.article-excerpt`).
