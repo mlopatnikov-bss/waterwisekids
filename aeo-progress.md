@@ -721,3 +721,10 @@ Applied the standard pattern: TL;DR "Quick Answer" box after the hero (audience-
 **Validation (json + HTMLParser):** all JSON-LD parses clean on all 5 files (Article/FAQPage/BreadcrumbList/WebPage as applicable); 0 tag errors / 0 left-open; meta descriptions ≤160; internal link targets all exist; 0 brand-voice ownership violations; all files staged as Modified (no duplicate-slug risk).
 
 **Backlog:** ~69 indexable location landing pages remain for the TL;DR + speakable + question-H2 pass. Note Brick has extra variants beyond the base trio (`-brick-township-nj` ×3, `kids-swim-lessons-brick-beaches`, `swim-lessons-brick-nj`) — pick these up next before moving to the next town alphabetically. Minor cleanup item still open: 12 education articles use a non-standardized speakable cssSelector (missing `.article-excerpt`).
+
+## 2026-07-06 — AEO run (aeo-optimizer)
+Enhanced 3 high-value decision-query articles that already had TL;DR/FAQ/speakable but lacked the key citable drowning statistics + CDC citation:
+- private-vs-group-swim-lessons.html — added answer-first citable stat paragraph (CDC #1-cause-of-death ages 1–4 + AAP 88% risk reduction) + CDC Drowning Facts source.
+- swim-lesson-frequency-guide.html — same stat paragraph + CDC source.
+- twice-weekly-swim-lessons.html — same stat paragraph + CDC source.
+Rationale: statistics + authoritative citations (AEO req 6 & 7) are the strongest extraction signals for AI answer engines; these articles were missing the drowning stats that make them citable. All JSON-LD validated; additive-only diff (9 insertions, 0 deletions).
