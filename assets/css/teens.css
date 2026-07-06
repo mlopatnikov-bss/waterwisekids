@@ -1,0 +1,49 @@
+/* teens.css — component styles for /teens/ career & certification pages.
+   Recovered from pre-strip commit 5ca2f8e5~1 (styles orphaned by the 2026-03 inline-CSS strip).
+   Wrapper (.wwk-local-content) + buttons (.btn-primary) come from local-pages.css.
+   Site palette: #075985 / #0369a1 / #0284c7 / #14b8a6 / #f97316. */
+
+/* Article header */
+.article-header { margin-bottom: 2rem; }
+.article-header h1 { margin: 0; color: #075985; }
+.article-header p { color: #0369a1; font-size: 1.1rem; margin-top: 0.5rem; }
+
+/* Internal links */
+.internal-link { color: #0284c7; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+.internal-link:hover { color: #075985; text-decoration: underline; }
+
+/* Simple callout boxes */
+.cert-box { background: #f0f9ff; border-left: 4px solid #0284c7; padding: 1.5rem; margin: 1.5rem 0; border-radius: 6px; }
+.info-box { background: #dbeafe; border-left: 4px solid #0284c7; padding: 1.5rem; margin: 1.5rem 0; border-radius: 6px; }
+.scholarship-item { background: #f9fafb; border-left: 4px solid #14b8a6; padding: 1.5rem; margin: 1.5rem 0; border-radius: 6px; }
+.scholarship-item h3 { color: #0284c7; margin: 0 0 0.5rem 0; }
+
+/* Aquatics-careers ladder */
+.career-level { background: #fff; border: 2px solid #e5e7eb; padding: 2rem; margin-bottom: 2rem; border-radius: 12px; transition: border-color 0.3s, box-shadow 0.3s; }
+.career-level:hover { border-color: #0284c7; box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12); }
+.career-level.level-1 { border-left: 6px solid #f97316; }
+.career-level.level-2 { border-left: 6px solid #0369a1; }
+.career-level.level-3 { border-left: 6px solid #0284c7; }
+.career-level.level-4 { border-left: 6px solid #14b8a6; }
+.career-level.level-5 { border-left: 6px solid #075985; }
+.career-level.level-6 { border-left: 6px solid #0369a1; }
+.career-title { font-size: 1.4rem; font-weight: 700; color: #075985; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
+.career-icon { font-size: 1.8rem; }
+.career-salary { background: linear-gradient(135deg, #dbeafe 0%, #d1fae5 100%); display: inline-block; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; color: #075985; margin-bottom: 1rem; font-size: 0.95rem; }
+.career-description { color: #4b5563; margin-bottom: 1.5rem; line-height: 1.7; }
+.career-section { margin-bottom: 1.25rem; }
+.career-section-title { font-weight: 600; color: #0369a1; margin-bottom: 0.5rem; font-size: 0.95rem; }
+.career-section-content { color: #4b5563; margin-left: 0.5rem; }
+.career-requirements { display: flex; flex-direction: column; gap: 0.75rem; }
+.requirement-tag { background: #f3f4f6; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; color: #4b5563; }
+.advancement-box { background: #fef3c7; border-left: 3px solid #f97316; padding: 1rem; border-radius: 6px; margin-top: 1rem; }
+.advancement-box strong { color: #92400e; }
+
+/* Settings + tips sections */
+.settings-section { background: linear-gradient(135deg, #f0f9ff 0%, #f0fdf4 100%); padding: 2rem; border-radius: 12px; margin: 3rem 0; }
+.settings-section h2 { color: #075985; margin-top: 0; }
+.setting-item { background: #fff; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #14b8a6; }
+.setting-item h4 { color: #0369a1; margin-bottom: 0.5rem; font-weight: 600; }
+.tips-section { background: #f9fafb; border: 1px solid #e5e7eb; padding: 2rem; border-radius: 12px; margin: 3rem 0; }
+.tips-section h2 { color: #075985; margin-top: 0; }
+.tips-section ul { margin-left: 1.5rem; }
