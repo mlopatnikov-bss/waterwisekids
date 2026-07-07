@@ -728,3 +728,17 @@ Enhanced 3 high-value decision-query articles that already had TL;DR/FAQ/speakab
 - swim-lesson-frequency-guide.html — same stat paragraph + CDC source.
 - twice-weekly-swim-lessons.html — same stat paragraph + CDC source.
 Rationale: statistics + authoritative citations (AEO req 6 & 7) are the strongest extraction signals for AI answer engines; these articles were missing the drowning stats that make them citable. All JSON-LD validated; additive-only diff (9 insertions, 0 deletions).
+
+---
+
+## Run — 2026-07-07 (Authoritative Sources section — standards/pillar batch)
+
+The content corpus (390 education articles) is confirmed AEO-complete on the core markers: TL;DR box, FAQPage JSON-LD, question-format H2s, and speakable metadata all present. Remaining gap = a standardized **Authoritative Sources** reference section (the last un-upgraded real articles). Only 12 real (non-printable, non-index) articles still lacked it. Optimized the 3 highest-value standards/pillar pages this run:
+
+1. `education/water-safety-for-kids.html` (pillar) — added Authoritative Sources section (AAP, CDC, Red Cross); hyperlinked AAP + CDC inside the 88% stat-box (previously plain text); added `.article-excerpt` to speakable selector; dateModified → 2026-07-07.
+2. `education/who-sets-water-safety-standards.html` — added Authoritative Sources section (Red Cross, NDPA, CDC, Pool Safely/CPSC); standardized speakable selector to 4-selector pattern; dateModified → 2026-07-07.
+3. `education/national-water-safety-action-plan-explained.html` — added Authoritative Sources section (official National Water Safety Action Plan site watersafetyplan.us, CDC, Red Cross); standardized speakable; dateModified → 2026-07-07.
+
+**URL verification (web):** confirmed live canonical URLs — AAP page is `/en/patient-care/drowning-prevention-and-water-safety/` (corrected a guessed URL); official plan site is `watersafetyplan.us` (corrected). All JSON-LD (3 blocks/article) validated parse-clean; div tags balanced; no brand-voice ownership violations.
+
+**Remaining un-upgraded real articles (9):** four-cs-of-progress-swim-curriculum, free-reduced-swim-lessons-make-a-splash, home-water-safety-room-by-room-checklist, make-a-splash-local-partner-badge-decoded, new-jersey-pool-fence-law, swim-lesson-waitlists-what-to-do, what-is-the-model-aquatic-health-code-mahc, what-is-usa-swimming-make-a-splash, ymca-safety-around-water-saw-explained. Continue ~3/run. (35 `-printable` worksheets + hub index pages intentionally excluded.)
