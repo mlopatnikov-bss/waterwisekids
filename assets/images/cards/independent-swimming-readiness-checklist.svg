@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bg)"/>
+  <!-- water lines -->
+  <path d="M0 118 Q36 110 75 118 T150 118 T225 118 T300 118" stroke="rgba(255,255,255,0.28)" fill="none" stroke-width="2"/>
+  <path d="M0 130 Q36 122 75 130 T150 130 T225 130 T300 130" stroke="rgba(255,255,255,0.18)" fill="none" stroke-width="1.5"/>
+  <!-- independent swimmer, mid-stroke, no adult touching -->
+  <circle cx="92" cy="112" r="8" fill="white"/>
+  <ellipse cx="112" cy="120" rx="20" ry="6" fill="white" opacity="0.85"/>
+  <line x1="104" y1="118" x2="86" y2="108" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="120" y1="122" x2="136" y2="112" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <line x1="128" y1="124" x2="120" y2="140" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <!-- checklist card -->
+  <rect x="196" y="40" width="76" height="96" rx="8" fill="white"/>
+  <rect x="196" y="40" width="76" height="22" rx="8" fill="#0369a1"/>
+  <rect x="196" y="54" width="76" height="8" fill="#0369a1"/>
+  <text x="234" y="56" text-anchor="middle" fill="white" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700">READY?</text>
+  <!-- checklist rows -->
+  <g>
+    <rect x="206" y="74" width="10" height="10" rx="2" fill="none" stroke="#0284c7" stroke-width="2"/>
+    <path d="M208 79 l2.5 2.5 l4 -5" stroke="#14b8a6" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="222" y="77" width="40" height="4" rx="2" fill="#cbd5e1"/>
+    <rect x="206" y="92" width="10" height="10" rx="2" fill="none" stroke="#0284c7" stroke-width="2"/>
+    <path d="M208 97 l2.5 2.5 l4 -5" stroke="#14b8a6" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="222" y="95" width="40" height="4" rx="2" fill="#cbd5e1"/>
+    <rect x="206" y="110" width="10" height="10" rx="2" fill="none" stroke="#0284c7" stroke-width="2"/>
+    <rect x="222" y="113" width="40" height="4" rx="2" fill="#cbd5e1"/>
+  </g>
+  <text x="16" y="34" fill="white" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="800">Ready to Swim</text>
+  <text x="16" y="55" fill="white" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="800">on Their Own?</text>
+  <text x="16" y="74" fill="rgba(255,255,255,0.9)" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="500">Free readiness checklist</text>
+</svg>
