@@ -263,6 +263,7 @@
 
     // Hide empty state if articles exist
     if (cards.length > 0 && emptyState) { emptyState.style.display = 'none'; }
+    else if (grid) { grid.style.display = 'none'; }  // collapse empty grid so its margin doesn't leave a large gap above the empty-state message
 
     // Build category buttons from actual card data
     var cats = {};
