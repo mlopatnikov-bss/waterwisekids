@@ -753,3 +753,17 @@ Daily aeo-optimizer run. Cloned `live` (source of truth) after finding the local
 
 ### Remaining Un-Cited Backlog (after 2026-07-08 run)
 Live scan shows the indexable education corpus is now essentially fully cited — only lifestyle/product articles where drowning stats don't apply remain without an Authoritative Sources section. Future runs: deepen citation quality on partially-cited articles (1–3 cites, no sources section) and re-audit newly published daily articles.
+
+### Run — 2026-07-09 — Location landing pages (AEO buildout, Batch 8) — Brick variants
+Daily aeo-optimizer run. Cloned `live` (source of truth); local workspace still stale. Continued the location-landing-page TL;DR + speakable + question-H2 pass, completing the entire **Brick, NJ** cluster (the 5 remaining Brick variants beyond the base trio done 2026-07-05):
+- `beginner-swim-lessons-brick-township-nj.html` ✅
+- `kids-swim-lessons-brick-township-nj.html` ✅
+- `toddler-swim-lessons-brick-township-nj.html` ✅ (age-1 AAP framing)
+- `kids-swim-lessons-brick-beaches.html` ✅ (open-water/beach framing)
+- `swim-lessons-brick-nj.html` ✅
+
+Applied the standard location-page pattern per file: added `WebPage` JSON-LD with the standardized `speakable` cssSelector (`.tldr-box`, `.page-hero h1`, `.lead`); inserted a "Quick Answer" TL;DR box after the hero `</section>` with hyperlinked AAP (age-4 guidance, age-1 for toddler) + AAP 88%-risk-reduction + CDC leading-cause-of-death citations; converted all 4 content H2s to question format with a bold direct-answer lead sentence (the "Explore…" CTA H2 left as-is). These pages already carried FAQPage + BreadcrumbList schema.
+
+**Validation (json + HTMLParser):** all 3 JSON-LD blocks/file (FAQPage/BreadcrumbList/WebPage) parse clean; 0 unclosed tags / 0 orphan end-tags; exactly one body TL;DR box per file; 4 question-format H2s each; additive diff (4 ins / 1 mod-line per file). Caught and fixed a first-pass bug where the TL;DR div was skipped because the speakable cssSelector string already contained "tldr-box" — the visible box is now confirmed present on all 5.
+
+**Backlog:** ~73 indexable location landing pages still remain for this pass. Next town alphabetically (after Brick): Brielle (`beginner/kids/toddler-swim-lessons-brielle-nj`), then Cheltenham PA cluster. Continue ~5/run (one town per run keeps a clean unit). Two general articles surfaced in the no-TL;DR scan — `are-infant-swim-lessons-safe.html` and `how-to-choose-swim-lessons-for-kids.html` — should be checked separately (may be redirect stubs).
