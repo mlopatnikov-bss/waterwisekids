@@ -758,3 +758,47 @@
   box-shadow: var(--sh-md);
   color: var(--blue-600);
 }
+
+/* Newsletter lead-capture form — article pages don't load education-hub.css,
+   so the .newsletter-form submit button was falling back to raw browser defaults.
+   Mirrors .lead-magnet-form for a styled, on-brand button. (visual QA 2026-07-10) */
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  max-width: 480px;
+  margin: 0 0 10px;
+  flex-wrap: wrap;
+}
+.newsletter-form input[type="email"] {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px 16px;
+  border: 1px solid #93c5fd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+}
+.newsletter-form input[type="email"]:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2,132,199,0.15);
+}
+.newsletter-form button {
+  padding: 12px 24px;
+  background: #0284c7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.newsletter-form button:hover { background: #0369a1; }
+.newsletter-form button:disabled { background: #9ca3af; cursor: default; }
+@media (max-width: 600px) {
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form button { width: 100%; }
+}
