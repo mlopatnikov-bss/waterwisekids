@@ -767,3 +767,16 @@ Applied the standard location-page pattern per file: added `WebPage` JSON-LD wit
 **Validation (json + HTMLParser):** all 3 JSON-LD blocks/file (FAQPage/BreadcrumbList/WebPage) parse clean; 0 unclosed tags / 0 orphan end-tags; exactly one body TL;DR box per file; 4 question-format H2s each; additive diff (4 ins / 1 mod-line per file). Caught and fixed a first-pass bug where the TL;DR div was skipped because the speakable cssSelector string already contained "tldr-box" — the visible box is now confirmed present on all 5.
 
 **Backlog:** ~73 indexable location landing pages still remain for this pass. Next town alphabetically (after Brick): Brielle (`beginner/kids/toddler-swim-lessons-brielle-nj`), then Cheltenham PA cluster. Continue ~5/run (one town per run keeps a clean unit). Two general articles surfaced in the no-TL;DR scan — `are-infant-swim-lessons-safe.html` and `how-to-choose-swim-lessons-for-kids.html` — should be checked separately (may be redirect stubs).
+
+### Run — 2026-07-10 — Authoritative Sources section (post-April standards/program batch)
+Daily aeo-optimizer run from a fresh `origin/live` clone (workspace still stale). Continued closing the last real content articles that carried TL;DR + FAQPage + speakable and had hyperlinked body citations but **no standardized `📚 Authoritative Sources` section**. Optimized the 3 highest-value standards/program/legal pages:
+
+| Article | Sources section added | Other |
+|---|---|---|
+| what-is-the-model-aquatic-health-code-mahc.html | CDC MAHC (official about page), CDC Drowning Facts, American Red Cross, NDPA | speakable standardized to 4-selector; dateModified → 2026-07-10 |
+| new-jersey-pool-fence-law.html | CDC Drowning Facts (four-sided fencing), AAP/HealthyChildren (88% + fencing rec), CPSC Pool Safely | speakable standardized; dateModified → 2026-07-10 |
+| what-is-usa-swimming-make-a-splash.html | USA Swimming Foundation (Make a Splash), CDC Drowning Facts, AAP/HealthyChildren (88%) | speakable standardized; dateModified → 2026-07-10 |
+
+All URLs are the site-canonical citation URLs already validated + used across the corpus. **Validation:** 0 unclosed / 0 stray tags each; all 3 JSON-LD blocks/file parse clean; exactly 1 sources section + 1 TL;DR box + 1 FAQPage per file; no brand-voice ownership violations; additive diff. Speakable selectors upgraded from 2-selector `[".article-excerpt", ".tldr-box"]` to the standard 4-selector pattern.
+
+**Remaining un-upgraded real articles (3):** free-reduced-swim-lessons-make-a-splash, home-water-safety-room-by-room-checklist, make-a-splash-local-partner-badge-decoded — all already have hyperlinked body citations from earlier runs, just need the Sources section. Close next run, then the corpus's real articles are fully upgraded (location-landing-page TL;DR buildout continues in parallel, ~73 pages remaining).
