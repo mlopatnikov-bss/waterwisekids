@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="A gentle swim lesson: an instructor supporting a smiling child at the pool wall in calm water">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="pool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#sky)"/>
+  <!-- pool deck -->
+  <rect y="70" width="300" height="20" fill="#f1f5f9"/>
+  <!-- water -->
+  <rect y="90" width="300" height="90" fill="url(#pool)"/>
+  <!-- gentle ripples -->
+  <path d="M0 108 Q30 102 60 108 T120 108 T180 108 T240 108 T300 108" stroke="#bae6fd" stroke-width="2.5" fill="none" opacity="0.7"/>
+  <path d="M0 128 Q30 122 60 128 T120 128 T180 128 T240 128 T300 128" stroke="#e0f2fe" stroke-width="2" fill="none" opacity="0.6"/>
+  <!-- pool wall / grab edge -->
+  <rect x="0" y="88" width="300" height="6" fill="#e2e8f0"/>
+  <!-- instructor (adult) -->
+  <circle cx="120" cy="86" r="12" fill="#fcd7b6"/>
+  <path d="M108 86 q12 -18 24 0" fill="#7c3f1d"/>
+  <rect x="112" y="98" width="16" height="34" rx="7" fill="#0d9488"/>
+  <!-- supportive arm reaching to child -->
+  <rect x="128" y="108" width="34" height="8" rx="4" fill="#fcd7b6" transform="rotate(6 128 108)"/>
+  <!-- child at the wall, smiling -->
+  <circle cx="176" cy="96" r="10" fill="#ffe0bd"/>
+  <path d="M166 94 q10 -14 20 0" fill="#3b2a1a"/>
+  <circle cx="172" cy="96" r="1.4" fill="#3b2a1a"/>
+  <circle cx="180" cy="96" r="1.4" fill="#3b2a1a"/>
+  <path d="M172 100 q4 4 8 0" stroke="#b45309" stroke-width="1.4" fill="none"/>
+  <rect x="169" y="106" width="14" height="20" rx="6" fill="#f97316"/>
+  <!-- little hands on the wall -->
+  <circle cx="170" cy="92" r="3" fill="#ffe0bd"/>
+  <circle cx="184" cy="92" r="3" fill="#ffe0bd"/>
+  <!-- sun -->
+  <circle cx="262" cy="34" r="16" fill="#fde68a"/>
+  <!-- checkmark badge -->
+  <circle cx="40" cy="40" r="18" fill="#22c55e"/>
+  <path d="M31 40 l6 7 l12 -15" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
