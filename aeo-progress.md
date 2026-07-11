@@ -780,3 +780,16 @@ Daily aeo-optimizer run from a fresh `origin/live` clone (workspace still stale)
 All URLs are the site-canonical citation URLs already validated + used across the corpus. **Validation:** 0 unclosed / 0 stray tags each; all 3 JSON-LD blocks/file parse clean; exactly 1 sources section + 1 TL;DR box + 1 FAQPage per file; no brand-voice ownership violations; additive diff. Speakable selectors upgraded from 2-selector `[".article-excerpt", ".tldr-box"]` to the standard 4-selector pattern.
 
 **Remaining un-upgraded real articles (3):** free-reduced-swim-lessons-make-a-splash, home-water-safety-room-by-room-checklist, make-a-splash-local-partner-badge-decoded — all already have hyperlinked body citations from earlier runs, just need the Sources section. Close next run, then the corpus's real articles are fully upgraded (location-landing-page TL;DR buildout continues in parallel, ~73 pages remaining).
+
+### Run — 2026-07-11 — Final real-article Authoritative Sources batch (corpus close-out)
+Daily aeo-optimizer run from a fresh `origin/live` clone (workspace still stale). Closed the **last 3 real content articles** that had TL;DR + FAQPage + speakable + hyperlinked body citations but no standardized `📚 Authoritative Sources` section:
+
+| Article | Sources section added |
+|---|---|
+| free-reduced-swim-lessons-make-a-splash.html | USA Swimming Foundation (Make a Splash), CDC Drowning Facts, AAP/HealthyChildren (88%), American Red Cross |
+| make-a-splash-local-partner-badge-decoded.html | USA Swimming Foundation, NDPA (Layers of Protection), American Red Cross, CDC Drowning Facts |
+| home-water-safety-room-by-room-checklist.html | CDC Drowning Facts, AAP/HealthyChildren (88%), American Red Cross (CPR), CPSC Pool Safely |
+
+All Sources use site-canonical citation URLs. dateModified bumped to 2026-07-11 on each. **Validation:** all 3 JSON-LD blocks/file parse clean; 0 unclosed / 0 stray end-tags; exactly 1 Sources section + 1 TL;DR box + 1 FAQPage per file; no brand-voice ownership violations; additive diff only.
+
+**Milestone:** with these three, the indexable real-article corpus is now fully AEO-upgraded (answer-first opening, question H2s, TL;DR, FAQPage, speakable, hyperlinked citations, and Authoritative Sources section). Remaining AEO work is the location-landing-page TL;DR buildout (~73 pages, next town Brielle → Cheltenham PA) plus re-auditing newly published daily articles.
