@@ -2043,6 +2043,7 @@ table tbody tr:hover {
   margin-top: 24px;
 }
 .swim-schools-page .state-chip {
+  text-decoration: none;
   background: #f3f4f6;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
