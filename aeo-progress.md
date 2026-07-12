@@ -793,3 +793,15 @@ Daily aeo-optimizer run from a fresh `origin/live` clone (workspace still stale)
 All Sources use site-canonical citation URLs. dateModified bumped to 2026-07-11 on each. **Validation:** all 3 JSON-LD blocks/file parse clean; 0 unclosed / 0 stray end-tags; exactly 1 Sources section + 1 TL;DR box + 1 FAQPage per file; no brand-voice ownership violations; additive diff only.
 
 **Milestone:** with these three, the indexable real-article corpus is now fully AEO-upgraded (answer-first opening, question H2s, TL;DR, FAQPage, speakable, hyperlinked citations, and Authoritative Sources section). Remaining AEO work is the location-landing-page TL;DR buildout (~73 pages, next town Brielle → Cheltenham PA) plus re-auditing newly published daily articles.
+
+### Run — 2026-07-12 — Location landing pages (AEO buildout, Batch 9) — Brielle NJ cluster
+Daily aeo-optimizer run from a fresh `origin/live` clone (workspace still stale). Continued the location-landing-page TL;DR + speakable + question-H2 pass, completing the entire **Brielle, NJ** cluster (next town alphabetically after Brick):
+- `beginner-swim-lessons-brielle-nj.html` ✅ (age-4 AAP framing)
+- `kids-swim-lessons-brielle-nj.html` ✅ (age-4 AAP framing)
+- `toddler-swim-lessons-brielle-nj.html` ✅ (age-1 AAP framing)
+
+Applied the standard location-page pattern per file: added `WebPage` JSON-LD with the standardized `speakable` cssSelector (`.tldr-box`, `.page-hero h1`, `.lead`); inserted a "Quick Answer" TL;DR box after the hero `</section>` with hyperlinked AAP (age-4 / age-1) + AAP 88%-risk-reduction + CDC leading-cause-of-death citations; converted all 4 content H2s to question format with a bold direct-answer lead sentence (the "Explore…" CTA H2 left as-is). These pages already carried FAQPage + BreadcrumbList schema.
+
+**Validation (json + HTMLParser):** all 3 JSON-LD blocks/file (FAQPage/BreadcrumbList/WebPage) parse clean; 0 unclosed tags / 0 stray end-tags; exactly one body TL;DR box per file (2 total "tldr-box" hits = speakable selector + visible div); 4 question-format H2s each; additive diff only (~1.5k chars/file).
+
+**Backlog:** ~70 indexable location landing pages remain for this pass. Next town alphabetically: **Cheltenham PA** cluster (5 pages: beginner/kids/toddler-swim-lessons-cheltenham-pa, kids-swim-lessons-cheltenham-township-pa, swim-lessons-cheltenham-pa). Continue ~one town per run. All real content articles remain fully AEO-upgraded (corpus close-out completed 2026-07-11).
