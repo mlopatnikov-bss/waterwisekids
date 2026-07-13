@@ -805,3 +805,19 @@ Applied the standard location-page pattern per file: added `WebPage` JSON-LD wit
 **Validation (json + HTMLParser):** all 3 JSON-LD blocks/file (FAQPage/BreadcrumbList/WebPage) parse clean; 0 unclosed tags / 0 stray end-tags; exactly one body TL;DR box per file (2 total "tldr-box" hits = speakable selector + visible div); 4 question-format H2s each; additive diff only (~1.5k chars/file).
 
 **Backlog:** ~70 indexable location landing pages remain for this pass. Next town alphabetically: **Cheltenham PA** cluster (5 pages: beginner/kids/toddler-swim-lessons-cheltenham-pa, kids-swim-lessons-cheltenham-township-pa, swim-lessons-cheltenham-pa). Continue ~one town per run. All real content articles remain fully AEO-upgraded (corpus close-out completed 2026-07-11).
+
+### Run — 2026-07-13 — Location landing pages (AEO buildout, Batch 10) — Cheltenham PA cluster
+Daily aeo-optimizer run from a fresh `origin/live` clone (workspace still stale). Completed the entire **Cheltenham, PA** cluster (next town alphabetically after Brielle) — 5 pages:
+- `beginner-swim-lessons-cheltenham-pa.html` ✅ (age-4 AAP framing)
+- `kids-swim-lessons-cheltenham-pa.html` ✅ (age-4 AAP framing)
+- `toddler-swim-lessons-cheltenham-pa.html` ✅ (age-1 AAP framing)
+- `kids-swim-lessons-cheltenham-township-pa.html` ✅ (age-4 AAP framing)
+- `swim-lessons-cheltenham-pa.html` ✅ (age-4 AAP framing)
+
+Applied the standard location-page pattern per file: added `WebPage` JSON-LD with the standardized `speakable` cssSelector (`.tldr-box`, `.page-hero h1`, `.lead`); inserted a "Quick Answer" TL;DR box after the hero `</section>` with hyperlinked AAP (age-4 / age-1) + AAP 88%-risk-reduction + CDC leading-cause-of-death citations; converted all 4 content H2s to question format with a bold direct-answer lead sentence (the "Explore…" CTA H2 left as-is). These pages already carried FAQPage + BreadcrumbList schema.
+
+**Validation (json + HTMLParser):** all 3 JSON-LD blocks/file (FAQPage/BreadcrumbList/WebPage) parse clean; 0 unclosed / 0 stray end-tags each; exactly one visible TL;DR box per file; 4 question-format H2s each; no brand-voice ownership violations; additive diff only (+10 ins / -5 mod-lines across 5 files).
+
+**No new un-optimized real content articles this run:** the no-TL;DR education/ scan returned only the 40 intentionally-excluded `-printable` checklist pages + `index.html`; the real-article corpus remains fully AEO-upgraded (closed 2026-07-11).
+
+**Backlog:** ~65 indexable location landing pages remain. Next town alphabetically: **Chalfont / Doylestown PA** area or next in the swim-lessons-* set — re-scan the no-TL;DR root-level `*-swim-lessons-*` files at start of next run. `swim-lessons/cheltenham-pa.html` (directory-style variant, 7 H2s, no page-hero) not part of this template batch — evaluate separately.
