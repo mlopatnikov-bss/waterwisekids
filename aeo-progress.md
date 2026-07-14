@@ -821,3 +821,15 @@ Applied the standard location-page pattern per file: added `WebPage` JSON-LD wit
 **No new un-optimized real content articles this run:** the no-TL;DR education/ scan returned only the 40 intentionally-excluded `-printable` checklist pages + `index.html`; the real-article corpus remains fully AEO-upgraded (closed 2026-07-11).
 
 **Backlog:** ~65 indexable location landing pages remain. Next town alphabetically: **Chalfont / Doylestown PA** area or next in the swim-lessons-* set — re-scan the no-TL;DR root-level `*-swim-lessons-*` files at start of next run. `swim-lessons/cheltenham-pa.html` (directory-style variant, 7 H2s, no page-hero) not part of this template batch — evaluate separately.
+
+### Run — 2026-07-14 — HowTo schema for procedural articles (NEW lever)
+Daily aeo-optimizer run from a fresh `origin/live` clone. **Key finding:** prior runs declared the real-article corpus "closed" (2026-07-11) based on a no-TL;DR scan, but that scan never checked for **HowTo JSON-LD** — which was absent from ~every content article. Genuine how-to articles (how-to-teach-treading-water, teach-child-to-float, teaching-kids-to-climb-out-pool) already had it from the generator, but several true step-by-step procedures did not. Added valid HowTo schema (steps matching visible on-page content — no spammy/mismatched markup) to 3 procedural articles:
+- `self-rescue-home-pool-practice.html` ✅ HowTo (5 steps: certified instructor → no surprise/drop → rehearse exit → short & positive → touch supervision)
+- `swim-float-swim-method-explained.html` ✅ HowTo (3 phases: Swim → Float → Swim again)
+- `first-swim-lesson-checklist.html` ✅ HowTo (5 steps: night-before → pack bag → morning-of → ask instructor → after-lesson wrap-up)
+
+All 3 already carried FAQPage + Article/BreadcrumbList + speakable + TL;DR (template-baked), so this run was purely additive HowTo enrichment.
+
+**Validation:** each file now 4/4 ld+json blocks parse clean (json.loads); `<script>`/`</script>` balanced 6/6; HowTo step text is verbatim-faithful to visible content; no brand-voice ownership violations. Additive diff only (one script block/file).
+
+**Backlog / next lever:** the HowTo gap likely spans other genuine procedures still lacking it — but must be applied ONLY where an on-page ordered procedure actually exists (comparison/explainer `<ol>` articles are NOT valid HowTo targets). Next-run candidates to vet: teaching-water-respect (conceptual, likely no), kids-snorkeling-safety, safe-diving-rules-kids, self-rescue variants. Location landing pages remain a parallel TL;DR/WebPage backlog (~65) per Batch 10 note.
