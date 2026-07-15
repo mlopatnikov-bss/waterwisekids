@@ -833,3 +833,17 @@ All 3 already carried FAQPage + Article/BreadcrumbList + speakable + TL;DR (temp
 **Validation:** each file now 4/4 ld+json blocks parse clean (json.loads); `<script>`/`</script>` balanced 6/6; HowTo step text is verbatim-faithful to visible content; no brand-voice ownership violations. Additive diff only (one script block/file).
 
 **Backlog / next lever:** the HowTo gap likely spans other genuine procedures still lacking it — but must be applied ONLY where an on-page ordered procedure actually exists (comparison/explainer `<ol>` articles are NOT valid HowTo targets). Next-run candidates to vet: teaching-water-respect (conceptual, likely no), kids-snorkeling-safety, safe-diving-rules-kids, self-rescue variants. Location landing pages remain a parallel TL;DR/WebPage backlog (~65) per Batch 10 note.
+
+### Run — 2026-07-15 — Location landing pages (AEO buildout, Batch 11) — Elkins Park PA cluster
+Daily aeo-optimizer run from a fresh `origin/live` clone (workspace still stale). Completed the entire **Elkins Park, PA** cluster (next alphabetical town with un-optimized location pages) — 3 pages:
+- `beginner-swim-lessons-elkins-park-pa.html` ✅ (age-4 AAP framing)
+- `kids-swim-lessons-elkins-park-pa.html` ✅ (age-4 AAP framing)
+- `toddler-swim-lessons-elkins-park-pa.html` ✅ (age-1 AAP framing)
+
+Applied the standard location-page pattern per file: added `WebPage` JSON-LD with the standardized `speakable` cssSelector (`.tldr-box`, `.page-hero h1`, `.lead`); inserted a "Quick Answer" TL;DR box after the hero `</section>` with hyperlinked AAP (age-4 / age-1) + AAP 88%-risk-reduction + CDC leading-cause-of-death citations; converted all 4 content H2s from statement to question format with a bold direct-answer lead sentence (the "Explore…" CTA H2 left as-is). These pages already carried FAQPage + BreadcrumbList schema (pretty-printed FAQPage in head — nearly duplicated it this run; validation caught it and the added dup was removed, keeping the original higher-detail FAQPage with local cost/year-round Q&As).
+
+**Validation (json + HTMLParser):** all 3 JSON-LD blocks/file (FAQPage/BreadcrumbList/WebPage) parse clean; 0 unclosed / 0 stray end-tags each; exactly one visible TL;DR box, one FAQPage, one WebPage, one speakable, and 4 question-format H2s per file; balanced 5/5 script tags; no brand-voice ownership violations; additive diff only (+~2.6k chars/file).
+
+**Process note:** location pages in this alphabetical band ship from the generator with a pretty-printed FAQPage that the compact `"@type":"..."` grep does NOT detect — always parse ld+json blocks (json.loads) to enumerate existing schema types before adding FAQPage, or a duplicate will slip in.
+
+**Backlog:** ~62 indexable location landing pages remain (next un-optimized cluster alphabetically: Flourtown PA → Glenside PA → Howell NJ → Jenkintown PA → Jersey Shore, per the no-TL;DR root scan). Continue ~one town per run. All real content articles remain fully AEO-upgraded (corpus close-out 2026-07-11; HowTo enrichment ongoing per 2026-07-14).
