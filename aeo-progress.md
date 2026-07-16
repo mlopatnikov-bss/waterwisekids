@@ -847,3 +847,15 @@ Applied the standard location-page pattern per file: added `WebPage` JSON-LD wit
 **Process note:** location pages in this alphabetical band ship from the generator with a pretty-printed FAQPage that the compact `"@type":"..."` grep does NOT detect — always parse ld+json blocks (json.loads) to enumerate existing schema types before adding FAQPage, or a duplicate will slip in.
 
 **Backlog:** ~62 indexable location landing pages remain (next un-optimized cluster alphabetically: Flourtown PA → Glenside PA → Howell NJ → Jenkintown PA → Jersey Shore, per the no-TL;DR root scan). Continue ~one town per run. All real content articles remain fully AEO-upgraded (corpus close-out 2026-07-11; HowTo enrichment ongoing per 2026-07-14).
+
+### Run — 2026-07-16 — Location landing pages (AEO buildout, Batch 12) — Flourtown PA cluster
+Daily aeo-optimizer run from a fresh `origin/live` clone (workspace still stale). Completed the entire **Flourtown, PA** cluster (next alphabetical town with un-optimized location pages, after Elkins Park) — 3 pages:
+- `beginner-swim-lessons-flourtown-pa.html` ✅ (age-4 AAP framing)
+- `kids-swim-lessons-flourtown-pa.html` ✅ (age-4 AAP framing)
+- `toddler-swim-lessons-flourtown-pa.html` ✅ (age-1 AAP framing)
+
+Applied the standard location-page pattern per file: added `WebPage` JSON-LD with the standardized `speakable` cssSelector (`.tldr-box`, `.page-hero h1`, `.lead`); inserted a "Quick Answer" TL;DR box after the hero `</section>` with hyperlinked AAP (age-4 / age-1) + AAP 88%-risk-reduction + CDC leading-cause-of-death (ages 1–4) citations; converted all 4 content H2s from statement to question format with a bold direct-answer lead sentence prepended to the existing paragraph (the "Explore…" CTA H2 left as-is). These pages already carried FAQPage + BreadcrumbList schema.
+
+**Validation (json.loads + HTMLParser):** all 3 JSON-LD blocks/file (FAQPage/BreadcrumbList/WebPage) parse clean; 0 unclosed / 0 stray end-tags each; balanced 5/5 script tags; exactly one visible TL;DR box, one WebPage, one speakable, and 4 question-format H2s per file; no brand-voice ownership violations; additive diff only (~1.6k chars/file, all 3 stage as `M` not `A`). Pre-parsed existing ld+json to avoid the pretty-printed-FAQPage duplication trap (per Batch 11 note) — no dup introduced.
+
+**Backlog:** ~59 indexable location landing pages remain (next un-optimized clusters alphabetically: Glenside PA → Howell NJ → Jenkintown PA → Jersey Shore → Monmouth County NJ, per the no-TL;DR root scan). Continue ~one town per run. All real content articles remain fully AEO-upgraded (corpus close-out 2026-07-11; HowTo enrichment ongoing per 2026-07-14).
