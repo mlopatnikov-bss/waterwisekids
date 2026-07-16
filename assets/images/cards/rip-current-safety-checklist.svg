@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="Rip current safety at the beach: a warning flag on the sand beside ocean waves with a channel flowing out to sea">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <!-- sky -->
+  <rect width="300" height="180" fill="url(#sky)"/>
+  <!-- sun -->
+  <circle cx="258" cy="34" r="15" fill="#fde68a"/>
+  <!-- ocean -->
+  <rect y="60" width="300" height="90" fill="url(#ocean)"/>
+  <!-- sandy beach -->
+  <path d="M0 150 Q150 132 300 150 L300 180 L0 180 Z" fill="#fde9c8"/>
+  <path d="M0 150 Q150 132 300 150" stroke="#f6d9a8" stroke-width="2" fill="none"/>
+  <!-- breaking wave lines (left of rip) -->
+  <path d="M6 92 Q26 86 46 92 T86 92" stroke="#e0f2fe" stroke-width="2.5" fill="none" opacity="0.85"/>
+  <path d="M6 110 Q26 104 46 110 T86 110" stroke="#bae6fd" stroke-width="2" fill="none" opacity="0.7"/>
+  <!-- breaking wave lines (right of rip) -->
+  <path d="M214 92 Q234 86 254 92 T294 92" stroke="#e0f2fe" stroke-width="2.5" fill="none" opacity="0.85"/>
+  <path d="M214 110 Q234 104 254 110 T294 110" stroke="#bae6fd" stroke-width="2" fill="none" opacity="0.7"/>
+  <!-- RIP CURRENT channel: darker, calmer gap flowing out to sea -->
+  <path d="M126 150 Q140 105 138 62 L162 62 Q160 105 174 150 Z" fill="#075985" opacity="0.55"/>
+  <!-- outward-flow arrows in the rip -->
+  <g stroke="#e0f2fe" stroke-width="2.4" fill="none" opacity="0.9" stroke-linecap="round">
+    <path d="M150 138 L150 96"/>
+    <path d="M142 106 L150 94 L158 106"/>
+  </g>
+  <!-- warning flag on the sand -->
+  <rect x="40" y="118" width="3" height="40" fill="#78350f"/>
+  <path d="M43 120 L74 120 L66 130 L74 140 L43 140 Z" fill="#dc2626"/>
+  <!-- small checkmark badge -->
+  <circle cx="238" cy="150" r="17" fill="#16a34a"/>
+  <path d="M230 150 l6 6 l11 -13" stroke="#ffffff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
