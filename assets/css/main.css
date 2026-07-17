@@ -535,6 +535,16 @@ nav {
   gap: var(--spacing-lg);
 }
 
+/* Constrain bare header>nav (article/checklist templates lacking a .container wrapper)
+   so the sticky nav aligns with the 1160px page body instead of spanning full-bleed.
+   Only matches navs that are direct children of <header>; contained navs
+   (<header><div class="container"><nav>) are unaffected. */
+header > nav {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+}
+
 .nav-logo {
   display: flex;
   align-items: center;
@@ -1501,6 +1511,10 @@ table tbody tr:hover {
   }
 
   .container {
+    padding: 0 var(--spacing-lg);
+  }
+
+  header > nav {
     padding: 0 var(--spacing-lg);
   }
 
