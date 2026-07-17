@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="A parent waving warmly from a poolside chair while a smiling swim instructor holds a happy toddler in calm water">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="pool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#sky)"/>
+  <!-- pool deck -->
+  <rect y="66" width="300" height="24" fill="#f1f5f9"/>
+  <!-- water -->
+  <rect y="90" width="300" height="90" fill="url(#pool)"/>
+  <!-- pool wall / grab edge -->
+  <rect x="0" y="88" width="300" height="6" fill="#e2e8f0"/>
+  <!-- gentle ripples -->
+  <path d="M0 112 Q30 106 60 112 T120 112 T180 112 T240 112 T300 112" stroke="#bae6fd" stroke-width="2.5" fill="none" opacity="0.7"/>
+  <path d="M0 134 Q30 128 60 134 T120 134 T180 134 T240 134 T300 134" stroke="#e0f2fe" stroke-width="2" fill="none" opacity="0.6"/>
+
+  <!-- PARENT on deck, seated in a chair, waving warmly -->
+  <!-- chair -->
+  <rect x="42" y="54" width="26" height="6" rx="2" fill="#f59e0b"/>
+  <rect x="42" y="42" width="6" height="18" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="60" width="4" height="10" fill="#b45309"/>
+  <rect x="62" y="60" width="4" height="10" fill="#b45309"/>
+  <!-- parent body -->
+  <rect x="48" y="30" width="16" height="26" rx="7" fill="#7c3aed"/>
+  <!-- parent head -->
+  <circle cx="56" cy="24" r="9" fill="#fcd7b6"/>
+  <path d="M47 23 q9 -15 18 0 q-9 -6 -18 0" fill="#4b2e17"/>
+  <!-- waving arm (raised) -->
+  <rect x="60" y="20" width="7" height="20" rx="3.5" fill="#fcd7b6" transform="rotate(38 60 34)"/>
+  <circle cx="76" cy="18" r="4" fill="#fcd7b6"/>
+
+  <!-- INSTRUCTOR in the water, supporting the child -->
+  <!-- instructor head -->
+  <circle cx="176" cy="82" r="12" fill="#eab890"/>
+  <path d="M164 82 q12 -17 24 0" fill="#3f2a17"/>
+  <!-- instructor torso in water -->
+  <rect x="167" y="94" width="18" height="30" rx="8" fill="#0d9488"/>
+  <!-- supportive arms cradling child -->
+  <rect x="183" y="104" width="34" height="9" rx="4.5" fill="#eab890" transform="rotate(8 183 104)"/>
+
+  <!-- CHILD, happily held, arms up -->
+  <circle cx="212" cy="100" r="9" fill="#ffe0bd"/>
+  <path d="M203 99 q9 -13 18 0" fill="#5b3a1d"/>
+  <!-- happy smile -->
+  <path d="M207 103 q5 5 10 0" stroke="#b45309" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <!-- little arms up (delight) -->
+  <rect x="200" y="92" width="6" height="12" rx="3" fill="#ffe0bd" transform="rotate(-32 203 98)"/>
+  <rect x="218" y="92" width="6" height="12" rx="3" fill="#ffe0bd" transform="rotate(32 221 98)"/>
+  <!-- child body in water -->
+  <rect x="206" y="107" width="12" height="16" rx="6" fill="#f472b6"/>
+
+  <!-- soft heart between parent and child (the bond) -->
+  <path d="M132 40 c-4 -6 -13 -3 -13 4 c0 6 13 13 13 13 c0 0 13 -7 13 -13 c0 -7 -9 -10 -13 -4 z" fill="#fb7185" opacity="0.9"/>
+</svg>
