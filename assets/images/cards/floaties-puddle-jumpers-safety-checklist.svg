@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="Water safety with flotation toys: a child in inflatable arm-band water wings and a puddle jumper floatie in a pool, with a caution note that floaties are not life jackets">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <!-- background -->
+  <rect width="300" height="180" fill="url(#sky)"/>
+  <!-- water -->
+  <rect x="0" y="70" width="300" height="110" fill="url(#water)"/>
+  <!-- water surface highlights -->
+  <path d="M0 74 Q30 68 60 74 T120 74 T180 74 T240 74 T300 74 V80 H0 Z" fill="#7dd3fc" opacity="0.5"/>
+  <!-- sun -->
+  <circle cx="255" cy="34" r="18" fill="#fde68a"/>
+  <!-- child head -->
+  <circle cx="120" cy="66" r="15" fill="#fcd9b6"/>
+  <path d="M106 60 Q120 44 134 60 Q126 54 120 54 Q114 54 106 60 Z" fill="#7c4a1e"/>
+  <circle cx="115" cy="66" r="1.8" fill="#3b2a1a"/>
+  <circle cx="125" cy="66" r="1.8" fill="#3b2a1a"/>
+  <path d="M115 72 Q120 76 125 72" stroke="#3b2a1a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- puddle jumper floatie around chest (orange) -->
+  <ellipse cx="120" cy="92" rx="26" ry="14" fill="#fb923c"/>
+  <ellipse cx="120" cy="92" rx="26" ry="14" fill="none" stroke="#ea580c" stroke-width="2"/>
+  <circle cx="120" cy="92" r="7" fill="#fdba74"/>
+  <!-- arms with water-wing armbands -->
+  <ellipse cx="92" cy="98" rx="9" ry="7" fill="#f87171"/>
+  <ellipse cx="148" cy="98" rx="9" ry="7" fill="#f87171"/>
+  <!-- caution tag -->
+  <g transform="translate(196,104)">
+    <rect x="0" y="0" width="92" height="52" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+    <path d="M16 10 L26 28 L6 28 Z" fill="#f59e0b"/>
+    <rect x="14.5" y="16" width="3" height="7" fill="#78350f"/>
+    <rect x="14.5" y="25" width="3" height="3" fill="#78350f"/>
+    <text x="34" y="19" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#92400e">Floaties</text>
+    <text x="34" y="30" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#92400e">aren't</text>
+    <text x="34" y="41" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#92400e">life jackets</text>
+  </g>
+  <!-- brand -->
+  <text x="12" y="168" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#e0f2fe">WaterWiseKids</text>
+</svg>
