@@ -2258,3 +2258,22 @@ table tbody tr:hover {
   .search-grid { grid-template-columns: 1fr; }
   .search-button { width: 100%; }
 }
+
+/* ── Directory school card header ────────────────────────────
+   .school-header is emitted by the JS renderer on the 52 state
+   directory pages but had no rule; without it the rating block
+   dropped below the school name instead of aligning right. */
+.school-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+.school-header > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-start;
+}
