@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="Water rescue: a person on a pool deck reaches a long pole out to a struggling swimmer while a ring buoy sits ready nearby">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <!-- sky -->
+  <rect width="300" height="180" fill="url(#sky)"/>
+  <!-- sun -->
+  <circle cx="262" cy="30" r="14" fill="#fde68a"/>
+  <!-- water -->
+  <rect y="72" width="300" height="108" fill="url(#water)"/>
+  <!-- ripple lines -->
+  <path d="M120 100 Q150 94 180 100 T240 100" stroke="#e0f2fe" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M150 120 Q180 114 210 120 T270 120" stroke="#bae6fd" stroke-width="2" fill="none" opacity="0.6"/>
+  <!-- pool deck (left) -->
+  <path d="M0 72 L96 72 L96 180 L0 180 Z" fill="#fde9c8"/>
+  <path d="M96 72 L96 180" stroke="#f6d9a8" stroke-width="3"/>
+  <!-- ring buoy on deck -->
+  <g transform="translate(38,150)">
+    <circle r="15" fill="#f97316"/>
+    <circle r="7" fill="#fde9c8"/>
+    <rect x="-15" y="-3" width="6" height="6" fill="#f8fafc"/>
+    <rect x="9" y="-3" width="6" height="6" fill="#f8fafc"/>
+    <rect x="-3" y="-15" width="6" height="6" fill="#f8fafc"/>
+    <rect x="-3" y="9" width="6" height="6" fill="#f8fafc"/>
+  </g>
+  <!-- rescuer figure kneeling on deck -->
+  <g transform="translate(60,86)">
+    <circle cx="0" cy="0" r="8" fill="#fcd9b6"/>
+    <path d="M-8 8 Q0 4 8 8 L10 34 L-8 34 Z" fill="#0284c7"/>
+  </g>
+  <!-- reaching pole -->
+  <line x1="70" y1="96" x2="196" y2="118" stroke="#a16207" stroke-width="4" stroke-linecap="round"/>
+  <!-- struggling swimmer (head + arm) in water on right -->
+  <g transform="translate(210,116)">
+    <circle cx="0" cy="0" r="8" fill="#fcd9b6"/>
+    <path d="M6 -4 Q16 -14 20 -20" stroke="#fcd9b6" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M-12 8 Q0 2 12 8" stroke="#0369a1" stroke-width="3" fill="none" opacity="0.5"/>
+  </g>
+</svg>
