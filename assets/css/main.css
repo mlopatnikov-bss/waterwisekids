@@ -2386,6 +2386,21 @@ table tbody tr:hover {
   margin-right: 0.5rem;
   flex-shrink: 0;
 }
+/* Checklist container + rows — .checklist-icon uses flex-shrink, so rows are flex.
+   Container/row rules were missing (icon rule survived); restored for row spacing. */
+.checklist {
+  margin: 20px 0;
+}
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+.checklist-item:last-child {
+  margin-bottom: 0;
+}
+
 .checklist-item-checkbox {
   color: var(--teal-500);
   font-weight: 700;

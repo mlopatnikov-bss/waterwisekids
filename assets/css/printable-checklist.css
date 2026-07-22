@@ -137,10 +137,38 @@ body {
   .print-toolbar { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
 
+/* ── Screen-only site footer + related cards (parity with main.css) ──
+   Printables carry the standard <footer> and .related-card markup but only
+   load this stylesheet; these classes were undefined -> unstyled on screen. */
+footer {
+  background: #0c4a6e;
+  color: #e0f2fe;
+  padding: 2.5rem 1.5rem 1.5rem;
+  text-align: center;
+}
+footer > div { max-width: 1100px; margin: 0 auto; }
+.footer-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: #fff; }
+.footer-title img { display: inline; vertical-align: middle; }
+.footer-tagline { font-size: 0.9rem; color: #93c5fd; margin-bottom: 1.5rem; }
+.footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.footer-links a { color: #bae6fd; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+.footer-links a:hover { color: #fff; }
+.footer-contact { font-size: 0.85rem; color: #93c5fd; margin-bottom: 0.75rem; }
+.footer-contact a { color: #bae6fd; text-decoration: none; transition: color 0.2s; }
+.footer-contact a:hover { color: #fff; }
+footer .footer-bottom { display: block; border-top: 1px solid #1e3a5f; padding-top: 1rem; margin-top: 1rem; }
+footer .footer-bottom, footer .footer-bottom p { font-size: 0.8rem; color: #7dd3fc; }
+footer .footer-bottom a { color: #7dd3fc; text-decoration: none; transition: color 0.2s; }
+footer .footer-bottom a:hover { color: #bae6fd; }
+.related-card { display: block; background: #fff; padding: 14px 16px; border-radius: 8px; text-decoration: none; border: 1px solid #e2e8f0; transition: box-shadow 0.2s, transform 0.2s; }
+.related-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-2px); }
+.related-card-title { color: #0369a1; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+.related-card-link { color: #0891b2; font-size: 0.85rem; font-weight: 600; }
+
 /* PRINT STYLES */
 @media print {
   body { background: white; }
-  .screen-header, .print-toolbar, .screen-cta, .screen-footer { display: none !important; }
+  .screen-header, .print-toolbar, .screen-cta, .screen-footer, footer { display: none !important; }
   .checklist-page { margin: 0; padding: 0; max-width: 100%; }
   .checklist-card { box-shadow: none; border: none; padding: 0; border-radius: 0; }
   .cl-header { border-bottom: 2px solid #075985; }
