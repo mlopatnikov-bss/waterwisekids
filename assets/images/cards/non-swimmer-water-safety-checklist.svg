@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="Non-swimmer water safety: a small child in a life jacket at a pool edge with an adult hand within arm's reach and a life ring">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <!-- background -->
+  <rect width="300" height="180" fill="url(#bg)"/>
+  <!-- pool water lower area -->
+  <rect y="112" width="300" height="68" fill="url(#water)"/>
+  <!-- water ripples -->
+  <path d="M0 126 Q25 120 50 126 T100 126 T150 126 T200 126 T250 126 T300 126" fill="none" stroke="#bae6fd" stroke-width="2" opacity="0.7"/>
+  <path d="M0 142 Q25 136 50 142 T100 142 T150 142 T200 142 T250 142 T300 142" fill="none" stroke="#bae6fd" stroke-width="2" opacity="0.5"/>
+  <!-- pool deck edge -->
+  <rect y="104" width="300" height="10" fill="#e2e8f0"/>
+  <rect y="112" width="300" height="3" fill="#cbd5e1"/>
+  <!-- life ring -->
+  <g transform="translate(246,58)">
+    <circle r="22" fill="#ef4444"/>
+    <circle r="10" fill="#f0f9ff"/>
+    <rect x="-24" y="-3" width="8" height="6" rx="2" fill="#f8fafc"/>
+    <rect x="16" y="-3" width="8" height="6" rx="2" fill="#f8fafc"/>
+    <rect x="-3" y="-24" width="6" height="8" rx="2" fill="#f8fafc"/>
+    <rect x="-3" y="16" width="6" height="8" rx="2" fill="#f8fafc"/>
+  </g>
+  <!-- adult arm reaching (arm's reach) from left -->
+  <path d="M0 70 L70 82 Q84 84 82 94 L74 96 Q58 92 0 88 Z" fill="#f6c8a0"/>
+  <circle cx="80" cy="92" r="9" fill="#f6c8a0"/>
+  <!-- small child in life jacket at pool edge -->
+  <g transform="translate(120,52)">
+    <!-- head -->
+    <circle cx="12" cy="8" r="10" fill="#f6c8a0"/>
+    <path d="M2 6 Q12 -6 22 6 Q17 0 12 1 Q7 0 2 6 Z" fill="#7c4a21"/>
+    <!-- life jacket body -->
+    <rect x="1" y="18" width="22" height="28" rx="6" fill="#f97316"/>
+    <rect x="1" y="27" width="22" height="5" fill="#fdba74"/>
+    <line x1="12" y1="18" x2="12" y2="46" stroke="#c2410c" stroke-width="1.5"/>
+    <!-- legs -->
+    <rect x="4" y="46" width="6" height="14" rx="3" fill="#0ea5e9"/>
+    <rect x="14" y="46" width="6" height="14" rx="3" fill="#0ea5e9"/>
+  </g>
+  <!-- checklist badge -->
+  <g transform="translate(20,20)">
+    <rect x="0" y="0" width="40" height="52" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect x="9" y="-5" width="22" height="10" rx="3" fill="#0284c7"/>
+    <path d="M7 15 l4 4 l7 -8" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="22" y1="15" x2="34" y2="15" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M7 29 l4 4 l7 -8" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="22" y1="29" x2="34" y2="29" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M7 43 l4 4 l7 -8" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="22" y1="43" x2="34" y2="43" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>
