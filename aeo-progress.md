@@ -935,3 +935,15 @@ Applied the standard location-page pattern per file: added `WebPage` JSON-LD wit
 **Validation (json.loads + HTMLParser):** all 3 JSON-LD blocks/file parse clean in order [FAQPage, BreadcrumbList, WebPage]; tag_err=0 / stack_left=0 each; exactly one TL;DR box, one WebPage, one speakable, and 4 question-format H2s (all 4 with bold-answer leads) per file; 0 brand-voice ownership claims; additive diff only (+1.8k bytes/file, all 3 stage as `M`). Pre-asserted no pre-existing WebPage/tldr before insertion — no FAQPage-duplication trap.
 
 **Backlog:** ~41 indexable location landing pages remain (next un-optimized clusters alphabetically: Ocean County NJ → Ocean Grove NJ → Sea Girt NJ → Spring House PA → Toms River NJ → Wyndmoor PA, each a clean beginner/kids/toddler trio). High-traffic hub pages (`index.html`, `find-swim-lessons.html`, `swim-schools.html`, `kids-swim-lessons-philadelphia.html`) still un-optimized — worth a dedicated run. Continue ~one town per run. All real content articles remain fully AEO-upgraded (corpus close-out 2026-07-11).
+
+### Run — 2026-07-23 — Location landing pages (AEO buildout, Batch 19) — Ocean County NJ cluster
+Daily aeo-optimizer scheduled run from a fresh `origin/live` clone. Completed the entire **Ocean County, NJ** trio (next un-optimized cluster alphabetically after Oakhurst) — 3 pages:
+- `beginner-swim-lessons-ocean-county-nj.html` ✅ (age-4 AAP framing)
+- `kids-swim-lessons-ocean-county-nj.html` ✅ (age-4 AAP framing)
+- `toddler-swim-lessons-ocean-county-nj.html` ✅ (age-1 AAP framing)
+
+Applied the standard location-page pattern per file: added `WebPage` JSON-LD with the standardized `speakable` cssSelector (`.tldr-box`, `.page-hero h1`, `.lead`) before `</head>`; inserted a "Quick Answer" TL;DR box before the first content H2 with hyperlinked AAP (age-4 / age-1) + AAP 88%-risk-reduction + CDC leading-cause-of-death (ages 1–4) citations; converted all 4 content H2s from statement to question format with a bold direct-answer lead sentence prepended (the "Explore…" CTA H2 left as-is). These pages already carried FAQPage + BreadcrumbList schema.
+
+**Validation (json.loads + HTMLParser):** all 3 JSON-LD blocks/file parse clean in order [FAQPage, BreadcrumbList, WebPage]; tag_err=0 / stack_left=0 each; exactly one TL;DR box, one speakable, and 4 question-format H2s per file; 2 authoritative cite links (aap.org + cdc.gov) each; 0 brand-voice ownership claims; additive diff only (+1.6–1.7k bytes/file, all 3 stage as `M`). Pre-asserted no pre-existing WebPage/tldr before insertion — no FAQPage-duplication trap.
+
+**Backlog:** ~38 indexable location landing pages remain (next un-optimized clusters alphabetically: Ocean County beaches → Ocean Grove NJ → Sea Girt NJ → Spring House PA → Toms River NJ → Wyndmoor PA). Note `swim-lessons-ocean-county-nj.html` (the parent tier) was already optimized in an earlier run. High-traffic hub pages (`index.html`, `find-swim-lessons.html`, `swim-schools.html`, `kids-swim-lessons-philadelphia.html`) still un-optimized — worth a dedicated run. Continue ~one town per run. All real content articles remain fully AEO-upgraded (corpus close-out 2026-07-11).
