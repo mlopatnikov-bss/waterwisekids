@@ -160,6 +160,7 @@ footer .footer-bottom { display: block; border-top: 1px solid #1e3a5f; padding-t
 footer .footer-bottom, footer .footer-bottom p { font-size: 0.8rem; color: #7dd3fc; }
 footer .footer-bottom a { color: #7dd3fc; text-decoration: none; transition: color 0.2s; }
 footer .footer-bottom a:hover { color: #bae6fd; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
 .related-card { display: block; background: #fff; padding: 14px 16px; border-radius: 8px; text-decoration: none; border: 1px solid #e2e8f0; transition: box-shadow 0.2s, transform 0.2s; }
 .related-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-2px); }
 .related-card-title { color: #0369a1; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
