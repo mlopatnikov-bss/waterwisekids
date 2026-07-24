@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="Swim lesson reward chart: a gold star trophy over pool water with a row of sticker stars and check boxes">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <radialGradient id="star" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </radialGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#sky)"/>
+  <rect y="118" width="300" height="62" fill="url(#water)"/>
+  <path d="M0 118 q 25 -8 50 0 t 50 0 t 50 0 t 50 0 t 50 0 v 6 H0 Z" fill="#7dd3fc" opacity="0.7"/>
+  <g transform="translate(150,62)">
+    <polygon points="0,-40 11,-13 40,-13 16,6 25,34 0,17 -25,34 -16,6 -40,-13 -11,-13"
+      fill="url(#star)" stroke="#d97706" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+  <g fill="#facc15" stroke="#eab308" stroke-width="1.5">
+    <polygon points="42,150 46,158 55,158 48,164 51,173 42,167 33,173 36,164 29,158 38,158"/>
+    <polygon points="96,150 100,158 109,158 102,164 105,173 96,167 87,173 90,164 83,158 92,158"/>
+    <polygon points="204,150 208,158 217,158 210,164 213,173 204,167 195,173 198,164 191,158 200,158"/>
+    <polygon points="258,150 262,158 271,158 264,164 267,173 258,167 249,173 252,164 245,158 254,158"/>
+  </g>
+  <g>
+    <rect x="132" y="150" width="16" height="16" rx="3" fill="#ffffff" stroke="#0369a1" stroke-width="2"/>
+    <path d="M135 158 l4 4 l6 -8" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="154" y="150" width="16" height="16" rx="3" fill="#ffffff" stroke="#0369a1" stroke-width="2"/>
+    <path d="M157 158 l4 4 l6 -8" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect x="60" y="14" width="180" height="26" rx="13" fill="#ffffff" opacity="0.92"/>
+  <text x="150" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#0c4a6e">My Swim Reward Chart</text>
+</svg>
