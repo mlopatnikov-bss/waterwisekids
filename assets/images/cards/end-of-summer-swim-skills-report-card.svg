@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="End-of-summer swim skills report card: a clipboard scorecard with red, yellow, and green marks beside a child swimming in a pool">
+  <defs>
+    <linearGradient id="rcbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="rcwater" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <!-- background -->
+  <rect width="300" height="180" fill="url(#rcbg)"/>
+  <!-- pool water lower area -->
+  <rect y="132" width="300" height="48" fill="url(#rcwater)"/>
+  <path d="M0 136 q15 -6 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0" fill="none" stroke="#bae6fd" stroke-width="2" opacity="0.7"/>
+  <path d="M0 146 q15 5 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0" fill="none" stroke="#7dd3fc" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- warm summer sun -->
+  <circle cx="252" cy="40" r="20" fill="#fbbf24"/>
+  <g stroke="#fbbf24" stroke-width="3" stroke-linecap="round">
+    <line x1="252" y1="8" x2="252" y2="16"/>
+    <line x1="280" y1="40" x2="288" y2="40"/>
+    <line x1="273" y1="19" x2="279" y2="13"/>
+    <line x1="273" y1="61" x2="279" y2="67"/>
+  </g>
+
+  <!-- clipboard report card -->
+  <g transform="translate(30,26)">
+    <rect x="0" y="0" width="120" height="120" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="42" y="-6" width="36" height="14" rx="4" fill="#94a3b8"/>
+    <!-- title bar -->
+    <rect x="14" y="14" width="70" height="8" rx="4" fill="#0c4a6e"/>
+    <rect x="14" y="28" width="92" height="5" rx="2.5" fill="#e2e8f0"/>
+    <!-- rows with score dots -->
+    <g>
+      <rect x="14" y="44" width="60" height="5" rx="2.5" fill="#e2e8f0"/>
+      <circle cx="96" cy="46.5" r="6" fill="#16a34a"/>
+    </g>
+    <g>
+      <rect x="14" y="60" width="60" height="5" rx="2.5" fill="#e2e8f0"/>
+      <circle cx="96" cy="62.5" r="6" fill="#16a34a"/>
+    </g>
+    <g>
+      <rect x="14" y="76" width="60" height="5" rx="2.5" fill="#e2e8f0"/>
+      <circle cx="96" cy="78.5" r="6" fill="#eab308"/>
+    </g>
+    <g>
+      <rect x="14" y="92" width="60" height="5" rx="2.5" fill="#e2e8f0"/>
+      <circle cx="96" cy="94.5" r="6" fill="#dc2626"/>
+    </g>
+    <g>
+      <rect x="14" y="108" width="60" height="5" rx="2.5" fill="#e2e8f0"/>
+      <circle cx="96" cy="110.5" r="6" fill="#16a34a"/>
+    </g>
+  </g>
+
+  <!-- child swimming -->
+  <g transform="translate(196,120)">
+    <!-- arm -->
+    <path d="M-6 2 q12 -12 26 -6" fill="none" stroke="#f2b48a" stroke-width="6" stroke-linecap="round"/>
+    <!-- head -->
+    <circle cx="0" cy="6" r="10" fill="#f8c8a0"/>
+    <path d="M-10 3 a10 10 0 0 1 20 0 z" fill="#5b3a21"/>
+    <!-- body under water -->
+    <path d="M8 10 q22 4 44 -2" fill="none" stroke="#0ea5e9" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+    <!-- splash -->
+    <circle cx="-12" cy="8" r="2.5" fill="#e0f2fe"/>
+    <circle cx="-16" cy="2" r="1.8" fill="#e0f2fe"/>
+  </g>
+</svg>
