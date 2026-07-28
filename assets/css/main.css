@@ -2460,6 +2460,17 @@ table tbody tr:hover {
   background: var(--blue-50);
   border-radius: var(--r-lg, 12px);
 }
+/* Visual QA 2026-07-28: the top-level "Keep Reading" section sits OUTSIDE
+   .container, so with no max-width it went full-bleed with content flush to
+   the far-left edge. Center it at the same 720px width as the newsletter
+   block above it. Scoped to body>section so .article-related (inside the
+   article column on checklist pages) and in-container .related-articles divs
+   are untouched. */
+body > section.related-articles {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* — Sidebar widget + article meta — */
 .sidebar-widget {
