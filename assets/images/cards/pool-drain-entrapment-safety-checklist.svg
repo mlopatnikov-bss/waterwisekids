@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="Pool drain safety: a pool floor with an anti-entrapment drain cover, a warning shield, and a pump shutoff switch">
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <radialGradient id="drain" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </radialGradient>
+  </defs>
+  <!-- pool water -->
+  <rect width="300" height="180" fill="url(#water)"/>
+  <path d="M0 24 Q25 18 50 24 T100 24 T150 24 T200 24 T250 24 T300 24" fill="none" stroke="#bae6fd" stroke-width="2" opacity="0.6"/>
+  <path d="M0 40 Q25 34 50 40 T100 40 T150 40 T200 40 T250 40 T300 40" fill="none" stroke="#bae6fd" stroke-width="2" opacity="0.4"/>
+  <!-- anti-entrapment drain cover -->
+  <g transform="translate(108,108)">
+    <ellipse cx="0" cy="6" rx="60" ry="20" fill="#0c4a6e" opacity="0.35"/>
+    <circle r="46" fill="url(#drain)" stroke="#64748b" stroke-width="3"/>
+    <circle r="34" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2"/>
+    <g stroke="#64748b" stroke-width="4" stroke-linecap="round">
+      <line x1="-30" y1="-14" x2="30" y2="-14"/>
+      <line x1="-32" y1="-2" x2="32" y2="-2"/>
+      <line x1="-30" y1="10" x2="30" y2="10"/>
+      <line x1="-22" y1="22" x2="22" y2="22"/>
+    </g>
+    <!-- bolt heads -->
+    <circle cx="-38" cy="0" r="4" fill="#475569"/>
+    <circle cx="38" cy="0" r="4" fill="#475569"/>
+    <circle cx="0" cy="-38" r="4" fill="#475569"/>
+    <circle cx="0" cy="38" r="4" fill="#475569"/>
+  </g>
+  <!-- safety shield / checkmark -->
+  <g transform="translate(228,66)">
+    <path d="M0 -30 L26 -20 V6 Q26 30 0 42 Q-26 30 -26 6 V-20 Z" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <path d="M-12 4 L-3 14 L14 -10" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- pump shutoff switch -->
+  <g transform="translate(238,138)">
+    <rect x="-20" y="-16" width="40" height="34" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <circle cx="0" cy="-2" r="9" fill="none" stroke="#dc2626" stroke-width="3"/>
+    <line x1="0" y1="-13" x2="0" y2="-2" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#dc2626" text-anchor="middle">PUMP OFF</text>
+  </g>
+</svg>
