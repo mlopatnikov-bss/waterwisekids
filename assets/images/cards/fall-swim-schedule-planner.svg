@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="Fall swim schedule planner: a wall calendar with a checked-off weekly swim slot beside a swimmer in a lane, with autumn leaves drifting down">
+  <defs>
+    <linearGradient id="fbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#fbg)"/>
+
+  <!-- autumn leaves drifting -->
+  <g fill="#f59e0b" opacity="0.85">
+    <path d="M40 22 q6 -8 12 0 q-6 8 -12 0 z"/>
+    <path d="M255 30 q6 -8 12 0 q-6 8 -12 0 z" fill="#ea580c"/>
+    <path d="M210 18 q5 -7 10 0 q-5 7 -10 0 z" fill="#d97706"/>
+  </g>
+  <g fill="#ea580c" opacity="0.7">
+    <path d="M75 45 q5 -7 10 0 q-5 7 -10 0 z"/>
+    <path d="M270 70 q5 -7 10 0 q-5 7 -10 0 z" fill="#f59e0b"/>
+  </g>
+
+  <!-- calendar -->
+  <g>
+    <rect x="28" y="52" width="120" height="96" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="3"/>
+    <rect x="28" y="52" width="120" height="22" rx="8" fill="#0284c7"/>
+    <rect x="28" y="66" width="120" height="8" fill="#0284c7"/>
+    <rect x="46" y="46" width="7" height="16" rx="3" fill="#0c4a6e"/>
+    <rect x="123" y="46" width="7" height="16" rx="3" fill="#0c4a6e"/>
+    <!-- grid dots -->
+    <g fill="#cbd5e1">
+      <circle cx="45" cy="90" r="4"/><circle cx="63" cy="90" r="4"/><circle cx="81" cy="90" r="4"/><circle cx="99" cy="90" r="4"/><circle cx="117" cy="90" r="4"/><circle cx="135" cy="90" r="4"/>
+      <circle cx="45" cy="112" r="4"/><circle cx="81" cy="112" r="4"/><circle cx="99" cy="112" r="4"/><circle cx="117" cy="112" r="4"/><circle cx="135" cy="112" r="4"/>
+      <circle cx="45" cy="134" r="4"/><circle cx="63" cy="134" r="4"/><circle cx="81" cy="134" r="4"/><circle cx="117" cy="134" r="4"/><circle cx="135" cy="134" r="4"/>
+    </g>
+    <!-- highlighted weekly swim slot -->
+    <circle cx="63" cy="112" r="8" fill="#0ea5e9"/>
+    <path d="M59 112 l3 3 l6 -7" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="63" cy="134" r="8" fill="#bae6fd"/>
+    <path d="M59 134 l3 3 l6 -7" fill="none" stroke="#0284c7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- swim lane -->
+  <g>
+    <rect x="168" y="96" width="112" height="60" rx="8" fill="url(#water)"/>
+    <path d="M168 108 q14 -6 28 0 t28 0 t28 0 t28 0" fill="none" stroke="#e0f2fe" stroke-width="2.2" opacity="0.8"/>
+    <path d="M168 140 q14 -6 28 0 t28 0 t28 0 t28 0" fill="none" stroke="#e0f2fe" stroke-width="2.2" opacity="0.6"/>
+    <!-- lane rope -->
+    <g fill="#facc15"><circle cx="176" cy="124" r="3"/><circle cx="190" cy="124" r="3"/><circle cx="204" cy="124" r="3"/><circle cx="218" cy="124" r="3"/><circle cx="232" cy="124" r="3"/><circle cx="246" cy="124" r="3"/><circle cx="260" cy="124" r="3"/><circle cx="272" cy="124" r="3"/></g>
+    <!-- swimmer -->
+    <circle cx="200" cy="120" r="7" fill="#fcd34d"/>
+    <path d="M200 120 q16 -8 34 -2" fill="none" stroke="#fcd34d" stroke-width="9" stroke-linecap="round"/>
+    <path d="M208 116 q8 -10 16 -4" fill="none" stroke="#f59e0b" stroke-width="5" stroke-linecap="round"/>
+    <!-- splash -->
+    <g fill="#e0f2fe"><circle cx="192" cy="112" r="2.4"/><circle cx="186" cy="118" r="1.8"/><circle cx="238" cy="118" r="2"/></g>
+  </g>
+
+  <!-- title band -->
+  <rect x="0" y="0" width="300" height="0" fill="none"/>
+  <text x="150" y="172" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0c4a6e">Keep Kids Swimming All Year</text>
+</svg>
