@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="First month of swim lessons: four weekly markers rising along an upward arrow from a nervous first splash to a confident back float">
+  <defs>
+    <linearGradient id="fmbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="fmwater" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#fmbg)"/>
+
+  <!-- water band -->
+  <path d="M0 132 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 V180 H0 Z" fill="url(#fmwater)" opacity="0.9"/>
+  <path d="M0 132 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+
+  <!-- upward progress arrow -->
+  <path d="M40 120 L255 44" fill="none" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6" opacity="0.8"/>
+  <path d="M250 38 L262 42 L253 51 Z" fill="#0ea5e9"/>
+
+  <!-- four weekly markers -->
+  <g font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" text-anchor="middle">
+    <circle cx="55" cy="116" r="12" fill="#ffffff" stroke="#0284c7" stroke-width="2.5"/>
+    <text x="55" y="119" fill="#0c4a6e">W1</text>
+    <circle cx="118" cy="94" r="12" fill="#ffffff" stroke="#0284c7" stroke-width="2.5"/>
+    <text x="118" y="97" fill="#0c4a6e">W2</text>
+    <circle cx="182" cy="72" r="12" fill="#ffffff" stroke="#0284c7" stroke-width="2.5"/>
+    <text x="182" y="75" fill="#0c4a6e">W3</text>
+    <circle cx="245" cy="50" r="13" fill="#22c55e" stroke="#16a34a" stroke-width="2.5"/>
+    <path d="M239 50 l4 4 l7 -8" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- confident back-floating swimmer near the top -->
+  <g transform="translate(150,150)">
+    <ellipse cx="0" cy="0" rx="46" ry="10" fill="#0284c7" opacity="0.25"/>
+    <circle cx="-30" cy="-2" r="6" fill="#fcd9b8"/>
+    <rect x="-26" y="-5" width="46" height="7" rx="3.5" fill="#f97316"/>
+    <path d="M20 -2 q8 -4 14 -1" fill="none" stroke="#fcd9b8" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- little splashes marking the nervous start -->
+  <g fill="#ffffff" opacity="0.85">
+    <circle cx="52" cy="128" r="2"/>
+    <circle cx="60" cy="124" r="1.5"/>
+    <circle cx="46" cy="124" r="1.5"/>
+  </g>
+</svg>
