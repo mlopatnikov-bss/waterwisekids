@@ -1067,3 +1067,15 @@ Full AEO pass on 3 indexable location landing pages that still lacked the TL;DR/
 Each already had FAQPage + BreadcrumbList JSON-LD (preserved). Validation: 3/3 JSON-LD parse clean per file; 0 unclosed/stray tags; meta descriptions ≤160; 4 question-format H2s each; 0 brand-voice ownership violations; both citation URLs (cdc.gov/drowning/, healthychildren.org water-safety) already used site-wide (74 / 58 files) so confirmed canonical. All 3 staged as Modified (no duplicate-slug risk). Additive-only diffs.
 
 **Backlog note:** ~5 indexable location/landing pages still lack the TL;DR pass (beginner-swim-lessons-sea-girt-beaches, kids/toddler-swim-lessons-northwest-philadelphia, swim-lessons-andorra-philadelphia; plus the find-swim-lessons.html hub which is a directory index, lower priority). Education corpus remains AEO-complete. Also: 1 real article still needs Authoritative Sources section — home-water-safety-room-by-room-checklist.
+
+## 2026-08-03 — AEO run (aeo-optimizer)
+Full AEO pass on 3 indexable Philadelphia-area location landing pages from the backlog (worked from a fresh `origin/live` clone; workspace copy stale):
+- `kids-swim-lessons-northwest-philadelphia.html` — age-4 AAP + CDC leading-cause + 88% framing.
+- `toddler-swim-lessons-northwest-philadelphia.html` — age-1 water-familiarization + supervision emphasis.
+- `swim-lessons-andorra-philadelphia.html` — mixed-age framing (age 4 formal / age 1 familiarization).
+
+Applied the standard location-page pattern per file: added `WebPage` JSON-LD with the standardized `speakable` cssSelector (`.tldr-box`, `.page-hero h1`, `.lead`) before `</head>`; inserted a "Quick Answer" TL;DR box after the local-note and before the first content H2, with hyperlinked AAP (healthychildren.org) and CDC (cdc.gov/drowning) citations; converted all 4 content H2s from statement to question format with a bold direct-answer lead prepended (the "Explore…" CTA H2 left as-is). Each already had FAQPage + BreadcrumbList JSON-LD (preserved).
+
+**Validation (json.loads + HTMLParser):** 3/3 JSON-LD blocks parse clean per file; tags_err=0 / stack_left=0 each; exactly one tldr-box, one WebPage, one speakable, 4 question-format H2s per file; ≥1 AAP + ≥1 CDC cite link each; meta descriptions ≤160 (128/133/155); 0 brand-voice ownership violations; all 3 staged as `M` (additive diff).
+
+**Backlog:** ~2 indexable location/landing pages still lack the TL;DR pass: `beginner-swim-lessons-sea-girt-beaches.html`, plus the `find-swim-lessons.html` hub (directory index, lower priority) and `swim-schools.html`. Also 1 real article still needs an Authoritative Sources section — `home-water-safety-room-by-room-checklist`. Education corpus remains AEO-complete; `*-printable.html` checklists are noindex and correctly excluded.
