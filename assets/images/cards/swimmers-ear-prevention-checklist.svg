@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="Swimmer's ear prevention: a child's ear with a water droplet and a green protective checkmark shield">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <radialGradient id="skin" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#ffe0c2"/>
+      <stop offset="100%" stop-color="#f4b183"/>
+    </radialGradient>
+  </defs>
+  <!-- background -->
+  <rect width="300" height="180" fill="url(#sky)"/>
+  <!-- water band bottom -->
+  <rect y="132" width="300" height="48" fill="url(#water)"/>
+  <path d="M0 132 Q 20 124 40 132 T 80 132 T 120 132 T 160 132 T 200 132 T 240 132 T 280 132 T 320 132 V180 H0 Z" fill="#38bdf8" opacity="0.55"/>
+  <!-- head / face silhouette -->
+  <circle cx="120" cy="86" r="58" fill="url(#skin)"/>
+  <!-- hair -->
+  <path d="M64 78 Q66 34 120 30 Q176 34 178 80 Q168 52 120 50 Q74 50 64 78 Z" fill="#7c4a24"/>
+  <!-- ear -->
+  <g transform="translate(168,86)">
+    <ellipse cx="0" cy="0" rx="20" ry="26" fill="url(#skin)" stroke="#e39b6a" stroke-width="2"/>
+    <path d="M-6 -14 Q12 -12 10 6 Q9 18 -2 18" fill="none" stroke="#c9743f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-2 -6 Q7 -5 6 4" fill="none" stroke="#c9743f" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+  <!-- water droplet near ear -->
+  <g transform="translate(196,64)">
+    <path d="M0 -14 C 9 -1 12 4 12 9 A 12 12 0 1 1 -12 9 C -12 4 -9 -1 0 -14 Z" fill="url(#drop)"/>
+    <ellipse cx="-4" cy="6" rx="3.2" ry="4.4" fill="#e0f2fe" opacity="0.7"/>
+  </g>
+  <!-- protective shield with checkmark -->
+  <g transform="translate(228,120)">
+    <path d="M0 -26 L24 -17 V4 C24 20 13 30 0 34 C-13 30 -24 20 -24 4 V-17 Z" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <path d="M-11 2 L-3 11 L13 -8" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
