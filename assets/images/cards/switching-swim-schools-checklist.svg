@@ -41,5 +41,5 @@
   <!-- checkmark badge -->
   <circle cx="276" cy="66" r="14" fill="#22c55e" stroke="#ffffff" stroke-width="2"/>
   <path d="M269 66 l5 5 l9 -10" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="241" y="166" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0369a1" text-anchor="middle">Warm &middot; Year-Round</text>
+  <text x="241" y="166" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0369a1" text-anchor="middle">Warm &#183; Year-Round</text>
 </svg>
