@@ -7,3 +7,20 @@ node_modules/
 
 # FUSE filesystem artifacts (from sandbox mounts)
 .fuse_hidden*
+
+# ops artifacts and probes - never publish
+._*
+.__*
+*.tmp
+*write-test*
+*probe*
+*deltest*
+err_del.txt
+missing_tldr.txt
+CLEANUP-REPORT-*.md
+VISUAL-QA-REPORT-*.md
+FUNCTIONALITY-REPORT-*.md
+MOBILE-CONSISTENCY-REPORT-*.md
+SITE-AUDIT-REPORT-*.md
+RERUN-*.md
+competitive-scout-*.md
