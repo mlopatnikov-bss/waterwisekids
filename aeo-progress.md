@@ -1114,3 +1114,15 @@ Pattern per file: TL;DR inserted before the first `wwk-highlight-box`; `speakabl
 **Validation (json.loads + HTMLParser):** all JSON-LD parses clean [WebPage, FAQPage] per file; tagerr=0 / stackleft=0 each; exactly one tldr-box + one speakable + one FAQPage + one WebPage per file; ≥1 healthychildren.org + ≥1 cdc.gov cite link each; 88%-stat + leading-cause present; meta descriptions ≤160 (144/131/142); 0 brand-voice ownership violations; all 3 staged as `M` (additive diff, +1.3k/+3.4k/+3.4k bytes).
 
 **Backlog (swim-lessons/ town pages still lacking TL;DR):** brick-nj, howell-nj, asbury-park-nj, flourtown-pa, elkins-park-pa, jersey-shore, northwest-philadelphia; then the 50 `swim-lessons/directory/{state}.html` pages (big high-value cluster); `british-swim-school/{jersey-shore,northwest-philadelphia}.html`; `teens/scholarships.html`; `tools/family-water-safety-plan.html`. Form pages (`swim-schools/add.html`, `jobs/post.html`) likely skip. Continue ~3 pages/run.
+
+## 2026-08-11 — AEO run (aeo-optimizer) — swim-lessons/ town pages (Batch 31)
+Continued clearing the `swim-lessons/{town}.html` Jersey Shore backlog. Optimized the next 3 town pages (all `wwk-local-content` template, verified against a fresh `origin/live` clone — workspace matched live exactly, no drift):
+- `swim-lessons/asbury-park-nj.html` — had WebPage + Organization but **no FAQPage**. Added visible 3-Q&A FAQ section + FAQPage JSON-LD (start age / risk reduction / how often); shore/mixed-age framing (age 4 formal, age 1 familiarization).
+- `swim-lessons/brick-nj.html` — same (no FAQPage → added visible FAQ + FAQPage JSON-LD).
+- `swim-lessons/howell-nj.html` — same (no FAQPage → added visible FAQ + FAQPage JSON-LD).
+
+Pattern per file: added `speakable` to the existing WebPage node (cssSelector `.tldr-box`, `.wwk-local-content h1`, `.wwk-intro-box p`); inserted a "Quick Answer" TL;DR box after the intro-box and before the first `wwk-highlight-box` (hyperlinked AAP healthychildren.org age guidance + AAP 88% risk-reduction + CDC leading-cause-of-death ages 1–4); converted the two informational statement H2s ("Why…", "What to Look for…") → question format with a bold direct-answer lead prepended (brand/CTA/"Nearby Communities"/"Featured School" H2s left as-is).
+
+**Validation (json.loads + HTMLParser):** all JSON-LD parses clean [WebPage, FAQPage] per file; tagerr=0 / stackleft=0 each; exactly one tldr-box + one speakable + one FAQPage per file; ≥1 healthychildren.org + ≥1 cdc.gov cite link each; 88%-stat + leading-cause present; meta descriptions ≤160 (81/142/131); 0 brand-voice ownership violations; all 3 staged as `M` (additive diff).
+
+**Backlog (swim-lessons/ town pages still lacking TL;DR):** flourtown-pa, elkins-park-pa, jersey-shore, northwest-philadelphia; then the 52 `swim-lessons/directory/{state}.html` pages (big high-value cluster — none optimized yet); `british-swim-school/{jersey-shore,northwest-philadelphia}.html`; `teens/scholarships.html`; `tools/family-water-safety-plan.html`. Listing pages (`swim-lessons/index.html`, `teens/index.html`, `tools/index.html`) correctly excluded. Continue ~3 pages/run.
