@@ -2699,3 +2699,21 @@ body > section.related-articles {
 .comparison-table th { background: #f4f8fb; font-weight: 700; color: #0d4d77; }
 .comparison-table tr:last-child td { border-bottom: none; }
 .comparison-table strong { color: #0d4d77; }
+
+/* Hero search grid — used by the swim-schools hero card.
+   Replaces a hand-rolled inline grid that capped the city field at 132px
+   (clipping its own "City or ZIP code" placeholder) and could not stack on mobile. */
+.hero-search-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 120px;
+  gap: 12px;
+  align-items: center;
+}
+@media (max-width: 720px) {
+  .hero-search-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-search-grid > button {
+    width: 100%;
+  }
+}
