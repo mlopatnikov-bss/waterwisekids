@@ -1269,6 +1269,22 @@
     function openPostJobModal() {
       postJobModal.classList.add('active');
       document.body.style.overflow = 'hidden';
+      restoreJobPostDraft();
+    }
+
+    // Restore any draft carried over from /jobs/post.html so users don't retype
+    function restoreJobPostDraft() {
+      try {
+        var raw = sessionStorage.getItem('jobPostDraft');
+        if (!raw) return;
+        var draft = JSON.parse(raw);
+        var map = { 'job-title': 'jobTitle', 'organization': 'companyName', 'city': 'jobCity', 'state': 'jobState' };
+        Object.keys(map).forEach(function (k) {
+          var el = document.getElementById(map[k]);
+          if (el && draft[k] && !el.value) el.value = draft[k];
+        });
+        sessionStorage.removeItem('jobPostDraft');
+      } catch (err) { /* non-fatal */ }
     }
 
     function closeModal() {
