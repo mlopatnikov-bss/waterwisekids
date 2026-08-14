@@ -1054,6 +1054,8 @@ input[type='password'],
 input[type='number'],
 input[type='tel'],
 input[type='date'],
+input[type='url'],
+input[type='search'],
 textarea,
 select {
   width: 100%;
@@ -1073,6 +1075,8 @@ input[type='password']:focus,
 input[type='number']:focus,
 input[type='tel']:focus,
 input[type='date']:focus,
+input[type='url']:focus,
+input[type='search']:focus,
 textarea:focus,
 select:focus {
   outline: none;
@@ -1083,6 +1087,8 @@ select:focus {
 
 input[type='text']::placeholder,
 input[type='email']::placeholder,
+input[type='url']::placeholder,
+input[type='search']::placeholder,
 textarea::placeholder {
   color: var(--gray-400);
 }
@@ -2715,5 +2721,28 @@ body > section.related-articles {
   }
   .hero-search-grid > button {
     width: 100%;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Mobile form controls: iOS Safari auto-zooms the viewport whenever
+   a focused field computes to < 16px. Base is 0.93rem and page-level
+   overrides are 0.95rem, which at the mobile root sizes (15px / 14px)
+   resolve to ~13-14px -> every search box and form field zoomed the
+   page on tap. Pin to 16px on touch widths. !important is needed to
+   beat per-page <style> blocks that load after this file.
+   --------------------------------------------------------------- */
+@media (max-width: 768px) {
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='number'],
+  input[type='tel'],
+  input[type='date'],
+  input[type='url'],
+  input[type='search'],
+  textarea,
+  select {
+    font-size: 16px !important;
   }
 }
