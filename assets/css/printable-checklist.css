@@ -180,3 +180,23 @@ footer .footer-bottom a:hover { color: #bae6fd; }
   .cl-item { page-break-inside: avoid; }
   .cl-section { page-break-inside: avoid; }
 }
+
+/* ---------------------------------------------------------------
+   MOBILE: prevent iOS Safari auto-zoom on input focus.
+   Mirrors the sitewide rule in main.css — printable templates do
+   not load main.css, so the rule must be repeated here.
+   --------------------------------------------------------------- */
+@media (max-width: 768px) {
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='number'],
+  input[type='tel'],
+  input[type='date'],
+  input[type='url'],
+  input[type='search'],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}

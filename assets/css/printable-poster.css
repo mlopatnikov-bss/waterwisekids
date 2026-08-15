@@ -27,20 +27,20 @@ body {
 /* ===== SITE NAV (shared pattern — hamburger toggle via main.js) ===== */
 header nav {
   max-width: 1100px; margin: 0 auto; padding: 0 24px;
-  height: 64px; display: flex; justify-content: space-between; align-items: center;
+  height: 72px; display: flex; justify-content: space-between; align-items: center;
   background: white; border-bottom: 1px solid #e5e7eb;
   position: relative;
 }
-header nav .nav-logo { font-size: 1rem; font-weight: 700; color: #075985; text-decoration: none; }
-header nav .nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
-header nav .nav-links a { text-decoration: none; color: #374151; font-size: 0.85rem; font-weight: 500; }
-header nav .nav-links a:hover { color: #075985; }
+header nav .nav-logo { font-size: 1.1rem; font-weight: 700; color: #075985; text-decoration: none; flex-shrink: 0; white-space: nowrap; }
+header nav .nav-links { display: flex; list-style: none; gap: 2px; align-items: center; }
+header nav .nav-links a { text-decoration: none; color: #374151; font-size: 0.9rem; font-weight: 500; border-radius: 6px; padding: 8px 14px; white-space: nowrap; transition: background 0.15s, color 0.15s; }
+header nav .nav-links a:hover { background: #f3f4f6; color: #075985; }
 .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; min-height: 44px; min-width: 44px; align-items: center; justify-content: center; }
 .hamburger span { display: block; width: 24px; height: 2px; background: #374151; border-radius: 2px; transition: all 0.3s; }
 
 @media (max-width: 768px) {
-  header nav .nav-links { display: none; flex-direction: column; width: 100%; gap: 0; padding: 0.5rem 0; position: absolute; top: 64px; left: 0; right: 0; background: white; border-bottom: 1px solid #e5e7eb; z-index: 100; }
-  header nav .nav-links a { display: block; padding: 0.75rem 24px; border-bottom: 1px solid #f3f4f6; }
+  header nav .nav-links { display: none; flex-direction: column; width: 100%; gap: 0; padding: 0.5rem 0; position: absolute; top: 72px; left: 0; right: 0; background: white; border-bottom: 1px solid #e5e7eb; z-index: 100; }
+  header nav .nav-links a { display: block; padding: 0.85rem 24px; min-height: 44px; box-sizing: border-box; border-bottom: 1px solid #f3f4f6; }
   header nav.mobile-open .nav-links { display: flex; }
   .hamburger { display: flex; }
 }
@@ -437,7 +437,7 @@ header nav .nav-links a:hover { color: #075985; }
 /* ── Screen-only site footer (parity with main.css / printable-checklist.css) ──
    css-regression-checker 2026-07-28: pool-safety-rules-printable.html carries the
    standard <footer> markup but printable-poster.css lacked the styles. */
-footer { background: #0c2a43; color: #cbd5e1; padding: 2.5rem 1.5rem; text-align: center; }
+footer { background: #0c4a6e; color: #e0f2fe; padding: 2.5rem 1.5rem 1.5rem; text-align: center; }
 footer > div { max-width: 1100px; margin: 0 auto; }
 .footer-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: #fff; }
 .footer-title img { display: inline; vertical-align: middle; }
@@ -452,3 +452,23 @@ footer .footer-bottom { display: block; border-top: 1px solid #1e3a5f; padding-t
 footer .footer-bottom, footer .footer-bottom p { font-size: 0.8rem; color: #7dd3fc; }
 footer .footer-bottom a { color: #7dd3fc; text-decoration: none; transition: color 0.2s; }
 footer .footer-bottom a:hover { color: #bae6fd; }
+
+/* ---------------------------------------------------------------
+   MOBILE: prevent iOS Safari auto-zoom on input focus.
+   Mirrors the sitewide rule in main.css — printable templates do
+   not load main.css, so the rule must be repeated here.
+   --------------------------------------------------------------- */
+@media (max-width: 768px) {
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='number'],
+  input[type='tel'],
+  input[type='date'],
+  input[type='url'],
+  input[type='search'],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
