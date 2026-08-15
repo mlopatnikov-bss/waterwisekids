@@ -18,17 +18,33 @@
   --poster-rule-border: #BDE0F5;
 }
 body {
+  /* Poster pages are STANDALONE (main.css is not loaded), so the sitewide font
+     stack must be repeated here or the whole page falls back to Times serif. */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
   background: #f0f4f8;
-  padding: 32px 16px;
+  padding: 0 16px;
   color: var(--poster-navy);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ===== SITE NAV (shared pattern — hamburger toggle via main.js) ===== */
+/* The white bar + border live on <header> so it spans the full viewport and
+   sticks on scroll, exactly like main.css. The inner <nav> is the constrained
+   1160px rail. Breakout margins cancel the body gutter. */
+header {
+  position: sticky; top: 0; z-index: 200;
+  margin: 0 -16px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #f3f4f6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
 header nav {
-  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  max-width: 1160px; margin: 0 auto; padding: 0 24px;
   height: 72px; display: flex; justify-content: space-between; align-items: center;
-  background: white; border-bottom: 1px solid #e5e7eb;
   position: relative;
 }
 header nav .nav-logo { font-size: 1.1rem; font-weight: 700; color: #075985; text-decoration: none; flex-shrink: 0; white-space: nowrap; }
@@ -48,7 +64,7 @@ header nav .nav-links a:hover { background: #f3f4f6; color: #075985; }
 /* ===== SCREEN WRAPPER ===== */
 .screen-wrapper {
   max-width: 820px;
-  margin: 0 auto;
+  margin: 32px auto 0;
 }
 .screen-header {
   text-align: center;
@@ -404,9 +420,14 @@ header nav .nav-links a:hover { background: #f3f4f6; color: #075985; }
     background: white;
     padding: 0;
   }
+  header,
+  footer,
   .screen-header,
   .btn-row,
-  .lead-capture {
+  .tldr-box,
+  .lead-capture,
+  .related-articles,
+  body > section.section {
     display: none !important;
   }
   .poster {
@@ -437,7 +458,7 @@ header nav .nav-links a:hover { background: #f3f4f6; color: #075985; }
 /* ── Screen-only site footer (parity with main.css / printable-checklist.css) ──
    css-regression-checker 2026-07-28: pool-safety-rules-printable.html carries the
    standard <footer> markup but printable-poster.css lacked the styles. */
-footer { background: #0c4a6e; color: #e0f2fe; padding: 2.5rem 1.5rem 1.5rem; text-align: center; }
+footer { background: #0c4a6e; color: #e0f2fe; padding: 2.5rem 1.5rem 1.5rem; text-align: center; margin: 40px -16px 0; }
 footer > div { max-width: 1100px; margin: 0 auto; }
 .footer-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: #fff; }
 .footer-title img { display: inline; vertical-align: middle; }
