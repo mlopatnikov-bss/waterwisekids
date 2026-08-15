@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="A parent at the pool edge talking with a swim instructor, holding a clipboard of questions, with a child floating in the water">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <!-- background -->
+  <rect width="300" height="180" fill="url(#sky)"/>
+
+  <!-- speech bubbles -->
+  <g opacity="0.85">
+    <rect x="96" y="18" width="60" height="26" rx="13" fill="#ffffff" stroke="#bae6fd" stroke-width="2"/>
+    <path d="M112 44 l0 9 l10 -9 z" fill="#ffffff" stroke="#bae6fd" stroke-width="2" stroke-linejoin="round"/>
+    <text x="126" y="36" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0284c7" text-anchor="middle">?</text>
+    <rect x="168" y="30" width="52" height="24" rx="12" fill="#ffffff" stroke="#bae6fd" stroke-width="2"/>
+    <path d="M206 54 l0 8 l-10 -8 z" fill="#ffffff" stroke="#bae6fd" stroke-width="2" stroke-linejoin="round"/>
+    <g stroke="#7dd3fc" stroke-width="3" stroke-linecap="round">
+      <line x1="180" y1="39" x2="208" y2="39"/>
+      <line x1="180" y1="46" x2="200" y2="46"/>
+    </g>
+  </g>
+
+  <!-- pool deck -->
+  <rect y="112" width="300" height="10" fill="#e2e8f0"/>
+  <rect y="112" width="300" height="3" fill="#cbd5e1"/>
+
+  <!-- water -->
+  <rect y="122" width="300" height="58" fill="url(#water)"/>
+  <g stroke="#bae6fd" stroke-width="2.5" stroke-linecap="round" opacity="0.6" fill="none">
+    <path d="M14 138 q10 -6 20 0 t20 0"/>
+    <path d="M196 150 q10 -6 20 0 t20 0"/>
+    <path d="M60 164 q10 -6 20 0 t20 0"/>
+  </g>
+
+  <!-- child floating on back in the water -->
+  <g>
+    <ellipse cx="150" cy="150" rx="30" ry="8" fill="#0c4a6e" opacity="0.25"/>
+    <circle cx="128" cy="146" r="8" fill="#fcd9b8"/>
+    <path d="M120 143 a8 8 0 0 1 16 0 z" fill="#7c4a21"/>
+    <rect x="136" y="141" width="34" height="10" rx="5" fill="#f472b6"/>
+    <rect x="168" y="143" width="14" height="6" rx="3" fill="#fcd9b8"/>
+  </g>
+
+  <!-- parent with clipboard (left, on deck) -->
+  <g>
+    <circle cx="52" cy="66" r="13" fill="#fcd9b8"/>
+    <path d="M39 64 a13 13 0 0 1 26 0 q-13 -7 -26 0 z" fill="#5b3a1a"/>
+    <path d="M38 112 v-28 a14 14 0 0 1 28 0 v28 z" fill="#0ea5e9"/>
+    <rect x="60" y="86" width="22" height="27" rx="3" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="66" y="83" width="10" height="6" rx="2" fill="#94a3b8"/>
+    <g stroke="#0284c7" stroke-width="2.5" stroke-linecap="round">
+      <line x1="65" y1="95" x2="77" y2="95"/>
+      <line x1="65" y1="101" x2="77" y2="101"/>
+      <line x1="65" y1="107" x2="73" y2="107"/>
+    </g>
+  </g>
+
+  <!-- instructor (right, on deck, with whistle) -->
+  <g>
+    <circle cx="248" cy="66" r="13" fill="#e8b58a"/>
+    <path d="M235 64 a13 13 0 0 1 26 0 q-13 -8 -26 0 z" fill="#1f2937"/>
+    <path d="M234 112 v-28 a14 14 0 0 1 28 0 v28 z" fill="#dc2626"/>
+    <path d="M248 84 q-8 8 -2 14" stroke="#f8fafc" stroke-width="2" fill="none"/>
+    <circle cx="247" cy="100" r="4" fill="#fbbf24" stroke="#f8fafc" stroke-width="1.5"/>
+  </g>
+</svg>
