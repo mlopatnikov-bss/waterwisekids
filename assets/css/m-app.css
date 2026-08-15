@@ -806,4 +806,22 @@
     align-items: center !important;
     justify-content: center !important;
   }
+
+  /* Education-hub category filter pills: 95 controls per page rendering
+     28px tall with 10.5px labels (0.75rem at the 14px mobile root).
+     They live in a nowrap horizontal scroller, so a taller, larger-text
+     pill only grows the strip - it cannot cause horizontal overflow. */
+  .cat-btn {
+    min-height: 44px !important;
+    font-size: 13px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .scroll-top-btn,
+  #scrollTopBtn {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
 }
