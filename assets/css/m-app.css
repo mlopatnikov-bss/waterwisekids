@@ -750,3 +750,60 @@
   }
 
 } /* end @media (max-width: 768px) */
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   MOBILE FORM CONTROLS + TAP TARGETS
+   (mobile-consistency-checker, 2026-08-15)
+
+   m-app.css is injected at runtime by main.js at <=768px, so it loads AFTER
+   main.css and its !important rules beat the sitewide iOS anti-zoom pin added
+   on 2026-08-14. Two controls still resolved below 16px and made iOS Safari
+   auto-zoom the viewport on focus:
+       .search-box input                     0.88rem -> 12.3px  (state directory,
+                                                                 education hub,
+                                                                 swimmers hub)
+       .newsletter* input[type="email"]      0.81rem -> 11.3px  (every newsletter
+                                                                 signup sitewide)
+   Because this file has no static <link> in any HTML page, plain-grep audits
+   never saw it. Pin the controls here, after those rules, so the cascade lands
+   on 16px. If a future rule sets a mobile input below 16px, mirror it here too.
+
+   Also lifts sub-44px tap targets to the 44px minimum.
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  .search-box input,
+  .search-controls input,
+  .newsletter-section input[type="email"],
+  .newsletter input[type="email"],
+  section[class*="newsletter"] input[type="email"],
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='number'],
+  input[type='tel'],
+  input[type='date'],
+  input[type='url'],
+  input[type='search'],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  /* Newsletter submit sat at 39px */
+  .newsletter-section button[type="submit"],
+  .newsletter button[type="submit"],
+  section[class*="newsletter"] button[type="submit"] {
+    min-height: 44px !important;
+  }
+
+  /* State-directory result cards: 13 school rows x 2 buttons per page,
+     rendering at 34px and 28px tall. */
+  .visit-site-btn,
+  .review-btn {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
