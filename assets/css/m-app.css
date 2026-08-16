@@ -852,3 +852,283 @@
     min-width: 44px !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   MOBILE TAP TARGETS + MINIMUM READABLE TEXT — ROUND 2
+   (mobile-consistency-checker, 2026-08-16)
+
+   Measured in a real 390x844 iOS-UA render, not by grepping CSS. The 2026-08-15
+   pass fixed the newsletter/search/directory controls it knew about; a full
+   render sweep across 18 template types surfaced a second tier that the static
+   audits could not see because the heights come from padding + line-height
+   resolved against the 14px mobile root, never from an explicit height rule.
+
+   Sub-44px controls found (Apple HIG minimum is 44x44):
+     .print-btn                33px tall  - the ONLY CTA on 74 printable pages
+     .search-button            33px       - aquatic jobs board search
+     .btn.btn-primary (search) 36px       - 56 state directory pages
+     button[type=submit]       39px       - /swim-schools.html search
+     .button                   39px       - 128 pages
+     .button-secondary         43px       - 127 pages
+     .pill                     30px       - jobs board filters
+     input / select            38px       - jobs board form
+     .back-link                20px       - 177 pages
+     .breadcrumb a             11-15px    - 82 pages (worst target on the site)
+     .nav-logo                 24px       - 710 pages (header home link)
+
+   Text resolving under 11px (unreadable without pinch-zoom):
+     .stat-label 8.7px, .article-card-category 9.5px, .search-pill-sub 9.5px,
+     breadcrumb 9.8px, .tag 10.1px, .footer-bottom 10.2px, .school-chain /
+     .kicker / newsletter copy 10.5px, .meta-chip 10.9px.
+
+   Bottom-nav and category-strip labels are held at 10px rather than 11px: they
+   sit in fixed 5-across / nowrap-scroller strips where 11px reflows the row.
+   Every rule below only ever GROWS a box, and all are inside horizontal
+   scrollers or full-width stacks, so none can introduce horizontal overflow -
+   re-verified at 390px and 320px after the change.
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ---- Tap targets: primary + secondary actions ---- */
+  .print-btn,
+  .search-button,
+  .search-group .btn,
+  .search-group button,
+  .swim-schools-page button[type="submit"],
+  .btn,
+  .button,
+  .button-secondary,
+  .package-button,
+  .post-button,
+  .teen-button,
+  .pill,
+  button[type="submit"],
+  input[type="submit"] {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* ---- Tap targets: form controls ---- */
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='number'],
+  input[type='tel'],
+  input[type='date'],
+  input[type='url'],
+  input[type='search'],
+  select,
+  .search-box input,
+  .search-controls input {
+    min-height: 44px !important;
+  }
+
+  textarea {
+    min-height: 88px !important;
+  }
+
+  /* ---- Tap targets: navigation-style links ----
+     inline-flex + min-height grows the hit box without changing the visual
+     baseline, because these are already standalone block-level links. ---- */
+  .back-link,
+  a.back-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+  }
+
+  .breadcrumb a,
+  .breadcrumbs a,
+  .page-breadcrumb a,
+  nav[aria-label="Breadcrumb"] a,
+  nav[aria-label="breadcrumb"] a {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 36px !important;
+    padding: 4px 2px !important;
+  }
+
+  .nav-logo {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+  }
+
+  /* ---- Minimum readable text: 11px floor ---- */
+  .stat-item .stat-label,
+  .stat-card .stat-label,
+  .stat-label,
+  .article-card-category,
+  .search-pill-sub,
+  .school-chain,
+  .kicker,
+  .meta-chip,
+  .newsletter-privacy,
+  .newsletter-section p,
+  .newsletter p,
+  .page-breadcrumb,
+  .breadcrumb,
+  .breadcrumb a,
+  .breadcrumb .current,
+  .breadcrumbs,
+  .breadcrumbs a,
+  footer .footer-bottom,
+  footer .footer-bottom p,
+  .tag {
+    font-size: 11px !important;
+  }
+
+  /* ---- Compact strips: 10px floor (11px reflows the row) ---- */
+  .mobile-bottom-nav a,
+  .mobile-cat-item {
+    font-size: 10px !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   MOBILE TAP TARGETS — ROUND 3 (residual, same 2026-08-16 sweep)
+
+   Second render pass after the block above closed the bulk of the gap. What
+   remained were the elements no class-based selector reached:
+
+     "Explore Guides ->" / "Suggest a topic ->" / "Complete Guide ->" /
+     "View on Amazon ->" / "Read the Guide ->"   20-27px tall arrow CTA links.
+     These are the conversion links on the homepage offer block, education hub,
+     teens hub and the gear page (the gear ones are affiliate links), so they
+     matter more than their markup suggests.
+
+     <button aria-label="Search for swim schools">  39px on /swim-schools.html,
+     styled entirely with an inline style attribute and carrying no type or
+     class, so both the .btn and button[type=submit] selectors missed it.
+     Bare `button` is added here instead - min-height only ever grows a box.
+
+     The article-template breadcrumb bar is an anonymous
+     <div style="background:#f8fafc;border-bottom:..."> emitted straight after
+     </header> on 394 pages, with no class to hook. `header + div[style*=
+     "border-bottom"] a` reaches it and cannot reach the three hero divs that
+     also sit in that position, because those set background-image with no
+     border-bottom.
+
+     .print-toolbar a ("<- Back to full guide") is 16px tall on 74 printables.
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  button,
+  a[data-cta],
+  .cta-link,
+  .feature-link,
+  .gear-link,
+  .gear-page .gear-link,
+  .popular-links a,
+  .print-toolbar a,
+  .article-card > a,
+  .guide-body > a,
+  header + div[style*="border-bottom"] a {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  /* Bare buttons centre their own label; the arrow links stay left-aligned so
+     they keep sitting flush with the copy above them. */
+  button {
+    justify-content: center !important;
+  }
+
+  /* The hamburger is already a 44px flex box - do not let the rule above
+     restyle its bar stacking. */
+  .nav-toggle {
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   NARROW-VIEWPORT HORIZONTAL OVERFLOW (<=360px)
+   (mobile-consistency-checker, 2026-08-16)
+
+   Pre-existing, not a regression from the tap-target work above - reproduced
+   identically against the unmodified live tree. Invisible at 390px, which is
+   why every prior render check missed it. Two causes:
+
+   1. `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))` cannot
+      shrink its track below the 280px minimum, so on a 320px screen (iPhone
+      SE 1st gen, and any phone with display zoom on) the track outgrew its
+      ~278px container. Fixed at source by rewriting every minmax min >=200px
+      across the CSS and the inline <style> blocks to
+      `minmax(min(280px, 100%), 1fr)` - the standard safe form, a no-op at any
+      width where the container is already wide enough.
+
+   2. .mobile-bottom-nav laid out 5 items at their intrinsic width with
+      `padding: 4px 12px` and no flex-shrink, totalling 350px and pushing the
+      document to a 350px scrollWidth. Equal 1fr-style columns with min-width:0
+      make the strip fit any viewport.
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 360px) {
+
+  .mobile-bottom-nav {
+    max-width: 100vw !important;
+    justify-content: space-between !important;
+  }
+
+  .mobile-bottom-nav a {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   MINIMUM READABLE TEXT — RESIDUAL (mobile-consistency-checker, 2026-08-16)
+
+   Final render sweep across 24 more templates. What was left had no class to
+   hook: sub-rem sizes written straight into a `style` attribute, which then
+   resolve against the 14px mobile root and land under 11px:
+
+     style="font-size: 0.75rem"   -> 10.5px  (61 pages - the newsletter /
+                                              lead-magnet "No spam. Unsubscribe
+                                              anytime" line and its inline link)
+     style="font-size: 0.72rem"   -> 10.1px  (7 pages)
+     style="font-size: 0.7rem"    ->  9.8px  (2 pages)
+     style="font-size: 0.68rem"   ->  9.5px  (2 pages)
+
+   Attribute-substring selectors reach these without touching the HTML, which
+   keeps the 61-page diff out of the deploy. If the generator is ever changed to
+   emit a class here, prefer the class and drop these.
+
+   Plus three one-off badge classes measured at 9.8-10.5px.
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  [style*="font-size: 0.75rem"],
+  [style*="font-size: 0.72rem"],
+  [style*="font-size: 0.7rem"],
+  [style*="font-size: 0.68rem"],
+  [style*="font-size: 0.65rem"],
+  [style*="font-size: 0.6rem"],
+  [style*="font-size: .75rem"],
+  [style*="font-size: .72rem"],
+  [style*="font-size: .7rem"],
+  [style*="font-size: .68rem"],
+  [style*="font-size: .65rem"],
+  .pillar-card-stroke,
+  .ww-badge-brand,
+  .org-badge {
+    font-size: 11px !important;
+  }
+
+  /* Inline links inherit the parent's inline font-size, so pin them too. */
+  [style*="font-size: 0.75rem"] a,
+  [style*="font-size: 0.72rem"] a,
+  [style*="font-size: 0.7rem"] a,
+  [style*="font-size: 0.68rem"] a,
+  [style*="font-size: .75rem"] a,
+  [style*="font-size: .72rem"] a,
+  [style*="font-size: .7rem"] a,
+  [style*="font-size: .68rem"] a {
+    font-size: 11px !important;
+  }
+}

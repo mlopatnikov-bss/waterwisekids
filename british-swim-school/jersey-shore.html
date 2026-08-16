@@ -48,7 +48,7 @@
         h3 { font-size: 1.3rem; color: #0369a1; margin-bottom: 1rem; font-weight: 600; }
         p, li { font-size: 1rem; line-height: 1.7; color: #374151; margin-bottom: 1rem; }
         .info-box { background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem; }
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
         .info-item { background: white; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #0284c7; }
         .info-item h4 { color: #075985; margin-bottom: 0.5rem; }
         .info-item p { font-size: 0.95rem; color: #6b7280; margin: 0; }
@@ -57,13 +57,13 @@
         .why-choose li { padding: 0.75rem 0; color: #374151; font-weight: 500; }
         .why-choose li:before { content: "✓ "; color: #14b8a6; font-weight: bold; margin-right: 0.75rem; font-size: 1.2rem; }
         .programs { background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem; }
-        .program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
         .program-card { background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%); padding: 1.5rem; border-radius: 0.5rem; border-top: 4px solid #0284c7; }
         .program-card h4 { color: #0369a1; margin-bottom: 0.5rem; }
         .program-card p { font-size: 0.95rem; color: #1f2937; margin: 0; }
         .age-badge { display: inline-block; background-color: #0284c7; color: white; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; }
         .service-are
-        .area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 1rem; margin-top: 1.5rem; }
         .area-item { padding: 1rem; background: #f3f4f6; border-radius: 0.5rem; color: #0284c7; font-weight: 500; }
         .area-item:before { content: "→ "; margin-right: 0.5rem; }
         .reviews { background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem; }
@@ -386,7 +386,7 @@
         <section style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem;">
             <h2>Free Water Safety Guides for Shore Families</h2>
             <p>Living near the water means water safety education matters even more. Explore our free guides designed to help your family stay safe at the pool, the beach, and beyond.</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 1rem; margin-top: 1.5rem;">
             </div>
         </section>
 
@@ -426,6 +426,6 @@
             });
         });
     </script>
-    <script src="/assets/js/main.js?v=20260816"></script>
+    <script src="/assets/js/main.js?v=20260816b"></script>
 </body>
 </html>

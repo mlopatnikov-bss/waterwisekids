@@ -25,7 +25,7 @@
 .gear-page .buying-guides { margin-bottom: 4rem; }
 
 /* Categories grid */
-.gear-page .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
+.gear-page .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 2rem; }
 .gear-page .category-card { background: #fff; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
 .gear-page .category-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.12); }
 .gear-page .category-icon { font-size: 3rem; margin-bottom: 1rem; }
@@ -33,7 +33,7 @@
 .gear-page .category-desc { color: #64748b; font-size: 0.9rem; }
 
 /* Featured picks */
-.gear-page .picks-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.gear-page .picks-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 2rem; }
 .gear-page .category-section { background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
 .gear-page .category-section h3 { color: #075985; font-size: 1.3rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid #e0f2fe; }
 .gear-page .gear-item { padding: 1.5rem 0; border-bottom: 1px solid #e2e8f0; }
@@ -45,7 +45,7 @@
 .gear-page .gear-link:hover { color: #075985; text-decoration: underline; }
 
 /* Buying guides */
-.gear-page .guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+.gear-page .guides-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 2rem; }
 .gear-page .guide-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
 .gear-page .guide-card:hover { transform: translateY(-4px); box-shadow: 0 8px 16px rgba(0,0,0,0.12); }
 .gear-page .guide-header { background: linear-gradient(135deg, #075985 0%, #0369a1 100%); color: #fff; padding: 1.5rem; text-align: center; }

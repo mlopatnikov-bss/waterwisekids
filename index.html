@@ -257,7 +257,7 @@
 
     .offer-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
       gap: 32px;
       max-width: 1100px;
       margin: 0 auto;
@@ -334,7 +334,7 @@
 
     .article-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
       gap: 28px;
       max-width: 1100px;
       margin: 0 auto;
@@ -460,7 +460,7 @@
 
     .programs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
       gap: 32px;
       max-width: 1100px;
       margin: 0 auto 48px;
@@ -1118,7 +1118,7 @@
       });
     });
   </script>
-  <script src="/assets/js/main.js?v=20260816"></script>
+  <script src="/assets/js/main.js?v=20260816b"></script>
   <!-- Mobile app experience — direct load as failsafe -->
 
 <!-- INLINE MOBILE CSS (temporary CDN cache bypass) -->
