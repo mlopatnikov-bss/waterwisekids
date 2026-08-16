@@ -458,17 +458,20 @@ header nav .nav-links a:hover { background: #f3f4f6; color: #075985; }
 /* ── Screen-only site footer (parity with main.css / printable-checklist.css) ──
    css-regression-checker 2026-07-28: pool-safety-rules-printable.html carries the
    standard <footer> markup but printable-poster.css lacked the styles. */
+/* NOTE: every selector below is scoped under `footer`. The poster body
+   reuses .footer-tagline inside .poster-footer, and these unscoped rules
+   were overriding it (pale blue 14.4px instead of grey 11.5px italic). */
 footer { background: #0c4a6e; color: #e0f2fe; padding: 2.5rem 1.5rem 1.5rem; text-align: center; margin: 40px -16px 0; }
 footer > div { max-width: 1100px; margin: 0 auto; }
-.footer-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: #fff; }
-.footer-title img { display: inline; vertical-align: middle; }
-.footer-tagline { font-size: 0.9rem; color: #93c5fd; margin-bottom: 1.5rem; }
-.footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-.footer-links a { color: #bae6fd; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-.footer-links a:hover { color: #fff; }
-.footer-contact { font-size: 0.85rem; color: #93c5fd; margin-bottom: 0.75rem; }
-.footer-contact a { color: #bae6fd; text-decoration: none; transition: color 0.2s; }
-.footer-contact a:hover { color: #fff; }
+footer .footer-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: #fff; }
+footer .footer-title img { display: inline; vertical-align: middle; }
+footer .footer-tagline { font-size: 0.9rem; color: #93c5fd; margin-bottom: 1.5rem; }
+footer .footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+footer .footer-links a { color: #bae6fd; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+footer .footer-links a:hover { color: #fff; }
+footer .footer-contact { font-size: 0.85rem; color: #93c5fd; margin-bottom: 0.75rem; }
+footer .footer-contact a { color: #bae6fd; text-decoration: none; transition: color 0.2s; }
+footer .footer-contact a:hover { color: #fff; }
 footer .footer-bottom { display: block; border-top: 1px solid #1e3a5f; padding-top: 1rem; margin-top: 1rem; }
 footer .footer-bottom, footer .footer-bottom p { font-size: 0.8rem; color: #7dd3fc; }
 footer .footer-bottom a { color: #7dd3fc; text-decoration: none; transition: color 0.2s; }

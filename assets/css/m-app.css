@@ -718,7 +718,34 @@
 
   footer .footer-bottom {
     font-size: 0.68rem;
-    color: #a3a3a3;
+  }
+
+  /* The white mobile footer above inherits the text colours that main.css /
+     printable-*.css set for the DARK navy desktop footer (#e0f2fe, #93c5fd,
+     #bae6fd, #7dd3fc). On white those land at 1.1-1.8:1 contrast, i.e.
+     effectively invisible. Repaint the whole footer for a light background.
+     Hex fallbacks are required: printables load no main.css, so the custom
+     properties are undefined there. */
+  footer,
+  footer .footer-title {
+    color: var(--gray-800, #1f2937) !important;
+  }
+
+  footer .footer-tagline,
+  footer .footer-contact,
+  footer .footer-bottom,
+  footer .footer-bottom p {
+    color: var(--gray-500, #6b7280) !important;
+  }
+
+  footer .footer-contact a,
+  footer .footer-bottom a,
+  footer .footer-links a {
+    color: var(--blue-700, #0369a1) !important;
+  }
+
+  footer .footer-bottom {
+    border-top-color: var(--gray-200, #e5e7eb) !important;
   }
 
   /* ═══════════════════════════════════
