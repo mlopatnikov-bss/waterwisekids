@@ -2711,7 +2711,7 @@ body > section.related-articles {
    (clipping its own "City or ZIP code" placeholder) and could not stack on mobile. */
 .hero-search-grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 120px;
+  grid-template-columns: 1.8fr 1.2fr 120px;
   gap: 12px;
   align-items: center;
 }
