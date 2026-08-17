@@ -27,6 +27,11 @@ body {
   color: var(--poster-navy);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Mirrors main.css body — poster pages are STANDALONE, so the sitewide wrap
+     guards must be repeated here or long unbroken strings overflow on mobile. */
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* ===== SITE NAV (shared pattern — hamburger toggle via main.js) ===== */

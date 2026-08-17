@@ -284,12 +284,29 @@
   line-height: 1.5;
 }
 
-.toc-item a {
+/* Touch: TOC rows resolve to ~18px tall on phones, below the WCAG 2.5.8 (AA)
+   24px minimum target size. Pad them out without ballooning a 9-item TOC. */
+@media (max-width: 768px) {
+  .toc-item a,
+  a.toc-item {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+/* Two TOC markup variants ship on this site: <div class="toc-item"><a>…</a></div>
+   (402 instances) and <a class="toc-item">…</a> (1,734 instances). A descendant
+   selector alone only styles the first, leaving the majority of TOC links
+   rendering in body-text grey instead of link blue. Match both. */
+.toc-item a,
+a.toc-item {
   color: var(--blue-600);
   transition: color 0.2s;
 }
 
-.toc-item a:hover {
+.toc-item a:hover,
+a.toc-item:hover {
   color: var(--blue-700);
 }
 
