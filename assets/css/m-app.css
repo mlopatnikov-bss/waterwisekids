@@ -1214,3 +1214,88 @@
     min-width: 44px !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   VISUAL QA — 2026-08-18 (render-based mobile audit)
+
+   P0. INVISIBLE HERO TEXT ON MOBILE — the bare `.hero` variant.
+   The 2026-08-17 sweep (block above) fixed `.page-hero`, but this file ALSO
+   flattens the older bare `.hero` to `background:#fff` at the top (~line 103)
+   and only recolors `h1` and `p`. Eleven pages still use bare `.hero` with a
+   gradient + white children declared in their own inline <style>, so those
+   children rendered WHITE ON WHITE at <=768px:
+
+     .hero .kicker            rgba(255,255,255,.7) on #fff — contrast 1.00
+     .hero .button-secondary  #fff text + rgba(255,255,255,.5) border on #fff
+                              — the entire button was invisible
+
+   Confirmed by render on /find-swim-lessons.html (SECTION.hero computed
+   bgc=rgb(255,255,255)). Desktop keeps its gradient and is unaffected. Scoped
+   to `.hero` only so the gradient heroes that this file does NOT repaint
+   (e.g. .fwsp-hero on /tools/family-water-safety-plan.html) keep white text.
+   Colors match the .page-hero fix above for consistency.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  .hero .kicker {
+    color: #0369a1 !important;
+  }
+
+  .hero .button-secondary {
+    color: #0369a1 !important;
+    border-color: #0369a1 !important;
+  }
+
+  /* ---- Sub-11px text floor: .age-badge (6 guide pages) rendered 10.5px.
+     Not covered by the 2026-08-16 sweep or the .tool-badge/.package-badge
+     rule above. The 10px .mobile-bottom-nav / .mobile-cat-item labels are a
+     DELIBERATE exception (11px reflows the strip) — do not raise them. ---- */
+  .age-badge {
+    font-size: 11px !important;
+  }
+
+  /* ---- WCAG 2.5.8 AA target size (24x24 minimum) ----
+     Bare checkboxes rendered 13x13 on /swim-schools/add.html and 17x17 on
+     /tools/family-water-safety-plan.html — both below the 24px AA floor.
+     Sizing the control (not padding the row) avoids reflowing the lists. ---- */
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-width: 24px !important;
+    min-height: 24px !important;
+  }
+
+  /* Pair each control with a 44px row so the whole line is tappable. */
+  .checkbox-item,
+  .checkbox-item label {
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  /* ---- Residual sub-44px tap targets found this pass ----
+     The browse-by-state chips are inline-styled with min-height:44px but no
+     min-width, so 2-letter states (HI/IL/RI/FL/WI) rendered 38-43px wide.
+     A stylesheet !important beats the element's non-important inline style.
+     min-width is inert on non-replaced inline elements, so the same-prefix
+     links that appear inside prose are unaffected. ---- */
+  a[href^="/swim-lessons/directory/"] {
+    min-width: 44px !important;
+    justify-content: center !important;
+  }
+
+  .state-grid a,
+  .state-list a {
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+
+  .source-list a,
+  .sources a,
+  .hero-actions .button,
+  .hero-actions .button-secondary {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+}
