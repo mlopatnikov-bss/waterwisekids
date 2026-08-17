@@ -1132,3 +1132,85 @@
     font-size: 11px !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   VISUAL QA — 2026-08-17 (render-based audit, 16 templates x 4 viewports)
+
+   P0. INVISIBLE HERO TEXT ON MOBILE — 126 pages.
+   The block at the top of this file flattens .page-hero to `background:#fff` for
+   the app-style mobile layout, then recolors only `h1` and `.hero-sub`. Three
+   other hero children are styled white-on-gradient in main.css and were never
+   recolored, so on phones they rendered WHITE ON WHITE — completely invisible:
+
+     .page-hero .lead      rgba(255,255,255,.9)  — 126 pages (local landing +
+                                                   guide intros; the first
+                                                   paragraph a mobile visitor
+                                                   reads on every /beginner-,
+                                                   /kids-, /toddler- city page)
+     .page-hero .kicker    rgba(255,255,255,.8)  — 126 pages
+     .page-hero .meta-chip #fff on rgba(255,255,255,.15) + white border — 378x
+
+   Desktop is unaffected (the gradient is still there); this is mobile-only.
+   Grep audits cannot see it: both stylesheets are individually correct, the
+   defect only exists in the cascade at <=768px. Found by rendering.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  .page-hero .lead,
+  .page-hero--edu .lead,
+  .page-hero.compact .lead {
+    color: #737373 !important;
+    font-size: 0.8rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .page-hero .kicker,
+  .page-hero--edu .kicker,
+  .page-hero.compact .kicker {
+    color: #0369a1 !important;
+  }
+
+  .page-hero .meta-chip,
+  .page-hero--edu .meta-chip {
+    background: #f1f5f9 !important;
+    color: #475569 !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  /* ---- Contrast: neutral grays below WCAG AA 4.5:1 on white ----
+     #a3a3a3 measured 2.52:1 and #9ca3af 2.54:1. These are neutrals, not brand
+     colors, so darkening is safe. #6b7280 measures 4.83:1. ---- */
+  .mobile-bottom-nav a span,
+  .mobile-cat-item span,
+  .mobile-app-search-pill .search-pill-text span,
+  .poster-footer .footer-tagline {
+    color: #6b7280 !important;
+  }
+
+  /* ---- Sub-11px text floor: badges the 2026-08-16 sweep did not reach ---- */
+  .tool-badge,
+  .package-badge {
+    font-size: 11px !important;
+  }
+
+  /* ---- Tap targets below the 44px house standard ----
+     All are >=24px so WCAG 2.5.8 AA passes; these bring them to the 44px bar
+     used by the 2026-08-16 sweep. min-height + inline-flex avoids reflowing the
+     rows the way extra padding would. ---- */
+  .state-directory-module .state-grid a,
+  .hub-local-links a,
+  .page-breadcrumb .breadcrumb-inner a {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .state-directory-module .state-grid a {
+    display: flex !important;
+  }
+
+  .search-filter-bar .search-box .search-clear {
+    min-width: 44px !important;
+  }
+}
