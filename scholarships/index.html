@@ -291,7 +291,10 @@
     /* Stats row */
     .stats-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      /* was repeat(3, 1fr): overflowed the viewport by 31px at 320px because the
+         three cards' 1.25rem padding + gaps cannot fit. minmax(min(...)) lets
+         the track shrink below its floor rather than push the row wide. */
+      grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
       gap: 1rem;
       margin: 1.25rem 0;
     }
@@ -1018,7 +1021,7 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=20260818"></script>
+  <script src="/assets/js/main.js?v=20260818b"></script>
   <script>
     // FAQ accordion
     document.querySelectorAll('.faq-question').forEach(function(btn) {

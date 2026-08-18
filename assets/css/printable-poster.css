@@ -506,3 +506,27 @@ footer .footer-bottom a:hover { color: #bae6fd; }
     font-size: 16px !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   ROOT FONT-SIZE PARITY WITH main.css
+   (css-regression-checker, 2026-08-18)
+
+   Printable pages load NO main.css — only this file plus the JS-injected
+   m-app.css. main.css shrinks the root at mobile (16px -> 15px <=768 ->
+   14px <=480); this file never did, so every rem-based rule in m-app.css
+   resolved against a 16px root here and against 14px everywhere else. Rendered
+   result: the shared nav/footer on printables ran ~14% larger than the identical
+   markup on all 710 other pages (nav links 14.4px vs 12.6px, logo 15.2px vs
+   13.3px, footer links 14.4px vs 12.6px).
+
+   Invisible to any grep audit: the defect is a MISSING rule, and the two sheets
+   are individually self-consistent. Form controls are unaffected — m-app.css
+   pins inputs/selects/textarea to an explicit 16px !important.
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  html { font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+}

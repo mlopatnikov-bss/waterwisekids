@@ -1299,3 +1299,41 @@
     align-items: center !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   MOBILE TAP TARGETS — ROUND 3
+   (css-regression-checker, 2026-08-18)
+
+   Measured in a real 390x844 and 320x700 render across 22 template types.
+
+   `footer .footer-links { display: none }` above hides the main footer nav on
+   mobile, so the ONLY tappable links left in the footer are the contact email
+   and the two legal links in .footer-bottom. All three are plain inline <a>
+   inside a <p>, so their box height is just the line box — measured at 14px on
+   every one of the 22 templates (12px on special-needs-swimming.html). Apple
+   HIG minimum is 44px.
+
+   Rounds 1 and 2 fixed the .footer-bottom FONT SIZE (11px floor, above) but not
+   the tap height, and no static audit can see this: there is no height rule to
+   grep for — the failure is the absence of one.
+
+   inline-block + min-height only grows the line box inside a centred paragraph,
+   so this cannot introduce horizontal overflow. Re-verified at 390px and 320px.
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  footer .footer-bottom p a,
+  footer .footer-contact a {
+    display: inline-block !important;
+    min-height: 44px !important;
+    line-height: 44px !important;
+    padding: 0 6px !important;
+    vertical-align: middle !important;
+  }
+
+  /* The separator pipes and the copyright text sit on the same line as the now
+     44px-tall links; keep the paragraph from collapsing around them. */
+  footer .footer-bottom p {
+    line-height: 44px !important;
+  }
+}

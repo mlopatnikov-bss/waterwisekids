@@ -5,7 +5,7 @@
     }
 
     html, body {
-      font-family: inherit;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       color: #13304a;
       background: #f4f8fb;
       line-height: 1.6;
@@ -363,3 +363,15 @@
 /* Explicit heading colors — main.css h1/h2{color:gray-900} overrides inherited white (see hero_banner_system) */
 .hero h1 { color: #ffffff; }
 .hero p { color: #ffffff; }
+
+/* css-regression-checker 2026-08-18:
+   The `* { margin:0; padding:0 }` reset at the top of this file loads AFTER
+   main.css and strips .container's horizontal padding, so the shared nav and
+   footer on this page sat 24px wider than on all 710 other pages. Re-assert the
+   canonical main.css value for the shared chrome only; the page body keeps the
+   reset it was written against. */
+header .container,
+footer .container {
+  padding-left: var(--spacing-xl, 1.5rem);
+  padding-right: var(--spacing-xl, 1.5rem);
+}
