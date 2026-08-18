@@ -79,12 +79,12 @@
 
             <div class="search-box">
                 <div class="search-input">
-                    <label>City or ZIP</label>
-                    <input type="text" placeholder="Philadelphia, PA or 19102" aria-label="City or ZIP code">
+                    <label for="heroCity">City or ZIP</label>
+                    <input type="text" id="heroCity" placeholder="Philadelphia, PA or 19102" aria-label="City or ZIP code">
                 </div>
                 <div class="search-input">
-                    <label>State</label>
-                    <select aria-label="Select state">
+                    <label for="heroState">State</label>
+                    <select id="heroState" aria-label="Select state">
                         <option>Select State</option>
                         <option>Alabama</option>
                         <option>Alaska</option>
@@ -96,21 +96,51 @@
                         <option>Delaware</option>
                         <option>Florida</option>
                         <option>Georgia</option>
-                    </select>
-                </div>
-                <div class="search-input">
-                    <label>Age Group</label>
-                    <select aria-label="Select age group">
-                        <option>All Ages</option>
-                        <option>Infants (6m-2y)</option>
-                        <option>Toddlers (2-4y)</option>
-                        <option>Preschool (4-6y)</option>
-                        <option>School Age (6+)</option>
-                        <option>Teens</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Kentucky</option>
+                        <option>Louisiana</option>
+                        <option>Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option>Missouri</option>
+                        <option>Montana</option>
+                        <option>Nebraska</option>
+                        <option>Nevada</option>
+                        <option>New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>North Dakota</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option>South Carolina</option>
+                        <option>South Dakota</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>Washington DC</option>
+                        <option>West Virginia</option>
+                        <option>Wisconsin</option>
+                        <option>Wyoming</option>
                     </select>
                 </div>
                 <div class="search-button">
-                    <button aria-label="Search for swim lessons">Search Lessons</button>
+                    <button type="button" id="heroSearchBtn" aria-label="Search for swim lessons">Search Lessons</button>
                 </div>
             </div>
         </div>
@@ -301,5 +331,42 @@
     </div>
   </footer>
   <script src="/assets/js/main.js?v=20260818b"></script>
+
+<script>
+  /* Hero search wiring - the city field, state select and "Search Lessons" button
+     were previously inert (no id, no name, no handler) and the state list was
+     truncated at Georgia, so users outside the first 10 states could not even
+     select their state. Now routes to the state directory page and hands the
+     city/ZIP through as ?city= so the directory pre-filters on arrival.
+     Mirrors the wiring already live on /swim-schools.html. */
+  (function () {
+    var city = document.getElementById('heroCity');
+    var state = document.getElementById('heroState');
+    var btn = document.getElementById('heroSearchBtn');
+    if (!city || !state || !btn) return;
+
+    function slug(name) {
+      return name.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    }
+
+    function go() {
+      var s = state.value;
+      if (!s || s === 'Select State') {
+        state.focus();
+        state.setAttribute('aria-invalid', 'true');
+        return;
+      }
+      state.removeAttribute('aria-invalid');
+      var url = '/swim-lessons/directory/' + slug(s) + '.html';
+      var c = (city.value || '').trim();
+      if (c) url += '?city=' + encodeURIComponent(c);
+      window.location.href = url;
+    }
+
+    btn.addEventListener('click', go);
+    state.addEventListener('change', function () { state.removeAttribute('aria-invalid'); });
+    city.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); go(); } });
+  })();
+</script>
 </body>
 </html>

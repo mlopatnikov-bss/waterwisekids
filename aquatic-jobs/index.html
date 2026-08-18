@@ -1224,6 +1224,9 @@
       jobTypeFilter.addEventListener('change', filterJobs);
       locationFilter.addEventListener('change', filterJobs);
 
+      // Pre-fill from ?q= / ?type= / ?state= handed over by /jobs/ and /jobs.html
+      applyUrlFilters();
+
       // Pay type radio buttons
       document.querySelectorAll('input[name="payType"]').forEach(radio => {
         radio.addEventListener('change', updatePayInputs);
@@ -1619,6 +1622,30 @@
       jobDetailModal.classList.add('active');
     }
 
+    // Optional state constraint handed over from /jobs/ and /jobs.html via ?state=
+    let urlStateFilter = '';
+
+    // Read q / type / state from the URL so the search panels on /jobs/ and
+    // /jobs.html can hand their filters to this board (those pages have no
+    // listings of their own).
+    function applyUrlFilters() {
+      let params;
+      try { params = new URLSearchParams(window.location.search); } catch (e) { return; }
+      const q = (params.get('q') || '').trim();
+      const type = (params.get('type') || '').trim();
+      const state = (params.get('state') || '').trim();
+      if (q) searchInput.value = q;
+      if (type) {
+        const match = Array.prototype.find.call(
+          jobTypeFilter.options,
+          function (o) { return o.value.toLowerCase() === type.toLowerCase(); }
+        );
+        if (match) jobTypeFilter.value = match.value;
+      }
+      urlStateFilter = state;
+      if (q || type || state) filterJobs();
+    }
+
     function filterJobs() {
       if (isLoading) return;
 
@@ -1638,7 +1665,13 @@
         const matchesLocation = !selectedLocation ||
           (job.city + ', ' + job.state) === selectedLocation;
 
-        return matchesSearch && matchesType && matchesLocation;
+        const urlState = urlStateFilter.toLowerCase();
+        const matchesUrlState = !urlState ||
+          (job.state || '').toLowerCase() === urlState ||
+          (job.city || '').toLowerCase().includes(urlState) ||
+          (job.state || '').toLowerCase().includes(urlState);
+
+        return matchesSearch && matchesType && matchesLocation && matchesUrlState;
       });
 
       if (filtered.length === 0) {
