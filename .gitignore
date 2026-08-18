@@ -24,3 +24,7 @@ MOBILE-CONSISTENCY-REPORT-*.md
 SITE-AUDIT-REPORT-*.md
 RERUN-*.md
 competitive-scout-*.md
+
+# agent scratch lists (never deploy)
+_articles.txt
+_changed.txt
