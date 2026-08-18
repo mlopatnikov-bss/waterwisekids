@@ -1337,3 +1337,72 @@
     line-height: 44px !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   2026-08-18 — MOBILE CONSISTENCY SWEEP
+   Grid-track blowout: .main-layout is a grid, and grid items default to
+   min-width:auto, so ANY child whose min-content width exceeds the column
+   (a wide table, a bare URL, a "·"-joined string) widens the whole track and
+   the layout viewport with it. Three article pages rendered 369-414px wide
+   inside a 320px viewport. Because the layout viewport stretches to match,
+   documentElement.scrollWidth == window.innerWidth and the page LOOKS clean to
+   a naive overflow check — it is only visible when scrollWidth is compared
+   against the NOMINAL device width. min-width:0 lets the track shrink; the
+   wrapping/scrolling rules below then contain the wide content itself.
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  .main-layout > * {
+    min-width: 0 !important;
+  }
+
+  /* Bare URLs in citation blocks measured 374px min-content. break-word only
+     splits a word that cannot otherwise fit, so normal prose is unaffected. */
+  .article-body,
+  .article-body p,
+  .article-body li,
+  .article-body td,
+  .article-content p,
+  .article-content li {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  /* "Elbow·Elbow·Tummy·Knee" is one unbreakable 368px token to the line
+     breaker — U+00B7 is not a break opportunity. */
+  .stat-box span,
+  .stat-box .stat-label,
+  .stat-box .stat-number {
+    overflow-wrap: anywhere !important;
+  }
+
+  /* Wide data tables stay readable by scrolling inside their own box instead
+     of widening the page. */
+  .article-body table,
+  .article-content table,
+  table.pricing-table {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* ---- Tap targets below the 44px house standard ----
+     These are standalone navigation/CTA links, not inline links inside a
+     sentence, so the WCAG 2.5.8 inline exception does not apply.
+       .toc-item      285x28  (table-of-contents rows, 6 pages)
+       .visit-btn     240x40  (scholarship CTA buttons, 11 pages)
+       .wwk-city-link  95x35  (nearby-city chips, 10 pages) ---- */
+  .toc-item,
+  .visit-btn,
+  .wwk-city-link {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .toc-item {
+    display: flex !important;
+  }
+}
