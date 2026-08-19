@@ -13,6 +13,79 @@ Each article is checked against the full 8-point checklist:
 
 ---
 
+## Run 2026-08-19 — Speakable repair + TL;DR backfill (211 pages)
+
+**Headline finding: the entire speakable program was inert on 207 pages.** Presence-based
+audits had passed every day because the string `tldr-box` appeared in the JSON-LD
+`cssSelector` array — so grepping for it returned a match even on pages that had no
+`.tldr-box` element at all. Selectors were authored against a template that does not
+match the live DOM.
+
+### 1. Broken `speakable` cssSelectors repaired — 209 instances / 187 pages
+
+Every selector was re-resolved against each page's actual DOM. Nothing was guessed;
+replacements were validated per page before being written.
+
+| Broken selector | Pages | Repaired to |
+|---|---|---|
+| `.article > p:first-of-type` | 84 | `.article-body > p:first-of-type` / `p.article-excerpt` |
+| `.checklist-title` | 48 | `.cl-header h1` |
+| `.article h1` | 32 | `.page-hero h1` |
+| `.checklist-item` | 14 | `.cl-checkbox` |
+| `.checklist-section h2` | 13 | `h2.cl-section-title` |
+| `article h1` | 9 | `.page-hero h1` |
+| `article > p:first-of-type` | 7 | `.article-body > p:first-of-type` |
+| `article > p` | 2 | `.article-body > p:first-of-type` |
+
+**Verified: 2,164 speakable selectors site-wide, 0 broken.**
+
+### 2. TL;DR "Quick Answer" boxes authored — 24 pages
+
+These pages declared `.tldr-box` as speakable but had no box. Each received a hand-written
+2–3 sentence answer with specific numbers, ages, or agency attribution — not boilerplate.
+
+backyard-pool-safety · bath-time-safety-infants · boating-life-jacket-safety-checklist ·
+boating-safety-children · cold-water-shock · competitive-swimming-safety ·
+drowning-statistics-facts · first-swim-lesson-checklist ·
+floaties-puddle-jumpers-safety-checklist · hotel-pool-safety-checklist · hotel-pool-safety ·
+lake-house-water-safety-checklist · life-jacket-guide · new-pool-owner-water-safety-checklist ·
+secondary-drowning-dry-drowning · swim-lesson-faqs · swim-lesson-readiness-checklist ·
+swimming-pool-fence-laws-by-state · vacation-rental-pool-safety-checklist ·
+vacation-water-safety · water-park-safety · what-to-do-drowning-emergency ·
+how-long-should-swim-lessons-last · special-needs-swimming
+
+All 22 education-template boxes were then relocated out of `.article-header` to sit as a
+direct sibling between the header and `.article-body`, matching the canonical pattern.
+
+### 3. Invalid schema placement fixed — 1 page
+
+`special-needs-swimming.html` had `speakable` attached to the **publisher logo
+ImageObject** instead of the Article node, so it was ignored entirely. Moved to the
+Article node.
+
+### 4. Deep AEO pass on 4 newer articles
+
+Published after the April full-site pass, so they had never been optimized:
+
+| Article | Question H2s | Citations added |
+|---|---|---|
+| `pool-cover-drowning-danger-kids` | 6 converted | CPSC (83% fencing figure), CDC |
+| `heat-exhaustion-kids-pool` | 5 converted | CDC heat health, AAP HealthyChildren |
+| `water-slide-safety-kids` | 6 converted | CPSC, American Red Cross |
+| `swim-bag-checklist` | 5 converted | AAP HealthyChildren, CDC |
+
+### Validation
+
+211 changed files: 0 JSON-LD parse errors · 0 unbalanced tags · 0 nested anchors ·
+0 duplicate TL;DR boxes · 0 broken speakable selectors · 0 truncated files.
+
+### Queued for next run
+
+- 13 articles still carry fewer than 2 authoritative citations
+- 22 articles still have zero question-format H2s
+- `education/index.html` (hub, 15k words) has no TL;DR box or speakable block
+
+---
 ## ✅ Full-Site AEO Pass Complete — 2026-04-09
 
 **All 75 original content articles + 11 newer articles fully optimized.** (6 redirect pages excluded — they point to already-optimized education/ targets.)
