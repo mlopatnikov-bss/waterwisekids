@@ -1406,3 +1406,43 @@
     display: flex !important;
   }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   MOBILE TAP TARGETS — ROUND 4 (2026-08-19 css-regression render sweep)
+
+   Two breadcrumb MARKUP VARIANTS were never reached by the 2026-08-16 rules,
+   because those rules were written against the classes on the pages that were
+   sampled, not against every variant in the tree:
+
+     .wwk-breadcrumbs a   13 /swim-lessons/ town pages (local-pages.css). Bare
+                          inline <a>, measured 15px tall at 390px AND 320px —
+                          the worst tap target left on the site.
+     .breadcrumb a        rendered OUTSIDE a .breadcrumb-inner wrapper (e.g.
+                          /special-needs-swimming.html) only ever matched the
+                          36px rule above, 8px under the 44px house standard.
+
+   Both live in a full-width, wrap-capable row and this rule only ever GROWS
+   height, so neither can introduce horizontal overflow.
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .wwk-breadcrumbs a,
+  .breadcrumb a,
+  .breadcrumbs a,
+  .page-breadcrumb a,
+  nav[aria-label="Breadcrumb"] a,
+  nav[aria-label="breadcrumb"] a {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+  }
+
+  /* Keep the ">" text separators vertically centred against the taller links. */
+  .wwk-breadcrumbs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    column-gap: 4px !important;
+    row-gap: 0 !important;
+  }
+}

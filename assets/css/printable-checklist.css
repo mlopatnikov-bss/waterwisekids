@@ -252,3 +252,11 @@ footer .footer-bottom a:hover { color: #bae6fd; }
 @media (max-width: 480px) {
   html { font-size: 14px; }
 }
+
+/* 2026-08-19 css-regression sweep: main.css drops the container gutter to 16px
+   at <=768px; this standalone sheet kept 24px, so the printable header logo sat
+   8px further in than on every other template. Mirror the site value.
+   See [[standalone_stylesheet_drift]]. */
+@media (max-width: 768px) {
+  .screen-header nav { padding: 0 16px; }
+}
