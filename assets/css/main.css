@@ -183,7 +183,7 @@ a {
 }
 
 a:hover {
-  color: var(--blue-600);
+  color: var(--blue-700);
 }
 
 img {
@@ -288,13 +288,13 @@ img {
 }
 
 .btn-blue {
-  background: var(--blue-600);
+  background: var(--blue-700);
   color: white;
   box-shadow: var(--sh-sm);
 }
 
 .btn-blue:hover {
-  background: var(--blue-700);
+  background: var(--blue-800);
   box-shadow: var(--sh-md);
 }
 
@@ -318,7 +318,7 @@ img {
 
 .btn-outline {
   background: transparent;
-  color: var(--blue-600);
+  color: var(--blue-700);
   border: 1.5px solid var(--blue-200);
 }
 
@@ -860,7 +860,7 @@ footer .footer-bottom a:hover {
 }
 
 .breadcrumb a {
-  color: var(--blue-600);
+  color: var(--blue-700);
   transition: color 0.15s;
 }
 
@@ -949,7 +949,7 @@ footer .footer-bottom a:hover {
 }
 
 .page-breadcrumb a:hover {
-  color: var(--blue-600);
+  color: var(--blue-700);
   text-decoration: underline;
 }
 
@@ -1212,7 +1212,7 @@ table tbody tr:hover {
 }
 
 .text-primary {
-  color: var(--blue-600);
+  color: var(--blue-700);
 }
 
 .text-secondary {
@@ -1681,7 +1681,7 @@ table tbody tr:hover {
 .button {
   display: inline-block;
   padding: 0.65rem 1.4rem;
-  background: var(--blue-600);
+  background: var(--blue-700);
   color: var(--white);
   border-radius: var(--r-md);
   font-size: 0.95rem;
@@ -1690,7 +1690,7 @@ table tbody tr:hover {
   transition: background 0.15s ease;
 }
 .button:hover {
-  background: var(--blue-700);
+  background: var(--blue-800);
   color: var(--white);
 }
 
@@ -1751,7 +1751,7 @@ table tbody tr:hover {
   transition: color 0.15s;
 }
 .back-link:hover {
-  color: var(--blue-600);
+  color: var(--blue-700);
 }
 
 /* Local note — context callout */
@@ -1836,7 +1836,7 @@ table tbody tr:hover {
   border-bottom: none;
 }
 .note-list li a {
-  color: var(--blue-600);
+  color: var(--blue-700);
   text-decoration: none;
 }
 .note-list li a:hover {
@@ -1972,7 +1972,7 @@ table tbody tr:hover {
   align-items: flex-end;
 }
 .swim-schools-page .search-button button {
-  background: #0284c7;
+  background: #0369a1;
   color: #fff;
   border: none;
   font-weight: 700;

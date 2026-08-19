@@ -105,7 +105,7 @@
 }
 
 .article-body a {
-  color: var(--blue-600);
+  color: var(--blue-700);
   text-decoration: underline;
 }
 
@@ -243,7 +243,7 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  color: var(--blue-600);
+  color: var(--blue-700);
   font-size: 0.85rem;
   font-weight: 600;
 }
@@ -301,7 +301,7 @@
    rendering in body-text grey instead of link blue. Match both. */
 .toc-item a,
 a.toc-item {
-  color: var(--blue-600);
+  color: var(--blue-700);
   transition: color 0.2s;
 }
 
@@ -337,7 +337,7 @@ a.toc-item:hover {
   border: none;
   border-radius: var(--r-lg);
   background: white;
-  color: var(--blue-600);
+  color: var(--blue-700);
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
@@ -349,7 +349,7 @@ a.toc-item:hover {
 .cta-button:hover {
   transform: translateY(-2px);
   box-shadow: var(--sh-md);
-  color: var(--blue-600);
+  color: var(--blue-700);
 }
 
 /* INLINE CTA BANNER (mid-article) */
@@ -577,7 +577,7 @@ a.toc-item:hover {
 }
 .lead-magnet-form button {
   padding: 12px 24px;
-  background: #0284c7;
+  background: #0369a1;
   color: white;
   border: none;
   border-radius: 8px;
@@ -588,7 +588,7 @@ a.toc-item:hover {
   transition: background 0.2s;
   white-space: nowrap;
 }
-.lead-magnet-form button:hover { background: #0369a1; }
+.lead-magnet-form button:hover { background: #075985; }
 .lead-magnet-form button:disabled { background: #9ca3af; cursor: default; }
 .lead-magnet-privacy {
   font-size: 0.8rem;
@@ -599,7 +599,7 @@ a.toc-item:hover {
   display: inline-block;
   margin-top: 10px;
   font-size: 0.85rem;
-  color: #0284c7;
+  color: #0369a1;
   text-decoration: underline;
 }
 .lead-magnet-success {
@@ -682,7 +682,7 @@ a.toc-item:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--blue-600);
+  background: var(--blue-700);
   color: #ffffff;
   font-weight: 800;
   font-size: 0.95rem;
@@ -733,7 +733,7 @@ a.toc-item:hover {
   margin: 0;
 }
 .sidebar-toc li a {
-  color: var(--blue-600);
+  color: var(--blue-700);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -763,7 +763,7 @@ a.toc-item:hover {
   padding: 12px;
   border-radius: var(--r-lg);
   background: white;
-  color: var(--blue-600);
+  color: var(--blue-700);
   font-size: 0.9rem;
   font-weight: 700;
   text-align: center;
@@ -773,7 +773,7 @@ a.toc-item:hover {
 .sidebar-cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: var(--sh-md);
-  color: var(--blue-600);
+  color: var(--blue-700);
 }
 
 /* Newsletter lead-capture form — article pages don't load education-hub.css,
@@ -802,7 +802,7 @@ a.toc-item:hover {
 }
 .newsletter-form button {
   padding: 12px 24px;
-  background: #0284c7;
+  background: #0369a1;
   color: white;
   border: none;
   border-radius: 8px;
@@ -813,7 +813,7 @@ a.toc-item:hover {
   transition: background 0.2s;
   white-space: nowrap;
 }
-.newsletter-form button:hover { background: #0369a1; }
+.newsletter-form button:hover { background: #075985; }
 .newsletter-form button:disabled { background: #9ca3af; cursor: default; }
 @media (max-width: 600px) {
   .newsletter-form { flex-direction: column; }
@@ -844,7 +844,7 @@ a.toc-item:hover {
 }
 .article-cta-btn {
   display: inline-block;
-  background: var(--blue-600, #0284c7);
+  background: var(--blue-700, #0369a1);
   color: #fff;
   font-weight: 600;
   font-size: 0.95rem;
@@ -854,7 +854,7 @@ a.toc-item:hover {
   transition: background 0.2s ease, transform 0.2s ease;
 }
 .article-cta-btn:hover {
-  background: var(--blue-700, #0369a1);
+  background: var(--blue-800, #075985);
   color: #fff;
   transform: translateY(-1px);
 }
@@ -944,7 +944,7 @@ a.toc-item:hover {
 }
 .age-badge {
   display: inline-block;
-  background: var(--blue-600);
+  background: var(--blue-700);
   color: #fff;
   font-size: .75rem;
   font-weight: 700;
@@ -956,4 +956,47 @@ a.toc-item:hover {
 @media (max-width: 600px) {
   .myth-card { padding: 18px; }
   .age-section-title { font-size: 1.1rem; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   VISUAL QA 2026-08-19 — contrast defects found by the headless render sweep.
+   Both are cascade/specificity bugs: the declaration that should have won was
+   written, but a broader selector outranked it. Neither is greppable.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* 1. INVISIBLE CTA LABEL (16 education checklist pages).
+   `.article-body a { color: var(--blue-700) }` (0-1-1) outranks
+   `.article-cta-btn { color:#fff }` (0-1-0), so the button rendered
+   #0284c7 text on its own #0284c7 background — 1.0:1, label unreadable,
+   plus an inherited underline. Restore white at matching specificity. */
+.article-body a.article-cta-btn,
+.article-content a.article-cta-btn {
+  color: #fff;
+  text-decoration: none;
+}
+.article-body a.article-cta-btn:hover,
+.article-content a.article-cta-btn:hover {
+  color: #fff;
+}
+
+/* 2. LINKS INSIDE DARK CALLOUT BOXES.
+   Inline dark boxes (`.stat-box` and friends) set `color:#fff` on themselves,
+   but nested links fall back to `.article-body a`'s blue-600 — #0284c7 on
+   #0c4a6e is 2.4:1. Keyed on the dark background hex so a light box can never
+   match and lose its links to white. */
+.article-body [style*="background:#0c4a6e"] a,
+.article-body [style*="background: #0c4a6e"] a,
+.article-body [style*="background:#075985"] a,
+.article-body [style*="background: #075985"] a,
+.article-body [style*="background:#0369a1"] a,
+.article-body [style*="background: #0369a1"] a,
+.article-body [style*="background:#0284c7"] a,
+.article-body [style*="background: #0284c7"] a,
+.article-body [style*="background:#0077b6"] a,
+.article-body [style*="background: #0077b6"] a,
+.article-body [style*="background:#0891b2"] a,
+.article-body [style*="background: #0891b2"] a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }

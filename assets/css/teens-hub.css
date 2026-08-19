@@ -147,7 +147,7 @@
         .feature-link {
             display: inline-flex;
             align-items: center;
-            color: #0284c7;
+            color: #0369a1;
             text-decoration: none;
             font-weight: 600;
             gap: 0.5rem;
@@ -370,7 +370,7 @@
 .cta-section p { color: #ffffff; }
 
 /* Standard site button (HTML uses .btn-primary; mirror of local-pages.css) */
-.btn-primary { display: inline-block; background: #0284c7; color: #fff; font-weight: 600; padding: 0.8rem 1.6rem; border-radius: 8px; text-decoration: none; transition: background 0.15s ease; }
+.btn-primary { display: inline-block; background: #0369a1; color: #fff; font-weight: 600; padding: 0.8rem 1.6rem; border-radius: 8px; text-decoration: none; transition: background 0.15s ease; }
 .btn-primary:hover { background: #075985; }
 .cta-section .btn-primary { background: #fff; color: #ea580c; }
 .cta-section .btn-primary:hover { background: #fff7ed; }

@@ -47,7 +47,7 @@ main {
 .stat-number {
       font-size: 2rem;
       font-weight: 700;
-      color: #0284c7;
+      color: #0369a1;
       margin-bottom: 0.5rem;
     }
 
@@ -116,7 +116,7 @@ main {
     }
 
 .package-price {
-      color: #0284c7;
+      color: #0369a1;
       font-size: 1.8rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
@@ -146,7 +146,7 @@ main {
       display: block;
       width: 100%;
       padding: 0.75rem;
-      background-color: #0284c7;
+      background-color: #0369a1;
       color: white;
       text-decoration: none;
       border-radius: 6px;
@@ -232,7 +232,7 @@ main {
       display: inline-block;
       width: 40px;
       height: 40px;
-      background: #0284c7;
+      background: #0369a1;
       color: white;
       border-radius: 50%;
       line-height: 40px;

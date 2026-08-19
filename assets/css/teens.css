@@ -9,14 +9,14 @@
 .article-header p { color: #0369a1; font-size: 1.1rem; margin-top: 0.5rem; }
 
 /* Internal links */
-.internal-link { color: #0284c7; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+.internal-link { color: #0369a1; text-decoration: none; font-weight: 500; transition: color 0.3s; }
 .internal-link:hover { color: #075985; text-decoration: underline; }
 
 /* Simple callout boxes */
 .cert-box { background: #f0f9ff; border-left: 4px solid #0284c7; padding: 1.5rem; margin: 1.5rem 0; border-radius: 6px; }
 .info-box { background: #dbeafe; border-left: 4px solid #0284c7; padding: 1.5rem; margin: 1.5rem 0; border-radius: 6px; }
 .scholarship-item { background: #f9fafb; border-left: 4px solid #14b8a6; padding: 1.5rem; margin: 1.5rem 0; border-radius: 6px; }
-.scholarship-item h3 { color: #0284c7; margin: 0 0 0.5rem 0; }
+.scholarship-item h3 { color: #0369a1; margin: 0 0 0.5rem 0; }
 
 /* Aquatics-careers ladder */
 .career-level { background: #fff; border: 2px solid #e5e7eb; padding: 2rem; margin-bottom: 2rem; border-radius: 12px; transition: border-color 0.3s, box-shadow 0.3s; }

@@ -9,7 +9,12 @@
 :root {
   --cl-blue-800: #075985;
   --cl-blue-600: #0284c7;
+  /* 2026-08-19 visual QA: blue-600 on white is 4.10:1 (AA needs 4.5).
+     Printables load no main.css, so the sitewide fix does not reach them —
+     mirror it with a local blue-700 token used for TEXT and the print CTA. */
+  --cl-blue-700: #0369a1;
   --cl-teal-500: #14b8a6;
+  --cl-teal-700: #0f766e;  /* AA-safe teal for TEXT on white (4.99:1) */
   --cl-gray-900: #1f2937;
   --cl-gray-700: #374151;
   --cl-gray-600: #475569;
@@ -55,9 +60,9 @@ body {
   max-width: 800px; margin: 24px auto 0; padding: 0 24px;
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
 }
-.print-toolbar a { color: var(--cl-blue-600); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+.print-toolbar a { color: var(--cl-blue-700); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
 .print-btn {
-  padding: 10px 24px; background: var(--cl-blue-600); color: white;
+  padding: 10px 24px; background: var(--cl-blue-700); color: white;
   border: none; border-radius: 8px; font-weight: 600; font-size: 0.95rem;
   cursor: pointer; transition: background 0.2s;
 }
@@ -76,7 +81,7 @@ body {
 .cl-header { text-align: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 2px solid #e0f2fe; }
 .cl-header h1 { font-size: 1.6rem; font-weight: 800; color: var(--cl-blue-800); margin-bottom: 6px; }
 .cl-header .cl-subtitle { font-size: 0.95rem; color: var(--cl-gray-600); }
-.cl-header .cl-brand { font-size: 0.85rem; color: var(--cl-blue-600); margin-top: 8px; font-weight: 600; }
+.cl-header .cl-brand { font-size: 0.85rem; color: var(--cl-blue-700); margin-top: 8px; font-weight: 600; }
 
 /* SECTIONS */
 .cl-section { margin-bottom: 28px; }
@@ -119,7 +124,7 @@ body {
   text-align: center; margin-top: 28px; padding-top: 20px;
   border-top: 2px solid #e0f2fe; font-size: 0.8rem; color: var(--cl-gray-600);
 }
-.cl-footer a { color: var(--cl-blue-600); text-decoration: none; }
+.cl-footer a { color: var(--cl-blue-700); text-decoration: none; }
 
 /* SCREEN-ONLY BOTTOM CTA */
 .screen-cta {
@@ -133,7 +138,7 @@ body {
 .screen-cta-card p { font-size: 0.95rem; color: rgba(255,255,255,0.9); margin-bottom: 16px; }
 .screen-cta-card a {
   display: inline-block; padding: 12px 28px; background: white;
-  color: var(--cl-teal-500); border-radius: 8px; font-weight: 700;
+  color: var(--cl-teal-700); border-radius: 8px; font-weight: 700;
   text-decoration: none; font-size: 0.95rem;
 }
 
@@ -176,7 +181,7 @@ footer .footer-bottom a:hover { color: #bae6fd; }
 .related-card { display: block; background: #fff; padding: 14px 16px; border-radius: 8px; text-decoration: none; border: 1px solid #e2e8f0; transition: box-shadow 0.2s, transform 0.2s; }
 .related-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-2px); }
 .related-card-title { color: #0369a1; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
-.related-card-link { color: #0891b2; font-size: 0.85rem; font-weight: 600; }
+.related-card-link { color: #0e7490; font-size: 0.85rem; font-weight: 600; }
 
 /* PRINT STYLES */
 @media print {

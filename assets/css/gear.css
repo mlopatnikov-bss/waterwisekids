@@ -41,7 +41,7 @@
 .gear-page .gear-item-name { color: #075985; font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
 .gear-page .gear-item-desc { color: #475569; font-size: 0.9rem; margin-bottom: 0.75rem; line-height: 1.5; }
 .gear-page .gear-item-age { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem; }
-.gear-page .gear-link { display: inline-block; color: #0284c7; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+.gear-page .gear-link { display: inline-block; color: #0369a1; text-decoration: none; font-weight: 500; transition: color 0.2s; }
 .gear-page .gear-link:hover { color: #075985; text-decoration: underline; }
 
 /* Buying guides */
@@ -53,7 +53,7 @@
 .gear-page .guide-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
 .gear-page .guide-body { padding: 1.5rem; }
 .gear-page .guide-body p { color: #475569; font-size: 0.95rem; margin-bottom: 1rem; }
-.gear-page .guide-body a { color: #0284c7; text-decoration: none; font-weight: 600; }
+.gear-page .guide-body a { color: #0369a1; text-decoration: none; font-weight: 600; }
 .gear-page .guide-body a:hover { text-decoration: underline; }
 .gear-page .coming-soon { display: inline-block; background: #f1f5f9; color: #64748b; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
 
