@@ -1454,3 +1454,84 @@
     row-gap: 0 !important;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   MOBILE TAP TARGETS — ROUND 4 (2026-08-19 mobile-consistency sweep)
+
+   Found by rendering at 320 / 390 / 768px, not by grepping. Each of these is a
+   NAVIGATION or CTA target, never inline prose, so the WCAG 2.2 inline-target
+   exemption does not cover them. Sizes below are the measured heights at 390px.
+
+   Site tiers, per the 2026-08-16 precedent: dense nav lists -> 36px (clears the
+   WCAG 2.5.8 AA 24x24 minimum without visually thickening the block); standalone
+   CTAs -> 44px.
+
+   Every rule here only ever GROWS height, and each target sits in a full-width
+   or wrap-capable block, so none can introduce horizontal overflow. Verified by
+   re-rendering at 320px after the change: zero overflow, unchanged from before.
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* --- Directory back-links: 16px, bare <a>, no padding (51 state pages) ------
+     The 2026-08-16 pass lifted `.back-link` (singular). These are bare <a>
+     children of `.back-links` (plural, on the CONTAINER) and carry no class of
+     their own, so that selector never reached them. */
+  .back-links a {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+  }
+
+  /* --- Sidebar table-of-contents: 28px (273 pages) ------------------------- */
+  .toc-list .toc-item a,
+  .toc-item > a,
+  a.toc-item {
+    display: block !important;
+    min-height: 36px !important;
+    padding-top: 9px !important;
+    padding-bottom: 9px !important;
+  }
+
+  /* --- Jump-link row: 32px (scholarships) --------------------------------- */
+  .jump-links a {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+  }
+
+  /* --- Arrow CTAs on the swim-lessons hub: 40px --------------------------- */
+  .guide-link,
+  .cta-box-btn {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+  }
+
+  /* --- Partnership callout CTA: 22px, under the 24x24 AA minimum ---------- */
+  .partnership-callout a {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+  }
+
+  /* --- Primary CTAs one pixel short of 44 (43px measured) ----------------- */
+  .contact-cta a,
+  .jobs-grid a[href*="/jobs/post"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   TEXT FLOOR — ROUND 2 (2026-08-19). Residual sub-11px labels.
+   `.featured-badge` reaches 13 directory pages; `.card-label` the lessons hub.
+   Both measured 10.5px at 390px (0.75rem against the 14px mobile root).
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .featured-badge,
+  .card-label {
+    font-size: 11px !important;
+  }
+}

@@ -538,3 +538,25 @@ footer .footer-bottom a:hover { color: #bae6fd; }
 @media (max-width: 768px) {
   header nav { padding: 0 16px; }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   2026-08-19 MOBILE CONSISTENCY SWEEP — small-label text floor, root-independent
+
+   The 2026-08-17 pass set these labels to 0.72rem/0.74rem/0.75rem/0.78rem, which
+   clears the 11px site floor only against a 16px root. THIS SHEET drops the root
+   to 15px at <=768px and 14px at <=480px (see the block above), so at mobile the
+   same declarations resolve to 10.08 / 10.36 / 10.50 / 10.92px — back under the
+   floor. Rendered at 390px they measured exactly that.
+
+   A rem fix cannot be verified by reading the declaration; it has to be resolved
+   against the root that is actually in force. max() pins the floor at every root
+   without shrinking the sizes that are already comfortable at 15px/16px.
+═══════════════════════════════════════════════════════════════════════════════ */
+.rule-text p            { font-size: max(11px, 0.74rem); }
+.watcher-badge          { font-size: max(11px, 0.72rem); }
+.footer-tagline         { font-size: max(11px, 0.72rem); }
+.footer-center          { font-size: max(11px, 0.72rem); }
+.footer-url             { font-size: max(11px, 0.78rem); }
+.lead-privacy           { font-size: max(11px, 0.75rem); }
+.emergency-content p    { font-size: max(11px, 0.78rem); }
+.watcher-content p      { font-size: max(11px, 0.75rem); }
