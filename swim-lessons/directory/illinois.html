@@ -740,6 +740,17 @@
     function init() {
       renderStateSchools();
       setupStarRating();
+      setupEnterKey();
+    }
+
+    function setupEnterKey() {
+      ['schoolSearch', 'citySearch'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        el.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter') { e.preventDefault(); applySearch(); }
+        });
+      });
     }
 
     function renderStateSchools() {
