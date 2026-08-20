@@ -1580,3 +1580,174 @@
     font-size: 11px !important;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   MOBILE CONSISTENCY — 2026-08-20
+   Found by rendering at 320/390/768px, not by grepping. All five defect groups
+   below were invisible to static CSS audits: the failing numbers are never
+   written down, they emerge at runtime from rem values resolving against the
+   14px mobile root, and from links whose box height comes from line-height.
+
+   Scope note: every rule here sits inside `@media (max-width: 768px)`. Print
+   media resolves to ~816px CSS at Letter, so none of this reaches the PDF —
+   the printable card layouts render identically on paper.
+═══════════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* --- 1. Inline-styled breadcrumb bar — 398 pages ------------------------
+     A fourth breadcrumb variant, and the only one with NO class to hook: the
+     bar is a bare <div style="padding: 10px 24px; font-size: 0.85rem"> wrapping
+     bare <a> elements. Links measured 35.1 x 14px — the 14px comes straight
+     from the line box. Reached with an attribute selector so the fix stays out
+     of a 398-file HTML diff.
+
+     Bar padding is trimmed from 10px to 5px as the links grow 14px -> 24px, so
+     total bar height stays at 34px. The breadcrumb looks identical; only the
+     touch box changes. 24px is the WCAG 2.2 AA minimum and is the same value
+     already used for the three classed breadcrumb variants — 44px visibly
+     thickens the bar on every article page.
+
+     The link rule deliberately carries NO `!important`. A handful of these
+     pages are also matched by an earlier pass that lifted breadcrumb links to
+     44px with `!important`; an important 24px here would have overridden that
+     downward and made an already-passing target worse. This rule raises and
+     never lowers. The bar's own padding does need `!important`, because that
+     padding is set in an inline `style` attribute.                          */
+  [style*="padding: 10px 24px"][style*="0.85rem"] {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+  [style*="padding: 10px 24px"][style*="0.85rem"] a {
+    display: inline-block;
+    min-height: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  /* --- 2. Sidebar table-of-contents links — 301 pages ---------------------
+     `.toc-list a` measured 22.4px tall. Block display, so the WCAG 2.2 inline
+     exemption does not apply. 1.6px short of the minimum.                    */
+  .toc-list a {
+    display: block !important;
+    min-height: 24px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* --- 3. Lead-magnet direct link — 4 pages -------------------------------
+     `.lead-magnet-direct-link` measured 21.4px. An inline-block CTA inside a
+     lead-magnet box, not prose, so it is not exempt.                         */
+  .lead-magnet-direct-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 24px !important;
+  }
+
+  /* --- 4. Sidebar / related navigational lists — 135+ pages ---------------
+     `→ Open Water Safety Checklist` style links measured 15px tall. They are
+     `display: inline` inside <li>, but these are navigation lists, not inline
+     citations inside a sentence, so the prose exemption does not cover them.
+     Deliberately NOT extended to `.article-body p a` / `.article-body li a` —
+     those are genuine inline citations and WCAG 2.2 exempts inline targets.  */
+  .sidebar-card ul li a,
+  .sidebar-widget ul li a,
+  .note-list a,
+  .related-articles ul li a {
+    display: inline-block !important;
+    min-height: 24px !important;
+    line-height: 24px !important;
+  }
+
+  /* --- 5. Text floor, round 3 — printable worksheets ----------------------
+     40 distinct sub-11px instances across 22 printables, all from page-level
+     inline <style> blocks using rem: `.72rem` -> 10.08px, `.78rem` -> 10.92px,
+     `.65rem` -> 9.1px, all against the `html { font-size: 14px }` that
+     printable-checklist.css and printable-poster.css set at their own small
+     breakpoint. This is the same trap as the 0.72rem fix: the author's rem
+     value clears 11px at a 16px root and fails at the sheet's own 14px root.
+
+     Floors are applied per-selector rather than with a blanket `*` rule so the
+     print layout of the cut-out wallet cards is not disturbed — and every one
+     of these is screen-only, since print never matches max-width: 768px.     */
+
+  /* CPR quick card */
+  .cpr-card-sub, .cpr-brand { font-size: 11px !important; }
+  .cpr-step, .cpr-911, .cpr-cut-note { font-size: 11px !important; }
+
+  /* Spot-the-drowning-signs card */
+  .sd-card-tag, .sd-brand { font-size: 11px !important; }
+  .sd-sign, .sd-test, .sd-cut-note { font-size: 11px !important; }
+
+  /* Reach-throw-don't-go card */
+  .rtg-brand, .rtg-911, .rtg-cut-note { font-size: 11px !important; }
+
+  /* Water-watcher card */
+  .ww-badge-sub, .ww-badge-rules, .ww-cut-note { font-size: 11px !important; }
+
+  /* Swim milestones checklist */
+  .sm-age, .sm-date, .sm-anchor { font-size: 11px !important; }
+
+  /* Practice log */
+  .pl-tag, .pl-focus-note { font-size: 11px !important; }
+
+  /* Goal-setting worksheet */
+  .gs-hint { font-size: 11px !important; }
+
+  /* School comparison worksheet */
+  .cw-hint, .cw-school { font-size: 11px !important; }
+
+  /* Family pledge / reward chart / level placement / competency */
+  .sig-label { font-size: 11px !important; }
+  .cl-levelnote, .cl-mastered { font-size: 11px !important; }
+
+  /* Water-confidence challenge grid */
+  .wcc-day p, .wcc-day p strong, .wcc-day .n { font-size: 11px !important; }
+
+  /* Reward chart legend + star numbers */
+  .rc-legend, .rc-legend span, .rc-legend strong { font-size: 11px !important; }
+  .star-box .num { font-size: 11px !important; }
+
+  /* Bold runs that inherit a sub-11px cell/row size */
+  .cw-crit strong, .cpr-step strong, .sd-sign strong { font-size: 11px !important; }
+
+
+  /* --- Worksheet tables -----------------------------------------------------
+     Restated as `max(11px, <the table's own rem value>)` rather than a flat
+     11px. A flat value would floor the 10.08px cells correctly but would also
+     SHRINK the cells already sitting at 11.9px, and would erase the deliberate
+     size step between a header row and its body rows. `max()` raises only what
+     is failing and leaves everything else byte-identical.
+
+     Each N below is the value declared in that table's own rule — it clears
+     11px at a 16px root and fails at the 14px root the printable stylesheets
+     set at their small breakpoint. That mismatch is the whole bug.          */
+  .cw-table th, .cw-table td { font-size: max(11px, 0.78rem) !important; }
+  .cw-section-row td        { font-size: max(11px, 0.75rem) !important; }
+  .cw-hint                  { font-size: max(11px, 0.70rem) !important; }
+  .pl-table                 { font-size: max(11px, 0.78rem) !important; }
+  .pl-table th              { font-size: max(11px, 0.72rem) !important; }
+  .roster-table th          { font-size: max(11px, 0.76rem) !important; }
+  .ratio-table th, .ratio-table td { font-size: max(11px, 0.85rem) !important; }
+  .gs-section-row td        { font-size: max(11px, 0.74rem) !important; }
+
+  /* --- Inline `style="font-size:0.78rem"` — no class to hook ---------------
+     The fall schedule planner sizes its two tables, and the first-month guide
+     its note paragraph, with an inline style attribute. 0.78rem is the only
+     inline value on any printable that fails: it lands at 10.92px against the
+     14px root. 0.8rem (11.2px) and 0.82rem (11.48px) already clear the floor
+     and are deliberately left alone.
+
+     Cover both spellings — with and without the space after the colon. The
+     earlier `.75rem` sweep missed the leading-dot variant and left two pages
+     broken, so the spelling check is not optional.                          */
+  .checklist-page [style*="font-size:0.78rem"],
+  .checklist-page [style*="font-size: 0.78rem"],
+  .checklist-page [style*="font-size:.78rem"],
+  .checklist-page [style*="font-size: .78rem"],
+  .checklist-page [style*="font-size:0.78rem"] td,
+  .checklist-page [style*="font-size:0.78rem"] td strong,
+  .checklist-page [style*="font-size:0.78rem"] th {
+    font-size: 11px !important;
+  }
+
+}
