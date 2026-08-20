@@ -12,6 +12,16 @@
   --poster-blue: #0077B6;
   --poster-navy: #1B2A4A;
   --poster-orange: #FF6B35;
+  /* 2026-08-20 visual QA: #FF6B35 carries white text in three places and is
+     used as small uppercase text in a fourth. White on #FF6B35 measures
+     2.84:1 and the orange h3 on the #fff3ee emergency strip measures 2.61:1 —
+     both far below WCAG AA 4.5:1 for body-size text. #C2410C is the same hue
+     family (it is the Tailwind orange-700 the rest of the site already uses
+     for orange link text) and measures 5.18:1 on white text / 4.76:1 on the
+     peach strip. DECORATIVE uses of --poster-orange (the 5px bar, the logo
+     dot, the section rules, focus ring) keep the bright original — they carry
+     no text, so they are not a contrast surface. */
+  --poster-orange-text: #C2410C;
   --poster-white: #FFFFFF;
   --poster-light-blue: #E8F4FD;
   --poster-mid-blue: #0096D6;
@@ -97,7 +107,7 @@ header nav .nav-links a:hover { background: #f3f4f6; color: #075985; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--poster-orange);
+  background: var(--poster-orange-text);
   color: white;
   font-weight: 700;
   font-size: 1rem;
@@ -108,7 +118,7 @@ header nav .nav-links a:hover { background: #f3f4f6; color: #075985; }
   text-decoration: none;
   transition: background 0.2s, transform 0.2s;
 }
-.btn-print:hover { background: #e85d2a; transform: translateY(-2px); }
+.btn-print:hover { background: #9A3412; transform: translateY(-2px); }
 .btn-back {
   display: inline-flex;
   align-items: center;
@@ -272,7 +282,7 @@ header nav .nav-links a:hover { background: #f3f4f6; color: #075985; }
 .emergency-content h3 {
   font-size: 0.85rem;
   font-weight: 900;
-  color: var(--poster-orange);
+  color: var(--poster-orange-text);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-bottom: 4px;
@@ -296,7 +306,7 @@ header nav .nav-links a:hover { background: #f3f4f6; color: #075985; }
 }
 .watcher-badge {
   flex-shrink: 0;
-  background: var(--poster-orange);
+  background: var(--poster-orange-text);
   color: white;
   /* 2026-08-17 visual QA: was 0.65rem = 10.4px rendered, at BOTH desktop and
      mobile — under the 11px legibility floor used site-wide. printable-poster.css
@@ -402,7 +412,7 @@ header nav .nav-links a:hover { background: #f3f4f6; color: #075985; }
   box-shadow: 0 0 0 3px rgba(255,107,53,0.5);
 }
 .lead-form button {
-  background: var(--poster-orange);
+  background: var(--poster-orange-text);
   color: white;
   font-weight: 700;
   font-size: 0.95rem;

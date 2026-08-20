@@ -1186,6 +1186,51 @@
     border-color: #cbd5e1 !important;
   }
 
+  /* ---- VISUAL QA 2026-08-20: HERO CASCADE ORPHANS, ROUND 2 ----
+     The 2026-08-17 block above repainted .lead, .kicker and .meta-chip, but
+     the flatten rule sets `background:#fff` on the hero WITHOUT resetting the
+     hero's own inherited `color`, which main.css leaves at #fff for the dark
+     desktop gradient. Any hero child that is NOT one of those three classes
+     therefore still inherits WHITE ON WHITE.
+
+     Live example found by rendering: the post-consolidation notice
+     "Now merged: our full <town> swim lesson guide covers costs..." is a bare
+     <p> (no class) inside .page-hero on the four merged twin pages
+     (ambler / elkins-park / flourtown / glenside). It rendered completely
+     invisible at <=768px — measured contrast 1.00:1 — while still occupying
+     its full vertical space, so the hero showed an unexplained blank gap.
+     That paragraph is the only link pointing mobile readers at the canonical
+     /swim-lessons/<town> target, so the consolidation lost its handoff.
+
+     Fix at the ROOT rather than per-class: reset `color` on the hero itself so
+     inheritance is correct for every present and future descendant, then give
+     links an AA-passing brand blue. Keeping the three class rules above means
+     no visual change for anything already correct. ---- */
+  .page-hero,
+  .page-hero--edu,
+  .page-hero.compact,
+  .tools-hero {
+    color: #404040 !important;
+  }
+
+  .page-hero p,
+  .page-hero--edu p,
+  .page-hero.compact p,
+  .page-hero strong,
+  .page-hero--edu strong,
+  .page-hero.compact strong,
+  .tools-hero strong {
+    color: #404040 !important;
+  }
+
+  .page-hero a,
+  .page-hero--edu a,
+  .page-hero.compact a,
+  .tools-hero a {
+    color: #0369a1 !important;
+    text-decoration: underline !important;
+  }
+
   /* ---- Contrast: neutral grays below WCAG AA 4.5:1 on white ----
      #a3a3a3 measured 2.52:1 and #9ca3af 2.54:1. These are neutrals, not brand
      colors, so darkening is safe. #6b7280 measures 4.83:1. ---- */

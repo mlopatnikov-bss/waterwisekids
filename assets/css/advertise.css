@@ -98,7 +98,10 @@ main {
       position: absolute;
       top: -12px;
       right: 20px;
-      background: #f97316;
+      /* 2026-08-20 visual QA: white on #f97316 measures 2.80:1 — this is a
+         12px uppercase "Popular" pill, so it needs 4.5:1. #c2410c is the same
+         orange ramp and measures 5.18:1. */
+      background: #c2410c;
       color: white;
       padding: 0.25rem 0.75rem;
       border-radius: 20px;
