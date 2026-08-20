@@ -177,6 +177,18 @@ footer .footer-bottom { display: block; border-top: 1px solid #1e3a5f; padding-t
 footer .footer-bottom, footer .footer-bottom p { font-size: 0.8rem; color: #7dd3fc; }
 footer .footer-bottom a { color: #7dd3fc; text-decoration: none; transition: color 0.2s; }
 footer .footer-bottom a:hover { color: #bae6fd; }
+
+/* css-regression-checker 2026-08-20: this standalone sheet sets `body{line-height:1.5}`
+   for the dense checklist body, but main.css and printable-poster.css both use 1.6.
+   The SHARED nav/footer inherited 1.5 here, so identical markup ran ~6% tighter on
+   the 76 checklist printables than on the other 655 pages (footer 24px vs 25.6px,
+   nav links 21.6px vs 23.04px). Re-assert the sitewide value for the shared chrome
+   only — the checklist body keeps its 1.5. Same shape as the 2026-08-19 gutter fix
+   and the root font-size mirror below. */
+header,
+footer {
+  line-height: 1.6;
+}
 .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px; }
 .related-card { display: block; background: #fff; padding: 14px 16px; border-radius: 8px; text-decoration: none; border: 1px solid #e2e8f0; transition: box-shadow 0.2s, transform 0.2s; }
 .related-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-2px); }

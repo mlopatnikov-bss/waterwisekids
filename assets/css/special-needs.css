@@ -374,4 +374,20 @@ header .container,
 footer .container {
   padding-left: var(--spacing-xl, 1.5rem);
   padding-right: var(--spacing-xl, 1.5rem);
+  /* css-regression-checker 2026-08-20: the 2026-08-18 pass restored .container's
+     PADDING but not its max-width. This file's `.container{max-width:1200px}`
+     (page-body rule) still applied to the shared chrome, so the logo, nav links
+     and footer content all sat 20px further left than on the other 730 pages at
+     >=1280px. Re-assert the canonical main.css value for the shared chrome only. */
+  max-width: 1160px;
+}
+
+/* css-regression-checker 2026-08-20: the bare `p { line-height: 1.8 }` page rule
+   in this file has the same specificity as main.css's `p { line-height: 1.7 }`
+   and loads later, so it also retimed the SHARED footer paragraphs (footer ran
+   6px taller here than on every other page). Restore the sitewide value for the
+   shared chrome; the page body keeps its 1.8. */
+header p,
+footer p {
+  line-height: 1.7;
 }
