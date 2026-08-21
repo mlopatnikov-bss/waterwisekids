@@ -48,9 +48,9 @@ body {
   max-width: 1160px; margin: 0 auto; padding: 0 24px;
   height: 72px; display: flex; justify-content: space-between; align-items: center;
 }
-.screen-header .nav-logo { font-size: 1.1rem; font-weight: 700; color: #075985; text-decoration: none; flex-shrink: 0; white-space: nowrap; }
-.screen-header .nav-links { display: flex; list-style: none; gap: 2px; align-items: center; }
-.screen-header .nav-links a { text-decoration: none; color: var(--cl-gray-700); font-size: 0.9rem; font-weight: 500; border-radius: 6px; padding: 8px 14px; white-space: nowrap; transition: background 0.15s, color 0.15s; }
+.screen-header .nav-logo { display: flex; align-items: center; gap: 8px; font-size: 1.1rem; font-weight: 700; color: #075985; letter-spacing: -0.5px; text-decoration: none; flex-shrink: 0; white-space: nowrap; }
+.screen-header .nav-links { display: flex; list-style: none; gap: 1px; align-items: center; }
+.screen-header .nav-links a { display: block; text-decoration: none; color: var(--cl-gray-700); font-size: 0.9rem; font-weight: 500; border-radius: 6px; padding: 8px 14px; white-space: nowrap; transition: background 0.15s, color 0.15s; }
 .screen-header .nav-links a:hover { background: #f3f4f6; color: #075985; }
 .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; min-height: 44px; min-width: 44px; align-items: center; justify-content: center; }
 .hamburger span { width: 24px; height: 2px; background: #374151; border-radius: 2px; transition: all 0.3s; }
