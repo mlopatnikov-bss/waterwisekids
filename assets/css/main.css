@@ -775,6 +775,12 @@ footer {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  /* Explicit colour: .footer-title previously set none and inherited from
+     `footer`. A page-level bare `p { color: #374151 }` rule (specificity 0,0,1)
+     therefore beat inheritance and painted the wordmark dark-grey on the navy
+     footer at 1.09:1. m-app.css still !important-overrides this to dark grey
+     for the white mobile footer at <=768px. */
+  color: #e0f2fe;
 }
 
 .footer-title img {
@@ -1778,6 +1784,14 @@ table tbody tr:hover {
   border-radius: var(--r-sm);
   padding: 1rem 1.25rem;
   margin: 1.25rem 0 1.75rem;
+  /* The light background is declared here, so the text colour must be too.
+     Without it the box inherited `color:#fff` from a hero ancestor and
+     rendered white-on-#f0f7ff (1.08:1) — invisible, on the element that
+     `speakable` schema points at. */
+  color: var(--gray-800);
+}
+.tldr-box a {
+  color: var(--blue-800);
 }
 .tldr-box strong {
   color: var(--blue-800);

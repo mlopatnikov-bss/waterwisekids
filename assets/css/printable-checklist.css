@@ -136,10 +136,17 @@ body {
 }
 .screen-cta-card h2 { font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 8px; }
 .screen-cta-card p { font-size: 0.95rem; color: rgba(255,255,255,0.9); margin-bottom: 16px; }
-.screen-cta-card a {
+/* Direct child only. This was `.screen-cta-card a`, which also matched inline
+   prose links inside the CTA paragraph and rendered them as full-width white
+   button blocks that chopped the sentence into three pieces. */
+.screen-cta-card > a {
   display: inline-block; padding: 12px 28px; background: white;
   color: var(--cl-teal-700); border-radius: 8px; font-weight: 700;
   text-decoration: none; font-size: 0.95rem;
+}
+.screen-cta-card p a {
+  color: #fff; font-weight: 700; text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* RESPONSIVE */
