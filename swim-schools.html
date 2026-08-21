@@ -146,6 +146,7 @@
           </select>
           <button id="heroSearchBtn" type="button" aria-label="Search for swim schools" style="background: #0f5f94; color: white; border: none; padding: 12px 16px; border-radius: 8px; font-weight: 700; cursor: pointer;">Search</button>
         </div>
+        <p id="heroSearchError" role="alert" hidden style="margin: 12px 0 0 0; color: #b91c1c; background: #fef2f2; border: 1px solid #fecaca; border-radius: 6px; padding: 8px 12px; font-size: 0.95rem; text-align: left;">Please choose a state before searching.</p>
       </div>
     </div>
   </section>
@@ -460,14 +461,32 @@
       return name.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
     }
 
+    var err = document.getElementById('heroSearchError');
+
+    function showError(on) {
+      /* aria-invalid alone gave sighted users no feedback at all -- clicking
+         Search with no state selected appeared to do nothing. */
+      if (on) {
+        state.setAttribute('aria-invalid', 'true');
+        state.style.borderColor = '#b91c1c';
+        state.style.boxShadow = '0 0 0 3px rgba(185, 28, 28, 0.15)';
+        if (err) { err.hidden = false; }
+      } else {
+        state.removeAttribute('aria-invalid');
+        state.style.borderColor = '';
+        state.style.boxShadow = '';
+        if (err) { err.hidden = true; }
+      }
+    }
+
     function go() {
       var s = state.value;
       if (!s || s === 'Select State') {
         state.focus();
-        state.setAttribute('aria-invalid', 'true');
+        showError(true);
         return;
       }
-      state.removeAttribute('aria-invalid');
+      showError(false);
       var url = '/swim-lessons/directory/' + slug(s) + '.html';
       var c = (city.value || '').trim();
       if (c) url += '?city=' + encodeURIComponent(c);
@@ -475,7 +494,7 @@
     }
 
     btn.addEventListener('click', go);
-    state.addEventListener('change', function () { state.removeAttribute('aria-invalid'); });
+    state.addEventListener('change', function () { showError(false); });
     city.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); go(); } });
   })();
   </script>
