@@ -140,7 +140,7 @@
 .faq-item { border-bottom: 1px solid var(--gray-200, #e5e7eb); padding: 1rem 0; }
 .faq-item:last-child { border-bottom: none; }
 .faq-item h3,
-.faq-item h4 { margin: 0 0 0.4rem; color: var(--blue-800, #075985); font-size: 1.05rem; }
+.faq-item h4 { margin: 0 0 0.4rem; color: var(--blue-800, #075985); font-size: 1.05rem; font-weight: 700; }
 .faq-answer { color: var(--gray-700, #374151); }
 .faq-answer p { margin: 0; }
 
@@ -153,7 +153,7 @@
   margin-top: 1rem;
 }
 .school-info h3,
-.school-info h4 { margin: 0 0 0.4rem; color: var(--blue-800, #075985); }
+.school-info h4 { margin: 0 0 0.4rem; color: var(--blue-800, #075985); font-size: 1.1rem; font-weight: 700; }
 .school-info p { margin: 0; }
 
 /* Programs grid */
