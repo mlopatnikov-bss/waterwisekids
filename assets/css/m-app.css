@@ -1750,4 +1750,37 @@
     font-size: 11px !important;
   }
 
+
+  /* ═══ MOBILE TAP TARGETS — ROUND 6 (2026-08-21 mobile-consistency render sweep)
+
+     Table-of-contents links render at 24-38px across THREE markup variants,
+     none of which reaches the 44px house standard that this same stylesheet
+     applies to every other standalone navigational link. Measured at 390px:
+
+       <a class="toc-item">                 1,735 inst / 233 pages   38.2px
+       <div class="toc-list"><a> (no class)   628 inst /  64 pages   24.0px
+       <div class="toc-item"><a>              402 inst              inner a 36px
+
+     Round 3 (line ~1450) correctly set `.toc-item { min-height: 44px }`. Round 4
+     then added `a.toc-item { min-height: 36px }` — specificity (0,1,1) beats
+     (0,1,0), so the narrower later rule silently REGRESSED the earlier 44px
+     decision to 36px. Round 5's `.toc-list a { min-height: 24px }` (0,1,1), being
+     later still, knocked the in-list case down again. The stylesheet ended up
+     holding three contradictory decisions about one element.
+
+     Resolve to 44px — the site's own stated house standard, and the value round 3
+     already chose — and cover all three variants in one rule placed last so no
+     earlier round can win on order. Padding is restated rather than inherited
+     because the round-4 9px rule only reaches two of the three variants.        */
+  .toc-list a,
+  .toc-list .toc-item a,
+  .toc-item > a,
+  a.toc-item {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    line-height: 1.4 !important;
+  }
 }
