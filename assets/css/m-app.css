@@ -1843,4 +1843,21 @@
     padding-bottom: 6px !important;
     line-height: 1.4 !important;
   }
+
+  /* ═══ TEXT FLOOR — ROUND 4 (2026-08-22 mobile-consistency render sweep) ═══
+
+     `.myth-label` / `.truth-label` on /education/water-safety-myths.html render
+     at 10.08px. Source is article.css:882, which declares `font-size: .72rem`
+     for both. That value clears the floor at a 16px root (11.52px) and fails
+     against the 14px mobile root — the identical trap documented for the
+     printable worksheets above, but in a SHARED stylesheet rather than a
+     page-level <style> block, so the earlier printable-scoped sweeps never
+     reached it. Only one page carries these classes today.
+
+     Restated as `max(11px, 0.72rem)` using the rule's OWN declared value, not
+     `1em`: `max(11px, 1em)` would resolve against the inherited parent size and
+     INFLATE these pills instead of flooring them. At a 16px root max() picks
+     0.72rem and the desktop rendering stays byte-identical.                   */
+  .myth-label,
+  .truth-label { font-size: max(11px, 0.72rem) !important; }
 }
