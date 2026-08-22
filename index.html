@@ -45,7 +45,7 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/main.css?v=20260821v" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=20260822a" />
 
   <!-- JSON-LD Schema Markup -->
   <script type="application/ld+json">
@@ -155,15 +155,18 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     }
 
+    /* 2026-08-22 visual QA: white on blue-600 #0284c7 = 4.10:1, under AA 4.5.
+       blue-700 #0369a1 = 5.19:1 and is already the site's canonical button
+       blue (see main.css .button / .package-button). */
     .btn-secondary {
-      background: var(--blue-600);
+      background: var(--blue-700);
       color: var(--white);
-      border: 2px solid var(--blue-600);
+      border: 2px solid var(--blue-700);
     }
 
     .btn-secondary:hover {
-      background: var(--blue-700);
-      border-color: var(--blue-700);
+      background: var(--blue-800);
+      border-color: var(--blue-800);
       transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(7, 89, 133, 0.3);
     }
@@ -272,6 +275,15 @@
       border-radius: 12px;
       border: 1px solid var(--gray-100);
       transition: all 0.3s;
+      /* 2026-08-22 visual QA: the grid stretches all three cards to the tallest
+         card, but each card's "Explore Guides / Browse Programs / Learn More"
+         link sat directly under a paragraph of varying length, leaving the
+         three links at three different heights (76px spread) with ragged
+         whitespace beneath. Flex column + margin-top:auto pins them to a
+         shared baseline. m-app.css forces display:block on mobile, where the
+         cards are single-column and this does not apply. */
+      display: flex;
+      flex-direction: column;
     }
 
     .offer-card:hover {
@@ -300,6 +312,8 @@
 
     .offer-card a {
       display: inline-block;
+      margin-top: auto;
+      align-self: flex-start;
       color: var(--blue-700);
       font-weight: 600;
       font-size: 0.95rem;
@@ -675,7 +689,8 @@
 
     .newsletter-form button {
       padding: 12px 28px;
-      background: var(--blue-600);
+      /* 2026-08-22 visual QA: white on blue-600 = 4.10:1 (AA 4.5). */
+      background: var(--blue-700);
       color: var(--white);
       border: none;
       border-radius: 8px;
@@ -835,7 +850,7 @@
   <section class="stats-bar">
     <div class="stats-bar-inner">
       <div class="stat-item">
-        <span class="stat-number">348</span>
+        <span class="stat-number">405</span>
         <span class="stat-label">Free Safety Guides</span>
       </div>
       <div class="stat-item">
@@ -939,7 +954,7 @@
       </div>
 
       <div style="text-align: center; margin-top: 48px;">
-        <a href="/education/" style="display: inline-block; color: var(--blue-700); font-weight: 600; font-size: 0.95rem; transition: all 0.2s;" data-cta="home-view-all-guides">View All 348 Guides →</a>
+        <a href="/education/" style="display: inline-block; color: var(--blue-700); font-weight: 600; font-size: 0.95rem; transition: all 0.2s;" data-cta="home-view-all-guides">View All 405 Guides →</a>
       </div>
     </div>
   </section>

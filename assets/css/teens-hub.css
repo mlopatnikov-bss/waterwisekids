@@ -56,6 +56,14 @@
 
         .stat {
             text-align: center;
+            /* 2026-08-22 visual QA: "Real Impact" wraps to two lines at 1.8rem
+               while the other three values are single-line, which dropped its
+               "Make a Difference" label 46px below the other three labels.
+               Stretching each .stat to the row height and pushing the label to
+               the bottom keeps all four labels on one shelf at any width. */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .stat-value {
@@ -372,5 +380,6 @@
 /* Standard site button (HTML uses .btn-primary; mirror of local-pages.css) */
 .btn-primary { display: inline-block; background: #0369a1; color: #fff; font-weight: 600; padding: 0.8rem 1.6rem; border-radius: 8px; text-decoration: none; transition: background 0.15s ease; }
 .btn-primary:hover { background: #075985; }
-.cta-section .btn-primary { background: #fff; color: #ea580c; }
-.cta-section .btn-primary:hover { background: #fff7ed; }
+/* 2026-08-22 visual QA: #ea580c on #fff = 3.56:1 at 16px (AA 4.5) -> #c2410c (5.18:1). */
+.cta-section .btn-primary { background: #fff; color: #c2410c; }
+.cta-section .btn-primary:hover { background: #fff7ed; color: #9a3412; }

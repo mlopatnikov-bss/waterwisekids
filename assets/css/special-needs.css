@@ -61,7 +61,9 @@
 
     .breadcrumb span {
       margin: 0 8px;
-      color: #888;
+      /* 2026-08-22 visual QA: #888 on #fff = 3.54:1 at 14px (AA 4.5). The
+         current-page crumb is real text, not just a separator. */
+      color: #595959;
     }
 
     section {

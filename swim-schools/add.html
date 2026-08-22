@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="630"/>
 <meta property="og:site_name" content="WaterWiseKids"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/main.css?v=20260821v" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=20260822a" />
   <style>
     /* Page-specific styles: hero, form, listings */
     .hero {
@@ -82,7 +82,9 @@
     .price-highlight {
       font-size: 1.5rem;
       font-weight: 800;
-      color: var(--orange-500);
+      /* 2026-08-22 visual QA: orange-500 #f97316 on white = 2.80:1 at 24px
+         bold (large-text AA is 3.0). #c2410c is the same ramp at 5.18:1. */
+      color: #c2410c;
     }
     .form-container {
       max-width: 800px;
@@ -153,7 +155,9 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: var(--blue-600);
+      /* 2026-08-22 visual QA: white on blue-600 #0284c7 = 4.10:1 (AA 4.5).
+         blue-700 #0369a1 is 5.19:1 and is already this site's button blue. */
+      background: var(--blue-700);
       color: white;
       font-weight: 700;
       font-size: 0.95rem;

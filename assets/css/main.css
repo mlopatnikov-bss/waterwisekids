@@ -1733,6 +1733,22 @@ table tbody tr:hover {
   color: var(--white);
 }
 
+/* 2026-08-22 visual QA: .inline-cta declares its own dark gradient background
+   and color:var(--white), then repaints .kicker / h3 / p — but NOT
+   .button-secondary, which keeps `color: var(--blue-700)` (#0369a1) from the
+   bare class rule above. Inherited white always loses to a bare class
+   selector. On the gradient the label rendered #0369a1 on a sampled
+   rgb(4,101,154) background — ~1.04:1, i.e. the button text was invisible on
+   126 pages. Same shape as the .page-hero fix directly above. */
+.inline-cta .button-secondary {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.inline-cta .button-secondary:hover {
+  border-color: var(--white);
+  color: var(--white);
+}
+
 /* Content grid — main + sidebar layout */
 .content-grid {
   display: grid;

@@ -55,7 +55,8 @@
 .gear-page .guide-body p { color: #475569; font-size: 0.95rem; margin-bottom: 1rem; }
 .gear-page .guide-body a { color: #0369a1; text-decoration: none; font-weight: 600; }
 .gear-page .guide-body a:hover { text-decoration: underline; }
-.gear-page .coming-soon { display: inline-block; background: #f1f5f9; color: #64748b; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+/* 2026-08-22 visual QA: #64748b on #f1f5f9 = 4.34:1 at 12.8px (AA 4.5). */
+.gear-page .coming-soon { display: inline-block; background: #f1f5f9; color: #475569; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
 
 /* Mobile */
 @media (max-width: 768px) {

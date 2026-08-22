@@ -88,9 +88,12 @@
 .featured-school ul li { margin: 0.4rem 0; }
 
 /* Primary button (shared) */
+/* 2026-08-22 visual QA: white on blue-600 #0284c7 = 4.10:1, under AA 4.5.
+   blue-700 #0369a1 = 5.19:1 and is already the site's canonical button
+   blue (see main.css .button / .package-button). */
 .btn-primary {
   display: inline-block;
-  background: var(--blue-600, #0284c7);
+  background: var(--blue-700, #0369a1);
   color: #fff;
   font-weight: 600;
   padding: 0.8rem 1.6rem;
@@ -98,7 +101,7 @@
   text-decoration: none;
   transition: background 0.15s ease;
 }
-.btn-primary:hover { background: var(--blue-700, #0369a1); color: #fff; }
+.btn-primary:hover { background: var(--blue-800, #075985); color: #fff; }
 
 /* Nearby-communities chips */
 .wwk-city-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.75rem; }
@@ -119,7 +122,9 @@
 .related-area-inactive {
   background: var(--gray-100, #f3f4f6);
   border: 1px solid var(--gray-200, #e5e7eb);
-  color: var(--gray-500, #6b7280);
+  /* 2026-08-22 visual QA: gray-500 #6b7280 on gray-100 #f3f4f6 = 4.39:1 at
+     14.4px, just under AA 4.5. gray-600 clears it at 6.4:1. */
+  color: var(--gray-600, #4b5563);
 }
 
 /* CTA banner */

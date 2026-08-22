@@ -123,7 +123,7 @@
 
 .pillar-card--backstroke .pillar-card-visual { background: linear-gradient(135deg, #0d9488, #14b8a6); }
 .pillar-card--backstroke .pillar-card-stroke { background: #ccfbf1; color: #0f766e; }
-.pillar-card--backstroke .pillar-card-link { color: #0d9488; }
+.pillar-card--backstroke .pillar-card-link { color: #0f766e; } /* 2026-08-22 visual QA: #0d9488 on #fff = 3.74:1 at 13.6px, needs 4.5. #0f766e is the same teal the sibling .pillar-card-stroke already uses. */
 
 .pillar-card--breaststroke .pillar-card-visual { background: linear-gradient(135deg, #7c3aed, #8b5cf6); }
 .pillar-card--breaststroke .pillar-card-stroke { background: #ede9fe; color: #6d28d9; }
@@ -131,7 +131,7 @@
 
 .pillar-card--butterfly .pillar-card-visual { background: linear-gradient(135deg, #ea580c, #f97316); }
 .pillar-card--butterfly .pillar-card-stroke { background: #fff7ed; color: #c2410c; }
-.pillar-card--butterfly .pillar-card-link { color: #ea580c; }
+.pillar-card--butterfly .pillar-card-link { color: #c2410c; } /* 2026-08-22 visual QA: #ea580c on #fff = 3.56:1 at 13.6px, needs 4.5. #c2410c is the same orange the sibling .pillar-card-stroke already uses. */
 
 /* ── SEARCH & FILTER BAR (reuse education-hub patterns) ── */
 .search-filter-bar {

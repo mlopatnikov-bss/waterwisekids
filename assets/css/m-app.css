@@ -324,6 +324,54 @@
     margin-top: 2px;
   }
 
+  /* ---- 2026-08-22 visual QA: the chip-pill treatment above only matches the
+     homepage markup (.stats-bar > .stats-bar-inner > .stat-item). /teens/ uses
+     a second variant — .stats-bar > .stat > .stat-value + .stat-label — with
+     NO .stats-bar-inner and NO .stat-item, so it received only the bare
+     `background:#fff` from .stats-bar and kept its desktop grid. Rendered at
+     390px the teens hero stats block was 326px tall (vs 98px on the homepage):
+     four full-width rows of 25.2px values with no chip, no grouping and a
+     rgba(255,255,255,0.1) background that is invisible once .hero is flattened
+     to white. Same defect family as .stat-item vs .stat elsewhere — the class
+     the stylesheet targets is not the class the page ships. ---- */
+  .stats-bar > .stat {
+    background: #e0f2fe;
+    padding: 12px 14px;
+    border-radius: 14px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .stats-bar > .stat .stat-value {
+    color: #075985 !important;
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 2px !important;
+    line-height: 1.2 !important;
+  }
+
+  .stats-bar > .stat .stat-label {
+    color: #0369a1 !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+    /* Deliberately NO font-size here: the shared "11px floor" block below
+       (.stat-label { font-size: 11px !important }) must win. An earlier draft
+       of this rule mirrored .stat-item's 0.62rem, which is 8.68px against the
+       14px mobile root and, being the more specific selector, silently beat
+       the floor. */
+  }
+
+  /* Two-up grid + symmetric padding, scoped so the homepage scroll-strip
+     variant (which needs the left-only padding) is untouched. */
+  .stats-bar:has(> .stat) {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    padding: 12px 20px !important;
+    margin-top: 16px !important;
+    overflow-x: visible;
+  }
+
   /* ═══════════════════════════════════
      SECTION DIVIDERS
   ═══════════════════════════════════ */
