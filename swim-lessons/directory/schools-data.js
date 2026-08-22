@@ -62,7 +62,7 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Waterworks Aquatics - San Francisco", chain: "Waterworks Aquatics", city: "San Francisco", state: "CA", website: "https://www.waterworksswim.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "Waterworks Aquatics - San Jose", chain: "Waterworks Aquatics", city: "San Jose", state: "CA", website: "https://www.waterworksswim.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "Waterworks Aquatics - Santa Clarita", chain: "Waterworks Aquatics", city: "Santa Clarita", state: "CA", website: "https://www.waterworksswim.com/locations/santa-clarita", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
-    { name: "Waterworks Aquatics - Torrance", chain: "Waterworks Aquatics", city: "Torrance", state: "CA", website: "https://www.waterworksswim.com/locations/torrance", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true }
+    { name: "Waterworks Aquatics - Torrance", chain: "Waterworks Aquatics", city: "Torrance", state: "CA", website: "https://www.waterworksswim.com/locations", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true }
   ],
   "CO": [
     { name: "Goldfish Swim School - Denver", chain: "Goldfish Swim School", city: "Denver", state: "CO", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
@@ -439,7 +439,7 @@ const SWIM_SCHOOLS_DATA = {
   "SD": [
     { name: "SafeSplash - Sioux Falls South", chain: "SafeSplash", city: "Sioux Falls", state: "SD", website: "https://www.safesplash.com/locations/sioux-falls-south-sd", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "SafeSplash - Sioux Falls East", chain: "SafeSplash", city: "Sioux Falls", state: "SD", website: "https://www.safesplash.com/locations/sioux-falls-east-sd", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
-    { name: "EmBe Aquatics", chain: "Independent", city: "Sioux Falls", state: "SD", website: "https://www.embe.org/program/swim-lessons/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true }
+    { name: "EmBe Aquatics", chain: "Independent", city: "Sioux Falls", state: "SD", website: "https://www.embe.org/aquatics/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true }
   ],
   "TN": [
     { name: "Goldfish Swim School - Franklin", chain: "Goldfish Swim School", city: "Franklin", state: "TN", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
