@@ -51,6 +51,18 @@
     z-index: 199;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
+  /* 2026-08-22 CSS-regression fix. 142 pages ship `<header><nav>` with no
+     `.container` wrapper, so nav spans the full viewport and the absolutely
+     positioned open drawer above rendered edge-to-edge (x=0, w=390/320) while
+     the 580 `.container`-wrapped pages inset it by 16px (x=16, w=358/288).
+     Same white panel, same centred links, but a different shadow + bottom-border
+     width. Match the majority. Scoped to bare navs only, so contained pages are
+     untouched. */
+  /* `width:auto` is load-bearing: printable-checklist.css / printable-poster.css
+     set `width:100%` on the open drawer, which over-constrains left+right and
+     would push the panel 16px off the right edge. */
+  header > nav.mobile-open .nav-links { left: 16px; right: 16px; width: auto; }
+
   nav.mobile-open .nav-links > li > a {
     padding: 12px 0;
     border-bottom: 1px solid #f3f4f6;
