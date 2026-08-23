@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="Beach warning flags in green, yellow and red flying from a pole beside a lifeguard stand above the surf">
+  <defs>
+    <linearGradient id="bfsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="bfsea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="bfsand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde9c8"/>
+      <stop offset="100%" stop-color="#f0cf9f"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#bfsky)"/>
+  <circle cx="252" cy="34" r="16" fill="#fef3c7" opacity="0.95"/>
+  <rect y="84" width="300" height="42" fill="url(#bfsea)"/>
+  <g fill="#e0f2fe" opacity="0.55">
+    <path d="M0 96h32a8 8 0 0 1 16 0h34a8 8 0 0 1 16 0h40a8 8 0 0 1 16 0h38a8 8 0 0 1 16 0h30a8 8 0 0 1 16 0h30v3H0z"/>
+    <path d="M0 111h44a8 8 0 0 1 16 0h48a8 8 0 0 1 16 0h50a8 8 0 0 1 16 0h44a8 8 0 0 1 16 0h50v3H0z"/>
+  </g>
+  <path d="M0 124q26 -7 52 0t52 0 52 0 52 0 52 0 40 0v6H0z" fill="#f8fafc" opacity="0.9"/>
+  <rect y="126" width="300" height="54" fill="url(#bfsand)"/>
+  <g>
+    <rect x="204" y="146" width="4" height="24" fill="#b45309"/>
+    <rect x="248" y="146" width="4" height="24" fill="#b45309"/>
+    <rect x="200" y="132" width="56" height="16" rx="2" fill="#fbbf24"/>
+    <rect x="200" y="132" width="56" height="4" fill="#f59e0b"/>
+    <path d="M196 132l32-18 32 18z" fill="#dc2626"/>
+    <rect x="212" y="148" width="32" height="3" fill="#92400e"/>
+  </g>
+  <g>
+    <rect x="60" y="42" width="4" height="128" rx="1.5" fill="#475569"/>
+    <circle cx="62" cy="41" r="3.5" fill="#334155"/>
+    <path d="M64 50h44l-9 11 9 11H64z" fill="#16a34a" stroke="#14532d" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M64 80h44l-9 11 9 11H64z" fill="#eab308" stroke="#854d0e" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M64 110h44l-9 11 9 11H64z" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+  <g>
+    <rect x="128" y="140" width="52" height="34" rx="3" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" transform="rotate(-6 154 157)"/>
+    <g transform="rotate(-6 154 157)">
+      <rect x="134" y="146" width="30" height="3" rx="1.5" fill="#0c4a6e"/>
+      <rect x="134" y="153" width="6" height="4" rx="1" fill="#16a34a"/>
+      <rect x="143" y="153.5" width="26" height="3" rx="1.5" fill="#cbd5e1"/>
+      <rect x="134" y="160" width="6" height="4" rx="1" fill="#eab308"/>
+      <rect x="143" y="160.5" width="26" height="3" rx="1.5" fill="#cbd5e1"/>
+      <rect x="134" y="167" width="6" height="4" rx="1" fill="#dc2626"/>
+      <rect x="143" y="167.5" width="22" height="3" rx="1.5" fill="#cbd5e1"/>
+    </g>
+  </g>
+</svg>
