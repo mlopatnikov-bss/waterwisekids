@@ -45,7 +45,7 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/main.css?v=20260822a" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=20260823b" />
 
   <!-- JSON-LD Schema Markup -->
   <script type="application/ld+json">
@@ -156,17 +156,23 @@
     }
 
     /* 2026-08-22 visual QA: white on blue-600 #0284c7 = 4.10:1, under AA 4.5.
-       blue-700 #0369a1 = 5.19:1 and is already the site's canonical button
-       blue (see main.css .button / .package-button). */
+       blue-700 #0369a1 = 5.93:1 and is already the site's canonical button
+       blue (see main.css .button / .package-button).
+       2026-08-23 visual QA: that fix left the border the same blue-700 as the
+       fill, and the hero behind it is a blue-600 -> blue-800 gradient, so the
+       button had no discernible edge (~1.1:1 against its own background) and
+       read as loose text. WCAG 1.4.11 wants 3:1 for UI component boundaries.
+       A white border matches the site's own .btn-outline-white treatment and
+       gives 4.10:1 / 7.56:1 against the two ends of the hero gradient. */
     .btn-secondary {
       background: var(--blue-700);
       color: var(--white);
-      border: 2px solid var(--blue-700);
+      border: 2px solid var(--white);
     }
 
     .btn-secondary:hover {
       background: var(--blue-800);
-      border-color: var(--blue-800);
+      border-color: var(--white);
       transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(7, 89, 133, 0.3);
     }

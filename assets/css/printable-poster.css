@@ -389,8 +389,17 @@ header nav .nav-links > li > a.active { background: #f3f4f6; color: #075985; }
   color: white;
   margin-bottom: 10px;
 }
+/* 2026-08-23 visual QA: .lead-capture styled h2/p but never `a`, so prose
+   links fell back to the browser default #0000EE on the navy panel = 1.42:1,
+   effectively unreadable. */
+.lead-capture a {
+  color: #bae6fd;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.lead-capture a:hover { color: #fff; }
 .lead-capture p {
-  color: rgba(255,255,255,0.82);
+  color: rgba(255,255,255,0.90);
   font-size: 0.95rem;
   margin-bottom: 24px;
   line-height: 1.6;

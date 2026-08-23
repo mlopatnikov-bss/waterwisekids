@@ -135,12 +135,17 @@ body {
 .screen-cta {
   max-width: 800px; margin: 0 auto 60px; padding: 0 24px;
 }
+/* 2026-08-23 visual QA: the teal-500 -> blue-600 gradient put white text at
+   2.49:1 and rgba(255,255,255,.9) body copy at 2.27:1 across all 81 printable
+   pages -- both well under AA. Moved to teal-700 -> blue-700, which keeps the
+   same blue/teal brand ramp at 5.47:1 / 5.93:1, and made the paragraph solid
+   white (rgba .9 on teal-700 is 4.76:1, solid white is 5.47:1). */
 .screen-cta-card {
-  background: linear-gradient(135deg, var(--cl-teal-500), var(--cl-blue-600));
+  background: linear-gradient(135deg, var(--cl-teal-700), var(--cl-blue-700));
   color: white; padding: 32px; border-radius: 12px; text-align: center;
 }
 .screen-cta-card h2 { font-size: 1.3rem; font-weight: 700; color: white; margin-bottom: 8px; }
-.screen-cta-card p { font-size: 0.95rem; color: rgba(255,255,255,0.9); margin-bottom: 16px; }
+.screen-cta-card p { font-size: 0.95rem; color: #fff; margin-bottom: 16px; }
 /* Direct child only. This was `.screen-cta-card a`, which also matched inline
    prose links inside the CTA paragraph and rendered them as full-width white
    button blocks that chopped the sentence into three pieces. */

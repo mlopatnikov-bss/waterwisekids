@@ -19,7 +19,7 @@
         
 
         .hero {
-            background: linear-gradient(135deg, #0284c7 0%, #14b8a6 100%);
+            background: linear-gradient(135deg, #0369a1 0%, #0f766e 100%);
             color: white;
             padding: 4rem 1.5rem;
             text-align: center;
@@ -252,8 +252,10 @@
             box-shadow: 0 10px 20px rgba(249, 115, 22, 0.2);
         }
 
+        /* 2026-08-23 visual QA: white body copy on the #f97316 end was
+           3.09:1, under AA 4.5. orange-700/800 keeps the warm CTA at 5.18:1. */
         .cta-section {
-            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%);
             color: white;
             padding: 3rem;
             border-radius: 12px;

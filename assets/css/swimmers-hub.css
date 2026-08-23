@@ -6,8 +6,10 @@
 ═══════════════════════════════════════════════════════════════════════════════ */
 
 /* ── PAGE HERO (override accent) ── */
+/* 2026-08-23 visual QA: the #0284c7 mid-stop put .hero-sub at 3.66:1.
+   blue-700 across the middle keeps the ramp and lifts it to 5.13:1. */
 .page-hero--hub {
-  background: linear-gradient(135deg, #0e7490 0%, #0284c7 50%, #0369a1 100%);
+  background: linear-gradient(135deg, #0e7490 0%, #0369a1 50%, #075985 100%);
 }
 
 /* ── PILLAR CARDS (featured stroke guides) ── */

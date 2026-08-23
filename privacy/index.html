@@ -29,20 +29,23 @@
 <meta name="twitter:description" content="Privacy Policy for WaterWiseKids. Learn how we handle your information."/>
 <meta name="twitter:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css?v=20260822a" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=20260823b" />
   <style>
     .page-header-content {
       max-width: 1100px;
       margin: 0 auto;
     }
+    /* 2026-08-23 visual QA: .page-header is a blue gradient banner (main.css
+       :2556) whose own rules set #fff / rgba(255,255,255,.9). These page-level
+       rules loaded AFTER main.css at equal specificity and re-declared
+       dark-on-white colours, so the H1 rendered at 1.03:1 and the subtitle at
+       1.04:1 -- both invisible. Colour is now left to main.css. */
     .page-header h1 {
       font-size: 2rem;
-      color: #075985;
       margin-bottom: 0.5rem;
       font-weight: 700;
     }
     .page-header p {
-      color: #475569;
       font-size: 0.9rem;
     }
     .content {

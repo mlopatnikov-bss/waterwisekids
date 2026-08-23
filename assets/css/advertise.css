@@ -304,7 +304,7 @@ main {
     }
 
 .contact-cta {
-      background: linear-gradient(135deg, #0284c7 0%, #14b8a6 100%);
+      background: linear-gradient(135deg, #0369a1 0%, #0f766e 100%);
       color: white;
       padding: 3rem;
       border-radius: 12px;
@@ -312,7 +312,10 @@ main {
       margin-bottom: 3rem;
     }
 
+/* 2026-08-23 visual QA: no colour here meant the bare h2 rule (#111827) beat
+   .contact-cta's inherited white, leaving the heading at 3.00:1 on the banner. */
 .contact-cta h2 {
+      color: #fff;
       font-size: 1.8rem;
       margin-bottom: 1rem;
     }

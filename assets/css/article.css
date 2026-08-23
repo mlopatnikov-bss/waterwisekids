@@ -311,8 +311,11 @@ a.toc-item:hover {
 }
 
 /* CTA BOX */
+/* 2026-08-23 visual QA: the teal-500 -> blue-600 ramp put white text at
+   2.49:1 and rgba(255,255,255,.85) at 2.16:1, far under AA. teal-700 ->
+   blue-700 keeps the same blue/teal identity at 5.47:1 / 5.93:1. */
 .cta-box {
-  background: linear-gradient(135deg, var(--teal-500), var(--blue-600));
+  background: linear-gradient(135deg, var(--teal-700), var(--blue-700));
   color: white;
   border: none;
   padding: 28px 24px;
@@ -325,7 +328,7 @@ a.toc-item:hover {
 
 .cta-desc {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: #fff;
   margin-bottom: 16px;
   line-height: 1.5;
 }
@@ -740,8 +743,11 @@ a.toc-item:hover {
 .sidebar-toc li a:hover {
   color: var(--blue-700);
 }
+/* 2026-08-23 visual QA: the teal-500 -> blue-600 ramp put white text at
+   2.49:1 and rgba(255,255,255,.85) at 2.16:1, far under AA. teal-700 ->
+   blue-700 keeps the same blue/teal identity at 5.47:1 / 5.93:1. */
 .sidebar-cta {
-  background: linear-gradient(135deg, var(--teal-500), var(--blue-600));
+  background: linear-gradient(135deg, var(--teal-700), var(--blue-700));
   color: white;
   border-radius: var(--r-lg);
   padding: 28px 24px;
@@ -753,7 +759,7 @@ a.toc-item:hover {
 }
 .sidebar-cta p {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: #fff;
   margin: 0 0 16px;
   line-height: 1.5;
 }

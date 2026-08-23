@@ -1821,8 +1821,9 @@ table tbody tr:hover {
   border-radius: var(--r-lg);
   margin: 2rem 0;
 }
+/* 2026-08-23 visual QA: blue-300 on the inline-cta panel is 4.02:1; blue-200 is 5.28:1. */
 .inline-cta .kicker {
-  color: var(--blue-300);
+  color: var(--blue-200);
 }
 .inline-cta h3 {
   color: var(--white);
@@ -2708,9 +2709,13 @@ body > section.related-articles {
    main.css but whose definitions previously lived only in component
    stylesheets (local-pages.css, teens.css, special-needs.css). Copied verbatim
    so pages render as designed. Additive only — no existing rule changed. */
+/* 2026-08-23 visual QA: white on blue-600 #0284c7 is 4.10:1, under AA 4.5.
+   local-pages.css and teens-hub.css were moved to blue-700 #0369a1 (5.93:1)
+   on 2026-08-22 but this main.css copy was missed, leaving 56 main.css-only
+   pages (51 directory state pages + homepage group) still failing. */
 .btn-primary {
   display: inline-block;
-  background: var(--blue-600, #0284c7);
+  background: var(--blue-700, #0369a1);
   color: #fff;
   font-weight: 600;
   padding: 0.8rem 1.6rem;
@@ -2718,7 +2723,7 @@ body > section.related-articles {
   text-decoration: none;
   transition: background 0.15s ease;
 }
-.btn-primary:hover { background: var(--blue-700, #0369a1); color: #fff; }
+.btn-primary:hover { background: var(--blue-800, #075985); color: #fff; }
 .info-box { background: #dbeafe; border-left: 4px solid #0284c7; padding: 1.5rem; margin: 1.5rem 0; border-radius: 6px; }
 .wwk-highlight-box {
   background: var(--blue-50, #eff8ff);
