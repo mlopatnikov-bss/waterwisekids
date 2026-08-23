@@ -717,6 +717,24 @@
     left: 0;
     right: 0;
     z-index: 300;
+
+    /* Reset the desktop <nav> box that main.css applies to every bare `nav`
+       element (main.css:530 `nav { height: 72px; gap: var(--spacing-lg) }` and
+       main.css:1574 `@media (max-width:768px) nav { flex-wrap: wrap }`).
+       This bar is a <nav>, so it inherited all three:
+         - height: 72px forced the bar 12px taller than its 60px content, so the
+           `body { padding-bottom: 68px }` gutter below under-reserved by 4px and
+           the last 4px of the footer sat underneath the bar (measured on 140 of
+           154 sampled pages; the printable templates, which never load main.css,
+           already rendered the correct 60px).
+         - flex-wrap: wrap + a 16px row-gap made a fixed-height bar able to wrap
+           to a second row that the 72px height would then clip.
+         - gap: var(--spacing-lg) added 16px of column gap, eating horizontal
+           room on the 5-item strip at 320px.
+       Class beats element, so no !important is needed. Found by rendering. */
+    height: auto;
+    flex-wrap: nowrap;
+    gap: 0;
     background: rgba(255,255,255,0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
