@@ -65,7 +65,10 @@ header nav {
 header nav .nav-logo { display: flex; align-items: center; gap: 8px; font-size: 1.1rem; font-weight: 700; color: #075985; letter-spacing: -0.5px; text-decoration: none; flex-shrink: 0; white-space: nowrap; }
 header nav .nav-links { display: flex; list-style: none; gap: 1px; align-items: center; }
 header nav .nav-links a { display: block; text-decoration: none; color: #374151; font-size: 0.9rem; font-weight: 500; border-radius: 6px; padding: 8px 14px; white-space: nowrap; transition: background 0.15s, color 0.15s; }
-header nav .nav-links a:hover { background: #f3f4f6; color: #075985; }
+header nav .nav-links a:hover,
+header nav .nav-links > li > a.active { background: #f3f4f6; color: #075985; }
+/* css-regression-checker 2026-08-23: mirrors main.css `.nav-links > li > a.active`.
+   See the matching note in printable-checklist.css. */
 .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; min-height: 44px; min-width: 44px; align-items: center; justify-content: center; }
 .hamburger span { display: block; width: 24px; height: 2px; background: #374151; border-radius: 2px; transition: all 0.3s; }
 
@@ -483,7 +486,8 @@ header nav .nav-links a:hover { background: #f3f4f6; color: #075985; }
    were overriding it (pale blue 14.4px instead of grey 11.5px italic). */
 footer { background: #0c4a6e; color: #e0f2fe; padding: 2.5rem 1.5rem 1.5rem; text-align: center; margin: 40px -16px 0; }
 footer > div { max-width: 1100px; margin: 0 auto; }
-footer .footer-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: #fff; }
+/* css-regression-checker 2026-08-23: was #fff; re-assert main.css's #e0f2fe. */
+footer .footer-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: #e0f2fe; }
 footer .footer-title img { display: inline; vertical-align: middle; }
 footer .footer-tagline { font-size: 0.9rem; color: #93c5fd; margin-bottom: 1.5rem; }
 footer .footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
@@ -570,3 +574,13 @@ footer .footer-bottom a:hover { color: #bae6fd; }
 .lead-privacy           { font-size: max(11px, 0.75rem); }
 .emergency-content p    { font-size: max(11px, 0.78rem); }
 .watcher-content p      { font-size: max(11px, 0.75rem); }
+
+/* css-regression-checker 2026-08-23: the 2026-08-20 mirror below re-asserted
+   `body{line-height:1.6}` for the shared chrome but missed main.css:168, a BARE
+   `p { line-height: 1.7 }` rule. Every footer text node (.footer-title,
+   .footer-tagline, .footer-contact, .footer-bottom p) is a <p>, so the shared
+   footer ran 6% tighter on the 82 printables than on the other 655 pages
+   (17.6px title: 28.16px vs 29.92px). Mirror the bare rule, chrome-scoped only. */
+footer p {
+  line-height: 1.7;
+}

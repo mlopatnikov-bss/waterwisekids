@@ -86,7 +86,12 @@
         h1 { font-size: 2.5rem; color: #075985; margin-bottom: 1.5rem; font-weight: 700; }
         h2 { font-size: 2rem; color: #075985; margin-top: 3rem; margin-bottom: 1.5rem; font-weight: 700; }
         h3 { font-size: 1.3rem; color: #0369a1; margin-bottom: 1rem; font-weight: 600; }
-        p, li { font-size: 1rem; line-height: 1.7; color: #374151; margin-bottom: 1rem; }
+        /* css-regression-checker 2026-08-23: was a BARE `p, li` selector. Nav links live
+           in <li>, so line-height:1.7 leaked into the shared nav (24.48px vs 23.04px
+           sitewide) and the colour/font-size were one unclassed footer <p> away from
+           repainting the wordmark dark-grey on navy - the exact failure main.css:778
+           documents. Scoped to <main>; .hero-sub keeps its margin below. */
+        main p, main li { font-size: 1rem; line-height: 1.7; color: #374151; margin-bottom: 1rem; }
         .info-box { background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem; }
         .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
         .info-item { background: white; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #0284c7; }
@@ -147,6 +152,7 @@
         .page-hero .hero-sub {
           font-size: 1.1rem;
           line-height: 1.55;
+          margin-bottom: 1rem; /* preserved from the former bare `p` rule */
           color: rgba(255, 255, 255, 0.9);
           max-width: 640px;
           margin: 0 auto;
