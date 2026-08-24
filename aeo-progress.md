@@ -1442,3 +1442,48 @@ All three now sit at a **100% question ratio on content H2s**. Utility headings 
 **Note — no headless render this run:** the sandbox had no chromium cached and installing one conflicts with the mandatory npm-cache purge. Mitigated by the DOM-signature equality check above, which for a text-only diff is a stronger guarantee than a screenshot.
 
 **Backlog — 35 `/education/` articles remain with <50% question H2s.** Next by word count: `community-pool-swim-lessons-vs-swim-school` (2,420, 2/7), `water-slide-safety-checklist` (2,361, 2/7), `swim-strokes-guide-kids` (2,351, 3/7), `new-jersey-pool-fence-law` (2,328, 1/7), `indoor-pool-safety-checklist` (2,310, **0/5**), `national-water-safety-action-plan-explained` (2,208, 1/11), `daycare-school-water-safety-questions-checklist` (2,204, **0/5**), `water-rescue-reach-throw-dont-go-card` (2,173, 1/7), `rolling-recovery-jump-recovery-methods` (2,123, **0/5**), `end-of-summer-swim-skills-report-card` (2,117, 1/7), `swim-milestones-by-age` (2,113, 3/8), `spot-drowning-warning-signs-card` (2,101, **0/6**), `independent-swimming-readiness-checklist` (2,017, **0/5**), `free-reduced-swim-lessons-make-a-splash` (2,007, **0/5**), `drowning-cpr-quick-card` (2,002, **0/5**). The `*-card` and `*-checklist` pages are the collision-prone cluster — **run the sitewide 0.80 dup check before committing**, it is the norm there, not the exception. Behind that: 29 `swim-lessons/directory/{state}.html` pages still lack a TL;DR (alabama, alaska, arkansas, connecticut, delaware, hawaii, idaho, iowa, kansas, kentucky, louisiana, maine, mississippi, montana, nebraska, nevada, new-hampshire, new-mexico, north-dakota, oklahoma, oregon, rhode-island, south-dakota, utah, vermont, washington-dc, west-virginia, wyoming — `directory/index.html` is a listing page, excluded); plus `british-swim-school/{jersey-shore,northwest-philadelphia}.html`, `teens/scholarships.html`, `tools/family-water-safety-plan.html`.
+
+---
+
+## Run 2026-08-24 — Batch 43: the backlog was scoped to `/education/` only
+
+**Headline finding: the AEO backlog has only ever tracked `/education/`, and that hid a class of failing pages.** Re-scoring all 658 indexable pages live (not trusting the Batch-42 list) returned 71 pages under 50% question H2s — but **34 of them sit outside `/education/`** and had therefore never entered the queue. Among them are genuine long-form articles, not hubs: `special-needs-swimming.html` (3,514w, 1/7) was the single largest failing real article on the site and had never been picked up. **Widen the scoring scope, not just the queue depth.**
+
+**Listing pages are false positives — exclude the class, don't "fix" it.** `swim-lessons/directory/new-jersey.html` scored 0/4 and looked like the #2 target. Inspecting it showed 47 `<h3>` school listings and four statement H2s that are correctly statements (`Cities We Cover`, `Local Swim Lesson Guides in New Jersey`). Same for `pennsylvania.html`, `education/index.html`, `statistics/state-of-drowning-prevention/index.html`, and the `*/index.html` hubs. Converting those to questions would have been active damage to the money product. **A low question ratio on a listing page is not a defect.**
+
+**Optimized this run (3 files):**
+
+| File | Words | H2 question ratio | Other changes |
+|---|---|---|---|
+| `special-needs-swimming.html` | 3,514 | 1/7 → **7/7** | — |
+| `adult-swimming-lessons.html` | 1,611 | 1/7 → **6/7** | FAQPage 5 → **8** Q&A; +CDC citation |
+| `education/daycare-school-water-safety-questions-checklist.html` | 1,871 | 0/5 → **5/5** | +CDC statistic |
+
+`adult-swimming-lessons.html` sits at 6/7 because `Common Questions About Adult Swim Lessons` is a FAQ container heading, left as a statement per the utility-heading convention.
+
+### Method notes
+
+**Two different replacement strategies were required in the same run — a text-keyed table would have silently no-opped.** The daycare file stores emoji as entities (`&#x1F50D;`) while the two top-level files store them raw, so `raw_html.count(str(h2_node))` returned **0 for all 8 daycare headings** and **1 for every top-level heading**. Confirms the standing rule: bs4 re-serializes entities, so never string-match bs4 output against the raw file. Used **id-keyed inner-replacement** on the daycare file (ids present, emoji prefix re-attached programmatically) and **outerHTML replacement with an asserted `count==1`** on the two top-level files (no heading ids exist there at all). Every substitution asserted before and after.
+
+**The 0.80 dup check found 7 collisions in 16 proposed headings — and twice the right answer was to defer, not rephrase.** Checked against **6,672 question headings sitewide**. Worst was `How Do You Overcome Fear of Water as an Adult?` at **0.95** against `education/adult-learn-to-swim.html`, which is the dedicated page for that query — and which itself carries two near-duplicate headings 0.95 apart internally (pre-existing, flagged below). Similarly `Is Aquatic Therapy the Same Thing as a Swim Lesson?` hit 0.90 against `education/aquatic-therapy-kids.html`. In both cases the hub was rephrased to a *decision* query (`Should Your Child Do Aquatic Therapy, Swim Lessons, or Both?`) so the dedicated page keeps the *definitional* query. Final state: **0 collisions**.
+
+**Speakable was verified, not extended.** Both top-level pages carry only `{.tldr-box, h1}` versus the education template's four selectors. Resolving the education selectors against them showed `.article-body`, `.article`, `<article>` and `<main>` **all return 0** — those pages use an older template with no article wrapper. Adding the richer selector list would have recreated the inert-speakable bug of 2026-08-19. Left as-is; both selectors resolve to 1.
+
+**Citation/statistic gaps closed from the site's own canonical phrasings, not invented.** `adult-swimming-lessons.html` had only one authoritative org (Red Cross); `daycare-school-water-safety-questions-checklist.html` had five outbound authority links but **zero attributed numbers**. Both fixed by grepping the sitewide canonical CDC phrasing first and matching it (`roughly 4,000 fatal unintentional drownings each year`, `leading cause of unintentional injury death for children ages 1–4`), both linked to `cdc.gov/drowning/data-research/facts/`.
+
+### Validation
+- Tag balance `tagerr=0 / stackleft=0`, nested anchors `0`, unsubstituted `__PLACEHOLDER__` `0` on all three.
+- JSON-LD parses clean; entity leaks inside JSON-LD **0**.
+- **FAQ drift 0** across 6 / 8 / 5 Q&A, checked tag-stripped and whitespace-normalised, with `Q:`/`A:` prefixes stripped before comparison.
+- DOM signature diff vs HEAD (scripts stripped): `special-needs-swimming.html` **byte-identical, 359/359** (heading text only). The other two differ by **exactly +1 `<a>`** — the added CDC citation. No other structural change.
+- Brand-voice ownership scan: **0 hits** on all three.
+- Link check: all internal hrefs and `#` anchors resolve. One anchor/destination mismatch flagged and **dismissed as a false positive** — `American Academy of Pediatrics` → `healthychildren.org` is correct, that is the AAP's official parent-facing site.
+- `sitemap.xml` lastmod bumped for **exactly these 3 URLs** and re-parsed clean (635 entries). No blanket bump.
+
+### Flagged for Michael — not changed
+1. **`education/daycare-school-water-safety-questions-checklist.html` has meaning carried by an `<em>` that JSON-LD strips.** The visible line reads *"Vague answers such as 'someone is always watching' <em>are</em> the answer"* — the italic is what makes it parse. In the FAQ schema the emphasis is gone and the sentence reads as self-contradictory to a machine reading it. The answer is otherwise verbatim, so this is a copy decision, not a drift bug. Suggest rewording the visible sentence so it stands alone.
+2. **`education/adult-learn-to-swim.html` carries two near-duplicate question headings on the same page** (`How do I overcome fear of water as an adult?` and `How Can You Overcome Fear of Water as an Adult?`, 0.95). Pre-existing, self-cannibalizing.
+3. **`adult-swimming-lessons.html` has two separate FAQ containers** (`Common Questions About Adult Swim Lessons`, 6 Q&A, and `Frequently Asked Questions`, 2 Q&A). Now unified in the schema at 8 Q&A, but the page structure remains split.
+
+### Backlog
+**68 pages remain under 50% question H2s**, of which roughly 34 are `/education/` and **~30 are non-education pages that were never queued** — including `teens.html`, `swim-lessons-monmouth-county-kids.html`, `swim-lessons-jersey-shore.html`, `swim-lessons-ocean-county-nj.html`, `british-swim-school/{jersey-shore,northwest-philadelphia}.html`, and the `swim-lessons/{brick,howell,asbury-park}-nj.html` town pages. Screen each for listing-vs-article before queueing. Next by size among true articles: `education/swim-strokes-guide-kids.html` (1,749w, 3/7), `education/community-pool-swim-lessons-vs-swim-school.html` (1,701w, 2/7), `education/autism-wandering-water-safety.html` (1,699w, 4/9), `education/new-jersey-pool-fence-law.html` (1,617w, 1/7).
