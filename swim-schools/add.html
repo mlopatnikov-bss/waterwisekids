@@ -187,10 +187,12 @@
       padding: 1.25rem 0;
     }
     .faq-item:last-child { border-bottom: none; }
-    .faq-question {
+    /* 0-2-0 so it outranks `.wwk-local-content h3` (0-1-1); keeps <h3> identical to the former <div> */
+    .wwk-local-content .faq-question {
       font-weight: 600;
       color: var(--blue-700);
       font-size: 1rem;
+      margin-top: 0;
       margin-bottom: 0.5rem;
     }
     .faq-answer {
@@ -520,37 +522,37 @@
       <h2>Frequently Asked Questions</h2>
 
       <div class="faq-item">
-        <div class="faq-question">How long does it take for my school to appear?</div>
+        <h3 class="faq-question">How long does it take for my school to appear?</h3>
         <div class="faq-answer">Most schools appear in our directory within 24-48 business hours. We review all submissions to ensure accuracy and quality.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question">Can I upgrade to a Featured Listing later?</div>
+        <h3 class="faq-question">Can I upgrade to a Featured Listing later?</h3>
         <div class="faq-answer">Absolutely. You can start with a free listing and upgrade to Featured ($49/month) anytime through your account dashboard.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question">What if I have multiple locations?</div>
+        <h3 class="faq-question">What if I have multiple locations?</h3>
         <div class="faq-answer">Submit a separate form for each location. Each gets its own profile. Contact us about multi-location pricing.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question">Can I edit my listing after it's live?</div>
+        <h3 class="faq-question">Can I edit my listing after it's live?</h3>
         <div class="faq-answer">Yes. You'll have access to an account dashboard where you can update your hours, programs, description, and contact info anytime.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question">Do you charge a commission on inquiries?</div>
+        <h3 class="faq-question">Do you charge a commission on inquiries?</h3>
         <div class="faq-answer">No. You only pay the listing fee (if you upgrade). We don't take a cut of your business. Every inquiry is yours to keep.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question">What information will be public?</div>
+        <h3 class="faq-question">What information will be public?</h3>
         <div class="faq-answer">Your school name, location, phone, website, age groups, programs, and description will be public. Your email is private and only shown to parents who submit the contact form.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question">Can I remove my listing later?</div>
+        <h3 class="faq-question">Can I remove my listing later?</h3>
         <div class="faq-answer">Of course. Contact us anytime to pause or delete your listing. No penalty.</div>
       </div>
     </section>

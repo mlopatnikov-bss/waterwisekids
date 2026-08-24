@@ -284,6 +284,8 @@
     }
 
     .faq-question {
+      /* pinned: keeps <h3> visually identical to the former <div> */
+      margin-top: 0;
       font-size: 18px;
       font-weight: 700;
       color: #0d4d77;
