@@ -1711,7 +1711,12 @@ table tbody tr:hover {
   padding: 0.65rem 1.4rem;
   background: transparent;
   color: var(--blue-700);
-  border: 2px solid var(--blue-300);
+  /* 2026-08-24 visual QA: blue-300 (#7cc8fb) as the only visible boundary of an
+     outline control measures 1.82:1 against the white card it sits on — WCAG
+     1.4.11 non-text contrast wants 3:1. blue-600 (#0284c7) measures 4.10:1 and
+     keeps the light-outline look; hover moves to blue-800 (7.56:1) so the state
+     change stays legible. */
+  border: 2px solid var(--blue-600);
   border-radius: var(--r-md);
   font-size: 0.95rem;
   font-weight: 600;
@@ -1719,7 +1724,7 @@ table tbody tr:hover {
   transition: border-color 0.15s ease, color 0.15s ease;
 }
 .button-secondary:hover {
-  border-color: var(--blue-600);
+  border-color: var(--blue-800);
   color: var(--blue-700);
 }
 .page-hero .button-secondary,
@@ -1747,6 +1752,28 @@ table tbody tr:hover {
 .inline-cta .button-secondary:hover {
   border-color: var(--white);
   color: var(--white);
+}
+
+/* 2026-08-24 visual QA: the 8/22 fix above repainted .button-secondary for this
+   panel but left its sibling — the PRIMARY .button — alone. `.button` fills
+   with var(--blue-700) #0369a1 and carries no border and no shadow, while the
+   .inline-cta gradient *ends* at that exact colour
+   (linear-gradient(135deg, --blue-800 0%, --blue-700 100%)). Sampled at the
+   rendered pixels the button edge measured 1.15:1 against the panel behind it
+   (WCAG 1.4.11 wants 3:1) — the primary call to action was a near-invisible
+   block sitting next to a clearly outlined secondary, inverting the hierarchy
+   on 126 pages. White fill on this panel measures 5.93:1 and matches what the
+   homepage hero already does for a primary button on blue.
+   The :hover override is required, not cosmetic: the bare `.button:hover` rule
+   swaps the fill to var(--blue-800) — the gradient's *start* colour — which
+   would re-create the identical defect on hover. */
+.inline-cta .button {
+  background: var(--white);
+  color: var(--blue-800);
+}
+.inline-cta .button:hover {
+  background: var(--blue-50);
+  color: var(--blue-800);
 }
 
 /* Content grid — main + sidebar layout */
