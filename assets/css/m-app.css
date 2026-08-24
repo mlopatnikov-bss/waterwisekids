@@ -1023,6 +1023,11 @@
     display: inline-flex !important;
     align-items: center !important;
     min-height: 44px !important;
+    /* 2026-08-24: min-height alone left "← Back" at 42.3px wide (text-width
+       bound), 1.7px short of the 44px target. min-width completes the pass;
+       inline-flex + flex-start keeps the label visually unmoved. */
+    min-width: 44px !important;
+    justify-content: flex-start !important;
   }
 
   .breadcrumb a,
@@ -1603,6 +1608,8 @@
     display: inline-flex !important;
     align-items: center !important;
     min-height: 44px !important;
+    min-width: 44px !important;
+    justify-content: flex-start !important;
   }
 
   /* --- Sidebar table-of-contents: 28px (273 pages) ------------------------- */
