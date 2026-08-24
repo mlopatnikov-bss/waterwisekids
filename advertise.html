@@ -233,24 +233,24 @@
       <h2 style="text-align: center; margin: 0 0 32px 0; color: #13304a; font-size: 24px; font-weight: 700; font-family: inherit;">Get Started Today</h2>
       <form action="https://formspree.io/f/mojpyqdo" method="POST" style="background: white; padding: 32px; border-radius: 22px; border: 1px solid #dbe8f0; font-family: inherit;" id="advertiseForm">
         <div style="margin-bottom: 16px;">
-          <label style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Name *</label>
-          <input type="text" name="name" required style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+          <label for="adv-name" style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Name *</label>
+          <input type="text" name="name" required id="adv-name" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
         </div>
         <div style="margin-bottom: 16px;">
-          <label style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">School Name *</label>
-          <input type="text" name="school_name" required style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+          <label for="adv-school-name" style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">School Name *</label>
+          <input type="text" name="school_name" required id="adv-school-name" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
         </div>
         <div style="margin-bottom: 16px;">
-          <label style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Email *</label>
-          <input type="email" name="email" required style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+          <label for="adv-email" style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Email *</label>
+          <input type="email" name="email" required id="adv-email" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
         </div>
         <div style="margin-bottom: 16px;">
-          <label style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Phone</label>
-          <input type="tel" name="phone" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+          <label for="adv-phone" style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Phone</label>
+          <input type="tel" name="phone" id="adv-phone" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
         </div>
         <div style="margin-bottom: 16px;">
-          <label style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Interested In *</label>
-          <select name="package" required style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+          <label for="adv-package" style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Interested In *</label>
+          <select name="package" required id="adv-package" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
             <option value="">Select Package</option>
             <option>Local Listing ($49/mo)</option>
             <option>Regional Package ($199/mo)</option>
@@ -259,8 +259,8 @@
           </select>
         </div>
         <div style="margin-bottom: 24px;">
-          <label style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Message</label>
-          <textarea name="message" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box; height: 100px;"></textarea>
+          <label for="adv-message" style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Message</label>
+          <textarea name="message" id="adv-message" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box; height: 100px;"></textarea>
         </div>
         <input type="hidden" name="_subject" value="WaterWiseKids Advertising Inquiry">
         <input type="text" name="_gotcha" style="display:none">
