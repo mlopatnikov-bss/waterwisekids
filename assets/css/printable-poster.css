@@ -63,13 +63,15 @@ header nav {
   position: relative;
 }
 header nav .nav-logo { display: flex; align-items: center; gap: 8px; font-size: 1.1rem; font-weight: 700; color: #075985; letter-spacing: -0.5px; text-decoration: none; flex-shrink: 0; white-space: nowrap; }
+/* css-regression-checker 2026-08-24: mirrors main.css `.nav-logo:hover`. */
+header nav .nav-logo:hover { color: #0369a1; }
 header nav .nav-links { display: flex; list-style: none; gap: 1px; align-items: center; }
 header nav .nav-links a { display: block; text-decoration: none; color: #374151; font-size: 0.9rem; font-weight: 500; border-radius: 6px; padding: 8px 14px; white-space: nowrap; transition: background 0.15s, color 0.15s; }
 header nav .nav-links a:hover,
 header nav .nav-links > li > a.active { background: #f3f4f6; color: #075985; }
 /* css-regression-checker 2026-08-23: mirrors main.css `.nav-links > li > a.active`.
    See the matching note in printable-checklist.css. */
-.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; min-height: 44px; min-width: 44px; align-items: center; justify-content: center; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; color: #374151; min-height: 44px; min-width: 44px; align-items: center; justify-content: center; }
 .hamburger span { display: block; width: 24px; height: 2px; background: #374151; border-radius: 2px; transition: all 0.3s; }
 
 @media (max-width: 768px) {
