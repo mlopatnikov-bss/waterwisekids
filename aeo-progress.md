@@ -1487,3 +1487,46 @@ All three now sit at a **100% question ratio on content H2s**. Utility headings 
 
 ### Backlog
 **68 pages remain under 50% question H2s**, of which roughly 34 are `/education/` and **~30 are non-education pages that were never queued** — including `teens.html`, `swim-lessons-monmouth-county-kids.html`, `swim-lessons-jersey-shore.html`, `swim-lessons-ocean-county-nj.html`, `british-swim-school/{jersey-shore,northwest-philadelphia}.html`, and the `swim-lessons/{brick,howell,asbury-park}-nj.html` town pages. Screen each for listing-vs-article before queueing. Next by size among true articles: `education/swim-strokes-guide-kids.html` (1,749w, 3/7), `education/community-pool-swim-lessons-vs-swim-school.html` (1,701w, 2/7), `education/autism-wandering-water-safety.html` (1,699w, 4/9), `education/new-jersey-pool-fence-law.html` (1,617w, 1/7).
+
+---
+
+## Run 2026-08-25 — Batch 44: the largest true article on the backlog, and a step-by-step card that had no HowTo
+
+Re-scored **all 741 HTML files** in a fresh `origin/live` clone rather than trusting the Batch-43 backlog list (per the standing rule: re-derive scope every run). 55 indexable pages with ≥4 H2s and ≥900 words scored under 50% question H2s. After screening out the listing class (`education/index.html` at 14,571w/356 `<h3>`, `swim-lessons/directory/{new-jersey,pennsylvania}.html`, `aquatic-jobs/index.html`, `scholarships/index.html` — all correctly statement-headed), the largest remaining **true articles** were the three optimized below.
+
+**Optimized this run (3 files):**
+
+| File | Words | H2 question ratio | Other changes |
+|---|---|---|---|
+| `education/swim-lesson-levels-explained.html` | 3,521 | 6/16 → **13/16** | — |
+| `education/swimtastic-safesplash-swimlabs-comparison.html` | 2,884 | 4/11 → **8/11** | — |
+| `education/water-rescue-reach-throw-dont-go-card.html` | 2,795 | 2/13 → **8/13** | **+HowTo JSON-LD (4 steps)** |
+
+All three finished at **100% of convertible H2s**. The residual non-question headings are the three utility headings the site convention leaves alone (`📚 Authoritative Sources`, `Frequently Asked Questions`, `Keep Reading`), plus two CTA headings on the rescue card (the printable block and the email-capture block).
+
+### Method notes
+
+**The numbered-ladder page needed a heading pattern, not free rewriting.** `swim-lesson-levels-explained.html` carries six sequential `Level N: <skill>` H2s. Converting them to bare questions would have destroyed the scannable ladder *and* produced six sibling headings ~0.9 similar to each other. Keeping the `Level N:` label as a prefix and making only the predicate a question (`Level 3: When Do Kids Start Learning Strokes?`) preserved the ladder and kept intra-batch similarity below 0.80 on every pair.
+
+**Three headings on the comparison page were questions that didn't end in one.** `🐬 What Is Swimtastic? The Beginner-Focused Brand` reads as a question to a human but terminates in a label, so a heading-text match against a query stops at the wrong token. Re-formed as `🐬 What Is Swimtastic, and Which Ages Is It Built For?` — same content, extractable terminus.
+
+**One collision, and the fix was to re-aim the section, not reword it.** `Step 3: Why Shouldn't You Swim Out to a Drowning Person?` hit **0.826** against this page's own FAQ `<h3>` (`Why shouldn't I just swim out to save a drowning person?`) — the self-cannibalization pattern flagged in Batch 43. Instead of paraphrasing, the H2 was pointed at the query the *section* uniquely answers (the exception): **`Step 3: When Is It Ever Safe to Go In After Someone?`** The FAQ keeps the "why not" query; the section owns the "when is it OK" query. Final: **0 collisions across 17 proposed headings vs 6,720 question headings sitewide.** Zero intra-batch collisions.
+
+**Two emoji encodings again, in the same run.** `water-rescue-*` stores emoji as entities (`&#x1F91A;`), `swimtastic-*` stores them raw, `swim-lesson-levels-*` has none. Handled by id-keyed **raw-file** regex replacement that captures and re-emits the leading emoji/entity prefix verbatim, with `count==1` asserted per heading. bs4 output was never string-matched against the raw file.
+
+**HowTo step text pulled programmatically.** Four steps for the rescue card, each the verbatim first `<p>` of its section, with an assertion that no lead `<p>` ends in a colon (the list-stem trap from Batch 42). Each step `url` anchors to a real `id`.
+
+### Validation
+- **DOM signature diff vs HEAD, scripts stripped: 522/522, 234/234, 243/243 elements — tag + id + class sequence byte-identical on all three.** Only `<h2>` inner text changed; every `<h2 id>` preserved. Zero layout regression surface, so no render sweep was warranted for a text-only diff.
+- Head integrity parsed with **html5lib**: 16 metas in `<head>`, **0 metas in `<body>`**, canonical in head on all three (no unescaped-quote break).
+- JSON-LD parses clean: `[Article, BreadcrumbList, FAQPage]` ×2 and `[Article, BreadcrumbList, FAQPage, HowTo]`. No HTML entities leaked inside JSON-LD.
+- **FAQ answer drift 0** across 6 / 5 / 6 Q&A (tag-stripped, whitespace-normalised).
+- **All 4 HowTo step texts confirmed verbatim** in rendered text; all 4 anchors resolve.
+- Speakable resolved with soupsieve, not grepped: all four selectors → exactly 1 match on each file.
+- In-page `#` anchors all resolve. TOC labels left as short non-verbatim labels, per Batch 41/42 precedent.
+- Meta descriptions unchanged (155 / 158 / 146 decoded). Unsubstituted `__PLACEHOLDER__` 0. Nested anchors 0. Brand-voice ownership scan **0 hits**.
+- Citations/statistics were already present and hyperlinked on all three (CDC, AAP/healthychildren.org, Red Cross, NDPA, USCG) — nothing invented, nothing added.
+- `dateModified` bumped to 2026-08-25 in all three Article schemas; `sitemap.xml` lastmod bumped for **exactly these 3 URLs** and re-parsed clean (636 entries). No blanket bump.
+
+### Backlog
+**51 true-article pages remain under 50% question H2s** (13 listing-class pages excluded as correct-by-design, not queued). Next by word count: `education/swim-milestones-by-age.html` (2,574w, 3/11), `education/water-slide-safety-checklist.html` (2,545w, 2/12), `education/indoor-pool-safety-checklist.html` (2,494w, **0/10**), `education/community-pool-swim-lessons-vs-swim-school.html` (2,412w, 2/10), `education/ymca-open-doors-swim-lesson-assistance.html` (2,401w, 4/11), `education/swim-strokes-guide-kids.html` (2,341w, 3/10), `education/aqua-tots-nj-vs-local-swim-schools.html` (2,331w, 4/11), `education/new-jersey-pool-fence-law.html` (2,320w, 1/10). The `*-card` / `*-checklist` cluster dominates the next tier — **run the sitewide 0.80 dup check before committing there, collisions are the norm.** Nine non-education pages also remain (`swim-schools.html`, `find-swim-lessons.html`, `british-swim-school/{jersey-shore,northwest-philadelphia}.html`, and five `swim-lessons/*` town pages) — screen each for listing-vs-article first.
