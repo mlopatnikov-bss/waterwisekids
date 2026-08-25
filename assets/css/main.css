@@ -840,6 +840,12 @@ footer .footer-bottom,
 footer .footer-bottom p {
   font-size: 0.8rem;
   color: #7dd3fc;
+  /* 2026-08-25 css-regression sweep: this <p> is the last node in the footer, so
+     the generic `p { margin-bottom: 1rem }` left 16px of dead space below it and
+     made the footer 292px tall on main.css pages vs 275px on printables (whose
+     standalone sheets set no generic p margin). Zero it — unifies the two and
+     removes the gap. */
+  margin-bottom: 0;
 }
 
 footer .footer-bottom a {

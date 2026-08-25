@@ -496,7 +496,19 @@ header nav .nav-links > li > a.active { background: #f3f4f6; color: #075985; }
    reuses .footer-tagline inside .poster-footer, and these unscoped rules
    were overriding it (pale blue 14.4px instead of grey 11.5px italic). */
 footer { background: #0c4a6e; color: #e0f2fe; padding: 2.5rem 1.5rem 1.5rem; text-align: center; margin: 40px -16px 0; }
-footer > div { max-width: 1100px; margin: 0 auto; }
+/* 2026-08-25 css-regression sweep: this stood at max-width:1100px with no side
+   gutter, while every main.css page wraps the same footer markup in `.container`
+   (max-width:1160px; padding:0 24px). Result was a 6px x-shift and a 12px-narrower
+   footer column on printables only. Mirror `.container` exactly.
+   See [[standalone_stylesheet_drift]]. */
+footer > div { max-width: 1160px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+/* On mobile `footer` itself already carries m-app.css's `padding:20px !important`.
+   Adding a second gutter here would double-inset the printable footer, so zero it
+   out below 768px — matching the `footer > .container` reset in m-app.css. */
+@media (max-width: 768px) {
+  footer > div { padding: 0; }
+}
 /* css-regression-checker 2026-08-23: was #fff; re-assert main.css's #e0f2fe. */
 footer .footer-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: #e0f2fe; }
 footer .footer-title img { display: inline; vertical-align: middle; }
