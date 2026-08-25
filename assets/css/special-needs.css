@@ -199,7 +199,10 @@
       text-decoration: none;
       font-weight: 700;
       font-family: inherit;
-      border: none;
+      /* 2026-08-25 visual QA: .button-secondary below adds
+         `border: 2px solid #0d4d77` on top of identical padding, so the pair
+         rendered 4px apart. Transparent border equalises the box model. */
+      border: 2px solid transparent;
       cursor: pointer;
       font-size: 16px;
       transition: background 0.3s;

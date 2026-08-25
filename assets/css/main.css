@@ -273,7 +273,14 @@ img {
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  border: none;
+  /* 2026-08-25 visual QA: `border: none` here while .btn-outline and
+     .btn-outline-white carry `1.5px solid` made every outline button compute
+     3px taller AND 3px wider than the filled .btn-blue / .btn-white it sits
+     beside — the two homepage hero CTAs and the /find-swim-lessons pair were
+     visibly mismatched, tops off by 1.5px. A transparent border of the same
+     width equalises the box model; background-clip is border-box by default so
+     the filled variants look unchanged. */
+  border: 1.5px solid transparent;
   transition: all 0.18s ease;
   text-decoration: none;
   white-space: nowrap;
@@ -943,6 +950,21 @@ footer .footer-bottom a:hover {
 
 /* Inline breadcrumb bar (sits above page-hero) */
 .page-breadcrumb {
+  /* 2026-08-25 visual QA: the bare `nav { display:flex; align-items:center;
+     justify-content:space-between; height:72px }` rule near the top of this
+     file was written for the header nav — but <nav class="page-breadcrumb"> is
+     also a nav, so it inherited the lot. That left TWO authored declarations
+     inert: this rule's own `padding: 10px 24px` (the forced 72px height plus
+     align-items:center governed instead), and `.breadcrumb-inner`'s
+     `max-width:1100px; margin:0 auto` (as a flex item the inner shrink-wraps
+     to its text, so the auto margins CENTRED the trail rather than
+     constraining a full-width container). Visible result: a breadcrumb bar as
+     tall as the site header, whose trail slid horizontally between x=538 and
+     x=670 depending purely on how long the crumb text was — it never lined up
+     with the H1 below it and moved as you navigated. Re-declaring block flow
+     restores both authored intents. */
+  display: block;
+  height: auto;
   background: var(--gray-50);
   border-bottom: 1px solid var(--gray-200);
   padding: 10px 24px;
@@ -1700,6 +1722,11 @@ table tbody tr:hover {
   padding: 0.65rem 1.4rem;
   background: var(--blue-700);
   color: var(--white);
+  /* 2026-08-25 visual QA: same defect as .btn above. .button-secondary shares
+     this exact padding but adds `border: 2px solid`, so on the 127 pages that
+     pair them the outline button rendered 49.1px tall against the primary's
+     45.1px — a 4px height and 4px width mismatch in a single button row. */
+  border: 2px solid transparent;
   border-radius: var(--r-md);
   font-size: 0.95rem;
   font-weight: 600;

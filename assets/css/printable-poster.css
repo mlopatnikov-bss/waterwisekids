@@ -118,7 +118,10 @@ header nav .nav-links > li > a.active { background: #f3f4f6; color: #075985; }
   font-size: 1rem;
   padding: 14px 28px;
   border-radius: 9999px;
-  border: none;
+  /* 2026-08-25 visual QA: .btn-back in the same .btn-row carries
+     `border: 2px solid #d1d5db`; this one had `border: none`, so the two
+     poster buttons rendered 4px apart in height and width. */
+  border: 2px solid transparent;
   cursor: pointer;
   text-decoration: none;
   transition: background 0.2s, transform 0.2s;
