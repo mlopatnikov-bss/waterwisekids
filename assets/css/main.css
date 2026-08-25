@@ -1593,10 +1593,20 @@ table tbody tr:hover {
     z-index: 100;
   }
 
+  /* 2026-08-25 mobile-consistency fix: re-assert align-items. The base
+     `.nav-links` rule sets `align-items: center` for the horizontal desktop
+     nav; in this column drawer that shrink-wraps each <li> to its label and
+     leaves the rest of the row untappable. */
+  nav.mobile-open .nav-links { align-items: stretch; }
+  nav.mobile-open .nav-links > li { width: 100%; }
+
   nav.mobile-open .nav-links > li > a {
     padding: var(--spacing-lg) 0;
     border-bottom: 1px solid var(--gray-100);
     display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 44px;
   }
 
   nav {

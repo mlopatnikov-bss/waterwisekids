@@ -63,10 +63,23 @@
      would push the panel 16px off the right edge. */
   header > nav.mobile-open .nav-links { left: 16px; right: 16px; width: auto; }
 
+  /* 2026-08-25 mobile-consistency fix. main.css `.nav-links` sets
+     `align-items: center` for the HORIZONTAL desktop nav. The open drawer flips
+     to `flex-direction: column` but never re-asserted align-items, so every <li>
+     shrink-wrapped to its label width (42-129px inside a 288px panel) and the
+     rest of each row was dead to taps; "About" measured 42px wide, under the
+     44px minimum. Re-assert the cross-axis property instead of relying on the
+     flex default. */
+  nav.mobile-open .nav-links { align-items: stretch !important; }
+  nav.mobile-open .nav-links > li { width: 100%; }
+
   nav.mobile-open .nav-links > li > a {
     padding: 12px 0;
     border-bottom: 1px solid #f3f4f6;
     display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 44px;
     color: #374151;
     font-size: 15px;
   }
