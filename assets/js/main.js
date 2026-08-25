@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initFormValidation();
   initSmoothScroll();
   initActiveNavLink();
-  initSidebarNewsletterForms();
+  initFormspreeForms();
 });
 
 /* ══════════════════════════════════════════════════════════════════════════════
@@ -368,59 +368,138 @@ if ('IntersectionObserver' in window) {
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
-   SIDEBAR NEWSLETTER FORM AJAX HANDLER
-   Handles sidebar checklist signup forms on article pages
-═══════════════════════════════════════════════════════════════════════════════ */
-function initSidebarNewsletterForms() {
-  var sidebarForms = document.querySelectorAll('[data-form="newsletter-sidebar"]');
+   FORMSPREE AJAX HANDLER
+   Applies to every Formspree-backed form on the site.
 
-  sidebarForms.forEach(function (form) {
+   Previously this was scoped to [data-form="newsletter-sidebar"], which matched
+   51 of the 138 Formspree forms. The other 87 fell through to a native POST and
+   Formspree redirected the visitor to https://formspree.io/thanks -- an
+   off-site, unbranded page, with no way to fire a conversion event. Formspree
+   ignores the _next field on this plan (verified 2026-08-25), so submitting via
+   fetch and confirming in place is the only way to keep the visitor on site.
+
+   The success message links to a printable ONLY when the form carries a
+   data-printable attribute, which is written from a verified on-disk file. The
+   old handler hard-coded /education/summer-safety-checklist-printable.html for
+   every sidebar form, so 50 of 51 signups were pointed at the wrong checklist.
+═══════════════════════════════════════════════════════════════════════════════ */
+function initFormspreeForms() {
+  var forms = document.querySelectorAll('form[action*="formspree.io"]');
+
+  forms.forEach(function (form) {
+    // 71 pages ship their own inline submit+fetch handler. Binding a second
+    // one here would POST the same submission twice -- two emails per signup.
+    if (form.getAttribute('data-formspree-inline') === '1') { return; }
+
     form.addEventListener('submit', function (e) {
+      // Belt and braces: if any other handler already took this submit, stand down.
+      if (e.defaultPrevented) { return; }
+
+      // No fetch/FormData means no AJAX -- let the native POST happen instead of
+      // swallowing the submit and stranding the visitor with nothing.
+      if (typeof window.fetch !== 'function' || typeof window.FormData !== 'function') {
+        return;
+      }
+
       e.preventDefault();
-      var btn = form.querySelector('button[type="submit"]');
-      var originalText = btn.textContent;
-      btn.disabled = true;
-      btn.textContent = 'Sending...';
+
+      // Keep native constraint validation (required, type=email) authoritative.
+      if (typeof form.checkValidity === 'function' && !form.checkValidity()) {
+        if (typeof form.reportValidity === 'function') form.reportValidity();
+        return;
+      }
+
+      var btn = form.querySelector('button[type="submit"], input[type="submit"]');
+      var originalText = btn ? (btn.tagName === 'INPUT' ? btn.value : btn.textContent) : '';
+      if (btn) {
+        btn.disabled = true;
+        if (btn.tagName === 'INPUT') { btn.value = 'Sending...'; } else { btn.textContent = 'Sending...'; }
+      }
+
+      var restoreButton = function () {
+        if (!btn) return;
+        btn.disabled = false;
+        if (btn.tagName === 'INPUT') { btn.value = originalText; } else { btn.textContent = originalText; }
+      };
 
       fetch(form.action, {
         method: 'POST',
         body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
+        headers: { Accept: 'application/json' }
       }).then(function (response) {
-        if (response.ok) {
-          // Push dataLayer event for GTM tracking
-          if (window.dataLayer) {
-            window.dataLayer.push({
-              event: 'checklist_signup',
-              signup_source: form.querySelector('[name="source"]')
-                ? form.querySelector('[name="source"]').value
-                : 'sidebar'
-            });
-          }
-          // Replace form with success message and printable link
-          var wrapper = form.parentElement;
-          form.style.display = 'none';
-          var msg = document.createElement('div');
-          msg.style.cssText = 'background:#dcfce7;color:#166534;padding:14px;border-radius:8px;font-size:.9rem;line-height:1.5;';
-          msg.innerHTML = 'You\'re in! <a href="/education/summer-safety-checklist-printable.html" style="color:#075985;font-weight:600;text-decoration:underline;">View &amp; print your checklist</a>';
-          wrapper.appendChild(msg);
-          // Hide the privacy note
-          var privacyNote = wrapper.querySelector('p:last-child');
-          if (privacyNote && privacyNote.textContent.indexOf('spam') > -1) {
-            privacyNote.style.display = 'none';
-          }
-        } else {
-          btn.disabled = false;
-          btn.textContent = originalText;
-          alert('Something went wrong. Please try again.');
-        }
+        if (!response.ok) { throw new Error('Formspree responded ' + response.status); }
+        showFormspreeSuccess(form);
       }).catch(function () {
-        btn.disabled = false;
-        btn.textContent = originalText;
-        alert('Something went wrong. Please try again.');
+        restoreButton();
+        showFormspreeError(form);
       });
     });
   });
+}
+
+function showFormspreeSuccess(form) {
+  var sourceEl = form.querySelector('[name="source"]');
+  var source = sourceEl ? sourceEl.value : (form.getAttribute('data-form') || 'unknown');
+  var printable = form.getAttribute('data-printable');
+  var isInquiry = !!form.querySelector('textarea');
+
+  if (window.dataLayer) {
+    window.dataLayer.push({
+      event: 'form_submission_success',
+      form_type: isInquiry ? 'inquiry' : 'newsletter',
+      signup_source: source
+    });
+    // Retained so existing GTM triggers built on the old event keep firing.
+    if (form.getAttribute('data-form') === 'newsletter-sidebar') {
+      window.dataLayer.push({ event: 'checklist_signup', signup_source: source });
+    }
+  }
+
+  var html;
+  if (printable) {
+    html = '<strong>You\'re in!</strong> ' +
+      '<a href="' + printable + '" style="color:#075985;font-weight:600;text-decoration:underline;">' +
+      'View &amp; print your checklist</a>';
+  } else if (isInquiry) {
+    html = '<strong>Thanks &mdash; we got your message.</strong> ' +
+      'We read every one and normally reply within two business days.';
+  } else {
+    html = '<strong>You\'re in!</strong> Check your inbox shortly &mdash; ' +
+      'and your spam or promotions folder if it isn\'t there.';
+  }
+
+  var msg = document.createElement('div');
+  msg.setAttribute('role', 'status');
+  msg.style.cssText = 'background:#dcfce7;color:#166534;padding:14px;border-radius:8px;' +
+    'font-size:.9rem;line-height:1.5;margin-top:8px;';
+  msg.innerHTML = html;
+
+  form.style.display = 'none';
+  form.insertAdjacentElement('afterend', msg);
+
+  // The "we never spam" note under the form is redundant once it has been sent.
+  var wrapper = form.parentElement;
+  if (wrapper) {
+    var notes = wrapper.querySelectorAll('p');
+    Array.prototype.forEach.call(notes, function (n) {
+      if (n.textContent.toLowerCase().indexOf('spam') > -1) { n.style.display = 'none'; }
+    });
+  }
+}
+
+function showFormspreeError(form) {
+  var existing = form.parentElement && form.parentElement.querySelector('.formspree-error');
+  if (existing) { existing.parentElement.removeChild(existing); }
+
+  var msg = document.createElement('div');
+  msg.className = 'formspree-error';
+  msg.setAttribute('role', 'alert');
+  msg.style.cssText = 'background:#fef2f2;color:#991b1b;padding:14px;border-radius:8px;' +
+    'font-size:.9rem;line-height:1.5;margin-top:8px;';
+  msg.innerHTML = 'Sorry &mdash; that didn\'t send. Please try again, or email us at ' +
+    '<a href="mailto:waterwisekids.com@gmail.com" style="color:#991b1b;font-weight:600;' +
+    'text-decoration:underline;">waterwisekids.com@gmail.com</a>.';
+  form.insertAdjacentElement('afterend', msg);
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
