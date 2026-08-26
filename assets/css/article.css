@@ -50,6 +50,19 @@
   max-width: 700px;
 }
 
+/* Contextual links in the standfirst. Without this rule they inherit
+   .article-excerpt's gray-700 from the base `a { color: inherit;
+   text-decoration: none }` in main.css and are invisible to readers.
+   Mirrors `.article-body a` (0-1-1 specificity, same blue-700 / underline). */
+.article-excerpt a {
+  color: var(--blue-700);
+  text-decoration: underline;
+}
+
+.article-excerpt a:hover {
+  color: var(--blue-700);
+}
+
 /* ARTICLE BODY */
 .article-body {
   color: var(--gray-800);
