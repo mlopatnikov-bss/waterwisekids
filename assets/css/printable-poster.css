@@ -501,7 +501,13 @@ header nav .nav-links > li > a.active { background: #f3f4f6; color: #075985; }
 /* NOTE: every selector below is scoped under `footer`. The poster body
    reuses .footer-tagline inside .poster-footer, and these unscoped rules
    were overriding it (pale blue 14.4px instead of grey 11.5px italic). */
-footer { background: #0c4a6e; color: #e0f2fe; padding: 2.5rem 1.5rem 1.5rem; text-align: center; margin: 40px -16px 0; }
+/* 2026-08-26 css-regression sweep: this carried `margin: 40px -16px 0`, giving the
+   shared site footer a 40px gap above it on this page alone. All 33 other sampled
+   templates -- including printable-checklist.css (84 pages) -- render the footer
+   flush (margin-top:0). The negative side margins are kept: they cancel the poster
+   body padding to keep the footer full-bleed. The last section already supplies its
+   own 40px bottom padding, so content is not cramped. See [[standalone_stylesheet_drift]]. */
+footer { background: #0c4a6e; color: #e0f2fe; padding: 2.5rem 1.5rem 1.5rem; text-align: center; margin: 0 -16px; }
 /* 2026-08-25 css-regression sweep: this stood at max-width:1100px with no side
    gutter, while every main.css page wraps the same footer markup in `.container`
    (max-width:1160px; padding:0 24px). Result was a 6px x-shift and a 12px-narrower
