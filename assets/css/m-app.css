@@ -754,7 +754,15 @@
     border-top: 1px solid rgba(0,0,0,0.06);
     box-shadow: 0 -1px 8px rgba(0,0,0,0.04);
     padding: 6px 0 calc(6px + env(safe-area-inset-bottom, 0px));
-    justify-content: space-around;
+    /* 2026-08-26 visual QA: the bar used `space-around` with intrinsically-sized
+       items, so the five icons landed at uneven centres — measured 77.5/84/79.5/73px
+       apart at 390px and 154.5/160/154.5/149px at 768px (11px of ragged rhythm in
+       a fixed bar that appears on every page). The equal-column form was already
+       proven correct in the @media (max-width:360px) block below, where it was
+       introduced to cure a 320px overflow; it was simply never promoted to the
+       whole mobile range. `space-between` + `flex:1 1 0` gives five identical
+       tracks, so the icons sit on an exact 1/5 rhythm at any width. */
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -769,6 +777,10 @@
     font-weight: 500;
     padding: 4px 12px 2px;
     min-height: 44px;
+    /* Equal tracks — see the justify-content note above. min-width:0 lets a long
+       label ("Lessons") shrink instead of stealing width from its neighbours. */
+    flex: 1 1 0;
+    min-width: 0;
     position: relative;
     transition: color 0.2s;
   }
