@@ -511,8 +511,11 @@
       <input type="text" name="_gotcha" style="display:none">
 
       <button type="submit" class="form-submit">Send Message</button>
-      <div class="form-fallback-message"></div>
     </form>
+
+    <!-- Lives OUTSIDE the form: the success handler sets form.style.display='none',
+         which would also hide this message if it were a child of the form. -->
+    <div class="form-fallback-message"></div>
 
     <p class="contact-form-fallback">Prefer email? Reach us directly at <a href="mailto:waterwisekids.com@gmail.com">waterwisekids.com@gmail.com</a></p>
 
