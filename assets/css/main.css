@@ -2922,3 +2922,81 @@ aside p a {
   color: inherit;
   text-decoration: underline;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   TABLET NAV OVERFLOW — 2026-08-27 (mobile-consistency render sweep)
+
+   The header nav is a single non-wrapping flex row that needs 924px of track,
+   and the hamburger that replaces it only takes over at max-width: 768px. That
+   leaves a ~357px-wide dead band — viewports 769px to 1125px — where the row
+   cannot fit and cannot wrap, so the page scrolls horizontally and the last two
+   or three nav items sit off the right edge. Measured on /index.html:
+
+     vw  769-1125   ->  scrollWidth 1126 on EVERY page (shared chrome)
+     vw >= 1126     ->  no overflow
+
+   The band is not academic: iPad portrait is 810px, iPad Pro 11" is 834px,
+   iPad landscape and most Android tablets are 1024-1112px, and small laptops
+   land at 1024-1112px too. Every one of them has been getting a horizontally
+   scrolling site with truncated navigation.
+
+   It went unseen because both sweeps that could have caught it look elsewhere:
+   the mobile sweep probes 320-430px (below the band) and the desktop CSS
+   regression sweep probes >=1280px (above it). scrollWidth is clean at both
+   ends and broken only in between.
+
+   Fix is scoped strictly to the dead band and is purely additive:
+     - `flex-wrap: wrap` removes the horizontal scroll unconditionally. This is
+       the load-bearing declaration; everything else is cosmetic.
+     - Tighter link padding and a smaller label keep the row on ONE line for
+       most of the band, so the visible change at 1024px is nil and only the
+       narrow end of the band wraps to a second row.
+
+   Deliberately NOT done here: raising the hamburger breakpoint from 768px to
+   1126px. That looks like the tidier fix, but `.hamburger` and every
+   `nav.mobile-open .nav-links` drawer style live inside main.css's
+   `max-width: 768px` block and m-app.css's phone layout is gated at 768px too
+   — so the toggle would appear in the band while the drawer it opens stayed
+   unstyled. That is a template change, not a stylesheet change.
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1125px) {
+  /* `nav` carries a hard `height: 72px`. Left alone, the wrapped second row
+     overflows the sticky header in BOTH directions — measured navTop -3px
+     (first row clipped by the top of the viewport) and navBot 75px (second row
+     2px past the header's own border). `overflow` is visible so nothing is
+     hidden, but the top row loses its first 3px. Releasing the fixed height to
+     a min-height lets the header grow to fit the wrapped row instead, 73px ->
+     ~113px in the band only.
+
+     Selector is the DESCENDANT `header nav`, not `header > nav`: the site has
+     more than one header markup variant and the dominant one nests the nav as
+     `header > div.container > nav`, so the child combinator (which main.css
+     already uses at line 549 for the other variant) silently matched nothing —
+     the first version of this rule measured headerH 73px unchanged.
+
+     The alternative — keeping the 72px header and squeezing both rows into it
+     by cutting link padding to 4px — was rejected: it drops each nav link to a
+     ~30px touch box, and every device in this band is a touch device. */
+  header nav {
+    height: auto;
+    min-height: 72px;
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 2px;
+  }
+
+  /* Tightened just enough that the full row still fits on one line at the
+     common tablet widths (810 iPad, 834 iPad Pro 11", 1024 iPad landscape);
+     only the narrow end of the band, 769-800px, wraps to a second row, and
+     `justify-content: center` keeps the orphan centred rather than jammed
+     against the right edge. Vertical padding is untouched at 8px so the links
+     keep their ~38px touch height — this band is all touch devices. */
+  .nav-links > li > a {
+    padding: 8px 6px;
+    font-size: 0.82rem;
+  }
+}

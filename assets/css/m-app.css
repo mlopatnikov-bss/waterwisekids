@@ -1922,3 +1922,114 @@
   .myth-label,
   .truth-label { font-size: max(11px, 0.72rem) !important; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   MOBILE CONSISTENCY — 2026-08-27 (render sweep, 32 pages / 20 markup variants)
+
+   ROOT CAUSE, stated once because it explains every rule in this block:
+
+   main.css sets `html { font-size: 15px }` at max-width:768px and
+   `html { font-size: 14px }` at max-width:480px. Every `rem` font-size in
+   THIS stylesheet was authored against the 16px default root, so on a phone
+   each one renders 6.25%-12.5% smaller than the value the author wrote. The
+   trap was already documented twice — for the printable worksheets' own
+   `html { font-size: 14px }` breakpoint, and for `.myth-label` in article.css
+   (Text Floor Round 4 above) — but was never swept across m-app.css itself,
+   because a grep for "font-size below the floor" run against a 16px root shows
+   these rules as passing. Rendered measurement at 375px is the only signal.
+
+   Nine declarations clear 12px at a 16px root and fall under it at 14px:
+     .hero p                 0.85rem  13.60px @16  ->  11.90px @14
+     .page-hero .hero-sub    0.80rem  12.80px @16  ->  11.20px @14
+     .page-hero .lead        0.80rem  12.80px @16  ->  11.20px @14
+     .section-header p       0.81rem  12.96px @16  ->  11.34px @14
+     .article-card-excerpt   0.81rem  12.96px @16  ->  11.34px @14
+     .search-pill-title      0.81rem  12.96px @16  ->  11.34px @14
+     .newsletter … p         0.75rem  12.00px @16  ->  10.50px @14
+     .cat-btn                0.75rem  12.00px @16  ->  10.50px @14
+     .newsletter … submit    0.81rem  12.96px @16  ->  11.34px @14
+
+   Two floors, not one, because these are two different kinds of text:
+     - PROSE (hero lead-ins, card excerpts, section intros, newsletter body)
+       gets 12px, the legible-body-text bar. `.article-card-excerpt` alone is
+       353 card descriptions on /education/ — the site's largest index page.
+     - CONTROLS (filter chips, submit button) get 11px, matching the floor the
+       Text Floor Round 4 pass set for non-prose labels. Chips are scanned, not
+       read, and 12px reflows the horizontally-scrolling filter row.
+
+   Deliberately NOT floored — these are sub-11px BY DESIGN and are documented
+   as intentional elsewhere in this file: `.mobile-bottom-nav a` (9.92px),
+   `.mobile-cat-item` (9.60px), `.stat-label`, `.article-card-category`,
+   `.search-pill-sub`, `.footer-bottom`, and every printable-scoped selector.
+
+   Written as `max(Npx, <the rule's own rem value>)` rather than a bare px, so
+   the declaration still resolves to the authored size wherever the root is
+   16px, and floors only where the shrunken root would otherwise win. NOT
+   `max(Npx, 1em)` — `1em` resolves against the inherited parent size and would
+   INFLATE these rather than floor them (the trap noted in Round 4).
+
+   All nine only ever GROW line-height, never width, so none can introduce
+   horizontal overflow: the 6-width probe (320/360/375/390/414/430) measured
+   scrollWidth === innerWidth on every template before and after.
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* --- Prose floor: 12px --- */
+  .hero p { font-size: max(12px, 0.85rem) !important; }
+
+  .page-hero .hero-sub,
+  .page-hero--edu .hero-sub,
+  .tools-hero p { font-size: max(12px, 0.8rem) !important; }
+
+  .page-hero .lead,
+  .page-hero--edu .lead,
+  .page-hero.compact .lead { font-size: max(12px, 0.8rem) !important; }
+
+  .section-header p { font-size: max(12px, 0.81rem) !important; }
+
+  .article-card-excerpt { font-size: max(12px, 0.81rem) !important; }
+
+  .search-pill-title { font-size: max(12px, 0.81rem) !important; }
+
+  .newsletter-section p,
+  .newsletter p { font-size: max(12px, 0.75rem) !important; }
+
+  /* --- Control floor: 11px --- */
+  .cat-btn { font-size: max(11px, 0.75rem) !important; }
+
+  .newsletter-section button[type="submit"],
+  .newsletter button[type="submit"],
+  section[class*="newsletter"] button[type="submit"] {
+    font-size: max(11px, 0.81rem) !important;
+  }
+
+  /* --- Breadcrumb "Home": 44px tall but only 33-37px wide ------------------
+     Every breadcrumb pass so far (2026-08-16, and the four-variant pass above)
+     set `min-height: 44px` and stopped there. min-height without min-width is
+     a half-fix: the first crumb is always the word "Home", which measures
+     33-37px depending on variant, so the target has been failing the 44px
+     house standard on its short axis this entire time across all four markup
+     variants — .page-breadcrumb, .wwk-breadcrumbs, nav[aria-label=Breadcrumb]
+     and the bare inline-styled bar.
+
+     Safe on every variant: the bars are already `display:flex; flex-wrap:wrap`
+     (or a plain wrapping text row), the links are already inline-flex, and the
+     widest crumb on any page is the current-page label — a <span>, not an <a>,
+     so it is untouched. Worst case one link grows 11px on a row that has room
+     to wrap, which is why the 6-width overflow probe stays clean.
+
+     min-width is inert on non-replaced INLINE elements, so prose links that
+     happen to sit inside a breadcrumb container cannot be affected.           */
+  .wwk-breadcrumbs a,
+  .breadcrumb a,
+  .breadcrumbs a,
+  .page-breadcrumb a,
+  .page-breadcrumb .breadcrumb-inner a,
+  nav[aria-label="Breadcrumb"] a,
+  nav[aria-label="breadcrumb"] a,
+  [style*="padding: 10px 24px"][style*="0.85rem"] a {
+    min-width: 44px !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+}
