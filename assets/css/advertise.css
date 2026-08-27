@@ -385,14 +385,15 @@ main {
       font-size: 0.95rem;
     }
 
-footer a {
-      color: #bfdbfe;
-      text-decoration: none;
-    }
-
-footer a:hover {
-      text-decoration: underline;
-    }
+/* css-regression-checker 2026-08-27: this file carried bare `footer a` and
+   `footer a:hover` rules that reached into the SHARED site footer. The colour
+   half was inert (main.css's `.footer-links a` / `.footer-contact a` /
+   `footer .footer-bottom a` all out-specify a bare element selector), but the
+   hover half was NOT — no other rule declares `text-decoration` on footer-link
+   hover, so all 11 footer links on this one page underlined on hover while the
+   identical links on the other 741 pages did not, at every viewport.
+   main.css owns the shared chrome; a page stylesheet must not style it.
+   See [[page_stylesheet_leaks_into_shared_chrome]]. Rules removed. */
 
 @media (max-width: 768px) {
       
