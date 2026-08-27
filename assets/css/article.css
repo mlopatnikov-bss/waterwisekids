@@ -155,7 +155,11 @@
 
 /* STAT BOX */
 .stat-box {
-  background: linear-gradient(135deg, var(--blue-600), var(--blue-700));
+  /* 2026-08-27 visual QA: white .stat-label measured 4.43:1 against the light
+     end of this gradient (rendered pixels), under the 4.5 AA floor for 15.2px
+     body text. Shifted both stops one step darker; .inline-cta already pairs
+     blue-800/blue-700 for the same reason. Now 5.93:1 / 7.56:1. */
+  background: linear-gradient(135deg, var(--blue-700), var(--blue-800));
   color: white;
   padding: 24px;
   border-radius: var(--r-lg);

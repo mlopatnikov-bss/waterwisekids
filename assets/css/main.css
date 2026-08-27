@@ -927,7 +927,11 @@ footer .footer-bottom a:hover {
 
 /* Education hub — intentional teal-accent variant */
 .page-hero--edu {
-  background: linear-gradient(150deg, var(--blue-900) 0%, var(--blue-800) 35%, var(--teal-600) 75%, var(--teal-700) 100%);
+  /* 2026-08-27 visual QA: .hero-sub (rgba white .9, 17.6px) measured 4.06:1
+     against the teal-600 stop, under the 4.5 AA floor. teal-600 is too light
+     to carry body-size white text -- swimmers-hub.css hit this same stop and
+     moved to teal-700. Teal accent preserved; all stops now >= 4.75:1. */
+  background: linear-gradient(150deg, var(--blue-900) 0%, var(--blue-800) 40%, var(--blue-700) 70%, var(--teal-700) 100%);
   padding: 4.5rem 1.5rem 3.5rem;
   position: relative;
   overflow: hidden;
