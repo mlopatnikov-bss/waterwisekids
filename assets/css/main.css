@@ -2856,3 +2856,65 @@ body > section.related-articles {
     font-size: 16px !important;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   PROSE LINK DEFAULT  (internal-linking audit, 2026-08-27)
+   ------------------------------------------------------------------------------
+   The base rule near the top of this file is `a { color: inherit;
+   text-decoration: none }`. Any page that does NOT load article.css therefore
+   renders in-body prose links pixel-identical to the sentence around them:
+   present in the DOM, resolving 200, counted by every crawler and every audit,
+   invisible to every reader. A headless render sweep of 659 pages found 683
+   such links on 118 pages -- the /swim-lessons/directory/ state pages, the
+   education / swimmers / teens / statistics hubs, the legacy root-level
+   `.article` layout, and the callout boxes that sit outside `.article-body`.
+   Same defect class as the `.article-excerpt` fix in 4953ae65, one layer up.
+
+   Specificity is deliberately (0,0,2): above the base `a` rule, BELOW every
+   class-scoped anchor rule in this file and in the page stylesheets, so
+   `.article-body a`, `.toc-item a`, `.tldr-box a`, `.inline-cta a`,
+   `.note-list li a`, `.sidebar-toc li a`, `.nav-links > li > a`,
+   `.footer-col ul li a` etc. all still win. This is a DEFAULT for prose links
+   nobody styled, not an override. Element selectors are used on purpose --
+   many page types have no `<main>` or `<article>` wrapper at all.
+   ============================================================================ */
+p a,
+li a,
+dd a,
+td a,
+blockquote a {
+  color: var(--blue-700);
+  text-decoration: underline;
+}
+
+/* Site chrome and navigational rails are lists of links, not prose. Same
+   (0,0,2) specificity as the rule above but declared later, so they win here
+   and still lose to every class-scoped rule -- i.e. this restores their
+   existing appearance exactly rather than imposing a new one. */
+nav a,
+header a,
+footer a,
+aside a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ...but a sidebar box can still hold a real sentence with a link in it, and
+   that link needs to look like a link. `aside p a` is (0,0,3), so it beats the
+   chrome reset above while still losing to any class-scoped rule -- the
+   `ul.toc-list` / `.sidebar-widget` link RAILS stay untouched. */
+aside p a {
+  color: var(--blue-700);
+  text-decoration: underline;
+}
+
+/* Heroes and CTA bands paint white text on a dark/gradient background --
+   blue-700 there would be unreadable. Keep the inherited white and carry the
+   underline so the link is still distinguishable (WCAG 1.4.1). */
+.page-hero a,
+.page-hero-subtitle a,
+.cta-section p a,
+.cta-section li a {
+  color: inherit;
+  text-decoration: underline;
+}
