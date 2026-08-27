@@ -296,6 +296,11 @@
       display: none;
     }
 
+    .form-fallback-message.is-error {
+      background-color: #fee2e2;
+      color: #991b1b;
+    }
+
     .contact-form-fallback {
       color: #475569;
       font-size: 0.9rem;
@@ -599,18 +604,21 @@
         }).then(function(response) {
           if (response.ok) {
             contactForm.style.display = 'none';
+            fallbackMessage.classList.remove('is-error');
             fallbackMessage.style.display = 'block';
             fallbackMessage.textContent = "Thank you! We'll be in touch within 1-2 business days.";
             if (window.dataLayer) { window.dataLayer.push({ event: 'contact_form_submit', form_source: 'contact-page' }); }
           } else {
             btn.disabled = false;
             btn.textContent = 'Send Message';
+            fallbackMessage.classList.add('is-error');
             fallbackMessage.style.display = 'block';
             fallbackMessage.textContent = 'Something went wrong. Please email us directly at waterwisekids.com@gmail.com.';
           }
         }).catch(function() {
           btn.disabled = false;
           btn.textContent = 'Send Message';
+          fallbackMessage.classList.add('is-error');
           fallbackMessage.style.display = 'block';
           fallbackMessage.textContent = 'Something went wrong. Please email us directly at waterwisekids.com@gmail.com.';
         });
