@@ -6,9 +6,16 @@
 ═══════════════════════════════════════════════════════════════════════════════ */
 
 /* MAIN LAYOUT — article + sidebar grid */
+/* The article track is minmax(0, 1fr) so it can shrink below its min-content
+   width. A bare 1fr track keeps the grid item's automatic minimum size, so wide
+   unbreakable content (a nowrap table cell, a long token) pushes the whole grid
+   past the viewport in the 769-870px tablet band, where this two-column layout
+   is still active but the viewport is narrow. Measured 2026-08-28: 4 article
+   pages overflowed 47-89px at 800px. Horizontal-scroll wrappers such as
+   .flag-scroll cannot take effect until this track is allowed to shrink. */
 .main-layout {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: minmax(0, 1fr) 320px;
   gap: 40px;
   padding: 48px 0;
 }

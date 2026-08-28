@@ -1840,9 +1840,12 @@ table tbody tr:hover {
 }
 
 /* Content grid — main + sidebar layout */
+/* minmax(0, 1fr) for the same reason as .main-layout in article.css: a bare 1fr
+   track cannot shrink below min-content, so wide unbreakable content overflows
+   the viewport between the 900px collapse breakpoint and ~1100px. */
 .content-grid {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: minmax(0, 1fr) 320px;
   gap: 2.5rem;
   max-width: 1100px;
   margin: 0 auto;
@@ -3018,5 +3021,19 @@ aside p a {
   .nav-links > li > a {
     padding: 8px 6px;
     font-size: 0.82rem;
+  }
+
+  /* ---- WCAG 2.5.8 AA target size (24x24 minimum), tablet band ----
+     m-app.css sizes bare checkboxes and radios to 24x24, but m-app.css is only
+     injected at <=768px, so above the mobile breakpoint the controls fall back
+     to the UA default and render 13x13 (/swim-schools/add.html) and 17x17
+     (/tools/family-water-safety-plan.html). Every device in the 769-1149px band
+     is a touch device, and WCAG 2.5.8 is not viewport-conditional, so the floor
+     has to be restated here. Sizing the control rather than padding the row
+     keeps the checkbox lists from reflowing. Measured 2026-08-28 at 769px. */
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-width: 24px;
+    min-height: 24px;
   }
 }
