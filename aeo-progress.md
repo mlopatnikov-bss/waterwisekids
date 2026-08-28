@@ -1552,3 +1552,80 @@ All three already had Article + FAQPage + BreadcrumbList + tldr-box + speakable;
 `dateModified` + sitemap `lastmod` bumped to 2026-08-27 for exactly these 3 URLs (638 entries, XML re-parsed, count unchanged). Pushed as `c85a3b6`; **live-verified** — 17 question H2s serving, both new Authoritative Sources blocks live, all three `dateModified` and sitemap `lastmod` live.
 
 **Backlog: 19 education articles under 50%.** Next by score: `teaching-kids-safe-pool-entry` (1/7 — **HowTo-paired, own batch**), `free-reduced-swim-lessons-make-a-splash` (1/6), `poolside-emergency-kit-checklist` (1/6), `body-awareness-exercises-swimmers` (1/5), `drowning-cpr-quick-card` (1/5), `independent-swimming-readiness-checklist` (1/5), `swimmers-ear-prevention-checklist` (1/4), `national-water-safety-action-plan-explained` (3/11), `new-jersey-pool-fence-law` (2/7), `water-slide-safety-checklist` (2/7), `cloudy-pool-water-safety-signal` (2/6). Listing pages (`education/index.html`, `scholarships/index.html`), `*-printable.html` (noindex), and form/utility pages remain excluded as classes.
+
+---
+
+## Run 2026-08-28 — Batch 47: the deferred HowTo-paired page, and the zero-citation class
+
+Scope re-derived from a fresh `origin/live` clone at `9c29803` (the mount was again stale at `2476831c` — audit the clone, not the mount). All 499 `education/*.html` re-scored.
+
+**New audit axis added this run: outbound authority links.** The question-H2 scorer had never checked whether a page cites anything. Cross-scoring found **4 true articles ≥900 words with zero external authority links** (`schema.org` excluded) — a page that cites no authority cannot plausibly be cited *as* one, which is the whole point of AEO. Two of the four were also the worst-scoring pages on the heading backlog, so they were taken together.
+
+**Optimized this run (3 files):**
+
+| File | Words | H2 question ratio | Other changes |
+|---|---|---|---|
+| `education/teaching-kids-safe-pool-entry.html` | 1,554 | 0/7 → **7/7** | HowTo steps re-bound + verbatim; **0 → 5 authority links** |
+| `education/swim-test-deep-end-readiness.html` | 1,552 | 0/6 → **6/6** | **0 → 5 authority links**; stray `</p>` repaired |
+| `education/rolling-recovery-jump-recovery-methods.html` | 2,100 | 0/5 → **5/5** | headings only |
+
+All three finish at **100% of convertible H2s**. Residual statement headings are the sitewide utility set only (`📚 Authoritative Sources`, `Frequently Asked Questions`, `Keep Reading`).
+
+### The Batch-46 deferral, resolved
+
+`teaching-kids-safe-pool-entry.html` was explicitly skipped last run because its five body H2s were the visible counterparts of a 5-step HowTo and rewriting them would break step↔content correspondence. **The correspondence was never machine-readable in the first place** — it was implicit text similarity, and the HowTo steps carried no `url`. Fixed properly:
+
+- Each `HowToStep` gained a `url` anchoring it to the real section `id` (`#stop-check`, `#seated`, `#feet-first`, `#diving`, `#exit`), making the binding explicit rather than inferred.
+- Each `step.text` was **replaced with the verbatim first `<p>` of its section**, extracted programmatically, with an assertion that no lead `<p>` ends in a colon (the list-stem trap from Batch 42). The previous step texts were hand-written paraphrases — drift was possible; it now is not.
+- Only then were the H2s converted to questions. Because the binding is by `id`, heading text is now free to be query-shaped without touching the HowTo.
+
+**Generalizable: when a HowTo blocks a heading rewrite, bind the steps by `url` first. The block dissolves.**
+
+### The zero-citation class
+
+Both zero-citation pages already *named* an authority in a `stat-box` but **never linked it** — `teaching-kids` said "The American Academy of Pediatrics (AAP) lists swimming competence among the layers of protection…", `swim-test` said "According to the U.S. Centers for Disease Control and Prevention (CDC)…". A presence grep for `aap.org`/`cdc.gov` reads these as uncited; a human reading the page sees an attribution. **Both were hyperlinked in place** rather than duplicated, then each page received the canonical `📚 Authoritative Sources` block (4 links, matching the `rolling-recovery` markup pattern) inserted **before** `<h2 id="faq">` per the poolside/independent-readiness convention, plus a matching `toc-item`.
+
+A second `stat-box` was initially added to `swim-test` before the pre-existing CDC one was noticed; it was **removed** rather than shipped. Check for an existing stat-box before adding one — this template has them and they are easy to miss under a `<div>` with inline styles.
+
+**Nothing was invented.** All 8 source URLs are already in sitewide use (621×/433×/282×/181×/19×) and were GET-probed: aap.org, redcross.org, healthychildren.org = 200; cdc.gov, poolsafely.gov = 403 **WAF false positives**. No new statistic was authored — the only numbers on these pages are the pre-existing CDC attribution, now linked.
+
+### Method notes
+
+- **id-keyed raw-file replacement with emoji-prefix capture.** `rolling-recovery` stores emoji as raw UTF-8 (🔄 ⚖️ 🏊 🚸 🔎); the other two have none but `swim-test` carries `&mdash;` entities and a raw `"` inside an H2. A regex captured the leading emoji/entity run and re-emitted it byte-for-byte; `count==1` asserted per heading before and after. bs4 output was never string-matched against the raw file.
+- **Pre-existing tag defect found and fixed.** `swim-test-deep-end-readiness.html` had a stray `</p>` inside its `stat-box` (no opening `<p>`) at line 123 col 586 — confirmed **identical in HEAD**, so not introduced here. Removed; element counts unchanged (`p` stays at 22), so it was purely a validator defect, not a layout one.
+- **Speakable extended, not assumed.** Both top-level education pages carried only `{.article-excerpt, .tldr-box}`. `.article h1` was **resolved with soupsieve first** (→1 on both) and only then added — the 2026-08-19 inert-speakable bug was caused by adding selectors that matched nothing.
+- **TOC labels left as short non-verbatim labels**, per Batch 41/42 precedent. `rolling-recovery`'s `#what-to-ask` label ("Questions to Ask a Swim School") still describes its section accurately after the heading re-aim.
+
+### Collision handling
+
+18 proposals scored at 0.80 against a **6,877-heading** sitewide corpus (h1+h2+h3 ending in `?`, 747 files) plus intra-batch, excluding each file's own heading-being-replaced. **Two collisions, both re-aimed rather than reworded:**
+
+1. `What Pool-Entry Rules Should Every Family Set?` — **0.809** vs `safe-diving-rules-kids.html :: What diving rules should every family post?`. That page owns the postable-family-rules query, so this section was re-aimed at what it uniquely covers: **`Which Entry Habits Should Kids Drill Until They Are Automatic?`**
+2. `What Should You Ask a Swim School About These Methods?` — **0.815** vs *two* instructor-vetting pages (`swim-instructor-employment-model`, `full-time-vs-part-time-swim-instructors`) sharing the identical heading, and 0.800 vs a third. Re-aimed to the method-specific query: **`How Do You Tell If a Program Teaches Both Recovery Methods?`**
+
+Final set: **worst score 0.742, zero collisions.** Note the `swim-test` page's six FAQ `<h3>`s already own the obvious definitional queries ("What is a pool swim test?", "What does a swim test check for?"), so all six H2s had to be aimed at *different* angles than the FAQ — self-cannibalization was the binding constraint on that file, not the sitewide corpus.
+
+### Validation
+- Tag balance `err=0 / stackleft=0` on all three (swim-test now clean, was 1 pre-existing).
+- html5lib head integrity: 16 metas in `<head>`, **0 metas in `<body>`**, canonical in head, on all three.
+- JSON-LD parses clean — `[Article, HowTo, BreadcrumbList, FAQPage]`, `[Article, BreadcrumbList, FAQPage]`, `[Article, FAQPage, BreadcrumbList]`; `jerr=0`; **0 HTML entities leaked inside JSON-LD**.
+- **FAQ schema↔visible drift 0** across 5/5/5 Q&A (tag-stripped, whitespace-normalised, both question and answer).
+- **All 5 HowTo step texts confirmed verbatim** in rendered text; all 5 `url` anchors resolve to a real `id`.
+- Speakable resolved with soupsieve: every selector → exactly 1 on every file. None match zero.
+- `headline == h1` on all three. Meta descriptions unchanged, decoded 155 / 157 / 154 (≤160).
+- Nested anchors 0. Unsubstituted `__PLACEHOLDER__` 0. Brand-voice ownership scan **0 hits**. All internal `#` anchors and site-relative hrefs resolve.
+- **DOM signature diff vs HEAD, scripts stripped.** `rolling-recovery`: **190/190 elements, tag+id+class sequence byte-identical** — heading text only. `teaching-kids`: 178→190, accounted for exactly (+1 inline `<a>`, +1 `h2#sources`, +1 `ul`, +4 `li`, +4 `a`, +1 toc `a`). `swim-test`: 183→195, same accounting. `p` count unchanged on all three.
+- **Text-node diff:** every "removed" string is either a replaced heading or a sentence split by an inserted `<a>` — **no prose was deleted or altered** on any file.
+- `dateModified` bumped 2026-06-21 / 2026-06-21 / 2026-04-22 → **2026-08-28**; `sitemap.xml` lastmod bumped for **exactly these 3 URLs**, re-parsed clean, **639 entries unchanged**. No blanket bump.
+
+### Flagged for Michael — not changed
+1. **`teaching-kids-safe-pool-entry.html` asserts an unsourced superlative.** "Headfirst entries into shallow or unknown-depth water are **a leading cause** of serious neck and spinal injuries in recreational swimming" appears in the body *and* in a FAQ answer (so it is in the schema too). A sitewide grep found **zero diving/spinal-injury citations anywhere on the site** — nothing supports it. It was left alone rather than reworded, because changing it means changing the FAQ schema in the same pass. Either source it or soften it to a non-superlative.
+2. **`rolling-recovery-jump-recovery-methods.html` has `<div class="related">` (line 121) sitting *between* the Authoritative Sources block and the FAQ H2** — the "main content stranded below `.related`" ordering pattern. Pre-existing; the FAQ still renders, but it is below a Related Reading block in source order.
+
+### Backlog
+**26 education articles under 50% question H2s** (listing class `index.html` and the `*-printable.html` class excluded as correct-by-design). Next by score, and the two most valuable are the **only remaining zero-citation true articles**:
+- `choose-your-own-swim-instructor-vs-assigned.html` (1,791w, 1/7, **0 authority links**)
+- `cloudy-pool-water-safety-signal.html` (1,508w, 1/6, **0 authority links**)
+- then `free-reduced-swim-lessons-make-a-splash` (2,087w, 0/5 — note the *Make a Splash* legacy-branding rule: bridge, do not strip), `independent-swimming-readiness-checklist` (2,027w, 0/5), `drowning-cpr-quick-card` (2,024w, 0/5), `conditioning-mile-swim-goal` (1,938w, 0/5), `body-awareness-exercises-swimmers` (1,924w, 0/5), `bubbles-through-nose-breath-control` (1,916w, 0/5), `swim-readiness-indicators-age-4` (1,907w, 0/5), `weighted-practice-flip-turns-skills` (1,899w, 0/5), `poolside-emergency-kit-checklist` (1,831w, 0/6).
+
+The 0/5 cluster above shares one template and one shape (five emoji-prefixed statement H2s + Authoritative Sources + FAQ + Keep Reading) — they are strong candidates for a **batched pass with a shared collision check**, since their topics are adjacent (skills/technique) and intra-batch similarity is the real risk there.
