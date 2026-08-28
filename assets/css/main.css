@@ -2928,12 +2928,16 @@ aside p a {
 
    The header nav is a single non-wrapping flex row that needs 924px of track,
    and the hamburger that replaces it only takes over at max-width: 768px. That
-   leaves a ~357px-wide dead band — viewports 769px to 1125px — where the row
+   leaves a ~381px-wide dead band — viewports 769px to 1149px — where the row
    cannot fit and cannot wrap, so the page scrolls horizontally and the last two
    or three nav items sit off the right edge. Measured on /index.html:
 
      vw  769-1125   ->  scrollWidth 1126 on EVERY page (shared chrome)
-     vw >= 1126     ->  no overflow
+     vw  1126-1149  ->  no document scroll (body{overflow-x:hidden}), but the nav
+                        content box is 24px narrower than the row, so the last
+                        links overhang the nav's own 24px right gutter
+                        (2026-08-28 sweep: bound raised 1125 -> 1149)
+     vw >= 1150     ->  no overflow
 
    The band is not academic: iPad portrait is 810px, iPad Pro 11" is 834px,
    iPad landscape and most Android tablets are 1024-1112px, and small laptops
@@ -2953,13 +2957,13 @@ aside p a {
        narrow end of the band wraps to a second row.
 
    Deliberately NOT done here: raising the hamburger breakpoint from 768px to
-   1126px. That looks like the tidier fix, but `.hamburger` and every
+   1150px. That looks like the tidier fix, but `.hamburger` and every
    `nav.mobile-open .nav-links` drawer style live inside main.css's
    `max-width: 768px` block and m-app.css's phone layout is gated at 768px too
    — so the toggle would appear in the band while the drawer it opens stayed
    unstyled. That is a template change, not a stylesheet change.
 ═══════════════════════════════════════════════════════════════════════════════ */
-@media (min-width: 769px) and (max-width: 1125px) {
+@media (min-width: 769px) and (max-width: 1149px) {
   /* `nav` carries a hard `height: 72px`. Left alone, the wrapped second row
      overflows the sticky header in BOTH directions — measured navTop -3px
      (first row clipped by the top of the viewport) and navBot 75px (second row

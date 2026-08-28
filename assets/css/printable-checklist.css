@@ -325,3 +325,40 @@ footer {
 footer p {
   line-height: 1.7;
 }
+
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   2026-08-28 css-regression sweep — TABLET BAND (769-1149px) NAV MIRROR
+
+   main.css carries a dedicated `@media (min-width: 769px) and (max-width: 1149px)`
+   block that releases the nav's hard `height: 72px` to a `min-height`, turns on
+   `flex-wrap: wrap`, and tightens the nav-link padding/font so the row fits.
+   This standalone sheet never mirrored it — the classic standalone-stylesheet
+   drift. Measured on the live sheet before this fix, the printable nav kept
+   `height: 72px` + `flex-wrap: nowrap` with `padding: 8px 14px` / `0.9rem`
+   links, so the row could neither wrap nor shrink and pushed the DOCUMENT wide:
+
+     viewport   769   800   900   1024  1100  1125
+     doc overflow  341px 310px 210px  86px  10px   0     (main.css pages: 0 at every width)
+
+   i.e. every checklist printable scrolled sideways on every tablet in the band,
+   including iPad landscape at 1024. Mirror the band block, chrome-scoped only —
+   the checklist body layout is untouched. */
+@media (min-width: 769px) and (max-width: 1149px) {
+  .screen-header nav {
+    height: auto;
+    min-height: 72px;
+    flex-wrap: wrap;
+  }
+
+  .screen-header .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 2px;
+  }
+
+  .screen-header .nav-links > li > a {
+    padding: 8px 6px;
+    font-size: 0.82rem;
+  }
+}
