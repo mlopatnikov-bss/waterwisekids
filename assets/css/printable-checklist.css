@@ -21,6 +21,11 @@
   --cl-gray-200: #e5e7eb;
 }
 
+/* Mirrors the main.css form-control reset — printable sheets are STANDALONE
+   (main.css is not loaded), so without this `.print-btn` renders in the OS UI
+   font (Arial) while the rest of the page is Inter. */
+button, input, select, textarea, optgroup { font-family: inherit; }
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;

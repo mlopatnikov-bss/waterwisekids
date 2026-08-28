@@ -120,6 +120,22 @@ body {
   word-wrap: break-word;
 }
 
+/* Form controls do not inherit the page font family in any browser — they fall
+   back to the OS UI font (Arial here). `input`/`textarea`/`select` were given
+   `font-family: inherit` individually below, and a handful of button classes got
+   it ad hoc in article.css / education-hub.css, but bare `button` never did. The
+   result: `.print-btn` (the only CTA on 86 printables), `.form-submit` on the
+   contact page and `.hamburger` rendered in Arial on an otherwise all-Inter site.
+   Found 2026-08-28 by a rendered font-family census. Companion to the
+   font-SIZE inherit fix in 404b56b — same class of defect, different property. */
+button,
+input,
+select,
+textarea,
+optgroup {
+  font-family: inherit;
+}
+
 h1,
 h2,
 h3,

@@ -27,6 +27,11 @@
   --poster-mid-blue: #0096D6;
   --poster-rule-border: #BDE0F5;
 }
+/* Mirrors the main.css form-control reset — printable sheets are STANDALONE
+   (main.css is not loaded), so without this `.print-btn` renders in the OS UI
+   font (Arial) while the rest of the page is Inter. */
+button, input, select, textarea, optgroup { font-family: inherit; }
+
 body {
   /* Poster pages are STANDALONE (main.css is not loaded), so the sitewide font
      stack must be repeated here or the whole page falls back to Times serif. */
