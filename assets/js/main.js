@@ -464,8 +464,13 @@ function showFormspreeSuccess(form) {
     html = '<strong>Thanks &mdash; we got your message.</strong> ' +
       'We read every one and normally reply within two business days.';
   } else {
-    html = '<strong>You\'re in!</strong> Check your inbox shortly &mdash; ' +
-      'and your spam or promotions folder if it isn\'t there.';
+    // No autoresponder exists on this plan -- Formspree only notifies the site
+    // owner, so promising an inbox delivery sends the visitor hunting for an
+    // email that is never sent. Confirm the signup and deliver value on-page.
+    html = '<strong>You\'re in &mdash; thanks!</strong> ' +
+      'Every free printable checklist we publish is here: ' +
+      '<a href="/education/" style="color:#075985;font-weight:600;text-decoration:underline;">' +
+      'browse the guides</a>.';
   }
 
   var msg = document.createElement('div');
