@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="Three swim lesson schedules side by side on a desk — once weekly, twice weekly and a five-day intensive — with the chosen one ticked">
+  <defs>
+    <linearGradient id="fmt-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="fmt-desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#fmt-bg)"/>
+
+  <!-- desk surface -->
+  <rect x="0" y="272" width="600" height="88" fill="url(#fmt-desk)" opacity="0.5"/>
+  <path d="M0 272 h600" stroke="#f59e0b" stroke-width="3" opacity="0.5"/>
+
+  <!-- water ripple motif behind the cards -->
+  <path d="M0 232 q30 -12 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#7dd3fc" stroke-width="4" opacity="0.55"/>
+  <path d="M0 248 q30 -12 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#38bdf8" stroke-width="3" opacity="0.4"/>
+
+  <!-- title strip -->
+  <rect x="40" y="26" width="520" height="36" rx="8" fill="#0c4a6e"/>
+  <text x="300" y="51" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">Which lesson format?</text>
+
+  <!-- CARD 1: once weekly -->
+  <g transform="translate(42,80)">
+    <rect x="0" y="0" width="158" height="176" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+    <rect x="0" y="0" width="158" height="30" rx="10" fill="#0369a1"/>
+    <rect x="0" y="20" width="158" height="10" fill="#0369a1"/>
+    <text x="79" y="21" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Once weekly</text>
+    <!-- 7-day strip, 1 filled -->
+    <g transform="translate(15,48)">
+      <rect x="0" y="0" width="15" height="15" rx="3" fill="#0ea5e9"/>
+      <rect x="19" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+      <rect x="38" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+      <rect x="57" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+      <rect x="76" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+      <rect x="95" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+      <rect x="114" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+    </g>
+    <text x="79" y="98" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#475569">7 days between</text>
+    <text x="79" y="128" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0c4a6e">Retention</text>
+    <rect x="52" y="142" width="54" height="20" rx="10" fill="#e0f2fe"/>
+    <text x="79" y="156" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#0c4a6e">spaced</text>
+  </g>
+
+  <!-- CARD 2: twice weekly (chosen) -->
+  <g transform="translate(221,72)">
+    <rect x="0" y="0" width="158" height="192" rx="10" fill="#ffffff" stroke="#0369a1" stroke-width="4"/>
+    <rect x="0" y="0" width="158" height="30" rx="10" fill="#0c4a6e"/>
+    <rect x="0" y="20" width="158" height="10" fill="#0c4a6e"/>
+    <text x="79" y="21" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Twice weekly</text>
+    <!-- 7-day strip, 2 filled -->
+    <g transform="translate(15,52)">
+      <rect x="0" y="0" width="15" height="15" rx="3" fill="#0ea5e9"/>
+      <rect x="19" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+      <rect x="38" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+      <rect x="57" y="0" width="15" height="15" rx="3" fill="#0ea5e9"/>
+      <rect x="76" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+      <rect x="95" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+      <rect x="114" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+    </g>
+    <text x="79" y="102" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#475569">3&#8211;4 days between</text>
+    <text x="79" y="132" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0c4a6e">Both</text>
+    <rect x="46" y="146" width="66" height="20" rx="10" fill="#dbeafe"/>
+    <text x="79" y="160" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#0c4a6e">middle path</text>
+    <!-- tick badge -->
+    <circle cx="140" cy="176" r="19" fill="#0369a1" stroke="#ffffff" stroke-width="3"/>
+    <path d="M131 176 l6 7 l12 -14" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- CARD 3: 5-day intensive -->
+  <g transform="translate(400,80)">
+    <rect x="0" y="0" width="158" height="176" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+    <rect x="0" y="0" width="158" height="30" rx="10" fill="#0369a1"/>
+    <rect x="0" y="20" width="158" height="10" fill="#0369a1"/>
+    <text x="79" y="21" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">5-day intensive</text>
+    <!-- 7-day strip, 5 filled -->
+    <g transform="translate(15,48)">
+      <rect x="0" y="0" width="15" height="15" rx="3" fill="#0ea5e9"/>
+      <rect x="19" y="0" width="15" height="15" rx="3" fill="#0ea5e9"/>
+      <rect x="38" y="0" width="15" height="15" rx="3" fill="#0ea5e9"/>
+      <rect x="57" y="0" width="15" height="15" rx="3" fill="#0ea5e9"/>
+      <rect x="76" y="0" width="15" height="15" rx="3" fill="#0ea5e9"/>
+      <rect x="95" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+      <rect x="114" y="0" width="15" height="15" rx="3" fill="#e2e8f0"/>
+    </g>
+    <text x="79" y="98" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" fill="#475569">1 day between</text>
+    <text x="79" y="128" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0c4a6e">Speed</text>
+    <rect x="50" y="142" width="58" height="20" rx="10" fill="#ffedd5"/>
+    <text x="79" y="156" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#9a3412">massed</text>
+  </g>
+
+  <!-- pencil on the desk -->
+  <g transform="translate(214,300) rotate(-6)">
+    <rect x="0" y="0" width="150" height="13" rx="3" fill="#fbbf24"/>
+    <rect x="0" y="0" width="26" height="13" rx="3" fill="#f472b6"/>
+    <path d="M150 0 l20 6.5 l-20 6.5 z" fill="#fcd34d"/>
+    <path d="M164 4.5 l6 2 l-6 2 z" fill="#1f2937"/>
+  </g>
+</svg>
