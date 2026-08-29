@@ -609,7 +609,20 @@ header > nav {
 
 .nav-links > li > a {
   display: block;
-  padding: 8px 14px;
+  /* 2026-08-29 css-regression sweep: was 14px. The desktop nav row is a
+     non-wrapping flex line needing 180px (logo) + 16px (nav gap) + 932px
+     (links) = 1128px, but its content box is only 1112px (.container /
+     `header > nav` are both max-width:1160 with a 24px gutter). `.nav-links`
+     is flex-shrink:1 but every link is white-space:nowrap, so it cannot
+     actually shrink -- the UL overhung the nav's right edge by exactly the
+     16px gap at EVERY width >= 1150px, on both header markup variants.
+     Trimming 2px per side across the 8 links reclaims 16px; paired with the
+     column-gap:0 rule below the row lands at 1096px, 16px inside the rail.
+     Safe to change here: this declaration is overridden at 769-1149px (the
+     tablet band block) and at <=768px (`nav.mobile-open` drawer), so it is
+     effectively the >=1150px value only. Mirrored into both printable
+     sheets -- see [[standalone_stylesheet_drift]]. */
+  padding: 8px 12px;
   border-radius: 6px;
   font-size: 0.9rem;
   font-weight: 500;
@@ -3035,5 +3048,45 @@ aside p a {
   input[type="radio"] {
     min-width: 24px;
     min-height: 24px;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   DESKTOP NAV RIGHT-EDGE OVERHANG — 2026-08-29 (css-regression render sweep)
+
+   The 769-1149px tablet-band fix (2026-08-27/28) closed the band but asserted
+   "vw >= 1150 -> no overflow". That was measured as document scrollWidth, which
+   is clean because `body{overflow-x:hidden}` and the row still fits the window.
+   Measuring the last nav link's right edge against the nav's own content box
+   instead shows the row has been 16px too wide at EVERY desktop width, forever:
+
+     width   last link right   page content right   overhang
+     1150         1152               1126             26px
+     1280         1212               1196             16px
+     1440         1292               1276             16px
+     1920         1532               1516             16px
+
+   The overhang is permanent above 1150px because .container caps at 1160px, so
+   the nav's content box is a constant 1112px while the row needs 1128px. Visible
+   consequence: "Contact" sits 16px past the right edge of the article column
+   below it, so the header rail does not line up with the page grid.
+
+   `nav{gap:16px}` is the whole overage. It is redundant at desktop --
+   `justify-content: space-between` already separates the logo from the links --
+   and it only ever bites when there is no free space, which is exactly here.
+   Zeroing it alone gives an exact 1112px fit with zero slack, so the link
+   padding trim above (14px -> 12px) is what supplies the 16px of headroom.
+
+   Scoped to min-width:1150px so the 769-1149px band rules and the <=768px
+   drawer (where the gap does separate the logo from the hamburger, and where a
+   wrapped drawer relies on row-gap) are untouched.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (min-width: 1150px) {
+  /* Descendant selector, not `header > nav`: the dominant markup variant nests
+     the nav as `header > div.container > nav`, and the child combinator silently
+     matches nothing there -- the same trap documented in the tablet-band block. */
+  header nav {
+    column-gap: 0;
   }
 }
