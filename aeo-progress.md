@@ -1629,3 +1629,74 @@ Final set: **worst score 0.742, zero collisions.** Note the `swim-test` page's s
 - then `free-reduced-swim-lessons-make-a-splash` (2,087w, 0/5 — note the *Make a Splash* legacy-branding rule: bridge, do not strip), `independent-swimming-readiness-checklist` (2,027w, 0/5), `drowning-cpr-quick-card` (2,024w, 0/5), `conditioning-mile-swim-goal` (1,938w, 0/5), `body-awareness-exercises-swimmers` (1,924w, 0/5), `bubbles-through-nose-breath-control` (1,916w, 0/5), `swim-readiness-indicators-age-4` (1,907w, 0/5), `weighted-practice-flip-turns-skills` (1,899w, 0/5), `poolside-emergency-kit-checklist` (1,831w, 0/6).
 
 The 0/5 cluster above shares one template and one shape (five emoji-prefixed statement H2s + Authoritative Sources + FAQ + Keep Reading) — they are strong candidates for a **batched pass with a shared collision check**, since their topics are adjacent (skills/technique) and intra-batch similarity is the real risk there.
+
+---
+
+## Run 2026-08-29 — Batch 48: the zero-citation class closed, and a WAF that returns 404
+
+Scope re-derived from a fresh `origin/live` clone at `2fee64c` (the mount was again stale, at `2476831c`). All 499 `education/*.html` re-scored on two axes: question-H2 ratio and outbound authority links.
+
+**Optimized this run (3 files):**
+
+| File | Words | H2 question ratio | Other changes |
+|---|---|---|---|
+| `education/choose-your-own-swim-instructor-vs-assigned.html` | 1,789 | 1/7 → **7/7** | **0 → 5 authority links**; speakable +`.article h1` |
+| `education/cloudy-pool-water-safety-signal.html` | 1,508 | 1/6 → **6/6** | **0 → 5 authority links**; speakable +`.article h1` |
+| `education/independent-swimming-readiness-checklist.html` | 2,027 | 0/5 → **5/5** | headings only |
+
+All three finish at **100% of convertible H2s**. **The zero-citation class is now closed: 0 true articles ≥900 words on the whole site cite no external authority** (was 4 at Batch 47, 2 at the start of this run). Backlog 24 → **21**.
+
+### The finding that mattered most: a WAF that answers 404
+
+While GET-probing candidate source URLs, **every `healthychildren.org/*.aspx` URL returned HTTP 404** — including the site's single most-used external citation (620 occurrences) and three others (29×, 9×, 6×). A real IIS 404 body, `<title>404 - File or directory not found`, on four distinct paths. On the face of it, ~665 outbound authority links were dead.
+
+**They are not.** Fetched through a real browser stack, `Water-Safety-And-Young-Children.aspx` renders in full, is indexed, and carries `Last Updated 5/18/2026`. healthychildren.org **cloaks non-browser clients with a 404, not a 403.**
+
+This is the inverse of the known `WAF 403s masked real 404s` trap, and it is worse: **403 makes an auditor suspicious, 404 makes an auditor confident.** A link checker run against this site would report 665 broken authority links and any "fix" would have stripped or rewritten the site's best citations. Recorded to memory as `waf_404_fakes_dead_external_link`. **Operational rule: on a 404 from a known-good authority domain, re-probe through a rendering fetch before believing it. Status-code-only link checking cannot be trusted on `healthychildren.org`.** No links were changed.
+
+### Zero-citation pages: link what the page already names
+
+Both zero-citation pages repeated the Batch-47 pattern exactly — each **named an authority in a `stat-box` but never hyperlinked it**:
+- `choose-your-own`: "According to the American Academy of Pediatrics (AAP), swim lessons are one layer of drowning prevention…"
+- `cloudy-pool`: "According to the U.S. Centers for Disease Control and Prevention (CDC), drowning is the leading cause of unintentional injury death for children ages 1 to 4…"
+
+Both were **hyperlinked in place** rather than duplicated, then each received the canonical `📚 Authoritative Sources` block (4 links, matching the `teaching-kids-safe-pool-entry` markup) inserted **before** `<h2 id="faq">`, plus a matching `toc-item`. **Nothing was invented — no new statistic was authored**; the only numbers on these pages are the pre-existing attributions, now linked. All 8 source URLs were already in sitewide use (620×/438×/283×/281×/182×/20×/8×) and GET-probed: aap.org, redcross.org ×2 = 200; cdc.gov ×2, poolsafely.gov = 403 WAF false positives; healthychildren.org = 404 **cloak**, verified live by rendered fetch (above).
+
+### Collision handling
+
+17 proposals scored against a **6,876-heading** sitewide corpus (h1+h2+h3 ending in `?` across 749 files) plus intra-batch, excluding each file's own headings-being-replaced. **One collision and two near-misses, all re-aimed rather than reworded:**
+
+1. `What Are the Five Water Competency Skills?` — **0.937** vs `water-competency-skills-checklist.html :: ✅ What Are the 5 Water Competency Skills?`. That page owns the definitional query outright; this page's job is the *pass/fail readiness test*, so it was re-aimed to **`Which Skills Must a Child Demonstrate Before Swimming Unassisted?`**
+2. `What Is the See-the-Bottom Rule for Pool Water?` — 0.762 vs `cold-water-shock.html :: What is the 1-10-1 rule for cold water?` (the "What is the X rule" shape is crowded). Re-aimed to **`Why Should You Stay Out If You Cannot See the Pool Bottom?`**
+3. `What Does a Child Need Beyond the Five Basic Skills?` — 0.753 vs `rolling-recovery :: ⚖️ Why Does a Child Need Both Recovery Skills?`. Re-aimed to **`What Else Do Deep Water and Cold Demand From a Swimmer?`**
+
+**Final set: worst score 0.000 — no proposal matches any existing heading at ≥0.72.**
+
+**Self-cannibalization was again the binding constraint, not the sitewide corpus.** All three pages carry FAQ `<h3>`s that already own the obvious queries — `cloudy-pool`'s H2 `What makes water turn cloudy or green?` was a **near-verbatim duplicate of its own FAQ h3**, so it was re-aimed to `What Is Actually in the Water When a Pool Turns Cloudy?` rather than merely re-shaped. Every H2 on all three files was aimed at an angle its own FAQ does not already answer.
+
+### Method notes
+
+- **id-keyed raw-file replacement with emoji/entity-prefix capture.** `independent-swimming` stores its emoji as **numeric entities** (`&#x2753;`, `&#x1F3CA;`, `&#x1F4AA;`, `&#x1F9E0;`, `&#x1F441;&#xFE0F;`), not raw UTF-8 like `rolling-recovery` — a regex captured the leading entity/emoji run and re-emitted it byte-for-byte. One heading (`still-watch`) carried raw `"` quotes. `count==1` asserted per heading, and nested markup asserted absent, before and after. bs4 output was never string-matched against the raw file.
+- **Speakable extended only after resolution.** Both top-level pages carried `{.article-excerpt, .tldr-box}`. `.article h1` was resolved with soupsieve first (→1 on both) and only then added. **`.article > p:first-of-type` resolved to 0 on both and was deliberately NOT added** — that is exactly the 2026-08-19 inert-speakable bug. (It resolves to 1 on `independent-swimming`, where it was already present and correct.)
+- Section lead-ins were re-read after every rewrite: **all 17 sections open with a direct answer to their new question.**
+
+### Validation
+- Tag balance `err=0 / stackleft=0` on all three.
+- html5lib head integrity: 16 metas in `<head>`, **0 metas in `<body>`**, canonical in head, on all three.
+- JSON-LD parses clean — `[Article, BreadcrumbList, FAQPage]` on all three; `jerr=0`; **0 HTML entities leaked inside JSON-LD**.
+- **FAQ schema↔visible drift 0** across 5/5/4 Q&A (tag-stripped, entity-decoded, whitespace-normalised, both question and answer).
+- Speakable resolved with soupsieve: every selector → exactly 1 on every file. **None match zero.**
+- `headline == h1` on all three. Meta descriptions unchanged, decoded 139 / 159 / 158 (≤160).
+- Nested anchors 0. Unsubstituted `__PLACEHOLDER__` 0. Brand-voice ownership scan **0 hits**. All internal `#` anchors and site-relative hrefs resolve.
+- `.related` ordering checked on both edited-structure files: `#sources` < `#faq` < `.related` — **no main content stranded below the Related block.**
+- **DOM signature diff vs HEAD, scripts stripped.** `independent-swimming`: **213/213 elements, tag+id+class sequence byte-identical** — heading text only. `choose-your-own` 189→201 and `cloudy-pool` 176→188, each accounted for exactly (+1 `h2#sources`, +1 `ul`, +4 `li`, +4 `a`, +1 inline `a`, +1 toc `a`). `p` count unchanged on all three (27/23/25).
+- **Text-node diff:** every "removed" string is either a replaced heading or the stat-box sentence split by the inserted `<a>` — **no prose was deleted or altered** on any file.
+- `dateModified` bumped to **2026-08-29**; `sitemap.xml` lastmod bumped for **exactly these 3 URLs**, re-parsed clean, **640 entries unchanged**. No blanket bump.
+- **Live-verified** after push `239b2e9`: all three serve 200, question-H2 counts 7/6/5 serving, both new Authoritative Sources blocks live, all three `dateModified` and all three sitemap `lastmod` live.
+
+### Flagged for Michael — not changed
+1. **`healthychildren.org` link-checking is unreliable sitewide.** 665 outbound links to that domain will report 404 to any status-code-based checker. They are live. Do not let an automated broken-link pass "fix" them.
+2. **Batch 47's open item stands:** `teaching-kids-safe-pool-entry.html` still asserts, in body *and* FAQ schema, that headfirst entries are "a leading cause" of neck and spinal injuries, with **zero supporting citation anywhere on the site**. Either source it or soften it to a non-superlative — and the FAQ schema must change in the same pass.
+
+### Backlog
+**21 education articles under 50% question H2s**; **zero remain without authority citations.** The next tranche is the 0/5 single-template cluster, best taken as one batch with a shared intra-batch collision check since their topics are adjacent: `free-reduced-swim-lessons-make-a-splash` (2,089w — note the *Make a Splash* legacy-branding rule: bridge, do not strip), `drowning-cpr-quick-card` (2,024w), `conditioning-mile-swim-goal` (1,969w), `body-awareness-exercises-swimmers` (1,924w), `swim-readiness-indicators-age-4` (1,922w), `bubbles-through-nose-breath-control` (1,916w), `weighted-practice-flip-turns-skills` (1,899w), `poolside-emergency-kit-checklist` (1,829w, 0/6). Then the low-ratio long-tail: `national-water-safety-action-plan-explained` (1/11 — **check `aap_2026` and the NDPA two-taxonomies rules before touching**), `new-jersey-pool-fence-law` (1/7), `end-of-summer-swim-skills-report-card` (1/7).
