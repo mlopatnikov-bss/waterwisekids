@@ -3049,6 +3049,61 @@ aside p a {
     min-width: 24px;
     min-height: 24px;
   }
+
+  /* ---- WCAG 2.5.8 AA target size, tablet band — ROUND 2 (2026-08-29) ----
+     Same class of defect as the checkbox/radio rule above: every one of these
+     is floored at 44px by m-app.css, and m-app.css is only injected at <=768px,
+     so at 769px they all snap back to their bare line-box height. Measured at
+     769 / 900 / 1149px on the 74 non-stub render reps:
+
+       footer .footer-links a   23px  block nav links, 8 per page, 74/74 reps
+       .article-card a          23px  "Read Guide ->" CTA, homepage card grid
+       a.toc-item / .toc-item a 20px  table-of-contents rows
+
+     None is a link inside a sentence, so the WCAG 2.5.8 inline exception does
+     not apply. All three are already 44px at <=768px, so this only restores the
+     floor the site already keeps on phones; it cannot introduce overflow
+     because every rule below only ever grows HEIGHT. */
+  footer .footer-links a,
+  .article-card a,
+  .toc-item a,
+  a.toc-item {
+    min-height: 24px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .toc-item a,
+  a.toc-item {
+    display: flex;
+  }
+
+  /* ---- iOS/iPadOS focus zoom, tablet band ----
+     Safari zooms the viewport when a text-entry control smaller than 16px
+     receives focus. m-app.css forces 16px on every text control, but again only
+     at <=768px, so at 769px the site's own 0.95rem / 0.9rem form styling wins
+     and iPad users get a zoom-and-pan on every field. Measured 15.2px on
+     /contact/ and /aquatic-jobs/, 14.4px on the /education/ newsletter capture.
+     16px is the exact threshold, not a preference.
+
+     `!important` is required and is not defensive padding: every one of these
+     controls is sized by a page-level <style> block (.form-group input,
+     .job-search-bar input, ...), which sits later in the cascade than any
+     external stylesheet, so the un-flagged version of this rule measured
+     15.2px unchanged at 769 / 900 / 1149px. m-app.css flags the identical
+     mobile rule for the identical reason. */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="url"],
+  input[type="search"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
 }
 
 

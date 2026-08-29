@@ -373,3 +373,36 @@ footer p {
     font-size: 0.82rem;
   }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TAP TARGETS — TABLET BAND (2026-08-29 mobile-consistency sweep)
+
+   Printable landing pages load ONLY this stylesheet — no main.css — so the
+   769-1149px WCAG 2.5.8 (AA) target-size floor added to main.css on 2026-08-29
+   does not reach them. Measured 23px on 33 of the 74 render reps, every one of
+   them a printable, after the main.css fix had already landed.
+
+   m-app.css hides `footer .footer-links` outright below 769px, so this only
+   ever applies in the tablet band, where every device is a touch device.
+   `screen and` keeps it out of the print stylesheet.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media screen and (min-width: 769px) and (max-width: 1149px) {
+  .footer-links a {
+    min-height: 24px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Same drift, same cause: the lead-capture email field on these landing
+     pages measured 15.2px at 769px, under the 16px threshold at which
+     iPadOS Safari zooms the viewport on focus. m-app.css pins 16px below
+     769px and main.css now pins it in the band, but neither sheet is loaded
+     here. */
+  input[type="email"],
+  input[type="text"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
