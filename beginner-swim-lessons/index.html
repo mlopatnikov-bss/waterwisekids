@@ -111,8 +111,11 @@
     .hub-cta { background: linear-gradient(135deg, #0369a1, #0c4a6e); border-radius: 14px; padding: 36px 28px; text-align: center; margin: 12px 0 8px; }
     .hub-cta h2 { color: #ffffff; font-size: 1.5rem; margin: 0 0 10px; }
     .hub-cta p { color: #e0f2fe; max-width: 640px; margin: 0 auto 18px; }
-    .hub-cta .cta-button { display: inline-block; background: #f97316; color: #ffffff; font-weight: 700; padding: 13px 28px; border-radius: 8px; text-decoration: none; }
-    .hub-cta .cta-button:hover { background: #ea580c; }
+    /* 2026-08-29 visual QA: white on #f97316 measures 2.80:1, under AA 4.5.
+       #c2410c is the same orange ramp at 5.18:1 and is already the site's
+       compliant CTA orange (assets/css/teens-hub.css, assets/css/advertise.css). */
+    .hub-cta .cta-button { display: inline-block; background: #c2410c; color: #ffffff; font-weight: 700; padding: 13px 28px; border-radius: 8px; text-decoration: none; }
+    .hub-cta .cta-button:hover { background: #9a3412; }
     .hub-local-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
     .hub-local-links a { background: #f0f9ff; border: 1px solid #bae6fd; color: #075985; padding: 8px 14px; border-radius: 999px; font-size: 0.88rem; text-decoration: none; }
     .hub-local-links a:hover { background: #e0f2fe; }

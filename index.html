@@ -97,8 +97,14 @@
     /* ══════════════════════════════════════
        HERO SECTION
     ══════════════════════════════════════ */
+    /* 2026-08-29 visual QA: .hero p is rgba(255,255,255,.9) at 18.4px/400, which
+       is one third of a pixel under the 18.66px large-text threshold, so it needs
+       4.5:1 — it measured 3.61:1 against the blue-600 end of this gradient, and
+       even solid white only reaches 4.10:1 there. Moving the light end to
+       blue-700 (the same canonical blue .btn-secondary already uses) takes the
+       existing copy to 5.13:1 without touching the type. */
     .hero {
-      background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-800) 100%);
+      background: linear-gradient(135deg, var(--blue-700) 0%, var(--blue-800) 100%);
       color: var(--white);
       padding: 80px 24px;
       text-align: center;
