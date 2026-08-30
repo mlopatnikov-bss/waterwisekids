@@ -691,10 +691,20 @@ header > nav {
 /* ══════════════════════════════════════════════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════════════════════════════════════════════ */
+/* css-regression-checker 2026-08-30: `footer` carried a 1.5rem side padding AND
+   its inner wrapper carries the shared 24px `.container`/`footer > div` gutter, so
+   the two stacked to a 48px footer inset while the header — which puts ALL of its
+   gutter on the inner wrapper (`header{padding:0}` + `header .container{padding:0 24px}`)
+   — sat at 24px. Invisible at >=1208px, where the footer wrapper is still narrower
+   than its box and centring absorbs the difference (both land at 84px); below that
+   the wrapper goes full-width and the 24px mismatch becomes live on every page.
+   Measured 68/68 reps: header 24px vs footer 48px at 769-1159px, body text 24px.
+   Drop the outer gutter so the footer mirrors the header exactly; the <=768px path
+   is unaffected (footer padding is re-set to 20px there). See [[mapp_container_double_gutter_in_footer]]. */
 footer {
   background: var(--blue-900);
   color: #e0f2fe;
-  padding: 2.5rem 1.5rem 1.5rem;
+  padding: 2.5rem 0 1.5rem;
 }
 
 .footer-grid {
@@ -1587,8 +1597,15 @@ table tbody tr:hover {
     padding: 0 var(--spacing-lg);
   }
 
+  /* css-regression-checker 2026-08-30: 20px, not --spacing-lg (16px). This is the
+     SECOND header markup variant — `header > nav` with no `.container` wrapper (5
+     rep classes, e.g. education/swim-practice-log.html). The same-run fix that moved
+     the dominant `header .container` variant to the 20px site gutter did not reach
+     here, and these 5 stayed 4px tighter than their own footer and body column.
+     Two header variants exist; a chrome gutter change must touch BOTH selectors.
+     See main.css:3007 for the same trap in the tablet-band block. */
   header > nav {
-    padding: 0 var(--spacing-lg);
+    padding: 0 20px;
   }
 
   .hidden-mobile {

@@ -192,10 +192,20 @@ body {
 /* ── Screen-only site footer + related cards (parity with main.css) ──
    Printables carry the standard <footer> and .related-card markup but only
    load this stylesheet; these classes were undefined -> unstyled on screen. */
+/* css-regression-checker 2026-08-30: `footer` carried a 1.5rem side padding AND
+   its inner wrapper carries the shared 24px `.container`/`footer > div` gutter, so
+   the two stacked to a 48px footer inset while the header — which puts ALL of its
+   gutter on the inner wrapper (`header{padding:0}` + `header .container{padding:0 24px}`)
+   — sat at 24px. Invisible at >=1208px, where the footer wrapper is still narrower
+   than its box and centring absorbs the difference (both land at 84px); below that
+   the wrapper goes full-width and the 24px mismatch becomes live on every page.
+   Measured 68/68 reps: header 24px vs footer 48px at 769-1159px, body text 24px.
+   Drop the outer gutter so the footer mirrors the header exactly; the <=768px path
+   is unaffected (footer padding is re-set to 20px there). See [[mapp_container_double_gutter_in_footer]]. */
 footer {
   background: #0c4a6e;
   color: #e0f2fe;
-  padding: 2.5rem 1.5rem 1.5rem;
+  padding: 2.5rem 0 1.5rem;
   text-align: center;
 }
 /* 2026-08-25 css-regression sweep: this stood at max-width:1100px with no side
@@ -323,8 +333,13 @@ footer {
    at <=768px; this standalone sheet kept 24px, so the printable header logo sat
    8px further in than on every other template. Mirror the site value.
    See [[standalone_stylesheet_drift]]. */
+/* css-regression-checker 2026-08-30: the header gutter was 16px while the footer
+   and the body text column both sit at 20px on mobile (m-app.css's general
+   `.container` override is 20px !important, and `footer > .container` resets to
+   0 on top of `footer{padding:20px}`). Measured 68/68 reps at 390px: logo 16px,
+   footer title 20px, body copy 20px — the header was the sole outlier. Align to 20px. */
 @media (max-width: 768px) {
-  .screen-header nav { padding: 0 16px; }
+  .screen-header nav { padding: 0 20px; }
 }
 
 /* css-regression-checker 2026-08-23: the 2026-08-20 mirror below re-asserted

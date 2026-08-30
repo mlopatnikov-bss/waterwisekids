@@ -96,8 +96,13 @@
     z-index: 200;
   }
 
+  /* css-regression-checker 2026-08-30: the header gutter was 16px while the footer
+     and the body text column both sit at 20px on mobile (m-app.css's general
+     `.container` override is 20px !important, and `footer > .container` resets to
+     0 on top of `footer{padding:20px}`). Measured 68/68 reps at 390px: logo 16px,
+     footer title 20px, body copy 20px — the header was the sole outlier. Align to 20px. */
   header .container {
-    padding: 0 16px !important;
+    padding: 0 20px !important;
   }
 
   header nav {
