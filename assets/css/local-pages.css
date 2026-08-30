@@ -15,10 +15,18 @@
 .wwk-breadcrumbs a { color: var(--blue-700, #0369a1); text-decoration: none; }
 .wwk-breadcrumbs a:hover { text-decoration: underline; }
 
+/* visual-design-auditor 2026-08-30: side gutter pinned to the literal site
+   values (20px <=768 / 24px >=769). The shared chrome uses literal px, but the
+   root font-size drops to 15px at 768 and 14px at 480, so a rem gutter here
+   silently shrank to 14-15px and the body column ran 5-6px wider than its own
+   nav and footer on every phone. See [[mobile_root_font_size_shrinks_rem]]. */
 .wwk-local-content {
   max-width: 860px;
   margin: 0 auto;
-  padding: 1rem 1.5rem 4rem;
+  padding: 1rem 24px 4rem;
+}
+@media (max-width: 768px) {
+  .wwk-local-content { padding-left: 20px; padding-right: 20px; }
 }
 .wwk-local-content h1 {
   font-size: 2.4rem;
@@ -199,7 +207,7 @@
 
 /* Mobile */
 @media (max-width: 640px) {
-  .wwk-local-content { padding: 0.75rem 1rem 3rem; }
+  .wwk-local-content { padding: 0.75rem 20px 3rem; }
   .wwk-local-content h1 { font-size: 1.8rem; }
   .featured-school { padding: 1.5rem; }
   .wwk-cta-banner { padding: 2rem 1.25rem; }

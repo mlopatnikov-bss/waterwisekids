@@ -82,7 +82,14 @@
   <link rel="stylesheet" href="/assets/css/main.css?v=20260830a" />
     <style>
         .stars { color: #fbbf24; font-size: 1.3rem; }
-        main { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        main { max-width: 1160px; margin: 0 auto; padding: 2rem 24px; }
+        /* visual-design-auditor 2026-08-30: 1200px -> 1160px. The shared header
+           and footer .container are capped at 1160px, so a 1200px body rail made
+           this page's content outdent its own nav and footer by 20px per side at
+           >=1248px. Same shape as the special-needs.css leak fixed 2026-08-20. */
+        /* visual-design-auditor 2026-08-30: literal px gutter; root font-size
+           drops to 15/14px on phones so a rem gutter drifts off the chrome rail. */
+        @media (max-width: 768px) { main { padding: 2rem 20px; } }
         h1 { font-size: 2.5rem; color: #075985; margin-bottom: 1.5rem; font-weight: 700; }
         h2 { font-size: 2rem; color: #075985; margin-top: 3rem; margin-bottom: 1.5rem; font-weight: 700; }
         h3 { font-size: 1.3rem; color: #0369a1; margin-bottom: 1rem; font-weight: 600; }

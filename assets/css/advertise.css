@@ -23,10 +23,15 @@
       margin-bottom: 2rem;
     }
 
+/* visual-design-auditor 2026-08-30: side gutter pinned to the literal site
+   values (20px <=768 / 24px >=769). The shared chrome uses literal px, but the
+   root font-size drops to 15px at 768 and 14px at 480, so a rem gutter here
+   silently shrank to 14-15px and the body column ran 5-6px wider than its own
+   nav and footer on every phone. See [[mobile_root_font_size_shrinks_rem]]. */
 main {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 3rem 2rem;
+      padding: 3rem 24px;
     }
 
 .audience-stats {
@@ -405,7 +410,7 @@ main {
       }
 
       main {
-        padding: 2rem 1rem;
+        padding: 2rem 20px;
       }
 
       .audience-stats,
