@@ -1700,3 +1700,75 @@ Both were **hyperlinked in place** rather than duplicated, then each received th
 
 ### Backlog
 **21 education articles under 50% question H2s**; **zero remain without authority citations.** The next tranche is the 0/5 single-template cluster, best taken as one batch with a shared intra-batch collision check since their topics are adjacent: `free-reduced-swim-lessons-make-a-splash` (2,089w — note the *Make a Splash* legacy-branding rule: bridge, do not strip), `drowning-cpr-quick-card` (2,024w), `conditioning-mile-swim-goal` (1,969w), `body-awareness-exercises-swimmers` (1,924w), `swim-readiness-indicators-age-4` (1,922w), `bubbles-through-nose-breath-control` (1,916w), `weighted-practice-flip-turns-skills` (1,899w), `poolside-emergency-kit-checklist` (1,829w, 0/6). Then the low-ratio long-tail: `national-water-safety-action-plan-explained` (1/11 — **check `aap_2026` and the NDPA two-taxonomies rules before touching**), `new-jersey-pool-fence-law` (1/7), `end-of-summer-swim-skills-report-card` (1/7).
+
+---
+
+## Run 2026-08-30 — Batch 49: the 0/5 template cluster, and a skip-list regex that ate a denominator
+
+Scope re-derived from a fresh `origin/live` clone at `b5680c3` (the mount was again stale, at `2476831c`). All 413 indexable `education/*.html` true articles ≥900 words re-scored on question-H2 ratio and outbound authority links.
+
+**Optimized this run (3 files):**
+
+| File | Words | H2 question ratio | Other changes |
+|---|---|---|---|
+| `education/drowning-cpr-quick-card.html` | 2,171 | 0/5 → **5/5** | headings only |
+| `education/free-reduced-swim-lessons-make-a-splash.html` | 2,084 | 0/6 → **6/6** | speakable +`.article h1`; visible `Updated` synced to `dateModified` |
+| `education/poolside-emergency-kit-checklist.html` | 1,977 | 0/6 → **6/6** | headings only |
+
+All three finish at **100% of convertible H2s**. Residual statement headings are the sitewide utility set only (`📚 Authoritative Sources`, `Frequently Asked Questions`, `Keep Reading`, the printable CTA). Backlog 21 → **18**. All three already carried Article + BreadcrumbList + FAQPage + tldr-box + speakable and 3–6 authority links, so headings were the only real gap.
+
+### The finding that mattered most: `\bsources\b` vs "re**sources**"
+
+The backlog scorer's non-convertible SKIP set matched the bare substring `sources` — which also matches **"resources"**. `free-reduced-swim-lessons-make-a-splash.html` has an H2 `Parks & Recreation and other free resources`; it was being silently dropped from the denominator, so the page scored **0/5 when its true ratio was 0/6**. Same defect would hit any H2 containing "resources," "outsourcing," or "sourced."
+
+The under-50% *count* did not move (21 either way), which is exactly why this survived four batches: **the aggregate was right while an individual denominator was wrong.** Anchored to `\bsources\b`; `poolside-emergency-kit-checklist` also corrected 0/5 → 0/6. **Generalizable: a skip-list built from bare substrings silently shrinks denominators. Anchor every skip term to a word boundary and assert the skipped set, not just the surviving count.**
+
+### The second finding: an FAQ parity failure that was the validator's fault, and a real defect underneath it
+
+The validation pass reported `free-reduced` had a schema question with **no visible counterpart** — `How do I find free or low-cost swim lessons near me?`. Confirmed identical in `HEAD`, so not introduced here. It is **not** an orphan: the validator only looked for `<h3>`, and this page renders its in-body FAQ as `<p><strong>Question?</strong><br>Answer</p>`. All five questions are visible; parity is **5/5, drift 0**. Parity checks must accept **both** FAQ markup shapes (`h3` and `p > strong`) or they manufacture orphans.
+
+**But the false positive exposed a real, pre-existing structural defect.** That page ships **two FAQ blocks with divergent wording**:
+
+- offset 20062 — inside `.article-body`, immediately after `<h2 id="faq">`, `<p><strong>` shape, **all 5 questions**, short answers. Correct location.
+- offset 25134 — **outside `.article-body`**, and **after `<div class="related">`** (22754), `<h3>` shape, only 4 questions, longer answers that the JSON-LD mirrors verbatim.
+
+So the block the schema actually quotes is the one stranded below Related Reading — the `main content stranded below .related` pattern, here compounded by a duplicated FAQ. **Not fixed in this run**, per the Batch-47 precedent of flagging `.related` ordering rather than restructuring inside a heading batch; de-duplicating means choosing which set of answers to delete and re-pointing the schema in the same pass. Flagged below.
+
+### Collision handling
+
+17 proposals scored at 0.80 against a **6,910-heading** sitewide corpus (h1+h2+h3 ending in `?` across 751 files) plus intra-batch, excluding each file's own headings being replaced. **Zero collisions; worst score 0.703**, then re-aimed to 0.614.
+
+**Self-cannibalization was again the binding constraint.** `drowning-cpr-quick-card`'s own five FAQ `<h3>`s already own the obvious queries — the natural headings (`Is CPR for drowning different?`, `What are the steps of CPR after someone is pulled from the water?`, `How is CPR different for an infant?`, `Does knowing CPR replace swim lessons and supervision?`) are **verbatim its own FAQ**. All five H2s had to be aimed at angles the FAQ does not already answer: the physiological *why* (`Why Do Rescue Breaths Come Before Compressions in Drowning?`), the *sequence* (`In What Order Should You Check, Call, Breathe, and Pump?`), the *numbers* (`How Deep Should Compressions Go for an Infant or Child?`), and the *layers* framing (`Which Layers Keep a Family From Ever Needing CPR?`).
+
+One re-aim on the sitewide corpus: `Why Do Free Swim Lessons Change a Child's Drowning Risk?` scored **0.703** against the `Do swim lessons reduce drowning risk?` FAQ carried by many `swim-lessons/*` town pages — and `do-swim-lessons-reduce-drowning-risk.html` owns that efficacy query outright. This section is about the **access gap**, not efficacy, so it was re-aimed to **`Why Are Free Swim Lessons a Safety Issue, Not a Perk?`** (0.614) — which its own second paragraph answers verbatim ("not a luxury extracurricular; it is a safety intervention").
+
+`How Affordable Are Municipal Parks and Recreation Lessons?` deliberately **narrows** the old H2's scope ("Parks & Recreation and other free resources") to the query its lead paragraph actually answers. The "other resources" content stays as supporting material below.
+
+**Make a Splash branding preserved, not stripped** — `How Does the Make a Splash Grant Network Work?` keeps the legacy name while the body bridges to USA Swimming Foundation / Local Partners, per the standing rule.
+
+### Method notes
+
+- **id-keyed raw-file replacement with emoji/entity-prefix capture.** `drowning-cpr-quick-card` and `poolside-emergency-kit-checklist` store emoji as numeric entities (`&#x1FAC1;`, `&#x1F9ED;`, `&#x1F6E1;&#xFE0F;`, `&#x2600;&#xFE0F;`, …); `free-reduced` has none on its body H2s but a raw UTF-8 📚 on `#sources`. A regex captured the leading entity/emoji run and re-emitted it byte-for-byte; `count==1` asserted per heading, nested markup asserted absent. bs4 output was never string-matched against the raw file.
+- **Speakable extended only after resolution.** `free-reduced` carried only `{.article-excerpt, .tldr-box}`; `.article h1` was resolved with soupsieve first (→1) and only then added. Every selector on all three files resolves to exactly 1 — **none match zero**.
+- **TOC labels left as short non-verbatim labels**, per Batch 41/42 precedent. All 19 remain accurate after the re-aims, including `Parks & Rec + free resources`.
+- Section lead-ins re-read after every rewrite: **all 17 sections open with a direct answer to their new question.**
+- USA Swimming's finder was GET-probed with a browser UA: `usaswimming.org/home/find-a-team` → **200**, titled "Find A Team", and it hosts the **Swim Lesson Provider** network — so the page's instruction ("set the finder type to Learn to Swim") is sound and does **not** violate the `usaswimmingfoundation.org is not a lesson finder` rule. Terminology drift noted below.
+
+### Validation
+- Tag balance `err=0 / stackleft=0` on all three.
+- html5lib head integrity: 16 metas in `<head>`, **0 metas in `<body>`**, canonical in head, on all three.
+- JSON-LD parses clean — `[Article, BreadcrumbList, FAQPage]` on all three; `jerr=0`; **0 HTML entities leaked inside JSON-LD**.
+- **FAQ schema↔visible drift 0** across 5/5/5 Q&A, checked against **both** markup shapes (tag-stripped, entity-decoded, whitespace-normalised, question and answer).
+- Speakable resolved with soupsieve: every selector → exactly 1 on every file.
+- `headline == h1` on all three. Meta descriptions unchanged, decoded 149 / 133 / 157 (≤160).
+- Nested anchors 0. Unsubstituted `__PLACEHOLDER__` 0. Brand-voice ownership scan **0 hits**. All internal `#` anchors resolve.
+- **DOM signature diff vs HEAD, scripts stripped: 231/231, 259/259, 238/238 elements — tag + id + class sequence byte-identical on all three.** Text-node diff: the only removed strings are the 17 replaced headings and the one visible `Updated` date. **No prose was deleted or altered on any file.** Text-only diff, so no render sweep was warranted.
+- `dateModified` bumped 2026-08-03 / 2026-08-28 / 2026-08-12 → **2026-08-30**; `free-reduced`'s visible `Updated August 28, 2026` synced to match (the other two carry a publish date only, per template convention). `sitemap.xml` lastmod bumped for **exactly these 3 URLs** (all three had been sitting at `2026-08-29` while their `dateModified` said August 3/12/28 — the known sitemap-vs-dateModified contradiction, now consistent for these three), re-parsed clean, **641 entries unchanged**. No blanket bump.
+
+### Flagged for Michael — not changed
+1. **`free-reduced-swim-lessons-make-a-splash.html` has two divergent FAQ blocks, and the one the JSON-LD quotes is stranded below `<div class="related">`** (details above). Needs a dedicated pass: pick one answer set, put it inside `.article-body`, re-point the schema in the same commit.
+2. **Terminology drift on the same page.** It calls the destination "the Make a Splash **provider finder**" and its listings "**Local Partners**" (4 occurrences, one inside FAQ schema). The live page is branded **"Find A Team"** and the network is **"Swim Lesson Providers."** The link target is correct and the advice works; only the labels are dated. Fixing it touches FAQ schema, so it was left for its own pass.
+3. **Batch 47/48's open item still stands:** `teaching-kids-safe-pool-entry.html` asserts, in body *and* FAQ schema, that headfirst entries are "a leading cause" of neck and spinal injuries, with zero supporting citation anywhere on the site.
+
+### Backlog
+**18 education articles under 50% question H2s**; zero remain without authority citations. The 0/5 single-template cluster is now the whole head of the queue and should be taken as one batch with a shared intra-batch collision check, since the topics are adjacent (skills/technique) and intra-batch similarity is the real risk: `conditioning-mile-swim-goal` (1,966w, **auth=1 — lowest citation count on the backlog**), `body-awareness-exercises-swimmers` (1,921w), `swim-readiness-indicators-age-4` (1,919w), `bubbles-through-nose-breath-control` (1,911w), `weighted-practice-flip-turns-skills` (1,895w, 4 near-question H2s already). Then the low-ratio long tail: `national-water-safety-action-plan-explained` (1/11 — **check the `aap_2026` and NDPA two-taxonomies rules before touching**), `new-jersey-pool-fence-law` (1/7), `end-of-summer-swim-skills-report-card` (1/7), `water-confidence-challenge` (1/5), `make-a-splash-local-partner-badge-decoded` (1/5 — same legacy-branding and "Local Partners" terminology question as flag #2 above; consider taking both in one pass).
