@@ -51,17 +51,22 @@
     z-index: 199;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-  /* 2026-08-22 CSS-regression fix. 142 pages ship `<header><nav>` with no
-     `.container` wrapper, so nav spans the full viewport and the absolutely
-     positioned open drawer above rendered edge-to-edge (x=0, w=390/320) while
-     the 580 `.container`-wrapped pages inset it by 16px (x=16, w=358/288).
-     Same white panel, same centred links, but a different shadow + bottom-border
-     width. Match the majority. Scoped to bare navs only, so contained pages are
-     untouched. */
+  /* 2026-08-22 CSS-regression fix, re-pinned 2026-08-30. 158 pages ship
+     `<header><nav>` with no `.container` wrapper, so nav spans the full viewport
+     and the absolutely positioned open drawer above rendered edge-to-edge
+     (x=0, w=390/320) while the `.container`-wrapped pages inset it by the
+     container's own side padding. Scoped to bare navs only, so contained pages
+     are untouched.
+     The inset must equal the shared chrome gutter, which is literal 20px at
+     <=768px (see rem-side-gutter fix d38dcbe). It was hardcoded 16px here when
+     the container gutter was still 16px; measured 2026-08-30 at 375px the
+     contained cohort sat at x=20/right=355 (matching the footer rail) while the
+     bare cohort sat at x=16/right=359 — 4px proud of its own footer on both
+     sides. Keep this value in step with `header .container` padding. */
   /* `width:auto` is load-bearing: printable-checklist.css / printable-poster.css
      set `width:100%` on the open drawer, which over-constrains left+right and
-     would push the panel 16px off the right edge. */
-  header > nav.mobile-open .nav-links { left: 16px; right: 16px; width: auto; }
+     would push the panel off the right edge. */
+  header > nav.mobile-open .nav-links { left: 20px; right: 20px; width: auto; }
 
   /* 2026-08-25 mobile-consistency fix. main.css `.nav-links` sets
      `align-items: center` for the HORIZONTAL desktop nav. The open drawer flips
