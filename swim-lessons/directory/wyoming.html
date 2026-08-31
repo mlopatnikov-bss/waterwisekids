@@ -256,6 +256,16 @@
       background: #054373;
     }
 
+    .school-reviews { margin: 0.9rem 0 0; padding: 0.75rem 0.85rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; }
+    .school-reviews-title { margin: 0; font-size: 0.9rem; color: #334155; }
+    .school-reviews-note { margin: 0.15rem 0 0.6rem; font-size: 0.85rem; color: #475569; }
+    .school-review-list { list-style: none; margin: 0; padding: 0; }
+    .school-review-item { padding: 0.5rem 0; border-top: 1px solid #e2e8f0; }
+    .school-review-list .school-review-item:first-child { border-top: 0; padding-top: 0; }
+    .school-review-stars { color: #0f766e; font-size: 0.95rem; letter-spacing: 0.05em; }
+    .school-review-date { margin-left: 0.5rem; font-size: 0.85rem; color: #475569; }
+    .school-review-text { margin: 0.25rem 0 0; font-size: 0.9rem; line-height: 1.5; color: #334155; white-space: pre-wrap; overflow-wrap: anywhere; }
+
     .review-modal {
       display: none;
       position: fixed;
@@ -735,6 +745,11 @@
       }
     }
 
+    function safeAttr(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+                      .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
     function renderSchoolCard(school) {
       const programLabels = {
         'infant': 'Infants',
@@ -752,6 +767,30 @@
         const avgRating = storedReviews.reduce((sum, r) => sum + r.rating, 0) / storedReviews.length;
         const userStars = '★'.repeat(Math.round(avgRating)) + '☆'.repeat(5 - Math.round(avgRating));
         ratingHTML = `<div class="school-rating"><span class="star">${userStars}</span><span>${avgRating.toFixed(1)} (${storedReviews.length} review${storedReviews.length !== 1 ? 's' : ''})</span></div>`;
+      }
+
+      // Reviews are held in this browser's localStorage and are never transmitted
+      // anywhere, so the only person who can ever read them is the person who wrote
+      // them. Rendering the text back is the whole point of asking for it -- it was
+      // previously required, stored, and then never displayed.
+      let reviewsHTML = '';
+      if (storedReviews.length > 0) {
+        let items = '';
+        for (let ri = storedReviews.length - 1; ri >= 0; ri--) {
+          const rv = storedReviews[ri];
+          let rvStars = '';
+          for (let si = 0; si < 5; si++) rvStars += si < rv.rating ? '\u2605' : '\u2606';
+          let when = '';
+          try { when = new Date(rv.date).toLocaleDateString(); } catch (e) { when = ''; }
+          items += '<li class="school-review-item">' +
+            '<span class="school-review-stars" aria-label="' + rv.rating + ' out of 5">' + rvStars + '</span>' +
+            (when ? '<span class="school-review-date">' + safeAttr(when) + '</span>' : '') +
+            '<p class="school-review-text">' + safeAttr(rv.text) + '</p></li>';
+        }
+        reviewsHTML = '<div class="school-reviews">' +
+          '<h4 class="school-reviews-title">Your notes on this school</h4>' +
+          '<p class="school-reviews-note">Saved in this browser only &mdash; not published and not sent to the school.</p>' +
+          '<ul class="school-review-list">' + items + '</ul></div>';
       }
 
       return `
@@ -776,6 +815,8 @@
           <div class="school-contact">
             <a href="${school.website}" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the ${school.name} website (opens in a new tab)">Visit Website →</a>
           </div>
+
+          ${reviewsHTML}
 
           <div class="school-actions">
             <button class="review-btn" onclick="openReviewModal('${school.id}', '${school.name.replace(/'/g, "\\'")}')">Leave a Review</button>
