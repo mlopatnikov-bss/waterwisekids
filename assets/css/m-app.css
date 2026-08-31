@@ -147,8 +147,12 @@
     margin: 0 !important;
   }
 
+  /* 2026-08-31 visual QA: 1.5rem resolved to 21px at the 14px mobile root —
+     exactly the size of the bare section h2s on 20 templates, so the page
+     title tied (and on 6 templates lost to) its own subheads. Raised to
+     1.6rem so the mobile type scale reads h1 22.4 > h2 21 > h3 18.2. */
   .hero h1 {
-    font-size: 1.5rem !important;
+    font-size: 1.6rem !important;
     font-weight: 800 !important;
     color: #171717 !important;
     margin-bottom: 6px !important;
@@ -180,12 +184,18 @@
     text-align: left !important;
   }
 
+  /* 2026-08-31 visual QA: this ran 1.35rem = 18.9px while the same pages'
+     section h2s rendered 21-28px — the page title was the SMALLEST heading on
+     screen. gear.css, advertise.css and for-swim-schools all declare their own
+     mobile `h1 { font-size: 2rem }`; this !important had been silently killing
+     every one of them. Matched to `.hero h1` above so all mobile heroes agree,
+     and the 2px sub-gap raised to the 6px `.hero h1` already uses. */
   .page-hero h1,
   .page-hero--edu h1,
   .tools-hero h1 {
-    font-size: 1.35rem !important;
+    font-size: 1.6rem !important;
     color: #171717 !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 6px !important;
     font-weight: 800 !important;
   }
 
@@ -1427,6 +1437,18 @@
     color: #0369a1 !important;
     border-color: #0369a1 !important;
   }
+
+  /* ---- Hard-coded pixel headings in inline styles (2026-08-31 visual QA) ----
+     `/swim-schools.html` and `/adult-swimming-lessons.html` build their heroes
+     from an UNCLASSED <section> with everything inline, so not one selector in
+     this file can reach them. Both shipped a 42px h1 to a 390px phone — the
+     only two pages on the site that never compacted — plus 24/28px section h2s.
+     Author `!important` beats a normal inline declaration, so attribute
+     selectors fix it without touching the markup or the desktop rendering.
+     Same shape as the 0.72rem inline-font-size block further down. ---- */
+  h1[style*="font-size: 42px"] { font-size: 1.6rem !important; }
+  h2[style*="font-size: 28px"],
+  h2[style*="font-size: 24px"] { font-size: 1.5rem !important; }
 
   /* ---- Sub-11px text floor: .age-badge (6 guide pages) rendered 10.5px.
      Not covered by the 2026-08-16 sweep or the .tool-badge/.package-badge

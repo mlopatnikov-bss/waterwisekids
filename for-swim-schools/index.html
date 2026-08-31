@@ -195,6 +195,9 @@
     @media (max-width: 768px) {
       .page-hero h1 { font-size: 2rem; }
       .page-hero .hero-sub { font-size: 1rem; }
+      /* 2026-08-31 visual QA: `.section h2` kept its 2rem desktop size on
+         mobile (28px) while m-app.css compacted the hero h1 to 18.9px. */
+      .section h2 { font-size: 1.5rem; }
     }
 </style>
   <script type="application/ld+json">
@@ -487,6 +490,6 @@
       </div>
     </div>
   </footer>
-  <script src="/assets/js/main.js?v=20260830c"></script>
+  <script src="/assets/js/main.js?v=20260831a"></script>
 </body>
 </html>

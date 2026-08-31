@@ -409,6 +409,17 @@ main {
         font-size: 2rem;
       }
 
+      /* 2026-08-31 visual QA: the 1.8rem section headings never had a mobile
+         override, so they rendered 25.2px against a 21px hero h1. */
+      .packages h2,
+      .why-advertise h2,
+      .how-it-works h2,
+      .testimonials h2,
+      .contact-cta h2,
+      .faq h2 {
+        font-size: 1.5rem;
+      }
+
       main {
         padding: 2rem 20px;
       }

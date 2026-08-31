@@ -342,6 +342,13 @@
                 grid-template-columns: 1fr;
             }
 
+            /* 2026-08-31 visual QA: 1.3rem card h3 rendered 18.2px against the
+               17.5px section h2 above it — the only remaining rank inversion
+               after the sitewide mobile heading pass. */
+            .feature-card h3 {
+                font-size: 1.15rem;
+            }
+
             .hero {
                 padding: 2.5rem 1.5rem;
             }

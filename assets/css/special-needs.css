@@ -362,8 +362,15 @@
         font-size: 32px;
       }
 
+      /* 2026-08-31 visual QA: 28px literal (never scaled with the mobile root)
+         beat this page's own 21px hero h1 by 1.33x, and the 24px h3 beat it too.
+         Both brought into the sitewide mobile scale: h2 21px, h3 17.5px. */
       h2 {
-        font-size: 28px;
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
       }
     }
 

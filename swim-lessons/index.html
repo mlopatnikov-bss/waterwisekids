@@ -297,6 +297,9 @@
     @media (max-width: 768px) {
       .page-hero h1 { font-size: 2rem; }
       .page-hero .hero-sub { font-size: 1rem; }
+      /* 2026-08-31 visual QA: 1.75rem section headings rendered 24.5px on a
+         phone while m-app.css compacted the hero h1 to 18.9px. */
+      .section-heading h2 { font-size: 1.5rem; }
       main { padding: 2rem 20px; }
       .state-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
       .state-link { padding: 8px 6px; font-size: 0.8rem; }
@@ -619,6 +622,6 @@
       </div>
     </div>
   </footer>
-  <script src="/assets/js/main.js?v=20260830c"></script>
+  <script src="/assets/js/main.js?v=20260831a"></script>
 </body>
 </html>

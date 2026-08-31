@@ -66,6 +66,11 @@
 /* Mobile */
 @media (max-width: 768px) {
   .gear-page .hero h1 { font-size: 2rem; }
+  /* 2026-08-31 visual QA: 1.8rem section headings had no mobile override and
+     rendered 25.2px against a 21px hero h1. */
+  .gear-page .categories h2,
+  .gear-page .featured-picks h2,
+  .gear-page .buying-guides h2 { font-size: 1.5rem; }
   .gear-page main.wwk-local-content { padding: 2rem 20px; }
   .gear-page .categories-grid,
   .gear-page .picks-container,
