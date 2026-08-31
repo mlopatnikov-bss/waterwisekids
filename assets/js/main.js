@@ -522,7 +522,7 @@ console.log('%cBecause Water Safety Saves Lives', 'color: #14b8a6; font-size: 14
   if (window.innerWidth <= 768) {
     var css = document.createElement('link');
     css.rel = 'stylesheet';
-    css.href = '/assets/css/m-app.css?v=20260831a';
+    css.href = '/assets/css/m-app.css?v=20260831b';
     document.head.appendChild(css);
 
     var js = document.createElement('script');

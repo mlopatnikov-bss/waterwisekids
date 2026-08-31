@@ -2065,3 +2065,48 @@
     text-align: center !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   2026-08-31 — WCAG 2.5.8 AA (24x24) for STANDALONE LIST NAVIGATION LINKS
+
+   Found by rendering at 375px, not by grepping: a bare `<li><a>…</a></li>`
+   anchor is INLINE, so its box is the line box and nothing else. With the
+   mobile root at 14px (see main.css `html{font-size:14px}` <=480px) these
+   resolve to 15-17px tall — under the 24px AA floor — even though no rule
+   anywhere sets a height. As with .footer-bottom, the failure is the ABSENCE
+   of a rule, so there is nothing for a static audit to find.
+
+   Measured at 375px before the fix:
+     .sidebar-toc ul li a      15.0px   (66 pages — the in-guide TOC)
+     .screen-only ul li a      17.0px   (19 pages — "Related Reading")
+     .state-grid li a          16.0px   ( 5 pages — directory state index)
+     .link-grid / .link-list   16.0px   (town/city cross-links)
+
+   These are one-link-per-item NAVIGATION affordances, not prose, so the
+   WCAG 2.5.8 inline-target exemption does NOT apply to them.
+
+   DELIBERATELY NOT TOUCHED:
+     - .related-articles ul li a sits at exactly 24px — already clears AA, and
+       the house target is AA (breadcrumbs were set to 36px, not 44px, for the
+       same reason: 44 visibly thickens every article page).
+     - a.internal-link is used for INLINE citations inside sentences (Red Cross,
+       BLS) as well as for nav rows, so it cannot be targeted by class.
+     - .cl-footer p a and .tldr-box a are inline citations inside prose.
+
+   inline-flex + min-height grows only the line box; the anchors are 40-238px
+   wide (all far over the 24px min-width) so no min-width is needed and no
+   horizontal overflow can be introduced. Re-verified at 375px and 320px.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  .sidebar-toc ul li a,
+  .screen-only ul li a,
+  .state-grid li a,
+  .link-grid li a,
+  .link-list li a,
+  .note-list li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 24px !important;
+  }
+}
