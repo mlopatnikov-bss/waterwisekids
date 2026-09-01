@@ -208,10 +208,44 @@
   }
 
   /* Breadcrumb — minimal */
-  .page-breadcrumb {
+  /* css-regression-checker 2026-09-01: this rule is the mobile app-shell's
+     breadcrumb treatment (white bar, 0.7rem, on the 20px site rail). It reached
+     only the 68 pages that use `<nav class="page-breadcrumb">`. The other 410
+     pages ship the SAME bar as an unclassed `<div>` with the desktop styling
+     hardcoded inline (`background:#f8fafc; border-bottom:1px solid #e5e7eb;
+     padding:10px 24px; font-size:0.85rem`), which no class selector can reach —
+     so on every phone those pages showed a grey 11.9px band whose text sat at
+     24px while the logo above it and the body copy below it sat at 20px.
+     Measured at 390px: class variant 20px/#fff/11px, inline variant 24px/
+     #f8fafc/11.9px. The 2026-08-31 pass already registered this variant as the
+     site's fourth breadcrumb markup — but only on the min-width rule near the
+     end of this file, so the container itself was never restyled.
+     `!important` in an author stylesheet outranks a non-important inline
+     declaration, so the attribute selector fixes all three properties without
+     editing 410 HTML files. Verified: the substring matches exactly 410 divs
+     sitewide and zero non-breadcrumb elements. Deliberately NOT requiring
+     `[style*="0.85rem"]` the way the 08-31 rule does — 5 of the 410 carry no
+     font-size and that qualifier silently drops them.
+     See [[unclassed_inline_hero_invisible_to_design_system]],
+     [[hardcoded_inset_decouples_from_the_gutter_it_copied]]. */
+  .page-breadcrumb,
+  div[style*="padding: 10px 24px"] {
     padding: 6px 20px 0 !important;
     background: #fff !important;
     font-size: 0.7rem !important;
+  }
+
+  /* css-regression-checker 2026-09-01: `.hub-section` is defined only in the
+     per-page <style> block of the 5 hub pages (beginner-swim-lessons,
+     toddler-swim-lessons, kids-swim-lessons, statistics, statistics/
+     state-of-drowning-prevention) as `padding: 40px 24px`, with no mobile
+     override anywhere. Every other full-bleed band on those pages drops to the
+     20px mobile rail via `.container`; these sections stayed at 24px, so the
+     hub body copy sat 4px inboard of its own header and footer. Measured 24px
+     vs a 20px rail at 390px on all 5. */
+  .hub-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   /* ═══════════════════════════════════
@@ -1116,6 +1150,16 @@
   .newsletter-section p,
   .newsletter p,
   .page-breadcrumb,
+  /* css-regression-checker 2026-09-01: the unclassed inline breadcrumb bar (410
+     pages) must be listed here as well as on the container rule above. That rule
+     sets `font-size:0.7rem`, which resolves to 9.8px against this sheet's 14px
+     mobile root — under the 11px floor. The class variant only clears the floor
+     because it is named in THIS rule; adding a variant to the styling rule and
+     not to the floor rule ships the variant below the floor.
+     See [[text_floor_hides_in_shared_stylesheets]]. */
+  div[style*="padding: 10px 24px"],
+  div[style*="padding: 10px 24px"] a,
+  div[style*="padding: 10px 24px"] span,
   .breadcrumb,
   .breadcrumb a,
   .breadcrumb .current,

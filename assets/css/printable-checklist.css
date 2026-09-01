@@ -340,6 +340,21 @@ footer {
    footer title 20px, body copy 20px — the header was the sole outlier. Align to 20px. */
 @media (max-width: 768px) {
   .screen-header nav { padding: 0 20px; }
+
+  /* css-regression-checker 2026-09-01: the 2026-08-30 pass moved this sheet's
+     CHROME rail to the 20px mobile value (the rule above, plus `footer`), but
+     the printable's own screen-only body bands — `.print-toolbar`,
+     `.checklist-page` and `.screen-cta` — kept the desktop `padding: 0 24px`
+     with no mobile override. Result on all 90 checklist printables at 390px:
+     the "<- Back to full guide" toolbar, the checklist card and the CTA all sat
+     4px inboard of the nav logo directly above them and the footer directly
+     below them. A chrome-rail change in a standalone sheet has to carry that
+     sheet's CONTENT bands with it — main.css pages get this for free from
+     m-app.css's `.container{padding:0 20px !important}`, which printables never
+     load. See [[standalone_stylesheet_drift]], [[band_fix_in_main_css_misses_printables]]. */
+  .print-toolbar { padding: 0 20px; }
+  .checklist-page { padding: 0 20px 60px; }
+  .screen-cta { padding: 0 20px; }
 }
 
 /* css-regression-checker 2026-08-23: the 2026-08-20 mirror below re-asserted
