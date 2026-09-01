@@ -9,8 +9,7 @@
 const SWIM_SCHOOLS_DATA = {
   "AL": [
     { name: "Goldfish Swim School - Birmingham", chain: "Goldfish Swim School", city: "Birmingham", state: "AL", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Goldfish Swim School - Hoover", chain: "Goldfish Swim School", city: "Hoover", state: "AL", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Mobile", chain: "Emler Swim School", city: "Mobile", state: "AL", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Goldfish Swim School - Hoover", chain: "Goldfish Swim School", city: "Hoover", state: "AL", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "AK": [
     { name: "YMCA Alaska - Anchorage", chain: "YMCA", city: "Anchorage", state: "AK", website: "https://ymcaalaska.org/programs/aquatics/swim-lessons/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
@@ -53,10 +52,9 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Aqua-Tots - Tustin", chain: "Aqua-Tots", city: "Tustin", state: "CA", website: "https://www.aqua-tots.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "SafeSplash - Elk Grove", chain: "SafeSplash", city: "Elk Grove", state: "CA", website: "https://www.safesplash.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "SafeSplash - San Jose", chain: "SafeSplash", city: "San Jose", state: "CA", website: "https://www.safesplash.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Foothill Ranch", chain: "Emler Swim School", city: "Foothill Ranch", state: "CA", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Murrieta", chain: "Emler Swim School", city: "Murrieta", state: "CA", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - San Carlos", chain: "Emler Swim School", city: "San Carlos", state: "CA", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - San Mateo", chain: "Emler Swim School", city: "San Mateo", state: "CA", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Swim to Shore Swim School - Murrieta", chain: "Swim to Shore Swim School", city: "Murrieta", state: "CA", website: "https://swim2shore.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "King's Swim Academy - San Carlos", chain: "King's Swim Academy", city: "San Carlos", state: "CA", website: "https://kingsswimacademy.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "King's Swim Academy - San Mateo", chain: "King's Swim Academy", city: "San Mateo", state: "CA", website: "https://kingsswimacademy.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Waterworks Aquatics - Irvine", chain: "Waterworks Aquatics", city: "Irvine", state: "CA", website: "https://www.waterworksswim.com/locations/irvine", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "Waterworks Aquatics - Pasadena", chain: "Waterworks Aquatics", city: "Pasadena", state: "CA", website: "https://www.waterworksswim.com/locations/pasadena", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "Waterworks Aquatics - San Francisco", chain: "Waterworks Aquatics", city: "San Francisco", state: "CA", website: "https://www.waterworksswim.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
@@ -74,7 +72,8 @@ const SWIM_SCHOOLS_DATA = {
     { name: "SafeSplash - Denver", chain: "SafeSplash", city: "Denver", state: "CO", website: "https://www.safesplash.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "SafeSplash - Lone Tree", chain: "SafeSplash", city: "Lone Tree", state: "CO", website: "https://www.safesplash.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "SafeSplash - Parker", chain: "SafeSplash", city: "Parker", state: "CO", website: "https://www.safesplash.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
-    { name: "Big Blue Swim School - Centennial", chain: "Big Blue Swim School", city: "Centennial", state: "CO", website: "https://bigblueswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Big Blue Swim School - Centennial", chain: "Big Blue Swim School", city: "Centennial", state: "CO", website: "https://bigblueswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Colorado Springs", chain: "Emler Swim School", city: "Colorado Springs", state: "CO", website: "https://emlerswimschool.com/locations/colorado/briargate/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "CT": [
     { name: "Goldfish Swim School - Norwalk", chain: "Goldfish Swim School", city: "Norwalk", state: "CT", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
@@ -109,8 +108,8 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Goldfish Swim School - Winter Park", chain: "Goldfish Swim School", city: "Winter Park", state: "FL", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Aqua-Tots - Sarasota", chain: "Aqua-Tots", city: "Sarasota", state: "FL", website: "https://www.aqua-tots.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Big Blue Swim School - Pembroke Pines", chain: "Big Blue Swim School", city: "Pembroke Pines", state: "FL", website: "https://bigblueswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Jacksonville", chain: "Emler Swim School", city: "Jacksonville", state: "FL", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Orange City", chain: "Emler Swim School", city: "Orange City", state: "FL", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "AQUAfin Swim School - Jacksonville", chain: "AQUAfin Swim School", city: "Jacksonville", state: "FL", website: "https://aquafinswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "AQUAfin Swim School - Orange City", chain: "AQUAfin Swim School", city: "Orange City", state: "FL", website: "https://aquafinswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "GA": [
     { name: "British Swim School of Atlanta", chain: "British Swim School", city: "Atlanta", state: "GA", website: "https://britishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
@@ -175,7 +174,8 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Aqua-Tots - Indianapolis", chain: "Aqua-Tots", city: "Indianapolis", state: "IN", website: "https://www.aqua-tots.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Aqua-Tots - Schererville", chain: "Aqua-Tots", city: "Schererville", state: "IN", website: "https://www.aqua-tots.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Emler Swim School - Fort Wayne", chain: "Emler Swim School", city: "Fort Wayne", state: "IN", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Noblesville", chain: "Emler Swim School", city: "Noblesville", state: "IN", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Emler Swim School - Noblesville", chain: "Emler Swim School", city: "Noblesville", state: "IN", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Westfield", chain: "Emler Swim School", city: "Westfield", state: "IN", website: "https://emlerswimschool.com/locations/indiana/westfield/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "IA": [
     { name: "Goldfish Swim School - Urbandale", chain: "Goldfish Swim School", city: "Urbandale", state: "IA", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
@@ -186,7 +186,9 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Goldfish Swim School - Lenexa", chain: "Goldfish Swim School", city: "Lenexa", state: "KS", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Goldfish Swim School - Overland Park", chain: "Goldfish Swim School", city: "Overland Park", state: "KS", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Aqua-Tots - Olathe", chain: "Aqua-Tots", city: "Olathe", state: "KS", website: "https://www.aqua-tots.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Leawood", chain: "Emler Swim School", city: "Leawood", state: "KS", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Emler Swim School - Leawood", chain: "Emler Swim School", city: "Leawood", state: "KS", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Kansas City", chain: "Emler Swim School", city: "Kansas City", state: "KS", website: "https://emlerswimschool.com/locations/kansas/westwood/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Wichita", chain: "Emler Swim School", city: "Wichita", state: "KS", website: "https://emlerswimschool.com/locations/kansas/wichita/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "KY": [
     { name: "Aqua-Tots - Lexington", chain: "Aqua-Tots", city: "Lexington", state: "KY", website: "https://www.aqua-tots.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
@@ -228,8 +230,8 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Goldfish Swim School - Rockland", chain: "Goldfish Swim School", city: "Rockland", state: "MA", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Goldfish Swim School - Westford", chain: "Goldfish Swim School", city: "Westford", state: "MA", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Aqua-Tots - Norwood", chain: "Aqua-Tots", city: "Norwood", state: "MA", website: "https://www.aqua-tots.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Natick", chain: "Emler Swim School", city: "Natick", state: "MA", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Winchester", chain: "Emler Swim School", city: "Winchester", state: "MA", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Little Flippers Swim School - Natick", chain: "Little Flippers Swim School", city: "Natick", state: "MA", website: "https://littleflippersswim.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Little Flippers Swim School - Winchester", chain: "Little Flippers Swim School", city: "Winchester", state: "MA", website: "https://littleflippersswim.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "MI": [
     { name: "Goldfish Swim School - Ann Arbor", chain: "Goldfish Swim School", city: "Ann Arbor", state: "MI", website: "https://goldfishswimschool.com/ann-arbor", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
@@ -265,15 +267,13 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Foss Swim School - Vadnais Heights", chain: "Foss Swim School", city: "Vadnais Heights", state: "MN", website: "https://www.fossswimschool.com/swimming-lesson-locations/vadnais-heights-mn/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "MS": [
-    { name: "Emler Swim School - Hattiesburg", chain: "Emler Swim School", city: "Hattiesburg", state: "MS", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
-  ,
     { name: "Maley Swim School", chain: "Independent", city: "Ridgeland", state: "MS", website: "https://www.yelp.com/biz/maley-swim-school-ridgeland", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "MO": [
     { name: "British Swim School of St. Louis", chain: "British Swim School", city: "St. Louis", state: "MO", website: "https://britishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Union", chain: "Emler Swim School", city: "Union", state: "MO", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
-  ,
-    { name: "Goldfish Swim School - St. Louis", chain: "Goldfish Swim School", city: "St. Louis", state: "MO", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Goldfish Swim School - St. Louis", chain: "Goldfish Swim School", city: "St. Louis", state: "MO", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Cottleville", chain: "Emler Swim School", city: "Cottleville", state: "MO", website: "https://emlerswimschool.com/locations/missouri/cottleville-missouri/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Kansas City", chain: "Emler Swim School", city: "Kansas City", state: "MO", website: "https://emlerswimschool.com/locations/missouri/northland/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "MT": [
     { name: "Montana Swim Academy", chain: "Independent", city: "Billings", state: "MT", website: "https://montanaswimacademy.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
@@ -287,8 +287,7 @@ const SWIM_SCHOOLS_DATA = {
   "NV": [
     { name: "Aqua-Tots - Las Vegas", chain: "Aqua-Tots", city: "Las Vegas", state: "NV", website: "https://www.aqua-tots.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "SafeSplash - Las Vegas", chain: "SafeSplash", city: "Las Vegas", state: "NV", website: "https://www.safesplash.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Henderson", chain: "Emler Swim School", city: "Henderson", state: "NV", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Las Vegas", chain: "Emler Swim School", city: "Las Vegas", state: "NV", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Emler Swim School - Henderson", chain: "Emler Swim School", city: "Henderson", state: "NV", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "NH": [
     { name: "NH Swim School", chain: "Independent", city: "Nashua", state: "NH", website: "https://nhswimschool.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true }
@@ -343,9 +342,9 @@ const SWIM_SCHOOLS_DATA = {
     { name: "SafeSplash - Paramus", chain: "SafeSplash", city: "Paramus", state: "NJ", website: "https://www.safesplash.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "Bear Paddle Swim School - Marlton", chain: "Bear Paddle Swim School", city: "Marlton", state: "NJ", website: "https://www.bearpaddle.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Bear Paddle Swim School - Turnersville", chain: "Bear Paddle Swim School", city: "Turnersville", state: "NJ", website: "https://www.bearpaddle.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Florham Park", chain: "Emler Swim School", city: "Florham Park", state: "NJ", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Manasquan", chain: "Emler Swim School", city: "Manasquan", state: "NJ", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Sparta", chain: "Emler Swim School", city: "Sparta", state: "NJ", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Njswim - Florham Park", chain: "Njswim", city: "Florham Park", state: "NJ", website: "https://njswim.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Njswim - Manasquan", chain: "Njswim", city: "Manasquan", state: "NJ", website: "https://njswim.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Njswim - Sparta", chain: "Njswim", city: "Sparta", state: "NJ", website: "https://njswim.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "NM": [
     { name: "505 Swimming - Albuquerque", chain: "505 Swimming", city: "Albuquerque", state: "NM", website: "https://www.505swimming.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
@@ -400,7 +399,8 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Aqua-Tots - Westlake", chain: "Aqua-Tots", city: "Westlake", state: "OH", website: "https://www.aqua-tots.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "SafeSplash - Columbus", chain: "SafeSplash", city: "Columbus", state: "OH", website: "https://www.safesplash.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "Bear Paddle Swim School - Cincinnati", chain: "Bear Paddle Swim School", city: "Cincinnati", state: "OH", website: "https://www.bearpaddle.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Bear Paddle Swim School - Mason", chain: "Bear Paddle Swim School", city: "Mason", state: "OH", website: "https://www.bearpaddle.com/locations/mason-ohio-swimming-lessons/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Bear Paddle Swim School - Mason", chain: "Bear Paddle Swim School", city: "Mason", state: "OH", website: "https://www.bearpaddle.com/locations/mason-ohio-swimming-lessons/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Solon", chain: "Emler Swim School", city: "Solon", state: "OH", website: "https://emlerswimschool.com/locations/ohio/solon/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "OK": [
     { name: "Goldfish Swim School - Edmond", chain: "Goldfish Swim School", city: "Edmond", state: "OK", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
@@ -408,7 +408,9 @@ const SWIM_SCHOOLS_DATA = {
   ],
   "OR": [
     { name: "SWIMBABES", chain: "Independent", city: "Milwaukie", state: "OR", website: "https://www.swimbabes.com/", programs: ["infant", "toddler", "preschool"], indoor: true, yearRound: true },
-    { name: "Children of the Sea Swim School", chain: "Independent", city: "Portland", state: "OR", website: "https://www.childrenofthesea.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Children of the Sea Swim School", chain: "Independent", city: "Portland", state: "OR", website: "https://www.childrenofthesea.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Beaverton", chain: "Emler Swim School", city: "Beaverton", state: "OR", website: "https://emlerswimschool.com/locations/oregon/beaverton-washington-square/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Tualatin", chain: "Emler Swim School", city: "Tualatin", state: "OR", website: "https://emlerswimschool.com/locations/oregon/tualatin/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "PA": [
     { name: "British Swim School of Bensalem", chain: "British Swim School", city: "Bensalem", state: "PA", website: "https://britishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
@@ -434,7 +436,8 @@ const SWIM_SCHOOLS_DATA = {
   ,
     { name: "Charleston Swim School", chain: "Independent", city: "Charleston", state: "SC", website: "https://charlestonswimlessons.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "Swim Savvy Aquatics", chain: "Independent", city: "Greenville", state: "SC", website: "https://www.swimsavvyaquatics.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "SafeSplash - Simpsonville", chain: "SafeSplash", city: "Simpsonville", state: "SC", website: "https://www.safesplash.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true }
+    { name: "SafeSplash - Simpsonville", chain: "SafeSplash", city: "Simpsonville", state: "SC", website: "https://www.safesplash.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Greenville", chain: "Emler Swim School", city: "Greenville", state: "SC", website: "https://emlerswimschool.com/locations/south-carolina/greenville/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "SD": [
     { name: "SafeSplash - Sioux Falls South", chain: "SafeSplash", city: "Sioux Falls", state: "SD", website: "https://www.safesplash.com/locations/sioux-falls-south-sd", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
@@ -484,14 +487,17 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Emler Swim School - Round Rock", chain: "Emler Swim School", city: "Round Rock", state: "TX", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Emler Swim School - San Antonio", chain: "Emler Swim School", city: "San Antonio", state: "TX", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Emler Swim School - Southlake", chain: "Emler Swim School", city: "Southlake", state: "TX", website: "https://emlerswimschool.com/locations/texas/southlake/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "SwimJim - Houston", chain: "SwimJim", city: "Houston", state: "TX", website: "https://www.swimjim.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true }
+    { name: "SwimJim - Houston", chain: "SwimJim", city: "Houston", state: "TX", website: "https://www.swimjim.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Oak Ridge North", chain: "Emler Swim School", city: "Oak Ridge North", state: "TX", website: "https://emlerswimschool.com/locations/texas/the-woodlands/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Sachse", chain: "Emler Swim School", city: "Sachse", state: "TX", website: "https://emlerswimschool.com/locations/texas/firewheel/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Schertz", chain: "Emler Swim School", city: "Schertz", state: "TX", website: "https://emlerswimschool.com/locations/texas/san-antonio-schertz/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Spring", chain: "Emler Swim School", city: "Spring", state: "TX", website: "https://emlerswimschool.com/locations/texas/spring-klein/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "UT": [
     { name: "Goldfish Swim School - South Jordan", chain: "Goldfish Swim School", city: "South Jordan", state: "UT", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Aqua-Tots - West Jordan", chain: "Aqua-Tots", city: "West Jordan", state: "UT", website: "https://www.aqua-tots.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Holladay", chain: "Emler Swim School", city: "Holladay", state: "UT", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Pleasant Grove", chain: "Emler Swim School", city: "Pleasant Grove", state: "UT", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Salt Lake City", chain: "Emler Swim School", city: "Salt Lake City", state: "UT", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "SwimKids Utah - Holladay", chain: "SwimKids Utah", city: "Holladay", state: "UT", website: "https://www.swimkidsutah.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "SwimKids Utah - Pleasant Grove", chain: "SwimKids Utah", city: "Pleasant Grove", state: "UT", website: "https://www.swimkidsutah.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "VT": [
     { name: "Lake Dragon Aquatics", chain: "Independent", city: "Burlington", state: "VT", website: "https://lakedragonaquatics.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
@@ -516,10 +522,9 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Big Blue Swim School - Chantilly", chain: "Big Blue Swim School", city: "Chantilly", state: "VA", website: "https://bigblueswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Big Blue Swim School - Fairfax", chain: "Big Blue Swim School", city: "Fairfax", state: "VA", website: "https://bigblueswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Big Blue Swim School - Falls Church", chain: "Big Blue Swim School", city: "Falls Church", state: "VA", website: "https://bigblueswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Forest", chain: "Emler Swim School", city: "Forest", state: "VA", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Gainesville", chain: "Emler Swim School", city: "Gainesville", state: "VA", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Leesburg", chain: "Emler Swim School", city: "Leesburg", state: "VA", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Woodbridge", chain: "Emler Swim School", city: "Woodbridge", state: "VA", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "SwimKids Swim School - Gainesville", chain: "SwimKids Swim School", city: "Gainesville", state: "VA", website: "https://swimkids.us/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "SwimKids Swim School - Leesburg", chain: "SwimKids Swim School", city: "Leesburg", state: "VA", website: "https://swimkids.us/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "SwimKids Swim School - Woodbridge", chain: "SwimKids Swim School", city: "Woodbridge", state: "VA", website: "https://swimkids.us/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "WA": [
     { name: "British Swim School of Seattle", chain: "British Swim School", city: "Seattle", state: "WA", website: "https://britishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
@@ -529,7 +534,10 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Goldfish Swim School - Redmond", chain: "Goldfish Swim School", city: "Redmond", state: "WA", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Goldfish Swim School - Shoreline", chain: "Goldfish Swim School", city: "Shoreline", state: "WA", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "SafeSplash - Bellevue", chain: "SafeSplash", city: "Bellevue", state: "WA", website: "https://www.safesplash.com/", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Olympia", chain: "Emler Swim School", city: "Olympia", state: "WA", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Emler Swim School - Olympia", chain: "Emler Swim School", city: "Olympia", state: "WA", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Gig Harbor", chain: "Emler Swim School", city: "Gig Harbor", state: "WA", website: "https://emlerswimschool.com/locations/washington/gig-harbor-washington/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Sammamish", chain: "Emler Swim School", city: "Sammamish", state: "WA", website: "https://emlerswimschool.com/locations/washington/klahanie/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Vancouver", chain: "Emler Swim School", city: "Vancouver", state: "WA", website: "https://emlerswimschool.com/locations/washington/hazel-dell/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "WV": [
     { name: "Charleston Swim School", chain: "Independent", city: "Charleston", state: "WV", website: "https://charlestonswimlessons.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
@@ -541,7 +549,8 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Goldfish Swim School - Milwaukee", chain: "Goldfish Swim School", city: "Milwaukee", state: "WI", website: "https://goldfishswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Emler Swim School - Fitchburg", chain: "Emler Swim School", city: "Fitchburg", state: "WI", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Emler Swim School - Madison", chain: "Emler Swim School", city: "Madison", state: "WI", website: "https://emlerswimschool.com/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Swimtastic - Menasha", chain: "Swimtastic", city: "Menasha", state: "WI", website: "https://www.swimtastic.com/locations/fox-cities-wi", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Swimtastic - Menasha", chain: "Swimtastic", city: "Menasha", state: "WI", website: "https://www.swimtastic.com/locations/fox-cities-wi", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Emler Swim School - Brookfield", chain: "Emler Swim School", city: "Brookfield", state: "WI", website: "https://emlerswimschool.com/locations/wisconsin/brookfield/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "WY": [
     { name: "CASC Swim Lessons", chain: "Independent", city: "Casper", state: "WY", website: "https://www.cascswimlessons.com/", programs: ["preschool", "school-age"], indoor: true, yearRound: true },
