@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A one-page medical information form on a clipboard beside a swim bag, an inhaler and a poolside water line">
+  <defs>
+    <linearGradient id="med-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="med-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#med-bg)"/>
+
+  <!-- pool water band -->
+  <rect x="0" y="268" width="600" height="92" fill="url(#med-water)" opacity="0.55"/>
+  <path d="M0 274 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#0369a1" stroke-width="3" opacity="0.45"/>
+
+  <!-- clipboard with the form -->
+  <g transform="translate(40,30)">
+    <rect x="0" y="0" width="214" height="222" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+    <rect x="74" y="-9" width="66" height="20" rx="6" fill="#94a3b8"/>
+    <text x="20" y="36" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#0c4a6e">MEDICAL INFO FORM</text>
+    <line x1="20" y1="46" x2="194" y2="46" stroke="#e2e8f0" stroke-width="2"/>
+
+    <!-- fill-in lines -->
+    <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 5">
+      <line x1="20" y1="66" x2="194" y2="66"/>
+      <line x1="20" y1="88" x2="160" y2="88"/>
+    </g>
+
+    <!-- checked rows -->
+    <rect x="20" y="106" width="17" height="17" rx="4" fill="#e0f2fe" stroke="#0369a1" stroke-width="3"/>
+    <path d="M24 115 l4 5 l8 -10" fill="none" stroke="#0369a1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round">
+      <line x1="48" y1="110" x2="194" y2="110"/>
+      <line x1="48" y1="122" x2="150" y2="122"/>
+    </g>
+
+    <rect x="20" y="150" width="17" height="17" rx="4" fill="#e0f2fe" stroke="#0369a1" stroke-width="3"/>
+    <path d="M24 159 l4 5 l8 -10" fill="none" stroke="#0369a1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round">
+      <line x1="48" y1="154" x2="186" y2="154"/>
+      <line x1="48" y1="166" x2="138" y2="166"/>
+    </g>
+
+    <!-- alert row -->
+    <rect x="20" y="188" width="174" height="22" rx="5" fill="#fff7ed" stroke="#9a3412" stroke-width="2.5"/>
+    <text x="30" y="203" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#7c2d12">WHO TO CALL &amp; WHEN</text>
+  </g>
+
+  <!-- swim bag -->
+  <g transform="translate(300,150)">
+    <path d="M18 34 h130 a10 10 0 0 1 10 10 v66 a10 10 0 0 1 -10 10 h-130 a10 10 0 0 1 -10 -10 v-66 a10 10 0 0 1 10 -10 z" fill="#0ea5e9" stroke="#0369a1" stroke-width="3"/>
+    <path d="M56 34 v-12 a27 20 0 0 1 54 0 v12" fill="none" stroke="#0369a1" stroke-width="5" stroke-linecap="round"/>
+    <rect x="42" y="66" width="82" height="26" rx="6" fill="#e0f2fe" stroke="#0369a1" stroke-width="2.5"/>
+    <path d="M83 71 v16 M75 79 h16" stroke="#0369a1" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- inhaler -->
+  <g transform="translate(474,176)">
+    <rect x="0" y="18" width="34" height="58" rx="8" fill="#ffffff" stroke="#0369a1" stroke-width="3"/>
+    <rect x="9" y="0" width="17" height="22" rx="5" fill="#0ea5e9" stroke="#0369a1" stroke-width="3"/>
+    <path d="M8 40 h18 M8 52 h18" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- lane rope -->
+  <g transform="translate(0,300)">
+    <circle cx="70" cy="0" r="9" fill="#fbbf24" opacity="0.85"/>
+    <circle cx="98" cy="0" r="9" fill="#f8fafc" opacity="0.85"/>
+    <circle cx="126" cy="0" r="9" fill="#fbbf24" opacity="0.85"/>
+    <circle cx="474" cy="0" r="9" fill="#f8fafc" opacity="0.85"/>
+    <circle cx="502" cy="0" r="9" fill="#fbbf24" opacity="0.85"/>
+    <circle cx="530" cy="0" r="9" fill="#f8fafc" opacity="0.85"/>
+  </g>
+</svg>
