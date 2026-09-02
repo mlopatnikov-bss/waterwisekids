@@ -712,3 +712,26 @@ footer p {
     font-size: 16px !important;
   }
 }
+
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   WRAPPED NAV ROW HUGS THE LEFT RAIL — 2026-09-02 (visual-design render sweep)
+
+   Mirror of the main.css block of the same name. These standalone sheets load no
+   main.css ([[standalone_stylesheet_drift]]), and the band mirror above copied
+   `justify-content: center` without the width that makes it effective.
+
+   Same defect, measured on this sheet 2026-09-02: the ul sits on its own line
+   under the logo from 769px up, is the lone flex item on that line, and
+   shrink-wraps at the LEFT rail, leaving the right rail empty -- 25px of dead
+   space at 800px rising to 160px at 930px. `flex-basis: 100%` spans the rail so
+   the inherited `justify-content: center` centres the row.
+
+   Cap is 936px, not main.css's 952px: printable `nav` ships no flex `gap`, so
+   its row unwraps 16px earlier -- measured wrap threshold 937px on this sheet.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 936px) {
+  header nav .nav-links {
+    flex-basis: 100%;
+  }
+}

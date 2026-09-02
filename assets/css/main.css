@@ -3162,3 +3162,39 @@ aside p a {
     column-gap: 0;
   }
 }
+
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   WRAPPED NAV ROW HUGS THE LEFT RAIL — 2026-09-02 (visual-design render sweep)
+
+   The 769-1149px band block above releases the nav to `flex-wrap: wrap` and
+   gives `.nav-links` `justify-content: center`. That centring was written for
+   the case the note describes -- "only the narrow end of the band, 769-800px,
+   wraps to a second row" -- i.e. the ul's OWN internal wrap of one orphan link.
+
+   Measured 2026-09-02, the ul drops below the logo across a far wider range
+   than the note assumed: the logo + the 16px nav gap + the 727px link row need
+   952.5px of nav content box, so the whole ul sits on its own line from 769px
+   all the way to 953px, not to 800px. On that line it is the only flex item,
+   `nav{justify-content:space-between}` packs a lone item at flex-start, and
+   `.nav-links` is `flex: 0 1 auto` -- so the ul shrink-wraps its 727px of links
+   at the LEFT rail and its own `justify-content:center` has nothing to centre.
+   The header reads visibly lopsided, with dead space at the right rail:
+
+     viewport   800   834   900   930   950
+     dead px     25    59   125   155   175     (link row right edge vs nav rail)
+
+   Giving the ul `flex-basis: 100%` makes it span the rail it already sits on,
+   which is what lets the existing `justify-content: center` do the job it was
+   written to do. Nothing else changes -- the links, their padding and the wrap
+   behaviour are untouched, and the row still never overflows.
+
+   Capped at 952px, one px below the measured 953px wrap threshold, so the rule
+   can never force a wrap onto a row that currently fits beside the logo: above
+   the cap the ul shares the logo's line and stays right-aligned exactly as now.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 952px) {
+  .nav-links {
+    flex-basis: 100%;
+  }
+}
