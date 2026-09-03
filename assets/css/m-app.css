@@ -2154,3 +2154,33 @@
     min-height: 24px !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   STANDALONE LINK LISTS — the UNCLASSED half of the same defect
+   ---------------------------------------------------------------------------
+   The block above floors the six variants that happen to carry a class. A
+   375px render sweep on 2026-09-03 found the identical 17px anchor inside
+   containers with no usable hook: article.article, .article-related,
+   .article-body, .article-sources, .sidebar-box, div.card, div.container and
+   main.article. Listing those ancestors here would go stale the next time a
+   template invents a wrapper, and — worse — .article-body also holds PROSE
+   bullets whose inline links are WCAG 2.5.8-exempt and must NOT be grown.
+
+   So the shape, not the ancestor, is the selector: m-app.js tags a list with
+   .wwk-navlist only when every <li> contains a single anchor and no other
+   text. That test cannot be written in CSS, which is why the class is applied
+   at runtime.
+
+   min-height only grows the line box, and these anchors run 40-238px wide (all
+   clear of the 24px min-width), so no horizontal overflow is possible.
+   .related-articles li a already sits at exactly 24px, so the floor is a no-op
+   there — the house target is AA, not AAA (see the breadcrumbs-at-36px note).
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  .wwk-navlist > li > a {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 24px !important;
+  }
+}

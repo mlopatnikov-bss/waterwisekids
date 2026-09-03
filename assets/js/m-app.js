@@ -174,4 +174,63 @@
     }, { passive: true });
   }
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // STANDALONE LINK-LIST TAP TARGETS   (WCAG 2.5.8 AA — 24x24)
+  // ---------------------------------------------------------------------------
+  // A bare `<li><a>...</a></li>` anchor is INLINE, so its box IS the line box.
+  // At the 14px mobile root (main.css `html{font-size:14px}` <=480px) these
+  // render 15-17px tall. Nothing sets a height, so the defect is the ABSENCE of
+  // a rule — there is no declaration to grep for and no wrong value to diff.
+  //
+  // m-app.css already floors five *classed* variants (.sidebar-toc, .screen-only,
+  // .state-grid, .link-grid, .link-list, .note-list). Rendering at 375px on
+  // 2026-09-03 found the same shape in UNCLASSED containers — article.article,
+  // .article-related, .article-body, .article-sources, .sidebar-box, div.card,
+  // div.container, main.article — and new page templates keep inventing more.
+  // Enumerating ancestor classes in CSS therefore rots; tag the shape instead.
+  //
+  // The test CSS cannot express: a list qualifies only when EVERY <li> holds a
+  // single anchor and nothing else, so `<li>See the <a>guide</a> for details</li>`
+  // (prose, WCAG 2.5.8-exempt inline target) is excluded. Lists inside <nav> are
+  // skipped — the header nav carries its own rules.
+  // ═══════════════════════════════════════════════════════════════════════════
+  var candidateLists = document.querySelectorAll('ul, ol');
+  for (var cl = 0; cl < candidateLists.length; cl++) {
+    var list = candidateLists[cl];
+    if (list.closest && list.closest('nav')) continue;
+
+    var rows = list.children, itemCount = 0, allStandalone = true;
+    for (var ri = 0; ri < rows.length; ri++) {
+      var row = rows[ri];
+      if (row.tagName !== 'LI') continue;
+      itemCount++;
+
+      var kids = row.children, elementChildren = 0, anchor = null;
+      for (var ki = 0; ki < kids.length; ki++) {
+        elementChildren++;
+        if (kids[ki].tagName === 'A') anchor = kids[ki];
+      }
+      if (elementChildren !== 1 || !anchor ||
+          row.textContent.trim() !== anchor.textContent.trim()) {
+        allStandalone = false;
+        break;
+      }
+    }
+    if (allStandalone && itemCount >= 2) list.classList.add('wwk-navlist');
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // HAMBURGER aria-controls
+  // The button ships from the generator with aria-label + aria-expanded but no
+  // aria-controls, and the <nav> it toggles carries no id — on all 742 pages.
+  // Wiring it here keeps the fix to one file instead of a 742-file HTML diff;
+  // main.js already owns the click/aria-expanded behaviour.
+  // ═══════════════════════════════════════════════════════════════════════════
+  var primaryNav = document.querySelector('nav');
+  var navToggleBtn = document.querySelector('.hamburger');
+  if (primaryNav && navToggleBtn && !navToggleBtn.hasAttribute('aria-controls')) {
+    if (!primaryNav.id) primaryNav.id = 'primary-nav';
+    navToggleBtn.setAttribute('aria-controls', primaryNav.id);
+  }
+
 })();
