@@ -146,6 +146,30 @@ body {
 }
 .cl-footer a { color: var(--cl-blue-700); text-decoration: none; }
 
+/* 2026-09-03 visual QA: same defect class as the 2026-08-23 `.lead-capture a`
+   fix in printable-poster.css — these containers styled their text but never
+   `a`, so prose links inside them fell back to the browser default #0000EE.
+   That is off-brand against the #0369a1 underlined prose link every article
+   page shows, and printable sheets are STANDALONE (article.css is not loaded),
+   so `.article-body a` has to be mirrored here. Affected 31 visible links
+   across 12 printables. */
+.cl-item a,
+.cl-header .cl-subtitle a,
+.checklist-card p a,
+.tldr-box a,
+body > section.section p a,
+body > section.section li a {
+  color: var(--cl-blue-700);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.cl-item a:hover,
+.cl-header .cl-subtitle a:hover,
+.checklist-card p a:hover,
+.tldr-box a:hover,
+body > section.section p a:hover,
+body > section.section li a:hover { color: var(--cl-blue-800); }
+
 /* SCREEN-ONLY BOTTOM CTA */
 .screen-cta {
   max-width: 800px; margin: 0 auto 60px; padding: 0 24px;
@@ -266,6 +290,7 @@ footer {
   .cl-checkbox { border-color: #333; }
   .cl-emergency { border: 2px solid #dc2626; }
   .cl-footer a { color: #333; }
+  .cl-item a, .cl-header .cl-subtitle a { color: #333; }
   .cl-item { page-break-inside: avoid; }
   .cl-section { page-break-inside: avoid; }
 }

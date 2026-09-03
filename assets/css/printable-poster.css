@@ -26,6 +26,13 @@
   --poster-light-blue: #E8F4FD;
   --poster-mid-blue: #0096D6;
   --poster-rule-border: #BDE0F5;
+  /* 2026-09-03 visual QA: the screen-only .tldr-box / section.section blocks
+     below the poster carry prose links that no rule ever coloured, so they
+     rendered in the browser default #0000EE. --poster-blue (#0077B6) is the
+     poster ARTWORK blue; prose links below the artwork should match the rest
+     of the site, which uses --blue-700 #0369a1 underlined. */
+  --poster-link: #0369a1;
+  --poster-link-hover: #075985;
 }
 /* Mirrors the main.css form-control reset — printable sheets are STANDALONE
    (main.css is not loaded), so without this `.print-btn` renders in the OS UI
@@ -414,6 +421,20 @@ header nav .nav-links > li > a.active { background: #f3f4f6; color: #075985; }
   text-underline-offset: 2px;
 }
 .lead-capture a:hover { color: #fff; }
+
+/* 2026-09-03 visual QA: residual of the same 2026-08-23 `.lead-capture a` fix —
+   .tldr-box and the screen-only body > section.section blocks styled their text
+   but never `a`. Both are display:none in print, so this is screen-only. */
+.tldr-box a,
+body > section.section p a,
+body > section.section li a {
+  color: var(--poster-link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.tldr-box a:hover,
+body > section.section p a:hover,
+body > section.section li a:hover { color: var(--poster-link-hover); }
 .lead-capture p {
   color: rgba(255,255,255,0.90);
   font-size: 0.95rem;

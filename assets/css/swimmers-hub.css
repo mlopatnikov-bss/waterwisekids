@@ -129,7 +129,7 @@
 
 .pillar-card--breaststroke .pillar-card-visual { background: linear-gradient(135deg, #7c3aed, #8b5cf6); }
 .pillar-card--breaststroke .pillar-card-stroke { background: #ede9fe; color: #6d28d9; }
-.pillar-card--breaststroke .pillar-card-link { color: #7c3aed; }
+.pillar-card--breaststroke .pillar-card-link { color: #6d28d9; } /* 2026-09-03 visual QA: residual of the 2026-08-22 pass, which set backstroke and butterfly card links to the same colour as their sibling .pillar-card-stroke but left breaststroke on #7c3aed while its stroke chip uses #6d28d9. Not a contrast failure (#7c3aed is 5.70:1) — a consistency one: breaststroke was the only card of four showing two different purples. */
 
 .pillar-card--butterfly .pillar-card-visual { background: linear-gradient(135deg, #ea580c, #f97316); }
 .pillar-card--butterfly .pillar-card-stroke { background: #fff7ed; color: #c2410c; }
