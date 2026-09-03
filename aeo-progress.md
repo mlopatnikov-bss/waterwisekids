@@ -13,6 +13,122 @@ Each article is checked against the full 8-point checklist:
 
 ---
 
+## Run 2026-09-03 — Batch 53: the three 1/5 articles, and an FAQ rule that ate a real question
+
+Shipped `16db99d`. `make-a-splash-local-partner-badge-decoded` 1/5 -> **5/5**,
+`swimmers-ear-prevention-checklist` 1/5 -> **4/5**, `year-round-swim-skills-checklist`
+1/5 -> **4/5**. All three at **100% of convertible H2s** — the only residuals are the two
+lead-magnet printable CTA H2s, which are not convertible. 10 headings converted, worst
+collision **0.697** against a 7,050-heading corpus, three re-aims. **Backlog 11 -> 8.**
+Full detail: `AEO-REPORT-2026-09-03.md`.
+
+**Measurement finding: the `faq-block` skip rule was purely structural, so it swallowed a
+genuine prose question.** The rule fired when an h2's next three h3s were all questions —
+true of `renting-private-pool-hourly-safety.html#on-arrival`, whose section
+*"What should your on-arrival safety walk-through cover?"* is followed by three short
+diagnostic questions (*Can you see the bottom? Are the drain covers intact?*). That H2 was
+silently dropped from both numerator and denominator. **An FAQ *container* header is never
+itself a question** — the rule now requires the h2 text to be a non-question. This is the
+Batch 52 lesson inverted: 52 fixed a rule that classified by text where it should have used
+role; this one fixed a rule that used *only* role where the text carried the decisive signal.
+
+**The "never skip a question" canary is only meaningful with its composition printed.**
+It reads 20, not 0 — but all 20 are `Ready to…?` lead-magnet CTA headings, and **all 20 sit
+on pages that drop out at n<3**, so none touches the backlog. Asserting the number alone
+would have flagged a phantom regression; asserting *where they live* is what makes it safe.
+
+**Do not attribute the 88% figure to the AAP.** The optimizer brief suggests the stat as
+"AAP: formal swim lessons can reduce drowning risk by 88%." The site correctly credits it to
+the *Archives of Pediatrics and Adolescent Medicine* study — AAP cites that research, it did
+not produce the number. Used period-labelled CDC figures instead: **2.4 million U.S.
+health-care visits a year** end in an acute-otitis-externa diagnosis (*MMWR* 2011, on
+2003–2007 data), and drowning as the leading cause of death for ages 1–4.
+
+**`aeo-progress.md` had forked, and each copy was missing what the other had.** The repo
+copy held Batches 48–50 but not 51–52; the working-folder copy held 51–52 but had lost
+48–50. Copying either over the other would have destroyed three batches of history with no
+visible symptom. Merged both and committed the result, so the tracked file is now the
+complete record.
+
+### Backlog — 7 prose articles under 50% (+ `education/index.html`, hub)
+`water-slide-safety-checklist` (2/8) · `fall-swim-skill-retention-checklist` (2/6) ·
+`swim-practice-log` (2/6) · `water-confidence-challenge` (2/6) ·
+`swim-milestones-by-age` (3/8) · `swim-strokes-guide-kids` (3/7) ·
+`autism-wandering-water-safety` (4/9). The 71 printable "bridge" H2s remain unworked.
+
+---
+
+## Run 2026-09-02 — Batch 52: the three worst prose articles (3 articles) + skip list rebuilt on DOM role
+
+Shipped `bf9cdcf`. `national-water-safety-action-plan-explained` 1/12 -> **11/12**,
+`end-of-summer-swim-skills-report-card` 1/10 -> **7/10**, `new-jersey-pool-fence-law`
+1/8 -> **7/8**. All three at 100% of convertible H2s. 22 headings converted, zero
+collisions vs a 7,013-heading corpus, final worst 0.716. Seven re-aims — **five of them
+against the page's own FAQ h3s, not the sitewide corpus.** Two proposals scored 1.000 and
+0.920 against an FAQ answer on the same page. Full detail: `AEO-REPORT-2026-09-02.md`.
+
+**Measurement finding: the skip list must classify by DOM role, never by heading text.**
+Batch 51's text-based skip list missed the same roles worded differently — `Related Water
+Safety Guides` vs `Related Reading`, and bottom-of-page CTAs entirely — which is why four
+printables were still showing as 0/3 backlog when Batch 51 had already proved printables
+collapse to a denominator of 1. Rebuilt on container class and sibling structure
+(`screen-cta`/`newsletter-section` = cta, `related-articles`/`.related-card` sibling =
+related-cards, `authoritative-sources`/all-external-link list = sources). **Backlog 18 ->
+11**, and all 92 printables now drop out at n<3 on their own.
+
+**Two traps, both worth keeping.** (1) The first `related-cards` rule tested any ancestor
+container, so on these templates *every* H2 matched and the backlog silently *shrank* to
+21 while `swim-strokes-guide-kids`' four stroke sections were skipped as "related cards".
+Caught by a **cardinality canary** — assert no file skips >2 headings as one role. A filter
+that fires too much is as invisible as one that never fires. (2) The "never skip a `?`"
+rule needs an **explicit** exemption: 15 skipped questions are all `h2.cl-*` printable card
+labels, which is correct, so the assertion is now "no *non-printable* question is ever
+skipped" with the printable count reported separately.
+
+**Emoji trap recurred in a new form.** The report card stores emoji as numeric character
+references (`&#x2705;`), and the prefix-capture regex ordered its alternation so
+`[^A-Za-z0-9<]` ate `&#` and stopped at the `x`, leaving `x2705;` in the heading. Caught
+by an old-text equality assertion before any write. Put the entity alternative first, and
+always assert the *old* text matches before replacing.
+
+### Backlog — 10 prose articles under 50% (+ `education/index.html`, hub)
+`swimmers-ear-prevention-checklist` (1/5) · `year-round-swim-skills-checklist` (1/5) ·
+`make-a-splash-local-partner-badge-decoded` (1/5) · `water-slide-safety-checklist` (2/8) ·
+`fall-swim-skill-retention-checklist` (2/6) · `water-confidence-challenge` (2/6) ·
+`swim-practice-log` (2/6) · `swim-milestones-by-age` (3/8) · `swim-strokes-guide-kids` (3/7) ·
+`autism-wandering-water-safety` (4/9). The 71 printable "bridge" H2s remain unworked.
+
+---
+
+## Run 2026-09-01 — Batch 51: 0/5 template cluster closed (2 articles) + backlog re-measured
+
+Shipped `0ff04d2`. `weighted-practice-flip-turns-skills` 0/5 -> **5/5**,
+`swim-readiness-indicators-age-4` 0/5 -> **5/5**. Zero collisions vs a 7,002-heading
+sitewide corpus; final worst 0.673. Two re-aims (0.747 and 0.720) driven by reading the
+nearest match's URL, not the number. Full detail: `AEO-REPORT-2026-09-01.md`.
+
+**Measurement finding: printable pages must be excluded from the question-H2 ratio.**
+71 `*-printable.html` files build their body from `<h2 class="cl-section-title">` /
+`cl-emergency-title` — physical checklist-card section labels, 466 sitewide. Counting them
+inflates the backlog from 16 to 106. Excluding them collapses each printable to a
+denominator of 1-2, where the ratio is meaningless anyway. **Score only non-`cl-*` H2s, and
+exclude n<3 denominators.** Skip-set self-assertion clean: 0 suspicious skips.
+
+**New surface, not yet worked: 71 printable "bridge" H2s.** Each printable carries exactly
+one statement-form prose H2 below the card. One edit per file, no schema coupling.
+Recommended as the next batch.
+
+### Backlog — 14 prose articles under 50%
+`national-water-safety-action-plan-explained` (1/11) · `education/index.html` (1/10 hub) ·
+`end-of-summer-swim-skills-report-card` (1/7) · `new-jersey-pool-fence-law` (1/7) ·
+`water-confidence-challenge` (1/6) · `make-a-splash-local-partner-badge-decoded` (1/5) ·
+`year-round-swim-skills-checklist` (1/4) · `swimmers-ear-prevention-checklist` (1/4) ·
+`water-slide-safety-checklist` (2/7) · `swim-practice-log` (2/6) ·
+`fall-swim-skill-retention-checklist` (2/6) · `swim-milestones-by-age` (3/8) ·
+`swim-strokes-guide-kids` (3/7) · `autism-wandering-water-safety` (4/9)
+
+---
+
 ## Run 2026-08-19 — Speakable repair + TL;DR backfill (211 pages)
 
 **Headline finding: the entire speakable program was inert on 207 pages.** Presence-based
