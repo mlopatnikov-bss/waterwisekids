@@ -13,6 +13,121 @@ Each article is checked against the full 8-point checklist:
 
 ---
 
+## Run 2026-09-04 — Batch 54: three printable-landing articles, and an 88% attribution that is a 288-file surface
+
+Shipped from a fresh `origin/live` clone at `3fc4e4202`. `water-slide-safety-checklist`
+2/8 -> **7/8**, `fall-swim-skill-retention-checklist` 2/6 -> **6/6**, `swim-practice-log`
+2/6 -> **5/6**. All three at **100% of convertible H2s** — the only residuals are the
+lead-magnet printable CTA H2s, which are not convertible. 12 headings converted, worst
+collision **0.725** against a **7,084-heading** corpus, three re-aims. **Backlog 8 -> 5.**
+Full detail: `AEO-REPORT-2026-09-04.md`.
+
+**The scorer reproduced the 2026-09-03 state exactly before any edit** — 8 pages under 50%
+(7 prose + `education/index.html`), over-skip canary 0, and the "never skip a question"
+canary at 20, all `Ready to...?` CTA headings on pages that drop at n<3. Re-deriving the
+measurement on a fresh clone first is what makes "backlog 8 -> 5" a real number rather than
+a phantom.
+
+### The finding that mattered most: the 88% misattribution is not a page defect, it is a 288-file surface
+
+Two of the three articles asserted the 88% drowning-risk-reduction figure **as the AAP's own
+finding** — `water-slide-safety-checklist#skills` ("According to the American Academy of
+Pediatrics, formal swim lessons reduce drowning risk by up to 88%") and
+`fall-swim-skill-retention-checklist#year-round-lessons`, the latter in **prose, visible FAQ,
+and FAQ JSON-LD simultaneously**. The figure is from a case-control study in the *Archives of
+Pediatrics and Adolescent Medicine* (Brenner et al.); the AAP **cites** it. All four instances
+were rewritten to the site's dominant correct hedge, "research cited by the American Academy
+of Pediatrics" — which `swim-practice-log` was already using, in both its visible FAQ and its
+JSON-LD, and which is therefore the established convention rather than a new one.
+
+**Sweeping the shape sitewide is the part worth recording.** Across all 741 HTML files,
+**288 carry an 88% claim naming the AAP without naming the study**, and **42 of those carry
+it inside `ld+json`**:
+
+| shape | files | example |
+|---|---|---|
+| producer ("AAP reports/finds/shows") | 114 | `benefits-of-swimming-for-kids` |
+| "according to the AAP" only | 57 | `beginner-swim-lessons-toms-river-nj` |
+| hedged correctly ("research it cites") | 52 | `beginner-swim-lessons-asbury-park-nj` |
+| other AAP+88% phrasings | 86 | `education/drowning-prevention-guide` |
+
+This was **not** swept this run, deliberately. It is a claim-hygiene batch, not a heading
+batch, and the standing rule against blanket sweeps of the 645 AAP-naming files applies —
+the correct unit of work is a dedicated pass that fixes prose and JSON-LD together and
+verifies FAQ parity per file. **Flagged as the highest-value open item.** Reporting "the two
+pages I touched are now clean" without naming the other 286 would have been the partial audit
+that is worse than none.
+
+### Collision handling
+12 proposals scored against a 7,084-heading corpus (h1+h2+h3 ending in `?` sitewide,
+**including each file being edited**) plus intra-batch. Three re-aims, all driven by the
+page's *own* FAQ or by a section lead that answered a different question than the heading
+asked:
+- `Build your fall skill-retention plan` -> `How do you build a fall skill-retention plan?`
+  scored **0.759** against `lazy-river-safety-kids :: How do you build a family lazy-river
+  plan?`. Re-aimed to **`How do you turn this into a fall plan you'll actually follow?`**
+  (0.602) — which is what the section's lead sentence actually argues.
+- `How to keep swim skills sharp after summer` could not become the literal question: the
+  page's own FAQ h3 already owns *How can I keep my child's swim skills sharp after summer?*
+  Re-aimed to **`What should off-season swim practice look like?`** (0.711), matching the
+  lead's claim that short and frequent beats long and rare.
+- `Height and age limits...` and `Backyard inflatable slides...` would both have landed
+  verbatim on this page's own FAQ h3s. Aimed at *matching a slide to a child* and at *setup
+  procedure* instead — the second also stays clear of the sibling guide
+  `water-slide-safety-kids`, which owns "are they safe" (0.716).
+
+**Every one of the 12 sections was re-read after the rewrite and opens with a direct answer
+to its new question.** Two headings were chosen *from* the lead sentence rather than the
+other way round, which is the cheaper direction.
+
+### The FAQ-parity probe needs a FOURTH visible shape
+The parity check flagged one schema question as an orphan on
+`fall-swim-skill-retention-checklist`: *What is the "post-summer swim slide"?* It is not
+missing — it is a visible **`h2`**, the section header itself. The probe knew only the three
+recorded shapes (`h3`, `p > strong`, `button.faq-question`). A parity probe that treats a
+present question as absent is exactly the probe that deletes healthy Q&A; **`h2` is a fourth
+legitimate FAQ-answer shape** and was added before the result was believed. Real orphan count
+across all three files: **0**.
+
+### Validation
+- DOM signature diff vs HEAD, scripts stripped: **221/221**, **234/234**, **206/206** —
+  tag+id+class sequence **identical** on all three. Text-node diff: the only removed strings
+  are the 12 replaced headings, the 4 attribution phrases, and the 1 visible `Updated` line.
+  No prose deleted anywhere.
+- html5lib: 16 metas in `<head>`, **0 metas in `<body>`**, canonical in head, on all three.
+  Raw-head attribute scan for embedded quotes: 0.
+- JSON-LD parses clean — `[Article, BreadcrumbList, FAQPage]` on all three; 0 HTML entities
+  leaked inside `ld+json`.
+- FAQ schema<->visible drift **0** across 5/5/5 Q&A, checked against four markup shapes.
+- Speakable: every selector resolves to exactly 1 on every file (`.tldr-box`, `.article h1`,
+  `.article-excerpt`, `.article > p:first-of-type`). None match zero.
+- `headline == h1` on all three. Meta descriptions unchanged, decoded 149 / 147 / 128.
+- Dead in-page anchors 0 — every `h2 id` preserved, so all TOC links still resolve, and all
+  12 TOC labels remain accurate short descriptors of their rewritten sections (left as-is per
+  Batch 41/42 precedent). Unsubstituted placeholders 0. Brand-voice ownership scan 0 hits.
+- `dateModified` 2026-08-11 / 2026-08-31 / 2026-07-12 -> **2026-09-04**. Only
+  `water-slide-safety-checklist` carries a visible `Updated` line; it was synced. The other
+  two have a published date only — **not** given one, since inserting a date mirror is a
+  template change, not a content edit.
+- `sitemap.xml` lastmod bumped for **exactly these 3 URLs** (2026-08-29 / 2026-08-31 /
+  2026-08-14 -> 2026-09-04). Re-parsed clean, **646 entries unchanged**. No blanket bump.
+
+### Backlog — 4 prose articles under 50% (+ `education/index.html`, hub)
+`water-confidence-challenge` (2/6) - `swim-milestones-by-age` (3/8) -
+`swim-strokes-guide-kids` (3/7) - `autism-wandering-water-safety` (4/9).
+The 71 printable "bridge" H2s remain unworked.
+
+### Flagged for Michael — not changed
+1. **The 88% attribution surface: 288 files, 42 of them in JSON-LD.** Numbers and file
+   classes above. Worth its own batch; it is the sitewide sweep for
+   authority-misattributed figures that Batches 50 and 53 both said was warranted.
+2. `education/index.html` sits at 1/7 question H2s but is a **hub**, not an article — the
+   hub-cannibalization rule applies and it should be scoped separately from the prose backlog.
+3. Two of the three pages carry a `dateModified` with **no visible date mirror**. Consistent
+   with their template, but it means a reader cannot see the freshness signal Google gets.
+
+---
+
 ## Run 2026-09-03 — Batch 53: the three 1/5 articles, and an FAQ rule that ate a real question
 
 Shipped `16db99d`. `make-a-splash-local-partner-badge-decoded` 1/5 -> **5/5**,
