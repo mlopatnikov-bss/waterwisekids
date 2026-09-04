@@ -2143,7 +2143,11 @@ table tbody tr:hover {
   transition: background 0.2s;
 }
 .swim-schools-page .search-button button:hover {
-  background: #026ca3;
+  /* visual QA 2026-09-04: the previous value was LIGHTER than the blue-700 resting state,
+     so the hover read as no change at all and moved the wrong way. Every other
+     button on the site darkens blue-700 -> blue-800 (see .btn:hover main.css:320
+     and .search-button:hover main.css:2366). */
+  background: var(--blue-800, #075985);
 }
 @media (max-width: 768px) {
   .swim-schools-page .search-box {

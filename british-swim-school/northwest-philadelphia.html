@@ -79,7 +79,7 @@
 }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css?v=20260902b" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=20260904a" />
     <style>
         .stars { color: #fbbf24; font-size: 1.3rem; }
         main { max-width: 1160px; margin: 0 auto; padding: 2rem 24px; }
@@ -164,7 +164,19 @@
           max-width: 640px;
           margin: 0 auto;
         }
-</style>
+
+        /* visual QA 2026-09-04: the bare `h2 { font-size: 2rem }` above resolved to 28px
+           at the 14px mobile root, while m-app.css caps `.page-hero h1` at 1.6rem/22.4px
+           -- so the page title rendered SMALLER than every section heading beneath it.
+           m-app.css cannot reach a bare element rule inside a page <style> block (its
+           patches at m-app.css:1493 match style="" attributes only), and this override
+           must sit AFTER the bare rules to win at equal specificity. 1.5rem = 21px
+           restores the documented scale h1 22.4 > h2 21 > h3 18.2 (m-app.css:153).
+           These 2 pages are the only ones shipping a bare oversized h2 rule. */
+        @media (max-width: 768px) {
+          h2 { font-size: 1.5rem; margin-top: 2rem; }
+        }
+    </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
