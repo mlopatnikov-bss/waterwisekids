@@ -95,14 +95,22 @@ Not swept this run — deliberately. A blanket sweep of AAP-naming pages is the 
 standing rule forbids; the correct unit is a dedicated claim-hygiene batch that fixes prose
 and JSON-LD together and re-verifies FAQ parity per file. Flagged as the top open item.
 
-## A probe correction
+## A probe regression, caught before it was believed
 
 The FAQ-parity check reported one schema question as an orphan on
 `fall-swim-skill-retention-checklist`: *What is the "post-summer swim slide"?* It is not
-missing — it is a visible **`h2`**, the section header itself. The probe knew only three
-visible shapes (`h3`, `p > strong`, `button.faq-question`). **`h2` is a fourth.** Real orphan
-count across all three files after the fix: **0**. A parity probe that reads a present
-question as absent is the probe that deletes healthy Q&A.
+missing — it is a visible **`h2`**, the section header itself.
+
+This was **not** a new shape discovery. The recorded working selector set is already
+`h1|h2|h3|h4|h5|summary|p/strong|p/b|dt|button|.faq-question|legend`; this run rebuilt a
+narrower one (`h3`, `p > strong`, `button.faq-question`) from a partial reading of the rule,
+and the narrower probe manufactured the orphan. Real orphan count after using the full set:
+**0**.
+
+The generalizable point: **a probe re-derived from memory of a rule silently loses the fixes
+the rule encodes.** Copy the recorded selector set verbatim, and keep its cardinality canary
+— an empty or shrunken visible set reports every schema question as an orphan, and the fix
+for a real orphan is deletion.
 
 ## Validation
 

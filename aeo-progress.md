@@ -80,14 +80,17 @@ asked:
 to its new question.** Two headings were chosen *from* the lead sentence rather than the
 other way round, which is the cheaper direction.
 
-### The FAQ-parity probe needs a FOURTH visible shape
+### The FAQ-parity probe regressed to a narrower selector than the recorded one
 The parity check flagged one schema question as an orphan on
 `fall-swim-skill-retention-checklist`: *What is the "post-summer swim slide"?* It is not
-missing — it is a visible **`h2`**, the section header itself. The probe knew only the three
-recorded shapes (`h3`, `p > strong`, `button.faq-question`). A parity probe that treats a
-present question as absent is exactly the probe that deletes healthy Q&A; **`h2` is a fourth
-legitimate FAQ-answer shape** and was added before the result was believed. Real orphan count
-across all three files: **0**.
+missing — it is a visible **`h2`**, the section header itself. **This was a probe regression,
+not a new discovery**: the recorded working selector set already includes `h1|h2|h3|h4|h5|
+summary|p/strong|p/b|dt|button|.faq-question|legend`, and this run rebuilt a narrower one
+(`h3`, `p > strong`, `button.faq-question`) from a partial reading of it. The recorded canary
+— assert the visible-question count is in the expected thousands — is exactly what would have
+caught it before the result was believed. Real orphan count across all three files: **0**.
+The lesson is not about `h2`; it is that **re-deriving a probe from memory of a rule is how a
+fixed probe un-fixes itself**, and the antidote is to copy the recorded selector set verbatim.
 
 ### Validation
 - DOM signature diff vs HEAD, scripts stripped: **221/221**, **234/234**, **206/206** —
