@@ -2006,6 +2006,20 @@
     display: flex !important;
     align-items: center !important;
     min-height: 44px !important;
+    /* Round 6 set only the HEIGHT axis. `display:flex` makes each link a flex
+       ITEM of its `.toc-item` parent (which m-app.css line ~1683 sets to
+       `display:flex`), so the box shrink-wraps to the label text and the WIDTH
+       stays text-bound. Measured 2026-09-05 at both 320px and 375px: the
+       "FAQ" row renders 23.0 x 44 on /education/drowning-prevention-guide.html,
+       /education/pool-party-safety.html and /education/water-safety-for-kids.html
+       -- the only interactive controls on the site under the WCAG 2.5.8 AA
+       24x24 minimum. Every other TOC row is 62-146px wide purely because its
+       label is longer, so this is latent on any short entry, not those 3 pages.
+       Same omission shape as .back-link (42.3x44 for 8 days, fixed 787bd4c).
+       `justify-content: flex-start` keeps the label's left edge unmoved; the
+       box only grows rightward inside a 285px column, so it cannot reflow. */
+    min-width: 44px !important;
+    justify-content: flex-start !important;
     padding-top: 6px !important;
     padding-bottom: 6px !important;
     line-height: 1.4 !important;
