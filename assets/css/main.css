@@ -2814,6 +2814,14 @@ body > section.related-articles {
   background: var(--blue-700);
   color: #fff;
   border: none;
+  /* 2026-09-05 visual QA: third member of the same family as the
+     `font-family: inherit` fix at main.css:131 and the font-SIZE fix in
+     404b56b — a bare `<button>` also keeps the UA's `line-height: normal`
+     instead of the page's 1.6. On /jobs/post.html this .submit-button
+     rendered 45.59px tall beside the <a class="cancel-button"> it shares a
+     .form-actions flex row with, which inherits 1.6 and rendered 51.19px:
+     a 5.6px height mismatch and a 0.8px label offset in one button row. */
+  line-height: 1.6;
   padding: 0.8rem 1.75rem;
   border-radius: var(--r-md, 8px);
   font-weight: 700;

@@ -711,6 +711,19 @@
     border: none !important;
   }
 
+  /* 2026-09-05 visual QA: the `margin: 16px 20px` above assumes a full-bleed
+     parent — true on 81 of the 82 pages carrying a newsletter block, where the
+     card renders at x=20 w=350 exactly like every other card. On the education
+     hub the block sits inside `.articles-section`, which already supplies the
+     20px rail, so the margin stacked and the card rendered at x=40 w=310 while
+     the three `.article-card` siblings directly above it sat at x=20 w=350 — a
+     20px step between identical cards on one screen. Same stacked-gutter shape
+     as `footer > .container` and `.page-hero > .container`. */
+  .articles-section > .newsletter-section {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
   .newsletter-section h2,
   .newsletter h2,
   section[class*="newsletter"] h2 {
@@ -928,6 +941,23 @@
      `.container` class) sat at 20px. Cancel the second gutter so every template
      renders the same 20px footer inset. */
   footer > .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 2026-09-05 visual QA: the same stacked-gutter defect as `footer > .container`
+     immediately above. `.page-hero` / `.tools-hero` set
+     `padding: 12px 20px 8px !important`, and the general `.container` rule adds
+     another 20px, so on the four pages whose hero wraps its content in a
+     `.container` — /education/, /education.html, /swimmers-hub/, /tools/ — the H1
+     and its sub rendered at x=40 while every h2 and paragraph below them sat at
+     x=20, a visible 20px step in the page's left edge. The other 188
+     `.page-hero` pages put their content directly in the hero and already render
+     at 20px, so this brings the four outliers into line rather than moving the
+     rail. `.page-hero--edu` / `.page-hero--hub` are additional classes on
+     elements that also carry `.page-hero`, so they are covered here. */
+  .page-hero > .container,
+  .tools-hero > .container {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }

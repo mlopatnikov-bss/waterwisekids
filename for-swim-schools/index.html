@@ -30,7 +30,7 @@
 <meta name="twitter:description" content="Join WaterWiseKids as a featured swim school partner. Reach families searching for quality swim lessons."/>
 <meta name="twitter:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css?v=20260904a" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=20260905a" />
   <style>
     /* Page-specific styles — nav, footer, and base styles come from main.css */
 
@@ -132,7 +132,11 @@
       text-align: center;
       text-decoration: none;
       transition: all 0.3s;
-      border: none;
+      /* 2026-09-05 visual QA: same defect as the homepage hero — this local
+         `border: none` beat main.css's transparent-border equaliser while
+         .btn-secondary carries `border: 2px solid`, so in the .cta-buttons flex
+         row the primary's label sat 2px above the secondary's. */
+      border: 2px solid transparent;
       cursor: pointer;
       font-size: 0.95rem;
     }
@@ -490,6 +494,6 @@
       </div>
     </div>
   </footer>
-  <script src="/assets/js/main.js?v=20260904a"></script>
+  <script src="/assets/js/main.js?v=20260905a"></script>
 </body>
 </html>
