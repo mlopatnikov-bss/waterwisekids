@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.waterwisekids.com/about/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -212,7 +212,7 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -410,7 +410,7 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/shallow-water-blackout.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -638,7 +638,7 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1862,7 +1862,7 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/warm-water-swim-lessons.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1970,7 +1970,7 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/child-swim-fatigue-safety.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2026,7 +2026,7 @@
   </url>
 
   <url><loc>https://www.waterwisekids.com/education/pool-slide-safety.html</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.waterwisekids.com/education/swimming-muscle-cramps.html</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.waterwisekids.com/education/swimming-muscle-cramps.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.waterwisekids.com/education/hot-tub-spa-safety-kids.html</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/swim-bag-essentials.html</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.waterwisekids.com/education/public-pool-hygiene.html</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -2065,7 +2065,7 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/child-swimming-nutrition-hydration.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2089,7 +2089,7 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/education/infant-swim-lesson-wetsuits.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3422,4 +3422,5 @@
   <url><loc>https://www.waterwisekids.com/education/swim-lesson-medical-information-form.html</loc><lastmod>2026-09-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/swim-progress-audit-worksheet.html</loc><lastmod>2026-09-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/swim-instructor-continuity-worksheet.html</loc><lastmod>2026-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.waterwisekids.com/education/when-to-get-kids-out-of-water-checklist.html</loc><lastmod>2026-09-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

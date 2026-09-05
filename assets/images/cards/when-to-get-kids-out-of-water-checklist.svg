@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A poolside get-out-of-the-water card on a clipboard listing cold, tired and stop signs, beside a pool thermometer and a rest-break timer">
+  <defs>
+    <linearGradient id="gow-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="gow-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#gow-bg)"/>
+
+  <!-- pool water band -->
+  <rect x="0" y="268" width="600" height="92" fill="url(#gow-water)" opacity="0.55"/>
+  <path d="M0 274 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#0369a1" stroke-width="3" opacity="0.45"/>
+
+  <!-- clipboard card -->
+  <g transform="translate(38,28)">
+    <rect x="0" y="0" width="236" height="226" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+    <rect x="85" y="-9" width="66" height="20" rx="6" fill="#94a3b8"/>
+    <text x="20" y="36" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#0c4a6e">TIME TO GET OUT?</text>
+    <line x1="20" y1="46" x2="216" y2="46" stroke="#e2e8f0" stroke-width="2"/>
+
+    <!-- row 1: cold -->
+    <circle cx="30" cy="70" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="48" y="67" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#0f172a">COLD</text>
+    <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round"><line x1="48" y1="80" x2="180" y2="80"/></g>
+
+    <!-- row 2: tired -->
+    <circle cx="30" cy="112" r="9" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+    <text x="48" y="109" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#0f172a">TIRED</text>
+    <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round"><line x1="48" y1="122" x2="196" y2="122"/></g>
+
+    <!-- row 3: stop -->
+    <circle cx="30" cy="154" r="9" fill="#fee2e2" stroke="#b91c1c" stroke-width="3"/>
+    <text x="48" y="151" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#0f172a">STOP NOW</text>
+    <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round"><line x1="48" y1="164" x2="168" y2="164"/></g>
+
+    <line x1="20" y1="184" x2="216" y2="184" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="20" y="204" font-family="Inter, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#475569">SESSION LOG</text>
+    <g stroke="#cbd5e1" stroke-width="3" stroke-linecap="round">
+      <line x1="106" y1="201" x2="146" y2="201"/>
+      <line x1="158" y1="201" x2="216" y2="201"/>
+    </g>
+  </g>
+
+  <!-- pool thermometer -->
+  <g transform="translate(320,44)">
+    <rect x="0" y="0" width="34" height="150" rx="17" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+    <rect x="11" y="58" width="12" height="72" rx="6" fill="#0284c7"/>
+    <circle cx="17" cy="140" r="17" fill="#0284c7"/>
+    <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round">
+      <line x1="40" y1="34" x2="58" y2="34"/>
+      <line x1="40" y1="62" x2="52" y2="62"/>
+      <line x1="40" y1="90" x2="58" y2="90"/>
+      <line x1="40" y1="118" x2="52" y2="118"/>
+    </g>
+  </g>
+
+  <!-- rest-break timer -->
+  <g transform="translate(440,60)">
+    <circle cx="56" cy="56" r="52" fill="#ffffff" stroke="#0369a1" stroke-width="6"/>
+    <rect x="42" y="-8" width="28" height="12" rx="4" fill="#0369a1"/>
+    <g stroke="#0c4a6e" stroke-width="6" stroke-linecap="round">
+      <line x1="56" y1="56" x2="56" y2="24"/>
+      <line x1="56" y1="56" x2="80" y2="66"/>
+    </g>
+    <circle cx="56" cy="56" r="6" fill="#0c4a6e"/>
+  </g>
+  <text x="496" y="200" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#0c4a6e">BREAK EVERY 15&#8211;20 MIN</text>
+
+  <!-- towel on the edge -->
+  <g transform="translate(318,214)">
+    <rect x="0" y="0" width="120" height="44" rx="8" fill="#fde68a" stroke="#d97706" stroke-width="3"/>
+    <g stroke="#d97706" stroke-width="3" stroke-linecap="round" opacity="0.7">
+      <line x1="16" y1="12" x2="16" y2="32"/>
+      <line x1="34" y1="12" x2="34" y2="32"/>
+      <line x1="52" y1="12" x2="52" y2="32"/>
+    </g>
+  </g>
+</svg>
