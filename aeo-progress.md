@@ -2267,3 +2267,169 @@ One re-aim: `What Skills Should a Swimmer Have Before Mile Training?` scored **0
 - `swim-readiness-indicators-age-4` (1,310w, 0/5)
 
 Then the low-ratio long tail: `national-water-safety-action-plan-explained` (1/11 — **check the `aap_2026` and NDPA two-taxonomies rules before touching**), `new-jersey-pool-fence-law` (1/7 — **VGB scope rule applies**), `end-of-summer-swim-skills-report-card` (1/7), `water-confidence-challenge` (1/5), `make-a-splash-local-partner-badge-decoded` (1/5 — legacy-branding + "Local Partners" terminology question from Batch 49 flag #2; consider taking both in one pass), `swimmers-ear-prevention-checklist` (1/4), `year-round-swim-skills-checklist` (1/4).
+
+## Run 2026-09-06 — Batch 56: the prose backlog closed, and a parity probe that invented 144 defects
+
+Shipped from a fresh `origin/live` clone at `fbc2c7268`. One article converted
+(`swim-strokes-guide-kids` 3/7 → **7/7**) and **five speakable defects** fixed across the
+article family. **The prose question-H2 backlog is now empty.**
+
+### Backlog reconciliation
+
+Scorer rebuilt from the recorded role table verbatim (`cl-` class, cta ancestor,
+related-cards, sources-list, structural-id, faq-block-requires-non-question-h2, cta-text),
+with the ≤3-direct-children parent restriction and the per-role cardinality canary.
+
+| canary | recorded (Batch 55) | this run |
+|---|---|---|
+| over-skip (>2 per role per file, printables excluded) | 0 | **0** |
+| skipped headings ending in `?` | 83 | **83** |
+| — of which printable-label / cta-text / cta | 18 / 45 / 20 | **18 / 45 / 20** |
+| pages scored (n≥3) / dropped (n<3) | 420 / 95 | 421 / 96 |
+
+The skip composition reproduced **exactly**; the two extra pages are content shipped since
+Batch 55. Backlog read `swim-strokes-guide-kids` 3/7 and `education/index.html` 1/8 — the
+recorded state, unchanged.
+
+### `swim-strokes-guide-kids`: HowTo bound by url, then the headings freed
+
+The HowTo already carried `url` on every step (Batch 47's step 1 was done). What was still
+missing was step 2: `step.text` was a **hand-written paraphrase**, so the step↔section
+coupling remained implicit text similarity. All four `step.text` values were replaced with
+the **verbatim lead `<p>`** of the section their `url` points at, extracted programmatically;
+each lead was asserted not to end in a colon (the list-stem trap) before use. Two other
+sections on the page *do* end in colons — `stroke-progression` and `supporting-your-swimmer` —
+which is why the assertion is worth keeping even when it passes.
+
+Only then were the four stroke H2s converted. The `Stroke N:` ordinal prefix and the raw
+UTF-8 emoji were preserved byte-for-byte, per the Batch 55 `Layer N:` precedent:
+
+| id | was | now |
+|---|---|---|
+| `freestyle` | 🔵 Stroke 1: Freestyle (Front Crawl) | 🔵 Stroke 1: What Makes Freestyle the Foundation of Swimming Competence? |
+| `backstroke` | 🟢 Stroke 2: Backstroke | 🟢 Stroke 2: What Makes Backstroke Easier to Breathe In Than Freestyle? |
+| `breaststroke` | 🟡 Stroke 3: Breaststroke | 🟡 Stroke 3: Why Is Breaststroke Harder for Beginners Than It Looks? |
+| `butterfly` | 🔴 Stroke 4: Butterfly | 🔴 Stroke 4: Which Body Movements Make Butterfly So Demanding? |
+
+**Collision handling.** Corpus **7,138** headings (`h1+h2+h3` ending in `?` across 765 files,
+including the file being edited). Threshold 0.75. The first freestyle proposal,
+`How Does the Freestyle Stroke Actually Work?`, scored **0.840** against
+`swimmers-hub/freestyle-complete-guide.html :: How Does the Freestyle Arm Stroke Work?` — a
+dedicated sibling that owns freestyle mechanics outright. Three re-aims were scored before
+landing on the section's own distinctive claim (foundation, not mechanics): **0.595**.
+Final worst 0.606 corpus / 0.577 intra-batch.
+
+The similarity metric was **re-derived and then verified against a labelled set** rather than
+trusted: `difflib.SequenceMatcher` over lowercased, punctuation-stripped, whitespace-collapsed
+text reproduces five of Batch 55's recorded scores (0.775, 0.812, 0.847, 0.791, 0.742)
+**to three decimals**. Keeping the `?` or the punctuation shifts every value by ~0.005 —
+enough to move a borderline proposal across the threshold.
+
+### The finding: a FAQ-parity probe that reported 144 defects, all of them its own
+
+The recorded probe checks FAQ schema questions against **three** visible shapes (`h3`,
+`p > strong`, `button.faq-question`) scoped to `.article-body`. Run across the corpus it
+reported **144 schema questions with no visible counterpart** on 6+ files — a large,
+plausible-looking defect surface. Every one was the probe's fault:
+
+1. **Scope.** On this template family the FAQ block sits **outside** `.article-body`, between
+   it and `</main>`. That is not a defect: **310 of 414** `/education/` pages with an `#faq`
+   put it outside, against 104 inside. It is the majority convention. Measuring first is what
+   kept this from being "fixed."
+2. **A fourth visible shape: `h2`.** A FAQPage entry is often mirrored by a **section
+   heading**, not a dedicated FAQ block — `cold-water-shock.html` answers
+   *"What is cold water shock?"* with `<h2 id="what">`. Adding `h2` collapsed 144 → 30.
+3. **Ordinal prefixes.** `swim-lesson-faqs.html` renders *"2. How long does it take to learn
+   to swim?"*. The recorded normalization strips emoji and `Q:` but not `1.` / `Q1)`.
+4. **`h1`.** A page whose whole subject is the question answers it in the `<h1>`.
+
+With the shape set widened to `h1, h2, h3, h4, p > strong, button.faq-question, summary, dt`,
+document scope, and leading-ordinal normalization, the reading is **0 drift across 2,137 Q&A
+on 424 files.** Given that acting on a wrong parity probe **deletes healthy Q&A**, a probe
+that reports a 144-item surface is the more dangerous failure — it looks like work.
+
+**Same class, same run:** the `.tldr-box` on `swim-strokes-guide-kids` says freestyle and
+backstroke start *"as early as age 4–6"* while the body says full arm-stroke integration is
+*"ages 5–7"*. That was edited to 5–7 as a drift fix — and then **reverted**, because the
+page's own FAQ states 4–6 for *begin learning*. The two figures name **different milestones**;
+"fixing" one would have contradicted the FAQ. Check which milestone a number names before
+calling two numbers a contradiction.
+
+### The "71 printable bridge H2s" are conversion copy, not an AEO surface
+
+This item has been carried as unworked backlog for several runs. Characterized in full:
+95 printable pages carry **293** non-`cl-` H2s. Of those, **191** are related-cards utility
+(`Keep Reading` 93, `More Related Guides` 68, `Related Reading` 16, `Related Water Safety
+Guides` 14), **20** are already questions, 2 are FAQ containers, and the remaining **80**
+were classified by whether their section contains an enrolment/tool link or CTA button:
+**76 are conversion CTAs** (*"Build Your Child's Water Safety Skills"*, *"Cost Is Worth
+Comparing. Safety Is Worth More."*) and **4 are card instruction labels** (*"Parent Fills In
+Before Handing Off"*). **Zero are prose content headings.**
+
+Printables are excluded from the H2 ratio by design and drop at n<3 regardless. Converting
+persuasive CTA headlines into questions would degrade conversion copy for **no AEO gain**.
+Recommend closing this item rather than working it.
+
+### Speakable: the article-family defects closed
+
+Batch 55 flagged 160 selectors not resolving to exactly 1. Characterized per family:
+**114 printable** (correct — the recorded 113 plus one new page), **5 hub `.hub-answer`**
+(4–10 matches; a hub with N answers is deliberate), **24 directory** `.state-info h3` /
+`.faq-section h3`, **13 town** `.wwk-intro-box p` → 2. The **article-family** ones were real
+and are fixed:
+
+- `intensive-vs-weekly-swim-lessons`, `life-skills-from-swimming`, `swimming-progress-tracker`:
+  `.article-body h2` matched **11 / 11 / 9** — the selector pointed at *every heading on the
+  page*, which is an article, not a speakable summary. Replaced with `.article h1` (→1).
+- `adaptive-swimming-special-needs`: `.article-body > p:first-of-type` → **2**, because the
+  page has **two `div.article-body`** elements. Selector dropped (`.tldr-box`,
+  `.article h1`, `.article-excerpt` all resolve to 1 and already cover the summary); the
+  duplicate div is flagged below, not silently restructured.
+- `water-safety-for-toddlers`: `.article > p:first-of-type` → **2**, because `.article`
+  matches both `<article class="article">` and a `<div class="article">` breadcrumb wrapper.
+  The first match was **"← Back to Articles"** — speakable was handing an assistant a
+  breadcrumb. Narrowed to `article.article > p:first-of-type` (→1).
+
+Non-1 selectors 160 → 155; the article family is now clean, and **zero selectors match nothing**.
+
+### Validation
+- Tag balance: lxml structural errors **0** on all six files. (One pre-existing
+  `expected-named-entity` from an unescaped `&` in the Google Fonts URL is present at HEAD
+  on every page and was not introduced here.)
+- JSON-LD parses clean on all six; `jerr=0`; **0 HTML entities leaked inside JSON-LD**.
+- HowTo: every `step.url` resolves to a real section `id`, and every `step.text` **equals**
+  that section's lead `<p>` verbatim — asserted programmatically, 4/4.
+- FAQ schema↔visible: 5/5 on `swim-strokes-guide-kids`; **0 drift corpus-wide** (2,137 Q&A).
+- Speakable: every selector on every touched file resolves to exactly 1.
+- `headline == h1` on all six. 16 metas in `<head>`, **0 metas in `<body>`**; per-tag quote
+  parity in `<head>` clean. Nested anchors 0. Placeholders 0. Brand-voice ownership scan 0.
+- **DOM signature diff vs HEAD, scripts and styles stripped: byte-identical on all six**
+  (249/294/266/244/262/183). Text-node diff: the only change anywhere is the **four replaced
+  headings**. No prose was deleted.
+- `dateModified` 2026-08-25 → **2026-09-06** and the visible `Updated` line synced, on
+  `swim-strokes-guide-kids` **only** — the other five changed JSON-LD selectors and no body
+  text, so their dates were deliberately left alone. `sitemap.xml` lastmod bumped for
+  **exactly that one URL** (2026-08-29 → 2026-09-06); re-parsed clean, **648 entries**.
+- Backlog re-scored after the edit: `swim-strokes-guide-kids` **7/7**, off the backlog.
+
+### Backlog after this run
+
+**Prose backlog: 0.** `education/index.html` (1/8) is a hub and stays scoped separately —
+per the hub-cannibalization rule, converting hub H2s to questions risks absorbing queries
+its dedicated pages should own, so it should be taken as a deliberate scope decision, not as
+backlog cleanup. The 71 printable "bridge" H2s are recommended **closed** (see above).
+
+### Flagged for Michael — not changed
+
+1. **`adaptive-swimming-special-needs.html` has two `div.article-body` elements.** The
+   speakable selector was the symptom; the duplicate container is the cause and may affect
+   styling and any rule that assumes one article body. Needs a look before restructuring.
+2. **Directory and town speakable selectors resolving to >1** (24 × `.state-info h3` /
+   `.faq-section h3` at 4–8; 13 × `.wwk-intro-box p` at 2). Plausibly deliberate multi-answer
+   designs, unlike the article-family cases. Left alone pending a decision on whether
+   speakable should ever address more than one block.
+3. **Batch 54/55 open items still stand:** `free-reduced-swim-lessons-make-a-splash.html`'s
+   two divergent FAQ blocks, and `teaching-kids-safe-pool-entry.html`'s uncited
+   "leading cause" claim.
+
+---
