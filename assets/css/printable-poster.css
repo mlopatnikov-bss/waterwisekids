@@ -786,3 +786,21 @@ footer p {
     font-size: 16px !important;
   }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   mobile-consistency-checker 2026-09-06 — poster body gutter never joined the rail
+   ------------------------------------------------------------------------------
+   The 2026-08-30 pass aligned this sheet's `header nav` to the 20px mobile rail
+   and the shared footer already sits at 20px, but `body` kept its desktop gutter,
+   so on the one poster printable the h1 and every paragraph rendered 4px inboard
+   of the logo directly above and the footer directly below (measured at 390px:
+   body copy 16, logo 20, footer title 20). `header` and `footer` cancel the body
+   gutter with a negative margin, so that margin has to move with it or the chrome
+   stops being full-bleed. Scoped to <=768px; desktop is untouched.
+   See [[rem_side_gutter_drifts_off_chrome_rail]], [[standalone_stylesheet_drift]].
+   ═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  body { padding-left: 20px; padding-right: 20px; }
+  header, footer { margin-left: -20px; margin-right: -20px; }
+}

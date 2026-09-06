@@ -518,3 +518,34 @@ footer p {
     font-size: 16px !important;
   }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   mobile-consistency-checker 2026-09-06 — INLINE gutters outrank the mobile band
+   ------------------------------------------------------------------------------
+   The 2026-09-01 pass moved this sheet's screen-only body bands (`.print-toolbar`,
+   `.checklist-page`, `.screen-cta`) onto the 20px mobile rail. It could not reach
+   18 checklist printables whose bottom "Related Water Safety Guides" band carries
+   its gutter in a STYLE ATTRIBUTE, which beats any stylesheet declaration:
+
+     14 pages  <div style="max-width:700px;margin:2rem auto;padding:0 1rem;">
+               1rem === 14px here, because this sheet drops the root to 14px at
+               <=480px, so the band sat 6px inboard of the nav logo above it.
+      4 pages  <div class="screen-cta" style="...padding:20px 16px;">  -> 4px inboard.
+
+   Rendered at 390px the other 77 checklist printables put that same band at 20px,
+   so this is drift, not design. Attribute selectors keep an 18-file HTML diff out
+   of the deploy — same shape as the newsletter `.75rem` fix in
+   [[mobile_tap_targets_and_text_floor]]. Scoped to <=768px: desktop is untouched.
+   See [[rem_side_gutter_drifts_off_chrome_rail]], [[standalone_stylesheet_drift]].
+   ═══════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  [style*="max-width:700px"][style*="padding:0 1rem"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .screen-cta[style*="padding:20px 16px"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
