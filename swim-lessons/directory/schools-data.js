@@ -469,8 +469,7 @@ const SWIM_SCHOOLS_DATA = {
     { name: "SafeSplash - Holly Springs", chain: "SafeSplash", city: "Holly Springs", state: "NC", website: "https://www.safesplash.com/locations/holly-springs-nc", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "SafeSplash - Raleigh", chain: "SafeSplash", city: "Raleigh", state: "NC", website: "https://www.safesplash.com/locations/north-raleigh-nc", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "Big Blue Swim School - Apex", chain: "Big Blue Swim School", city: "Apex", state: "NC", website: "https://bigblueswimschool.com/locations/north-carolina/apex/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Big Blue Swim School - Concord", chain: "Big Blue Swim School", city: "Concord", state: "NC", website: "https://bigblueswimschool.com/locations/north-carolina/concord/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Raleigh", chain: "Emler Swim School", city: "Raleigh", state: "NC", website: "https://emlerswimschool.com/locations/north-carolina/raleigh/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Big Blue Swim School - Concord", chain: "Big Blue Swim School", city: "Concord", state: "NC", website: "https://bigblueswimschool.com/locations/north-carolina/concord/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "ND": [
     { name: "Foss Swim School - Fargo", chain: "Foss Swim School", city: "Fargo", state: "ND", website: "https://www.fossswimschool.com/swimming-lesson-locations/fargo-nd/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
@@ -533,8 +532,7 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Big Blue Swim School - Cranberry Township", chain: "Big Blue Swim School", city: "Cranberry Township", state: "PA", website: "https://bigblueswimschool.com/locations/pennsylvania/cranberry-township/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Big Blue Swim School - Fairless Hills", chain: "Big Blue Swim School", city: "Fairless Hills", state: "PA", website: "https://bigblueswimschool.com/locations/pennsylvania/fairless-hills/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Big Blue Swim School - Morton", chain: "Big Blue Swim School", city: "Morton", state: "PA", website: "https://bigblueswimschool.com/locations/pennsylvania/springfield-delco/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Big Blue Swim School - Warminster", chain: "Big Blue Swim School", city: "Warminster", state: "PA", website: "https://bigblueswimschool.com/locations/pennsylvania/warminster/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Wexford", chain: "Emler Swim School", city: "Wexford", state: "PA", website: "https://emlerswimschool.com/locations/pennsylvania/wexford-pa/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Big Blue Swim School - Warminster", chain: "Big Blue Swim School", city: "Warminster", state: "PA", website: "https://bigblueswimschool.com/locations/pennsylvania/warminster/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "RI": [
     { name: "Goldfish Swim School - Warwick", chain: "Goldfish Swim School", city: "Warwick", state: "RI", website: "https://goldfishswimschool.com/warwick/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
@@ -709,8 +707,7 @@ const SWIM_SCHOOLS_DATA = {
     { name: "SafeSplash - Kirkland", chain: "SafeSplash", city: "Kirkland", state: "WA", website: "https://www.safesplash.com/locations/kirkland-totem-lake-wa", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "SafeSplash - Redmond", chain: "SafeSplash", city: "Redmond", state: "WA", website: "https://www.safesplash.com/locations/redmond-wa", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "SafeSplash - Renton", chain: "SafeSplash", city: "Renton", state: "WA", website: "https://www.safesplash.com/locations/renton-fairwood-wa", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
-    { name: "SafeSplash - Renton Landing", chain: "SafeSplash", city: "Renton", state: "WA", website: "https://www.safesplash.com/locations/renton-landing-wa", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
-    { name: "Emler Swim School - Kirkland", chain: "Emler Swim School", city: "Kirkland", state: "WA", website: "https://emlerswimschool.com/locations/washington/kirkland-wa/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "SafeSplash - Renton Landing", chain: "SafeSplash", city: "Renton", state: "WA", website: "https://www.safesplash.com/locations/renton-landing-wa", programs: ["toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true }
   ],
   "WV": [
     { name: "Charleston Swim School", chain: "Independent", city: "Charleston", state: "WV", website: "https://charlestonswimlessons.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
