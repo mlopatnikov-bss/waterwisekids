@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A swim school pool tour card on a clipboard listing temperature, air and depth checks, beside a pool thermometer reading 88 degrees and a viewing window onto a teaching pool">
+  <defs>
+    <linearGradient id="tour-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="tour-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#tour-bg)"/>
+
+  <!-- pool water band -->
+  <rect x="0" y="268" width="600" height="92" fill="url(#tour-water)" opacity="0.55"/>
+  <path d="M0 274 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#0369a1" stroke-width="3" opacity="0.45"/>
+
+  <!-- clipboard tour card -->
+  <g transform="translate(38,28)">
+    <rect x="0" y="0" width="236" height="226" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+    <rect x="85" y="-9" width="66" height="20" rx="6" fill="#94a3b8"/>
+    <text x="20" y="36" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#0c4a6e">POOL TOUR CARD</text>
+    <line x1="20" y1="46" x2="216" y2="46" stroke="#e2e8f0" stroke-width="2"/>
+
+    <!-- row 1: temperature -->
+    <rect x="21" y="61" width="18" height="18" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="48" y="67" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#0f172a">TEMPERATURE</text>
+    <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round"><line x1="48" y1="80" x2="180" y2="80"/></g>
+
+    <!-- row 2: air -->
+    <rect x="21" y="103" width="18" height="18" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="48" y="109" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#0f172a">AIR</text>
+    <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round"><line x1="48" y1="122" x2="196" y2="122"/></g>
+
+    <!-- row 3: depth -->
+    <rect x="21" y="145" width="18" height="18" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="48" y="151" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#0f172a">DEPTH</text>
+    <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round"><line x1="48" y1="164" x2="172" y2="164"/></g>
+
+    <!-- row 4: sightlines -->
+    <rect x="21" y="187" width="18" height="18" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="48" y="193" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#0f172a">SIGHTLINES</text>
+    <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round"><line x1="48" y1="206" x2="188" y2="206"/></g>
+  </g>
+
+  <!-- pool thermometer -->
+  <g transform="translate(312,44)">
+    <rect x="0" y="0" width="34" height="150" rx="17" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+    <rect x="11" y="46" width="12" height="86" rx="6" fill="#f97316"/>
+    <circle cx="17" cy="140" r="16" fill="#f97316" stroke="#ffffff" stroke-width="3"/>
+    <g stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round">
+      <line x1="38" y1="42" x2="54" y2="42"/>
+      <line x1="38" y1="70" x2="48" y2="70"/>
+      <line x1="38" y1="98" x2="54" y2="98"/>
+      <line x1="38" y1="126" x2="48" y2="126"/>
+    </g>
+    <text x="62" y="47" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#0c4a6e">88&#176;F</text>
+    <text x="62" y="70" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#475569">ask for</text>
+    <text x="62" y="86" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="600" fill="#475569">the number</text>
+  </g>
+
+  <!-- viewing window onto the teaching pool -->
+  <g transform="translate(312,214)">
+    <rect x="0" y="0" width="242" height="112" rx="10" fill="#f0f9ff" stroke="#0369a1" stroke-width="3"/>
+    <rect x="14" y="52" width="214" height="46" rx="6" fill="url(#tour-water)" opacity="0.7"/>
+    <line x1="121" y1="4" x2="121" y2="108" stroke="#0369a1" stroke-width="3" opacity="0.5"/>
+    <text x="16" y="28" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0c4a6e">THE PARENT SEAT</text>
+    <text x="16" y="44" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#475569">can you see the lesson?</text>
+    <circle cx="58" cy="74" r="9" fill="#fde68a" stroke="#b45309" stroke-width="2.5"/>
+    <circle cx="164" cy="74" r="9" fill="#fde68a" stroke="#b45309" stroke-width="2.5"/>
+  </g>
+
+  <!-- steps entry -->
+  <g transform="translate(38,270)" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5">
+    <rect x="0" y="0" width="90" height="14" rx="4"/>
+    <rect x="14" y="20" width="76" height="14" rx="4"/>
+    <rect x="28" y="40" width="62" height="14" rx="4"/>
+  </g>
+  <text x="140" y="298" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0c4a6e">STEPS, RAMP OR LADDER?</text>
+  <text x="140" y="316" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#0369a1">WaterWiseKids.com</text>
+</svg>
