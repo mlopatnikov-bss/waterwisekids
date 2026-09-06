@@ -594,9 +594,9 @@
     </div>
 
     <!-- Schools List -->
-    <p class="directory-note">Visit each school&#39;s website for current addresses, phone numbers, and enrollment details. Schools are verified through official chain directories.</p>
+    <p class="directory-note">Visit each school&#39;s website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>
     <div class="school-count" id="schoolCount">2 swim schools found in Mississippi</div>
-    <div class="schools-list" id="schoolsList"><div class="school-card"><div class="school-header"><div><h3 class="school-name">Maley Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Ridgeland, MS</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://www.yelp.com/biz/maley-swim-school-ridgeland" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Maley Swim School website (opens in a new tab)">Visit Website &rarr;</a></div></div></div>
+    <div class="schools-list" id="schoolsList"><div class="school-card"><div class="school-header"><div><h3 class="school-name">Maley Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Ridgeland, MS</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://www.yelp.com/biz/maley-swim-school-ridgeland" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Maley Swim School website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">SafeSplash - Southaven</h3><span class="school-chain">SafeSplash</span></div></div><div class="school-info"><div><strong>City:</strong> Southaven, MS</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span><span class="program-badge">Adults</span></div><div class="school-contact"><a href="https://www.safesplash.com/locations/desoto-southaven-ms" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the SafeSplash - Southaven website (opens in a new tab)">Visit Website &rarr;</a></div></div></div>
     <noscript>
 
       <div style="padding: 2rem; background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; margin: 1rem 0;">
@@ -627,11 +627,12 @@
   <!-- Crawlable directory listing (server-rendered from schools-data.js) -->
   <section class="dir-coverage" id="cities" style="max-width:820px;margin:2rem auto 0;padding:0 1.5rem;line-height:1.7;color:#334155;">
     <h2 style="font-size:1.5rem;margin:1rem 0 .75rem;color:#0f172a;">Swim Schools in Mississippi: Cities We Cover</h2>
-    <p style="margin:0 0 1rem;">Our Mississippi directory lists <strong>1 verified swim school</strong>, all in Ridgeland. Listings cover 1 independent school. 1 of the 1 school listed teach in an indoor pool, so lessons continue outside the summer season. Use the search box above to filter by school name or city, or jump to a town below.</p>
-    <p class="dir-city-line" style="margin:.75rem 0 1rem;"><a href="#schoolsList" class="dir-city-chip">Ridgeland swim lessons</a></p>
+    <p style="margin:0 0 1rem;">Our Mississippi directory lists <strong>2 verified swim schools</strong> across 2 cities. Listings cover national and regional programs including SafeSplash and 1 independent school. 2 of the 2 schools listed teach in an indoor pool, so lessons continue outside the summer season. Use the search box above to filter by school name or city, or jump to a town below.</p>
+    <p class="dir-city-line" style="margin:.75rem 0 1rem;"><a href="#schoolsList" class="dir-city-chip">Ridgeland swim lessons</a> <a href="#schoolsList" class="dir-city-chip">Southaven swim lessons</a></p>
     <h3 style="font-size:1.1rem;margin:1.25rem 0 .5rem;color:#0f172a;">Swim schools by city in Mississippi</h3>
     <ul style="margin:0 0 1rem 1.25rem;padding:0;">
         <li><strong>Ridgeland</strong> &mdash; Maley Swim School</li>
+        <li><strong>Southaven</strong> &mdash; SafeSplash - Southaven</li>
     </ul>
     <p style="font-size:.95rem;color:#475569;margin:0 0 1rem;">Listings are compiled from official school websites and are provided for comparison only &mdash; WaterWiseKids is an independent water-safety resource and does not operate, endorse or rank any school. Confirm current schedules and pricing directly with the school. For the national numbers behind our safety guidance, see the <a href="/statistics/">child drowning statistics dashboard</a>. Run a swim school in Mississippi? <a href="/for-swim-schools/">Add or update your listing</a>.</p>
   </section>
@@ -704,7 +705,7 @@
     </div>
   </footer>
 
-  <script src="schools-data.js?v=20260905a"></script>
+  <script src="schools-data.js?v=20260906a"></script>
   <script>
     const STATE_CODE = "MS";
     const STATE_NAME = "Mississippi";
@@ -773,7 +774,7 @@
 
       // Add directory note and school count if not already present
       if (!document.querySelector('.directory-note')) {
-        const noteHTML = '<p class="directory-note">Visit each school\'s website for current addresses, phone numbers, and enrollment details. Schools are verified through official chain directories.</p>';
+        const noteHTML = '<p class="directory-note">Visit each school\'s website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>';
         const countHTML = '<div class="school-count" id="schoolCount"></div>';
         container.insertAdjacentHTML('beforebegin', noteHTML + countHTML);
       }

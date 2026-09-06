@@ -604,7 +604,7 @@
     </div>
 
     <!-- Schools List -->
-    <p class="directory-note">Visit each school&#39;s website for current addresses, phone numbers, and enrollment details. Schools are verified through official chain directories.</p>
+    <p class="directory-note">Visit each school&#39;s website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>
     <div class="school-count" id="schoolCount">3 swim schools found in Iowa</div>
     <div class="schools-list" id="schoolsList"><div class="school-card"><div class="school-header"><div><h3 class="school-name">Goldfish Swim School - Urbandale</h3><span class="school-chain">Goldfish Swim School</span></div></div><div class="school-info"><div><strong>City:</strong> Urbandale, IA</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://goldfishswimschool.com/urbandale/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Goldfish Swim School - Urbandale website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Aqua-Tots - Des Moines</h3><span class="school-chain">Aqua-Tots</span></div></div><div class="school-info"><div><strong>City:</strong> Des Moines, IA</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://www.aqua-tots.com/des-moines/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Aqua-Tots - Des Moines website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Aqua-Tots - West Des Moines</h3><span class="school-chain">Aqua-Tots</span></div></div><div class="school-info"><div><strong>City:</strong> West Des Moines, IA</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://www.aqua-tots.com/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Aqua-Tots - West Des Moines website (opens in a new tab)">Visit Website &rarr;</a></div></div></div>
     <noscript>
@@ -711,7 +711,7 @@
     </div>
   </footer>
 
-  <script src="schools-data.js?v=20260905a"></script>
+  <script src="schools-data.js?v=20260906a"></script>
   <script>
     const STATE_CODE = "IA";
     const STATE_NAME = "Iowa";
@@ -780,7 +780,7 @@
 
       // Add directory note and school count if not already present
       if (!document.querySelector('.directory-note')) {
-        const noteHTML = '<p class="directory-note">Visit each school\'s website for current addresses, phone numbers, and enrollment details. Schools are verified through official chain directories.</p>';
+        const noteHTML = '<p class="directory-note">Visit each school\'s website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>';
         const countHTML = '<div class="school-count" id="schoolCount"></div>';
         container.insertAdjacentHTML('beforebegin', noteHTML + countHTML);
       }

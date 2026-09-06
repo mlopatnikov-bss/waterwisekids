@@ -609,7 +609,7 @@
     </div>
 
     <!-- Schools List -->
-    <p class="directory-note">Visit each school&#39;s website for current addresses, phone numbers, and enrollment details. Schools are verified through official chain directories.</p>
+    <p class="directory-note">Visit each school&#39;s website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>
     <div class="school-count" id="schoolCount">3 swim schools found in Vermont</div>
     <div class="schools-list" id="schoolsList"><div class="school-card"><div class="school-header"><div><h3 class="school-name">Lake Dragon Aquatics</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://lakedragonaquatics.com/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Lake Dragon Aquatics website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Ripple Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://www.rippleswimvt.com" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Ripple Swim School website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Vermont Swim School - UVM</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://uvmcampusrec.com/sports/vermont-swim-school" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Vermont Swim School - UVM website (opens in a new tab)">Visit Website &rarr;</a></div></div></div>
     <noscript>
@@ -719,7 +719,7 @@
     </div>
   </footer>
 
-  <script src="schools-data.js?v=20260905a"></script>
+  <script src="schools-data.js?v=20260906a"></script>
   <script>
     const STATE_CODE = "VT";
     const STATE_NAME = "Vermont";
@@ -788,7 +788,7 @@
 
       // Add directory note and school count if not already present
       if (!document.querySelector('.directory-note')) {
-        const noteHTML = '<p class="directory-note">Visit each school\'s website for current addresses, phone numbers, and enrollment details. Schools are verified through official chain directories.</p>';
+        const noteHTML = '<p class="directory-note">Visit each school\'s website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>';
         const countHTML = '<div class="school-count" id="schoolCount"></div>';
         container.insertAdjacentHTML('beforebegin', noteHTML + countHTML);
       }
