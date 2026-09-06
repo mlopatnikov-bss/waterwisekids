@@ -3210,3 +3210,93 @@ aside p a {
     flex-basis: 100%;
   }
 }
+
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   WCAG 2.5.8 AA FLOORS SURVIVE ABOVE THE TABLET BAND — 2026-09-06
+   (daily visual-design render sweep)
+
+   The 2026-08-28 / 2026-08-29 rounds restored the target-size and iOS-zoom
+   floors that m-app.css keeps below 769px, but they wrote them into
+   `@media (min-width: 769px) and (max-width: 1149px)` — a BAND, capped so it
+   would not disturb the desktop layout rules that share that block. The floors
+   were never lifted past the cap, so every one of them evaporates again at
+   1150px. Same failure shape as the m-app.css ceiling those rounds were fixing,
+   one breakpoint further out.
+
+   Measured on a fresh clone of origin/live @ 1f24151, identical at 1280 and
+   1440 (both are inside the gap; 1100 shows the intended values):
+
+     selector                      1100px (band)   1280 / 1440px   floor
+     footer .footer-links a        93.2 x 24       93.2 x 23       24
+     .article-card a  ("Read       258  x 24       290  x 23       24
+       Guide ->", homepage grid)
+     a.toc-item / .toc-item a      270  x 24       270  x 20.4     24
+     input[type=checkbox|radio]    24 x 24         13x13 / 17x17   24
+     text inputs / select /        16px            14.88-15.2px    16
+       textarea  (font-size)
+
+   The checkbox row is 12 controls on /swim-schools/add.html and 18 on
+   /tools/family-water-safety-plan.html; the footer row is 9 links on every one
+   of the 742 non-stub pages.
+
+   The 16px input floor is not academic above 1149px: iPad Pro 12.9" in
+   landscape reports a 1366px viewport, so the largest iPadOS devices sit in the
+   gap and Safari zooms the viewport on every field focus.
+
+   Declarations are copied VERBATIM from the band block so nothing changes as a
+   viewport crosses 1150px. `min-height` only ever grows the box downward and
+   every affected element is already wider than 24px, so no width and no wrap
+   behaviour changes — verified by re-render, see the before/after table in
+   VISUAL-QA-REPORT-2026-09-06.md.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media screen and (min-width: 1150px) {
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-width: 24px;
+    min-height: 24px;
+  }
+
+  footer .footer-links a,
+  .article-card a,
+  .toc-item a,
+  a.toc-item {
+    min-height: 24px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .toc-item a,
+  a.toc-item {
+    display: flex;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="url"],
+  input[type="search"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* ── `.back-link` was missed by BOTH rounds ────────────────────────────────────
+   m-app.css floors `.back-link` at 44x44 below 769px, but the 2026-08-29 band
+   block never listed it, so it renders 50.2 x 22.4 at 900, 1100, 1280 and
+   1440px alike — under the 24px floor at every width above the mobile
+   breakpoint, on the 122 pages that carry it. Not capped at 1149px, because the
+   gap here starts at 769px. Width is already 50.2px, so no `min-width` is
+   needed and the label's left edge cannot move. */
+@media screen and (min-width: 769px) {
+  .back-link,
+  a.back-link {
+    min-height: 24px;
+    display: inline-flex;
+    align-items: center;
+  }
+}

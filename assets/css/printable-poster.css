@@ -756,3 +756,33 @@ footer p {
     flex-basis: 100%;
   }
 }
+
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   ...AND THE SAME FLOORS ABOVE THE BAND — 2026-09-06 (visual-design sweep)
+
+   The block above restored the WCAG 2.5.8 AA target-size floor and the 16px
+   iOS-zoom floor for printable landing pages, which load only this stylesheet.
+   It was capped at 1149px to mirror the main.css band it was copied from — and
+   main.css had the same cap, so the floors vanish again at 1150px. Measured on
+   /education/pool-safety-rules-printable.html and
+   /education/babysitter-water-safety-checklist-printable.html:
+   `.footer-links a` 93.2 x 23 and the lead-capture email field 15.2px at both
+   1280 and 1440px, against 93.2 x 24 / 16px at 1100px.
+
+   `screen and` keeps it out of the print stylesheet, exactly as above.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media screen and (min-width: 1150px) {
+  .footer-links a {
+    min-height: 24px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  input[type="email"],
+  input[type="text"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
