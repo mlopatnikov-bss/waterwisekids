@@ -24,7 +24,6 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Aqua-Tots - Ahwatukee", chain: "Aqua-Tots", city: "Ahwatukee", state: "AZ", website: "https://www.aqua-tots.com/ahwatukee/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Aqua-Tots - Chandler", chain: "Aqua-Tots", city: "Chandler", state: "AZ", website: "https://www.aqua-tots.com/chandler/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Aqua-Tots - Mesa", chain: "Aqua-Tots", city: "Mesa", state: "AZ", website: "https://www.aqua-tots.com/mesa/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Aqua-Tots - Peoria", chain: "Aqua-Tots", city: "Peoria", state: "AZ", website: "https://www.aqua-tots.com/peoria/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Aqua-Tots - Phoenix", chain: "Aqua-Tots", city: "Phoenix", state: "AZ", website: "https://www.aqua-tots.com/central-phoenix/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Aqua-Tots - Queen Creek", chain: "Aqua-Tots", city: "Queen Creek", state: "AZ", website: "https://www.aqua-tots.com/queen-creek/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Aqua-Tots - Scottsdale", chain: "Aqua-Tots", city: "Scottsdale", state: "AZ", website: "https://www.aqua-tots.com/old-town-scottsdale/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
@@ -259,7 +258,8 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Big Blue Swim School - Naperville", chain: "Big Blue Swim School", city: "Naperville", state: "IL", website: "https://bigblueswimschool.com/locations/illinois/naperville/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Goldfish Swim School - Algonquin", chain: "Goldfish Swim School", city: "Algonquin", state: "IL", website: "https://goldfishswimschool.com/algonquin/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Goldfish Swim School - Lincoln Park", chain: "Goldfish Swim School", city: "Chicago", state: "IL", website: "https://goldfishswimschool.com/lincoln-park/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Goldfish Swim School - Roscoe Village", chain: "Goldfish Swim School", city: "Chicago", state: "IL", website: "https://goldfishswimschool.com/roscoe-village/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Goldfish Swim School - Roscoe Village", chain: "Goldfish Swim School", city: "Chicago", state: "IL", website: "https://goldfishswimschool.com/roscoe-village/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Aqua-Tots - Peoria", chain: "Aqua-Tots", city: "Peoria", state: "IL", website: "https://www.aqua-tots.com/peoria/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "IN": [
     { name: "British Swim School of Indianapolis", chain: "British Swim School", city: "Indianapolis", state: "IN", website: "https://britishswimschool.com/central-indiana/location/livrite-fitness-north-indianapolis/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
@@ -421,7 +421,8 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Goldfish Swim School - Omaha", chain: "Goldfish Swim School", city: "Omaha", state: "NE", website: "https://goldfishswimschool.com/west-omaha/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Aqua-Tots - Omaha", chain: "Aqua-Tots", city: "Omaha", state: "NE", website: "https://www.aqua-tots.com/omaha/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Goldfish Swim School - Sarpy County", chain: "Goldfish Swim School", city: "Papillion", state: "NE", website: "https://goldfishswimschool.com/sarpy-county/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Aqua-Tots - Bellevue", chain: "Aqua-Tots", city: "Bellevue", state: "NE", website: "https://www.aqua-tots.com/bellevue/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
+    { name: "Aqua-Tots - Bellevue", chain: "Aqua-Tots", city: "Bellevue", state: "NE", website: "https://www.aqua-tots.com/bellevue/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
+    { name: "Aqua-Tots - West Omaha", chain: "Aqua-Tots", city: "Omaha", state: "NE", website: "https://www.aqua-tots.com/west-omaha/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true }
   ],
   "NV": [
     { name: "Aqua-Tots - Las Vegas", chain: "Aqua-Tots", city: "Las Vegas", state: "NV", website: "https://www.aqua-tots.com/las-vegas/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
@@ -519,7 +520,6 @@ const SWIM_SCHOOLS_DATA = {
     { name: "Goldfish Swim School - Brooklyn", chain: "Goldfish Swim School", city: "Brooklyn", state: "NY", website: "https://goldfishswimschool.com/gowanus/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Goldfish Swim School - Farmingdale", chain: "Goldfish Swim School", city: "Farmingdale", state: "NY", website: "https://goldfishswimschool.com/farmingdale/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Goldfish Swim School - Garden City", chain: "Goldfish Swim School", city: "Garden City", state: "NY", website: "https://goldfishswimschool.com/garden-city/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
-    { name: "Goldfish Swim School - Rochester", chain: "Goldfish Swim School", city: "Rochester", state: "NY", website: "https://goldfishswimschool.com/rochester/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "Goldfish Swim School - Williamsville", chain: "Goldfish Swim School", city: "Williamsville", state: "NY", website: "https://goldfishswimschool.com/williamsville/", programs: ["infant", "toddler", "preschool", "school-age"], indoor: true, yearRound: true },
     { name: "SwimJim - New York", chain: "SwimJim", city: "New York", state: "NY", website: "https://www.swimjim.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
     { name: "SwimJim - Brooklyn", chain: "SwimJim", city: "Brooklyn", state: "NY", website: "https://www.swimjim.com/", programs: ["infant", "toddler", "preschool", "school-age", "adult"], indoor: true, yearRound: true },
