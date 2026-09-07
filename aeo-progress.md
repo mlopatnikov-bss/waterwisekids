@@ -2433,3 +2433,119 @@ backlog cleanup. The 71 printable "bridge" H2s are recommended **closed** (see a
    "leading cause" claim.
 
 ---
+
+## Run 2026-09-07 — Batch 57: six different water temperatures, all credited to the AAP
+
+The prose H2 backlog was already 0 and the on-page levers are exhausted, so this run went
+looking at a different axis: **whether the authorities we cite actually say what we say they
+say.** They did not.
+
+### The finding
+
+The site attributed **six mutually exclusive water-temperature bands to the American Academy
+of Pediatrics** across seven pages:
+
+| Page | Claimed as AAP guidance | Verdict |
+|---|---|---|
+| `warm-water-swim-lessons` | 86–90°F (×13, incl. FAQ JSON-LD, a stat card and the TL;DR) | wrong |
+| `swim-school-pool-tour-checklist` | 86–90°F, plus an age table "86–92 / 86–90 / 84–88" | wrong + **fabricated age breakdown** |
+| `indoor-vs-outdoor-swim-lessons` | "at least 86–88°F" (prose **and** FAQ JSON-LD) | wrong |
+| `why-swim-lessons-are-30-minutes` | "minimum 86–88°F" | wrong |
+| `ymca-vs-private-swim-school` | 88–90°F | wrong |
+| `backyard-pool-requirements-swim-instructor` | "at least 84°F, 87–92°F preferred **for infants under 12 months**" | wrong twice over |
+| `strip-mall-swim-schools` | 87–94°F | **correct** |
+
+The AAP publishes exactly one figure, verbatim on its own HealthyChildren.org *Swim Lessons
+for Children* page (last updated 2026-05-18, AAP Council on Injury, Violence & Poison
+Prevention): *"Ideally, swim and water safety classes for children age 3 and younger should
+be in water heated to 87 to 94 degrees Fahrenheit."* There is **no AAP temperature for
+children over 3** — every age-banded table on the site was invented and then credited to a
+medical body.
+
+A second defect rode along: all seven pages cited the AAP's *Water Safety and Young Children*
+page as the source, and that page does not contain the claim. The claim lives on *Swim
+Lessons*. **A citation that points at the wrong page of the right organisation reads as
+sourced and is not.**
+
+Also corrected on `baby-swim-lessons-8-weeks`: the TL;DR said "the AAP supports water activity
+for young babies." The AAP's actual answer to "Does AAP recommend infant swim classes for
+babies less than a year old?" is **"No"** — no evidence they lower drowning risk. It does say a
+parent-child water play class is fine for familiarisation. That is now what the page says.
+
+### Second misattribution: the breath-holding prohibition
+
+Three pages (5 occurrences, incl. one printable) credited the **National Drowning Prevention
+Alliance and the YMCA** with prohibiting prolonged breath-holding "in their aquatic
+programmes." The documented source is the **joint statement of the American Red Cross, USA
+Swimming and the YMCA of the USA** (2015, updated 2022, hosted by the Red Cross Scientific
+Advisory Council). NDPA is not a signatory — and as an alliance it runs no aquatic programmes,
+so the sentence was wrong about NDPA twice. Re-attributed and linked to the 2022 PDF.
+
+Note for a future run: that same joint statement holds that **"hypoxic blackout" is the
+accurate term and "shallow water blackout" is not**. We have a page at
+`/education/shallow-water-blackout.html`. Renaming it is a redirect decision, so it is flagged,
+not done.
+
+### Fixed
+
+12 files. Every AAP-attributed number now either states the AAP's real figure with its age
+scope, or is explicitly relabelled as industry practice rather than AAP guidance — which also
+satisfies the standing rule that any page in this cluster must say **which** of the three
+claims it is making (AAP guidance / purpose-built pool band / rented pool band).
+Three pages that cited authorities by name while hyperlinking none
+(`swim-instructor-continuity-worksheet`, `swim-school-pool-tour-checklist`,
+`when-to-get-kids-out-of-water-checklist`) gained a house-convention
+`📚 Authoritative Sources` block, each entry linked and each description restricted to a claim
+the linked page verifiably makes.
+
+### Validation
+- Residual sweep on the claim **shape** (not the fixed pages): 0 AAP-attributed temperatures
+  outside the corrected wording; 0 occurrences of the NDPA breath-holding sentence.
+- Tag balance: 0 lxml structural errors on all 12. JSON-LD parses on all 12, `jerr=0`, 0 HTML
+  entities leaked inside JSON-LD.
+- Rendered-text diff vs HEAD (scripts, styles and `.article-meta` stripped): **every changed
+  region is an intended one**; no prose deleted anywhere.
+- FAQ schema↔visible: 58 Q&A across the touched files, **0 new drift**. Three pre-existing
+  drifts (`backyard-pool-requirements` ×2, `shallow-water-blackout` ×1) are byte-identical at
+  HEAD and are almost certainly artefacts of a re-derived probe — per the standing rule, a
+  probe rebuilt from a paraphrase is not trusted to delete Q&A, so they were left alone.
+- Speakable: every selector on every touched article resolves to 1. The one non-1
+  (`.cl-item`→34) is the printable family and correct by design.
+- `headline == h1` on 11/12; the exception is the printable, whose headline deliberately
+  carries the "(Printable)" suffix — pre-existing at HEAD.
+- 1 h1 per page, 0 body metas, 0 nested anchors, 0 brand-voice ownership hits.
+- `dateModified` → 2026-09-07 on all 12, 8 visible `Updated` mirrors synced (4 pages have no
+  Updated meta-item and were not given one). `sitemap.xml` lastmod bumped for the 11 indexable
+  URLs; the printable is `noindex` and correctly absent. Sitemap re-parsed clean, 649 entries.
+
+### Backlog after this run
+
+- **Prose H2 backlog: still 0.** Untouched by this run.
+- **New, characterised: 11 `How to …` pages carry no HowTo JSON-LD** (18 such H1s, 7 already
+  have it) — `choosing-a-swim-school`, `evaluate-swim-instructor-feedback`, `fear-of-water`,
+  `measuring-swimming-progress`, `summer-swim-lesson-prep`, `swim-goggles-for-kids`,
+  `swim-lessons-while-traveling`, `swim-team-readiness`, `swimming-progress-tracker`,
+  `vet-swim-instructor-safety-checklist`, `year-round-swim-skills-checklist`. Deferred
+  deliberately: HowTo steps must be bound by section `url` with `step.text` verbatim from the
+  section's lead `<p>`, and several of these are decision guides rather than procedures, so
+  each needs judging individually.
+- **Citation floor is otherwise met:** 417 of 421 article-family pages link ≥2 distinct
+  authority domains. After this run the remaining outlier is `pool-water-quality-checklist`
+  (4 links, all CDC — a single-domain page on a CDC-owned topic, arguably fine).
+- **Answer-first openings are effectively clean:** 5 hedging-opener candidates across 421
+  pages, and 4 are false positives (the hedge word appears mid-paragraph after a direct
+  answer). The one real narrative wind-up is `who-sets-water-safety-standards`.
+
+### Flagged for Michael — not changed
+
+1. **`water-safety-babies-under-1.html`** says "The AAP recommends water temperature between
+   90-100 degrees Fahrenheit" — that is *bath* water, a different claim from the lesson-pool
+   guidance, and I could not source it. It is the last unverified AAP number on the site.
+2. **`/education/shallow-water-blackout.html`** — the Red Cross/USA Swimming/YMCA joint
+   statement explicitly deprecates "shallow water blackout" in favour of "hypoxic blackout".
+   Renaming the URL is a redirect decision.
+3. **Batch 54/55/56 open items still stand:** `free-reduced-swim-lessons-make-a-splash.html`'s
+   two divergent FAQ blocks, `teaching-kids-safe-pool-entry.html`'s uncited "leading cause"
+   claim, and `adaptive-swimming-special-needs.html`'s two `div.article-body` elements.
+
+---
