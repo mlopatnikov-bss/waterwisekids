@@ -2023,9 +2023,19 @@ table tbody tr:hover {
 
 /* Responsive: stack grid on tablet */
 @media (max-width: 900px) {
+  /* visual-design-auditor 2026-09-07: STACKED GUTTER, 5th instance of
+     [[stacked_gutter_is_the_recurring_layout_defect]]. All 122 `.content-grid`
+     elements sit inside a `.container`, which already supplies the site rail
+     (20px via m-app at <=768, 24px at 769-900). The extra `1rem` here stacked on
+     top of it, so the article column rendered at x=34 while the header, footer
+     and breadcrumb text on the same page sat at x=20 - a visible 14px step in
+     the page's left edge. The 348-page sibling article family gets this right:
+     `article.css .main-layout` uses `padding: 48px 0` and lands on 20px exactly.
+     Vertical padding is unchanged; only the redundant horizontal gutter is
+     dropped. Desktop (>900px) is deliberately untouched - see the audit report. */
   .content-grid {
     grid-template-columns: 1fr;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0;
   }
   .content-grid .sidebar {
     order: -1;

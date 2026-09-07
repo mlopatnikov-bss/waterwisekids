@@ -11,10 +11,20 @@
       line-height: 1.6;
     }
 
+    /* visual-design-auditor 2026-09-07: STACKED GUTTER. This element wraps its
+       content in a `.container`, which already supplies the site rail (24px at
+       desktop/tablet, 20px !important from m-app at <=768). The 20px here
+       stacked on top of it, so text rendered at x=40 on mobile against a 20px
+       chrome rail and x=44 in the 769-1149 tablet band against a 24px one.
+       Vertical padding unchanged. Cancelled unconditionally, not in a media
+       block: at >=1200px centring already absorbs the parent gutter, so a
+       band-scoped fix would leave the tablet band broken
+       ([[band_fix_dies_above_its_upper_cap]]). `.cta-section` deliberately keeps
+       its 20px - it is a rounded inset card, not a page-rail section. */
     .hero {
       background: linear-gradient(180deg, #0d4d77 0%, #146695 62%, #1c7db0 100%);
       color: white;
-      padding: 80px 20px;
+      padding: 80px 0;
       text-align: center;
       margin-top: 0;
     }
@@ -35,13 +45,21 @@
     }
 
     .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+  /* visual-design-auditor 2026-09-07: this re-declared the SHARED `.container`
+     class with different values (1200px / 20px) than main.css (1160px / 24px),
+     then patched only `header .container, footer .container` back. Every OTHER
+     .container on the page - breadcrumb and all six body sections - kept the
+     divergent values, so body text rendered at x=60 while the header and footer
+     it sits between rendered at x=84. Instance of
+     [[page_stylesheet_leaks_into_shared_chrome]]: re-assert EVERY property, or
+     do not re-declare a shared class at all. Values now match main.css. */
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
     .breadcrumb {
-      padding: 16px 20px;
+      padding: 16px 0;
       font-size: 14px;
       color: #114c76;
       background: white;
@@ -67,7 +85,7 @@
     }
 
     section {
-      padding: 60px 20px;
+      padding: 60px 0;
     }
 
     .section-white {
@@ -353,6 +371,7 @@
     }
 
     @media (max-width: 768px) {
+
       .grid-2,
       .grid-3 {
         grid-template-columns: 1fr;
