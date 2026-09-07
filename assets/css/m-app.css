@@ -2222,6 +2222,13 @@
     display: inline-flex !important;
     align-items: center !important;
     min-height: 24px !important;
+    /* 2026-09-07: floored on the width axis too. The block comment above states no
+       min-width is needed "because the anchors are 40-238px wide" -- an assumption
+       about the content, not a property of the rule, and a 3-character TOC label
+       falsified it (see the .wwk-navlist note). Both rules in this family carry the
+       floor so a page matching either selector is covered. */
+    min-width: 24px !important;
+    justify-content: flex-start !important;
   }
 }
 
@@ -2252,5 +2259,16 @@
     display: inline-flex !important;
     align-items: center !important;
     min-height: 24px !important;
+    /* 2026-09-07: the "anchors run 40-238px wide" note above was measured on the
+       corpus as it stood and is no longer true. A 375/320/430px render sweep found
+       the 3-character "FAQ" row of the .sidebar-toc list on
+       /education/daycare-school-water-safety-questions-checklist.html at 23.0 x 24
+       -- the only interactive control on the site under the WCAG 2.5.8 AA 24x24
+       minimum. inline-flex shrink-wraps to the label, so min-height floors ONE axis
+       only; this is the same omission shape as .back-link and the .toc-list family.
+       24px (not 44) is the house floor, and every other anchor here already exceeds
+       it, so this cannot widen an existing control or reflow a row. */
+    min-width: 24px !important;
+    justify-content: flex-start !important;
   }
 }

@@ -39,6 +39,19 @@
       padding: 2rem;
     }
 
+    /* 2026-09-07 mobile rail: `padding: 2rem` resolves to 28px against the 14px
+       mobile root, but the house side rail is 20px -- footer and <main> measure
+       20px on all 744 non-stub pages. This page is the only user of
+       .job-board-container and its own breakpoints stop at 640px, so nothing in
+       main.css or m-app.css reaches it and the content sat 8px right of the
+       chrome it is framed by. Side padding only; the vertical 2rem is unchanged. */
+    @media (max-width: 768px) {
+      .job-board-container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
     .job-controls {
       display: grid;
       grid-template-columns: 1fr;
@@ -1181,7 +1194,7 @@
   }
   </script>
 
-  <script src="/assets/js/main.js?v=20260906a"></script>
+  <script src="/assets/js/main.js?v=20260907c"></script>
   <script>
     // ============================================================
     // Aquatic Jobs Board — powered by Google Sheets
