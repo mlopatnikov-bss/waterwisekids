@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A pool barrier compliance worksheet on a clipboard recording the adopted code and edition year, beside a fenced pool gate with a tape measure against the fence">
+  <defs>
+    <linearGradient id="pfc-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="pfc-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#pfc-bg)"/>
+
+  <!-- pool water band -->
+  <rect x="0" y="268" width="600" height="92" fill="url(#pfc-water)" opacity="0.55"/>
+  <path d="M0 274 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#0369a1" stroke-width="3" opacity="0.45"/>
+
+  <!-- clipboard: the compliance record -->
+  <g transform="translate(40,30)">
+    <rect x="0" y="0" width="216" height="228" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+    <rect x="75" y="-9" width="66" height="20" rx="6" fill="#94a3b8"/>
+    <text x="20" y="36" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#0c4a6e">COMPLIANCE RECORD</text>
+    <line x1="20" y1="46" x2="196" y2="46" stroke="#e2e8f0" stroke-width="2"/>
+
+    <text x="20" y="70" font-family="Inter, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#475569">CODE ENFORCED</text>
+    <line x1="20" y1="80" x2="196" y2="80" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+
+    <text x="20" y="104" font-family="Inter, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#475569">EDITION YEAR</text>
+    <line x1="20" y1="114" x2="120" y2="114" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+
+    <text x="20" y="138" font-family="Inter, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#475569">LOCAL AMENDMENTS</text>
+    <rect x="152" y="128" width="13" height="13" rx="2.5" fill="#ffffff" stroke="#0369a1" stroke-width="2"/>
+    <rect x="178" y="128" width="13" height="13" rx="2.5" fill="#ffffff" stroke="#0369a1" stroke-width="2"/>
+    <text x="140" y="139" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#64748b">Y</text>
+    <text x="169" y="139" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#64748b">N</text>
+
+    <text x="20" y="164" font-family="Inter, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#475569">PERMIT NUMBER</text>
+    <line x1="20" y1="174" x2="196" y2="174" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+
+    <text x="20" y="198" font-family="Inter, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#475569">FINAL INSPECTION</text>
+    <line x1="20" y1="208" x2="120" y2="208" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+    <path d="M150 200 l7 8 14 -18" fill="none" stroke="#059669" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- fence with gate and a tape measure -->
+  <g transform="translate(304,52)">
+    <!-- top and bottom rails -->
+    <rect x="0" y="42" width="238" height="10" rx="4" fill="#0c4a6e" opacity="0.85"/>
+    <rect x="0" y="156" width="238" height="10" rx="4" fill="#0c4a6e" opacity="0.85"/>
+    <!-- pickets -->
+    <g fill="#0369a1" opacity="0.9">
+      <rect x="4" y="20" width="9" height="164" rx="4"/>
+      <rect x="30" y="20" width="9" height="164" rx="4"/>
+      <rect x="56" y="20" width="9" height="164" rx="4"/>
+      <rect x="82" y="20" width="9" height="164" rx="4"/>
+      <rect x="150" y="20" width="9" height="164" rx="4"/>
+      <rect x="176" y="20" width="9" height="164" rx="4"/>
+      <rect x="202" y="20" width="9" height="164" rx="4"/>
+      <rect x="228" y="20" width="9" height="164" rx="4"/>
+    </g>
+    <!-- gate leaf -->
+    <rect x="100" y="14" width="44" height="176" rx="6" fill="#ffffff" stroke="#0c4a6e" stroke-width="4"/>
+    <rect x="106" y="26" width="8" height="150" rx="4" fill="#0369a1" opacity="0.75"/>
+    <rect x="130" y="26" width="8" height="150" rx="4" fill="#0369a1" opacity="0.75"/>
+    <!-- self-latching hardware, high on the gate -->
+    <rect x="140" y="52" width="18" height="14" rx="3" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+    <path d="M158 59 a12 12 0 0 1 12 0" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+    <!-- self-close arc -->
+    <path d="M148 196 q26 -8 40 -30" fill="none" stroke="#059669" stroke-width="3" stroke-dasharray="6 5" stroke-linecap="round"/>
+    <polygon points="188,164 190,178 178,172" fill="#059669"/>
+
+    <!-- tape measure against the barrier -->
+    <g transform="translate(-24,14)">
+      <line x1="0" y1="0" x2="0" y2="176" stroke="#f59e0b" stroke-width="6" stroke-linecap="round"/>
+      <line x1="-8" y1="0" x2="8" y2="0" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
+      <line x1="-8" y1="176" x2="8" y2="176" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
+      <rect x="-34" y="76" width="34" height="22" rx="5" fill="#ffffff" stroke="#b45309" stroke-width="2.5"/>
+      <text x="-17" y="92" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#b45309">48"</text>
+    </g>
+  </g>
+
+  <!-- caption -->
+  <text x="300" y="330" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#0c4a6e">Which code binds your barrier?</text>
+</svg>
