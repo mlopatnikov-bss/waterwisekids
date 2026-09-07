@@ -11,12 +11,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Free Water Safety Tools & Printables for Families | WaterWiseKids</title>
-  <meta name="description" content="Free water safety tools: build a printable family water safety plan, set a water watcher, and download checklists. No sign-up, runs in your browser." />
+  <meta name="description" content="90+ free water safety printables — checklists, cards and worksheets — plus an interactive family water safety plan builder. No sign-up, no email needed." />
   <link rel="canonical" href="https://www.waterwisekids.com/tools/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.waterwisekids.com/tools/" />
   <meta property="og:title" content="Free Water Safety Tools & Printables for Families" />
-  <meta property="og:description" content="Free water safety tools: build a printable family water safety plan, set a water watcher, and download checklists. No sign-up, runs in your browser." />
+  <meta property="og:description" content="90+ free water safety printables — checklists, cards and worksheets — plus an interactive family water safety plan builder. No sign-up, no email needed." />
   <meta property="og:site_name" content="WaterWiseKids" />
   <meta property="og:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png" />
   <meta property="og:image:width" content="1200" />
@@ -24,7 +24,7 @@
   <meta property="og:image:alt" content="Free Water Safety Tools for Families — WaterWiseKids water safety guide" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Free Water Safety Tools & Printables for Families"/>
-  <meta name="twitter:description" content="Free water safety tools: build a printable family water safety plan, set a water watcher, and download checklists. No sign-up, runs in your browser."/>
+  <meta name="twitter:description" content="90+ free water safety printables — checklists, cards and worksheets — plus an interactive family water safety plan builder. No sign-up, no email needed."/>
   <meta name="twitter:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
@@ -57,6 +57,31 @@
     .tool-card p{color:#475569;font-size:.95rem;margin:0 0 12px;line-height:1.5;}
     .tool-card .go{color:#0e7490;font-weight:700;font-size:.9rem;}
     .tool-badge{display:inline-block;background:#e0f2fe;color:#0369a1;font-size:.72rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-bottom:12px;}
+
+    /* Printable library — page-specific.
+       Tap targets: the house floor is WCAG 2.5.8 **AA (24px)**, not AAA — see the
+       "STANDALONE LINK LISTS" note in m-app.css. Every list item here holds a
+       single anchor and nothing else, so m-app.js tags this list .wwk-navlist at
+       runtime and m-app.css floors rows to 24px !important at 768px and below.
+       (Tag names are spelled out, not bracketed: a bracketed li/ul inside a CSS
+       comment trips every tag-balance sweep on the site.) Measured 31.3px
+       at 375px, clear of the floor. The 44px below is desktop row comfort only —
+       it is deliberately overridden on mobile and must not be read as the floor.
+       Contrast: #0369a1/#fff 5.9:1, #475569/#fff 7.5:1, #0c4a6e/#fff 9.7:1. */
+    .printable-library{max-width:900px;margin:44px auto 0;padding:0 20px;}
+    .pl-h2{font-size:1.7rem;color:#0f172a;margin:0 0 10px;}
+    .pl-intro{color:#475569;line-height:1.7;margin:0 0 28px;max-width:70ch;}
+    .pl-cat{margin:0 0 30px;}
+    .pl-cat-h{font-size:1.18rem;color:#0c4a6e;margin:0 0 4px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+    .pl-count{background:#e0f2fe;color:#0369a1;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:999px;}
+    .pl-cat-d{color:#475569;font-size:.95rem;margin:0 0 12px;line-height:1.6;}
+    .pl-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:2px 20px;}
+    .pl-list li{margin:0;}
+    .pl-list a{display:flex;align-items:center;min-height:44px;padding:6px 10px 6px 18px;color:#0369a1;text-decoration:none;font-size:.95rem;line-height:1.45;border-radius:8px;position:relative;}
+    .pl-list a::before{content:"";position:absolute;left:4px;top:50%;width:5px;height:5px;margin-top:-2.5px;border-radius:50%;background:#7dd3fc;}
+    .pl-list a:hover,.pl-list a:focus-visible{background:#f0f9ff;text-decoration:underline;}
+    .pl-foot{color:#475569;line-height:1.7;margin:8px 0 0;max-width:70ch;}
+    .pl-foot a{color:#0369a1;font-weight:600;}
     @media(max-width:600px){.tools-hero h1{font-size:1.7rem;}}
   </style>
 </head>
@@ -119,7 +144,182 @@
   </div>
 
 
-  <section class="hub-body" style="max-width:860px;margin:2.5rem auto 0;padding:0 1.5rem;line-height:1.7;color:#334155;">
+
+  <section id="printable-library" class="printable-library">
+    <h2 class="pl-h2">The free printable library</h2>
+    <p class="pl-intro">Every checklist, card, worksheet and poster on WaterWiseKids, in one place &mdash; 90+ printables, grouped by where you actually need them. All free, no sign-up, no email capture, no watermark. Schools, camps, libraries, parks departments and pediatric practices are welcome to print and hand these out with the source credited.</p>
+
+    <div class="pl-cat">
+      <h3 id="lib-home" class="pl-cat-h">Home &amp; Backyard Pool <span class="pl-count">16</span></h3>
+      <p class="pl-cat-d">Barriers, drains, water quality and the hazards inside your own fence.</p>
+      <ul class="pl-list">
+        <li><a href="/education/bathtub-safety-checklist-printable.html">Bathtub Safety Checklist for Babies &amp; Toddlers</a></li>
+        <li><a href="/education/family-pool-safety-checklist-printable.html">Family Pool Safety Audit Checklist</a></li>
+        <li><a href="/education/toddler-home-water-safety-checklist-printable.html">Home Water Safety Checklist for Babies &amp; Toddlers</a></li>
+        <li><a href="/education/home-water-safety-room-by-room-checklist-printable.html">Home Water Safety Room-by-Room Checklist</a></li>
+        <li><a href="/education/hot-tub-spa-safety-checklist-printable.html">Hot Tub &amp; Spa Safety Checklist for Kids</a></li>
+        <li><a href="/education/indoor-pool-safety-checklist-printable.html">Indoor Pool Safety Checklist</a></li>
+        <li><a href="/education/kiddie-pool-safety-checklist-printable.html">Kiddie &amp; Inflatable Pool Safety Checklist</a></li>
+        <li><a href="/education/new-pool-owner-water-safety-checklist-printable.html">New Pool Owner Water Safety Checklist</a></li>
+        <li><a href="/education/night-swim-safety-checklist-printable.html">Night Swim Safety Checklist</a></li>
+        <li><a href="/education/pool-closing-safety-checklist-printable.html">Pool Closing Safety Checklist</a></li>
+        <li><a href="/education/pool-drain-entrapment-safety-checklist-printable.html">Pool Drain Safety Checklist</a></li>
+        <li><a href="/education/pool-fence-gate-inspection-checklist-printable.html">Pool Fence &amp; Gate Checklist</a></li>
+        <li><a href="/education/pool-safety-rules-printable.html">Pool Safety Rules Poster</a></li>
+        <li><a href="/education/pool-water-quality-checklist-printable.html">Pool Water Quality Checklist</a></li>
+        <li><a href="/education/poolside-emergency-kit-checklist-printable.html">Poolside Emergency Kit Checklist</a></li>
+        <li><a href="/education/water-safety-activities-at-home-printable.html">Water Safety Activities for Home</a></li>
+      </ul>
+    </div>
+
+    <div class="pl-cat">
+      <h3 id="lib-open" class="pl-cat-h">Beach, Lake &amp; Open Water <span class="pl-count">9</span></h3>
+      <p class="pl-cat-d">Currents, cold water, flags and boats &mdash; hazards a pool never teaches.</p>
+      <ul class="pl-list">
+        <li><a href="/education/beach-day-safety-checklist-printable.html">Beach Day Safety Checklist</a></li>
+        <li><a href="/education/beach-flag-color-card-printable.html">Beach Flag Color Card</a></li>
+        <li><a href="/education/boating-life-jacket-safety-checklist-printable.html">Boating &amp; Life Jacket Checklist</a></li>
+        <li><a href="/education/camping-water-safety-checklist-printable.html">Camping Water Safety Checklist</a></li>
+        <li><a href="/education/cold-water-safety-checklist-printable.html">Cold Water Safety Checklist for Families</a></li>
+        <li><a href="/education/fishing-water-safety-checklist-printable.html">Fishing Water Safety Checklist</a></li>
+        <li><a href="/education/lake-house-water-safety-checklist-printable.html">Lake House Water Safety Checklist</a></li>
+        <li><a href="/education/open-water-safety-checklist-printable.html">Open Water Safety Checklist</a></li>
+        <li><a href="/education/rip-current-safety-checklist-printable.html">Rip Current Safety Checklist</a></li>
+      </ul>
+    </div>
+
+    <div class="pl-cat">
+      <h3 id="lib-away" class="pl-cat-h">Away From Home <span class="pl-count">10</span></h3>
+      <p class="pl-cat-d">Hotels, rentals, parks and parties &mdash; water you do not control.</p>
+      <ul class="pl-list">
+        <li><a href="/education/holiday-weekend-water-safety-checklist-printable.html">Holiday Weekend Water Safety Checklist</a></li>
+        <li><a href="/education/hotel-pool-safety-checklist-printable.html">Hotel &amp; Motel Pool Safety Checklist</a></li>
+        <li><a href="/education/pool-party-host-safety-checklist-printable.html">Pool Party Host Safety Checklist</a></li>
+        <li><a href="/education/pool-playdate-safety-checklist-printable.html">Pool Playdate Safety Checklist</a></li>
+        <li><a href="/education/public-pool-safety-checklist-printable.html">Public Pool Safety Checklist for Families</a></li>
+        <li><a href="/education/summer-camp-water-safety-checklist-printable.html">Summer Camp Water Safety Checklist</a></li>
+        <li><a href="/education/vacation-rental-pool-safety-checklist-printable.html">Vacation Rental &amp; Airbnb Pool Safety Checklist</a></li>
+        <li><a href="/education/vacation-water-safety-checklist-printable.html">Vacation Water Safety Checklist</a></li>
+        <li><a href="/education/water-park-splash-pad-safety-checklist-printable.html">Water Park &amp; Splash Pad Safety Checklist</a></li>
+        <li><a href="/education/water-slide-safety-checklist-printable.html">Water Slide Safety Checklist</a></li>
+      </ul>
+    </div>
+
+    <div class="pl-cat">
+      <h3 id="lib-supervision" class="pl-cat-h">Supervision &amp; Caregivers <span class="pl-count">9</span></h3>
+      <p class="pl-cat-d">Name the watcher, brief the sitter, set the rule everyone repeats.</p>
+      <ul class="pl-list">
+        <li><a href="/education/babysitter-water-safety-checklist-printable.html">Babysitter Water Safety Checklist</a></li>
+        <li><a href="/education/daycare-school-water-safety-questions-checklist-printable.html">Daycare &amp; School Water Safety Questions Checklist</a></li>
+        <li><a href="/education/family-water-safety-pledge-printable.html">Family Water Safety Pledge</a></li>
+        <li><a href="/education/family-water-safety-risk-assessment-printable.html">Family Water Safety Scorecard</a></li>
+        <li><a href="/education/grandparent-water-safety-checklist-printable.html">Grandparent Safety Checklist</a></li>
+        <li><a href="/education/layers-of-protection-water-safety-checklist-printable.html">Layers of Protection Water Safety Checklist</a></li>
+        <li><a href="/education/multi-child-water-supervision-plan-printable.html">Multi-Child Water Supervision Plan</a></li>
+        <li><a href="/education/water-watcher-card-printable.html">Water Watcher Card &amp; Rules Sheet</a></li>
+        <li><a href="/education/when-to-get-kids-out-of-water-checklist-printable.html">When to Get Out of the Water Card</a></li>
+      </ul>
+    </div>
+
+    <div class="pl-cat">
+      <h3 id="lib-emergency" class="pl-cat-h">Emergency &amp; Rescue <span class="pl-count">4</span></h3>
+      <p class="pl-cat-d">Post these at the water. Written for the minute that matters.</p>
+      <ul class="pl-list">
+        <li><a href="/education/spot-drowning-warning-signs-card-printable.html">How to Spot Drowning &mdash; Silent Warning Signs Card</a></li>
+        <li><a href="/education/drowning-cpr-quick-card-printable.html">Poolside CPR Quick Card for Drowning</a></li>
+        <li><a href="/education/water-rescue-reach-throw-dont-go-card-printable.html">Reach, Throw, Don't Go Water Rescue Card</a></li>
+        <li><a href="/education/water-emergency-action-plan-printable.html">Water Emergency Action Plan</a></li>
+      </ul>
+    </div>
+
+    <div class="pl-cat">
+      <h3 id="lib-skills" class="pl-cat-h">Swim Skills &amp; Readiness <span class="pl-count">15</span></h3>
+      <p class="pl-cat-d">Measure what your child can actually do, not what you assume.</p>
+      <ul class="pl-list">
+        <li><a href="/education/water-confidence-challenge-printable.html">30-Day Water Confidence Challenge for Kids</a></li>
+        <li><a href="/education/swim-milestones-checklist-printable.html">Age-by-Age Swim Milestones</a></li>
+        <li><a href="/education/end-of-summer-swim-skills-report-card-printable.html">End-of-Summer Swim Skills Report Card</a></li>
+        <li><a href="/education/fall-swim-skill-retention-checklist-printable.html">Fall Swim Skill-Retention Checklist</a></li>
+        <li><a href="/education/independent-swimming-readiness-checklist-printable.html">Independent Swimming Readiness Checklist</a></li>
+        <li><a href="/education/swim-practice-log-printable.html">Kids' Swim Practice Log</a></li>
+        <li><a href="/education/non-swimmer-water-safety-checklist-printable.html">Non-Swimmer Water Safety Checklist</a></li>
+        <li><a href="/education/overcoming-water-fear-checklist-printable.html">Overcoming Water Fear Checklist for Parents</a></li>
+        <li><a href="/education/survival-swim-skill-decoder-printable.html">Survival Swim Skill Decoder</a></li>
+        <li><a href="/education/swim-lesson-goal-setting-worksheet-printable.html">Swim Lesson Goal-Setting Worksheet</a></li>
+        <li><a href="/education/swim-lesson-level-placement-guide-printable.html">Swim Lesson Level Placement Guide</a></li>
+        <li><a href="/education/swim-level-translator-printable.html">Swim Level Translator Chart</a></li>
+        <li><a href="/education/swim-progress-audit-worksheet-printable.html">Swim Progress Audit Worksheet</a></li>
+        <li><a href="/education/water-competency-skills-checklist-printable.html">Water Competency Skills Checklist</a></li>
+        <li><a href="/education/year-round-swim-skills-checklist-printable.html">Year-Round Swim Skills Checklist</a></li>
+      </ul>
+    </div>
+
+    <div class="pl-cat">
+      <h3 id="lib-choosing" class="pl-cat-h">Choosing &amp; Managing Swim Lessons <span class="pl-count">25</span></h3>
+      <p class="pl-cat-d">Vet the school, read the fine print, track the money and the progress.</p>
+      <ul class="pl-list">
+        <li><a href="/education/back-to-school-swim-lesson-checklist-printable.html">Back-to-School Swim Lesson Checklist</a></li>
+        <li><a href="/education/fall-swim-schedule-planner-printable.html">Fall Swim Schedule Planner</a></li>
+        <li><a href="/education/first-month-swim-lessons-what-to-expect-printable.html">First Month of Swim Lessons Guide</a></li>
+        <li><a href="/education/kids-swim-gear-fit-checklist-printable.html">Kids&rsquo; Swim Gear Fit Check</a></li>
+        <li><a href="/education/multi-child-swim-lesson-cost-worksheet-printable.html">Multi-Child Swim Lesson Cost Worksheet</a></li>
+        <li><a href="/education/sick-day-swim-lesson-decision-guide-printable.html">Sick-Day Swim Decision Card</a></li>
+        <li><a href="/education/swim-bag-checklist-printable.html">Swim Bag Checklist for Kids' Swim Lessons</a></li>
+        <li><a href="/education/legal-swim-instructor-student-ratio-printable.html">Swim Class Ratio Audit Card</a></li>
+        <li><a href="/education/swim-instructor-continuity-worksheet-printable.html">Swim Instructor Continuity Worksheet</a></li>
+        <li><a href="/education/swim-instructor-questions-checklist-printable.html">Swim Instructor Questions Checklist</a></li>
+        <li><a href="/education/vet-swim-instructor-safety-checklist-printable.html">Swim Instructor Vetting Checklist</a></li>
+        <li><a href="/education/swim-lesson-annual-cost-worksheet-printable.html">Swim Lesson Annual Cost Worksheet</a></li>
+        <li><a href="/education/swim-lesson-day-checklist-printable.html">Swim Lesson Day Checklist</a></li>
+        <li><a href="/education/swim-lesson-enrollment-checklist-printable.html">Swim Lesson Enrollment Checklist</a></li>
+        <li><a href="/education/swim-lesson-format-decision-worksheet-printable.html">Swim Lesson Format Decision Worksheet</a></li>
+        <li><a href="/education/swim-lesson-medical-information-form-printable.html">Swim Lesson Medical Information Form</a></li>
+        <li><a href="/education/swim-lesson-quality-checklist-printable.html">Swim Lesson Quality Checklist</a></li>
+        <li><a href="/education/swim-lesson-readiness-printable.html">Swim Lesson Readiness Checklist</a></li>
+        <li><a href="/education/swim-lesson-reward-chart-printable.html">Swim Lesson Reward Chart for Kids</a></li>
+        <li><a href="/education/swim-school-comparison-worksheet-printable.html">Swim School Comparison Worksheet</a></li>
+        <li><a href="/education/swim-school-credential-claims-decoder-printable.html">Swim School Credential Claim Decoder</a></li>
+        <li><a href="/education/swim-school-policy-fine-print-checklist-printable.html">Swim School Policy Fine-Print Checklist</a></li>
+        <li><a href="/education/swim-school-pool-tour-checklist-printable.html">Swim School Pool Tour Card</a></li>
+        <li><a href="/education/swim-lesson-separation-anxiety-plan-printable.html">Swim-Lesson Separation-Anxiety Game Plan</a></li>
+        <li><a href="/education/switching-swim-schools-checklist-printable.html">Switching Swim Schools Checklist</a></li>
+      </ul>
+    </div>
+
+    <div class="pl-cat">
+      <h3 id="lib-gear" class="pl-cat-h">Gear, Sun &amp; Health <span class="pl-count">4</span></h3>
+      <p class="pl-cat-d">Life jackets that fit, floaties that lie, ears and skin that pay later.</p>
+      <ul class="pl-list">
+        <li><a href="/education/floaties-puddle-jumpers-safety-checklist-printable.html">Floaties &amp; Puddle Jumpers Safety Checklist</a></li>
+        <li><a href="/education/life-jacket-sizing-guide-printable.html">Life Jacket Sizing &amp; Fit Guide</a></li>
+        <li><a href="/education/sun-safe-swim-day-checklist-printable.html">Sun-Safe Swim Day Checklist</a></li>
+        <li><a href="/education/swimmers-ear-prevention-checklist-printable.html">Swimmer's Ear Prevention Checklist</a></li>
+      </ul>
+    </div>
+
+    <div class="pl-cat">
+      <h3 id="lib-who" class="pl-cat-h">Every Age &amp; Ability <span class="pl-count">3</span></h3>
+      <p class="pl-cat-d">Infants, teens and swimmers with additional needs.</p>
+      <ul class="pl-list">
+        <li><a href="/education/infant-water-safety-checklist-printable.html">Infant Water Safety Checklist for Baby's First Year</a></li>
+        <li><a href="/education/special-needs-water-safety-checklist-printable.html">Special Needs Water Safety Checklist</a></li>
+        <li><a href="/education/teen-water-safety-checklist-printable.html">Teen Water Safety Checklist</a></li>
+      </ul>
+    </div>
+
+    <div class="pl-cat">
+      <h3 id="lib-seasonal" class="pl-cat-h">Seasonal Plans <span class="pl-count">2</span></h3>
+      <p class="pl-cat-d">Month-long plans you can work through as a family.</p>
+      <ul class="pl-list">
+        <li><a href="/education/water-safety-month-action-plan-printable.html">31-Day Water Safety Plan</a></li>
+        <li><a href="/education/summer-safety-checklist-printable.html">Summer Water Safety Checklist</a></li>
+      </ul>
+    </div>
+
+    <p class="pl-foot">Want the interactive version instead? The <a href="/tools/family-water-safety-plan.html">Family Water Safety Plan Builder</a> assembles a personalised household plan in a few minutes. For the national data behind these recommendations, see the <a href="/statistics/">child drowning statistics hub</a>. If you run a swim school, camp or clinic and want to hand these out to families, see <a href="/for-swim-schools/">for swim schools</a>.</p>
+  </section>
+
+  <section class="hub-body" style="max-width:900px;margin:2.5rem auto 0;padding:0 20px;line-height:1.7;color:#334155;">
   <h2 id="what" style="font-size:1.5rem;margin:1.75rem 0 .75rem;color:#0f172a;">What is a family water safety plan?</h2><p style="margin:0 0 1rem;">A family water safety plan is a short written agreement that names who is watching the children at any moment, what the rules are at your pool, beach or lake, and exactly what everyone does if a child goes missing. Writing it down matters because most drownings happen during a lapse in supervision when several adults are present and each assumes another is watching.</p><p style="margin:0 0 1rem;">Our <a href="/tools/family-water-safety-plan.html">Family Water Safety Plan Builder</a> walks you through it in a few minutes and produces a plan you can print and put on the fridge. It is free, needs no sign-up, and runs entirely in your browser &mdash; nothing you type is sent anywhere.</p>
   <h2 id="designate" style="font-size:1.5rem;margin:1.75rem 0 .75rem;color:#0f172a;">Who should be the designated water watcher?</h2><p style="margin:0 0 1rem;">One named adult should be the water watcher at any given time, watching the water continuously with no phone, no book and no conversation, and handing the role over explicitly when they need a break. Rotating in 15&ndash;20 minute shifts keeps attention sharp, and saying the handover out loud &mdash; &ldquo;you have the water&rdquo; &mdash; is what prevents the gap where everyone assumes someone else is looking.</p><p style="margin:0 0 1rem;">Supervision is one of the layers of protection, not a substitute for the others. See <a href="/education/backyard-pool-safety-layers-explained.html">layers of protection explained</a> for how supervision, barriers, lessons, life jackets and CPR fit together.</p>
   <h2 id="printables" style="font-size:1.5rem;margin:1.75rem 0 .75rem;color:#0f172a;">Are your water safety printables free?</h2><p style="margin:0 0 1rem;">Yes. Every checklist, plan and printable on WaterWiseKids is free to download, print and share, including for use by schools, swim programmes, paediatric practices and community groups. There is no sign-up, no email capture and no watermark, and you may reproduce them for non-commercial safety education as long as the source is credited.</p><p style="margin:0 0 1rem;">Popular printables include the <a href="/education/water-competency-skills-checklist.html">water competency skills checklist</a>, the <a href="/education/swim-milestones-checklist.html">swim milestones checklist</a>, the <a href="/education/pool-fence-gate-inspection-checklist.html">pool fence and gate inspection checklist</a> and the <a href="/education/water-rescue-reach-throw-dont-go-card.html">reach, throw, don&rsquo;t go rescue card</a>.</p><p style="margin:0 0 1.25rem;">If you run a swim school, camp or clinic and want to hand these out, you are welcome to &mdash; see <a href="/for-swim-schools/">for swim schools</a>. For citable national data, use our <a href="/statistics/">drowning statistics hub</a>.</p>
@@ -128,7 +328,7 @@
   <p style="margin:0 0 1rem;">The tools here fall into three groups, matching the three questions families actually ask. <strong>Plan tools</strong> decide who does what: the <a href="/tools/family-water-safety-plan.html">Family Water Safety Plan Builder</a> generates a printable household plan naming your Water Watcher, your barriers, each child&rsquo;s swim ability and your emergency sequence.</p>
   <p style="margin:0 0 1rem;"><strong>Assessment tools</strong> tell you where you actually stand rather than where you assume you stand. The <a href="/education/water-competency-skills-checklist.html">water competency skills checklist</a> tests the five abilities &mdash; enter water over the head, return to the surface, float or tread for one minute, turn and orient, swim 25 yards, and exit &mdash; that separate a child who can survive an unexpected fall from one who cannot. The <a href="/education/swim-milestones-checklist.html">swim milestones checklist</a> maps typical progress by age, and the <a href="/education/pool-fence-gate-inspection-checklist.html">pool fence and gate inspection checklist</a> walks the barrier itself: height, gaps, latch height, self-closing action and climbable objects near the fence.</p>
   <p style="margin:0 0 1rem;"><strong>Response tools</strong> are for the minute that matters. The <a href="/education/water-rescue-reach-throw-dont-go-card.html">reach, throw, don&rsquo;t go rescue card</a> and the <a href="/education/drowning-cpr-quick-card.html">drowning CPR quick card</a> are designed to be posted at the water, not read in advance &mdash; short enough that a panicked adult can follow them.</p>
-  <p style="margin:0 0 1rem;">Every one of them is free, needs no email address, and can be printed at home. For the national data behind the recommendations, see our <a href="/statistics/">child drowning statistics dashboard</a>, and for the full explanation of how the layers fit together, read <a href="/education/five-layers-protection-drowning-prevention.html">the five layers of drowning protection</a>.</p>
+  <p style="margin:0 0 1rem;">Beyond those, the full <a href="#printable-library">free printable library</a> above indexes all 90+ printables by setting &mdash; home pool, open water, away from home, supervision, emergencies, swim skills, choosing a school, gear and seasonal plans. Every one of them is free, needs no email address, and can be printed at home. For the national data behind the recommendations, see our <a href="/statistics/">child drowning statistics dashboard</a>, and for the full explanation of how the layers fit together, read <a href="/education/five-layers-protection-drowning-prevention.html">the five layers of drowning protection</a>.</p>
 
   <h2 id="how-do-i-choose-the-right-water-safety-t" style="font-size:1.5rem;margin:1.75rem 0 .75rem;color:#0f172a;">How do I choose the right water safety tool for my family?</h2><p style="margin:0 0 1rem;">Start with the layer you are least sure about. If nobody in your household has been formally named as the supervisor at the water, build a family water safety plan first, because that assigns the role. If your barrier is the weak point, run the pool fence and gate inspection checklist. If you are unsure whether your child could actually survive a fall into deep water, use the water competency skills checklist, which measures the five specific abilities safety organizations treat as the threshold rather than asking whether the child can “swim.” Most families find one obvious gap on the first pass and can close it in a single season.</p>
   <h2 id="can-schools-swim-programs-and-pediatric-" style="font-size:1.5rem;margin:1.75rem 0 .75rem;color:#0f172a;">Can schools, swim programs, and pediatric practices use these tools with families?</h2><p style="margin:0 0 1rem;">Yes. Every tool and printable on WaterWiseKids is free for non-commercial safety education, including handouts at swim schools, summer camps, pediatric offices, libraries, parks and recreation departments, and community water safety events. You may print and distribute them as-is with the source credited, and you may link directly to the interactive plan builder from your own site or newsletter. We ask only that materials are not altered in ways that change the safety guidance, and that CDC, American Academy of Pediatrics, and American Red Cross recommendations are not restated as our own findings.</p>
