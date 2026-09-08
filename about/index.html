@@ -100,6 +100,20 @@
       margin-bottom: 3rem;
     }
 
+    /* 2026-09-08 rail fix. <main> here already supplies the page gutter
+       (24px desktop / 20px mobile), and m-app.css's mobile rule
+       `.what-we-offer,.featured-articles,.about-snippet{padding:20px!important}`
+       nested a second one, so this section's offer cards rendered at x=40 on a
+       390px viewport while every sibling `.section` card sat at x=20 and the
+       footer rail is 20. Cancel only the horizontal half, and only under a
+       railing <main>: the homepage carries .featured-articles/.about-snippet
+       inside an unpadded <main>, where the shared rule IS the rail and must
+       stay. Child selector (0,1,1) out-specifies m-app's (0,1,0) !important. */
+    main > .what-we-offer {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
     .what-we-offer h2 {
       color: #075985;
       font-size: 1.5rem;
