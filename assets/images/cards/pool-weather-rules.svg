@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A pool weather go/no-go card on a clipboard beside a storm cloud with a lightning bolt and a thermometer reading high heat, above a pool water band">
+  <defs>
+    <linearGradient id="pwr-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="pwr-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="pwr-merc" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#pwr-bg)"/>
+
+  <!-- pool water band -->
+  <rect x="0" y="268" width="600" height="92" fill="url(#pwr-water)" opacity="0.55"/>
+  <path d="M0 274 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#0369a1" stroke-width="3" opacity="0.5"/>
+  <path d="M0 292 q30 -9 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#0369a1" stroke-width="2" opacity="0.32"/>
+
+  <!-- storm cloud -->
+  <g>
+    <ellipse cx="150" cy="86" rx="54" ry="34" fill="#94a3b8"/>
+    <ellipse cx="196" cy="98" rx="44" ry="28" fill="#94a3b8"/>
+    <ellipse cx="108" cy="102" rx="38" ry="25" fill="#94a3b8"/>
+    <ellipse cx="152" cy="106" rx="62" ry="24" fill="#cbd5e1"/>
+    <!-- lightning bolt -->
+    <path d="M158 124 L134 176 L154 176 L140 218 L182 162 L160 162 L178 124 Z" fill="#facc15" stroke="#ca8a04" stroke-width="3" stroke-linejoin="round"/>
+    <!-- rain -->
+    <path d="M104 132 l-8 22 M124 138 l-8 22 M206 134 l-8 22 M226 128 l-8 22" stroke="#64748b" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- thermometer -->
+  <g transform="translate(268,74)">
+    <rect x="0" y="0" width="24" height="132" rx="12" fill="#ffffff" stroke="#334155" stroke-width="4"/>
+    <circle cx="12" cy="150" r="24" fill="#ffffff" stroke="#334155" stroke-width="4"/>
+    <rect x="7" y="52" width="10" height="86" rx="5" fill="url(#pwr-merc)"/>
+    <circle cx="12" cy="150" r="15" fill="#dc2626"/>
+    <path d="M30 34 h14 M30 56 h14 M30 78 h14 M30 100 h14" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+    <!-- sun -->
+    <circle cx="86" cy="18" r="17" fill="#fbbf24"/>
+    <path d="M86 -8 v-10 M86 44 v10 M60 18 h-10 M112 18 h10 M68 0 l-7 -7 M104 36 l7 7 M104 0 l7 -7 M68 36 l-7 7" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- clipboard card -->
+  <g transform="translate(374,58)">
+    <rect x="0" y="0" width="182" height="236" rx="12" fill="#0c4a6e"/>
+    <rect x="9" y="20" width="164" height="207" rx="7" fill="#ffffff"/>
+    <rect x="60" y="-9" width="62" height="24" rx="7" fill="#cbd5e1" stroke="#64748b" stroke-width="3"/>
+
+    <!-- title rule -->
+    <rect x="24" y="36" width="104" height="10" rx="5" fill="#0369a1"/>
+    <rect x="24" y="54" width="72" height="7" rx="3.5" fill="#bae6fd"/>
+
+    <!-- STOP row -->
+    <rect x="24" y="78" width="17" height="17" rx="4" fill="#fff7ed" stroke="#c2410c" stroke-width="3"/>
+    <path d="M27.5 86.5 l4 4 l6.5 -8" fill="none" stroke="#c2410c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="50" y="82" width="98" height="8" rx="4" fill="#fdba74"/>
+
+    <!-- SHELTER row -->
+    <rect x="24" y="108" width="17" height="17" rx="4" fill="#f0f9ff" stroke="#0369a1" stroke-width="3"/>
+    <path d="M27.5 116.5 l4 4 l6.5 -8" fill="none" stroke="#0369a1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="50" y="112" width="86" height="8" rx="4" fill="#bae6fd"/>
+
+    <!-- 30 MIN row -->
+    <rect x="24" y="138" width="17" height="17" rx="4" fill="#f0f9ff" stroke="#0369a1" stroke-width="3"/>
+    <path d="M27.5 146.5 l4 4 l6.5 -8" fill="none" stroke="#0369a1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="50" y="142" width="94" height="8" rx="4" fill="#bae6fd"/>
+
+    <!-- HEAT row -->
+    <rect x="24" y="168" width="17" height="17" rx="4" fill="#f0f9ff" stroke="#0369a1" stroke-width="3"/>
+    <rect x="50" y="172" width="78" height="8" rx="4" fill="#e2e8f0"/>
+
+    <!-- 911 row -->
+    <rect x="24" y="198" width="17" height="17" rx="4" fill="#fff7ed" stroke="#c2410c" stroke-width="3"/>
+    <rect x="50" y="202" width="90" height="8" rx="4" fill="#fdba74"/>
+  </g>
+
+  <!-- clock face, restart clock motif -->
+  <g transform="translate(196,246)">
+    <circle cx="0" cy="0" r="30" fill="#ffffff" stroke="#0c4a6e" stroke-width="5"/>
+    <path d="M0 -18 V0 L13 9" fill="none" stroke="#0c4a6e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="0" cy="0" r="4" fill="#0c4a6e"/>
+  </g>
+</svg>
