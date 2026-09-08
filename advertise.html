@@ -234,7 +234,7 @@
       <form action="https://formspree.io/f/mojpyqdo" method="POST" style="background: white; padding: 32px; border-radius: 22px; border: 1px solid #dbe8f0; font-family: inherit;" id="advertiseForm" data-formspree-inline="1">
         <div style="margin-bottom: 16px;">
           <label for="adv-name" style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Name *</label>
-          <input type="text" name="name" required id="adv-name" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+          <input type="text" autocomplete="name" name="name" required id="adv-name" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
         </div>
         <div style="margin-bottom: 16px;">
           <label for="adv-school-name" style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">School Name *</label>
@@ -242,11 +242,11 @@
         </div>
         <div style="margin-bottom: 16px;">
           <label for="adv-email" style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Email *</label>
-          <input type="email" name="email" required id="adv-email" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+          <input type="email" autocomplete="email" name="email" required id="adv-email" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
         </div>
         <div style="margin-bottom: 16px;">
           <label for="adv-phone" style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Phone</label>
-          <input type="tel" name="phone" id="adv-phone" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
+          <input type="tel" autocomplete="tel" name="phone" id="adv-phone" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box;">
         </div>
         <div style="margin-bottom: 16px;">
           <label for="adv-package" style="display: block; margin-bottom: 6px; color: #0d4d77; font-weight: 600; font-size: 14px;">Interested In *</label>
@@ -265,7 +265,7 @@
           <textarea name="message" id="adv-message" style="width: 100%; padding: 12px; border: 1px solid #dbe8f0; border-radius: 8px; font-family: inherit; box-sizing: border-box; height: 100px;"></textarea>
         </div>
         <input type="hidden" name="_subject" value="WaterWiseKids Advertising Inquiry">
-        <input type="text" name="_gotcha" style="display:none">
+        <input type="text" autocomplete="off" name="_gotcha" style="display:none">
         <button type="submit" id="advertiseSubmit" style="width: 100%; background: #0f5f94; color: white; border: none; padding: 12px 16px; border-radius: 999px; font-weight: 700; cursor: pointer; font-family: inherit;">Submit Inquiry</button>
         <div id="advertiseMsg" style="display:none; margin-top:12px; text-align:center; font-weight:600;"></div>
       </form>
