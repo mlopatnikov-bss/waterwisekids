@@ -2549,3 +2549,132 @@ the linked page verifiably makes.
    claim, and `adaptive-swimming-special-needs.html`'s two `div.article-body` elements.
 
 ---
+
+---
+
+## Run 2026-09-08 — Batch 58: the HowTo gap was 13 pages, not 11 — the count was scoped to /education/
+
+### The finding
+
+Batch 57 closed by characterising a new surface: *"11 `How to …` pages carry no HowTo
+JSON-LD."* Re-measuring the same class this run against a fresh `origin/live` clone gives
+**21 `How to …` H1s, 8 with HowTo, 13 without** — two more than recorded.
+
+The two extra pages are not new work that landed overnight. They were never in the
+denominator:
+
+1. **`/how-to-build-water-confidence-in-children.html`** — a root-corpus page. Batch 57
+   enumerated `education/*.html` only, so a genuinely indexable `How to …` article one
+   directory up was invisible to the count.
+2. **`education/spot-drowning-warning-signs-card-printable.html`** — printable template
+   family. This one is a *correct* exclusion, but it was excluded by accident (it fell
+   outside a glob), not by rule, and its article twin `spot-drowning-warning-signs-card.html`
+   does carry HowTo.
+
+This is the same shape as the recurring lesson that a defect class silently inherits the
+denominator of whichever audit first found it. The grouping column here was the directory.
+Stating the denominator out loud —  *"`How to` H1s across the whole corpus, article family
+and root family, printables named and excluded by rule"* — is what moved 11 → 13.
+
+### Not every "How to" page should get a HowTo
+
+Of the 13, only some are procedures. The rest are decision guides whose sections are
+evaluative, not sequential, and stamping HowTo on them would be schema that does not
+describe the page. Judged individually:
+
+**Shipped (3):**
+
+| page | steps | why it qualifies |
+|---|---|---|
+| `summer-swim-lesson-prep` | 8 | register → choose format → prepare → practise → pack → first lesson → during lessons → between lessons. Genuinely ordered in time. |
+| `vet-swim-instructor-safety-checklist` | 8 | background check → certifications → CPR → insurance → references → questions → red flags → trial lesson. A verification procedure. |
+| `swim-lessons-while-traveling` | 5 | find → evaluate → manage transition → use the pool → brief the home instructor. Sequential. |
+
+**Deliberately not given HowTo (9):** `choosing-a-swim-school`,
+`evaluate-swim-instructor-feedback`, `fear-of-water`, `measuring-swimming-progress`,
+`swim-goggles-for-kids`, `swim-team-readiness`, `swimming-progress-tracker`,
+`year-round-swim-skills-checklist`, and the root page
+`how-to-build-water-confidence-in-children`. The first eight are comparison, assessment or
+buying guides — their H2s are "why does X matter", "what red flags", "which is better", not
+steps. `swim-team-readiness` has 16 H2s and is an assessment framework. The root page is a
+real gap but sits in the legacy root corpus (no `.article-body`, no section `id`s at all), so
+binding steps to anchors there means editing body markup first; deferred as its own job.
+
+**Excluded by rule (1):** `spot-drowning-warning-signs-card-printable` — printable family,
+which fails article-family checks by design.
+
+### The colon trap fires far more often on answer-first pages
+
+The recorded technique is: bind each step by `url` to the section `id`, and take `step.text`
+as the section's **verbatim first `<p>`**, asserting it does not end in a colon (a paragraph
+ending in a colon is a list stem, not a step).
+
+That assertion fired on **10 of the 21 steps** — 7 of 8 on `summer-swim-lesson-prep` alone.
+The recorded remedy is to emit one step per `<li>` instead. That remedy is wrong for these
+pages, and the reason matters: after several AEO passes these paragraphs are *answer-first*.
+They read
+
+> "Choose a program by matching its format — intensive daily, weekly ongoing, or private
+> versus group — to your child's age, experience level, and your family's schedule. **Summer
+> offers different swim lesson formats than the school year, each with different
+> trade-offs:**"
+
+The direct, citable answer is the first sentence. Only the trailing sentence is the stem.
+Fragmenting that into one step per `<li>` would throw away the best sentence on the page and
+replace a step with a list of options.
+
+So the guard stays and the remedy is now conditional: **drop trailing colon-terminated
+sentences, keep everything else verbatim.** Applied as a loop (a paragraph can have more than
+one), with two assertions after it — the result must be ≥60 characters (below that it is
+still a stem) and must still appear verbatim in the rendered page text. If trimming would
+empty the paragraph, the paragraph *is* entirely a stem and the recorded `<li>` remedy
+applies. Nothing was hand-written: every one of the 21 `step.text` values is a contiguous
+verbatim run from the page.
+
+### `dateModified` deliberately **not** bumped
+
+Previous batches bumped `dateModified` and `sitemap.xml` `lastmod` on every touched page.
+Not this run. The recorded rule is that `dateModified` is derived from a **body-text** diff,
+and this change is head-only: 177 inserted lines, 0 deleted, every one of them inside a new
+`<script type="application/ld+json">` before `</head>`. No reader sees a difference, so the
+visible `Updated` mirrors and the sitemap were left alone. Bumping them would have
+manufactured exactly the schema-vs-reality drift the rule exists to prevent, and would have
+widened the still-open `lastmod` ↔ `dateModified` contradiction flagged for Michael.
+
+### Validation
+
+- 21/21 step texts assert **verbatim** against the rendered text of their own page.
+- 21/21 step `url`s resolve: base equals the page's own `rel=canonical`, fragment is a real
+  `id` on the bound `<h2>`.
+- 0/21 end in a colon; shortest is 167 characters.
+- `position` is 1..n contiguous on all three.
+- All 4 JSON-LD blocks per page parse; exactly one `HowTo` each; `Article`, `FAQPage` and
+  `BreadcrumbList` all still parse unchanged.
+- Speakable re-checked on all three: every selector resolves to exactly 1 — including
+  `.tldr-box`, which is the selector that has previously matched a lead-magnet ad.
+- 1 `<h1>` per page, 0 `<meta>` in body, 0 JSON-LD in body, per-attribute head-quote parity
+  clean, 0 brand-voice ownership hits.
+- Diff is **purely additive**: `git diff` reports 177 insertions and 0 deletions, each hunk
+  anchored on `</head>`. Header/footer markup-variant counts are untouched by construction.
+- Playwright skipped on purpose: no JS on this site mutates head signals, so a render pass
+  cannot tell us anything a parse of the raw HTML cannot.
+
+### Backlog after this run
+
+- **Prose H2 backlog: still 0.** Untouched.
+- **HowTo: 13 → 10 without, of which 9 are deliberate non-candidates and 1 is real work.**
+  The only genuine remaining gap is `how-to-build-water-confidence-in-children.html`, and it
+  needs section `id`s added to its five H2s before steps can be bound. Everything else on the
+  "How to" list is a decision guide and should stay schema-free.
+- State the denominator when re-reporting this class: *`How to` H1s, whole corpus, printables
+  excluded by rule.* "11" was a `/education/`-only reading.
+
+### Flagged for Michael — not changed
+
+1. **`water-safety-babies-under-1.html`** still says the AAP recommends 90–100°F water — that
+   is *bath* water guidance, still unsourced, still the last unverified AAP number on the site.
+2. **`/education/shallow-water-blackout.html`** — Red Cross / USA Swimming / YMCA deprecate
+   "shallow water blackout" for "hypoxic blackout". Renaming the URL is a redirect decision.
+3. **Batch 54/55/56/57 open items stand:** `free-reduced-swim-lessons-make-a-splash.html`'s two
+   divergent FAQ blocks, `teaching-kids-safe-pool-entry.html`'s uncited "leading cause" claim,
+   and `adaptive-swimming-special-needs.html`'s two `div.article-body` elements.
