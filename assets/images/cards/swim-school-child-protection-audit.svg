@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A swim school child protection policy binder open beside an audit clipboard listing five policy areas with strong and weak answer columns">
+  <defs>
+    <linearGradient id="cpa-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="cpa-desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#cpa-bg)"/>
+
+  <!-- desk surface -->
+  <rect x="0" y="252" width="600" height="108" fill="url(#cpa-desk)" opacity="0.5"/>
+  <path d="M0 252 h600" stroke="#f59e0b" stroke-width="3" opacity="0.5"/>
+
+  <!-- policy binder -->
+  <g transform="translate(40,34)">
+    <rect x="0" y="0" width="212" height="206" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+    <rect x="0" y="0" width="26" height="206" rx="10" fill="#0369a1" opacity="0.18"/>
+    <circle cx="13" cy="52" r="5" fill="#94a3b8"/>
+    <circle cx="13" cy="103" r="5" fill="#94a3b8"/>
+    <circle cx="13" cy="154" r="5" fill="#94a3b8"/>
+    <text x="42" y="32" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" fill="#0c4a6e">CHILD PROTECTION</text>
+    <line x1="42" y1="42" x2="194" y2="42" stroke="#e2e8f0" stroke-width="2"/>
+
+    <!-- five policy areas -->
+    <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round">
+      <line x1="62" y1="64" x2="192" y2="64"/>
+      <line x1="62" y1="94" x2="178" y2="94"/>
+      <line x1="62" y1="124" x2="192" y2="124"/>
+      <line x1="62" y1="154" x2="168" y2="154"/>
+      <line x1="62" y1="184" x2="186" y2="184"/>
+    </g>
+    <g fill="#0369a1">
+      <circle cx="48" cy="64" r="5"/>
+      <circle cx="48" cy="94" r="5"/>
+      <circle cx="48" cy="124" r="5"/>
+      <circle cx="48" cy="154" r="5"/>
+      <circle cx="48" cy="184" r="5"/>
+    </g>
+  </g>
+
+  <!-- audit clipboard -->
+  <g transform="translate(292,20)">
+    <rect x="0" y="12" width="248" height="228" rx="10" fill="#ffffff" stroke="#0369a1" stroke-width="3"/>
+    <rect x="88" y="0" width="72" height="24" rx="6" fill="#94a3b8"/>
+    <text x="20" y="46" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" fill="#0c4a6e">POLICY AUDIT</text>
+    <line x1="20" y1="56" x2="228" y2="56" stroke="#e2e8f0" stroke-width="2"/>
+
+    <!-- column headers: strong / weak -->
+    <rect x="140" y="64" width="40" height="16" rx="4" fill="#dcfce7"/>
+    <rect x="188" y="64" width="40" height="16" rx="4" fill="#fee2e2"/>
+
+    <!-- audit rows -->
+    <g>
+      <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round">
+        <line x1="20" y1="98" x2="124" y2="98"/>
+        <line x1="20" y1="128" x2="112" y2="128"/>
+        <line x1="20" y1="158" x2="124" y2="158"/>
+        <line x1="20" y1="188" x2="104" y2="188"/>
+        <line x1="20" y1="218" x2="118" y2="218"/>
+      </g>
+      <!-- strong ticks -->
+      <g fill="none" stroke="#15803d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M148 98 l6 6 l12 -13"/>
+        <path d="M148 128 l6 6 l12 -13"/>
+        <path d="M148 188 l6 6 l12 -13"/>
+      </g>
+      <!-- weak crosses -->
+      <g stroke="#b91c1c" stroke-width="4" stroke-linecap="round">
+        <path d="M196 152 l14 14 M210 152 l-14 14"/>
+        <path d="M196 212 l14 14 M210 212 l-14 14"/>
+      </g>
+      <!-- blank cells -->
+      <g fill="#e2e8f0">
+        <rect x="192" y="92" width="28" height="12" rx="3"/>
+        <rect x="192" y="122" width="28" height="12" rx="3"/>
+        <rect x="144" y="152" width="28" height="12" rx="3"/>
+        <rect x="192" y="182" width="28" height="12" rx="3"/>
+        <rect x="144" y="212" width="28" height="12" rx="3"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- shield seal -->
+  <g transform="translate(238,214)">
+    <path d="M40 0 l38 15 v30 c0 26 -16 44 -38 54 c-22 -10 -38 -28 -38 -54 v-30 z" fill="#0369a1" stroke="#075985" stroke-width="3"/>
+    <path d="M26 48 l10 11 l20 -24" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
