@@ -2064,6 +2064,28 @@ table tbody tr:hover {
     display: none !important;
   }
 
+  /* Screen-only furniture that was reaching paper (added 2026-09-09 by
+     visual-design-auditor). Print-media render sweep of all 749 pages found
+     site chrome visible on 481 of them: "Keep Reading" link lists, breadcrumb
+     nav, newsletter/lead-magnet capture forms and directory action buttons.
+     The printable-* templates already handled this; the article and main-only
+     families did not, because they inherit only this block. */
+  .related-articles,
+  .page-breadcrumb,
+  .breadcrumb,
+  .newsletter-section,
+  .newsletter-form,
+  .lead-magnet-box,
+  .lead-magnet-form,
+  .sidebar-cta,
+  .review-btn,
+  .search-box,
+  form[data-form="newsletter-sidebar"],
+  form[data-form*="lead-magnet"],
+  form[data-form*="leadmagnet"] {
+    display: none !important;
+  }
+
   body {
     background: white;
   }
