@@ -2773,3 +2773,112 @@ the reason recorded, rather than faked.**
 3. **Batch 54–57 open items stand:** `free-reduced-swim-lessons-make-a-splash.html`'s two
    divergent FAQ blocks, `teaching-kids-safe-pool-entry.html`'s uncited "leading cause" claim,
    and `adaptive-swimming-special-needs.html`'s two `div.article-body` elements.
+
+---
+
+## Batch 59 — 2026-09-10 — The answer-surface sweep was scoped to /education/; the `/tools/` family was never in the denominator
+
+### What this run actually found
+
+The task file asks for the next 2–3 un-optimized articles. There are none in the article
+family: the prose question-H2 backlog has been 0 since Batch 56, and a re-scan of all 774
+files today confirms `/education/` is **425/425** on answer surface, speakable and FAQPage.
+Every page added since 2026-09-01 (nine worksheet/checklist landings plus their printables)
+shipped already carrying all of it.
+
+So the productive question was *what the AEO sweep has never looked at*. Answer: itself.
+Every answer-surface probe this project has run keyed on the class `.tldr-box`, and the
+backlog scorer is [[aeo_backlog_scoped_to_education_only]] scoped to `/education/`. Two things
+fell through:
+
+1. **A second, equivalent answer surface exists.** The hub family (`statistics/`,
+   `beginner-swim-lessons/`, `kids-swim-lessons/`, `toddler-swim-lessons/`,
+   `statistics/state-of-drowning-prevention/`) uses `p.hub-answer`, not `.tldr-box`. A
+   `.tldr-box`-only probe reports those five pages as missing an answer-first opening. **They
+   are not.** They lead with an answer and already carry `speakable`. Any future coverage
+   number must count both classes or it invents five defects.
+2. **The `/tools/` template family — a third family, neither article nor printable — has
+   never been scored.** Three indexable pages, linked from the global footer of every page
+   on the site, hub to 90+ printables. All three already led with question H2s and carried
+   `FAQPage`, but had **no answer surface and no `speakable` at all**.
+
+Corrected denominator: outside `/education/` and the directory, **22** indexable pages with
+≥3 H2s have no answer surface. Classified by page role, 18 are legal, commercial or
+transactional (`privacy`, `terms`, `about`, `advertise`, `for-swim-schools`,
+`swim-schools/add`, `gear`, `jobs`, `aquatic-jobs`, `scholarships`, the two
+`british-swim-school` brand pages, `teens*`, the homepage) — these are **not** AEO targets
+and should not be reported as backlog, the same reasoning that closed the 71 printable bridge
+H2s ([[printable_bridge_h2s_are_conversion_copy_not_backlog]]). Four are genuine
+informational targets. All four were fixed this run.
+
+### Optimized this run (4 pages)
+
+| Page | H2s | Question H2s | Added |
+|---|---|---|---|
+| `tools/index.html` | 9 | 5 | `.tldr-box`, `speakable` on the existing `CollectionPage/WebPage` |
+| `tools/family-water-safety-plan.html` | 9 | 4 | `.tldr-box`, new `WebPage` node carrying `speakable` |
+| `tools/pool-barrier-self-check.html` | 5 | 3 | `.tldr-box`, new `WebPage` node carrying `speakable` |
+| `swimmers-hub/index.html` | 8 | 6 | `.tldr-box`, `speakable` on the existing `CollectionPage/WebPage` |
+
+**Why a new `WebPage` node on the two tool pages rather than reusing what was there.** Both
+carry a `WebApplication` node as their primary entity. `WebApplication` descends from
+`SoftwareApplication` → `CreativeWork`; `speakable` has `WebPage` and `Article` in its
+domain and **does not apply to `WebApplication`**. Attaching it there would have validated
+in a linter and been off-domain in the vocabulary. A sibling `WebPage` node, `url` equal to
+the page's own `rel=canonical` on the `www` host, is the correct host.
+
+**Quick Summary copy is restatement only.** Every number in the four new boxes was already
+on its own page with its source block intact — the 48-inch height, the 4-inch gap and 2-inch
+over grass, the 4-inch sphere and the ~83% four-sided-isolation figure all come from the
+page's existing CPSC/CDC source list; the "leading cause of unintentional injury death for
+children ages 1 to 4" attribution to the CDC is the page's own sentence; the "90+ printables"
+figure reuses the page's own floor phrasing rather than an exact count
+([[replace_the_phrase_never_the_digits]]). **No new claim was introduced and nothing needed
+sourcing.** The `/tools/` pages' CPSC caveat — that the barrier guidelines are explicitly not
+a mandatory federal standard — was carried into the summary rather than dropped, because an
+answer engine extracting the box alone must not read as a compliance certificate.
+
+### Validation
+
+- 4/4: all JSON-LD blocks parse. **0 nodes lost, 0 nodes altered** — semantic set-difference
+  against `HEAD` shows only the added `speakable` and the two new `WebPage` nodes.
+- **0 words removed from visible prose on all four files**; the only prose delta is the new
+  box (+606 to +711 chars each).
+- `.tldr-box` resolves to **exactly 1** on each page; each hero `h1` selector resolves to
+  exactly 1. Both speakable selectors checked per page, per
+  [[speakable_selector_can_match_a_lead_magnet_ad]].
+- Tag balance 0 errors, 0 unclosed, `<strong>` balanced on all four; 1 `<h1>` each.
+- **Contrast checked statically rather than rendered.** `.tldr-box` is defined once, unscoped,
+  in `assets/css/main.css:1920`, and since the white-on-`#f0f7ff` incident it declares
+  `color: var(--gray-800)` explicitly, so it no longer inherits from a hero ancestor. All four
+  pages load `main.css`; all five custom properties it uses resolve there exactly once
+  ([[undefined_css_var_silently_drops_the_declaration]]); no page-level `<style>` on any of the
+  four declares `color` on the wrapper we inserted into, and none redefines those variables.
+  The box therefore renders identically to the 597 pages already using it. Playwright was not
+  installed for this — the sandbox was fresh, `/sessions` is at 100%, and the install is ~1GB.
+- 0 brand-voice ownership hits; no claim of owning or operating a swim school.
+- `git status --porcelain` inspected for deletions before commit: 4 modified, **0 deleted**
+  ([[never_create_scratch_files_inside_the_repo_clone]]). Scratch lived at `/tmp/aeo10work`,
+  outside the clone and outside the `/tmp/wwk-*` cleanup glob.
+
+### Backlog after this run
+
+- **Prose H2 backlog: still 0.** Untouched.
+- **Answer surface + speakable: the `/tools/` family and `swimmers-hub/index.html` are now
+  closed.** The informational non-`/education/` surface is at full coverage.
+- **New rule for every future coverage probe: count `.tldr-box` OR `p.hub-answer`.** A
+  `.tldr-box`-only probe reports 5 phantom defects on the hub family.
+- Unchanged and still open: 85 unbound HowTo steps across 18 files (gated on per-step section
+  `id`s), and `how-to-teach-kids-to-swim.html`'s legacy 5-step un-anchored HowTo.
+
+### Flagged for Michael — not changed
+
+1. **`teens.html` and `teens/index.html` are near-identical twins**, both indexable, both with
+   5 H2s and 1 question H2. This is the root-vs-directory duplicate shape already recorded for
+   `/education.html` ([[legacy_root_page_duplicates_an_education_article]]). Which one is
+   canonical is a redirect decision, not an AEO edit.
+2. **Batch 54–58 open items all stand**, unchanged: `water-safety-babies-under-1.html`'s
+   unsourced 90–100°F AAP claim, `/education/shallow-water-blackout.html`'s deprecated term,
+   `free-reduced-swim-lessons-make-a-splash.html`'s two divergent FAQ blocks,
+   `teaching-kids-safe-pool-entry.html`'s uncited "leading cause" claim, and
+   `adaptive-swimming-special-needs.html`'s two `div.article-body` elements.
