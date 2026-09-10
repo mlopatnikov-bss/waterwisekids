@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A swim school review decoder card on a clipboard beside a phone showing star ratings, with a magnifying glass over the stars at the pool edge">
+  <defs>
+    <linearGradient id="rev-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="rev-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#rev-bg)"/>
+
+  <!-- pool water band -->
+  <rect x="0" y="268" width="600" height="92" fill="url(#rev-water)" opacity="0.55"/>
+  <path d="M0 274 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#0369a1" stroke-width="3" opacity="0.45"/>
+
+  <!-- clipboard -->
+  <rect x="52" y="52" width="228" height="252" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <rect x="128" y="38" width="76" height="26" rx="7" fill="#0369a1"/>
+  <text x="76" y="98" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#0c4a6e">Review Decoder</text>
+  <line x1="76" y1="112" x2="256" y2="112" stroke="#bae6fd" stroke-width="3"/>
+
+  <!-- checklist rows -->
+  <g fill="#334155" font-family="Inter, Arial, sans-serif" font-size="13">
+    <rect x="76" y="128" width="16" height="16" rx="3" fill="#f0f9ff" stroke="#0369a1" stroke-width="2"/>
+    <text x="102" y="141">Sort by newest</text>
+    <rect x="76" y="160" width="16" height="16" rx="3" fill="#f0f9ff" stroke="#0369a1" stroke-width="2"/>
+    <text x="102" y="173">Count the reviews</text>
+    <rect x="76" y="192" width="16" height="16" rx="3" fill="#f0f9ff" stroke="#0369a1" stroke-width="2"/>
+    <text x="102" y="205">Read the 2s and 3s</text>
+    <rect x="76" y="224" width="16" height="16" rx="3" fill="#f0f9ff" stroke="#0369a1" stroke-width="2"/>
+    <text x="102" y="237">Tally turnover</text>
+    <rect x="76" y="256" width="16" height="16" rx="3" fill="#f0f9ff" stroke="#0369a1" stroke-width="2"/>
+    <text x="102" y="269">Ask the six</text>
+  </g>
+
+  <!-- phone with star ratings -->
+  <rect x="336" y="66" width="150" height="216" rx="16" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/>
+  <rect x="348" y="84" width="126" height="30" rx="6" fill="#f1f5f9"/>
+  <text x="358" y="104" font-family="Inter, Arial, sans-serif" font-size="12" fill="#64748b">swim schools near me</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="11" fill="#475569">
+    <text x="356" y="140">School A</text>
+    <text x="356" y="184">School B</text>
+    <text x="356" y="228">School C</text>
+  </g>
+  <g fill="#f59e0b">
+    <text x="356" y="158" font-family="Inter, Arial, sans-serif" font-size="17">&#9733;&#9733;&#9733;&#9733;&#9733;</text>
+    <text x="356" y="202" font-family="Inter, Arial, sans-serif" font-size="17">&#9733;&#9733;&#9733;&#9733;&#9733;</text>
+    <text x="356" y="246" font-family="Inter, Arial, sans-serif" font-size="17">&#9733;&#9733;&#9733;&#9733;&#9733;</text>
+  </g>
+
+  <!-- magnifying glass over the stars -->
+  <circle cx="452" cy="196" r="46" fill="#ffffff" fill-opacity="0.35" stroke="#0c4a6e" stroke-width="6"/>
+  <line x1="486" y1="230" x2="524" y2="268" stroke="#0c4a6e" stroke-width="10" stroke-linecap="round"/>
+</svg>
