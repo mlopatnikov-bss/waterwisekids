@@ -2071,6 +2071,15 @@ table tbody tr:hover {
      The printable-* templates already handled this; the article and main-only
      families did not, because they inherit only this block. */
   .related-articles,
+  /* the same Keep Reading furniture also ships as a bare `.related` block on
+     314 pages; the 2026-09-09 pass hid only `.related-articles` (514 pages),
+     so half the corpus kept printing it. Verified by print-media render. */
+  .related,
+  /* JS-only controls that print as dead ink: category filter pills, the
+     directory search + clear buttons. Same class of defect as .review-btn. */
+  .cat-btn,
+  .btn-search,
+  .btn-clear,
   .page-breadcrumb,
   .breadcrumb,
   .newsletter-section,

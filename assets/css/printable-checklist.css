@@ -282,7 +282,8 @@ footer {
 @media print {
   body { background: white; }
   .screen-header, .print-toolbar, .screen-cta, .screen-footer, footer,
-  .related-articles, .scroll-top-btn,
+  .related-articles,
+  .related, .scroll-top-btn,
   /* 2026-09-03 QA: .tldr-box (AEO Quick Answer) is screen-only and was already
      hidden in printable-poster.css, but never added here — 2 checklist
      printables were printing it as page 1. Keep both families in sync. */

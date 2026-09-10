@@ -496,6 +496,7 @@ body > section.section li a:hover { color: var(--poster-link-hover); }
   .tldr-box,
   .lead-capture,
   .related-articles,
+  .related,
   body > section.section {
     display: none !important;
   }
