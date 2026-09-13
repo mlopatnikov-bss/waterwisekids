@@ -82,7 +82,10 @@
       padding: 0.75rem 2rem;
       background: #0369a1;
       color: #fff;
-      border: none;
+      /* 2026-09-13 visual QA: .btn-clear has a 2px border, so in this
+         align-items:flex-end row the boxes bottom-aligned but the LABELS sat
+         2px apart. Match the border width (same colour = same appearance). */
+      border: 2px solid #0369a1;
       border-radius: 8px;
       font-weight: 600;
       font-size: 0.95rem;
@@ -90,7 +93,7 @@
       transition: background 0.3s, transform 0.15s;
       white-space: nowrap;
     }
-    .btn-search:hover { background: #075985; transform: translateY(-1px); }
+    .btn-search:hover { background: #075985; border-color: #075985; transform: translateY(-1px); }
     .btn-clear {
       padding: 0.75rem 1.25rem;
       background: #f1f5f9;
