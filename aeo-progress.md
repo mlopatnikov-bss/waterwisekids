@@ -2882,3 +2882,115 @@ answer engine extracting the box alone must not read as a compliance certificate
    `free-reduced-swim-lessons-make-a-splash.html`'s two divergent FAQ blocks,
    `teaching-kids-safe-pool-entry.html`'s uncited "leading cause" claim, and
    `adaptive-swimming-special-needs.html`'s two `div.article-body` elements.
+
+---
+
+## Batch 60 — 2026-09-13 (aeo-optimizer, scheduled)
+
+### Why this run did not optimize "the next 2–3 articles"
+
+The prose H2 backlog has been 0 since Batch 56 and the `/education/` answer surface is
+430/430. Re-running the standard pass would have been churn. Instead this run re-measured the
+**whole corpus** rather than the `/education/`-scoped denominator every prior AEO pass has
+used, which surfaced two real, previously invisible defects.
+
+### 1. The site asserted a SUPERSEDED AAP swim-lesson start age — 89 files, 238 replacements
+
+**This is the highest-value AEO defect found to date, because it makes us citable and wrong.**
+
+97 files asserted some form of *"the American Academy of Pediatrics recommends formal swim
+lessons around age 4."* That is the **2010** policy language. The AAP replaced it: *Prevention
+of Drowning*, **Pediatrics 158(1) e2026077410**, pre-published 2026-05-18 — *"swim lessons can
+be introduced after a child turns 1 year old"*, and *"there is no evidence that infant swim
+lessons reduce the incidence of drowning"*. Re-verified live this run via web search, not from
+memory alone.
+
+Worse, the corpus **self-contradicted**: ~80 other instances already said age 1. An answer
+engine asked "what age does the AAP recommend?" found both numbers on the same site.
+
+- **68 distinct raw shapes / 249 occurrences / 97 files.** A single regex would have mangled
+  most of them, so an explicit 43-rule exact-substring table was built and each rewrite
+  hand-checked.
+- **237 replacements across 89 files**, plus 1 bespoke fix to a `<li>` source citation on
+  `what-age-can-toddlers-start-swimming.html` that the table did not cover.
+- Prose and `FAQPage` JSON-LD carry the **same byte string**, so one substring replace moved
+  both in lockstep — FAQ parity verified after, not assumed.
+- **11 residual "age 4" mentions remain and are correct on purpose**: all are age-1-primary
+  sentences where age 4 appears as stroke-readiness or as explicit "updated from the earlier
+  wait-until-age-4 guidance" history. Enumerated and inspected individually.
+- Canonical replacements: `after their first birthday` (plural subjects) /
+  `after a child turns 1` (generic). No apostrophes introduced —
+  [[faq_schema_apostrophe_drift_from_visible_prose]].
+- Zero occurrences were in `<title>` or `<meta>`, so the 160-char cap never applied. Checked
+  before editing, not after.
+
+### 2. The H2 backlog scorer has always been scoped to `/education/` — the ROOT corpus was never scored
+
+Scoring all 126 non-exempt indexable ROOT pages found **5** under 50% question-H2s, three of
+them at **absolute zero**:
+
+| page | before | after |
+|---|---|---|
+| `swim-lessons-monmouth-county-kids.html` | 0/6 | **5/6** |
+| `swim-lessons-ocean-county-nj.html` | 0/6 | **5/6** |
+| `swim-lessons-jersey-shore.html` | 0/6 | **5/6** |
+
+(The 6th H2 on each is `Frequently Asked Questions`, correctly left alone.)
+
+All 15 new headings were scored with the recorded metric — `difflib.SequenceMatcher` on
+lowercased, punctuation-stripped text against a **17,922-heading corpus** (every h1/h2/h3 plus
+every FAQ `Question.name` sitewide, including the page's own) — and every one lands at
+**≤0.744**, under the 0.75 target from
+[[heading_proposal_collides_with_its_own_page_faq]]. Three re-aims were needed and each was
+re-scored, per [[heading_reaim_can_collide_harder_than_the_original]].
+
+One scorer refinement worth keeping: **the heading being replaced must be dropped from the
+corpus for its own candidate.** Leaving it in reports a phantom 0.97 self-collision on every
+question-ified statement heading and would have blocked all five Ocean County rewrites.
+
+Each converted H2 now opens with a direct answer sentence before the original prose
+(AEO rule 2). One CDC citation added to `swim-lessons-ocean-county-nj.html` — drowning is the
+leading cause of death for US children ages 1–4 — linked to the house URL
+`cdc.gov/drowning/data-research/facts/`.
+
+### 3. Slug label leaked into prose on one page (singleton — the orphan-dimension signature)
+
+`swim-lessons-monmouth-county-kids.html` rendered its FAQ from the page **slug**, not the
+place name: *"What age should kids in **Monmouth County Kids** start swim lessons?"*,
+*"How much do swim lessons cost in Monmouth County Kids?"*, *"many swim schools in the Monmouth
+County Kids area"*. 9 occurrences, visible + JSON-LD, and a breadcrumb `ListItem.name` of
+`Monmouth County Kids`. Count==1 file across the corpus — nothing else leaks this way. Fixed
+all 9; the one remaining hit is the grammatical *"what Monmouth County kids need"* in a new H2.
+
+### Validation
+
+- 89 files changed, **0 deleted** (`git status --porcelain` inspected before commit).
+- JSON-LD: **0 parse failures** across all 89.
+- FAQ parity: **0** schema answers absent from visible text; question `name` ↔ `h3` verified.
+- Tag balance `strong`/`h2`/`h3`: **0** imbalance. 1 `<h1>` per page.
+- Corpus after: 778 HTML / 655 indexable / 100 noindex / 23 stubs — unchanged shape.
+- `/education/` answer surface **430/430**, speakable non-1 unchanged, **0** pages with a box
+  but no speakable.
+- Scratch lived at `/tmp/aeoprobe`, outside the clone —
+  [[never_create_scratch_files_inside_the_repo_clone]].
+
+### Still open / flagged for Michael
+
+1. ⚠️ **Date surfaces not bumped.** 89 files got a real factual change and 3 got real new
+   prose, but `dateModified` / sitemap `lastmod` / visible date already disagree sitewide
+   (310 / 236 / 189). Bumping 92 more entries unilaterally deepens that split. This needs the
+   "fix all three or none" decision first — [[three_date_surfaces_all_lag_true_content_change]].
+2. **Two hub pages have no answer surface**: `swim-lessons/index.html` (7 H2s) and
+   `swim-lessons/directory/index.html` (7 H2s). Both are hubs, so this is the
+   hub-cannibalization scope decision, not backlog.
+3. **The 50 `swim-lessons/directory/*` state pages have no answer surface and 0 question H2s.**
+   They are produced by the generator at `.deploy/directory-gen/` which is **mount-only and not
+   in the repo** — editing them in the clone would be overwritten. Closing this axis means
+   changing the generator template, which is a separate job.
+4. **4 ROOT articles carry ≥3 H2s and no `FAQPage`**: `how-parents-can-support-swim-lessons-at-home`,
+   `why-year-round-swim-lessons-matter`, `how-long-should-swim-lessons-last`,
+   `why-kids-need-swim-lessons-even-if-they-have-a-pool`. Adding schema requires adding visible
+   Q&A too — [[generate_faq_schema_and_visible_from_one_source]]. Good candidates for Batch 61.
+5. HowToStep `url`: **247 steps, 167 with url, 80 without** — unchanged, still editorial
+   ([[howto_step_url_is_not_mechanically_closable]]).
+6. Batch 54–59 open items all stand unchanged.
