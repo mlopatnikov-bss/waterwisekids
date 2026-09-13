@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A water activity swim skill checklist on a clipboard beside a towable tube, a paddleboard and a kayak at the edge of open water, with five skill checkboxes ticked">
+  <defs>
+    <linearGradient id="wact-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="wact-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#wact-bg)"/>
+
+  <!-- open water band -->
+  <rect x="0" y="262" width="600" height="98" fill="url(#wact-water)" opacity="0.55"/>
+  <path d="M0 270 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#0369a1" stroke-width="3" opacity="0.45"/>
+  <path d="M0 292 q30 -8 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#0369a1" stroke-width="2" opacity="0.28"/>
+
+  <!-- clipboard -->
+  <rect x="44" y="50" width="240" height="256" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <rect x="126" y="36" width="76" height="26" rx="7" fill="#0369a1"/>
+  <text x="68" y="96" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#0c4a6e">Swim Skill Floor</text>
+  <line x1="68" y1="110" x2="260" y2="110" stroke="#bae6fd" stroke-width="3"/>
+
+  <!-- five ticked skill rows -->
+  <g font-family="Inter, Arial, sans-serif" font-size="11" fill="#475569">
+    <rect x="68" y="126" width="15" height="15" rx="3" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+    <path d="M71.5 133.5 l3 3.5 l5.5 -6.5" fill="none" stroke="#059669" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="92" y="138">Enter over head, surface</text>
+
+    <rect x="68" y="156" width="15" height="15" rx="3" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+    <path d="M71.5 163.5 l3 3.5 l5.5 -6.5" fill="none" stroke="#059669" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="92" y="168">Float or tread 1 minute</text>
+
+    <rect x="68" y="186" width="15" height="15" rx="3" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+    <path d="M71.5 193.5 l3 3.5 l5.5 -6.5" fill="none" stroke="#059669" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="92" y="198">Turn and orient</text>
+
+    <rect x="68" y="216" width="15" height="15" rx="3" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+    <path d="M71.5 223.5 l3 3.5 l5.5 -6.5" fill="none" stroke="#059669" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="92" y="228">Swim 25 yards</text>
+
+    <rect x="68" y="246" width="15" height="15" rx="3" fill="#fff7ed" stroke="#c2410c" stroke-width="2"/>
+    <text x="92" y="258">Exit without a ladder</text>
+  </g>
+  <text x="68" y="285" font-family="Inter, Arial, sans-serif" font-size="10.5" font-style="italic" fill="#7c2d12">In a row, unprompted</text>
+
+  <!-- towable tube -->
+  <g transform="translate(360 120)">
+    <ellipse cx="0" cy="0" rx="46" ry="26" fill="#f59e0b" opacity="0.92"/>
+    <ellipse cx="0" cy="0" rx="21" ry="11" fill="#e0f2fe"/>
+    <path d="M-46 2 a46 26 0 0 0 92 0" fill="none" stroke="#b45309" stroke-width="3"/>
+    <circle cx="0" cy="-19" r="9" fill="#0c4a6e"/>
+    <path d="M-52 6 l-26 -12" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- paddleboard with rider -->
+  <g transform="translate(455 214)">
+    <ellipse cx="0" cy="26" rx="76" ry="12" fill="#0369a1" opacity="0.28"/>
+    <path d="M-72 18 q72 -22 144 0 q-72 14 -144 0 z" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5"/>
+    <rect x="-4" y="-30" width="8" height="34" rx="4" fill="#0284c7"/>
+    <circle cx="0" cy="-40" r="10" fill="#0c4a6e"/>
+    <rect x="-13" y="-31" width="26" height="16" rx="5" fill="#ea580c"/>
+    <path d="M22 -34 l0 44" stroke="#475569" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M18 10 l8 0 l-4 10 z" fill="#475569"/>
+  </g>
+
+  <!-- kayak -->
+  <g transform="translate(150 322)">
+    <path d="M-58 0 q58 -20 116 0 q-58 12 -116 0 z" fill="#facc15" stroke="#a16207" stroke-width="2.5"/>
+    <circle cx="0" cy="-12" r="8" fill="#0c4a6e"/>
+    <path d="M-20 -14 l40 0" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- life jacket badge -->
+  <g transform="translate(536 66)">
+    <circle cx="0" cy="0" r="30" fill="#ffffff" stroke="#ea580c" stroke-width="3"/>
+    <path d="M-13 -14 h9 v20 q0 6 4 6 t4 -6 v-20 h9 v26 q0 12 -13 12 t-13 -12 z" fill="#ea580c"/>
+  </g>
+  <text x="536" y="112" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#7c2d12" text-anchor="middle">Always</text>
+</svg>
