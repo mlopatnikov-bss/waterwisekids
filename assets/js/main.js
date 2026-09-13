@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initSmoothScroll();
   initActiveNavLink();
   initFormspreeForms();
+  initNavlistShapeTagging();
 });
 
 /* ══════════════════════════════════════════════════════════════════════════════
@@ -512,6 +513,52 @@ function showFormspreeError(form) {
 ═══════════════════════════════════════════════════════════════════════════════ */
 console.log('%cWaterWiseKids', 'color: #0284c7; font-size: 24px; font-weight: bold;');
 console.log('%cBecause Water Safety Saves Lives', 'color: #14b8a6; font-size: 14px; font-weight: 600;');
+
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   STANDALONE LINK-LIST SHAPE TAGGING  (.wwk-navlist)
+   ---------------------------------------------------------------------------
+   2026-09-13: this tagging used to live ONLY in m-app.js, which main.js injects
+   at `innerWidth <= 768`. Above the mobile breakpoint the tagging therefore
+   never ran, and the 24px AA floor that `.wwk-navlist > li > a` carries had
+   nothing to attach to: a 834px render of all 755 live pages found 4,229
+   sub-24px list links on 633 pages (heights 16/18/19px; the width axis was
+   already clear). That is a COVERAGE HOLE, not drift.
+
+   The discriminator - "every <li> holds a single anchor and no other text" -
+   cannot be written in CSS, and the containers are not stable (20 distinct
+   signatures: section.related-articles, div.sidebar-toc, article.article,
+   ul.note-list, div.container, div.article-body ...), so a class-selector
+   restatement would be a partial fix that reports clean and misses the tail.
+   Hence: tag the shape here, at every width. The <=768 double-add against
+   m-app.js is inert - classList.add is idempotent.
+═══════════════════════════════════════════════════════════════════════════════ */
+function initNavlistShapeTagging() {
+  var candidateLists = document.querySelectorAll('ul, ol');
+  for (var cl = 0; cl < candidateLists.length; cl++) {
+    var list = candidateLists[cl];
+    if (list.closest && list.closest('nav')) continue;
+
+    var rows = list.children, itemCount = 0, allStandalone = true;
+    for (var ri = 0; ri < rows.length; ri++) {
+      var row = rows[ri];
+      if (row.tagName !== 'LI') continue;
+      itemCount++;
+
+      var kids = row.children, elementChildren = 0, anchor = null;
+      for (var ki = 0; ki < kids.length; ki++) {
+        elementChildren++;
+        if (kids[ki].tagName === 'A') anchor = kids[ki];
+      }
+      if (elementChildren !== 1 || !anchor ||
+          row.textContent.trim() !== anchor.textContent.trim()) {
+        allStandalone = false;
+        break;
+      }
+    }
+    if (allStandalone && itemCount >= 2) list.classList.add('wwk-navlist');
+  }
+}
 
 /* ══════════════════════════════════════════════════════════════════════════════
    MOBILE APP EXPERIENCE LOADER

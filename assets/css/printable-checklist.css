@@ -550,3 +550,33 @@ footer p {
     padding-right: 20px !important;
   }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   STANDALONE LINK LISTS - AA 24px TAP FLOOR AT EVERY WIDTH
+   ---------------------------------------------------------------------------
+   m-app.css carries this same rule with !important, but m-app.css is injected
+   by main.js only at <=768px, so above the mobile breakpoint the floor simply
+   did not exist. Measured 2026-09-13 at 834px across all 755 live pages: 633
+   pages carried at least one list link under the WCAG 2.5.8 AA 24x24 minimum
+   (4,229 targets at 16-19px tall). Unscoped by media query on purpose - the
+   gap starts at 769px but there is no upper bound, and m-app.css's !important
+   copy still wins below 769. No !important here, so a page-level rule can
+   still override it.
+
+   `min-width` is kept even though the width axis measured clean at 834: the
+   3-character "FAQ" row of .sidebar-toc already falsified the "anchors are
+   always wide enough" assumption once, at 375px. inline-flex shrink-wraps to
+   the label, so min-height floors ONE axis only.
+
+   Screen-scoped so print output is untouched.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media screen {
+  .wwk-navlist > li > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 24px;
+    min-width: 24px;
+  }
+}
