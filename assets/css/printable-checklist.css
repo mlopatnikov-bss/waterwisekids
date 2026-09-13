@@ -580,3 +580,33 @@ footer p {
     min-width: 24px;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   2026-09-13 mobile-consistency: FLOOR THE .cl-footer STANDALONE CTA
+
+   `.cl-footer` ships three paragraphs. The first two carry prose with an anchor
+   inside running text — genuinely WCAG 2.5.8 "inline" exempt. The THIRD
+   paragraph's entire content is one anchor ("Browse all free water safety
+   guides"), which is a standalone control, not inline text, and it has been
+   rendering at 13px tall on 30 printables at 390 AND 834 ever since.
+
+   The standing "`.cl-footer p a` is exempt by design" note reasoned about the
+   FIRST paragraph only; the selector outlived the shape it described.
+   `:only-child` cannot discriminate them — the prose citation anchor is also
+   the only ELEMENT child of its <p>. So the discriminator is carried in the
+   markup instead: the standalone paragraph now carries `.cl-cta`, and only
+   that paragraph is floored. The prose anchors keep their inline flow.
+
+   Measured 2026-09-13 at 390px across all 757 live pages: 29 of the 30 pages
+   with this shape rendered the anchor at 13px. Screen-scoped so print output
+   is untouched.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media screen {
+  .cl-footer p.cl-cta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 24px;
+    min-width: 24px;
+  }
+}
