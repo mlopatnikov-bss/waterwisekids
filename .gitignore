@@ -41,3 +41,10 @@ VISUAL-AUDIT-REPORT-*.md
 /.seo-reports/
 /qa-reports/
 /reports/
+
+
+# internal ops/strategy docs served 200 from the web root (orphaned, not in sitemap)
+/AEO-STRATEGY.md
+/aeo-progress.md
+/memory-transfer/
+/swim-lessons/directory/README.md
