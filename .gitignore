@@ -28,3 +28,11 @@ competitive-scout-*.md
 # agent scratch lists (never deploy)
 _articles.txt
 _changed.txt
+AEO-REPORT-*.md
+AUDIT-REPORT-*.md
+CSS-REGRESSION-REPORT-*.md
+INDEX-COMPLIANCE-REPORT-*.md
+MOBILE-REPORT-*.md
+NEW-CONTENT-VALIDATION-*.md
+SEO-REPORT-*.md
+VISUAL-AUDIT-REPORT-*.md
