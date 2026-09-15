@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A swim lesson financial aid tracker on a clipboard with rows for each program and a follow-up date column, beside three route markers labelled A, B and C at the edge of a pool">
+  <defs>
+    <linearGradient id="aid-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="aid-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#aid-bg)"/>
+
+  <!-- pool water band -->
+  <rect x="0" y="268" width="600" height="92" fill="url(#aid-water)" opacity="0.55"/>
+  <path d="M0 274 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#0369a1" stroke-width="3" opacity="0.45"/>
+
+  <!-- clipboard -->
+  <rect x="46" y="52" width="252" height="252" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <rect x="134" y="38" width="76" height="26" rx="7" fill="#0369a1"/>
+  <text x="70" y="98" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0c4a6e">Aid Tracker</text>
+  <line x1="70" y1="112" x2="274" y2="112" stroke="#bae6fd" stroke-width="3"/>
+
+  <!-- tracker grid: program | route | follow-up -->
+  <g stroke="#cbd5e1" stroke-width="2">
+    <line x1="70" y1="136" x2="274" y2="136"/>
+    <line x1="70" y1="168" x2="274" y2="168"/>
+    <line x1="70" y1="200" x2="274" y2="200"/>
+    <line x1="70" y1="232" x2="274" y2="232"/>
+    <line x1="70" y1="264" x2="274" y2="264"/>
+    <line x1="196" y1="126" x2="196" y2="280"/>
+    <line x1="232" y1="126" x2="232" y2="280"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="11" fill="#475569">
+    <text x="76" y="130">Program</text>
+    <text x="76" y="162">YMCA / JCC</text>
+    <text x="76" y="194">Parks &amp; Rec</text>
+    <text x="76" y="226">Foundation</text>
+    <text x="76" y="258">Swim school</text>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0369a1" text-anchor="middle">
+    <text x="214" y="130">Route</text>
+    <text x="214" y="162">C</text>
+    <text x="214" y="194">C</text>
+    <text x="214" y="226">A</text>
+    <text x="214" y="258">B</text>
+  </g>
+  <g fill="#0284c7" opacity="0.7">
+    <rect x="240" y="154" width="26" height="8" rx="4"/>
+    <rect x="240" y="186" width="26" height="8" rx="4"/>
+    <rect x="240" y="218" width="26" height="8" rx="4"/>
+    <rect x="240" y="250" width="26" height="8" rx="4"/>
+  </g>
+  <text x="252" y="130" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#0369a1" text-anchor="middle">Follow up</text>
+
+  <!-- three route markers -->
+  <g>
+    <circle cx="372" cy="104" r="26" fill="#ffffff" stroke="#0369a1" stroke-width="3"/>
+    <text x="372" y="113" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#0369a1" text-anchor="middle">A</text>
+    <text x="410" y="100" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#0c4a6e">Apply to a</text>
+    <text x="410" y="116" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#0c4a6e">foundation</text>
+  </g>
+  <g>
+    <circle cx="372" cy="176" r="26" fill="#ffffff" stroke="#0284c7" stroke-width="3"/>
+    <text x="372" y="185" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#0284c7" text-anchor="middle">B</text>
+    <text x="410" y="172" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#0c4a6e">Apply via a</text>
+    <text x="410" y="188" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#0c4a6e">partner school</text>
+  </g>
+  <g>
+    <circle cx="372" cy="248" r="26" fill="#0369a1" stroke="#075985" stroke-width="3"/>
+    <text x="372" y="257" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">C</text>
+    <text x="410" y="244" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#075985">No form &#8212; you</text>
+    <text x="410" y="260" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#075985">just have to ask</text>
+  </g>
+
+  <!-- dollar tag -->
+  <g transform="translate(508,58)">
+    <rect x="0" y="0" width="54" height="54" rx="12" fill="#0369a1" opacity="0.12"/>
+    <text x="27" y="38" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#0369a1" text-anchor="middle">$</text>
+  </g>
+
+  <!-- swimmer -->
+  <g opacity="0.9">
+    <circle cx="470" cy="312" r="12" fill="#fbbf24"/>
+    <path d="M440 326 q18 -12 34 0 t34 0 t34 0" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+  </g>
+</svg>
