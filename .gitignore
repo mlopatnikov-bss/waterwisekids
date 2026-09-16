@@ -48,3 +48,17 @@ VISUAL-AUDIT-REPORT-*.md
 /aeo-progress.md
 /memory-transfer/
 /swim-lessons/directory/README.md
+
+# dated ops reports still unignored 2026-09-16 (the daily compliance report's own filename was among them)
+CONTENT-VALIDATION-*.md
+CSS-REGRESSION-*.md
+GOOGLE-INDEX-COMPLIANCE-*.md
+INDEX-COMPLIANCE-*.md
+INTERNAL-LINKING-REPORT-*.md
+LEAD-MAGNET-REPORT-*.md
+QA-REPORT-*.md
+SITE-HEALTH-REPORT-*.md
+VISUAL-DESIGN-REPORT-*.md
+audit-*-site-health.md
+functionality-validation-*.md
+mobile-consistency-*.md
