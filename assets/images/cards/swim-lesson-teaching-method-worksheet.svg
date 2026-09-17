@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A swim lesson teaching method worksheet on a clipboard with four fork rows and two school columns, beside four labelled either-or switches at the edge of a pool">
+  <defs>
+    <linearGradient id="mtd-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="mtd-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#mtd-bg)"/>
+
+  <!-- pool water band -->
+  <rect x="0" y="268" width="600" height="92" fill="url(#mtd-water)" opacity="0.55"/>
+  <path d="M0 274 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#0369a1" stroke-width="3" opacity="0.45"/>
+
+  <!-- clipboard -->
+  <rect x="46" y="52" width="236" height="252" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <rect x="126" y="38" width="76" height="26" rx="7" fill="#0369a1"/>
+  <text x="70" y="98" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#0c4a6e">Method</text>
+  <line x1="70" y1="112" x2="258" y2="112" stroke="#bae6fd" stroke-width="3"/>
+
+  <!-- four-fork comparison grid, two school columns -->
+  <g stroke="#cbd5e1" stroke-width="2">
+    <line x1="70" y1="134" x2="258" y2="134"/>
+    <line x1="70" y1="172" x2="258" y2="172"/>
+    <line x1="70" y1="210" x2="258" y2="210"/>
+    <line x1="70" y1="248" x2="258" y2="248"/>
+    <line x1="70" y1="286" x2="258" y2="286"/>
+    <line x1="194" y1="126" x2="194" y2="286"/>
+    <line x1="226" y1="126" x2="226" y2="286"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="11" fill="#475569">
+    <text x="76" y="128">Fork</text>
+    <text x="76" y="160">1 Taught first</text>
+    <text x="76" y="198">2 Moving up</text>
+    <text x="76" y="236">3 Delivery</text>
+    <text x="76" y="274">4 In the water</text>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#0c4a6e">
+    <text x="202" y="128">A</text>
+    <text x="234" y="128">B</text>
+  </g>
+  <!-- side chosen per fork, one column each -->
+  <g font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0284c7">
+    <text x="202" y="160">A</text>
+    <text x="234" y="198">B</text>
+    <text x="202" y="236">A</text>
+    <text x="234" y="274">B</text>
+  </g>
+
+  <!-- four either-or switches -->
+  <g>
+    <rect x="322" y="96" width="228" height="42" rx="8" fill="#ffffff" stroke="#bae6fd" stroke-width="2.5"/>
+    <circle cx="346" cy="117" r="13" fill="#0369a1"/>
+    <text x="346" y="122" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="370" y="122" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0c4a6e">Survival or strokes first</text>
+
+    <rect x="322" y="148" width="228" height="42" rx="8" fill="#ffffff" stroke="#bae6fd" stroke-width="2.5"/>
+    <circle cx="346" cy="169" r="13" fill="#0369a1"/>
+    <text x="346" y="174" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="370" y="174" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0c4a6e">Mastery or session</text>
+
+    <rect x="322" y="200" width="228" height="42" rx="8" fill="#ffffff" stroke="#bae6fd" stroke-width="2.5"/>
+    <circle cx="346" cy="221" r="13" fill="#0369a1"/>
+    <text x="346" y="226" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="370" y="226" font-family="Inter, Arial, sans-serif" font-size="13" fill="#0c4a6e">Play-led or drill-led</text>
+
+    <rect x="322" y="252" width="228" height="42" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5"/>
+    <circle cx="346" cy="273" r="13" fill="#b45309"/>
+    <text x="346" y="278" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="370" y="278" font-family="Inter, Arial, sans-serif" font-size="13" fill="#7c2d12">Who is in the water?</text>
+  </g>
+
+  <text x="322" y="72" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0c4a6e">Four forks &#8212; decode any school</text>
+  <text x="322" y="326" font-family="Inter, Arial, sans-serif" font-size="12" fill="#075985">WaterWiseKids.com &#8212; free printable</text>
+</svg>
