@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initSmoothScroll();
   initActiveNavLink();
   initFormspreeForms();
+  initMailerLiteMirror();
   initNavlistShapeTagging();
 });
 
@@ -450,8 +451,9 @@ function showFormspreeSuccess(form) {
       form_type: isInquiry ? 'inquiry' : 'newsletter',
       signup_source: source
     });
-    // Retained so existing GTM triggers built on the old event keep firing.
-    if (form.getAttribute('data-form') === 'newsletter-sidebar') {
+    // Every email signup (not contact inquiries) counts as checklist_signup in GA4.
+    // Previously only newsletter-sidebar forms fired it, so GA4 undercounted leads.
+    if (!isInquiry) {
       window.dataLayer.push({ event: 'checklist_signup', signup_source: source });
     }
   }
@@ -506,6 +508,60 @@ function showFormspreeError(form) {
     '<a href="mailto:waterwisekids.com@gmail.com" style="color:#991b1b;font-weight:600;' +
     'text-decoration:underline;">waterwisekids.com@gmail.com</a>.';
   form.insertAdjacentElement('afterend', msg);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   MAILERLITE MIRROR  (added 2026-09-17)
+   Every email signup on the site is also sent to MailerLite, group
+   "Checklist Signups (website)", which starts the welcome email series.
+   Formspree keeps working unchanged. Runs in the capture phase so it sees the
+   submit before the 71 pages with inline handlers call preventDefault.
+   Skips: contact/inquiry forms (textarea), honeypot hits (_gotcha filled),
+   invalid emails, and internal @waterwisekids.com test/validator addresses.
+   MailerLite double opt-in is on, so bot submissions never become subscribers.
+═══════════════════════════════════════════════════════════════════════════════ */
+var WWK_MAILERLITE_URL = 'https://assets.mailerlite.com/jsonp/2641490/forms/198857486340458039/subscribe';
+
+function initMailerLiteMirror() {
+  if (typeof window.fetch !== 'function' || typeof window.URLSearchParams !== 'function') { return; }
+
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!form || form.tagName !== 'FORM') { return; }
+    var action = form.getAttribute('action') || '';
+    if (action.indexOf('formspree.io') === -1) { return; }
+    if (form.querySelector('textarea')) { return; }
+    if (form.getAttribute('data-ml-sent') === '1') { return; }
+
+    var gotcha = form.querySelector('[name="_gotcha"]');
+    if (gotcha && gotcha.value) { return; }
+
+    var emailEl = form.querySelector('input[type="email"], input[name="email"]');
+    var email = emailEl && emailEl.value ? emailEl.value.trim() : '';
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { return; }
+    if (/@waterwisekids\.com$/i.test(email)) { return; }
+
+    form.setAttribute('data-ml-sent', '1');
+    var body = new URLSearchParams();
+    body.append('fields[email]', email);
+    body.append('ml-submit', '1');
+    body.append('anticsrf', 'true');
+
+    try {
+      fetch(WWK_MAILERLITE_URL, { method: 'POST', body: body, keepalive: true })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d && d.success && window.dataLayer) {
+            var src = form.querySelector('[name="source"]');
+            window.dataLayer.push({
+              event: 'mailerlite_subscribe',
+              signup_source: src ? src.value : (form.getAttribute('data-form') || form.id || 'unknown')
+            });
+          }
+        })
+        .catch(function () {});
+    } catch (err) {}
+  }, true);
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
