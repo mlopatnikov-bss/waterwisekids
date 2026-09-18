@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A poolside safety card showing three green, yellow and red game rows beside a pool cross-section where a still child rests on the bottom while an adult sweeps the pool floor with their eyes">
+  <defs>
+    <linearGradient id="ug-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="ug-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#ug-bg)"/>
+
+  <!-- pool cross-section, right half -->
+  <rect x="312" y="96" width="256" height="216" rx="8" fill="url(#ug-water)" opacity="0.62"/>
+  <rect x="312" y="96" width="256" height="216" rx="8" fill="none" stroke="#0369a1" stroke-width="3" opacity="0.5"/>
+  <path d="M312 108 q16 -9 32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0" fill="none" stroke="#e0f2fe" stroke-width="3" opacity="0.8"/>
+
+  <!-- still child on the bottom -->
+  <g opacity="0.95">
+    <ellipse cx="418" cy="292" rx="46" ry="9" fill="#0c4a6e" opacity="0.22"/>
+    <circle cx="384" cy="282" r="12" fill="#f8fafc" stroke="#0c4a6e" stroke-width="2.5"/>
+    <rect x="394" y="276" width="56" height="13" rx="6.5" fill="#f8fafc" stroke="#0c4a6e" stroke-width="2.5"/>
+    <line x1="450" y1="282" x2="472" y2="290" stroke="#0c4a6e" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- the eye sweep along the bottom -->
+  <path d="M330 262 H540" fill="none" stroke="#fb923c" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 9"/>
+  <polygon points="540,254 556,262 540,270" fill="#fb923c"/>
+  <g transform="translate(330,232)">
+    <ellipse cx="0" cy="0" rx="17" ry="10.5" fill="#fff7ed" stroke="#9a3412" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="4.6" fill="#9a3412"/>
+  </g>
+  <text x="352" y="228" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#7c2d12">SWEEP THE BOTTOM</text>
+
+  <!-- card, left half -->
+  <rect x="40" y="58" width="246" height="248" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <rect x="122" y="44" width="82" height="26" rx="7" fill="#0369a1"/>
+  <text x="62" y="98" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#0c4a6e">Score the game</text>
+
+  <!-- green row -->
+  <circle cx="72" cy="134" r="12" fill="#16a34a"/>
+  <text x="72" y="139" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#ffffff">0</text>
+  <rect x="94" y="126" width="168" height="8" rx="4" fill="#dcfce7"/>
+  <rect x="94" y="140" width="122" height="8" rx="4" fill="#dcfce7"/>
+
+  <!-- yellow row -->
+  <circle cx="72" cy="188" r="12" fill="#eab308"/>
+  <text x="72" y="193" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#ffffff">1</text>
+  <rect x="94" y="180" width="168" height="8" rx="4" fill="#fef9c3"/>
+  <rect x="94" y="194" width="140" height="8" rx="4" fill="#fef9c3"/>
+
+  <!-- red row -->
+  <circle cx="72" cy="242" r="12" fill="#dc2626"/>
+  <text x="72" y="247" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" fill="#ffffff">2+</text>
+  <rect x="94" y="234" width="168" height="8" rx="4" fill="#fee2e2"/>
+  <rect x="94" y="248" width="104" height="8" rx="4" fill="#fee2e2"/>
+
+  <text x="62" y="288" font-family="Inter, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#475569">Three ingredients. One rule.</text>
+</svg>
