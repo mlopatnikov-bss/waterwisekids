@@ -625,7 +625,7 @@ function initNavlistShapeTagging() {
   if (window.innerWidth <= 768) {
     var css = document.createElement('link');
     css.rel = 'stylesheet';
-    css.href = '/assets/css/m-app.css?v=20260907c';
+    css.href = '/assets/css/m-app.css?v=20260918a';
     document.head.appendChild(css);
 
     var js = document.createElement('script');

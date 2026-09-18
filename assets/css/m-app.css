@@ -981,9 +981,21 @@
      `.page-hero` pages put their content directly in the hero and already render
      at 20px, so this brings the four outliers into line rather than moving the
      rail. `.page-hero--edu` / `.page-hero--hub` are additional classes on
-     elements that also carry `.page-hero`, so they are covered here. */
+     elements that also carry `.page-hero`, so they are covered here.
+
+     2026-09-18 mobile-consistency: bare `.hero` was MISSED by the 09-05 pass.
+     The hero ships under several class names and that selector list enumerated
+     only the two in front of it. `.hero` above sets
+     `padding: 16px 20px 8px !important`, so the one page of eight whose hero
+     wraps a `.container` - /special-needs-swimming.html - rendered its H1 and
+     sub at x=40 against a 20px body and footer rail. The other seven put their
+     content in `.hero-content` and already read 20. The remaining hero class
+     names were censused at 390 at the same time: `.fwsp-hero` and `.pbsc-hero`
+     do wrap a `.container` but set no horizontal padding of their own, so they
+     measure 20 and are deliberately NOT listed here. */
   .page-hero > .container,
-  .tools-hero > .container {
+  .tools-hero > .container,
+  .hero > .container {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
