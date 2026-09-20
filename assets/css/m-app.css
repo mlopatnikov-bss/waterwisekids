@@ -1000,6 +1000,47 @@
     padding-right: 0 !important;
   }
 
+  /* 2026-09-20 mobile-consistency: THREE more nestings of the same stacked
+     gutter, and between them they are the largest instance of this defect class
+     yet found - 122 + 3 + 1 pages. The rule immediately above cancels a
+     `.container` nested INSIDE a hero, with a `>` combinator. These are the
+     shapes that combinator cannot reach:
+
+     (a) THE NESTING INVERTED - 122 local landing / root article pages put the
+         hero INSIDE the page's own `.container`, not the other way round. The
+         `.container` supplies the 20px rail and `.page-hero.compact` adds its
+         own 20 on top, so the kicker, H1 and lead rendered at x=40 while the
+         header logo, the sibling `.tldr-box`, the article body below and the
+         footer all sat at 20. Verified by eye at 390: a clear 20px step.
+
+     (b) THREE-DEEP - the 3 photo-hero pages nest
+         `.page-hero > .page-hero-content > .container` (article.css:524 adds
+         the overlay content layer). Hero 20 + content layer 1rem + container 20
+         stacked to x=54, the largest single inset measured on this site.
+
+     (c) THE HOMEPAGE - `.what-we-offer` and `.featured-articles` (and
+         `.featured-programs` at 16) each wrap their body in a `.container`, so
+         their section headers rendered at 44/44/40 while the sibling
+         `.about-snippet`, the H1 and the lead all sat at 20. `.about-snippet`
+         is the one homepage section with no inner `.container` and it was
+         already correct - that sibling disagreement is what identified it.
+
+     In every case the OUTERMOST box already sits on the 20px rail, so the fix
+     is to cancel each nested gutter rather than move the rail. Verified inert
+     above the 768 cap: 834 / 1280 / 1440 all measure identically before and
+     after. Residue after this rule: the two homepage section headers land at 24
+     rather than 20 because `.section-header` carries its own 4px - below the
+     visible-step threshold, left alone deliberately. */
+  .container > .page-hero,
+  .page-hero > .page-hero-content,
+  .page-hero-content > .container,
+  .what-we-offer > .container,
+  .featured-articles > .container,
+  .featured-programs > .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   .btn {
     border-radius: 24px !important;
     font-weight: 700 !important;
