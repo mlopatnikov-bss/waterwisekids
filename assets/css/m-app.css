@@ -1524,8 +1524,14 @@
   }
 
   /* ---- Contrast: neutral grays below WCAG AA 4.5:1 on white ----
-     #6b7280 measured 2.52:1 and #9ca3af 2.54:1. These are neutrals, not brand
-     colors, so darkening is safe. #6b7280 measures 4.83:1. ---- */
+     #a3a3a3 measured 2.52:1 and #9ca3af 2.54:1. These are neutrals, not brand
+     colors, so darkening is safe. #6b7280 measures 4.83:1.
+     2026-09-21: this rule only reached the LABEL spans. The parent
+     .mobile-bottom-nav a / .mobile-cat-item kept #a3a3a3, and that is the colour
+     the inline SVG icons inherit via stroke="currentColor" - so the icons stayed
+     at 2.52:1 while their labels passed. The parent declarations are now #6b7280
+     too; a contrast fix scoped to the text-bearing descendant does not fix the
+     icon beside it. ---- */
   .mobile-bottom-nav a span,
   .mobile-cat-item span,
   .mobile-app-search-pill .search-pill-text span,
