@@ -296,7 +296,7 @@
 
   .search-pill-sub {
     font-size: 0.68rem;
-    color: #a3a3a3;
+    color: #6b7280;
   }
 
   /* ═══════════════════════════════════
@@ -325,7 +325,7 @@
     padding: 10px 16px 8px;
     font-size: 0.6rem;
     font-weight: 600;
-    color: #a3a3a3;
+    color: #6b7280;
     white-space: nowrap;
     flex-shrink: 0;
     border-bottom: 2px solid transparent;
@@ -865,7 +865,7 @@
     align-items: center;
     gap: 2px;
     text-decoration: none;
-    color: #a3a3a3;
+    color: #6b7280;
     font-size: 0.62rem;
     font-weight: 500;
     padding: 4px 12px 2px;
@@ -1524,7 +1524,7 @@
   }
 
   /* ---- Contrast: neutral grays below WCAG AA 4.5:1 on white ----
-     #a3a3a3 measured 2.52:1 and #9ca3af 2.54:1. These are neutrals, not brand
+     #6b7280 measured 2.52:1 and #9ca3af 2.54:1. These are neutrals, not brand
      colors, so darkening is safe. #6b7280 measures 4.83:1. ---- */
   .mobile-bottom-nav a span,
   .mobile-cat-item span,
