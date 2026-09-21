@@ -47,6 +47,7 @@
   --yellow-400: #facc15;
   --yellow-500: #eab308;
   --red-500: #ef4444;
+  --red-700: #b91c1c; /* AA-safe error text: 6.47:1 on white (already used 16x in corpus) */
 
   /* Colors - Grays */
   --gray-50: #f9fafb;
@@ -929,7 +930,8 @@ footer .footer-bottom a:hover {
 }
 
 .breadcrumb span {
-  color: var(--gray-400);
+  /* separator glyph: gray-400 reads 2.43:1 on the #f8fafc bar; gray-500 = 4.62:1 */
+  color: var(--gray-500);
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
@@ -1032,7 +1034,7 @@ footer .footer-bottom a:hover {
 }
 
 .page-breadcrumb .sep {
-  color: var(--gray-400);
+  color: var(--gray-500);
   margin: 0 6px;
 }
 
@@ -1168,7 +1170,9 @@ input[type='email']::placeholder,
 input[type='url']::placeholder,
 input[type='search']::placeholder,
 textarea::placeholder {
-  color: var(--gray-400);
+  /* WCAG AA: gray-400 (#9ca3af) is 2.43:1 on the gray-50 field and 2.54:1 on the
+     white focus state — placeholder text must clear 4.5:1. gray-500 = 4.63/4.83. */
+  color: var(--gray-500);
 }
 
 textarea {
@@ -1192,7 +1196,7 @@ select {
 }
 
 .form-error {
-  color: var(--red-500);
+  color: var(--red-700);
   font-size: 0.875rem;
   margin-top: var(--spacing-xs);
 }
@@ -2592,7 +2596,8 @@ table tbody tr:hover {
 
 /* — Checklist rows — */
 .checklist-icon {
-  color: var(--teal-500);
+  /* teal-500 is 2.49:1 on white — below even the 3:1 non-text floor; teal-700 = 5.47 */
+  color: var(--teal-700);
   font-weight: 700;
   margin-right: 0.5rem;
   flex-shrink: 0;
@@ -2613,7 +2618,7 @@ table tbody tr:hover {
 }
 
 .checklist-item-checkbox {
-  color: var(--teal-500);
+  color: var(--teal-700);
   font-weight: 700;
   margin-right: 0.5rem;
   flex-shrink: 0;

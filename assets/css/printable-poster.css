@@ -472,7 +472,7 @@ body > section.section li a:hover { color: var(--poster-link-hover); }
   white-space: nowrap;
   transition: background 0.2s, transform 0.2s;
 }
-.lead-form button:hover { background: #e85d2a; transform: translateY(-2px); }
+.lead-form button:hover { background: #9A3412; transform: translateY(-2px); }
 .lead-privacy {
   margin-top: 12px;
   font-size: 0.75rem;
