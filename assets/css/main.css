@@ -3377,3 +3377,9 @@ aside p a {
     min-width: 24px;
   }
 }
+
+/* [mobile-consistency] 2026-09-24: 44px touch targets for jobs filter pills (~33px) and swim-schools state chips (~39px) */
+@media (max-width: 768px) {
+  .filter-pills .pill { min-height: 44px; }
+  .swim-schools-page .state-chip { min-height: 44px; }
+}

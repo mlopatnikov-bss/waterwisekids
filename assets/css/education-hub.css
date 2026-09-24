@@ -365,5 +365,9 @@
 
   .cat-btn {
     flex-shrink: 0;
+    /* [mobile-consistency] 2026-09-24: 44px touch target (was ~28px) */
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
 }

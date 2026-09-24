@@ -212,3 +212,8 @@
   .featured-school { padding: 1.5rem; }
   .wwk-cta-banner { padding: 2rem 1.25rem; }
 }
+
+/* [mobile-consistency] 2026-09-24: 44px touch target for nearby-community chips (was ~33px) */
+@media (max-width: 768px) {
+  .wwk-city-link { min-height: 44px; display: inline-flex; align-items: center; }
+}
