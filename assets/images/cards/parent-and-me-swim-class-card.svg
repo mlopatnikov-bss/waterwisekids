@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A parent in the pool holding a baby face-to-face, beside a class card listing get in first, face-to-face, back float, tummy hold, same cue and read baby">
+  <defs>
+    <linearGradient id="pm-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="pm-pool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#pm-bg)"/>
+  <!-- bubbles -->
+  <g fill="#ffffff" stroke="#93c5fd" stroke-width="1.2">
+    <circle cx="48" cy="46" r="7"/><circle cx="80" cy="84" r="4"/><circle cx="330" cy="40" r="6"/><circle cx="360" cy="78" r="3.5"/>
+  </g>
+  <!-- parent -->
+  <circle cx="150" cy="118" r="34" fill="#e8b98f"/>
+  <path d="M116 112 q2 -44 36 -42 q34 -2 34 40 q-8 -22 -34 -24 q-26 2 -36 26 z" fill="#78350f"/>
+  <circle cx="139" cy="116" r="3.2" fill="#1f2937"/><circle cx="161" cy="116" r="3.2" fill="#1f2937"/>
+  <path d="M139 132 q11 8 22 0" fill="none" stroke="#1f2937" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M96 250 q0 -90 54 -94 q54 4 54 94 z" fill="#0369a1"/>
+  <!-- baby held face-to-face -->
+  <circle cx="232" cy="172" r="22" fill="#fcd9b6"/>
+  <circle cx="225" cy="170" r="2.6" fill="#1f2937"/><circle cx="240" cy="170" r="2.6" fill="#1f2937"/>
+  <path d="M226 181 q6 5 12 0" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+  <path d="M212 196 q20 -8 40 0 v36 q-20 8 -40 0 z" fill="#f97316"/>
+  <!-- parent hands under baby's arms -->
+  <path d="M190 200 q12 -6 24 0" fill="none" stroke="#e8b98f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M250 200 q10 -2 18 6" fill="none" stroke="#e8b98f" stroke-width="10" stroke-linecap="round"/>
+  <!-- water -->
+  <rect x="0" y="222" width="400" height="138" fill="url(#pm-pool)"/>
+  <path d="M0 222 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#e0f2fe" stroke-width="3" opacity="0.85"/>
+  <path d="M30 280 q20 -7 40 0 t40 0 M210 300 q20 -7 40 0 t40 0" fill="none" stroke="#e0f2fe" stroke-width="2.5" opacity="0.6"/>
+  <!-- speech cue -->
+  <rect x="236" y="92" width="120" height="40" rx="12" fill="#ffffff" stroke="#0369a1" stroke-width="2.5"/>
+  <path d="M252 132 l-8 14 l20 -14 z" fill="#ffffff" stroke="#0369a1" stroke-width="2.5" stroke-linejoin="round"/>
+  <rect x="250" y="126" width="18" height="6" fill="#ffffff"/>
+  <text x="296" y="118" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#0c4a6e">Ready&#8230; go!</text>
+  <!-- class card -->
+  <rect x="408" y="30" width="176" height="220" rx="12" fill="#ffffff" stroke="#0369a1" stroke-width="3"/>
+  <rect x="408" y="30" width="176" height="36" rx="12" fill="#0369a1"/>
+  <rect x="408" y="54" width="176" height="12" fill="#0369a1"/>
+  <text x="496" y="54" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" fill="#ffffff">PARENT &amp; ME</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="13" fill="#1f2937">
+    <g><rect x="422" y="80" width="13" height="13" rx="3" fill="none" stroke="#0369a1" stroke-width="2"/><path d="M425 87 l3 3 l5 -7" fill="none" stroke="#16a34a" stroke-width="2.2"/><text x="444" y="92">Get in first</text></g>
+    <g><rect x="422" y="108" width="13" height="13" rx="3" fill="none" stroke="#0369a1" stroke-width="2"/><path d="M425 115 l3 3 l5 -7" fill="none" stroke="#16a34a" stroke-width="2.2"/><text x="444" y="120">Face-to-face</text></g>
+    <g><rect x="422" y="136" width="13" height="13" rx="3" fill="none" stroke="#0369a1" stroke-width="2"/><path d="M425 143 l3 3 l5 -7" fill="none" stroke="#16a34a" stroke-width="2.2"/><text x="444" y="148">Back float</text></g>
+    <g><rect x="422" y="164" width="13" height="13" rx="3" fill="none" stroke="#0369a1" stroke-width="2"/><text x="444" y="176">Tummy hold</text></g>
+    <g><rect x="422" y="192" width="13" height="13" rx="3" fill="none" stroke="#0369a1" stroke-width="2"/><text x="444" y="204">Same cue</text></g>
+    <g><rect x="422" y="220" width="13" height="13" rx="3" fill="none" stroke="#0369a1" stroke-width="2"/><text x="444" y="232">Read baby</text></g>
+  </g>
+  <rect x="400" y="300" width="200" height="60" fill="#e2e8f0"/>
+</svg>
