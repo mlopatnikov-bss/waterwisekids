@@ -77,3 +77,19 @@
   .gear-page .guides-grid { grid-template-columns: 1fr; }
   .gear-page .category-section { padding: 1.5rem; }
 }
+
+/* [visual-qa] 2026-09-25: answer-first "best goggles" section (added 8d3987f) inherited the
+   global reset: h2/h3 had 0 margin, the <ol> had 0 padding so numbers hung outside the
+   column, and section padding (80px) + inline 3rem margin left a ~200px gap before
+   "Shop by Category". Align with the page's other section headings. */
+.gear-page .best-goggles { padding: 3rem 0 1rem; }
+.gear-page .best-goggles h2 { color: #075985; font-size: 1.8rem; line-height: 1.25; margin: 0 0 1rem; }
+.gear-page .best-goggles h3 { color: #0c4a6e; font-size: 1.25rem; margin: 2rem 0 0.75rem; }
+.gear-page .best-goggles ol { padding-left: 1.5rem; margin: 0 0 1.25rem; }
+.gear-page .best-goggles li { margin-bottom: 0.4rem; }
+.gear-page .best-goggles li::marker { color: #0369a1; font-weight: 700; }
+.gear-page .best-goggles p { line-height: 1.7; }
+@media (max-width: 768px) {
+  .gear-page .best-goggles { padding: 1rem 0 0; }
+  .gear-page .best-goggles h2 { font-size: 1.5rem; }
+}
