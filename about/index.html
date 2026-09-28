@@ -22,6 +22,9 @@
   <meta property="og:description" content="WaterWiseKids is a national water safety education platform built by certified swim instructors. Free guides, a 50-state swim school directory, and expert tips." />
   <meta property="og:site_name" content="WaterWiseKids" />
   <meta property="og:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png" />
+  <meta property="og:image:alt" content="About WaterWiseKids — Water Safety Education &amp; Swim Lesson Resources" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta name="twitter:title" content="About WaterWiseKids — Water Safety Education &amp; Swim Lesson Resources"/>
 <meta name="twitter:description" content="WaterWiseKids is a national water safety education platform built by certified swim instructors. Free guides, a 50-state swim school directory, and expert tips."/>
@@ -41,7 +44,7 @@
   }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css?v=20260814b" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=20260902b" />
   <style>
     /* Page-specific styles — nav, footer, and base styles come from main.css */
 
@@ -53,7 +56,7 @@
     main {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 3rem 1.5rem;
+      padding: 3rem 24px;
     }
 
     /* Section Styles */
@@ -82,7 +85,7 @@
     }
 
     .section a, .offer-card a {
-      color: #0284c7;
+      color: #0369a1;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.15s;
@@ -106,7 +109,7 @@
 
     .offer-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
       gap: 2rem;
     }
 
@@ -141,8 +144,10 @@
     }
 
     /* Contact CTA */
+    /* 2026-08-23 visual QA: white body copy on the #14b8a6 end was 2.92:1.
+       teal-700 #0f766e keeps the ramp at 5.47:1. */
     .contact-cta {
-      background: linear-gradient(135deg, #0284c7 0%, #14b8a6 100%);
+      background: linear-gradient(135deg, #0369a1 0%, #0f766e 100%);
       color: white;
       padding: 2.5rem;
       border-radius: 12px;
@@ -190,7 +195,7 @@
       }
 
       main {
-        padding: 2rem 1rem;
+        padding: 2rem 20px;
       }
 
       .offer-cards {
@@ -238,7 +243,7 @@
       padding: 10px 24px;
       font-size: 0.85rem;
     }
-    .page-breadcrumb a:hover { color: #0284c7; text-decoration: underline; }
+    .page-breadcrumb a:hover { color: #0369a1; text-decoration: underline; }
     .page-breadcrumb .sep { color: #9ca3af; margin: 0 6px; }
     .page-breadcrumb .current { color: #1f2937; }
 
@@ -328,7 +333,7 @@
       <div class="offer-cards">
         <div class="offer-card">
           <div class="offer-card-icon"><img src="/assets/images/icons/icon-education.svg" alt="Education" style="width:48px;height:48px;"></div>
-          <h3>35 Free Water Safety Guides</h3>
+          <h3>421 Free Water Safety Guides</h3>
           <p>In-depth articles covering <a href="/education/drowning-prevention-guide.html">drowning prevention</a>, <a href="/education/pool-safety-rules.html">pool safety</a>, <a href="/education/first-swim-lesson.html">first swim lessons</a>, <a href="/education/vacation-water-safety.html">vacation water safety</a>, <a href="/education/water-safety-special-needs.html">special needs</a>, and more — with new guides publishing regularly.</p>
         </div>
         <div class="offer-card">
@@ -347,7 +352,7 @@
     <section class="section">
       <h2>For Families</h2>
       <p>Whether you're researching <a href="/education/when-to-start-swim-lessons.html">when to start swim lessons</a>, preparing for your child's <a href="/education/first-swim-lesson.html">first day in the pool</a>, learning to swim yourself as an <a href="/education/adult-learn-to-swim.html">adult</a>, or getting ready for <a href="/education/vacation-water-safety.html">summer travel</a> — our guides are written to give you clear, practical answers from people who do this work every day.</p>
-      <p>We don't sell products. We don't run ads. We write what we'd want families in our own programs to know.</p>
+      <p>We don't sell products. We don't run ads. We write what we'd want any family to know before their child gets in the water.</p>
     </section>
 
     <section class="section">
@@ -358,7 +363,7 @@
 
     <section class="section">
       <h2>Where We're Headed</h2>
-      <p>We started with a handful of articles and a mission to make water safety knowledge accessible. Today we have 35 in-depth education guides, a nationwide swim school directory covering all 50 states, active partner profiles, and new content publishing every week. We're growing every day as more swim school partners join and we build toward the most comprehensive water safety resource families can rely on year-round.</p>
+      <p>We started with a handful of articles and a mission to make water safety knowledge accessible. Today we have 421 in-depth education guides, a nationwide swim school directory covering all 50 states, active partner profiles, and new content publishing every week. We're growing every day as more swim school partners join and we build toward the most comprehensive water safety resource families can rely on year-round.</p>
       <p>This is still early — and that's the point. We're building something real, one article and one partner at a time.</p>
     </section>
 
@@ -378,6 +383,7 @@
         <a href="/swimmers-hub/">Swimmer's Hub</a>
         <a href="/swim-lessons/">Find Lessons</a>
         <a href="/scholarships/">Scholarships</a>
+        <a href="/tools/">Free Tools</a>
         <a href="/aquatic-jobs/">Aquatic Jobs</a>
         <a href="/for-swim-schools/">For Swim Schools</a>
         <a href="/about/">About</a>
@@ -389,6 +395,6 @@
       </div>
     </div>
   </footer>
-  <script src="/assets/js/main.js?v=20260815b"></script>
+  <script src="/assets/js/main.js?v=20260901a"></script>
 </body>
 </html>

@@ -31,18 +31,21 @@
   <meta property="og:title" content="WaterWiseKids — Free Water Safety Guides & Swim School Directory" />
   <meta property="og:description" content="Free water safety guides, drowning prevention tips, and help finding quality swim lessons near you. Built by swim school professionals for families." />
   <meta property="og:image" content="https://www.waterwisekids.com/og-image.png" />
+  <meta property="og:image:alt" content="WaterWiseKids — Free Water Safety Guides &amp; Swim School Directory" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
   <meta property="og:site_name" content="WaterWiseKids" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://www.waterwisekids.com/" />
-  <meta name="twitter:title" content="WaterWiseKids — Water Safety Education & Swim Lesson Resources" />
-  <meta name="twitter:description" content="Free water safety guides, drowning prevention tips, and help finding quality swim lessons near you. Built by swim school professionals." />
+  <meta name="twitter:title" content="WaterWiseKids — Free Water Safety Guides &amp; Swim School Directory" />
+  <meta name="twitter:description" content="Free water safety guides, drowning prevention tips, and help finding quality swim lessons near you. Built by swim school professionals for families." />
   <meta name="twitter:image" content="https://www.waterwisekids.com/og-image.png" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/main.css?v=20260814b" />
+  <link rel="stylesheet" href="/assets/css/main.css?v=20260902b" />
 
   <!-- JSON-LD Schema Markup -->
   <script type="application/ld+json">
@@ -62,7 +65,7 @@
     "name": "WaterWiseKids",
     "url": "https://www.waterwisekids.com",
     "description": "WaterWiseKids is a free, non-commercial water safety education resource for families across the United States, offering drowning-prevention guides, swim-lesson guidance, and a nationwide swim-school directory. Founded by a team of certified swim instructors and water safety educators.",
-    "logo": "https://www.waterwisekids.com/assets/images/icons/logo-swimmer.svg",
+    "logo": {"@type": "ImageObject", "url": "https://www.waterwisekids.com/assets/images/waterwisekids-og.png"},
     "image": "https://www.waterwisekids.com/og-image.png",
     "areaServed": {
       "@type": "Country",
@@ -94,8 +97,14 @@
     /* ══════════════════════════════════════
        HERO SECTION
     ══════════════════════════════════════ */
+    /* 2026-08-29 visual QA: .hero p is rgba(255,255,255,.9) at 18.4px/400, which
+       is one third of a pixel under the 18.66px large-text threshold, so it needs
+       4.5:1 — it measured 3.61:1 against the blue-600 end of this gradient, and
+       even solid white only reaches 4.10:1 there. Moving the light end to
+       blue-700 (the same canonical blue .btn-secondary already uses) takes the
+       existing copy to 5.13:1 without touching the type. */
     .hero {
-      background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-800) 100%);
+      background: linear-gradient(135deg, var(--blue-700) 0%, var(--blue-800) 100%);
       color: var(--white);
       padding: 80px 24px;
       text-align: center;
@@ -152,15 +161,24 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     }
 
+    /* 2026-08-22 visual QA: white on blue-600 #0284c7 = 4.10:1, under AA 4.5.
+       blue-700 #0369a1 = 5.93:1 and is already the site's canonical button
+       blue (see main.css .button / .package-button).
+       2026-08-23 visual QA: that fix left the border the same blue-700 as the
+       fill, and the hero behind it is a blue-600 -> blue-800 gradient, so the
+       button had no discernible edge (~1.1:1 against its own background) and
+       read as loose text. WCAG 1.4.11 wants 3:1 for UI component boundaries.
+       A white border matches the site's own .btn-outline-white treatment and
+       gives 4.10:1 / 7.56:1 against the two ends of the hero gradient. */
     .btn-secondary {
-      background: var(--blue-600);
+      background: var(--blue-700);
       color: var(--white);
-      border: 2px solid var(--blue-600);
+      border: 2px solid var(--white);
     }
 
     .btn-secondary:hover {
-      background: var(--blue-700);
-      border-color: var(--blue-700);
+      background: var(--blue-800);
+      border-color: var(--white);
       transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(7, 89, 133, 0.3);
     }
@@ -257,7 +275,7 @@
 
     .offer-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
       gap: 32px;
       max-width: 1100px;
       margin: 0 auto;
@@ -269,6 +287,15 @@
       border-radius: 12px;
       border: 1px solid var(--gray-100);
       transition: all 0.3s;
+      /* 2026-08-22 visual QA: the grid stretches all three cards to the tallest
+         card, but each card's "Explore Guides / Browse Programs / Learn More"
+         link sat directly under a paragraph of varying length, leaving the
+         three links at three different heights (76px spread) with ragged
+         whitespace beneath. Flex column + margin-top:auto pins them to a
+         shared baseline. m-app.css forces display:block on mobile, where the
+         cards are single-column and this does not apply. */
+      display: flex;
+      flex-direction: column;
     }
 
     .offer-card:hover {
@@ -297,7 +324,9 @@
 
     .offer-card a {
       display: inline-block;
-      color: var(--blue-600);
+      margin-top: auto;
+      align-self: flex-start;
+      color: var(--blue-700);
       font-weight: 600;
       font-size: 0.95rem;
       transition: all 0.2s;
@@ -334,7 +363,7 @@
 
     .article-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
       gap: 28px;
       max-width: 1100px;
       margin: 0 auto;
@@ -377,7 +406,7 @@
     }
 
     .article-card a {
-      color: var(--blue-600);
+      color: var(--blue-700);
       font-weight: 600;
       font-size: 0.9rem;
       transition: all 0.2s;
@@ -435,7 +464,7 @@
     .state-grid a:hover {
       background: #eff8ff;
       border-color: var(--blue-500);
-      color: var(--blue-600);
+      color: var(--blue-700);
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
     }
@@ -447,7 +476,7 @@
 
     .directory-cta a {
       display: inline-block;
-      color: var(--blue-600);
+      color: var(--blue-700);
       font-weight: 600;
       font-size: 1rem;
       transition: all 0.2s;
@@ -460,7 +489,7 @@
 
     .programs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
       gap: 32px;
       max-width: 1100px;
       margin: 0 auto 48px;
@@ -505,7 +534,7 @@
 
     .program-card a {
       display: inline-block;
-      color: var(--blue-600);
+      color: var(--blue-700);
       font-weight: 600;
       font-size: 0.95rem;
       transition: all 0.2s;
@@ -533,7 +562,7 @@
     }
 
     .partnership-note a {
-      color: var(--blue-600);
+      color: var(--blue-700);
       font-weight: 600;
       transition: all 0.2s;
       display: inline-block;
@@ -592,7 +621,7 @@
 
     .about-content a {
       display: inline-block;
-      color: var(--blue-600);
+      color: var(--blue-700);
       font-weight: 600;
       margin-top: 12px;
       transition: all 0.2s;
@@ -672,7 +701,8 @@
 
     .newsletter-form button {
       padding: 12px 28px;
-      background: var(--blue-600);
+      /* 2026-08-22 visual QA: white on blue-600 = 4.10:1 (AA 4.5). */
+      background: var(--blue-700);
       color: var(--white);
       border: none;
       border-radius: 8px;
@@ -832,7 +862,7 @@
   <section class="stats-bar">
     <div class="stats-bar-inner">
       <div class="stat-item">
-        <span class="stat-number">341</span>
+        <span class="stat-number">421</span>
         <span class="stat-label">Free Safety Guides</span>
       </div>
       <div class="stat-item">
@@ -875,7 +905,7 @@
           <div class="offer-icon"><img src="/assets/images/icons/icon-partnerships.svg" alt="Partnerships" style="width:48px;height:48px;"></div>
           <h3>Partnership for Swim Schools</h3>
           <p>We partner with quality swim schools to help them reach more local families. Get a dedicated profile page, featured placement, and visibility on a growing national platform.</p>
-          <a href="/for-swim-schools/" data-cta="home-offer-partners">Learn More →</a>
+          <a href="/for-swim-schools/" data-cta="home-offer-partners" aria-label="Learn more about WaterWiseKids for swim schools">Learn More →</a>
         </div>
       </div>
     </div>
@@ -928,7 +958,7 @@
         </div>
 
         <div class="article-card">
-          <div class="article-icon"><img src="/assets/images/icons/icon-education.svg" alt="CPR" style="width:36px;height:36px;"></div>
+          <div class="article-icon"><img src="/assets/images/icons/icon-education.svg" alt="CPR basics for parents" style="width:36px;height:36px;"></div>
           <h3>CPR Basics Every Parent Should Know</h3>
           <p>Plain-language steps for recognizing distress, calling for help, and performing CPR on a child until help arrives.</p>
           <a href="/education/cpr-basics-parents.html">Read Guide →</a>
@@ -936,7 +966,7 @@
       </div>
 
       <div style="text-align: center; margin-top: 48px;">
-        <a href="/education/" style="display: inline-block; color: var(--blue-600); font-weight: 600; font-size: 0.95rem; transition: all 0.2s;" data-cta="home-view-all-guides">View All 341 Guides →</a>
+        <a href="/education/" style="display: inline-block; color: var(--blue-700); font-weight: 600; font-size: 0.95rem; transition: all 0.2s;" data-cta="home-view-all-guides">View All 421 Guides →</a>
       </div>
     </div>
   </section>
@@ -1035,8 +1065,8 @@
     <div class="newsletter-content">
       <h2>Free Printable: Summer Water Safety Checklist</h2>
       <p>Sign up and get instant access to our printable one-page checklist covering pool safety, beach rules, life jacket guidelines, and emergency prep. Plus weekly water safety tips from swim professionals.</p>
-      <form class="newsletter-form" data-form="newsletter-homepage" method="POST" action="https://formspree.io/f/mojpyqdo">
-        <input type="email" name="email" placeholder="Your email address" required>
+      <form class="newsletter-form" data-form="newsletter-homepage" method="POST" action="https://formspree.io/f/mojpyqdo" data-formspree-inline="1">
+        <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
         <button type="submit">Get the Checklist</button>
         <input type="hidden" name="source" value="homepage-checklist">
         <input type="text" name="_gotcha" style="display:none">
@@ -1068,6 +1098,7 @@
         <a href="/swimmers-hub/">Swimmer's Hub</a>
         <a href="/swim-lessons/">Find Lessons</a>
         <a href="/scholarships/">Scholarships</a>
+        <a href="/tools/">Free Tools</a>
         <a href="/aquatic-jobs/">Aquatic Jobs</a>
         <a href="/for-swim-schools/">For Swim Schools</a>
         <a href="/about/">About</a>
@@ -1118,7 +1149,7 @@
       });
     });
   </script>
-  <script src="/assets/js/main.js?v=20260815b"></script>
+  <script src="/assets/js/main.js?v=20260901a"></script>
   <!-- Mobile app experience — direct load as failsafe -->
 
 <!-- INLINE MOBILE CSS (temporary CDN cache bypass) -->

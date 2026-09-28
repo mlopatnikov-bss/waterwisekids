@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="At-home water safety activities illustration">
+  <defs>
+    <linearGradient id="room" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#room)"/>
+
+  <!-- living-room floor -->
+  <rect x="0" y="252" width="600" height="108" fill="url(#floor)" opacity="0.55"/>
+  <path d="M0 252 h600" stroke="#f59e0b" stroke-width="3" opacity="0.5"/>
+
+  <!-- window with an off-season rainy sky -->
+  <g transform="translate(40,44)">
+    <rect x="0" y="0" width="128" height="104" rx="8" fill="#bae6fd" stroke="#0369a1" stroke-width="3"/>
+    <line x1="64" y1="0" x2="64" y2="104" stroke="#0369a1" stroke-width="3"/>
+    <line x1="0" y1="52" x2="128" y2="52" stroke="#0369a1" stroke-width="3"/>
+    <path d="M18 22 q10 -10 22 -4 q10 -10 22 2 q10 2 8 12 h-56 q-6 -8 4 -10 z" fill="#e2e8f0"/>
+    <line x1="26" y1="70" x2="22" y2="84" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+    <line x1="44" y1="68" x2="40" y2="82" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+    <line x1="90" y1="70" x2="86" y2="84" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- rug -->
+  <ellipse cx="300" cy="292" rx="196" ry="42" fill="#7dd3fc" opacity="0.42"/>
+
+  <!-- child practising the dry-land starfish back float on the rug -->
+  <g transform="translate(238,278)">
+    <ellipse cx="0" cy="14" rx="76" ry="13" fill="#0ea5e9" opacity="0.25"/>
+    <rect x="-42" y="0" width="82" height="15" rx="7.5" fill="#f472b6"/>
+    <circle cx="48" cy="8" r="14" fill="#fcd9b6"/>
+    <path d="M35 3 a13 13 0 0 1 26 0 z" fill="#78350f"/>
+    <rect x="-56" y="-10" width="26" height="8" rx="4" fill="#fcd9b6" transform="rotate(-24 -43 -6)"/>
+    <rect x="-56" y="10" width="26" height="8" rx="4" fill="#fcd9b6" transform="rotate(24 -43 14)"/>
+  </g>
+
+  <!-- rope coiled for reach-throw-don't-go practice -->
+  <g transform="translate(96,272)">
+    <path d="M0 18 q22 -20 46 0 t46 0" fill="none" stroke="#f97316" stroke-width="7" stroke-linecap="round"/>
+    <path d="M6 30 q22 -18 44 0 t42 0" fill="none" stroke="#fdba74" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- activity badge panel -->
+  <g transform="translate(384,56)">
+    <rect x="0" y="0" width="176" height="176" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+
+    <!-- life jacket -->
+    <g transform="translate(24,26)">
+      <path d="M6 0 h36 v14 h12 v40 h-14 v10 h-32 v-10 h-14 v-40 h12 z" fill="#f97316" stroke="#c2410c" stroke-width="2.5" stroke-linejoin="round"/>
+      <line x1="24" y1="14" x2="24" y2="64" stroke="#c2410c" stroke-width="2.5"/>
+      <rect x="4" y="30" width="40" height="7" rx="3.5" fill="#fed7aa"/>
+    </g>
+
+    <!-- phone showing 911 -->
+    <g transform="translate(104,26)">
+      <rect x="0" y="0" width="46" height="66" rx="8" fill="#0f172a"/>
+      <rect x="4" y="8" width="38" height="46" rx="4" fill="#e0f2fe"/>
+      <text x="23" y="38" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#b91c1c" text-anchor="middle">911</text>
+      <circle cx="23" cy="60" r="3.5" fill="#475569"/>
+    </g>
+
+    <!-- hazard hunt: bucket with a water drop -->
+    <g transform="translate(24,110)">
+      <path d="M2 4 h44 l-6 44 h-32 z" fill="#7dd3fc" stroke="#0369a1" stroke-width="2.5" stroke-linejoin="round"/>
+      <rect x="0" y="0" width="48" height="8" rx="4" fill="#0369a1"/>
+      <path d="M24 16 q9 12 9 18 a9 9 0 0 1 -18 0 q0 -6 9 -18 z" fill="#0ea5e9"/>
+    </g>
+
+    <!-- water-watcher eye badge -->
+    <g transform="translate(100,112)">
+      <rect x="0" y="0" width="54" height="44" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+      <path d="M11 22 q16 -14 32 0 q-16 14 -32 0 z" fill="#ffffff" stroke="#166534" stroke-width="2.5" stroke-linejoin="round"/>
+      <circle cx="27" cy="22" r="5.5" fill="#166534"/>
+    </g>
+  </g>
+
+  <!-- title strip -->
+  <rect x="0" y="316" width="600" height="44" fill="#0c4a6e"/>
+  <text x="24" y="344" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Water Safety Activities at Home</text>
+</svg>

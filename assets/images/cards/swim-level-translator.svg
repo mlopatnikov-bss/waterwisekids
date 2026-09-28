@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="A swim level translator chart matching fish-name levels to numbered stages, above a pool">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#sky)"/>
+  <rect y="142" width="300" height="38" fill="url(#water)"/>
+  <g stroke="#bae6fd" stroke-width="2.5" stroke-linecap="round" opacity="0.6" fill="none">
+    <path d="M22 156 q10 -6 20 0 t20 0"/>
+    <path d="M206 166 q10 -6 20 0 t20 0"/>
+    <path d="M110 172 q10 -6 20 0 t20 0"/>
+  </g>
+  <rect y="134" width="300" height="8" fill="#e2e8f0"/>
+  <rect y="134" width="300" height="2.5" fill="#cbd5e1"/>
+  <rect x="24" y="18" width="252" height="106" rx="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1.6"/>
+  <rect x="24" y="18" width="252" height="18" rx="7" fill="#e0f2fe"/>
+  <rect x="24" y="30" width="252" height="6" fill="#e0f2fe"/>
+  <g fill="#0c4a6e" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="700">
+    <text x="36" y="31">FISH NAME</text>
+    <text x="150" y="31">STAGE</text>
+    <text x="212" y="31">LEVEL</text>
+  </g>
+  <g stroke="#cbd5e1" stroke-width="1.2">
+    <line x1="140" y1="36" x2="140" y2="124"/>
+    <line x1="202" y1="36" x2="202" y2="124"/>
+    <line x1="24" y1="58" x2="276" y2="58"/>
+    <line x1="24" y1="80" x2="276" y2="80"/>
+    <line x1="24" y1="102" x2="276" y2="102"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="9" font-weight="600">
+    <rect x="34" y="41" width="52" height="12" rx="6" fill="#bae6fd"/>
+    <path d="M118 47 l10 0 m-4 -4 l4 4 l-4 4" stroke="#0369a1" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="150" y="50" fill="#0c4a6e">1</text>
+    <text x="212" y="50" fill="#0c4a6e">L1</text>
+    <rect x="34" y="63" width="44" height="12" rx="6" fill="#7dd3fc"/>
+    <path d="M118 69 l10 0 m-4 -4 l4 4 l-4 4" stroke="#0369a1" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="150" y="72" fill="#0c4a6e">2-3</text>
+    <text x="212" y="72" fill="#0c4a6e">L2</text>
+    <rect x="34" y="85" width="58" height="12" rx="6" fill="#38bdf8"/>
+    <path d="M118 91 l10 0 m-4 -4 l4 4 l-4 4" stroke="#0369a1" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="150" y="94" fill="#0c4a6e">3-4</text>
+    <text x="212" y="94" fill="#0c4a6e">L3</text>
+    <rect x="34" y="107" width="38" height="12" rx="6" fill="#0ea5e9"/>
+    <path d="M118 113 l10 0 m-4 -4 l4 4 l-4 4" stroke="#0369a1" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="150" y="116" fill="#0c4a6e">4-5</text>
+    <text x="212" y="116" fill="#0c4a6e">L4</text>
+  </g>
+  <g>
+    <ellipse cx="150" cy="160" rx="26" ry="6" fill="#0c4a6e" opacity="0.22"/>
+    <circle cx="131" cy="157" r="7" fill="#fcd9b8"/>
+    <path d="M124 155 a7 7 0 0 1 14 0 z" fill="#7c4a21"/>
+    <rect x="138" y="152" width="30" height="9" rx="4.5" fill="#f472b6"/>
+    <rect x="166" y="154" width="12" height="5" rx="2.5" fill="#fcd9b8"/>
+  </g>
+</svg>

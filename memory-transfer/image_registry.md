@@ -103,3 +103,19 @@ These are AI-generated cartoon illustrations, NOT Pexels photos (no Pexels IDs t
 - backward-design-swim-curriculum
 - quarterly-vs-monthly-swim-lessons
 - group-vs-continuous-swim-advancement
+- swim-vest-life-jacket
+- rip-currents-pull-you-under
+- infant-swim-resource
+- autism-speaks-water-safety
+
+## AI card art (2026-09-21)
+- /assets/images/cards/goldfish-swim-school-levels.jpg -> education/goldfish-swim-school-levels.html
+  (AI-generated, gen-card-image.py; no Pexels ID. Verified on first pass.)
+
+## AI card art (2026-09-22)
+- /assets/images/cards/cpr-adults.jpg -> education/cpr-adults.html
+  (AI-generated, gen-card-image.py; no Pexels ID. Verified on first pass: two rescuers
+  performing compressions side by side on an adult and a child. No text artifacts.)
+- /assets/images/cards/cpr-class.jpg -> education/cpr-class.html
+  (AI-generated, gen-card-image.py; no Pexels ID. Verified on first pass: parents practising
+  on infant and child manikins with an instructor. No text artifacts.)

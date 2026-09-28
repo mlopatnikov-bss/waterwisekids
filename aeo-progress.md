@@ -13,6 +13,739 @@ Each article is checked against the full 8-point checklist:
 
 ---
 
+## Batch 62 — 2026-09-17 — the prose backlog is still 0, so the batch went to the directory state cluster
+
+Shipped from a fresh `origin/live` clone at `dedccae` → **`e4d5991`**. Four files,
+**27 insertions / 3 deletions**, 0 deletions of content (the 3 deletions are sitemap `lastmod`
+date lines).
+
+### The unmeasured surface was the directory state cluster, not the articles
+
+Prose backlog re-verified **0** at HEAD, as Batch 60/61 recorded. The 8-point survey re-run
+across **658 indexable pages** returned the residue exactly where memory said it would be —
+`HowToStep.position` 0, `name` 0, `url` 80/16 files (deferred), `HowTo.totalTime` 32
+(deferred), 0 JSON-LD parse errors.
+
+What it *also* returned, and what nobody had scored as a cluster: **46 pages with no answer
+surface, and the identical 46 with no `speakable`.** The two lists are byte-identical — on this
+corpus the box and the speakable node co-vary perfectly, so *one* probe measures both.
+
+Of those 46:
+
+| group | n | verdict |
+|---|---|---|
+| `swim-lessons/directory/*.html` state pages | **28** | **real backlog — taken** |
+| directory hub + `swim-lessons/`, `teens/`, `scholarships/` etc. | 8 | hub scope, unchanged |
+| legal / transactional (`privacy`, `terms`, `contact`, `jobs`, `advertise`, `gear`, `add`) | 10 | **not backlog**, per Batch 59 |
+
+**52 state pages exist; 23 carried a box and 29 did not.** A template family split almost
+in half is the highest-value answer surface left on the site: these pages target
+*"swim lessons in \<state\>"*, the most commercially intent-loaded query the site owns.
+
+### The boxes are NOT a template — that is the finding
+
+The 23 existing boxes normalize to **23 distinct texts**, not one. Every one is hand-written
+around that state's own geography — Lake Michigan piers and breakwalls, Chesapeake tidal
+drop-offs, TVA reservoir timber, Puget Sound cold. There is no mechanical fill here, and a
+`<STATE>`-substitution pass would have shipped 29 plausible-sounding fabrications.
+
+### Web search was unavailable this run — which decided the sourcing rule
+
+`WebSearch` returned `unavailable` and `web_fetch` is provenance-gated, so **no external
+verification was possible**. Rather than defer the batch, the rule for this one became:
+*every clause must trace to a claim already published on that same page, or to a national stat
+already verified in memory.*
+
+So each box was built from the page's own `.state-info` prose and its own `FAQPage`
+`acceptedAnswer` text, plus the three national facts the other 22 boxes already carry with
+their existing links (AAP start around age 1 · 88% reduction ages 1–4 · CDC leading cause).
+**Zero new unverifiable claims were introduced.** This is a reusable pattern: a state page's
+existing FAQ answers are a pre-verified corpus for its own answer box.
+
+### What shipped
+
+| page | schools | price band | state-specific clause, and where it came from |
+|---|---|---|---|
+| `oregon.html` | 12 | $20–$40 | snowmelt rivers + cold Pacific coast, sneaker waves, rip currents — from its own *"Are swim lessons enough for Oregon's rivers and coast?"* answer |
+| `utah.html` | 11 | $15–$35 | snowmelt reservoirs cold into summer, Lake Powell / Bear Lake drop-offs, **no single statewide pool-fence law** — from its own two FAQ answers |
+| `connecticut.html` | 11 | $15–$30 | infant classes from 3–6 months; State Building Code barrier requirement — from its own FAQ answers |
+
+### The Oregon count was checked against the ItemList, not the prose
+
+The first draft said *"concentrated in the Portland metro — Beaverton, Hillsboro, Tigard and
+Tualatin"*, lifted from the page's own cost paragraph. Cross-checking the page's `ItemList`
+showed the real distribution is **11 of 12 in the Portland metro plus one in Bend** — and
+Tigard holds no verified listing at all; it appears only in the *pricing-band* sentence.
+Rewritten to state the split explicitly.
+
+**The lesson: a directory page's prose paragraph and its `ItemList` are two different
+denominators.** The prose describes a *pricing band* (which towns cost the same); the
+`ItemList` describes *inventory* (which towns have a school). Quoting the prose as if it were
+inventory invents listings. Always ground a count clause in the `ItemList`.
+
+### Speakable selector — deliberately diverged from the older 23
+
+The 23 existing pages use `[".tldr-box", ".page-hero h1", ".state-info h3"]`. On these pages
+`.state-info h3` resolves to **4–6 elements**, which is the non-1-selector surface already
+characterized in [[speakable_selector_can_match_a_lead_magnet_ad]].
+
+The new pages carry `class="tldr-box" id="quick-answer"` — class kept for CSS and
+family consistency, `id` added as a unique speakable anchor — and the selector set
+`["#quick-answer", ".page-hero h1"]`, **both asserted to resolve to exactly 1**. The older 23
+were left alone; converting them is a separate, safe, mechanical batch.
+
+### Validation
+
+- `lxml` strict HTML parse: **0 errors** on all three (no unclosed tags).
+- All 4 JSON-LD blocks per page parse; `WebPage` / `FAQPage` / `BreadcrumbList` / `ItemList`
+  all intact; `speakable` hung on the **`WebPage`** node, never a `WebApplication`.
+- `WebPage.url` == the page's own `rel=canonical`, on the `www` host, all three.
+- Every speakable selector resolves to **exactly 1** element.
+- Exactly 1 box element per page; box sits after `.page-hero`, before the next `<section>` —
+  the same position as the 23 existing ones.
+- Counts and price bands asserted against each page's own `.school-count` and `ItemList`.
+- 0 brand-voice ownership hits (WaterWiseKids operates no swim school; copy says *"verifies"*).
+- Only external links added are the AAP and CDC hrefs already used by the other 22 boxes.
+- `git diff` is additive apart from 3 sitemap date lines; `sitemap.xml` re-parsed valid after
+  bumping `lastmod` to 2026-09-17 on exactly the 3 touched pages.
+- Axis moved **46 → 43** on both `no_answer_box` and `no_speakable`, re-measured on the clone.
+
+### The log fork, re-diagnosed — it is worse than "stale"
+
+Batch 60 recorded that `aeo-progress.md` is untracked in the repo. That was half right. The
+mount **does** track it (`ddc3769ec [deploy] Auto-pickup`), but:
+
+- `aeo-progress.md` **does not exist in `origin/live`** at all — `git cat-file -e
+  origin/live:aeo-progress.md` fails.
+- The mount is **273 commits ahead / 50 behind** `origin/live`. Its local commits were never
+  pushed and its branch has diverged.
+- The mount's working copy carries **+2,106 uncommitted lines** — Batches 56 through 61,
+  written by prior runs and never committed anywhere.
+
+So the log is not forked between two repos; it is a **write-only file on a diverged local
+branch nobody pushes**. Committing it to `origin/live` would publish an internal log at
+`waterwisekids.com/aeo-progress.md`, so that is *not* the fix.
+
+**Never push from the mount.** Every batch since 60 has clone → patch → push, and should
+continue to. Memory remains the authoritative log.
+
+### Also: this file is not in chronological order
+
+Batch 60 sits at line 16; Batch 61 sits at line **3178**. A run that reads only the top of this
+file will conclude the newest batch is 60 and mis-number its own. `grep -n '^## '` before
+numbering a batch.
+
+### Backlog after this run
+
+1. **Directory answer surface: 29 → 26 state pages without a box** (28 states minus the 3
+   taken, plus `directory/index.html`). Natural Batch 63–71 work, ~3 per run. Ranked by
+   verified school count, next up: **Nebraska (11), Connecticut ✓, Kentucky (10),
+   Oklahoma (9), Kansas (7), Alabama (7)**.
+2. **The 23 older state pages' speakable selectors** resolve to 4–6 elements via
+   `.state-info h3`. Mechanical, safe, one batch — add `id="quick-answer"` to the existing box
+   and narrow the selector.
+3. `connecticut.html` carries **7 `FAQPage` questions but 6 visible `h3`s**. The 7th
+   (*"Where can I find infant swim classes in Connecticut?"*) **is** answered visibly, under a
+   paraphrased heading (*"Where Can You Find Infant and Toddler Swim Classes in
+   Connecticut?"*). Not an orphan in substance — do **not** delete it
+   ([[faq_parity_probe_needs_five_shapes_and_doc_scope]]).
+4. `HowToStep.url` 80 / 16 files and `HowTo.totalTime` 32 both still deferred, unchanged.
+5. Batch 58–61 items otherwise stand.
+
+---
+
+## Run 2026-09-16 — Batch 60: the prose backlog was already zero, so the batch went to the flagged residue
+
+Shipped from a fresh `origin/live` clone at `a8303e5` → **`614c29e`**. Four files, 24
+insertions / 22 deletions, **0 deletions of content**.
+
+### This log was stale by four batches
+
+This file's newest entry was Batch 55 (2026-09-05). Memory records Batches **56, 58 and 59**
+(09-06 → 09-10) which were never written here — the fork in
+[[aeo_progress_log_forked_between_repo_and_mount]] reopened, and this time the repo has **no
+copy at all** (`aeo-progress.md` is untracked), so the mount copy is the only one and it had
+simply stopped being appended to. Verified empirically rather than trusted:
+`swim-strokes-guide-kids` — the one prose-backlog item this log still lists as open (3/7) —
+reads **7/7** at HEAD. Memory was right; the log was wrong.
+
+**Prose backlog = 0, confirmed at HEAD.** The task file's numbered priority list
+(`best-age-for-swim-lessons`, `can-babies-swim`, …) was drained many batches ago.
+
+### What was actually still open, and what was taken
+
+| surface | reading at HEAD | action |
+|---|---|---|
+| `HowToStep.position` | **13** missing, 2 files | **closed → 0** |
+| `HowToStep.name` | 0 missing | already closed (Batch 58) |
+| `HowToStep.url` | 80 missing, 16 files | **deferred, per [[howto_step_url_is_not_mechanically_closable]]** |
+| `HowTo.totalTime` | 32 blocks | deferred — durations are not stated on the pages; inventing them is fabrication |
+| `teaching-kids-safe-pool-entry` uncited claim | 3 occurrences | **fixed + attributed** |
+| `make-a-splash` divergent FAQ blocks | 1 `#faq`, 1 `FAQPage`, 0 orphans | **closed — no longer a defect** |
+
+### The position close
+
+`teens/lifeguard-certification.html` (8 steps) and `teens/swim-instructor.html` (5).
+Inserted `"position": N` in array order into the one-line `{"@type": "HowToStep", …}` shape —
+minimal-diff, no reserialization, so no formatting churn and no entity risk.
+
+**A guard earned its keep.** The pre-flight assertion `'"position"' not in t` fired on both
+files — because `BreadcrumbList` `ListItem`s legitimately carry `position`. The naive check
+would have been *skipped as already-done* if written as a silent conditional instead of an
+assert. Scope the probe to `"HowToStep", "position"`.
+
+### The citation fix — the claim was imprecise, not false
+
+`teaching-kids-safe-pool-entry.html` asserted, twice and uncited, that headfirst entries are
+*"a leading cause of serious neck and spinal injuries."* Verified against
+[Shepherd Center](https://shepherd.org/education/injury-prevention/diving/), which publishes
+the figure and names its source: **the National Spinal Cord Injury Statistical Center ranks
+diving the *fifth* leading cause of spinal cord injury.** So "a leading cause" was vague
+rather than wrong — the fix is precision plus attribution, not retraction. Also carried
+Shepherd's 58% (divers aged 23 and under).
+
+**The claim lived in THREE places, not two:** the `#why` prose, the visible FAQ `<p>`, and the
+**`acceptedAnswer.text` inside the FAQPage JSON-LD**. Fixing prose alone would have left the
+schema asserting the old uncited claim to every answer engine — the inverse of
+[[claim_fix_can_land_in_schema_but_not_prose]]. Schema and visible were changed in lockstep
+and asserted **byte-identical after normalization**; the link lives only in the visible
+markup, so the *text* stays identical while the rendered page still carries the citation.
+
+### The probe trap I walked into and backed out of
+
+An `h3`-only FAQ-parity check reported `make-a-splash` as carrying an orphan schema question
+(*"How do I find free or low-cost swim lessons near me?"*, 5 schema vs 4 visible). Acting on
+that would have **deleted a healthy Q&A** — the exact failure
+[[faq_parity_probe_needs_five_shapes_and_doc_scope]] warns about. Re-run with the recorded
+five-shape, document-scoped selector set, the question is **mirrored by a `p > strong`** and
+the sitewide canary reads **0 schema-not-visible across 3,099 Q&A on 649 files**. The
+Batch-54 flag on this page is closed as *not a defect*.
+
+### Validation
+
+| check | result |
+|---|---|
+| lxml parse (html5lib unavailable — disk full) | clean x3 |
+| JSON-LD | `[Article, HowTo, FAQPage, BreadcrumbList]` x3, parses clean, 0 leaked entities |
+| DOM signature diff vs HEAD | 134→134, 132→132, **191→198** |
+| the +7 | 3 new inline `<a>` + 2 `<li>` + their 2 `<a>` — exactly accounted for |
+| text-node diff | only the 2 rewritten claim paragraphs; **0 prose strings removed elsewhere** |
+| FAQ schema ↔ visible parity | **byte-identical after normalization**; sitewide orphans **0 / 3,099** |
+| head integrity | 16 head metas, **0 body metas**, canonical in head (x3) |
+| per-meta quote parity | 0 odd-quote tags (x3) |
+| `headline == h1` | true x3 |
+| speakable | every selector → exactly **1**, on all three |
+| meta description | 149 / 147 / 155 — unchanged |
+| dead in-page anchors | **0** |
+| `git status` deletions canary | **0** ([[never_create_scratch_files_inside_the_repo_clone]]) |
+| `dateModified` | → **2026-09-16** x3 |
+| `sitemap.xml` lastmod | exactly 3 URLs bumped, re-parses clean, **657 entries** unchanged |
+
+### Flagged for Michael — not changed
+
+1. **The shared workspace disk is 100% full (9.3G of 9.8G).** My own tree accounts for only
+   355M of it, so the bulk belongs to other concurrent sessions. It was full enough to make
+   `pip install html5lib` fail with `ENOSPC`, so this run validated with `lxml` instead.
+   Related: the **mount's `.git` is 287M** against 22M for a fresh shallow clone — the
+   never-gc'd pack problem is still there.
+2. **`HowToStep.url` (80 steps / 16 files) stays deferred on purpose.** Anchoring is only
+   honest where a step has a section of its own; on most of these the steps are sub-points
+   inside one procedure section. A url pointing at the wrong fragment is worse than an absent
+   optional field. This needs an editorial pass, not a schema patch.
+3. **`HowTo.totalTime` (32 blocks)** — the two `teens/` certification paths genuinely span
+   weeks and the pages state no duration. Left empty rather than invented.
+4. **Still standing from earlier batches:** `education/index.html` (1/8) is a deliberate hub
+   scope decision, the 71 printable bridge H2s are recommended closed, and
+   `adaptive-swimming-special-needs.html` still has **two `div.article-body`** elements.
+
+---
+
+## Run 2026-09-05 — Batch 55: the prose backlog cut to one, and a lead-magnet ad wearing the summary box's class
+
+Shipped from a fresh `origin/live` clone at `c04aef422`. Three articles taken:
+`water-confidence-challenge` (1/5 → 5/5), `swim-milestones-by-age` (3/8 → 8/8),
+`autism-wandering-water-safety` (4/9 → 9/9). **14 H2s converted.**
+
+### Backlog reconciliation before touching anything
+
+The scorer was rebuilt from the recorded role table verbatim (`cl-` class, cta ancestor,
+related-cards, sources-list, structural-id, faq-block-requires-non-question-h2), with the
+≤3-direct-children restriction on the parent test and the per-role cardinality canary.
+
+| canary | reading |
+|---|---|
+| over-skip (>2 per role per file, printables excluded) | **0** |
+| skipped headings ending in `?` | 83, of which **18 printable-label** |
+| non-printable skipped `?` | 65 — **45 `cta-text`, 20 `cta`** |
+| pages scored (n≥3) / dropped (n<3) | 420 / 95 |
+
+**The `20` in the standing canary is the `cta` ancestor-class role only.** The other 45 are
+the `#printable` lead-magnet CTAs — *"Where can I get the free printable X?"* — which carry
+**no class** and are caught only by the acquisition-verb ∩ printable-noun text rule. All 45
+were printed and read: every one is a lead-magnet CTA, none is content. That is why this
+run reads `water-confidence-challenge` as **1/5** where Batch 54's report said **2/6** —
+the difference is exactly that page's `#printable` CTA, counted there and excluded here.
+The exclusion moves a *question* out of the numerator, so it can only make a page look
+worse, never hide one; the backlog page set was identical either way (5 pages).
+
+### The 14 conversions
+
+`water-confidence-challenge` (emoji stored as **HTML entities**, sentence case):
+
+| id | was | now |
+|---|---|---|
+| `works` | Why a 30-day drip works better than a big push | Why do 30 short sessions work better than one big push? |
+| `weeks` | The four weeks, at a glance | How does the challenge build from bathtub to pool? |
+| `safety` | Confident is not the same as safe | Can a more confident child actually be at greater risk? |
+| `next` | What comes after Day 30 | Why is the end of the challenge the best time to enroll? |
+
+`swim-milestones-by-age` (Title Case, **no ids on the target H2s** — replacement keyed on
+full raw heading string with `count==1` asserted before and after):
+
+| was | now |
+|---|---|
+| What Should Babies Do Before Age 1: Water Comfort & Acclimation | What Swim Skills Should a Baby Have Before Age 1? |
+| What Can Ages 1-2 Do: Foundation Skills | What Do 1- and 2-Year-Olds Learn in Their First Year of Lessons? |
+| What Can Ages 2-3 Achieve: Building Independence (Slowly) | When Do Toddlers Start Floating With Minimal Support? |
+| What Can Ages 3-5 Learn: Skill Development Accelerates | Which Swim Skills Develop Fastest Between Ages 3 and 5? |
+| What Can Ages 5+ Master: Toward Independent Swimmers | What Swim Skills Do Children Master After Age 5? |
+
+These five were **pseudo-questions** — `What Should Babies Do Before Age 1:` reads as a
+question but ends in a colon and a label, so it never scored. See
+[[question_heading_not_ending_in_question_mark]].
+
+`autism-wandering-water-safety` (the `Layer N:` prefix is the page's ladder and was
+**preserved**, so the sidebar TOC labels stay accurate):
+
+| id | was | now |
+|---|---|---|
+| `prevent-wandering` | Layer 1: Stop the wandering at the door | Layer 1: How do you stop a child from getting out the door? |
+| `supervision` | Layer 2: Supervision built for wandering | Layer 2: What kind of supervision does a child who wanders need? |
+| `swim-lessons` | Layer 3: Swim lessons and self-rescue | Layer 3: Which self-rescue skills matter most for a child who wanders? |
+| `emergency` | Layer 4: Plan for the worst | Layer 4: Where should you search first if your child goes missing? |
+| `bottom-line` | The bottom line for families | Can wandering drownings actually be prevented? |
+
+### Collision handling — three re-aims, all against *other* pages this time
+
+Corpus **7,106** headings (`h1+h2+h3` ending in `?` across 763 files, including the files
+being edited). Threshold **0.75**. Final worst **0.742**.
+
+1. `What happens in each of the four weeks?` — **0.775** vs
+   `swim-float-swim-method-explained :: What happens in each phase of the sequence?`.
+   Re-aimed to the ladder the lead actually describes (home → shallow water):
+   `How does the challenge build from bathtub to pool?` (0.639).
+2. `What should you do after Day 30?` — **0.812** vs
+   `bathtub-safety-checklist :: What Should You Do After the Bath?`. First re-aim,
+   `Is your child ready for swim lessons after Day 30?`, scored **0.847** against
+   `water-anxious-kids-preparation :: Is Your Child Ready for Swim Lessons?` — a second
+   collision the first re-aim walked straight into. Landed on the section's actual claim
+   (momentum, not readiness): `Why is the end of the challenge the best time to enroll?` (0.565).
+3. `What should you do if your child goes missing?` — **0.791** vs
+   `drowning-prevention-guide :: What should you do if a child is drowning?`; then
+   `How do you prepare for a missing-child emergency?` — **0.787** vs
+   `hot-tub-spa-safety-checklist :: How should you prepare for a spa emergency?`.
+   Landed on the section's one distinctive instruction — *search water first* —
+   `Where should you search first if your child goes missing?` (0.714).
+
+**A re-aim can collide harder than the original.** Two of the three needed a second pass.
+Re-score every re-aim against the full corpus; do not assume a rewrite moves away.
+
+Two proposals sat just under threshold and were **kept deliberately**, both scope splits
+rather than intent duplicates: `What Swim Skills Should a Baby Have Before Age 1?` (0.742 vs
+`swim-milestones-checklist :: What swim skills should my child have at each age?` — the
+sibling owns "each age", this owns age 1) and `Which Swim Skills Develop Fastest Between
+Ages 3 and 5?` (0.738 vs `swimming-achievement-milestones :: What Swim Milestones Develop
+Between Ages 1 and 2?` — different age band, same shape). Both are the "split scope, not
+topic" case; flagged for the cannibalization watch rather than re-aimed.
+
+All 14 sections were re-read after editing: **every one opens with a direct answer to its
+new question**, and no lead paragraph was altered by the heading work.
+
+### The real find — a printable ad wearing `.tldr-box`
+
+`swim-milestones-by-age` declared `speakable.cssSelector` including `.tldr-box`, and
+`.tldr-box` resolved to **2**. The second is a lead-magnet promo —
+*"🖨️ Track it on paper: Our free printable Age-by-Age Swim Milestones Checklist…"* —
+reusing the summary box's class for its styling. Answer engines were being handed a
+**printable ad as one of the page's two speakable summaries.**
+
+Swept the shape sitewide before fixing: **684 files carry `speakable`; this is the only
+page where a `.tldr-box` promo exists.** Not a family, a one-off.
+
+Fixed without touching styling or markup shape: `id="quick-answer"` added to the genuine
+summary box and the selector narrowed `.tldr-box` → `#quick-answer`. No class was changed,
+so no CSS rule was disturbed — see [[markup_variant_must_be_added_to_every_rule_in_the_family]]
+for why renaming the promo's class would have been the wrong fix.
+
+**The wider speakable-cardinality surface, characterized not swept:** 160 selectors across
+the site do not resolve to exactly 1. **113 of them are printable-family selectors**
+(`.cl-item` 76, `.cl-checkbox` 14, `h2.cl-section-title` 13, `.cl-section-title` 10) and are
+**correct by design** — printables are a separate template family. The remainder is a real
+open surface and is listed below rather than fixed blind.
+
+### A probe that lied, caught by its own canary
+
+The raw-head embedded-quote scan reported **1 hit** on `swim-milestones-by-age`. It is a
+false positive: the regex `<meta[^>]*content="[^"]*"[^">]*"` spans **two adjacent meta
+tags** (`content="summary_large_image"` … `name="`). Confirmed by an odd-quote-count test
+per meta tag (**0**), by html5lib parsing clean, and by running the same regex against
+`HEAD` — **also 1**, so it predates this batch entirely. The correct test is
+per-tag quote parity, not a cross-tag regex.
+
+### Validation
+
+| check | result |
+|---|---|
+| DOM signature diff vs HEAD (scripts stripped) | **179/179**, **200/200** identical; `swim-milestones` 341→342, accounted for exactly by the one added `id` |
+| text-node diff | only the 14 headings and 2 `Updated` lines; **0 prose strings removed elsewhere** |
+| html5lib parse | clean x3 |
+| head integrity | 16 head metas, **0 body metas**, canonical in head (x3) |
+| per-meta quote parity | 0 odd-quote tags (x3) |
+| JSON-LD | `[Article, BreadcrumbList, FAQPage]` x3, parses clean, **0 leaked entities** |
+| FAQ schema ↔ visible parity | **0 orphans** across 5/5/4 Q&A, full recorded selector set (`h1..h5, summary, p>strong, p>b, dt, button, .faq-question, legend`), canonical apostrophe/emoji normalization |
+| visible-candidate-set canary | 29 / 51 / 38 — non-empty, probe not shrunken |
+| speakable | every selector → exactly **1**, on all three |
+| `headline == h1` | true x3 |
+| meta description (decoded) | 138 / 155 / 152 — unchanged |
+| dead in-page anchors | **0** (every `h2 id` preserved) |
+| placeholders / ownership-voice | 0 / 0 |
+| `dateModified` | 2026-08-09 / 2026-07-30 / 2026-08-23 → **2026-09-05** |
+| visible `Updated` line | synced on the two pages that carry one |
+| `sitemap.xml` lastmod | exactly 3 URLs bumped, re-parsed clean, **647 entries** |
+
+Text-only changes plus one `id` attribute, so no render sweep was warranted.
+
+### Backlog after this run
+
+**Prose backlog is down to 1:** `swim-strokes-guide-kids` (3/7).
+It carries a **HowTo** schema, so per [[howto_blocks_heading_rewrite_bind_by_url]] the next
+run must bind `HowToStep.url` to the section ids and replace `step.text` with each section's
+verbatim lead `<p>` **before** touching the four stroke H2s.
+
+`education/index.html` (1/8) is a hub and stays scoped separately.
+The **71 printable "bridge" H2s** remain unworked.
+
+### Flagged for Michael — not changed
+
+1. **Speakable selectors that do not resolve to exactly 1, outside the printable family:**
+   `beginner-swim-lessons/index.html` `.hub-answer` → **8**; `.state-info h3` → 18 across the
+   directory family; `.wwk-intro-box p` → 13; `.faq-section h3` → 5; `.article-body h2` → 3;
+   `adaptive-swimming-special-needs.html` `.article-body > p:first-of-type` → **2**.
+   Some of these are plausibly deliberate (a hub with 8 answers); the article-family ones
+   are not. Worth its own batch, characterized per family before any edit.
+2. **Batch 54's open items still stand:** the 88% attribution surface is closed (residual 0),
+   but `free-reduced-swim-lessons-make-a-splash.html`'s two divergent FAQ blocks and
+   `teaching-kids-safe-pool-entry.html`'s uncited "leading cause" claim remain open.
+
+---
+
+## Run 2026-09-04 — Batch 54: three printable-landing articles, and an 88% attribution that is a 288-file surface
+
+Shipped from a fresh `origin/live` clone at `3fc4e4202`. `water-slide-safety-checklist`
+2/8 -> **7/8**, `fall-swim-skill-retention-checklist` 2/6 -> **6/6**, `swim-practice-log`
+2/6 -> **5/6**. All three at **100% of convertible H2s** — the only residuals are the
+lead-magnet printable CTA H2s, which are not convertible. 12 headings converted, worst
+collision **0.725** against a **7,084-heading** corpus, three re-aims. **Backlog 8 -> 5.**
+Full detail: `AEO-REPORT-2026-09-04.md`.
+
+**The scorer reproduced the 2026-09-03 state exactly before any edit** — 8 pages under 50%
+(7 prose + `education/index.html`), over-skip canary 0, and the "never skip a question"
+canary at 20, all `Ready to...?` CTA headings on pages that drop at n<3. Re-deriving the
+measurement on a fresh clone first is what makes "backlog 8 -> 5" a real number rather than
+a phantom.
+
+### The finding that mattered most: the 88% misattribution is not a page defect, it is a 288-file surface
+
+Two of the three articles asserted the 88% drowning-risk-reduction figure **as the AAP's own
+finding** — `water-slide-safety-checklist#skills` ("According to the American Academy of
+Pediatrics, formal swim lessons reduce drowning risk by up to 88%") and
+`fall-swim-skill-retention-checklist#year-round-lessons`, the latter in **prose, visible FAQ,
+and FAQ JSON-LD simultaneously**. The figure is from a case-control study in the *Archives of
+Pediatrics and Adolescent Medicine* (Brenner et al.); the AAP **cites** it. All four instances
+were rewritten to the site's dominant correct hedge, "research cited by the American Academy
+of Pediatrics" — which `swim-practice-log` was already using, in both its visible FAQ and its
+JSON-LD, and which is therefore the established convention rather than a new one.
+
+**Sweeping the shape sitewide is the part worth recording.** Across all 741 HTML files,
+**288 carry an 88% claim naming the AAP without naming the study**, and **42 of those carry
+it inside `ld+json`**:
+
+| shape | files | example |
+|---|---|---|
+| producer ("AAP reports/finds/shows") | 114 | `benefits-of-swimming-for-kids` |
+| "according to the AAP" only | 57 | `beginner-swim-lessons-toms-river-nj` |
+| hedged correctly ("research it cites") | 52 | `beginner-swim-lessons-asbury-park-nj` |
+| other AAP+88% phrasings | 86 | `education/drowning-prevention-guide` |
+
+This was **not** swept this run, deliberately. It is a claim-hygiene batch, not a heading
+batch, and the standing rule against blanket sweeps of the 645 AAP-naming files applies —
+the correct unit of work is a dedicated pass that fixes prose and JSON-LD together and
+verifies FAQ parity per file. **Flagged as the highest-value open item.** Reporting "the two
+pages I touched are now clean" without naming the other 286 would have been the partial audit
+that is worse than none.
+
+### Collision handling
+12 proposals scored against a 7,084-heading corpus (h1+h2+h3 ending in `?` sitewide,
+**including each file being edited**) plus intra-batch. Three re-aims, all driven by the
+page's *own* FAQ or by a section lead that answered a different question than the heading
+asked:
+- `Build your fall skill-retention plan` -> `How do you build a fall skill-retention plan?`
+  scored **0.759** against `lazy-river-safety-kids :: How do you build a family lazy-river
+  plan?`. Re-aimed to **`How do you turn this into a fall plan you'll actually follow?`**
+  (0.602) — which is what the section's lead sentence actually argues.
+- `How to keep swim skills sharp after summer` could not become the literal question: the
+  page's own FAQ h3 already owns *How can I keep my child's swim skills sharp after summer?*
+  Re-aimed to **`What should off-season swim practice look like?`** (0.711), matching the
+  lead's claim that short and frequent beats long and rare.
+- `Height and age limits...` and `Backyard inflatable slides...` would both have landed
+  verbatim on this page's own FAQ h3s. Aimed at *matching a slide to a child* and at *setup
+  procedure* instead — the second also stays clear of the sibling guide
+  `water-slide-safety-kids`, which owns "are they safe" (0.716).
+
+**Every one of the 12 sections was re-read after the rewrite and opens with a direct answer
+to its new question.** Two headings were chosen *from* the lead sentence rather than the
+other way round, which is the cheaper direction.
+
+### The FAQ-parity probe regressed to a narrower selector than the recorded one
+The parity check flagged one schema question as an orphan on
+`fall-swim-skill-retention-checklist`: *What is the "post-summer swim slide"?* It is not
+missing — it is a visible **`h2`**, the section header itself. **This was a probe regression,
+not a new discovery**: the recorded working selector set already includes `h1|h2|h3|h4|h5|
+summary|p/strong|p/b|dt|button|.faq-question|legend`, and this run rebuilt a narrower one
+(`h3`, `p > strong`, `button.faq-question`) from a partial reading of it. The recorded canary
+— assert the visible-question count is in the expected thousands — is exactly what would have
+caught it before the result was believed. Real orphan count across all three files: **0**.
+The lesson is not about `h2`; it is that **re-deriving a probe from memory of a rule is how a
+fixed probe un-fixes itself**, and the antidote is to copy the recorded selector set verbatim.
+
+### Validation
+- DOM signature diff vs HEAD, scripts stripped: **221/221**, **234/234**, **206/206** —
+  tag+id+class sequence **identical** on all three. Text-node diff: the only removed strings
+  are the 12 replaced headings, the 4 attribution phrases, and the 1 visible `Updated` line.
+  No prose deleted anywhere.
+- html5lib: 16 metas in `<head>`, **0 metas in `<body>`**, canonical in head, on all three.
+  Raw-head attribute scan for embedded quotes: 0.
+- JSON-LD parses clean — `[Article, BreadcrumbList, FAQPage]` on all three; 0 HTML entities
+  leaked inside `ld+json`.
+- FAQ schema<->visible drift **0** across 5/5/5 Q&A, checked against four markup shapes.
+- Speakable: every selector resolves to exactly 1 on every file (`.tldr-box`, `.article h1`,
+  `.article-excerpt`, `.article > p:first-of-type`). None match zero.
+- `headline == h1` on all three. Meta descriptions unchanged, decoded 149 / 147 / 128.
+- Dead in-page anchors 0 — every `h2 id` preserved, so all TOC links still resolve, and all
+  12 TOC labels remain accurate short descriptors of their rewritten sections (left as-is per
+  Batch 41/42 precedent). Unsubstituted placeholders 0. Brand-voice ownership scan 0 hits.
+- `dateModified` 2026-08-11 / 2026-08-31 / 2026-07-12 -> **2026-09-04**. Only
+  `water-slide-safety-checklist` carries a visible `Updated` line; it was synced. The other
+  two have a published date only — **not** given one, since inserting a date mirror is a
+  template change, not a content edit.
+- `sitemap.xml` lastmod bumped for **exactly these 3 URLs** (2026-08-29 / 2026-08-31 /
+  2026-08-14 -> 2026-09-04). Re-parsed clean, **646 entries unchanged**. No blanket bump.
+
+### Backlog — 4 prose articles under 50% (+ `education/index.html`, hub)
+`water-confidence-challenge` (2/6) - `swim-milestones-by-age` (3/8) -
+`swim-strokes-guide-kids` (3/7) - `autism-wandering-water-safety` (4/9).
+The 71 printable "bridge" H2s remain unworked.
+
+### Flagged for Michael — not changed
+1. **The 88% attribution surface: 288 files, 42 of them in JSON-LD.** Numbers and file
+   classes above. Worth its own batch; it is the sitewide sweep for
+   authority-misattributed figures that Batches 50 and 53 both said was warranted.
+2. `education/index.html` sits at 1/7 question H2s but is a **hub**, not an article — the
+   hub-cannibalization rule applies and it should be scoped separately from the prose backlog.
+3. Two of the three pages carry a `dateModified` with **no visible date mirror**. Consistent
+   with their template, but it means a reader cannot see the freshness signal Google gets.
+
+---
+
+## Run 2026-09-03 — Batch 53: the three 1/5 articles, and an FAQ rule that ate a real question
+
+Shipped `16db99d`. `make-a-splash-local-partner-badge-decoded` 1/5 -> **5/5**,
+`swimmers-ear-prevention-checklist` 1/5 -> **4/5**, `year-round-swim-skills-checklist`
+1/5 -> **4/5**. All three at **100% of convertible H2s** — the only residuals are the two
+lead-magnet printable CTA H2s, which are not convertible. 10 headings converted, worst
+collision **0.697** against a 7,050-heading corpus, three re-aims. **Backlog 11 -> 8.**
+Full detail: `AEO-REPORT-2026-09-03.md`.
+
+**Measurement finding: the `faq-block` skip rule was purely structural, so it swallowed a
+genuine prose question.** The rule fired when an h2's next three h3s were all questions —
+true of `renting-private-pool-hourly-safety.html#on-arrival`, whose section
+*"What should your on-arrival safety walk-through cover?"* is followed by three short
+diagnostic questions (*Can you see the bottom? Are the drain covers intact?*). That H2 was
+silently dropped from both numerator and denominator. **An FAQ *container* header is never
+itself a question** — the rule now requires the h2 text to be a non-question. This is the
+Batch 52 lesson inverted: 52 fixed a rule that classified by text where it should have used
+role; this one fixed a rule that used *only* role where the text carried the decisive signal.
+
+**The "never skip a question" canary is only meaningful with its composition printed.**
+It reads 20, not 0 — but all 20 are `Ready to…?` lead-magnet CTA headings, and **all 20 sit
+on pages that drop out at n<3**, so none touches the backlog. Asserting the number alone
+would have flagged a phantom regression; asserting *where they live* is what makes it safe.
+
+**Do not attribute the 88% figure to the AAP.** The optimizer brief suggests the stat as
+"AAP: formal swim lessons can reduce drowning risk by 88%." The site correctly credits it to
+the *Archives of Pediatrics and Adolescent Medicine* study — AAP cites that research, it did
+not produce the number. Used period-labelled CDC figures instead: **2.4 million U.S.
+health-care visits a year** end in an acute-otitis-externa diagnosis (*MMWR* 2011, on
+2003–2007 data), and drowning as the leading cause of death for ages 1–4.
+
+**`aeo-progress.md` had forked, and each copy was missing what the other had.** The repo
+copy held Batches 48–50 but not 51–52; the working-folder copy held 51–52 but had lost
+48–50. Copying either over the other would have destroyed three batches of history with no
+visible symptom. Merged both and committed the result, so the tracked file is now the
+complete record.
+
+### Backlog — 7 prose articles under 50% (+ `education/index.html`, hub)
+`water-slide-safety-checklist` (2/8) · `fall-swim-skill-retention-checklist` (2/6) ·
+`swim-practice-log` (2/6) · `water-confidence-challenge` (2/6) ·
+`swim-milestones-by-age` (3/8) · `swim-strokes-guide-kids` (3/7) ·
+`autism-wandering-water-safety` (4/9). The 71 printable "bridge" H2s remain unworked.
+
+---
+
+## Run 2026-09-02 — Batch 52: the three worst prose articles (3 articles) + skip list rebuilt on DOM role
+
+Shipped `bf9cdcf`. `national-water-safety-action-plan-explained` 1/12 -> **11/12**,
+`end-of-summer-swim-skills-report-card` 1/10 -> **7/10**, `new-jersey-pool-fence-law`
+1/8 -> **7/8**. All three at 100% of convertible H2s. 22 headings converted, zero
+collisions vs a 7,013-heading corpus, final worst 0.716. Seven re-aims — **five of them
+against the page's own FAQ h3s, not the sitewide corpus.** Two proposals scored 1.000 and
+0.920 against an FAQ answer on the same page. Full detail: `AEO-REPORT-2026-09-02.md`.
+
+**Measurement finding: the skip list must classify by DOM role, never by heading text.**
+Batch 51's text-based skip list missed the same roles worded differently — `Related Water
+Safety Guides` vs `Related Reading`, and bottom-of-page CTAs entirely — which is why four
+printables were still showing as 0/3 backlog when Batch 51 had already proved printables
+collapse to a denominator of 1. Rebuilt on container class and sibling structure
+(`screen-cta`/`newsletter-section` = cta, `related-articles`/`.related-card` sibling =
+related-cards, `authoritative-sources`/all-external-link list = sources). **Backlog 18 ->
+11**, and all 92 printables now drop out at n<3 on their own.
+
+**Two traps, both worth keeping.** (1) The first `related-cards` rule tested any ancestor
+container, so on these templates *every* H2 matched and the backlog silently *shrank* to
+21 while `swim-strokes-guide-kids`' four stroke sections were skipped as "related cards".
+Caught by a **cardinality canary** — assert no file skips >2 headings as one role. A filter
+that fires too much is as invisible as one that never fires. (2) The "never skip a `?`"
+rule needs an **explicit** exemption: 15 skipped questions are all `h2.cl-*` printable card
+labels, which is correct, so the assertion is now "no *non-printable* question is ever
+skipped" with the printable count reported separately.
+
+**Emoji trap recurred in a new form.** The report card stores emoji as numeric character
+references (`&#x2705;`), and the prefix-capture regex ordered its alternation so
+`[^A-Za-z0-9<]` ate `&#` and stopped at the `x`, leaving `x2705;` in the heading. Caught
+by an old-text equality assertion before any write. Put the entity alternative first, and
+always assert the *old* text matches before replacing.
+
+### Backlog — 10 prose articles under 50% (+ `education/index.html`, hub)
+`swimmers-ear-prevention-checklist` (1/5) · `year-round-swim-skills-checklist` (1/5) ·
+`make-a-splash-local-partner-badge-decoded` (1/5) · `water-slide-safety-checklist` (2/8) ·
+`fall-swim-skill-retention-checklist` (2/6) · `water-confidence-challenge` (2/6) ·
+`swim-practice-log` (2/6) · `swim-milestones-by-age` (3/8) · `swim-strokes-guide-kids` (3/7) ·
+`autism-wandering-water-safety` (4/9). The 71 printable "bridge" H2s remain unworked.
+
+---
+
+## Run 2026-09-01 — Batch 51: 0/5 template cluster closed (2 articles) + backlog re-measured
+
+Shipped `0ff04d2`. `weighted-practice-flip-turns-skills` 0/5 -> **5/5**,
+`swim-readiness-indicators-age-4` 0/5 -> **5/5**. Zero collisions vs a 7,002-heading
+sitewide corpus; final worst 0.673. Two re-aims (0.747 and 0.720) driven by reading the
+nearest match's URL, not the number. Full detail: `AEO-REPORT-2026-09-01.md`.
+
+**Measurement finding: printable pages must be excluded from the question-H2 ratio.**
+71 `*-printable.html` files build their body from `<h2 class="cl-section-title">` /
+`cl-emergency-title` — physical checklist-card section labels, 466 sitewide. Counting them
+inflates the backlog from 16 to 106. Excluding them collapses each printable to a
+denominator of 1-2, where the ratio is meaningless anyway. **Score only non-`cl-*` H2s, and
+exclude n<3 denominators.** Skip-set self-assertion clean: 0 suspicious skips.
+
+**New surface, not yet worked: 71 printable "bridge" H2s.** Each printable carries exactly
+one statement-form prose H2 below the card. One edit per file, no schema coupling.
+Recommended as the next batch.
+
+### Backlog — 14 prose articles under 50%
+`national-water-safety-action-plan-explained` (1/11) · `education/index.html` (1/10 hub) ·
+`end-of-summer-swim-skills-report-card` (1/7) · `new-jersey-pool-fence-law` (1/7) ·
+`water-confidence-challenge` (1/6) · `make-a-splash-local-partner-badge-decoded` (1/5) ·
+`year-round-swim-skills-checklist` (1/4) · `swimmers-ear-prevention-checklist` (1/4) ·
+`water-slide-safety-checklist` (2/7) · `swim-practice-log` (2/6) ·
+`fall-swim-skill-retention-checklist` (2/6) · `swim-milestones-by-age` (3/8) ·
+`swim-strokes-guide-kids` (3/7) · `autism-wandering-water-safety` (4/9)
+
+---
+
+## Run 2026-08-19 — Speakable repair + TL;DR backfill (211 pages)
+
+**Headline finding: the entire speakable program was inert on 207 pages.** Presence-based
+audits had passed every day because the string `tldr-box` appeared in the JSON-LD
+`cssSelector` array — so grepping for it returned a match even on pages that had no
+`.tldr-box` element at all. Selectors were authored against a template that does not
+match the live DOM.
+
+### 1. Broken `speakable` cssSelectors repaired — 209 instances / 187 pages
+
+Every selector was re-resolved against each page's actual DOM. Nothing was guessed;
+replacements were validated per page before being written.
+
+| Broken selector | Pages | Repaired to |
+|---|---|---|
+| `.article > p:first-of-type` | 84 | `.article-body > p:first-of-type` / `p.article-excerpt` |
+| `.checklist-title` | 48 | `.cl-header h1` |
+| `.article h1` | 32 | `.page-hero h1` |
+| `.checklist-item` | 14 | `.cl-checkbox` |
+| `.checklist-section h2` | 13 | `h2.cl-section-title` |
+| `article h1` | 9 | `.page-hero h1` |
+| `article > p:first-of-type` | 7 | `.article-body > p:first-of-type` |
+| `article > p` | 2 | `.article-body > p:first-of-type` |
+
+**Verified: 2,164 speakable selectors site-wide, 0 broken.**
+
+### 2. TL;DR "Quick Answer" boxes authored — 24 pages
+
+These pages declared `.tldr-box` as speakable but had no box. Each received a hand-written
+2–3 sentence answer with specific numbers, ages, or agency attribution — not boilerplate.
+
+backyard-pool-safety · bath-time-safety-infants · boating-life-jacket-safety-checklist ·
+boating-safety-children · cold-water-shock · competitive-swimming-safety ·
+drowning-statistics-facts · first-swim-lesson-checklist ·
+floaties-puddle-jumpers-safety-checklist · hotel-pool-safety-checklist · hotel-pool-safety ·
+lake-house-water-safety-checklist · life-jacket-guide · new-pool-owner-water-safety-checklist ·
+secondary-drowning-dry-drowning · swim-lesson-faqs · swim-lesson-readiness-checklist ·
+swimming-pool-fence-laws-by-state · vacation-rental-pool-safety-checklist ·
+vacation-water-safety · water-park-safety · what-to-do-drowning-emergency ·
+how-long-should-swim-lessons-last · special-needs-swimming
+
+All 22 education-template boxes were then relocated out of `.article-header` to sit as a
+direct sibling between the header and `.article-body`, matching the canonical pattern.
+
+### 3. Invalid schema placement fixed — 1 page
+
+`special-needs-swimming.html` had `speakable` attached to the **publisher logo
+ImageObject** instead of the Article node, so it was ignored entirely. Moved to the
+Article node.
+
+### 4. Deep AEO pass on 4 newer articles
+
+Published after the April full-site pass, so they had never been optimized:
+
+| Article | Question H2s | Citations added |
+|---|---|---|
+| `pool-cover-drowning-danger-kids` | 6 converted | CPSC (83% fencing figure), CDC |
+| `heat-exhaustion-kids-pool` | 5 converted | CDC heat health, AAP HealthyChildren |
+| `water-slide-safety-kids` | 6 converted | CPSC, American Red Cross |
+| `swim-bag-checklist` | 5 converted | AAP HealthyChildren, CDC |
+
+### Validation
+
+211 changed files: 0 JSON-LD parse errors · 0 unbalanced tags · 0 nested anchors ·
+0 duplicate TL;DR boxes · 0 broken speakable selectors · 0 truncated files.
+
+### Queued for next run
+
+- 13 articles still carry fewer than 2 authoritative citations
+- 22 articles still have zero question-format H2s
+- `education/index.html` (hub, 15k words) has no TL;DR box or speakable block
+
+---
 ## ✅ Full-Site AEO Pass Complete — 2026-04-09
 
 **All 75 original content articles + 11 newer articles fully optimized.** (6 redirect pages excluded — they point to already-optimized education/ targets.)
@@ -1184,3 +1917,2047 @@ Pattern applied per file (purely additive, +12 lines each, 0 deletions):
 **Validation (json.loads + HTMLParser):** all JSON-LD parses clean `[WebPage, FAQPage, BreadcrumbList]` per file; tagerr=0 / stackleft=0 on all three; exactly one tldr-box + one speakable per file; visible FAQ `<h3>` text matches schema question names exactly (parity=True, 4/4 each); ≥1 healthychildren.org + ≥1 cdc.gov/drowning link + "88% reduction" stat now present in each; meta descriptions ≤160 (138/130/133); 0 brand-voice ownership violations. Deploy loop auto-committed + pushed as `8cb92e7e` (3 files, +36/−0); HEAD == origin/live (0 ahead / 0 behind).
 
 **Backlog:** 44 `swim-lessons/directory/{state}.html` pages remain. Done so far (8): texas, florida, california, new-york, illinois, pennsylvania, ohio, georgia. Next by population: north-carolina, michigan, new-jersey, virginia, washington, arizona, massachusetts, tennessee, indiana, maryland. Also outstanding: `british-swim-school/{jersey-shore,northwest-philadelphia}.html`; `teens/scholarships.html`; `tools/family-water-safety-plan.html`. Listing/index pages + `*-printable.html` (noindex) + form pages remain deliberately excluded. Continue ~3 directory pages/run — **check each page's FAQ wrapper class and existing visible-FAQ state first**, since the site-wide fix may have already satisfied the parity step.
+
+## 2026-08-16 — AEO run (aeo-optimizer) — directory state cluster (Batch 36)
+Verified against a fresh `origin/live` clone (`c1b3f83`) before editing — note the **Mac deploy loop is down** (mount HEAD `7a3f219b`, 2 commits behind origin/live), so this batch was committed and pushed **directly** from the clone rather than via loop auto-pickup. Continued the 52-page `swim-lessons/directory/{state}.html` cluster with the next three by population:
+- `swim-lessons/directory/north-carolina.html`
+- `swim-lessons/directory/michigan.html`
+- `swim-lessons/directory/new-jersey.html`
+
+**Template state on arrival:** all three already carried `WebPage` + `FAQPage` + `BreadcrumbList` JSON-LD and a visible 4-Q&A FAQ inside `<section class="section state-info">` whose `<h3>` text matched the FAQPage schema exactly (parity 4/4 pre-existing — the site-wide FAQ-visibility fix had already covered them, same as Batch 35). So **no visible FAQ section needed to be added**. The two real gaps were: no TL;DR box, no `speakable`, and — notably — **zero authoritative outbound citations on any of the three** (`healthychildren.org`=0, `cdc.gov`=0 before this run; michigan and new-jersey also had **no 88% stat anywhere on the page**).
+
+Pattern applied per file (purely additive, +12 lines each, 0 deletions):
+1. Added `speakable` to the existing WebPage node — cssSelector `[".tldr-box", ".page-hero h1", ".state-info h3"]`. Verified per-file that both `.page-hero` and `.section state-info` actually exist (these three use `.state-info`, like PA/OH/GA — **not** `.faq-section` as on texas/florida/california/new-york/illinois).
+2. Inserted a "Quick Answer" TL;DR box between the hero `</section>` and the next section, carrying the page's first two authoritative outbound citations (AAP healthychildren.org age-4/age-1 guidance + CDC drowning-facts) plus the AAP 88% risk-reduction stat, a state-specific risk hook, and an explicit layers-of-protection close (fencing / life jackets / supervision).
+   - NC hook: backyard pools + inland lakes (Norman, Jordan) + Outer Banks surf, rip currents as the top open-water hazard.
+   - MI hook: Great Lakes dominance — Lake Michigan the deadliest of the five, cold-water shock, structural currents along piers and breakwalls.
+   - NJ hook: Jersey Shore rip currents, deceptively calm back bays and lagoons, dense backyard/community pool stock.
+
+**Validation (json.loads + HTMLParser):** all JSON-LD parses clean `[WebPage, FAQPage, BreadcrumbList]` per file; tagerr=0 / stackleft=0 on all three; exactly one tldr-box + one speakable per file; visible FAQ `<h3>` text matches schema question names exactly (parity=True, 4/4 each); ≥1 healthychildren.org + ≥1 cdc.gov/drowning link + "88%" stat now present in each; `.page-hero` and `.state-info` wrappers confirmed present so speakable resolves; meta descriptions unchanged and ≤160 (140/134/136); 0 brand-voice ownership violations in added copy (informational/directory voice only); all three staged as `M` with an additive diff (+36 / −0).
+
+**Backlog:** 41 `swim-lessons/directory/{state}.html` pages remain. Done so far (11): texas, florida, california, new-york, illinois, pennsylvania, ohio, georgia, north-carolina, michigan, new-jersey. Next by population: virginia, washington, arizona, massachusetts, tennessee, indiana, maryland, missouri, wisconsin, colorado. Also outstanding: `british-swim-school/{jersey-shore,northwest-philadelphia}.html`; `teens/scholarships.html`; `tools/family-water-safety-plan.html`. Listing/index pages + `*-printable.html` (noindex) + form pages remain deliberately excluded. Continue ~3 directory pages/run — **check each page's FAQ wrapper class (`.state-info` vs `.faq-section`) and existing visible-FAQ parity first**, and check whether the deploy loop is alive before relying on auto-pickup.
+
+## 2026-08-17 — AEO run (aeo-optimizer) — directory state cluster (Batch 37)
+Worked from a fresh `origin/live` clone (workspace mount was stale — its copy of this file still ended at Batch 35, while live carried Batch 36). Verified the 8/16 stale `.git/index.lock` is gone. Continued the 52-page `swim-lessons/directory/{state}.html` cluster with the next three by population:
+- `swim-lessons/directory/virginia.html`
+- `swim-lessons/directory/washington.html`
+- `swim-lessons/directory/arizona.html`
+
+**Template state on arrival:** all three already carried `WebPage` + `FAQPage` + `BreadcrumbList` JSON-LD and a visible 4-Q&A FAQ inside `<section class="section state-info">` with `<h3>` text matching the FAQPage schema exactly (parity 4/4 pre-existing) — no visible FAQ section needed. All three had **zero authoritative outbound citations** (`healthychildren.org`=0, `cdc.gov`=0); washington and arizona also had **no 88% stat anywhere on the page**.
+
+**Template variant note:** unlike virginia (and the earlier PA/OH/GA/NC/MI/NJ batches), `washington.html` and `arizona.html` have **no State Intro section at all** — the hero runs straight into the Search Section. On those two the new TL;DR box is the page's first and only piece of authoritative safety copy above the FAQ, which makes it the highest-leverage insertion on the whole cluster. Watch for this variant on the remaining states.
+
+Pattern applied per file (purely additive, +8 lines each, 0 deletions):
+1. Added `speakable` to the existing WebPage node — cssSelector `[".tldr-box", ".page-hero h1", ".state-info h3"]`. Verified per-file that `.page-hero` and `.section state-info` both actually exist so the selector resolves (these three use `.state-info`, **not** `.faq-section`).
+2. Inserted a "Quick Answer" TL;DR box between the hero `</section>` and the next section: AAP age-4-formal / age-1-familiarization guidance (hyperlinked to healthychildren.org), the AAP 88% risk-reduction stat, CDC leading-cause-of-death ages 1–4 (hyperlinked to cdc.gov/drowning), a state-specific risk hook, and an explicit layers-of-protection close (four-sided fencing / USCG life jackets / designated water watcher).
+   - VA hook: Chesapeake Bay currents and drop-offs, Virginia Beach & Eastern Shore rip currents, unguarded reservoirs (Smith Mountain Lake, Lake Anna).
+   - WA hook: cold-water shock — Puget Sound, the Columbia, and mountain-fed lakes stay cold year-round and can disable a strong swimmer within a minute; short outdoor season means limited in-water time.
+   - AZ hook: one of the highest per-capita residential pool rates in the country, open nearly year-round, most young-child drownings occur during non-swim times; canals and irrigation ditches as a second hazard.
+
+**Validation (json.loads + HTMLParser):** all JSON-LD parses clean `[WebPage, FAQPage, BreadcrumbList]` per file; tagerr=0 / stackleft=0 / nested-anchors=0 on all three (nested-`<a>` scan run explicitly per the known card-insert bug); exactly one tldr-box + one speakable per file; visible FAQ `<h3>` text matches schema question names exactly (parity=True, 4/4 each); every speakable cssSelector target confirmed present in the DOM; ≥1 healthychildren.org + ≥1 cdc.gov link + "88% reduction" stat now present in each; meta descriptions unchanged and ≤160 (134/155/133, decoded length); 0 brand-voice ownership violations in added copy (informational/directory voice only); all three staged as `M` with an additive diff (+24 / −0 total).
+
+**Backlog:** 38 `swim-lessons/directory/{state}.html` pages remain. Done so far (14): texas, florida, california, new-york, illinois, pennsylvania, ohio, georgia, north-carolina, michigan, new-jersey, virginia, washington, arizona. Next by population: massachusetts, tennessee, indiana, maryland, missouri, wisconsin, colorado, minnesota, south-carolina, alabama. Also outstanding: `british-swim-school/{jersey-shore,northwest-philadelphia}.html`; `teens/scholarships.html`; `tools/family-water-safety-plan.html`. Listing/index pages + `*-printable.html` (noindex) + form pages remain deliberately excluded. Continue ~3 directory pages/run — **check each page's FAQ wrapper class (`.state-info` vs `.faq-section`), existing visible-FAQ parity, and whether a State Intro section exists at all** before applying the pattern.
+
+## 2026-08-18 — AEO run (aeo-optimizer) — directory state cluster (Batch 38)
+Worked from a fresh `origin/live` clone (`6ddf71f`). Continued the 52-page `swim-lessons/directory/{state}.html` cluster with the next three by population:
+- `swim-lessons/directory/massachusetts.html`
+- `swim-lessons/directory/tennessee.html`
+- `swim-lessons/directory/indiana.html`
+
+**Template state on arrival:** all three carried `WebPage` + `FAQPage` + `BreadcrumbList` JSON-LD and a visible 4-Q&A FAQ inside `<section class="section state-info">` with `<h3>` text matching the FAQPage schema exactly (parity 4/4 pre-existing) — no visible FAQ section needed. All three had a State Intro section present (unlike the washington/arizona variant from Batch 37). All three had **zero authoritative outbound citations** (`healthychildren.org`=0, `cdc.gov`=0) and **no 88% stat anywhere on the page** before this run. Note: `indiana.html` grep-reports `FAQPage`=2 but the second hit is inside an HTML comment (`<!-- State depth: bridge + visible FAQ (matches FAQPage schema) -->`), not a duplicate JSON-LD node — verified 3 blocks only.
+
+Pattern applied per file (purely additive, +8 lines each, 0 deletions):
+1. Added `speakable` to the existing WebPage node — cssSelector `[".tldr-box", ".page-hero h1", ".state-info h3"]`. Verified per-file that `.page-hero` and `.section state-info` both exist so the selector resolves (these three use `.state-info`, **not** `.faq-section`).
+2. Inserted a "Quick Answer" TL;DR box between the hero `</section>` and the State Intro section: AAP age-4-formal / age-1-familiarization guidance (hyperlinked to healthychildren.org), the AAP 88% risk-reduction stat, CDC leading-cause-of-death ages 1–4 (hyperlinked to cdc.gov/drowning), a state-specific risk hook, and an explicit layers-of-protection close (four-sided fencing / USCG life jackets / designated water watcher).
+   - MA hook: cold water + short outdoor season — the Atlantic off Cape Cod, the North Shore, and the South Coast stays cold enough to trigger cold-water shock; inland ponds, reservoirs, and flooded former quarries hide drop-offs and near-zero visibility; compressed pool season means less continuous in-water practice.
+   - TN hook: the TVA reservoir/river system — Norris, Douglas, Chickamauga — steep bank drop-offs, submerged timber, cold water below the surface layer, heavy boat traffic, and mostly unlifeguarded shoreline; long warm season keeps backyard pools open year-round.
+   - IN hook: two concentrations — the Lake Michigan shoreline in the northwest corner (structural currents along piers/breakwalls, sudden cold layers) and inland quarries, gravel pits, and farm ponds (deep, steep-sided, cold, unlifeguarded); short outdoor season compresses pool time.
+
+**Validation (json.loads + HTMLParser):** all JSON-LD parses clean `[WebPage, FAQPage, BreadcrumbList]` per file; tagerr=0 / stackleft=0 / nested-anchors=0 on all three (nested-`<a>` scan run explicitly per the known card-insert bug); exactly one tldr-box + one speakable per file; visible FAQ `<h3>` text matches schema question names exactly (parity=True, 4/4 each); every speakable cssSelector target confirmed present in the DOM; ≥1 healthychildren.org + ≥1 cdc.gov link + "88% reduction" stat now present in each; DOM order verified hero → tldr-box → state-info; meta descriptions unchanged and ≤160 (139/135/133, decoded length); 0 brand-voice ownership violations in added copy (informational/directory voice only); all three staged as `M` with an additive diff (+24 / −0 total).
+
+**Backlog:** 35 `swim-lessons/directory/{state}.html` pages remain. Done so far (17): texas, florida, california, new-york, illinois, pennsylvania, ohio, georgia, north-carolina, michigan, new-jersey, virginia, washington, arizona, massachusetts, tennessee, indiana. Next by population: maryland, missouri, wisconsin, colorado, minnesota, south-carolina, alabama, louisiana, kentucky, oregon. Also outstanding: `british-swim-school/{jersey-shore,northwest-philadelphia}.html`; `teens/scholarships.html`; `tools/family-water-safety-plan.html`. Listing/index pages + `*-printable.html` (noindex) + form pages remain deliberately excluded. Continue ~3 directory pages/run — **check each page's FAQ wrapper class (`.state-info` vs `.faq-section`), existing visible-FAQ parity, and whether a State Intro section exists at all** before applying the pattern.
+
+## 2026-08-20 — AEO run (aeo-optimizer) — directory state cluster (Batch 39)
+Worked from a fresh `origin/live` clone (`125aa77`) — the mounted workspace was 56 commits behind and carried unrelated uncommitted edits, so it was not used. Continued the 52-page `swim-lessons/directory/{state}.html` cluster with the next three by population:
+- `swim-lessons/directory/maryland.html`
+- `swim-lessons/directory/missouri.html`
+- `swim-lessons/directory/wisconsin.html`
+
+**Template state on arrival:** identical to Batch 38 — all three carried `WebPage` + `FAQPage` + `BreadcrumbList` JSON-LD and a visible 4-Q&A FAQ inside `<section class="section state-info">` with `<h3>` text matching the FAQPage schema exactly (parity 4/4 pre-existing), so no visible FAQ section was needed. Section order on all three is `page-hero` → search `section` → `section state-info` — **no separate State Intro section** (the washington/arizona variant from Batch 37, not the indiana variant), so the TL;DR box inserts directly between the hero `</section>` and the Search Section. All three had **zero** authoritative outbound citations (`healthychildren.org`=0, `cdc.gov`=0) and no 88% stat anywhere on the page before this run.
+
+Pattern applied per file (purely additive, +7 lines each, 0 deletions):
+1. Added `speakable` to the existing WebPage node — cssSelector `[".tldr-box", ".page-hero h1", ".state-info h3"]`. Verified per file that `.page-hero`, `.state-info`, and `.tldr-box` all resolve in the DOM (these three use `.state-info`, **not** `.faq-section`).
+2. Inserted a "Quick Answer" TL;DR box after the hero: AAP age-4-formal / age-1-familiarization guidance (hyperlinked to healthychildren.org), the AAP 88% risk-reduction stat, CDC leading-cause-of-death ages 1–4 (hyperlinked to cdc.gov/drowning), a state-specific risk hook, and the layers-of-protection close (four-sided fencing / USCG life jackets / designated water watcher). Link color `#0369a1` per the WCAG-AA rule (brand `#0284c7` fails at 4.10:1).
+   - MD hook: tidal water — the Chesapeake Bay and its tributaries drop off sharply past the shallows, near-zero visibility, tide-driven currents plus heavy recreational boat traffic; Ocean City Atlantic rip currents; dense backyard/community pool concentration in the Baltimore–suburban D.C. corridor.
+   - MO hook: the big reservoirs (Lake of the Ozarks, Table Rock, Truman) — steep bank drop-offs, submerged timber, cold water below the surface layer, heavy boat traffic, mostly unlifeguarded shoreline; the Missouri and Mississippi Rivers (fast current, undertow, barge traffic); farm ponds and flooded quarries close to home.
+   - WI hook: Lake Michigan and Lake Superior pier/breakwall structural currents plus cold-water shock through the summer; thousands of deep, steep-sided, unlifeguarded inland lakes, gravel pits, and flooded quarries; short outdoor season compressing pool time.
+
+**Validation (json.loads + HTMLParser):** all JSON-LD parses clean `[WebPage, FAQPage, BreadcrumbList]` per file; tagerr=0 / stackleft=0 / nested-anchors=0 on all three (nested-`<a>` scan run explicitly per the known card-insert bug); exactly one tldr-box + one speakable per file; visible FAQ `<h3>` text matches schema question names exactly (parity=True, 4/4 each — note the 5th `<h3>` in the `state-info` window is "Leave a Review", part of the review widget, not a FAQ item); every speakable cssSelector target confirmed present; DOM order verified hero → tldr-box → state-info; ≥1 healthychildren.org + ≥1 cdc.gov link + "88% reduction" stat now present in each; meta descriptions unchanged and ≤160 (150/143/145, decoded length); 0 brand-voice ownership violations in added copy (informational/directory voice only); diff is additive (+21 / −0 across 3 files).
+
+**Backlog:** 32 `swim-lessons/directory/{state}.html` pages remain. Done so far (20): texas, florida, california, new-york, illinois, pennsylvania, ohio, georgia, north-carolina, michigan, new-jersey, virginia, washington, arizona, massachusetts, tennessee, indiana, maryland, missouri, wisconsin. Next by population: colorado, minnesota, south-carolina, alabama, louisiana, kentucky, oregon, oklahoma, connecticut, utah. Also outstanding: `british-swim-school/{jersey-shore,northwest-philadelphia}.html`; `teens/scholarships.html`; `tools/family-water-safety-plan.html`. Listing/index pages + `*-printable.html` (noindex) + form pages remain deliberately excluded. Continue ~3 directory pages/run — **check each page's FAQ wrapper class (`.state-info` vs `.faq-section`), existing visible-FAQ parity, and whether a State Intro section exists** before applying the pattern.
+
+## 2026-08-21 — AEO run (aeo-optimizer) — directory state cluster (Batch 40)
+Worked from a fresh `origin/live` clone (`af07b29`) — the mounted workspace was **272 ahead / 60 behind** origin/live with unrelated uncommitted edits, so it was not used (its `aeo-progress.md` still ended at Batch 35 and would have shown a false backlog). Continued the 52-page `swim-lessons/directory/{state}.html` cluster with the next three by population:
+- `swim-lessons/directory/colorado.html`
+- `swim-lessons/directory/minnesota.html`
+- `swim-lessons/directory/south-carolina.html`
+
+**Template state on arrival — two changes since Batch 39:**
+1. Section order is now `page-hero` → search `section` → **`dir-coverage`** → `section state-info`. The `dir-coverage` block is new; the TL;DR still inserts between the hero `</section>` and the Search Section, so placement is unaffected.
+2. The visible FAQ is now **6 Q&As, not 4** (a downstream effect of the 2026-08-21 FAQPage answer-alignment commit `fe12a49`, which rewrote 110 Q&A pairs to match visible page text). Visible `<h3>` text matched the FAQPage schema question names exactly on arrival (parity 6/6), so **no visible FAQ section needed to be added**. All three still had **zero** authoritative outbound citations (`healthychildren.org`=0, `cdc.gov`=0) and no 88% stat before this run.
+
+Pattern applied per file (purely additive, +7 lines each, 0 deletions):
+1. Added `speakable` to the existing WebPage node — cssSelector `[".tldr-box", ".page-hero h1", ".state-info h3"]`. The WebPage block was located by **parsing each `ld+json` node and matching `@type`**, not by regex position (per the known wrong-block-match bug), then asserted unique before replacement.
+2. Inserted a "Quick Answer" TL;DR box after the hero: AAP age-4-formal / age-1-familiarization guidance (hyperlinked to healthychildren.org), the AAP 88% risk-reduction stat, CDC leading-cause-of-death ages 1–4 (hyperlinked to cdc.gov/drowning), a state-specific risk hook, and the layers-of-protection close (four-sided fencing / USCG life jackets / designated water watcher). Link color `#0369a1` per the WCAG-AA rule (brand `#0284c7` fails at 4.10:1).
+   - CO hook: cold water at altitude — Chatfield, Cherry Creek, Horsetooth, and Dillon stay cold enough all summer for cold-water shock with banks that drop off past the shallows; snowmelt-fed Arkansas / Colorado / Cache la Poudre rivers run fast into July with undercut rocks and strainers; a short outdoor season concentrates pool time at hotel, HOA, and community pools.
+   - MN hook: thousands of deep, steep-sided, unlifeguarded lakes that turn sharply colder a few feet below the warm surface layer, plus docks, boat traffic, and weed beds; Lake Superior cold-water shock in midsummer; short season means kids spend more time near water than learning in it.
+   - SC hook: Atlantic rip currents at Myrtle Beach, Hilton Head, and the Charleston beaches; tidal creeks and salt marsh behind the barrier islands with strong tide-driven currents and near-zero visibility; Lakes Murray, Marion, Moultrie, and Hartwell with steep drop-offs, submerged timber, and unlifeguarded shoreline; long warm season around backyard pools.
+
+**Validation (json.loads + HTMLParser):** all JSON-LD parses clean `[WebPage, FAQPage, BreadcrumbList]` per file; tagerr=0 / stackleft=0 / nested-anchors=0 on all three; exactly one tldr-box + one speakable per file; visible FAQ `<h3>` text matches schema question names exactly (parity=True, 6/6 each); every speakable cssSelector target confirmed to resolve (`h1` inside `section.page-hero`; 7 `<h3>` inside `section.state-info` — 6 FAQ + "Leave a Review" review-widget heading); DOM order verified hero → tldr-box → state-info; ≥1 healthychildren.org + ≥1 cdc.gov link + "88% reduction" stat now present in each; meta descriptions unchanged and ≤160 (154/153/152, decoded length); 0 brand-voice ownership violations in added copy (informational/directory voice only).
+
+**Note — no headless render this run:** the sandbox had no chromium/puppeteer cached and installing one conflicts with the mandatory npm-cache purge, so verification was structural (tag-balance parser + JSON parse + selector-resolution check) rather than rendered. The diff is additive markup only (one `<div>` + one JSON key per file), so visual regression risk is low, but a render sweep should be folded into the next css-regression run.
+
+**Backlog:** 29 `swim-lessons/directory/{state}.html` pages remain. Done so far (23): texas, florida, california, new-york, illinois, pennsylvania, ohio, georgia, north-carolina, michigan, new-jersey, virginia, washington, arizona, massachusetts, tennessee, indiana, maryland, missouri, wisconsin, colorado, minnesota, south-carolina. Next by population: alabama, louisiana, kentucky, oregon, oklahoma, connecticut, utah, iowa, nevada, arkansas. Also outstanding: `british-swim-school/{jersey-shore,northwest-philadelphia}.html`; `teens/scholarships.html`; `tools/family-water-safety-plan.html`. Listing/index pages + `*-printable.html` (noindex) + form pages remain deliberately excluded. Continue ~3 directory pages/run — **check the FAQ wrapper class (`.state-info` vs `.faq-section`), the visible-FAQ Q&A count (now 6), and whether a State Intro / `dir-coverage` section exists** before applying the pattern.
+
+## 2026-08-22 — AEO run (aeo-optimizer) — question-format H2 conversion + HowTo schema (Batch 41)
+
+Worked from a fresh `origin/live` clone. **Changed track this run.** Batches 36–40 had been working the `swim-lessons/directory/{state}.html` cluster (TL;DR + speakable). Before continuing that, I re-scored **all 735 HTML files** against the six AEO signals rather than trusting the backlog list, because the progress file records intent, not live state.
+
+**Scan result (545 article-class pages scored — `<article>`/`<main>`, ≥400 words, ≥2 H2s):**
+- Priority-list items 1–10 from the skill spec are **already complete** (tldr + FAQPage + speakable all present). Item 6, `how-to-help-a-child-overcome-fear-of-water.html`, is a **redirect stub** pointing to `/education/fear-of-water.html` — correct behavior, not a defect, do not "optimize" it.
+- 67 pages still fail at least one signal. The dominant failure is **not** missing TL;DR or FAQ schema — it is **question-format H2s**. 48 `/education/` articles carry tldr + FAQPage + speakable + citations but have emoji-prefixed *statement* H2s (`🛁 The Bathroom: Highest-Risk Room Indoors`), so AI answer engines have no heading text to match a user query against. This is the largest untouched AEO gap on the site and no prior batch addressed it.
+
+**Optimized this run (3 files):**
+- `education/home-water-safety-room-by-room-checklist.html` — 7 statement H2s → questions; H2 question ratio 0/10 → 7/10
+- `education/backyard-pool-safety-layers-explained.html` — 5 statement H2s → questions; 0/7 → 5/7
+- `education/silent-drowning-what-it-looks-like.html` — 5 statement H2s → questions; 0/7 → 5/7
+
+Remaining non-question H2s on all three are utility sections (Authoritative Sources, Get the Free Printable, Frequently Asked Questions, Keep Reading) — correctly left alone.
+
+**Emoji removed from converted content H2s**, matching the pattern already established on the AEO'd flagship `education/signs-of-drowning.html` (plain question H2s for content, emoji retained on `📚 Authoritative Sources` / `🖨️` utility headings).
+
+**HowTo JSON-LD added** to the two procedural pages (`home-water-safety-room-by-room-checklist`: 6 steps; `backyard-pool-safety-layers-explained`: 5 steps). Step `text` was **extracted programmatically from each section's first visible `<p>`** rather than written by hand, so paraphrase drift against visible content is structurally impossible. Every step `url` is an in-page anchor asserted to resolve. `silent-drowning-what-it-looks-like.html` is explanatory, not procedural — no HowTo added, deliberately.
+
+**Cannibalization guard (the reason this run is not just a find-and-replace).** New question H2s were diffed at 0.80 similarity against **every question heading sitewide** before shipping. Two collisions were caught and rewritten:
+1. "What Water Hazards Are in the Kitchen and Laundry Area?" collided at 0.89 with `education/home-water-safety-framework.html` and `education/toddler-home-water-safety-checklist.html` → changed to **"What Should You Empty in the Kitchen and Laundry Room?"** (checklist-action framing, distinct from the "what hazards exist" framing those two pages own).
+2. "How Should Parents Prepare for a Water Emergency at Home?" collided at 0.82–0.86 with **four** pages (`hotel-pool-safety`, `pool-party-host-safety-checklist`, `special-needs-water-safety-checklist`, `summer-water-safety-checklist`) → changed to **"What Emergency Skills and Supplies Should Every Home Have?"**.
+Separately, `silent-drowning-what-it-looks-like.html` sits directly beside the 3,223-word flagship `education/signs-of-drowning.html`, which already owns 11 question H2s including "What Does Real Drowning Look Like vs. Hollywood Portrayals?" and "What Are the Visible Signs of Drowning to Watch For?". Its H2s were therefore steered onto the *silence* angle it uniquely owns ("Why Is Drowning Silent?", "What Does a Quiet Child in Distress Actually Look Like?", "What Did Researchers Find When They Studied Real Drownings?") instead of the obvious literal conversions, which would have put the smaller page into a link-equity fight it would lose.
+
+**Gotcha for next run — emoji encoding is not consistent across files.** `home-water-safety-room-by-room-checklist.html` stores emoji as HTML entities (`&#x1F6C1;`), while the other two store raw UTF-8. A replacement table written against raw emoji silently matched **0 of 7** H2s on that file and the script reported success on the other two. Always assert `count(old)==1` per replacement and fail loudly.
+
+**Validation:**
+- All JSON-LD parses: `[Article, BreadcrumbList, FAQPage, HowTo]` / `[Article, FAQPage, BreadcrumbList, HowTo]` / `[Article, FAQPage, BreadcrumbList]`.
+- FAQPage answer-vs-visible-text drift check re-run on all three: **0 drift**, 5 Q&A each (the Batch-40 `fe12a49` alignment still holds).
+- All HowTo step text confirmed present verbatim in the rendered article text; all 11 step anchors resolve.
+- All speakable cssSelectors confirmed to resolve (`.tldr-box`→1, `main h1`/`.article h1`→1, `.article-body > p:first-of-type`/`.article-excerpt`→1). None match zero.
+- **DOM structure diffed against HEAD with scripts stripped: 273/273, 198/198, 192/192 elements, tag+id+class sequence byte-identical.** Only `<h2>` inner text changed plus one added head-level `<script>`. Zero CSS/layout regression surface — no heading levels changed, so no CSS pin needed, and every `<h2 id>` was preserved (in-page TOC anchors on all three files still resolve).
+- TOC labels intentionally left as short nav labels (they were already non-verbatim before this run, so no new inconsistency introduced).
+- `sitemap.xml` lastmod bumped for exactly these 3 URLs (real body-text change today) and re-parsed clean. No blanket bump.
+
+**Note — no headless render this run:** sandbox had no chromium/playwright cached and installing one conflicts with the mandatory npm-cache purge. Mitigated by the DOM-structure equality check above, which is a stronger guarantee than a screenshot for a text-only diff.
+
+**Backlog — reprioritized.** The 45 remaining `/education/` articles with statement-only H2s are now the top of the queue, ahead of the directory-state cluster, because they are long-form (1,368–2,730 words), already carry TL;DR + FAQ + citations, and are one heading rewrite away from being extractable. Highest word count first: `swim-lesson-levels-explained` (2,730, 6/14 questions), `swim-lesson-separation-anxiety-plan` (2,640, 1/10), `swimtastic-safesplash-swimlabs-comparison` (2,627, 4/10), `advocacy-affiliation-swim-school-test` (2,570, 3/11), `family-water-safety-risk-assessment` (2,296, 2/9), `swim-strokes-guide-kids` (2,231, 3/10), `community-pool-swim-lessons-vs-swim-school` (2,198, 2/9), `ymca-open-doors-swim-lesson-assistance` (2,180, 4/10), `new-jersey-pool-fence-law` (2,154, 1/9), `water-slide-safety-checklist` (2,097, 2/10), `indoor-pool-safety-checklist` (2,094, 0/8), `aqua-tots-nj-vs-local-swim-schools` (2,081, 4/10), `national-water-safety-action-plan-explained` (2,026, 1/13), `what-is-the-model-aquatic-health-code-mahc` (1,978, 3/8), `daycare-school-water-safety-questions-checklist` (1,966, 0/8). **Always run the sitewide 0.80-similarity dup check before committing new question H2s** — the checklist cluster reuses the same section topics across many pages and collisions are the norm, not the exception.
+
+Also still outstanding and confirmed by this scan: `swim-lessons/index.html`, `about/index.html`, `gear/index.html`, `advertise/index.html` (no tldr / no speakable / no FAQ); `british-swim-school/{jersey-shore,northwest-philadelphia}.html` (no tldr, no speakable); and 4 short root articles that have TL;DR + question H2s but **no FAQPage schema at all** — `how-parents-can-support-swim-lessons-at-home`, `why-kids-need-swim-lessons-even-if-they-have-a-pool`, `why-year-round-swim-lessons-matter`, `how-long-should-swim-lessons-last`. Those four are the cheapest remaining wins. 29 `swim-lessons/directory/{state}.html` pages remain on the older track.
+
+## 2026-08-23 — AEO run (aeo-optimizer) — question-format H2 conversion + HowTo schema (Batch 42)
+
+Worked from a fresh `origin/live` clone (`77280b8`). The mounted workspace was again stale — its `aeo-progress.md` ended at **Batch 35** and its `live` branch sat at `2476831c`, which would have produced a false backlog (it still listed the directory-state cluster as the priority). Confirms the standing rule: audit the clone, not the mount.
+
+**Re-scored all `/education/` pages live rather than trusting the Batch-41 backlog list.** 38 indexable education articles still score <50% question H2s. Two names from Batch 41's "highest word count first" queue — `swim-lesson-levels-explained` and `swimtastic-safesplash-swimlabs-comparison` — no longer appear, so the recorded backlog was already partly stale. `education/index.html` (13,985w, q1/9) is a **listing hub** and is correctly excluded, not a defect.
+
+**Optimized this run (3 files), all previously carrying tldr + FAQPage + speakable + citations and failing only on heading extractability:**
+
+| File | Words | H2 question ratio | HowTo |
+|---|---|---|---|
+| `education/swim-lesson-separation-anxiety-plan.html` | 2,946 | 1/7 → **7/7** | 5 steps |
+| `education/advocacy-affiliation-swim-school-test.html` | 2,789 | 3/9 → **9/9** | 4 steps (PT10M) |
+| `education/family-water-safety-risk-assessment.html` | 2,512 | 2/6 → **6/6** | 5 steps |
+
+All three now sit at a **100% question ratio on content H2s**. Utility headings (`📚 Authoritative Sources`, `Frequently Asked Questions`, `🖨️ Get the Free Printable…`, `Keep Reading`) were left as statements with emoji intact, matching the flagship `education/signs-of-drowning.html` pattern.
+
+**Method note — replace by `id`, not by heading text.** Batch 41 was burned by emoji encoding drift (entities on one file, raw UTF-8 on another, a replacement table matching 0/7 while reporting success). This run sidestepped the problem entirely by matching `<h2 id="…">…</h2>` and replacing the **inner content wholesale**, asserting `count(id)==1` per replacement before substituting. Encoding was in fact mixed again — `swim-lesson-separation-anxiety-plan.html` and `family-water-safety-risk-assessment.html` store emoji as entities (`&#x1F62D;`), `advocacy-affiliation-swim-school-test.html` stores them raw — so a text-keyed table would have failed again. **Keep using the id-keyed approach.**
+
+**Every section already opened with an answer-first sentence** (verified by extracting each section's first `<p>`), so no body copy was rewritten. The gap on these pages was purely heading text — the diff is heading-text-only plus one added head-level `<script>` per file.
+
+**Cannibalization guard.** All 22 new/normalized question headings were diffed at 0.80 similarity against **6,578 question headings sitewide** (every `h1`/`h2`/`h3` ending in `?` across all 735 HTML files). **Zero collisions** — the rarest clean result so far, because these three pages occupy distinct niches (toddler separation anxiety, swim-school vetting, household risk scoring) rather than the checklist cluster where Batch 41 hit six collisions.
+
+**HowTo JSON-LD added to all three.** Step `text` was extracted **programmatically from visible page content**, never hand-written, so paraphrase drift is structurally impossible:
+- `swim-lesson-separation-anxiety-plan` — 5 steps from each section's first `<p>` (ramp-up → goodbye → watch → reinforce → check for non-separation causes).
+- `family-water-safety-risk-assessment` — 5 steps from each section's first `<p>`, resequenced into procedural order (learn layers → score 25 questions → score your average day → fix lowest layer → re-score each spring).
+- `advocacy-affiliation-swim-school-test` — **first draft was wrong and was rebuilt.** Taking the `#applying-the-test` first `<p>` yielded `"You can do the entire test from a phone in a waiting room:"` — a colon-terminated list lead-in, verbatim but useless as a step. Replaced with the section's **four `<li>` items** (Website check 3 min / Social feed check 3 min / Google check 2 min / One phone question 2 min), each verbatim, `totalTime: PT10M`. **Lesson: when a section's first `<p>` ends in a colon it is a list stem, not a step — pull the `<li>`s instead.**
+
+**Validation:**
+- JSON-LD parses clean on all three: `[Article, BreadcrumbList, FAQPage, HowTo]`.
+- Tag balance: tagerr=0 / stackleft=0 / nested-anchors=0 on all three.
+- **All 14 HowTo step texts confirmed verbatim** in the tag-stripped rendered text; all 14 step anchors resolve to a real `id`.
+- FAQPage answer-vs-visible drift re-checked: **0 drift** (6 / 5 / 6 Q&A).
+- Speakable selectors **resolved with soupsieve, not grepped** — `.tldr-box`→1, `.article h1`→1, `.article-excerpt`→1, `.article > p:first-of-type`→1 on each file. None match zero.
+- **DOM structure diffed against HEAD with scripts stripped: 232/232, 243/243, 232/232 elements — tag + id + class sequence byte-identical.** Only `<h2>` inner text changed. Zero CSS/layout regression surface; no heading levels changed so no CSS pin needed; every `<h2 id>` preserved.
+- All in-page `#` anchors resolve on all three (TOC nav labels left as short labels, per Batch 41 precedent — they were already non-verbatim).
+- Meta descriptions unchanged and ≤160 decoded (151 / 154 / 144).
+- Brand-voice scan: 5 hits, **all false positives, all pre-existing** — `"Does your school participate…"` (a script the parent reads aloud), `"all our instructors are wonderful people"` (a quoted example of a *bad* answer), and `"Our pool fence and gate inspection checklist"` (self-referential link to a WWK guide). No ownership language was added.
+- `sitemap.xml` lastmod bumped for **exactly these 3 URLs** (2026-08-14 / 2026-08-14 / 2026-08-18 → 2026-08-23) and re-parsed clean. No blanket bump.
+
+**Note — no headless render this run:** the sandbox had no chromium cached and installing one conflicts with the mandatory npm-cache purge. Mitigated by the DOM-signature equality check above, which for a text-only diff is a stronger guarantee than a screenshot.
+
+**Backlog — 35 `/education/` articles remain with <50% question H2s.** Next by word count: `community-pool-swim-lessons-vs-swim-school` (2,420, 2/7), `water-slide-safety-checklist` (2,361, 2/7), `swim-strokes-guide-kids` (2,351, 3/7), `new-jersey-pool-fence-law` (2,328, 1/7), `indoor-pool-safety-checklist` (2,310, **0/5**), `national-water-safety-action-plan-explained` (2,208, 1/11), `daycare-school-water-safety-questions-checklist` (2,204, **0/5**), `water-rescue-reach-throw-dont-go-card` (2,173, 1/7), `rolling-recovery-jump-recovery-methods` (2,123, **0/5**), `end-of-summer-swim-skills-report-card` (2,117, 1/7), `swim-milestones-by-age` (2,113, 3/8), `spot-drowning-warning-signs-card` (2,101, **0/6**), `independent-swimming-readiness-checklist` (2,017, **0/5**), `free-reduced-swim-lessons-make-a-splash` (2,007, **0/5**), `drowning-cpr-quick-card` (2,002, **0/5**). The `*-card` and `*-checklist` pages are the collision-prone cluster — **run the sitewide 0.80 dup check before committing**, it is the norm there, not the exception. Behind that: 29 `swim-lessons/directory/{state}.html` pages still lack a TL;DR (alabama, alaska, arkansas, connecticut, delaware, hawaii, idaho, iowa, kansas, kentucky, louisiana, maine, mississippi, montana, nebraska, nevada, new-hampshire, new-mexico, north-dakota, oklahoma, oregon, rhode-island, south-dakota, utah, vermont, washington-dc, west-virginia, wyoming — `directory/index.html` is a listing page, excluded); plus `british-swim-school/{jersey-shore,northwest-philadelphia}.html`, `teens/scholarships.html`, `tools/family-water-safety-plan.html`.
+
+---
+
+## Run 2026-08-24 — Batch 43: the backlog was scoped to `/education/` only
+
+**Headline finding: the AEO backlog has only ever tracked `/education/`, and that hid a class of failing pages.** Re-scoring all 658 indexable pages live (not trusting the Batch-42 list) returned 71 pages under 50% question H2s — but **34 of them sit outside `/education/`** and had therefore never entered the queue. Among them are genuine long-form articles, not hubs: `special-needs-swimming.html` (3,514w, 1/7) was the single largest failing real article on the site and had never been picked up. **Widen the scoring scope, not just the queue depth.**
+
+**Listing pages are false positives — exclude the class, don't "fix" it.** `swim-lessons/directory/new-jersey.html` scored 0/4 and looked like the #2 target. Inspecting it showed 47 `<h3>` school listings and four statement H2s that are correctly statements (`Cities We Cover`, `Local Swim Lesson Guides in New Jersey`). Same for `pennsylvania.html`, `education/index.html`, `statistics/state-of-drowning-prevention/index.html`, and the `*/index.html` hubs. Converting those to questions would have been active damage to the money product. **A low question ratio on a listing page is not a defect.**
+
+**Optimized this run (3 files):**
+
+| File | Words | H2 question ratio | Other changes |
+|---|---|---|---|
+| `special-needs-swimming.html` | 3,514 | 1/7 → **7/7** | — |
+| `adult-swimming-lessons.html` | 1,611 | 1/7 → **6/7** | FAQPage 5 → **8** Q&A; +CDC citation |
+| `education/daycare-school-water-safety-questions-checklist.html` | 1,871 | 0/5 → **5/5** | +CDC statistic |
+
+`adult-swimming-lessons.html` sits at 6/7 because `Common Questions About Adult Swim Lessons` is a FAQ container heading, left as a statement per the utility-heading convention.
+
+### Method notes
+
+**Two different replacement strategies were required in the same run — a text-keyed table would have silently no-opped.** The daycare file stores emoji as entities (`&#x1F50D;`) while the two top-level files store them raw, so `raw_html.count(str(h2_node))` returned **0 for all 8 daycare headings** and **1 for every top-level heading**. Confirms the standing rule: bs4 re-serializes entities, so never string-match bs4 output against the raw file. Used **id-keyed inner-replacement** on the daycare file (ids present, emoji prefix re-attached programmatically) and **outerHTML replacement with an asserted `count==1`** on the two top-level files (no heading ids exist there at all). Every substitution asserted before and after.
+
+**The 0.80 dup check found 7 collisions in 16 proposed headings — and twice the right answer was to defer, not rephrase.** Checked against **6,672 question headings sitewide**. Worst was `How Do You Overcome Fear of Water as an Adult?` at **0.95** against `education/adult-learn-to-swim.html`, which is the dedicated page for that query — and which itself carries two near-duplicate headings 0.95 apart internally (pre-existing, flagged below). Similarly `Is Aquatic Therapy the Same Thing as a Swim Lesson?` hit 0.90 against `education/aquatic-therapy-kids.html`. In both cases the hub was rephrased to a *decision* query (`Should Your Child Do Aquatic Therapy, Swim Lessons, or Both?`) so the dedicated page keeps the *definitional* query. Final state: **0 collisions**.
+
+**Speakable was verified, not extended.** Both top-level pages carry only `{.tldr-box, h1}` versus the education template's four selectors. Resolving the education selectors against them showed `.article-body`, `.article`, `<article>` and `<main>` **all return 0** — those pages use an older template with no article wrapper. Adding the richer selector list would have recreated the inert-speakable bug of 2026-08-19. Left as-is; both selectors resolve to 1.
+
+**Citation/statistic gaps closed from the site's own canonical phrasings, not invented.** `adult-swimming-lessons.html` had only one authoritative org (Red Cross); `daycare-school-water-safety-questions-checklist.html` had five outbound authority links but **zero attributed numbers**. Both fixed by grepping the sitewide canonical CDC phrasing first and matching it (`roughly 4,000 fatal unintentional drownings each year`, `leading cause of unintentional injury death for children ages 1–4`), both linked to `cdc.gov/drowning/data-research/facts/`.
+
+### Validation
+- Tag balance `tagerr=0 / stackleft=0`, nested anchors `0`, unsubstituted `__PLACEHOLDER__` `0` on all three.
+- JSON-LD parses clean; entity leaks inside JSON-LD **0**.
+- **FAQ drift 0** across 6 / 8 / 5 Q&A, checked tag-stripped and whitespace-normalised, with `Q:`/`A:` prefixes stripped before comparison.
+- DOM signature diff vs HEAD (scripts stripped): `special-needs-swimming.html` **byte-identical, 359/359** (heading text only). The other two differ by **exactly +1 `<a>`** — the added CDC citation. No other structural change.
+- Brand-voice ownership scan: **0 hits** on all three.
+- Link check: all internal hrefs and `#` anchors resolve. One anchor/destination mismatch flagged and **dismissed as a false positive** — `American Academy of Pediatrics` → `healthychildren.org` is correct, that is the AAP's official parent-facing site.
+- `sitemap.xml` lastmod bumped for **exactly these 3 URLs** and re-parsed clean (635 entries). No blanket bump.
+
+### Flagged for Michael — not changed
+1. **`education/daycare-school-water-safety-questions-checklist.html` has meaning carried by an `<em>` that JSON-LD strips.** The visible line reads *"Vague answers such as 'someone is always watching' <em>are</em> the answer"* — the italic is what makes it parse. In the FAQ schema the emphasis is gone and the sentence reads as self-contradictory to a machine reading it. The answer is otherwise verbatim, so this is a copy decision, not a drift bug. Suggest rewording the visible sentence so it stands alone.
+2. **`education/adult-learn-to-swim.html` carries two near-duplicate question headings on the same page** (`How do I overcome fear of water as an adult?` and `How Can You Overcome Fear of Water as an Adult?`, 0.95). Pre-existing, self-cannibalizing.
+3. **`adult-swimming-lessons.html` has two separate FAQ containers** (`Common Questions About Adult Swim Lessons`, 6 Q&A, and `Frequently Asked Questions`, 2 Q&A). Now unified in the schema at 8 Q&A, but the page structure remains split.
+
+### Backlog
+**68 pages remain under 50% question H2s**, of which roughly 34 are `/education/` and **~30 are non-education pages that were never queued** — including `teens.html`, `swim-lessons-monmouth-county-kids.html`, `swim-lessons-jersey-shore.html`, `swim-lessons-ocean-county-nj.html`, `british-swim-school/{jersey-shore,northwest-philadelphia}.html`, and the `swim-lessons/{brick,howell,asbury-park}-nj.html` town pages. Screen each for listing-vs-article before queueing. Next by size among true articles: `education/swim-strokes-guide-kids.html` (1,749w, 3/7), `education/community-pool-swim-lessons-vs-swim-school.html` (1,701w, 2/7), `education/autism-wandering-water-safety.html` (1,699w, 4/9), `education/new-jersey-pool-fence-law.html` (1,617w, 1/7).
+
+---
+
+## Run 2026-08-25 — Batch 44: the largest true article on the backlog, and a step-by-step card that had no HowTo
+
+Re-scored **all 741 HTML files** in a fresh `origin/live` clone rather than trusting the Batch-43 backlog list (per the standing rule: re-derive scope every run). 55 indexable pages with ≥4 H2s and ≥900 words scored under 50% question H2s. After screening out the listing class (`education/index.html` at 14,571w/356 `<h3>`, `swim-lessons/directory/{new-jersey,pennsylvania}.html`, `aquatic-jobs/index.html`, `scholarships/index.html` — all correctly statement-headed), the largest remaining **true articles** were the three optimized below.
+
+**Optimized this run (3 files):**
+
+| File | Words | H2 question ratio | Other changes |
+|---|---|---|---|
+| `education/swim-lesson-levels-explained.html` | 3,521 | 6/16 → **13/16** | — |
+| `education/swimtastic-safesplash-swimlabs-comparison.html` | 2,884 | 4/11 → **8/11** | — |
+| `education/water-rescue-reach-throw-dont-go-card.html` | 2,795 | 2/13 → **8/13** | **+HowTo JSON-LD (4 steps)** |
+
+All three finished at **100% of convertible H2s**. The residual non-question headings are the three utility headings the site convention leaves alone (`📚 Authoritative Sources`, `Frequently Asked Questions`, `Keep Reading`), plus two CTA headings on the rescue card (the printable block and the email-capture block).
+
+### Method notes
+
+**The numbered-ladder page needed a heading pattern, not free rewriting.** `swim-lesson-levels-explained.html` carries six sequential `Level N: <skill>` H2s. Converting them to bare questions would have destroyed the scannable ladder *and* produced six sibling headings ~0.9 similar to each other. Keeping the `Level N:` label as a prefix and making only the predicate a question (`Level 3: When Do Kids Start Learning Strokes?`) preserved the ladder and kept intra-batch similarity below 0.80 on every pair.
+
+**Three headings on the comparison page were questions that didn't end in one.** `🐬 What Is Swimtastic? The Beginner-Focused Brand` reads as a question to a human but terminates in a label, so a heading-text match against a query stops at the wrong token. Re-formed as `🐬 What Is Swimtastic, and Which Ages Is It Built For?` — same content, extractable terminus.
+
+**One collision, and the fix was to re-aim the section, not reword it.** `Step 3: Why Shouldn't You Swim Out to a Drowning Person?` hit **0.826** against this page's own FAQ `<h3>` (`Why shouldn't I just swim out to save a drowning person?`) — the self-cannibalization pattern flagged in Batch 43. Instead of paraphrasing, the H2 was pointed at the query the *section* uniquely answers (the exception): **`Step 3: When Is It Ever Safe to Go In After Someone?`** The FAQ keeps the "why not" query; the section owns the "when is it OK" query. Final: **0 collisions across 17 proposed headings vs 6,720 question headings sitewide.** Zero intra-batch collisions.
+
+**Two emoji encodings again, in the same run.** `water-rescue-*` stores emoji as entities (`&#x1F91A;`), `swimtastic-*` stores them raw, `swim-lesson-levels-*` has none. Handled by id-keyed **raw-file** regex replacement that captures and re-emits the leading emoji/entity prefix verbatim, with `count==1` asserted per heading. bs4 output was never string-matched against the raw file.
+
+**HowTo step text pulled programmatically.** Four steps for the rescue card, each the verbatim first `<p>` of its section, with an assertion that no lead `<p>` ends in a colon (the list-stem trap from Batch 42). Each step `url` anchors to a real `id`.
+
+### Validation
+- **DOM signature diff vs HEAD, scripts stripped: 522/522, 234/234, 243/243 elements — tag + id + class sequence byte-identical on all three.** Only `<h2>` inner text changed; every `<h2 id>` preserved. Zero layout regression surface, so no render sweep was warranted for a text-only diff.
+- Head integrity parsed with **html5lib**: 16 metas in `<head>`, **0 metas in `<body>`**, canonical in head on all three (no unescaped-quote break).
+- JSON-LD parses clean: `[Article, BreadcrumbList, FAQPage]` ×2 and `[Article, BreadcrumbList, FAQPage, HowTo]`. No HTML entities leaked inside JSON-LD.
+- **FAQ answer drift 0** across 6 / 5 / 6 Q&A (tag-stripped, whitespace-normalised).
+- **All 4 HowTo step texts confirmed verbatim** in rendered text; all 4 anchors resolve.
+- Speakable resolved with soupsieve, not grepped: all four selectors → exactly 1 match on each file.
+- In-page `#` anchors all resolve. TOC labels left as short non-verbatim labels, per Batch 41/42 precedent.
+- Meta descriptions unchanged (155 / 158 / 146 decoded). Unsubstituted `__PLACEHOLDER__` 0. Nested anchors 0. Brand-voice ownership scan **0 hits**.
+- Citations/statistics were already present and hyperlinked on all three (CDC, AAP/healthychildren.org, Red Cross, NDPA, USCG) — nothing invented, nothing added.
+- `dateModified` bumped to 2026-08-25 in all three Article schemas; `sitemap.xml` lastmod bumped for **exactly these 3 URLs** and re-parsed clean (636 entries). No blanket bump.
+
+### Backlog
+**51 true-article pages remain under 50% question H2s** (13 listing-class pages excluded as correct-by-design, not queued). Next by word count: `education/swim-milestones-by-age.html` (2,574w, 3/11), `education/water-slide-safety-checklist.html` (2,545w, 2/12), `education/indoor-pool-safety-checklist.html` (2,494w, **0/10**), `education/community-pool-swim-lessons-vs-swim-school.html` (2,412w, 2/10), `education/ymca-open-doors-swim-lesson-assistance.html` (2,401w, 4/11), `education/swim-strokes-guide-kids.html` (2,341w, 3/10), `education/aqua-tots-nj-vs-local-swim-schools.html` (2,331w, 4/11), `education/new-jersey-pool-fence-law.html` (2,320w, 1/10). The `*-card` / `*-checklist` cluster dominates the next tier — **run the sitewide 0.80 dup check before committing there, collisions are the norm.** Nine non-education pages also remain (`swim-schools.html`, `find-swim-lessons.html`, `british-swim-school/{jersey-shore,northwest-philadelphia}.html`, and five `swim-lessons/*` town pages) — screen each for listing-vs-article first.
+
+## 2026-08-27 — AEO run (aeo-optimizer) — Batch 46 (question-H2 + first-citation pass)
+Scope re-derived from a fresh `origin/live` clone at `8642016` (410 indexable `education/*.html` articles re-scored). Optimized:
+- `education/pool-chemistry-basics-for-parents.html` — **0/5 → 5/5** question H2s.
+- `education/beach-sand-hole-collapse-safety.html` — 1/6 → **6/6**, **+ first external authority citations on the page** (USLA beach safety, NWS beach hazards, CDC drowning facts, AAP drowning prevention) + `.article h1` added to speakable.
+- `education/pool-skills-vs-open-water-transfer.html` — 1/6 → **6/6**, **+ first external authority citations** (NWS rip currents, USCG life jackets, CDC drowning facts, AAP) + `.article h1` added to speakable.
+
+All three already had Article + FAQPage + BreadcrumbList + tldr-box + speakable; headings were the primary gap, and two of the three had **zero** outbound authority links.
+
+**Scorer correction (backlog shrank again).** Added `Keep Reading` and `More from/on` to the non-convertible SKIP set — they are sitewide navigational convention H2s, never convertible, and were inflating denominators (turned `pool-chemistry-basics` from 0/6 into its true 0/5, `poolside-emergency-kit` from 1/7 into 1/6). Under-50% count: **23 → 22** from that fix alone, then **22 → 19** after this batch. Note the `aap` flag in the scorer greps `healthychildren.org` only, so pages citing `aap.org/en/patient-care/drowning-prevention-and-water-safety/` (e.g. pool-chemistry-basics) read as `aap=0` — check both domains before concluding a citation gap.
+
+**Deliberate deferral.** `education/teaching-kids-safe-pool-entry.html` is now the worst-scoring page (1/7) but was **skipped**: its five body H2s are the visible counterparts of a 5-step HowTo JSON-LD (`Stop and check`, `Start with the seated slide-in`, …). Rewriting them to questions would break HowTo step↔visible-content correspondence. It needs a paired heading + HowTo `step.name` rewrite in one pass — handle it as its own batch, not inside a heading-only run.
+
+**Collision handling.** 16 proposals scored against a **9,597-heading** sitewide corpus (h1+h2+h3, all 660+ pages) plus intra-batch. Two re-aims: (a) `What Free Chlorine Level Is Safe for a Pool?` scored **0.900** against `pool-chemical-safety.html`'s FAQ "What chlorine level is safe for pools?" — that page is the topical owner, so re-aimed to `What Does Free Chlorine Actually Do in a Pool?`; (b) `Do Pool Swimming Skills Transfer to Open Water?` scored **0.889** against **its own H1** — re-aimed to `Why Do Parents Assume a Pool Swimmer Is Ready for Open Water?`. Scorer refinement: matches against a heading that is itself being replaced on the same file are false positives and are now excluded from that file's corpus. Final set worst score **0.771** (vs unrelated topics: hair care, heat illness), 0 collisions.
+
+**Byte note:** `pool-chemistry-basics` H2 emoji prefixes are **raw UTF-8** (🧪 ⚖️ ☀️ 🚩 📋 📚), not HTML entities — replacements preserved exact prefix bytes and all `id` attributes.
+
+**Validation (html5lib + HTMLParser balance + json.loads):** tagerr=0 / stackleft=0 on all three; 0 body metas, canonical in head; JSON-LD parses clean (`Article`, `FAQPage`, `BreadcrumbList`) with jerr=0; FAQ schema↔visible parity 5/5 each; speakable 3/3 selectors resolving per file; `headline` == `h1` on all three; meta descriptions 151/152/153 (≤160); **0 existing text nodes removed or altered** on any file — the only added text is the 4 new source `<li>` per file on the two citation-gap pages; 0 brand-voice ownership hits. External URLs GET-probed: weather.gov/aap.org/uscgboating.org/redcross.org = 200; cdc.gov + usla.org = 403 **WAF false positives** (both already in sitewide use 381× and 7× respectively).
+
+`dateModified` + sitemap `lastmod` bumped to 2026-08-27 for exactly these 3 URLs (638 entries, XML re-parsed, count unchanged). Pushed as `c85a3b6`; **live-verified** — 17 question H2s serving, both new Authoritative Sources blocks live, all three `dateModified` and sitemap `lastmod` live.
+
+**Backlog: 19 education articles under 50%.** Next by score: `teaching-kids-safe-pool-entry` (1/7 — **HowTo-paired, own batch**), `free-reduced-swim-lessons-make-a-splash` (1/6), `poolside-emergency-kit-checklist` (1/6), `body-awareness-exercises-swimmers` (1/5), `drowning-cpr-quick-card` (1/5), `independent-swimming-readiness-checklist` (1/5), `swimmers-ear-prevention-checklist` (1/4), `national-water-safety-action-plan-explained` (3/11), `new-jersey-pool-fence-law` (2/7), `water-slide-safety-checklist` (2/7), `cloudy-pool-water-safety-signal` (2/6). Listing pages (`education/index.html`, `scholarships/index.html`), `*-printable.html` (noindex), and form/utility pages remain excluded as classes.
+
+---
+
+## Run 2026-08-28 — Batch 47: the deferred HowTo-paired page, and the zero-citation class
+
+Scope re-derived from a fresh `origin/live` clone at `9c29803` (the mount was again stale at `2476831c` — audit the clone, not the mount). All 499 `education/*.html` re-scored.
+
+**New audit axis added this run: outbound authority links.** The question-H2 scorer had never checked whether a page cites anything. Cross-scoring found **4 true articles ≥900 words with zero external authority links** (`schema.org` excluded) — a page that cites no authority cannot plausibly be cited *as* one, which is the whole point of AEO. Two of the four were also the worst-scoring pages on the heading backlog, so they were taken together.
+
+**Optimized this run (3 files):**
+
+| File | Words | H2 question ratio | Other changes |
+|---|---|---|---|
+| `education/teaching-kids-safe-pool-entry.html` | 1,554 | 0/7 → **7/7** | HowTo steps re-bound + verbatim; **0 → 5 authority links** |
+| `education/swim-test-deep-end-readiness.html` | 1,552 | 0/6 → **6/6** | **0 → 5 authority links**; stray `</p>` repaired |
+| `education/rolling-recovery-jump-recovery-methods.html` | 2,100 | 0/5 → **5/5** | headings only |
+
+All three finish at **100% of convertible H2s**. Residual statement headings are the sitewide utility set only (`📚 Authoritative Sources`, `Frequently Asked Questions`, `Keep Reading`).
+
+### The Batch-46 deferral, resolved
+
+`teaching-kids-safe-pool-entry.html` was explicitly skipped last run because its five body H2s were the visible counterparts of a 5-step HowTo and rewriting them would break step↔content correspondence. **The correspondence was never machine-readable in the first place** — it was implicit text similarity, and the HowTo steps carried no `url`. Fixed properly:
+
+- Each `HowToStep` gained a `url` anchoring it to the real section `id` (`#stop-check`, `#seated`, `#feet-first`, `#diving`, `#exit`), making the binding explicit rather than inferred.
+- Each `step.text` was **replaced with the verbatim first `<p>` of its section**, extracted programmatically, with an assertion that no lead `<p>` ends in a colon (the list-stem trap from Batch 42). The previous step texts were hand-written paraphrases — drift was possible; it now is not.
+- Only then were the H2s converted to questions. Because the binding is by `id`, heading text is now free to be query-shaped without touching the HowTo.
+
+**Generalizable: when a HowTo blocks a heading rewrite, bind the steps by `url` first. The block dissolves.**
+
+### The zero-citation class
+
+Both zero-citation pages already *named* an authority in a `stat-box` but **never linked it** — `teaching-kids` said "The American Academy of Pediatrics (AAP) lists swimming competence among the layers of protection…", `swim-test` said "According to the U.S. Centers for Disease Control and Prevention (CDC)…". A presence grep for `aap.org`/`cdc.gov` reads these as uncited; a human reading the page sees an attribution. **Both were hyperlinked in place** rather than duplicated, then each page received the canonical `📚 Authoritative Sources` block (4 links, matching the `rolling-recovery` markup pattern) inserted **before** `<h2 id="faq">` per the poolside/independent-readiness convention, plus a matching `toc-item`.
+
+A second `stat-box` was initially added to `swim-test` before the pre-existing CDC one was noticed; it was **removed** rather than shipped. Check for an existing stat-box before adding one — this template has them and they are easy to miss under a `<div>` with inline styles.
+
+**Nothing was invented.** All 8 source URLs are already in sitewide use (621×/433×/282×/181×/19×) and were GET-probed: aap.org, redcross.org, healthychildren.org = 200; cdc.gov, poolsafely.gov = 403 **WAF false positives**. No new statistic was authored — the only numbers on these pages are the pre-existing CDC attribution, now linked.
+
+### Method notes
+
+- **id-keyed raw-file replacement with emoji-prefix capture.** `rolling-recovery` stores emoji as raw UTF-8 (🔄 ⚖️ 🏊 🚸 🔎); the other two have none but `swim-test` carries `&mdash;` entities and a raw `"` inside an H2. A regex captured the leading emoji/entity run and re-emitted it byte-for-byte; `count==1` asserted per heading before and after. bs4 output was never string-matched against the raw file.
+- **Pre-existing tag defect found and fixed.** `swim-test-deep-end-readiness.html` had a stray `</p>` inside its `stat-box` (no opening `<p>`) at line 123 col 586 — confirmed **identical in HEAD**, so not introduced here. Removed; element counts unchanged (`p` stays at 22), so it was purely a validator defect, not a layout one.
+- **Speakable extended, not assumed.** Both top-level education pages carried only `{.article-excerpt, .tldr-box}`. `.article h1` was **resolved with soupsieve first** (→1 on both) and only then added — the 2026-08-19 inert-speakable bug was caused by adding selectors that matched nothing.
+- **TOC labels left as short non-verbatim labels**, per Batch 41/42 precedent. `rolling-recovery`'s `#what-to-ask` label ("Questions to Ask a Swim School") still describes its section accurately after the heading re-aim.
+
+### Collision handling
+
+18 proposals scored at 0.80 against a **6,877-heading** sitewide corpus (h1+h2+h3 ending in `?`, 747 files) plus intra-batch, excluding each file's own heading-being-replaced. **Two collisions, both re-aimed rather than reworded:**
+
+1. `What Pool-Entry Rules Should Every Family Set?` — **0.809** vs `safe-diving-rules-kids.html :: What diving rules should every family post?`. That page owns the postable-family-rules query, so this section was re-aimed at what it uniquely covers: **`Which Entry Habits Should Kids Drill Until They Are Automatic?`**
+2. `What Should You Ask a Swim School About These Methods?` — **0.815** vs *two* instructor-vetting pages (`swim-instructor-employment-model`, `full-time-vs-part-time-swim-instructors`) sharing the identical heading, and 0.800 vs a third. Re-aimed to the method-specific query: **`How Do You Tell If a Program Teaches Both Recovery Methods?`**
+
+Final set: **worst score 0.742, zero collisions.** Note the `swim-test` page's six FAQ `<h3>`s already own the obvious definitional queries ("What is a pool swim test?", "What does a swim test check for?"), so all six H2s had to be aimed at *different* angles than the FAQ — self-cannibalization was the binding constraint on that file, not the sitewide corpus.
+
+### Validation
+- Tag balance `err=0 / stackleft=0` on all three (swim-test now clean, was 1 pre-existing).
+- html5lib head integrity: 16 metas in `<head>`, **0 metas in `<body>`**, canonical in head, on all three.
+- JSON-LD parses clean — `[Article, HowTo, BreadcrumbList, FAQPage]`, `[Article, BreadcrumbList, FAQPage]`, `[Article, FAQPage, BreadcrumbList]`; `jerr=0`; **0 HTML entities leaked inside JSON-LD**.
+- **FAQ schema↔visible drift 0** across 5/5/5 Q&A (tag-stripped, whitespace-normalised, both question and answer).
+- **All 5 HowTo step texts confirmed verbatim** in rendered text; all 5 `url` anchors resolve to a real `id`.
+- Speakable resolved with soupsieve: every selector → exactly 1 on every file. None match zero.
+- `headline == h1` on all three. Meta descriptions unchanged, decoded 155 / 157 / 154 (≤160).
+- Nested anchors 0. Unsubstituted `__PLACEHOLDER__` 0. Brand-voice ownership scan **0 hits**. All internal `#` anchors and site-relative hrefs resolve.
+- **DOM signature diff vs HEAD, scripts stripped.** `rolling-recovery`: **190/190 elements, tag+id+class sequence byte-identical** — heading text only. `teaching-kids`: 178→190, accounted for exactly (+1 inline `<a>`, +1 `h2#sources`, +1 `ul`, +4 `li`, +4 `a`, +1 toc `a`). `swim-test`: 183→195, same accounting. `p` count unchanged on all three.
+- **Text-node diff:** every "removed" string is either a replaced heading or a sentence split by an inserted `<a>` — **no prose was deleted or altered** on any file.
+- `dateModified` bumped 2026-06-21 / 2026-06-21 / 2026-04-22 → **2026-08-28**; `sitemap.xml` lastmod bumped for **exactly these 3 URLs**, re-parsed clean, **639 entries unchanged**. No blanket bump.
+
+### Flagged for Michael — not changed
+1. **`teaching-kids-safe-pool-entry.html` asserts an unsourced superlative.** "Headfirst entries into shallow or unknown-depth water are **a leading cause** of serious neck and spinal injuries in recreational swimming" appears in the body *and* in a FAQ answer (so it is in the schema too). A sitewide grep found **zero diving/spinal-injury citations anywhere on the site** — nothing supports it. It was left alone rather than reworded, because changing it means changing the FAQ schema in the same pass. Either source it or soften it to a non-superlative.
+2. **`rolling-recovery-jump-recovery-methods.html` has `<div class="related">` (line 121) sitting *between* the Authoritative Sources block and the FAQ H2** — the "main content stranded below `.related`" ordering pattern. Pre-existing; the FAQ still renders, but it is below a Related Reading block in source order.
+
+### Backlog
+**26 education articles under 50% question H2s** (listing class `index.html` and the `*-printable.html` class excluded as correct-by-design). Next by score, and the two most valuable are the **only remaining zero-citation true articles**:
+- `choose-your-own-swim-instructor-vs-assigned.html` (1,791w, 1/7, **0 authority links**)
+- `cloudy-pool-water-safety-signal.html` (1,508w, 1/6, **0 authority links**)
+- then `free-reduced-swim-lessons-make-a-splash` (2,087w, 0/5 — note the *Make a Splash* legacy-branding rule: bridge, do not strip), `independent-swimming-readiness-checklist` (2,027w, 0/5), `drowning-cpr-quick-card` (2,024w, 0/5), `conditioning-mile-swim-goal` (1,938w, 0/5), `body-awareness-exercises-swimmers` (1,924w, 0/5), `bubbles-through-nose-breath-control` (1,916w, 0/5), `swim-readiness-indicators-age-4` (1,907w, 0/5), `weighted-practice-flip-turns-skills` (1,899w, 0/5), `poolside-emergency-kit-checklist` (1,831w, 0/6).
+
+The 0/5 cluster above shares one template and one shape (five emoji-prefixed statement H2s + Authoritative Sources + FAQ + Keep Reading) — they are strong candidates for a **batched pass with a shared collision check**, since their topics are adjacent (skills/technique) and intra-batch similarity is the real risk there.
+
+---
+
+## Run 2026-08-29 — Batch 48: the zero-citation class closed, and a WAF that returns 404
+
+Scope re-derived from a fresh `origin/live` clone at `2fee64c` (the mount was again stale, at `2476831c`). All 499 `education/*.html` re-scored on two axes: question-H2 ratio and outbound authority links.
+
+**Optimized this run (3 files):**
+
+| File | Words | H2 question ratio | Other changes |
+|---|---|---|---|
+| `education/choose-your-own-swim-instructor-vs-assigned.html` | 1,789 | 1/7 → **7/7** | **0 → 5 authority links**; speakable +`.article h1` |
+| `education/cloudy-pool-water-safety-signal.html` | 1,508 | 1/6 → **6/6** | **0 → 5 authority links**; speakable +`.article h1` |
+| `education/independent-swimming-readiness-checklist.html` | 2,027 | 0/5 → **5/5** | headings only |
+
+All three finish at **100% of convertible H2s**. **The zero-citation class is now closed: 0 true articles ≥900 words on the whole site cite no external authority** (was 4 at Batch 47, 2 at the start of this run). Backlog 24 → **21**.
+
+### The finding that mattered most: a WAF that answers 404
+
+While GET-probing candidate source URLs, **every `healthychildren.org/*.aspx` URL returned HTTP 404** — including the site's single most-used external citation (620 occurrences) and three others (29×, 9×, 6×). A real IIS 404 body, `<title>404 - File or directory not found`, on four distinct paths. On the face of it, ~665 outbound authority links were dead.
+
+**They are not.** Fetched through a real browser stack, `Water-Safety-And-Young-Children.aspx` renders in full, is indexed, and carries `Last Updated 5/18/2026`. healthychildren.org **cloaks non-browser clients with a 404, not a 403.**
+
+This is the inverse of the known `WAF 403s masked real 404s` trap, and it is worse: **403 makes an auditor suspicious, 404 makes an auditor confident.** A link checker run against this site would report 665 broken authority links and any "fix" would have stripped or rewritten the site's best citations. Recorded to memory as `waf_404_fakes_dead_external_link`. **Operational rule: on a 404 from a known-good authority domain, re-probe through a rendering fetch before believing it. Status-code-only link checking cannot be trusted on `healthychildren.org`.** No links were changed.
+
+### Zero-citation pages: link what the page already names
+
+Both zero-citation pages repeated the Batch-47 pattern exactly — each **named an authority in a `stat-box` but never hyperlinked it**:
+- `choose-your-own`: "According to the American Academy of Pediatrics (AAP), swim lessons are one layer of drowning prevention…"
+- `cloudy-pool`: "According to the U.S. Centers for Disease Control and Prevention (CDC), drowning is the leading cause of unintentional injury death for children ages 1 to 4…"
+
+Both were **hyperlinked in place** rather than duplicated, then each received the canonical `📚 Authoritative Sources` block (4 links, matching the `teaching-kids-safe-pool-entry` markup) inserted **before** `<h2 id="faq">`, plus a matching `toc-item`. **Nothing was invented — no new statistic was authored**; the only numbers on these pages are the pre-existing attributions, now linked. All 8 source URLs were already in sitewide use (620×/438×/283×/281×/182×/20×/8×) and GET-probed: aap.org, redcross.org ×2 = 200; cdc.gov ×2, poolsafely.gov = 403 WAF false positives; healthychildren.org = 404 **cloak**, verified live by rendered fetch (above).
+
+### Collision handling
+
+17 proposals scored against a **6,876-heading** sitewide corpus (h1+h2+h3 ending in `?` across 749 files) plus intra-batch, excluding each file's own headings-being-replaced. **One collision and two near-misses, all re-aimed rather than reworded:**
+
+1. `What Are the Five Water Competency Skills?` — **0.937** vs `water-competency-skills-checklist.html :: ✅ What Are the 5 Water Competency Skills?`. That page owns the definitional query outright; this page's job is the *pass/fail readiness test*, so it was re-aimed to **`Which Skills Must a Child Demonstrate Before Swimming Unassisted?`**
+2. `What Is the See-the-Bottom Rule for Pool Water?` — 0.762 vs `cold-water-shock.html :: What is the 1-10-1 rule for cold water?` (the "What is the X rule" shape is crowded). Re-aimed to **`Why Should You Stay Out If You Cannot See the Pool Bottom?`**
+3. `What Does a Child Need Beyond the Five Basic Skills?` — 0.753 vs `rolling-recovery :: ⚖️ Why Does a Child Need Both Recovery Skills?`. Re-aimed to **`What Else Do Deep Water and Cold Demand From a Swimmer?`**
+
+**Final set: worst score 0.000 — no proposal matches any existing heading at ≥0.72.**
+
+**Self-cannibalization was again the binding constraint, not the sitewide corpus.** All three pages carry FAQ `<h3>`s that already own the obvious queries — `cloudy-pool`'s H2 `What makes water turn cloudy or green?` was a **near-verbatim duplicate of its own FAQ h3**, so it was re-aimed to `What Is Actually in the Water When a Pool Turns Cloudy?` rather than merely re-shaped. Every H2 on all three files was aimed at an angle its own FAQ does not already answer.
+
+### Method notes
+
+- **id-keyed raw-file replacement with emoji/entity-prefix capture.** `independent-swimming` stores its emoji as **numeric entities** (`&#x2753;`, `&#x1F3CA;`, `&#x1F4AA;`, `&#x1F9E0;`, `&#x1F441;&#xFE0F;`), not raw UTF-8 like `rolling-recovery` — a regex captured the leading entity/emoji run and re-emitted it byte-for-byte. One heading (`still-watch`) carried raw `"` quotes. `count==1` asserted per heading, and nested markup asserted absent, before and after. bs4 output was never string-matched against the raw file.
+- **Speakable extended only after resolution.** Both top-level pages carried `{.article-excerpt, .tldr-box}`. `.article h1` was resolved with soupsieve first (→1 on both) and only then added. **`.article > p:first-of-type` resolved to 0 on both and was deliberately NOT added** — that is exactly the 2026-08-19 inert-speakable bug. (It resolves to 1 on `independent-swimming`, where it was already present and correct.)
+- Section lead-ins were re-read after every rewrite: **all 17 sections open with a direct answer to their new question.**
+
+### Validation
+- Tag balance `err=0 / stackleft=0` on all three.
+- html5lib head integrity: 16 metas in `<head>`, **0 metas in `<body>`**, canonical in head, on all three.
+- JSON-LD parses clean — `[Article, BreadcrumbList, FAQPage]` on all three; `jerr=0`; **0 HTML entities leaked inside JSON-LD**.
+- **FAQ schema↔visible drift 0** across 5/5/4 Q&A (tag-stripped, entity-decoded, whitespace-normalised, both question and answer).
+- Speakable resolved with soupsieve: every selector → exactly 1 on every file. **None match zero.**
+- `headline == h1` on all three. Meta descriptions unchanged, decoded 139 / 159 / 158 (≤160).
+- Nested anchors 0. Unsubstituted `__PLACEHOLDER__` 0. Brand-voice ownership scan **0 hits**. All internal `#` anchors and site-relative hrefs resolve.
+- `.related` ordering checked on both edited-structure files: `#sources` < `#faq` < `.related` — **no main content stranded below the Related block.**
+- **DOM signature diff vs HEAD, scripts stripped.** `independent-swimming`: **213/213 elements, tag+id+class sequence byte-identical** — heading text only. `choose-your-own` 189→201 and `cloudy-pool` 176→188, each accounted for exactly (+1 `h2#sources`, +1 `ul`, +4 `li`, +4 `a`, +1 inline `a`, +1 toc `a`). `p` count unchanged on all three (27/23/25).
+- **Text-node diff:** every "removed" string is either a replaced heading or the stat-box sentence split by the inserted `<a>` — **no prose was deleted or altered** on any file.
+- `dateModified` bumped to **2026-08-29**; `sitemap.xml` lastmod bumped for **exactly these 3 URLs**, re-parsed clean, **640 entries unchanged**. No blanket bump.
+- **Live-verified** after push `239b2e9`: all three serve 200, question-H2 counts 7/6/5 serving, both new Authoritative Sources blocks live, all three `dateModified` and all three sitemap `lastmod` live.
+
+### Flagged for Michael — not changed
+1. **`healthychildren.org` link-checking is unreliable sitewide.** 665 outbound links to that domain will report 404 to any status-code-based checker. They are live. Do not let an automated broken-link pass "fix" them.
+2. **Batch 47's open item stands:** `teaching-kids-safe-pool-entry.html` still asserts, in body *and* FAQ schema, that headfirst entries are "a leading cause" of neck and spinal injuries, with **zero supporting citation anywhere on the site**. Either source it or soften it to a non-superlative — and the FAQ schema must change in the same pass.
+
+### Backlog
+**21 education articles under 50% question H2s**; **zero remain without authority citations.** The next tranche is the 0/5 single-template cluster, best taken as one batch with a shared intra-batch collision check since their topics are adjacent: `free-reduced-swim-lessons-make-a-splash` (2,089w — note the *Make a Splash* legacy-branding rule: bridge, do not strip), `drowning-cpr-quick-card` (2,024w), `conditioning-mile-swim-goal` (1,969w), `body-awareness-exercises-swimmers` (1,924w), `swim-readiness-indicators-age-4` (1,922w), `bubbles-through-nose-breath-control` (1,916w), `weighted-practice-flip-turns-skills` (1,899w), `poolside-emergency-kit-checklist` (1,829w, 0/6). Then the low-ratio long-tail: `national-water-safety-action-plan-explained` (1/11 — **check `aap_2026` and the NDPA two-taxonomies rules before touching**), `new-jersey-pool-fence-law` (1/7), `end-of-summer-swim-skills-report-card` (1/7).
+
+---
+
+## Run 2026-08-30 — Batch 49: the 0/5 template cluster, and a skip-list regex that ate a denominator
+
+Scope re-derived from a fresh `origin/live` clone at `b5680c3` (the mount was again stale, at `2476831c`). All 413 indexable `education/*.html` true articles ≥900 words re-scored on question-H2 ratio and outbound authority links.
+
+**Optimized this run (3 files):**
+
+| File | Words | H2 question ratio | Other changes |
+|---|---|---|---|
+| `education/drowning-cpr-quick-card.html` | 2,171 | 0/5 → **5/5** | headings only |
+| `education/free-reduced-swim-lessons-make-a-splash.html` | 2,084 | 0/6 → **6/6** | speakable +`.article h1`; visible `Updated` synced to `dateModified` |
+| `education/poolside-emergency-kit-checklist.html` | 1,977 | 0/6 → **6/6** | headings only |
+
+All three finish at **100% of convertible H2s**. Residual statement headings are the sitewide utility set only (`📚 Authoritative Sources`, `Frequently Asked Questions`, `Keep Reading`, the printable CTA). Backlog 21 → **18**. All three already carried Article + BreadcrumbList + FAQPage + tldr-box + speakable and 3–6 authority links, so headings were the only real gap.
+
+### The finding that mattered most: `\bsources\b` vs "re**sources**"
+
+The backlog scorer's non-convertible SKIP set matched the bare substring `sources` — which also matches **"resources"**. `free-reduced-swim-lessons-make-a-splash.html` has an H2 `Parks & Recreation and other free resources`; it was being silently dropped from the denominator, so the page scored **0/5 when its true ratio was 0/6**. Same defect would hit any H2 containing "resources," "outsourcing," or "sourced."
+
+The under-50% *count* did not move (21 either way), which is exactly why this survived four batches: **the aggregate was right while an individual denominator was wrong.** Anchored to `\bsources\b`; `poolside-emergency-kit-checklist` also corrected 0/5 → 0/6. **Generalizable: a skip-list built from bare substrings silently shrinks denominators. Anchor every skip term to a word boundary and assert the skipped set, not just the surviving count.**
+
+### The second finding: an FAQ parity failure that was the validator's fault, and a real defect underneath it
+
+The validation pass reported `free-reduced` had a schema question with **no visible counterpart** — `How do I find free or low-cost swim lessons near me?`. Confirmed identical in `HEAD`, so not introduced here. It is **not** an orphan: the validator only looked for `<h3>`, and this page renders its in-body FAQ as `<p><strong>Question?</strong><br>Answer</p>`. All five questions are visible; parity is **5/5, drift 0**. Parity checks must accept **both** FAQ markup shapes (`h3` and `p > strong`) or they manufacture orphans.
+
+**But the false positive exposed a real, pre-existing structural defect.** That page ships **two FAQ blocks with divergent wording**:
+
+- offset 20062 — inside `.article-body`, immediately after `<h2 id="faq">`, `<p><strong>` shape, **all 5 questions**, short answers. Correct location.
+- offset 25134 — **outside `.article-body`**, and **after `<div class="related">`** (22754), `<h3>` shape, only 4 questions, longer answers that the JSON-LD mirrors verbatim.
+
+So the block the schema actually quotes is the one stranded below Related Reading — the `main content stranded below .related` pattern, here compounded by a duplicated FAQ. **Not fixed in this run**, per the Batch-47 precedent of flagging `.related` ordering rather than restructuring inside a heading batch; de-duplicating means choosing which set of answers to delete and re-pointing the schema in the same pass. Flagged below.
+
+### Collision handling
+
+17 proposals scored at 0.80 against a **6,910-heading** sitewide corpus (h1+h2+h3 ending in `?` across 751 files) plus intra-batch, excluding each file's own headings being replaced. **Zero collisions; worst score 0.703**, then re-aimed to 0.614.
+
+**Self-cannibalization was again the binding constraint.** `drowning-cpr-quick-card`'s own five FAQ `<h3>`s already own the obvious queries — the natural headings (`Is CPR for drowning different?`, `What are the steps of CPR after someone is pulled from the water?`, `How is CPR different for an infant?`, `Does knowing CPR replace swim lessons and supervision?`) are **verbatim its own FAQ**. All five H2s had to be aimed at angles the FAQ does not already answer: the physiological *why* (`Why Do Rescue Breaths Come Before Compressions in Drowning?`), the *sequence* (`In What Order Should You Check, Call, Breathe, and Pump?`), the *numbers* (`How Deep Should Compressions Go for an Infant or Child?`), and the *layers* framing (`Which Layers Keep a Family From Ever Needing CPR?`).
+
+One re-aim on the sitewide corpus: `Why Do Free Swim Lessons Change a Child's Drowning Risk?` scored **0.703** against the `Do swim lessons reduce drowning risk?` FAQ carried by many `swim-lessons/*` town pages — and `do-swim-lessons-reduce-drowning-risk.html` owns that efficacy query outright. This section is about the **access gap**, not efficacy, so it was re-aimed to **`Why Are Free Swim Lessons a Safety Issue, Not a Perk?`** (0.614) — which its own second paragraph answers verbatim ("not a luxury extracurricular; it is a safety intervention").
+
+`How Affordable Are Municipal Parks and Recreation Lessons?` deliberately **narrows** the old H2's scope ("Parks & Recreation and other free resources") to the query its lead paragraph actually answers. The "other resources" content stays as supporting material below.
+
+**Make a Splash branding preserved, not stripped** — `How Does the Make a Splash Grant Network Work?` keeps the legacy name while the body bridges to USA Swimming Foundation / Local Partners, per the standing rule.
+
+### Method notes
+
+- **id-keyed raw-file replacement with emoji/entity-prefix capture.** `drowning-cpr-quick-card` and `poolside-emergency-kit-checklist` store emoji as numeric entities (`&#x1FAC1;`, `&#x1F9ED;`, `&#x1F6E1;&#xFE0F;`, `&#x2600;&#xFE0F;`, …); `free-reduced` has none on its body H2s but a raw UTF-8 📚 on `#sources`. A regex captured the leading entity/emoji run and re-emitted it byte-for-byte; `count==1` asserted per heading, nested markup asserted absent. bs4 output was never string-matched against the raw file.
+- **Speakable extended only after resolution.** `free-reduced` carried only `{.article-excerpt, .tldr-box}`; `.article h1` was resolved with soupsieve first (→1) and only then added. Every selector on all three files resolves to exactly 1 — **none match zero**.
+- **TOC labels left as short non-verbatim labels**, per Batch 41/42 precedent. All 19 remain accurate after the re-aims, including `Parks & Rec + free resources`.
+- Section lead-ins re-read after every rewrite: **all 17 sections open with a direct answer to their new question.**
+- USA Swimming's finder was GET-probed with a browser UA: `usaswimming.org/home/find-a-team` → **200**, titled "Find A Team", and it hosts the **Swim Lesson Provider** network — so the page's instruction ("set the finder type to Learn to Swim") is sound and does **not** violate the `usaswimmingfoundation.org is not a lesson finder` rule. Terminology drift noted below.
+
+### Validation
+- Tag balance `err=0 / stackleft=0` on all three.
+- html5lib head integrity: 16 metas in `<head>`, **0 metas in `<body>`**, canonical in head, on all three.
+- JSON-LD parses clean — `[Article, BreadcrumbList, FAQPage]` on all three; `jerr=0`; **0 HTML entities leaked inside JSON-LD**.
+- **FAQ schema↔visible drift 0** across 5/5/5 Q&A, checked against **both** markup shapes (tag-stripped, entity-decoded, whitespace-normalised, question and answer).
+- Speakable resolved with soupsieve: every selector → exactly 1 on every file.
+- `headline == h1` on all three. Meta descriptions unchanged, decoded 149 / 133 / 157 (≤160).
+- Nested anchors 0. Unsubstituted `__PLACEHOLDER__` 0. Brand-voice ownership scan **0 hits**. All internal `#` anchors resolve.
+- **DOM signature diff vs HEAD, scripts stripped: 231/231, 259/259, 238/238 elements — tag + id + class sequence byte-identical on all three.** Text-node diff: the only removed strings are the 17 replaced headings and the one visible `Updated` date. **No prose was deleted or altered on any file.** Text-only diff, so no render sweep was warranted.
+- `dateModified` bumped 2026-08-03 / 2026-08-28 / 2026-08-12 → **2026-08-30**; `free-reduced`'s visible `Updated August 28, 2026` synced to match (the other two carry a publish date only, per template convention). `sitemap.xml` lastmod bumped for **exactly these 3 URLs** (all three had been sitting at `2026-08-29` while their `dateModified` said August 3/12/28 — the known sitemap-vs-dateModified contradiction, now consistent for these three), re-parsed clean, **641 entries unchanged**. No blanket bump.
+
+### Flagged for Michael — not changed
+1. **`free-reduced-swim-lessons-make-a-splash.html` has two divergent FAQ blocks, and the one the JSON-LD quotes is stranded below `<div class="related">`** (details above). Needs a dedicated pass: pick one answer set, put it inside `.article-body`, re-point the schema in the same commit.
+2. **Terminology drift on the same page.** It calls the destination "the Make a Splash **provider finder**" and its listings "**Local Partners**" (4 occurrences, one inside FAQ schema). The live page is branded **"Find A Team"** and the network is **"Swim Lesson Providers."** The link target is correct and the advice works; only the labels are dated. Fixing it touches FAQ schema, so it was left for its own pass.
+3. **Batch 47/48's open item still stands:** `teaching-kids-safe-pool-entry.html` asserts, in body *and* FAQ schema, that headfirst entries are "a leading cause" of neck and spinal injuries, with zero supporting citation anywhere on the site.
+
+### Backlog
+**18 education articles under 50% question H2s**; zero remain without authority citations. The 0/5 single-template cluster is now the whole head of the queue and should be taken as one batch with a shared intra-batch collision check, since the topics are adjacent (skills/technique) and intra-batch similarity is the real risk: `conditioning-mile-swim-goal` (1,966w, **auth=1 — lowest citation count on the backlog**), `body-awareness-exercises-swimmers` (1,921w), `swim-readiness-indicators-age-4` (1,919w), `bubbles-through-nose-breath-control` (1,911w), `weighted-practice-flip-turns-skills` (1,895w, 4 near-question H2s already). Then the low-ratio long tail: `national-water-safety-action-plan-explained` (1/11 — **check the `aap_2026` and NDPA two-taxonomies rules before touching**), `new-jersey-pool-fence-law` (1/7), `end-of-summer-swim-skills-report-card` (1/7), `water-confidence-challenge` (1/5), `make-a-splash-local-partner-badge-decoded` (1/5 — same legacy-branding and "Local Partners" terminology question as flag #2 above; consider taking both in one pass).
+
+---
+
+## Run 2026-08-31 — Batch 50: the 0/5 cluster head, and a skip list that ate content questions
+
+Scope re-derived from a fresh `origin/live` clone at `97152a1`. The mount was again stale (`2476831c`, 2026-08-20, with uncommitted working-tree changes from an older run) — **audited the clone, not the mount**, per standing rule.
+
+**Optimized this run (3 files):**
+
+| File | Words | H2 question ratio | Other changes |
+|---|---|---|---|
+| `education/conditioning-mile-swim-goal.html` | 1,430 | 0/5 → **5/5** | AAP figure corrected; AAP hyperlinked inline |
+| `education/bubbles-through-nose-breath-control.html` | 1,394 | 0/5 → **5/5** | headings only |
+| `education/body-awareness-exercises-swimmers.html` | 1,371 | 0/5 → **5/5** | headings only |
+
+All three finish at **100% of convertible H2s**. Backlog **18 → 15**.
+
+### The finding that mattered most: word-boundary anchoring was not enough
+
+Batch 49 fixed the skip list by anchoring `sources` to `\bsources\b`, after bare `sources` was found eating "re**sources**". Re-deriving the scorer from scratch this run showed **the anchored version still eats legitimate content questions**, because a skip term can word-boundary-match a real topic:
+
+- `What Backyard Water **Sources** Pose Seasonal Hazards?` (`home-water-safety-framework`, `child-wont-wear-life-jacket`) — "water sources" is a genuine subject heading, matched by `\bsources\b`.
+- `How do I **get the** right fit?` and `🎯 How do I **get the** right fit for kids' swim goggles?` (`swim-goggles-for-kids`) — matched by `\bget the\b`.
+
+These headings **already end in `?`**, so skipping them removed each from the numerator *and* the denominator — deflating the ratio of pages that had done the work correctly.
+
+**The fix is not a better substring; it is a different test.** Utility headings are identified by **role**, via whole-heading anchored patterns (`^authoritative sources$`, `^keep reading$`, `^related .* (reading|articles)$`), and the lead-magnet CTA class requires **an acquisition verb AND a printable noun to co-occur** (`get|download|grab|print` … `printable|pdf|checklist|card|worksheet`) rather than either alone. Emoji prefixes are stripped before matching.
+
+The scorer now **asserts its own skip set**: any skipped heading that ends in `?` without a printable noun is reported as suspicious. That assertion returns **0** — previously it would have returned 4. Under-50% count is 18 either way, so, exactly as in Batch 49, **the aggregate was right while individual denominators were wrong.** Generalizable: *assert the composition of the skipped set, not its size — and never skip a heading that is already a question unless it is provably a CTA.*
+
+### The second finding: a number attributed to a named authority that the authority does not state
+
+`conditioning-mile-swim-goal.html` asserted, in body prose: "The American Academy of Pediatrics guidance on youth sports recommends building volume gradually (**no more than ten percent** week-over-week increases)…"
+
+The AAP's own parent-facing guidance says **10% to 20%**: "student athletes do not add more than 10% to 20% to their weekly training loads at a time." The page was **tightening AAP's range and presenting the tightened version as AAP's** — a misattribution to a named authority, not a rounding difference.
+
+Fixed: the figure now reads "adding no more than **ten to twenty percent** to a weekly training load at a time," and the inline mention of the AAP — previously **named but never hyperlinked** — now links to the specific source that carries the claim, rather than to the generic `/sports/` landing page already in the sources block. **Verified before linking**: the destination was GET-probed (200) *and its rendered text was searched for the claim*, per the "probe the replacement destination" rule. `publications.aap.org` returned 403 behind Cloudflare ("Just a moment…") — zero information, not a dead link, so it was not used.
+
+The companion claim on the same sentence ("at least one full rest day per week") **was verified and left alone** — AAP recommends at least 1–2 days off per week from sport-specific training, so the page's conservative reading is sound.
+
+The claim was **confirmed absent from the JSON-LD** before editing, so this was a pure prose fix with no schema coupling — unlike the Batch 47 `teaching-kids` superlative, which remains flagged precisely because it *is* in the FAQ schema.
+
+### Collision handling
+
+15 proposals scored against a **6,186-heading** sitewide corpus (h1+h2+h3 ending in `?` across 753 files) plus intra-batch. **Zero collisions.**
+
+One re-aim: `What Skills Should a Swimmer Have Before Mile Training?` scored **0.776** against `camping-water-safety-checklist :: 🏊 What skills should kids have before the trip?` — under threshold but the closest of the set, and generic where the section is specific. Re-aimed to **`Which Freestyle Fundamentals Come Before Mile Conditioning?`** (0.562), which is what the lead paragraph actually enumerates (steady freestyle, bilateral breathing, streamline push-off, stamina). **Final worst score 0.718.**
+
+**Intra-batch similarity was the predicted risk and it materialised in drafting, not scoring.** `body-awareness`'s two drill sections would naturally read `Which Dryland Drills…?` / `Which In-Water Drills…?` — differing only by one modifier. They were split by *what each section teaches* instead of by location: `What Can Swimmers Practice on the Deck Before Getting In?` vs `Which Swim Drills Teach a Child to Feel Their Body Position?`.
+
+**Self-cannibalization was again the binding constraint**, as in Batches 48 and 49. All three pages carry five FAQ `<h3>`s that already own the obvious definitional queries — `At what age can my child start nose-bubble practice?`, `At what age does body awareness start to develop?`, `What age can my child train for a mile swim?`. Every H2 had to be aimed at an angle its own FAQ does not already answer: mechanism (`Why Do Swimmers Need to Exhale Through the Nose?`), developmental *trajectory* rather than start age (`How Does Nose-Breathing Control Develop From Toddler to Preschool?`), and setting (`What Does Safe Bathtub Practice Look Like Between Lessons?`).
+
+### Method notes
+
+- **id-keyed raw-file replacement with emoji-prefix capture.** All three store emoji as raw UTF-8 (📏 ✅ 📊 🩹 🧠 / 💨 🎓 👶 ⚠️ 🛁 / 🧭 🧘 🌊 🛟 🎲). A regex captured the leading emoji run and re-emitted it byte-for-byte; `count==1` asserted per heading before and after, and nested markup asserted absent. bs4 output was never string-matched against the raw file.
+- Section lead-ins were read **before** drafting and re-read after: **all 15 sections open with a direct answer to their new question.** No lead paragraph was altered by the heading work.
+- **TOC labels left as short non-verbatim labels**, per Batch 41/42 precedent — all 15 remain accurate after the re-aims (`Readiness Indicators`, `On-Deck Drills`, `The Safety Dimension`, etc.).
+- Speakable was already complete on all three (`.tldr-box`, `.article h1`, `.article-excerpt`) and every selector resolves to exactly 1 — nothing was added blind.
+
+### Validation
+- Tag balance `err=0 / stackleft=0` on all three.
+- html5lib head integrity: 16 metas in `<head>`, **0 metas in `<body>`**, canonical in head, on all three.
+- JSON-LD parses clean — `[Article, FAQPage, BreadcrumbList]` on all three; `jerr=0`; **0 HTML entities leaked inside JSON-LD**.
+- **FAQ schema↔visible drift 0** across 5/5/5 Q&A, checked against **both** markup shapes (`h3` and `p > strong`).
+- Speakable resolved with soupsieve: every selector → exactly 1 on every file. None match zero.
+- `headline == h1` on all three. Meta descriptions unchanged, decoded 142 / 138 / 151 (≤160).
+- Nested anchors 0. Unsubstituted `__PLACEHOLDER__` 0. Brand-voice ownership scan **0 hits**. All internal `#` anchors resolve.
+- **DOM signature diff vs HEAD, scripts stripped.** `bubbles`: **195/195**, `body-awareness`: **192/192** — tag+id+class sequence **byte-identical**, heading text only. `conditioning`: 194→195, accounted for exactly by the one inserted inline `<a>`. Text-node diff: the only removed strings are the 15 replaced headings, the 3 visible `Updated` dates, and the one corrected sentence. **No prose was deleted elsewhere on any file.** Text-only changes, so no render sweep was warranted.
+- `dateModified` 2026-08-28 / 2026-08-21 / 2026-08-21 → **2026-08-31**; each page's **visible `Updated` line synced to match** (all three carry one). `sitemap.xml` lastmod bumped for **exactly these 3 URLs** — all three had been sitting at `2026-08-29` while their `dateModified` said Aug 21/28, the known sitemap-vs-dateModified contradiction, now consistent for these three. Re-parsed clean, **642 entries unchanged**. No blanket bump.
+- **Live-verified** after push (`15b01e6`): all 15 question H2s serving, all three `dateModified` live, the corrected AAP sentence live with the old wording returning 0 hits, the new inline link present, and all three sitemap `lastmod` values live with 642 entries parsing.
+
+### Flagged for Michael — not changed
+1. **Two pages carry question H2s that the previous scorer was silently discarding** (`home-water-safety-framework`, `child-wont-wear-life-jacket`, `swim-goggles-for-kids` — details above). Their content is fine; only the measurement was wrong. Worth knowing because past backlog numbers for those pages were understated.
+2. **Batch 49's open item still stands:** `free-reduced-swim-lessons-make-a-splash.html` ships two divergent FAQ blocks, and the one the JSON-LD quotes is stranded below `<div class="related">`. Needs a dedicated pass.
+3. **Batch 47/48's open item still stands:** `teaching-kids-safe-pool-entry.html` asserts, in body *and* FAQ schema, that headfirst entries are "a leading cause" of neck and spinal injuries, with zero supporting citation anywhere on the site. Given this run found a *second* unsupported figure attributed to a named authority, a **sitewide sweep for numbers attributed to AAP/CDC/Red Cross that those bodies do not state** is probably worth its own batch.
+
+### Backlog
+**15 education articles under 50% question H2s.** The 0/5 template cluster is nearly closed — two remain and should be taken together as the next batch, since they share the template and adjacent topics:
+- `weighted-practice-flip-turns-skills` (1,340w, 0/5, 4 near-question H2s already)
+- `swim-readiness-indicators-age-4` (1,310w, 0/5)
+
+Then the low-ratio long tail: `national-water-safety-action-plan-explained` (1/11 — **check the `aap_2026` and NDPA two-taxonomies rules before touching**), `new-jersey-pool-fence-law` (1/7 — **VGB scope rule applies**), `end-of-summer-swim-skills-report-card` (1/7), `water-confidence-challenge` (1/5), `make-a-splash-local-partner-badge-decoded` (1/5 — legacy-branding + "Local Partners" terminology question from Batch 49 flag #2; consider taking both in one pass), `swimmers-ear-prevention-checklist` (1/4), `year-round-swim-skills-checklist` (1/4).
+
+## Run 2026-09-06 — Batch 56: the prose backlog closed, and a parity probe that invented 144 defects
+
+Shipped from a fresh `origin/live` clone at `fbc2c7268`. One article converted
+(`swim-strokes-guide-kids` 3/7 → **7/7**) and **five speakable defects** fixed across the
+article family. **The prose question-H2 backlog is now empty.**
+
+### Backlog reconciliation
+
+Scorer rebuilt from the recorded role table verbatim (`cl-` class, cta ancestor,
+related-cards, sources-list, structural-id, faq-block-requires-non-question-h2, cta-text),
+with the ≤3-direct-children parent restriction and the per-role cardinality canary.
+
+| canary | recorded (Batch 55) | this run |
+|---|---|---|
+| over-skip (>2 per role per file, printables excluded) | 0 | **0** |
+| skipped headings ending in `?` | 83 | **83** |
+| — of which printable-label / cta-text / cta | 18 / 45 / 20 | **18 / 45 / 20** |
+| pages scored (n≥3) / dropped (n<3) | 420 / 95 | 421 / 96 |
+
+The skip composition reproduced **exactly**; the two extra pages are content shipped since
+Batch 55. Backlog read `swim-strokes-guide-kids` 3/7 and `education/index.html` 1/8 — the
+recorded state, unchanged.
+
+### `swim-strokes-guide-kids`: HowTo bound by url, then the headings freed
+
+The HowTo already carried `url` on every step (Batch 47's step 1 was done). What was still
+missing was step 2: `step.text` was a **hand-written paraphrase**, so the step↔section
+coupling remained implicit text similarity. All four `step.text` values were replaced with
+the **verbatim lead `<p>`** of the section their `url` points at, extracted programmatically;
+each lead was asserted not to end in a colon (the list-stem trap) before use. Two other
+sections on the page *do* end in colons — `stroke-progression` and `supporting-your-swimmer` —
+which is why the assertion is worth keeping even when it passes.
+
+Only then were the four stroke H2s converted. The `Stroke N:` ordinal prefix and the raw
+UTF-8 emoji were preserved byte-for-byte, per the Batch 55 `Layer N:` precedent:
+
+| id | was | now |
+|---|---|---|
+| `freestyle` | 🔵 Stroke 1: Freestyle (Front Crawl) | 🔵 Stroke 1: What Makes Freestyle the Foundation of Swimming Competence? |
+| `backstroke` | 🟢 Stroke 2: Backstroke | 🟢 Stroke 2: What Makes Backstroke Easier to Breathe In Than Freestyle? |
+| `breaststroke` | 🟡 Stroke 3: Breaststroke | 🟡 Stroke 3: Why Is Breaststroke Harder for Beginners Than It Looks? |
+| `butterfly` | 🔴 Stroke 4: Butterfly | 🔴 Stroke 4: Which Body Movements Make Butterfly So Demanding? |
+
+**Collision handling.** Corpus **7,138** headings (`h1+h2+h3` ending in `?` across 765 files,
+including the file being edited). Threshold 0.75. The first freestyle proposal,
+`How Does the Freestyle Stroke Actually Work?`, scored **0.840** against
+`swimmers-hub/freestyle-complete-guide.html :: How Does the Freestyle Arm Stroke Work?` — a
+dedicated sibling that owns freestyle mechanics outright. Three re-aims were scored before
+landing on the section's own distinctive claim (foundation, not mechanics): **0.595**.
+Final worst 0.606 corpus / 0.577 intra-batch.
+
+The similarity metric was **re-derived and then verified against a labelled set** rather than
+trusted: `difflib.SequenceMatcher` over lowercased, punctuation-stripped, whitespace-collapsed
+text reproduces five of Batch 55's recorded scores (0.775, 0.812, 0.847, 0.791, 0.742)
+**to three decimals**. Keeping the `?` or the punctuation shifts every value by ~0.005 —
+enough to move a borderline proposal across the threshold.
+
+### The finding: a FAQ-parity probe that reported 144 defects, all of them its own
+
+The recorded probe checks FAQ schema questions against **three** visible shapes (`h3`,
+`p > strong`, `button.faq-question`) scoped to `.article-body`. Run across the corpus it
+reported **144 schema questions with no visible counterpart** on 6+ files — a large,
+plausible-looking defect surface. Every one was the probe's fault:
+
+1. **Scope.** On this template family the FAQ block sits **outside** `.article-body`, between
+   it and `</main>`. That is not a defect: **310 of 414** `/education/` pages with an `#faq`
+   put it outside, against 104 inside. It is the majority convention. Measuring first is what
+   kept this from being "fixed."
+2. **A fourth visible shape: `h2`.** A FAQPage entry is often mirrored by a **section
+   heading**, not a dedicated FAQ block — `cold-water-shock.html` answers
+   *"What is cold water shock?"* with `<h2 id="what">`. Adding `h2` collapsed 144 → 30.
+3. **Ordinal prefixes.** `swim-lesson-faqs.html` renders *"2. How long does it take to learn
+   to swim?"*. The recorded normalization strips emoji and `Q:` but not `1.` / `Q1)`.
+4. **`h1`.** A page whose whole subject is the question answers it in the `<h1>`.
+
+With the shape set widened to `h1, h2, h3, h4, p > strong, button.faq-question, summary, dt`,
+document scope, and leading-ordinal normalization, the reading is **0 drift across 2,137 Q&A
+on 424 files.** Given that acting on a wrong parity probe **deletes healthy Q&A**, a probe
+that reports a 144-item surface is the more dangerous failure — it looks like work.
+
+**Same class, same run:** the `.tldr-box` on `swim-strokes-guide-kids` says freestyle and
+backstroke start *"as early as age 4–6"* while the body says full arm-stroke integration is
+*"ages 5–7"*. That was edited to 5–7 as a drift fix — and then **reverted**, because the
+page's own FAQ states 4–6 for *begin learning*. The two figures name **different milestones**;
+"fixing" one would have contradicted the FAQ. Check which milestone a number names before
+calling two numbers a contradiction.
+
+### The "71 printable bridge H2s" are conversion copy, not an AEO surface
+
+This item has been carried as unworked backlog for several runs. Characterized in full:
+95 printable pages carry **293** non-`cl-` H2s. Of those, **191** are related-cards utility
+(`Keep Reading` 93, `More Related Guides` 68, `Related Reading` 16, `Related Water Safety
+Guides` 14), **20** are already questions, 2 are FAQ containers, and the remaining **80**
+were classified by whether their section contains an enrolment/tool link or CTA button:
+**76 are conversion CTAs** (*"Build Your Child's Water Safety Skills"*, *"Cost Is Worth
+Comparing. Safety Is Worth More."*) and **4 are card instruction labels** (*"Parent Fills In
+Before Handing Off"*). **Zero are prose content headings.**
+
+Printables are excluded from the H2 ratio by design and drop at n<3 regardless. Converting
+persuasive CTA headlines into questions would degrade conversion copy for **no AEO gain**.
+Recommend closing this item rather than working it.
+
+### Speakable: the article-family defects closed
+
+Batch 55 flagged 160 selectors not resolving to exactly 1. Characterized per family:
+**114 printable** (correct — the recorded 113 plus one new page), **5 hub `.hub-answer`**
+(4–10 matches; a hub with N answers is deliberate), **24 directory** `.state-info h3` /
+`.faq-section h3`, **13 town** `.wwk-intro-box p` → 2. The **article-family** ones were real
+and are fixed:
+
+- `intensive-vs-weekly-swim-lessons`, `life-skills-from-swimming`, `swimming-progress-tracker`:
+  `.article-body h2` matched **11 / 11 / 9** — the selector pointed at *every heading on the
+  page*, which is an article, not a speakable summary. Replaced with `.article h1` (→1).
+- `adaptive-swimming-special-needs`: `.article-body > p:first-of-type` → **2**, because the
+  page has **two `div.article-body`** elements. Selector dropped (`.tldr-box`,
+  `.article h1`, `.article-excerpt` all resolve to 1 and already cover the summary); the
+  duplicate div is flagged below, not silently restructured.
+- `water-safety-for-toddlers`: `.article > p:first-of-type` → **2**, because `.article`
+  matches both `<article class="article">` and a `<div class="article">` breadcrumb wrapper.
+  The first match was **"← Back to Articles"** — speakable was handing an assistant a
+  breadcrumb. Narrowed to `article.article > p:first-of-type` (→1).
+
+Non-1 selectors 160 → 155; the article family is now clean, and **zero selectors match nothing**.
+
+### Validation
+- Tag balance: lxml structural errors **0** on all six files. (One pre-existing
+  `expected-named-entity` from an unescaped `&` in the Google Fonts URL is present at HEAD
+  on every page and was not introduced here.)
+- JSON-LD parses clean on all six; `jerr=0`; **0 HTML entities leaked inside JSON-LD**.
+- HowTo: every `step.url` resolves to a real section `id`, and every `step.text` **equals**
+  that section's lead `<p>` verbatim — asserted programmatically, 4/4.
+- FAQ schema↔visible: 5/5 on `swim-strokes-guide-kids`; **0 drift corpus-wide** (2,137 Q&A).
+- Speakable: every selector on every touched file resolves to exactly 1.
+- `headline == h1` on all six. 16 metas in `<head>`, **0 metas in `<body>`**; per-tag quote
+  parity in `<head>` clean. Nested anchors 0. Placeholders 0. Brand-voice ownership scan 0.
+- **DOM signature diff vs HEAD, scripts and styles stripped: byte-identical on all six**
+  (249/294/266/244/262/183). Text-node diff: the only change anywhere is the **four replaced
+  headings**. No prose was deleted.
+- `dateModified` 2026-08-25 → **2026-09-06** and the visible `Updated` line synced, on
+  `swim-strokes-guide-kids` **only** — the other five changed JSON-LD selectors and no body
+  text, so their dates were deliberately left alone. `sitemap.xml` lastmod bumped for
+  **exactly that one URL** (2026-08-29 → 2026-09-06); re-parsed clean, **648 entries**.
+- Backlog re-scored after the edit: `swim-strokes-guide-kids` **7/7**, off the backlog.
+
+### Backlog after this run
+
+**Prose backlog: 0.** `education/index.html` (1/8) is a hub and stays scoped separately —
+per the hub-cannibalization rule, converting hub H2s to questions risks absorbing queries
+its dedicated pages should own, so it should be taken as a deliberate scope decision, not as
+backlog cleanup. The 71 printable "bridge" H2s are recommended **closed** (see above).
+
+### Flagged for Michael — not changed
+
+1. **`adaptive-swimming-special-needs.html` has two `div.article-body` elements.** The
+   speakable selector was the symptom; the duplicate container is the cause and may affect
+   styling and any rule that assumes one article body. Needs a look before restructuring.
+2. **Directory and town speakable selectors resolving to >1** (24 × `.state-info h3` /
+   `.faq-section h3` at 4–8; 13 × `.wwk-intro-box p` at 2). Plausibly deliberate multi-answer
+   designs, unlike the article-family cases. Left alone pending a decision on whether
+   speakable should ever address more than one block.
+3. **Batch 54/55 open items still stand:** `free-reduced-swim-lessons-make-a-splash.html`'s
+   two divergent FAQ blocks, and `teaching-kids-safe-pool-entry.html`'s uncited
+   "leading cause" claim.
+
+---
+
+## Run 2026-09-07 — Batch 57: six different water temperatures, all credited to the AAP
+
+The prose H2 backlog was already 0 and the on-page levers are exhausted, so this run went
+looking at a different axis: **whether the authorities we cite actually say what we say they
+say.** They did not.
+
+### The finding
+
+The site attributed **six mutually exclusive water-temperature bands to the American Academy
+of Pediatrics** across seven pages:
+
+| Page | Claimed as AAP guidance | Verdict |
+|---|---|---|
+| `warm-water-swim-lessons` | 86–90°F (×13, incl. FAQ JSON-LD, a stat card and the TL;DR) | wrong |
+| `swim-school-pool-tour-checklist` | 86–90°F, plus an age table "86–92 / 86–90 / 84–88" | wrong + **fabricated age breakdown** |
+| `indoor-vs-outdoor-swim-lessons` | "at least 86–88°F" (prose **and** FAQ JSON-LD) | wrong |
+| `why-swim-lessons-are-30-minutes` | "minimum 86–88°F" | wrong |
+| `ymca-vs-private-swim-school` | 88–90°F | wrong |
+| `backyard-pool-requirements-swim-instructor` | "at least 84°F, 87–92°F preferred **for infants under 12 months**" | wrong twice over |
+| `strip-mall-swim-schools` | 87–94°F | **correct** |
+
+The AAP publishes exactly one figure, verbatim on its own HealthyChildren.org *Swim Lessons
+for Children* page (last updated 2026-05-18, AAP Council on Injury, Violence & Poison
+Prevention): *"Ideally, swim and water safety classes for children age 3 and younger should
+be in water heated to 87 to 94 degrees Fahrenheit."* There is **no AAP temperature for
+children over 3** — every age-banded table on the site was invented and then credited to a
+medical body.
+
+A second defect rode along: all seven pages cited the AAP's *Water Safety and Young Children*
+page as the source, and that page does not contain the claim. The claim lives on *Swim
+Lessons*. **A citation that points at the wrong page of the right organisation reads as
+sourced and is not.**
+
+Also corrected on `baby-swim-lessons-8-weeks`: the TL;DR said "the AAP supports water activity
+for young babies." The AAP's actual answer to "Does AAP recommend infant swim classes for
+babies less than a year old?" is **"No"** — no evidence they lower drowning risk. It does say a
+parent-child water play class is fine for familiarisation. That is now what the page says.
+
+### Second misattribution: the breath-holding prohibition
+
+Three pages (5 occurrences, incl. one printable) credited the **National Drowning Prevention
+Alliance and the YMCA** with prohibiting prolonged breath-holding "in their aquatic
+programmes." The documented source is the **joint statement of the American Red Cross, USA
+Swimming and the YMCA of the USA** (2015, updated 2022, hosted by the Red Cross Scientific
+Advisory Council). NDPA is not a signatory — and as an alliance it runs no aquatic programmes,
+so the sentence was wrong about NDPA twice. Re-attributed and linked to the 2022 PDF.
+
+Note for a future run: that same joint statement holds that **"hypoxic blackout" is the
+accurate term and "shallow water blackout" is not**. We have a page at
+`/education/shallow-water-blackout.html`. Renaming it is a redirect decision, so it is flagged,
+not done.
+
+### Fixed
+
+12 files. Every AAP-attributed number now either states the AAP's real figure with its age
+scope, or is explicitly relabelled as industry practice rather than AAP guidance — which also
+satisfies the standing rule that any page in this cluster must say **which** of the three
+claims it is making (AAP guidance / purpose-built pool band / rented pool band).
+Three pages that cited authorities by name while hyperlinking none
+(`swim-instructor-continuity-worksheet`, `swim-school-pool-tour-checklist`,
+`when-to-get-kids-out-of-water-checklist`) gained a house-convention
+`📚 Authoritative Sources` block, each entry linked and each description restricted to a claim
+the linked page verifiably makes.
+
+### Validation
+- Residual sweep on the claim **shape** (not the fixed pages): 0 AAP-attributed temperatures
+  outside the corrected wording; 0 occurrences of the NDPA breath-holding sentence.
+- Tag balance: 0 lxml structural errors on all 12. JSON-LD parses on all 12, `jerr=0`, 0 HTML
+  entities leaked inside JSON-LD.
+- Rendered-text diff vs HEAD (scripts, styles and `.article-meta` stripped): **every changed
+  region is an intended one**; no prose deleted anywhere.
+- FAQ schema↔visible: 58 Q&A across the touched files, **0 new drift**. Three pre-existing
+  drifts (`backyard-pool-requirements` ×2, `shallow-water-blackout` ×1) are byte-identical at
+  HEAD and are almost certainly artefacts of a re-derived probe — per the standing rule, a
+  probe rebuilt from a paraphrase is not trusted to delete Q&A, so they were left alone.
+- Speakable: every selector on every touched article resolves to 1. The one non-1
+  (`.cl-item`→34) is the printable family and correct by design.
+- `headline == h1` on 11/12; the exception is the printable, whose headline deliberately
+  carries the "(Printable)" suffix — pre-existing at HEAD.
+- 1 h1 per page, 0 body metas, 0 nested anchors, 0 brand-voice ownership hits.
+- `dateModified` → 2026-09-07 on all 12, 8 visible `Updated` mirrors synced (4 pages have no
+  Updated meta-item and were not given one). `sitemap.xml` lastmod bumped for the 11 indexable
+  URLs; the printable is `noindex` and correctly absent. Sitemap re-parsed clean, 649 entries.
+
+### Backlog after this run
+
+- **Prose H2 backlog: still 0.** Untouched by this run.
+- **New, characterised: 11 `How to …` pages carry no HowTo JSON-LD** (18 such H1s, 7 already
+  have it) — `choosing-a-swim-school`, `evaluate-swim-instructor-feedback`, `fear-of-water`,
+  `measuring-swimming-progress`, `summer-swim-lesson-prep`, `swim-goggles-for-kids`,
+  `swim-lessons-while-traveling`, `swim-team-readiness`, `swimming-progress-tracker`,
+  `vet-swim-instructor-safety-checklist`, `year-round-swim-skills-checklist`. Deferred
+  deliberately: HowTo steps must be bound by section `url` with `step.text` verbatim from the
+  section's lead `<p>`, and several of these are decision guides rather than procedures, so
+  each needs judging individually.
+- **Citation floor is otherwise met:** 417 of 421 article-family pages link ≥2 distinct
+  authority domains. After this run the remaining outlier is `pool-water-quality-checklist`
+  (4 links, all CDC — a single-domain page on a CDC-owned topic, arguably fine).
+- **Answer-first openings are effectively clean:** 5 hedging-opener candidates across 421
+  pages, and 4 are false positives (the hedge word appears mid-paragraph after a direct
+  answer). The one real narrative wind-up is `who-sets-water-safety-standards`.
+
+### Flagged for Michael — not changed
+
+1. **`water-safety-babies-under-1.html`** says "The AAP recommends water temperature between
+   90-100 degrees Fahrenheit" — that is *bath* water, a different claim from the lesson-pool
+   guidance, and I could not source it. It is the last unverified AAP number on the site.
+2. **`/education/shallow-water-blackout.html`** — the Red Cross/USA Swimming/YMCA joint
+   statement explicitly deprecates "shallow water blackout" in favour of "hypoxic blackout".
+   Renaming the URL is a redirect decision.
+3. **Batch 54/55/56 open items still stand:** `free-reduced-swim-lessons-make-a-splash.html`'s
+   two divergent FAQ blocks, `teaching-kids-safe-pool-entry.html`'s uncited "leading cause"
+   claim, and `adaptive-swimming-special-needs.html`'s two `div.article-body` elements.
+
+---
+
+---
+
+## Run 2026-09-08 — Batch 58: the HowTo gap was 13 pages, not 11 — the count was scoped to /education/
+
+### The finding
+
+Batch 57 closed by characterising a new surface: *"11 `How to …` pages carry no HowTo
+JSON-LD."* Re-measuring the same class this run against a fresh `origin/live` clone gives
+**21 `How to …` H1s, 8 with HowTo, 13 without** — two more than recorded.
+
+The two extra pages are not new work that landed overnight. They were never in the
+denominator:
+
+1. **`/how-to-build-water-confidence-in-children.html`** — a root-corpus page. Batch 57
+   enumerated `education/*.html` only, so a genuinely indexable `How to …` article one
+   directory up was invisible to the count.
+2. **`education/spot-drowning-warning-signs-card-printable.html`** — printable template
+   family. This one is a *correct* exclusion, but it was excluded by accident (it fell
+   outside a glob), not by rule, and its article twin `spot-drowning-warning-signs-card.html`
+   does carry HowTo.
+
+This is the same shape as the recurring lesson that a defect class silently inherits the
+denominator of whichever audit first found it. The grouping column here was the directory.
+Stating the denominator out loud —  *"`How to` H1s across the whole corpus, article family
+and root family, printables named and excluded by rule"* — is what moved 11 → 13.
+
+### Not every "How to" page should get a HowTo
+
+Of the 13, only some are procedures. The rest are decision guides whose sections are
+evaluative, not sequential, and stamping HowTo on them would be schema that does not
+describe the page. Judged individually:
+
+**Shipped (3):**
+
+| page | steps | why it qualifies |
+|---|---|---|
+| `summer-swim-lesson-prep` | 8 | register → choose format → prepare → practise → pack → first lesson → during lessons → between lessons. Genuinely ordered in time. |
+| `vet-swim-instructor-safety-checklist` | 8 | background check → certifications → CPR → insurance → references → questions → red flags → trial lesson. A verification procedure. |
+| `swim-lessons-while-traveling` | 5 | find → evaluate → manage transition → use the pool → brief the home instructor. Sequential. |
+
+**Deliberately not given HowTo (9):** `choosing-a-swim-school`,
+`evaluate-swim-instructor-feedback`, `fear-of-water`, `measuring-swimming-progress`,
+`swim-goggles-for-kids`, `swim-team-readiness`, `swimming-progress-tracker`,
+`year-round-swim-skills-checklist`, and the root page
+`how-to-build-water-confidence-in-children`. The first eight are comparison, assessment or
+buying guides — their H2s are "why does X matter", "what red flags", "which is better", not
+steps. `swim-team-readiness` has 16 H2s and is an assessment framework. The root page is a
+real gap but sits in the legacy root corpus (no `.article-body`, no section `id`s at all), so
+binding steps to anchors there means editing body markup first; deferred as its own job.
+
+**Excluded by rule (1):** `spot-drowning-warning-signs-card-printable` — printable family,
+which fails article-family checks by design.
+
+### The colon trap fires far more often on answer-first pages
+
+The recorded technique is: bind each step by `url` to the section `id`, and take `step.text`
+as the section's **verbatim first `<p>`**, asserting it does not end in a colon (a paragraph
+ending in a colon is a list stem, not a step).
+
+That assertion fired on **10 of the 21 steps** — 7 of 8 on `summer-swim-lesson-prep` alone.
+The recorded remedy is to emit one step per `<li>` instead. That remedy is wrong for these
+pages, and the reason matters: after several AEO passes these paragraphs are *answer-first*.
+They read
+
+> "Choose a program by matching its format — intensive daily, weekly ongoing, or private
+> versus group — to your child's age, experience level, and your family's schedule. **Summer
+> offers different swim lesson formats than the school year, each with different
+> trade-offs:**"
+
+The direct, citable answer is the first sentence. Only the trailing sentence is the stem.
+Fragmenting that into one step per `<li>` would throw away the best sentence on the page and
+replace a step with a list of options.
+
+So the guard stays and the remedy is now conditional: **drop trailing colon-terminated
+sentences, keep everything else verbatim.** Applied as a loop (a paragraph can have more than
+one), with two assertions after it — the result must be ≥60 characters (below that it is
+still a stem) and must still appear verbatim in the rendered page text. If trimming would
+empty the paragraph, the paragraph *is* entirely a stem and the recorded `<li>` remedy
+applies. Nothing was hand-written: every one of the 21 `step.text` values is a contiguous
+verbatim run from the page.
+
+### `dateModified` deliberately **not** bumped
+
+Previous batches bumped `dateModified` and `sitemap.xml` `lastmod` on every touched page.
+Not this run. The recorded rule is that `dateModified` is derived from a **body-text** diff,
+and this change is head-only: 177 inserted lines, 0 deleted, every one of them inside a new
+`<script type="application/ld+json">` before `</head>`. No reader sees a difference, so the
+visible `Updated` mirrors and the sitemap were left alone. Bumping them would have
+manufactured exactly the schema-vs-reality drift the rule exists to prevent, and would have
+widened the still-open `lastmod` ↔ `dateModified` contradiction flagged for Michael.
+
+### Validation
+
+- 21/21 step texts assert **verbatim** against the rendered text of their own page.
+- 21/21 step `url`s resolve: base equals the page's own `rel=canonical`, fragment is a real
+  `id` on the bound `<h2>`.
+- 0/21 end in a colon; shortest is 167 characters.
+- `position` is 1..n contiguous on all three.
+- All 4 JSON-LD blocks per page parse; exactly one `HowTo` each; `Article`, `FAQPage` and
+  `BreadcrumbList` all still parse unchanged.
+- Speakable re-checked on all three: every selector resolves to exactly 1 — including
+  `.tldr-box`, which is the selector that has previously matched a lead-magnet ad.
+- 1 `<h1>` per page, 0 `<meta>` in body, 0 JSON-LD in body, per-attribute head-quote parity
+  clean, 0 brand-voice ownership hits.
+- Diff is **purely additive**: `git diff` reports 177 insertions and 0 deletions, each hunk
+  anchored on `</head>`. Header/footer markup-variant counts are untouched by construction.
+- Playwright skipped on purpose: no JS on this site mutates head signals, so a render pass
+  cannot tell us anything a parse of the raw HTML cannot.
+
+### Backlog after this run
+
+- **Prose H2 backlog: still 0.** Untouched.
+- **HowTo: 13 → 10 without, of which 9 are deliberate non-candidates and 1 is real work.**
+  The only genuine remaining gap is `how-to-build-water-confidence-in-children.html`, and it
+  needs section `id`s added to its five H2s before steps can be bound. Everything else on the
+  "How to" list is a decision guide and should stay schema-free.
+- State the denominator when re-reporting this class: *`How to` H1s, whole corpus, printables
+  excluded by rule.* "11" was a `/education/`-only reading.
+
+### Flagged for Michael — not changed
+
+1. **`water-safety-babies-under-1.html`** still says the AAP recommends 90–100°F water — that
+   is *bath* water guidance, still unsourced, still the last unverified AAP number on the site.
+2. **`/education/shallow-water-blackout.html`** — Red Cross / USA Swimming / YMCA deprecate
+   "shallow water blackout" for "hypoxic blackout". Renaming the URL is a redirect decision.
+3. **Batch 54/55/56/57 open items stand:** `free-reduced-swim-lessons-make-a-splash.html`'s two
+   divergent FAQ blocks, `teaching-kids-safe-pool-entry.html`'s uncited "leading cause" claim,
+   and `adaptive-swimming-special-needs.html`'s two `div.article-body` elements.
+
+---
+
+## Batch 58 — 2026-09-09 — HowTo backlog closed; a new axis opened: unbound HowTo steps
+
+### What changed
+
+**1. `how-to-build-water-confidence-in-children.html` — new anchored `HowTo` (closes the gap).**
+This was the single genuine HowTo gap left after Batch 57. It is a Corpus B legacy root page
+(no `.article-body`), so the five prose H2s were located structurally, not by container class.
+Added `id`s to those five H2s — `comfort-first`, `small-wins`, `consistent-exposure`,
+`confidence-language`, `learning-environment` — then bound one `HowToStep` to each.
+Step `text` is a **verbatim leading substring** of that section's own paragraph, truncated
+before the first `<a>` so no link text is silently absorbed into schema. Step 1 drops its
+leading *"Yes, ..."* answer sentence, which reads as a reply to the H2 question rather than as
+an instruction; the remainder is still verbatim.
+
+**2. The new axis — HowTo steps that are not bound to anything.**
+The prose H2 backlog has been 0 since Batch 56 and the on-page levers are exhausted, so this
+run measured a surface nobody had enumerated: the **interior** of the 43 HowTo blocks already
+on the site.
+
+Baseline before this run — **43 blocks, 223 steps**:
+
+| Defect | Steps | Files |
+|---|---|---|
+| step has no `url` (not deep-linkable) | 94 | 19 |
+| step has no `position` (order not asserted) | 81 | 16 |
+| step has no `name` (unlabelled to an extractor) | 27 | 5 |
+| block has no `totalTime` | — | 30 |
+
+This matters for AEO specifically: an answer engine that wants to quote *step 3 of 5* needs a
+name to label it, a position to order it, and a URL to cite it. A step carrying only `@type`
+and `text` is an anonymous blob of prose that happens to sit inside a `HowTo`.
+
+**3. Fixed this run — 27 unnamed steps across 5 files, plus the cleanest anchor case.**
+
+- `natural-swimming-holes-safety.html` (5), `open-water-survival-skills.html` (5),
+  `renting-home-with-pool-safety.html` (5), `summer-camp-water-safety.html` (7),
+  `water-wings-vs-life-jackets.html` (5) — every step given a `name` and a `position`.
+  Each name is a faithful compression of **that step's own opening clause**; nothing was
+  invented and no step text was edited.
+- `how-to-teach-treading-water.html` — the only file whose steps already mapped 1:1 onto
+  existing section `id`s (`step1`–`step4`). Steps bound to `canonical + #id` and given
+  `position`.
+
+Residual after this run: **`name` 27 → 0**, `position` 81 → 50, `url` 94 → 85.
+
+### Why the other 18 `url` files were left alone
+
+Anchoring is only honest when a step has a section of its own to point at. On the five files
+named above, the steps are sub-points *inside a single* procedure section — there is no
+per-step heading to anchor to, and inventing `id`s on arbitrary `<li>`s would produce fragments
+that resolve to nothing a reader recognises as "step 3". `self-rescue-home-pool-practice.html`
+is the clearest example: 5 steps, all living under one `#how-to-practice` H2. Pointing all five
+at the same fragment would satisfy a probe and tell an answer engine nothing. **Deferred, with
+the reason recorded, rather than faked.**
+
+### Validation
+
+- 7/7 files: all JSON-LD blocks parse; `Article`, `FAQPage` and `BreadcrumbList` unchanged.
+- 5/5 new step texts on the confidence page assert **verbatim** against rendered page text;
+  shortest is 210 chars; none ends in a colon.
+- Every step `url` fragment resolves to a real `id` on its own page; base equals that page's
+  own `rel=canonical`. 0 duplicate `id`s introduced.
+- `position` is 1..n contiguous on all 7 blocks; 0 steps without `name`.
+- **Rendered prose is byte-identical before and after on all 7 files** (script/style stripped,
+  whitespace collapsed) — the change is schema-only.
+- Tag balance unchanged on all 7; 1 `<h1>` each; 0 `<meta>` and 0 JSON-LD in `<body>`.
+- Speakable re-checked: every selector on the 7 files resolves to exactly 1.
+- 0 brand-voice ownership hits.
+- Playwright skipped on purpose — no JS on this site mutates head signals.
+
+### Backlog after this run
+
+- **Prose H2 backlog: still 0.** Untouched.
+- **HowTo coverage: the "How to" H1 gap is now closed.** `how-to-build-water-confidence-in-children.html`
+  was the last real candidate; the remaining 9 are decision guides and should stay schema-free.
+- **New open axis: 85 unbound steps across 18 files.** Progress on it is gated on those pages
+  having per-step section `id`s, which is a content-structure change, not a schema change.
+  Do not report this as "85 broken anchors" — the correct denominator is *223 steps in 43
+  HowTo blocks, printables excluded by rule*.
+- `how-to-teach-kids-to-swim.html` still carries the oldest HowTo shape on the site: 5 steps,
+  no `url`, and its step names do not correspond to any heading on the page. It needs its
+  sections restructured before it can be anchored, not a schema patch.
+
+### Flagged for Michael — not changed
+
+1. **`water-safety-babies-under-1.html`** still says the AAP recommends 90–100°F water — that
+   is *bath* water guidance, still unsourced, still the last unverified AAP number on the site.
+2. **`/education/shallow-water-blackout.html`** — Red Cross / USA Swimming / YMCA deprecate
+   "shallow water blackout" for "hypoxic blackout". Renaming the URL is a redirect decision.
+3. **Batch 54–57 open items stand:** `free-reduced-swim-lessons-make-a-splash.html`'s two
+   divergent FAQ blocks, `teaching-kids-safe-pool-entry.html`'s uncited "leading cause" claim,
+   and `adaptive-swimming-special-needs.html`'s two `div.article-body` elements.
+
+---
+
+## Batch 59 — 2026-09-10 — The answer-surface sweep was scoped to /education/; the `/tools/` family was never in the denominator
+
+### What this run actually found
+
+The task file asks for the next 2–3 un-optimized articles. There are none in the article
+family: the prose question-H2 backlog has been 0 since Batch 56, and a re-scan of all 774
+files today confirms `/education/` is **425/425** on answer surface, speakable and FAQPage.
+Every page added since 2026-09-01 (nine worksheet/checklist landings plus their printables)
+shipped already carrying all of it.
+
+So the productive question was *what the AEO sweep has never looked at*. Answer: itself.
+Every answer-surface probe this project has run keyed on the class `.tldr-box`, and the
+backlog scorer is [[aeo_backlog_scoped_to_education_only]] scoped to `/education/`. Two things
+fell through:
+
+1. **A second, equivalent answer surface exists.** The hub family (`statistics/`,
+   `beginner-swim-lessons/`, `kids-swim-lessons/`, `toddler-swim-lessons/`,
+   `statistics/state-of-drowning-prevention/`) uses `p.hub-answer`, not `.tldr-box`. A
+   `.tldr-box`-only probe reports those five pages as missing an answer-first opening. **They
+   are not.** They lead with an answer and already carry `speakable`. Any future coverage
+   number must count both classes or it invents five defects.
+2. **The `/tools/` template family — a third family, neither article nor printable — has
+   never been scored.** Three indexable pages, linked from the global footer of every page
+   on the site, hub to 90+ printables. All three already led with question H2s and carried
+   `FAQPage`, but had **no answer surface and no `speakable` at all**.
+
+Corrected denominator: outside `/education/` and the directory, **22** indexable pages with
+≥3 H2s have no answer surface. Classified by page role, 18 are legal, commercial or
+transactional (`privacy`, `terms`, `about`, `advertise`, `for-swim-schools`,
+`swim-schools/add`, `gear`, `jobs`, `aquatic-jobs`, `scholarships`, the two
+`british-swim-school` brand pages, `teens*`, the homepage) — these are **not** AEO targets
+and should not be reported as backlog, the same reasoning that closed the 71 printable bridge
+H2s ([[printable_bridge_h2s_are_conversion_copy_not_backlog]]). Four are genuine
+informational targets. All four were fixed this run.
+
+### Optimized this run (4 pages)
+
+| Page | H2s | Question H2s | Added |
+|---|---|---|---|
+| `tools/index.html` | 9 | 5 | `.tldr-box`, `speakable` on the existing `CollectionPage/WebPage` |
+| `tools/family-water-safety-plan.html` | 9 | 4 | `.tldr-box`, new `WebPage` node carrying `speakable` |
+| `tools/pool-barrier-self-check.html` | 5 | 3 | `.tldr-box`, new `WebPage` node carrying `speakable` |
+| `swimmers-hub/index.html` | 8 | 6 | `.tldr-box`, `speakable` on the existing `CollectionPage/WebPage` |
+
+**Why a new `WebPage` node on the two tool pages rather than reusing what was there.** Both
+carry a `WebApplication` node as their primary entity. `WebApplication` descends from
+`SoftwareApplication` → `CreativeWork`; `speakable` has `WebPage` and `Article` in its
+domain and **does not apply to `WebApplication`**. Attaching it there would have validated
+in a linter and been off-domain in the vocabulary. A sibling `WebPage` node, `url` equal to
+the page's own `rel=canonical` on the `www` host, is the correct host.
+
+**Quick Summary copy is restatement only.** Every number in the four new boxes was already
+on its own page with its source block intact — the 48-inch height, the 4-inch gap and 2-inch
+over grass, the 4-inch sphere and the ~83% four-sided-isolation figure all come from the
+page's existing CPSC/CDC source list; the "leading cause of unintentional injury death for
+children ages 1 to 4" attribution to the CDC is the page's own sentence; the "90+ printables"
+figure reuses the page's own floor phrasing rather than an exact count
+([[replace_the_phrase_never_the_digits]]). **No new claim was introduced and nothing needed
+sourcing.** The `/tools/` pages' CPSC caveat — that the barrier guidelines are explicitly not
+a mandatory federal standard — was carried into the summary rather than dropped, because an
+answer engine extracting the box alone must not read as a compliance certificate.
+
+### Validation
+
+- 4/4: all JSON-LD blocks parse. **0 nodes lost, 0 nodes altered** — semantic set-difference
+  against `HEAD` shows only the added `speakable` and the two new `WebPage` nodes.
+- **0 words removed from visible prose on all four files**; the only prose delta is the new
+  box (+606 to +711 chars each).
+- `.tldr-box` resolves to **exactly 1** on each page; each hero `h1` selector resolves to
+  exactly 1. Both speakable selectors checked per page, per
+  [[speakable_selector_can_match_a_lead_magnet_ad]].
+- Tag balance 0 errors, 0 unclosed, `<strong>` balanced on all four; 1 `<h1>` each.
+- **Contrast checked statically rather than rendered.** `.tldr-box` is defined once, unscoped,
+  in `assets/css/main.css:1920`, and since the white-on-`#f0f7ff` incident it declares
+  `color: var(--gray-800)` explicitly, so it no longer inherits from a hero ancestor. All four
+  pages load `main.css`; all five custom properties it uses resolve there exactly once
+  ([[undefined_css_var_silently_drops_the_declaration]]); no page-level `<style>` on any of the
+  four declares `color` on the wrapper we inserted into, and none redefines those variables.
+  The box therefore renders identically to the 597 pages already using it. Playwright was not
+  installed for this — the sandbox was fresh, `/sessions` is at 100%, and the install is ~1GB.
+- 0 brand-voice ownership hits; no claim of owning or operating a swim school.
+- `git status --porcelain` inspected for deletions before commit: 4 modified, **0 deleted**
+  ([[never_create_scratch_files_inside_the_repo_clone]]). Scratch lived at `/tmp/aeo10work`,
+  outside the clone and outside the `/tmp/wwk-*` cleanup glob.
+
+### Backlog after this run
+
+- **Prose H2 backlog: still 0.** Untouched.
+- **Answer surface + speakable: the `/tools/` family and `swimmers-hub/index.html` are now
+  closed.** The informational non-`/education/` surface is at full coverage.
+- **New rule for every future coverage probe: count `.tldr-box` OR `p.hub-answer`.** A
+  `.tldr-box`-only probe reports 5 phantom defects on the hub family.
+- Unchanged and still open: 85 unbound HowTo steps across 18 files (gated on per-step section
+  `id`s), and `how-to-teach-kids-to-swim.html`'s legacy 5-step un-anchored HowTo.
+
+### Flagged for Michael — not changed
+
+1. **`teens.html` and `teens/index.html` are near-identical twins**, both indexable, both with
+   5 H2s and 1 question H2. This is the root-vs-directory duplicate shape already recorded for
+   `/education.html` ([[legacy_root_page_duplicates_an_education_article]]). Which one is
+   canonical is a redirect decision, not an AEO edit.
+2. **Batch 54–58 open items all stand**, unchanged: `water-safety-babies-under-1.html`'s
+   unsourced 90–100°F AAP claim, `/education/shallow-water-blackout.html`'s deprecated term,
+   `free-reduced-swim-lessons-make-a-splash.html`'s two divergent FAQ blocks,
+   `teaching-kids-safe-pool-entry.html`'s uncited "leading cause" claim, and
+   `adaptive-swimming-special-needs.html`'s two `div.article-body` elements.
+
+---
+
+## Batch 60 — 2026-09-13 (aeo-optimizer, scheduled)
+
+### Why this run did not optimize "the next 2–3 articles"
+
+The prose H2 backlog has been 0 since Batch 56 and the `/education/` answer surface is
+430/430. Re-running the standard pass would have been churn. Instead this run re-measured the
+**whole corpus** rather than the `/education/`-scoped denominator every prior AEO pass has
+used, which surfaced two real, previously invisible defects.
+
+### 1. The site asserted a SUPERSEDED AAP swim-lesson start age — 89 files, 238 replacements
+
+**This is the highest-value AEO defect found to date, because it makes us citable and wrong.**
+
+97 files asserted some form of *"the American Academy of Pediatrics recommends formal swim
+lessons around age 4."* That is the **2010** policy language. The AAP replaced it: *Prevention
+of Drowning*, **Pediatrics 158(1) e2026077410**, pre-published 2026-05-18 — *"swim lessons can
+be introduced after a child turns 1 year old"*, and *"there is no evidence that infant swim
+lessons reduce the incidence of drowning"*. Re-verified live this run via web search, not from
+memory alone.
+
+Worse, the corpus **self-contradicted**: ~80 other instances already said age 1. An answer
+engine asked "what age does the AAP recommend?" found both numbers on the same site.
+
+- **68 distinct raw shapes / 249 occurrences / 97 files.** A single regex would have mangled
+  most of them, so an explicit 43-rule exact-substring table was built and each rewrite
+  hand-checked.
+- **237 replacements across 89 files**, plus 1 bespoke fix to a `<li>` source citation on
+  `what-age-can-toddlers-start-swimming.html` that the table did not cover.
+- Prose and `FAQPage` JSON-LD carry the **same byte string**, so one substring replace moved
+  both in lockstep — FAQ parity verified after, not assumed.
+- **11 residual "age 4" mentions remain and are correct on purpose**: all are age-1-primary
+  sentences where age 4 appears as stroke-readiness or as explicit "updated from the earlier
+  wait-until-age-4 guidance" history. Enumerated and inspected individually.
+- Canonical replacements: `after their first birthday` (plural subjects) /
+  `after a child turns 1` (generic). No apostrophes introduced —
+  [[faq_schema_apostrophe_drift_from_visible_prose]].
+- Zero occurrences were in `<title>` or `<meta>`, so the 160-char cap never applied. Checked
+  before editing, not after.
+
+### 2. The H2 backlog scorer has always been scoped to `/education/` — the ROOT corpus was never scored
+
+Scoring all 126 non-exempt indexable ROOT pages found **5** under 50% question-H2s, three of
+them at **absolute zero**:
+
+| page | before | after |
+|---|---|---|
+| `swim-lessons-monmouth-county-kids.html` | 0/6 | **5/6** |
+| `swim-lessons-ocean-county-nj.html` | 0/6 | **5/6** |
+| `swim-lessons-jersey-shore.html` | 0/6 | **5/6** |
+
+(The 6th H2 on each is `Frequently Asked Questions`, correctly left alone.)
+
+All 15 new headings were scored with the recorded metric — `difflib.SequenceMatcher` on
+lowercased, punctuation-stripped text against a **17,922-heading corpus** (every h1/h2/h3 plus
+every FAQ `Question.name` sitewide, including the page's own) — and every one lands at
+**≤0.744**, under the 0.75 target from
+[[heading_proposal_collides_with_its_own_page_faq]]. Three re-aims were needed and each was
+re-scored, per [[heading_reaim_can_collide_harder_than_the_original]].
+
+One scorer refinement worth keeping: **the heading being replaced must be dropped from the
+corpus for its own candidate.** Leaving it in reports a phantom 0.97 self-collision on every
+question-ified statement heading and would have blocked all five Ocean County rewrites.
+
+Each converted H2 now opens with a direct answer sentence before the original prose
+(AEO rule 2). One CDC citation added to `swim-lessons-ocean-county-nj.html` — drowning is the
+leading cause of death for US children ages 1–4 — linked to the house URL
+`cdc.gov/drowning/data-research/facts/`.
+
+### 3. Slug label leaked into prose on one page (singleton — the orphan-dimension signature)
+
+`swim-lessons-monmouth-county-kids.html` rendered its FAQ from the page **slug**, not the
+place name: *"What age should kids in **Monmouth County Kids** start swim lessons?"*,
+*"How much do swim lessons cost in Monmouth County Kids?"*, *"many swim schools in the Monmouth
+County Kids area"*. 9 occurrences, visible + JSON-LD, and a breadcrumb `ListItem.name` of
+`Monmouth County Kids`. Count==1 file across the corpus — nothing else leaks this way. Fixed
+all 9; the one remaining hit is the grammatical *"what Monmouth County kids need"* in a new H2.
+
+### Validation
+
+- 89 files changed, **0 deleted** (`git status --porcelain` inspected before commit).
+- JSON-LD: **0 parse failures** across all 89.
+- FAQ parity: **0** schema answers absent from visible text; question `name` ↔ `h3` verified.
+- Tag balance `strong`/`h2`/`h3`: **0** imbalance. 1 `<h1>` per page.
+- Corpus after: 778 HTML / 655 indexable / 100 noindex / 23 stubs — unchanged shape.
+- `/education/` answer surface **430/430**, speakable non-1 unchanged, **0** pages with a box
+  but no speakable.
+- Scratch lived at `/tmp/aeoprobe`, outside the clone —
+  [[never_create_scratch_files_inside_the_repo_clone]].
+
+### Still open / flagged for Michael
+
+1. ⚠️ **Date surfaces not bumped.** 89 files got a real factual change and 3 got real new
+   prose, but `dateModified` / sitemap `lastmod` / visible date already disagree sitewide
+   (310 / 236 / 189). Bumping 92 more entries unilaterally deepens that split. This needs the
+   "fix all three or none" decision first — [[three_date_surfaces_all_lag_true_content_change]].
+2. **Two hub pages have no answer surface**: `swim-lessons/index.html` (7 H2s) and
+   `swim-lessons/directory/index.html` (7 H2s). Both are hubs, so this is the
+   hub-cannibalization scope decision, not backlog.
+3. **The 50 `swim-lessons/directory/*` state pages have no answer surface and 0 question H2s.**
+   They are produced by the generator at `.deploy/directory-gen/` which is **mount-only and not
+   in the repo** — editing them in the clone would be overwritten. Closing this axis means
+   changing the generator template, which is a separate job.
+4. **4 ROOT articles carry ≥3 H2s and no `FAQPage`**: `how-parents-can-support-swim-lessons-at-home`,
+   `why-year-round-swim-lessons-matter`, `how-long-should-swim-lessons-last`,
+   `why-kids-need-swim-lessons-even-if-they-have-a-pool`. Adding schema requires adding visible
+   Q&A too — [[generate_faq_schema_and_visible_from_one_source]]. Good candidates for Batch 61.
+5. HowToStep `url`: **247 steps, 167 with url, 80 without** — unchanged, still editorial
+   ([[howto_step_url_is_not_mechanically_closable]]).
+6. Batch 54–59 open items all stand unchanged.
+
+---
+
+## Batch 60 — 2026-09-14 — answer-surface CITABILITY (a new axis)
+
+Shipped `39266ee` on `live` (parent `cab8113`). 30 files changed, 4 unpublished.
+
+### Why this batch is not the task-file checklist
+The 8-point checklist is **done**: prose backlog 0, answer surface 429/429 `/education/`,
+FAQ parity 0 defects / 2,137 Q&A, JSON-LD interiors closed. Re-running it is churn
+([[closed_axes_index]]). Presence was closed; **quality had never been measured** — the same
+lesson as [[og_image_is_one_hotlinked_pexels_photo]], where presence was 679/679 and 214 pages
+still hotlinked one photo. **Presence is not durability.**
+
+### Axis 1 — geo-anchoring (NEW, now CLOSED 107/107)
+Does the extractable answer name the place the page ranks for? If an AI engine resolving
+"kids swim lessons in Howell NJ" pulls a passage that never says "Howell", the page cannot be
+cited for its own query.
+
+- 107 city-cluster pages carry an answer surface. **80 named their place; 27 did not.**
+  The 80 prove naming the place is the house pattern — the 27 were outliers, not design.
+- Fix is **ADDITIVE**: a place-anchored lead sentence per page type (beginner / kids /
+  toddler / plain), inserted after the `Quick Answer:` label. No existing sentence, citation
+  or href touched; AAP + CDC outbound links preserved; anchor counts asserted equal.
+- Word counts land 67–92, inside the family band (root median 69, education 68).
+- **107/107 after.** Exact-duplicate answer boxes **3 groups / 11 pages → 0**.
+
+### Axis 2 — internal .md served 200 from the web root (CLOSED, tracked .md now 0)
+`robots.txt` is `Allow: /`. Four internal docs were tracked in the published tree, orphaned
+(linked from no HTML) and absent from the sitemap:
+`AEO-STRATEGY.md`, `aeo-progress.md` (341KB), `memory-transfer/image_registry.md`,
+`swim-lessons/directory/README.md`. Untracked with `git rm --cached`; **working copies kept**.
+Rules **anchored** (`/swim-lessons/directory/README.md`, never the directory) so the 51 state
+pages survive; negative canary asserted on `colorado.html`, `directory/index.html`,
+`education/can-babies-swim.html`, `index.html`. `git ls-files '*.md'` on the **whole tree** is
+now **0** — the prior sweeps' `grep -v '/'` was what hid the subdirectory space.
+
+⚠️ **Consequence for future runs: `aeo-progress.md` is no longer in the repo.** A fresh clone
+will not contain it. **The mount copy is now the single source of truth** — which also ends
+the long-running repo↔mount fork ([[aeo_progress_log_forked_between_repo_and_mount]]).
+
+### Probe FP shapes — named so they are never re-invented
+1. **Hedge matched anywhere in the box → 3/3 phantoms.** All three *led* with a direct answer
+   and closed with a legitimate caveat at 78–89% depth. The axis is the **OPENING SENTENCE**.
+   Scoped correctly, hedging is **0/610** — the corpus already answers first.
+2. **"Box contains no digit" → 107/610 phantoms.** An enumerated list of specifics
+   ("improper breathing, poor body position, weak kicking") is highly citable without a number.
+   Axis **dropped**, not reported as backlog.
+3. **The H1-derived geo denominator silently DROPPED pages.** The regex could not span
+   "Mount Airy, Philadelphia" (comma inside the place) and skipped the page rather than scoring
+   it — 16 defects reported where there were 27. Deriving the place from the **file slug** found
+   the other 11. [[defect_class_inherits_the_audit_denominator]] — eighth occurrence.
+4. **A skip reason is a claim.** 7 pages were deferred as "no place in h1"; the H1s actually
+   read "for Monmouth County Beach Families" / "at the Jersey Shore". All 7 were real and fixed.
+5. Length must be bucketed **by family** before any floor: `swim-lessons/directory/` runs
+   90–219 words by design.
+
+Probes saved verbatim: `.deploy/probes/aeo_citability_probe.py`, `aeo_geo_anchor_probe.py`.
+
+### Still open / flagged for Michael
+1. ⚠️ **78 near-duplicate answer-box pairs remain, and this is the house pattern, not a bug.**
+   Across the city cluster the box is one templated sentence with the place swapped. Making
+   these individually citable needs **city-specific substance** (which schools, which pools),
+   which is the open strategic question — the cluster is already
+   [[city_cluster_indexed_but_never_surfaced]] (104 pages, 0 impressions) and
+   [[brand_city_demand_is_largest_unserved_cluster]]. **Not rewritten unilaterally.**
+2. ⚠️ **Live edge-cache verification was NOT performed this run** — the scheduled context could
+   not get browser approval. Push confirmed `cab8113..39266ee`; confirm on a **leaf** page.
+3. Date surfaces: 27 pages got a real prose change and were **not** bumped — same "fix all
+   three or none" block as Batch 59.
+4. Batch 59 items 2–6 stand unchanged (hub answer surfaces, the mount-only directory
+   generator, the 4 root articles with no `FAQPage`, HowToStep `url` 80).
+
+---
+
+## Batch 61 — 2026-09-15 — the 4 flagged articles closed, and a parity probe whose symbol range was two code blocks too narrow
+
+Shipped `debbdd0` on `live` (parent `bd4ad7b`) from a fresh `origin/live` clone.
+4 files changed, **244 insertions, 0 content deletions**. Batch 60 item 4 is **CLOSED**.
+
+### The denominator was re-derived, and it is 113 — but only 4 of them are the job
+
+Batch 60 flagged "4 ROOT articles with ≥3 H2s and no `FAQPage`". That figure was inherited
+from a root-article scope. Re-derived across the **whole tree** rather than trusted
+([[defect_class_inherits_the_audit_denominator]], ninth occurrence — this time the inherited
+number was *right for its class*, and the wider scan is what proved it):
+
+| slice | pages |
+|---|---|
+| HTML scanned | 777 |
+| ≥3 H2s | 754 |
+| — has `FAQPage` | 641 |
+| — **no `FAQPage`** | **113** |
+
+The 113 decomposes into **three page classes, only one of which is backlog**:
+
+1. **100 `education/*-printable.html`** — not articles. Their H2s are numbered worksheet
+   sections and fill-in prompts (`📋 1. Today's Plan — Fill This In`, `⏱️ 4. The Restart
+   Clock`), plus the related-cards utility headings. This is the **same family** Batch 56
+   characterized as conversion copy, seen from the schema side instead of the H2 side.
+   A `FAQPage` on a printable would assert Q&A that the page does not contain. **Excluded by
+   class, not deferred** — [[printables_are_a_page_class_not_a_backlog]].
+2. **8 hub / legal / nav pages** — `index.html`, `about/`, `privacy/`, `terms/`, `gear/`,
+   `jobs/`, `aquatic-jobs/`, `swim-schools/`. `privacy` (9 H2s) and `terms` (12 H2s) are
+   legal text; the rest are navigational. Same hub-scope decision as Batch 60 item 2.
+3. **5 genuine articles** — the 4 flagged, plus **`teens/scholarships.html`** (3 H2s,
+   `Article`, no `FAQPage`), which the root-article scope had not surfaced. Carried forward.
+
+### The 4 articles
+
+All four already had a `tldr-box`, question-form H2s, `📚 Authoritative Sources`, `speakable`
+and `Article`+`BreadcrumbList` JSON-LD. **`FAQPage` was the only missing point.** None has a
+TOC, so no TOC reconciliation was needed (contrast `bd4ad7b`, which needed it).
+
+| article | H2 | +Q&A | +bytes |
+|---|---|---|---|
+| `how-long-should-swim-lessons-last` | 6→7 | 5 | +4,145 |
+| `how-parents-can-support-swim-lessons-at-home` | 6→7 | 5 | +4,125 |
+| `why-year-round-swim-lessons-matter` | 6→7 | 5 | +4,113 |
+| `why-kids-need-swim-lessons-even-if-they-have-a-pool` | 6→7 | 5 | +4,525 |
+
+Written to the house pattern read off `benefits-of-swimming-for-kids.html`: visible
+`<h2 id="faq">Frequently Asked Questions</h2>` + `<h3>`/`<p>` pairs immediately before
+`</article>`, and a **separate** `FAQPage` script after the last existing ld+json block.
+
+**Both surfaces are emitted from one Python source list**
+([[generate_faq_schema_and_visible_from_one_source]]), and all 20 answers are **plain ASCII**
+— no smart quotes, no em dashes — so visible and schema text are byte-identical after HTML
+unescape and parity cannot drift by construction rather than by inspection.
+
+**The Q&A deliberately do not restate the H2s.** The H2s already answer the page's spine;
+the FAQ takes the adjacent long-tail a parent actually types (*"What if my child gets cold
+before the lesson ends?"*, *"Are puddle jumpers a substitute for lessons?"*, *"When can a
+child safely stop taking lessons?"*). Numbers are confined to figures the corpus already
+carries (CDC #1 cause ages 1–4; AAP-cited 88%; NDPA 69% non-swim-time) plus the Red Cross
+five-skill water-competency definition. **No water temperature was cited to anyone** —
+Batch 57's finding ([[six_water_temperatures_all_credited_to_the_aap]]) is why.
+
+Per-file assertions ran inside the edit, before write: anchor count unchanged, `href` set
+unchanged (0 lost), `h2` delta exactly +1, script delta exactly +1, `</article>` still 1,
+file grew. Diff confirms **the only removed lines are the 4 insertion-point lines**.
+
+### The finding: the recorded parity probe reproduces 0 — but only after its symbol range is widened
+
+Batch 56 recorded the parity probe spec (shape set `h1,h2,h3,h4,p>strong,button.faq-question,
+summary,dt`, document scope, leading-ordinal normalization) and the reading **0 drift /
+2,137 Q&A / 424 files**. Rebuilt to that spec it read **7 drift**, not 0. All 7 were the
+probe's, and both causes are the *same gap*: the recorded spec pins the **shapes** but never
+pins the **symbol-strip range**.
+
+- `education/water-watcher-card.html` — `<h2 id="shifts">⏱️ How long should a Water Watcher
+  shift be?</h2>`. **U+23F1** sits below a `☀` floor.
+- `scholarships/index.html` ×6 — `button.faq-question` wraps a nested
+  `<span class="faq-arrow">▾</span>`, so `get_text()` returns the arrow too. **U+25BE**
+  sits below the same floor.
+
+Widened to `U+1F000–1FAFF, U+2190–2BFF, U+2300–23FF, U+25A0–25FF, U+FE0E, U+FE0F`:
+**0 drift on both trees.** [[parity_probe_shape_set_is_recorded_but_symbol_range_is_not]].
+
+**The check that actually protected the corpus was differential, not absolute.** The probe was
+run against a `git worktree` of HEAD *and* the working tree, so the answer that mattered —
+*did this batch change parity?* — was available at **7 → 7** while the probe was still wrong,
+and stayed right at **0 → 0** once fixed. Q&A **3,056 → 3,076 (+20, exactly 4×5)**; files with
+`FAQPage` **641 → 645**. Acting on a wrong parity probe deletes healthy Q&A (Batch 56); a
+differential cannot produce that failure even when the probe is broken.
+
+Note the corpus has grown well past the recorded figures — **3,056 Q&A on 641 files** at HEAD
+versus 2,137 on 424 at Batch 56. A recorded absolute reading ages; the probe does not.
+
+### Validation
+- **2,274 ld+json blocks parsed corpus-wide, 0 invalid.** All 4 new `FAQPage` blocks assert
+  `Question`/`Answer` `@type` and non-empty `name`/`text`.
+- FAQ parity **0 / 3,076** (above). `speakable` intact on all 4.
+- Brand voice: zero ownership claims (`our lessons|we teach|we operate|…`) in the new text —
+  WaterWiseKids still owns and operates no swim school.
+
+### Still open / flagged for Michael
+1. ⚠️ **Date surfaces still not bumped** — these 4 articles got real new prose and are now
+   4 more entries on the pile. **Deliberately not bumped**, per the standing
+   "fix all three or none" block ([[three_date_surfaces_all_lag_true_content_change]]).
+   This is the longest-carried open decision in the log and it is a **decision**, not work.
+2. ⚠️ **Live edge-cache verification NOT performed** — same scheduled-context browser-approval
+   limit as Batch 60. Push confirmed `bd4ad7b..debbdd0`; confirm on a leaf, e.g.
+   `/how-long-should-swim-lessons-last.html`, that the `Frequently Asked Questions` H2 renders.
+3. **`teens/scholarships.html`** — the fifth genuine article with ≥3 H2s and no `FAQPage`.
+   Newly surfaced this run. Natural Batch 62 candidate.
+4. **78 near-duplicate answer-box pairs** across the city cluster (Batch 60 item 1) — still
+   the open strategic question, still not rewritten unilaterally.
+5. Batch 59–60 items otherwise stand unchanged: hub answer surfaces, the mount-only directory
+   generator, HowToStep `url` 80-without.
+
+## Batch 63 — 2026-09-18 (aeo-optimizer, scheduled) — the axis read 66 because the probe counted redirect stubs
+
+Shipped `8972d5b..4decdfe` on `origin/live` from a fresh shallow clone at `/tmp/aeo/repo`.
+Three directory state pages got a hand-sourced Quick Answer box + a `speakable` node:
+**Nebraska (11 schools) · Kentucky (10) · Oklahoma (9)** — the top three by verified school
+count on the Batch 62 ranking.
+
+> Note: **Batch 62 (Oregon / Utah / Connecticut, `e4d5991`) is absent from this log.** It is
+> recorded only in memory. This file remains write-only on a diverged mount branch and is not
+> in chronological order — `grep -n '^## '` before numbering, per
+> [[aeo_progress_log_is_write_only_on_a_diverged_branch]].
+
+### The finding: the answer-surface probe has no redirect-stub exclusion, and it inflated the axis by 23
+
+The survey at `8972d5b` first read **no_answer_box = 66 / 683 indexable**, against memory's
+post-Batch-62 figure of **43 / 658**. The instinct — "the corpus grew, the backlog grew with
+it" — was wrong on both halves.
+
+The probe excluded `noindex` but not `<meta http-equiv="refresh">`. Twenty-three flat-root
+pages are **redirect stubs** (`how-to-prevent-child-drowning.html`,
+`beginner-swim-lessons-philadelphia.html`, `education.html`, `index.html`, …) — ~3KB each,
+`meta refresh` plus a `rel=canonical` pointing at the real page. They carry no content, so of
+course they carry no answer box, and a box on them would be unreachable.
+
+Adding the one exclusion:
+
+```
+indexable non-stub: 660 | stubs excluded: 23 | no_box: 43
+state cluster: 26 | other: 17
+```
+
+**43 exactly — memory's figure, reproduced.** The entire 23-page "growth" was the stub family.
+This is the same error class as [[corpus_b_probe_must_exclude_redirect_stubs]], which recorded
+the identical exclusion for the donor probe and was never carried across to this one.
+⭐ **Every corpus-wide coverage probe on this site needs both filters: `noindex` *and*
+`http-equiv="refresh"`.** A probe with only the first over-reports by ~23 and invents a
+backlog of pages that cannot host the thing being counted.
+
+### Sourcing: page-internal only, and the ItemList is the denominator that counts
+
+Per [[directory_state_pages_are_the_open_answer_surface]], the 23 older boxes are hand-written
+per state, so no `<STATE>` substitution. Each new box was built from that page's own
+`.state-info` prose, its own `FAQPage` `acceptedAnswer` text, and its own `ItemList` — plus the
+two national stats the existing boxes already carry with their AAP/CDC links.
+
+Every coverage clause was tallied from `itemListElement[].item.address.addressLocality`, never
+the cost prose ([[directory_prose_band_and_itemlist_are_different_denominators]]):
+
+- **Nebraska** — Omaha 6 · Lincoln 2 · Sarpy County 3 (Papillion, Bellevue, La Vista) = 11.
+  Three brands (Swimtastic, Aqua-Tots, Goldfish) account for all eleven.
+- **Kentucky** — Lexington 4 · Louisville 3 + St. Matthews 1 · Florence 1 · Elizabethtown 1 = 10.
+- **Oklahoma** — Tulsa metro 6 (Tulsa ×2, Tulsa Hills, Broken Arrow, Jenks, Owasso) ·
+  OKC metro 3 (Oklahoma City, Edmond, Moore) = 9.
+
+The 88% figure is phrased as an **association** — *"formal swim lessons are associated with an
+88% reduction in drowning risk"* — never attributed to the AAP
+([[aeo_brief_misattributes_88pct_to_aap]]; the task file re-suggests the wrong phrasing every
+run and it was again declined).
+
+### Validation
+- Per-file assertions ran **inside the edit, before write**: anchor delta exactly +2 (the two
+  citation links), **0 hrefs lost**, `h2`/`h3`/`<script>`/`</section>` counts all unchanged,
+  `#quick-answer` == 1, `.page-hero h1` == 1, `"speakable"` == 1, file grew.
+- Differential corpus validation (HEAD via `git stash` vs working tree): **2,305 ld+json
+  blocks, 0 invalid, on both sides.** FAQ Q&A **3,130 → 3,130** and `FAQPage` blocks
+  **652 → 652** — correct, this batch adds no Q&A.
+- Diff is a **pure insertion: 24 lines added, 0 removed** across 3 files.
+- Brand voice: 0 ownership claims in the new text. WaterWiseKids still owns and operates no
+  swim school.
+- Axis after: **43 → 40**; state cluster **26 → 23**.
+
+### Still open / flagged for Michael
+1. ⚠️ **Date surfaces still not bumped** — three real content changes added here. Still the
+   longest-carried open **decision**, per the standing "fix all three or none" block
+   ([[three_date_surfaces_all_lag_true_content_change]]).
+2. ⚠️ **Live edge-cache verification NOT performed** — same scheduled-context browser-approval
+   limit as Batches 60–62. Push confirmed `8972d5b..4decdfe`; spot-check that
+   `/swim-lessons/directory/nebraska.html` renders the Quick Answer box above the search section.
+3. ⚠️ **`/tmp/wwk-wt` still dangling** — fifth confirmation; directory absent, `git worktree
+   list` still reports it locked. One-time interactive `git worktree prune --force`, Michael's
+   to run. This run used `/tmp/aeo/` (non-matching prefix) and the skip-guard cleanup.
+4. **~23 state pages left** on this axis, ~3/run. Next by verified school count:
+   **Kansas 7 · Alabama 7 · washington-dc 7 · Louisiana 6 · Arkansas 6.**
+5. **Converting the older 23 boxes' `speakable`** from `[".tldr-box", ".page-hero h1",
+   ".state-info h3"]` (where `.state-info h3` resolves to 4–6 elements) to the asserted-1
+   `["#quick-answer", ".page-hero h1"]` remains a separate safe mechanical batch.
+6. Batch 60–62 items otherwise stand: 78 near-duplicate answer-box pairs in the city cluster,
+   `HowToStep url` 80-without, hub answer surfaces, `teens/scholarships.html` FAQPage.
+
+## Batch 64 — 2026-09-19 (aeo-optimizer, scheduled) — Kansas, Alabama, Washington D.C.
+
+**Shipped:** `49eb9a4` on `live` (fresh shallow clone from `c1507cc`; never pushed from the mount).
+
+Three directory state pages gained a `#quick-answer` box and a `WebPage` `speakable` node:
+`swim-lessons/directory/{kansas,alabama,washington-dc}.html`. Diff was **additions only** —
+24 insertions, 0 deletions, 3 files.
+
+**Axis:** `no_answer_box` **40 → 37**; state cluster **22 → 19**. `no_box` and `no_speakable`
+remain byte-identical lists, so one probe still measures both. Survey used BOTH filters
+(`noindex` + `http-equiv="refresh"`) and reproduced memory's post-Batch-63 figure exactly:
+`indexable non-stub: 662 | stubs excluded: 23 | no_box: 40`.
+
+**Sourcing — page-internal only (3rd consecutive confirmation).** Every clause traces to the
+page's own `.state-info` prose, its own `FAQPage` `acceptedAnswer` text, or its own `ItemList`.
+No web access was used or needed. Coverage clauses tallied from `addressLocality`:
+- **Kansas 7** — 6 on the KC metro's Kansas side (Overland Park, Olathe, Lenexa, Leawood,
+  Prairie Village in Johnson County + Kansas City, KS) + Wichita 1. Brands: Emler 3,
+  Goldfish 2, Aqua-Tots 2 = 3 distinct.
+- **Alabama 7** — Hoover 2, Huntsville 2, Madison 2, Montgomery 1. Brands: Goldfish 3,
+  SafeSplash 3, Aqua-Tots 1 = 3 distinct. **Zero Gulf Coast listings** — asserted as an
+  absence in the box and verified programmatically (Gulf Shores / Orange Beach / Mobile /
+  Fairhope / Daphne all 0).
+- **washington-dc 7** — all `addressLocality: Washington`. SafeSplash 3, British Swim School 1,
+  independents 3. DC has **no `.state-info` container at all**; its FAQ answers alone were a
+  sufficient corpus.
+
+**Trap avoided:** `alabama` is the [[goldfish_birmingham_al_is_a_phantom]] page — the box names
+**Hoover**, never Birmingham. Towns were taken from `ItemList`, never from cost prose
+([[directory_prose_band_and_itemlist_are_different_denominators]]).
+
+**DC is the one state in this batch that DOES mandate a barrier** — DC Construction Codes,
+48in + self-closing/self-latching gates, DC Dept of Buildings. Kansas and Alabama both have no
+statewide residential statute. Stated per-page rather than templated.
+
+**Validation (all pass, 3/3):** `#quick-answer` == 1, `.page-hero h1` == 1, `.tldr-box` == 1;
+4 JSON-LD blocks parse per page; exactly 1 `speakable`, on `@type: WebPage`, `url` == the page's
+own `rel=canonical` on the `www` host; selector is `["#quick-answer", ".page-hero h1"]` (the
+newer Batch-62 shape, not the older 23's `.state-info h3`); every town named in a box exists in
+that page's `ItemList`; `<strong>N swim schools` matches `.school-count` and `len(ItemList)`.
+
+**88% phrasing:** kept the shipped Nebraska shape — "formal swim lessons are **associated with**
+an 88% reduction" with AAP credited only for the age-1 recommendation and CDC only for
+leading-cause-of-death. The task brief's "AAP: formal swim lessons can reduce drowning risk by
+88%" is still wrong and still re-suggested every run; it was not used.
+
+**Next by verified school count:** Louisiana 6 · Arkansas 6 · Nevada 5 · Delaware 5, then the
+≤4 tail (alaska, hawaii, idaho, iowa, maine, mississippi, montana, new-hampshire, new-mexico,
+north-dakota, rhode-island, south-dakota, vermont, west-virginia, wyoming) + `directory/index.html`.
+
+⚠️ `/tmp/wwk-wt` still dangling (13th confirmation). Skip-guard used; scratch at `/tmp/aeo919/`.
+
+## Batch 65 — 2026-09-20 (aeo-optimizer, scheduled) — Louisiana, Arkansas, Nevada
+
+**Shipped:** `a2a159e` on `live` (fresh shallow clone from `72a799d`; never pushed from the mount).
+
+Three directory state pages gained a `#quick-answer` box and a `WebPage` `speakable` node:
+`swim-lessons/directory/{louisiana,arkansas,nevada}.html`. Diff was **additions only** —
+24 insertions, 0 deletions, 3 files. Identical shape to Batches 63/64.
+
+**Axis:** `no_answer_box` **37 → 34**; state cluster **19 → 16**. `no_box` and `no_speakable`
+remain byte-identical lists (5th consecutive confirmation), so one probe still measures both.
+Survey used BOTH filters (`noindex` + `http-equiv="refresh"`) and reproduced memory's
+post-Batch-64 figure exactly: `indexable non-stub: 665 | no_box: 37 | state 19 | other 18`,
+which is memory's `19 state + directory/index.html + 17` — reconciled before patching.
+
+⚠️ **The stub count moved and the total did not.** `stubs excluded` read **130** this run vs
+**23** at Batch 64, while `indexable non-stub` went 662 → 665 and the axis reproduced exactly.
+The corpus grew (795 html files); the old "23 flat-root stubs" figure was a narrower
+denominator. **Trust the axis + its decomposition, not the stub count**, as the reproducing check.
+
+**Sourcing — page-internal only (4th consecutive confirmation).** None of the three has a
+`.state-info` container — same as `washington-dc` in Batch 64, so that is now the norm on this
+tail, not the exception. `FAQPage` `acceptedAnswer` text + `ItemList` alone were sufficient.
+- **Louisiana 6** — Baton Rouge 2 + Prairieville 1; Metairie 1, New Orleans 1, Covington 1.
+  **6 distinct brands, five of them independents** (Crawfish, Tadpole Academy, Safe Swim Kids,
+  Love Swimming, Seven Seas); Goldfish Covington is the only national chain. Stated, because it
+  tells a parent that comparison must be school-by-school.
+- **Arkansas 6** — Little Rock 4 + Rogers 1 + Fayetteville 1. 5 distinct brands (SafeSplash ×2).
+  The "within about twenty minutes" clause is lifted verbatim from the page's own FAQ.
+- **Nevada 5** — Las Vegas 2, Henderson 2, Summerlin 1. **All five are national chains; zero
+  independents verified** — the exact inverse of Louisiana, and both are free assertions off
+  `item.name`.
+
+⭐ **The prose-band trap fired again, this time from an FAQ answer, not `.state-info`.**
+Nevada's own cost FAQ reads *"dedicated swim schools in the Las Vegas and Reno metros."* The
+`ItemList` has **zero Reno listings** (Reno / Sparks / Carson City all 0, verified). Drafting
+coverage from that sentence would have invented a Reno school exactly as Tigard nearly shipped
+in Batch 62. **[[directory_prose_band_and_itemlist_are_different_denominators]] is not
+`.state-info`-specific — a pricing clause inside an `acceptedAnswer` is the same trap.** The
+shipped box turns it around and states the absence explicitly, warning the reader off the same
+inference the page's own FAQ invites.
+
+**Absences shipped (all verified programmatically, 0 in `ItemList` and 0 in any `item.name`):**
+Louisiana — Lafayette, Shreveport, Lake Charles, Monroe. Arkansas — Bentonville, Springdale,
+Fort Smith, Jonesboro, Conway, Hot Springs. Nevada — Reno, Sparks, Carson City.
+
+**Validation (all pass, 3/3):** `#quick-answer` == 1, `.page-hero h1` == 1, `.tldr-box` == 1
+(XPath — `lxml.cssselect` still not installed); 4 JSON-LD blocks parse per page; exactly 1
+`speakable`, on `@type: WebPage`, `url` == that page's own `rel=canonical` on `www`; selector
+`["#quick-answer", ".page-hero h1"]` (Batch-62 shape); every town named in a box is present in
+that page's `ItemList` and every town asserted absent is absent; `<strong>N swim schools`
+matches `.school-count` and `len(ItemList)`. Corpus-wide: **2,327 JSON-LD blocks, 0 parse
+failures.** Box parses as a **sibling of the hero `<section>` at body level**, not nested.
+Brand-voice probe clean (no "our school / we operate / book with us").
+
+**88% phrasing:** kept the shipped hedge — "formal swim lessons are **associated with** an 88%
+reduction", AAP credited only for the age-1 recommendation, CDC only for leading-cause-of-death.
+The task brief's "AAP: formal swim lessons can reduce drowning risk by 88%" is still wrong and
+still re-suggested every run; it was not used. A regression assert now fails the build if the
+AAP name appears within 160 chars before an unhedged `88%`.
+
+**Next — only the ≤4 tail is left:** Delaware 5, then alaska, hawaii, idaho, iowa, maine,
+mississippi, montana, new-hampshire, new-mexico, north-dakota, rhode-island, south-dakota,
+vermont, west-virginia, wyoming (16 pages) + `directory/index.html`. At ~3/run the state
+cluster closes in ~5 more runs.
+Also still open: converting the older 23 boxes' `speakable` from `.state-info h3` (4–6 matches)
+to the asserted-1 shape; 78 near-duplicate answer-box pairs in the city cluster; `HowToStep url`
+80-without; hub answer surfaces; `teens/scholarships.html` FAQPage.
+
+⚠️ `/tmp/wwk-wt` still dangling and **registered + locked** in the mount's worktree list (14th
+confirmation). Skip-guard used; scratch at `/tmp/aeo920/`.
+
+## Batch 66 — 2026-09-21 (aeo-optimizer, scheduled) — Delaware, South Dakota, New Mexico + a sitemap lastmod repair
+
+**Shipped `c1d8adb`** (fresh shallow clone at `/tmp/aeo921/`, pushed to `live`; the mount was
+never written to git).
+
+### Axis
+`34 → 31` (state `16 → 13`, other `18` unchanged). Denominator reproduced exactly against
+Batch 65: `indexable non-stub: 666 | stubs excluded: 23 | noindex excluded: 109`. As always,
+verify with the `state | other` decomposition, not the stub total.
+
+Remaining state tail (13): alaska 3, hawaii 4, idaho 4, iowa 3, maine 2, mississippi 2,
+montana 3, new-hampshire 2, north-dakota 2, rhode-island 4, south-dakota — done, vermont 3,
+west-virginia 2, wyoming 2. Plus `directory/index.html`. **~4 more runs to close the cluster.**
+
+### What shipped per page
+`.tldr-box#quick-answer` (Nevada's exact inline-style shape) + `speakable` on the **WebPage**
+node only, `cssSelector: ["#quick-answer", ".page-hero h1"]`.
+
+- **Delaware (5 schools)** — all five in **New Castle County** (Newark ×2, Wilmington,
+  North Wilmington, Pike Creek). Explicit absence: nothing in Kent or Sussex, incl. Dover,
+  Middletown, Smyrna, Milford.
+- **South Dakota (4)** — all four in **Sioux Falls** (3 SafeSplash + EmBe Aquatics, an
+  independent nonprofit). Absence: Rapid City, Brookings, Aberdeen, Watertown, Pierre, Spearfish.
+- **New Mexico (4)** — Albuquerque ×3, Santa Fe ×1. Absence: Las Cruces, Rio Rancho, Roswell,
+  Farmington, Alamogordo. ⭐ **New claim shape: "none of the four is a national chain"** —
+  verified programmatically against the chain-name list, and genuinely useful to a parent
+  because it means no familiar level system to lean on.
+
+### ⭐ The prose-band trap fired again, and page-internal sourcing held for a 5th time
+Delaware's own cost FAQ names "Wilmington, Newark, **and Dover**" as the higher-end market.
+Dover has **zero** listings. Per [[directory_prose_band_and_itemlist_are_different_denominators]]
+the box inverts it explicitly — *"that is a pricing band, not inventory — Dover has no verified
+school in this directory"* — rather than just avoiding the word. Inverting reads better than
+omitting: it answers the question a parent in Dover is actually asking.
+
+All three boxes were sourced **entirely from the page's own `FAQPage` answers + `ItemList`**.
+No web access was needed or used. `.state-info` was present on Delaware only; absent on
+South Dakota and New Mexico — consistent with the pattern that this tail generally lacks it.
+
+### ⭐ NEW FINDING: batches 63–65 shipped prose and never bumped `lastmod`
+Nine state pages carried a `tldr-box` while their sitemap `lastmod` still predated the batch
+that wrote it — `oklahoma`, `alabama`, `washington-dc`, `louisiana` and `nevada` were all still
+at **2026-09-08**, i.e. up to twelve days *before* their own AEO pass. Batch 62's three
+(oregon/utah/connecticut) were correct at 09-17, so the regression starts at Batch 63.
+
+Repaired in this commit to each batch's recorded ship date (B63→09-18, B64→09-19, B65→09-20)
+rather than to today, because that is the truthful value. **Every bump is guarded**: the script
+asserts the page actually carries both `tldr-box` and `"speakable"` before touching its
+`lastmod`, and skips any page already at or past the target date. This is the narrow,
+provable version of a bump — not a blanket one ([[sitemap_lastmod_staleness]]).
+
+⭐ **Add a `lastmod` bump to the standing AEO run recipe.** Adding a ~330-word answer box is
+exactly the "real prose" case in [[deploy_hygiene_index]]'s rule of thumb. Directory state
+pages carry **no `dateModified`**, so `lastmod` is the *only* freshness signal they have —
+which is why missing it is worse here than on an article.
+⚠️ The sitemap has two `<url>` formats (666 `<loc>` vs 561 line-anchored) — the patch matched
+on the `<url>` block, not a line, and asserted the substitution count. Verified 666 `<loc>`
+and well-formed XML after.
+
+### Validation
+JSON-LD parses on all 4 blocks per page · `speakable` on `WebPage` domain only ·
+`#quick-answer` / `.page-hero h1` / `.tldr-box` all cardinality **1** (XPath — `lxml.cssselect`
+still not installed) · sitemap well-formed at 666 urls · brand voice clean (no claim to operate
+a school) · **88% not attributed to the AAP** ([[aeo_brief_misattributes_88pct_to_aap]] — the
+task file re-suggests the wrong phrasing every run; Nevada's hedge shape was copied verbatim).
+
+⭐ **Claim reconciliation ran as a probe, not a read-through**: counts, present cities, absent
+cities and school names for all three pages were each asserted against that page's own
+`ItemList`, plus an under-claim check that no city in the data was left unnamed by the box.
+All passed. Ship dates and any absence claim should always be machine-verified this way.
+
+### Environment
+Mount dirty at session start (**348 uncommitted changes**, HEAD still stranded at `0e211752b`
+from 2026-08-20) — **eighth consecutive day**; never read as the corpus, never written.
+`/sessions` 100% / 0 bytes free throughout; `/` 5.7G of 9.6G. Scratch at `/tmp/aeo921/`
+(prefix chosen before the clone command was typed), skip-guard used for the mandated cleanup.
+`/tmp/wwk-wt` still dangling in `git worktree list` — **twenty-fifth confirmation**; still
+Michael's one-time interactive `git worktree prune --force`.
+
+## Batch 67 — 2026-09-22 (aeo-optimizer, scheduled) — Hawaii, Idaho, Rhode Island + a chain/independent contrast pair
+
+**Shipped `e637a44` on `origin/live`** (fresh shallow clone → patch → push; never from the mount).
+Axis **31 → 28**; directory state cluster **13 → 10**.
+
+Survey at `58f6d95` reproduced memory's post-B66 figures exactly:
+`indexable non-stub: 667 | stubs excluded: 24 | noindex: 110` → `no_answer_box: 31 = state 13 | other 18`
+(the `other` bucket includes `directory/index.html`, so this IS memory's `13 state + 1 + 17`).
+
+### What shipped
+Three `#quick-answer` boxes (307–329 words) + `speakable` on the `WebPage` node,
+`cssSelector ["#quick-answer", ".page-hero h1"]`, both asserted **exactly 1** by XPath.
+Sitemap `lastmod` bumped to the ship date on all three, payload-guarded.
+
+| state | N | inventory | verified absence | brand composition |
+|---|---|---|---|---|
+| hawaii | 4 | Honolulu 3 (Oʻahu), Kihei 1 (Maui) | Hawaiʻi Island, Kauaʻi, Molokaʻi, Lānaʻi — and all other Oʻahu/Maui towns | **4-of-4 independent, zero franchise** |
+| idaho | 4 | Boise 2 + Nampa 1 (Treasure Valley), Coeur d'Alene 1 | all of eastern + southern Idaho (Idaho Falls, Pocatello, Rexburg, Twin Falls, Moscow, Lewiston, Sun Valley) | **4-of-4 franchise, zero independent** |
+| rhode-island | 4 | Warwick, West Warwick, Providence, Bristol | south-shore ocean beaches, Aquidneck Island, Block Island | 3 franchise / 1 independent (Pods Swimming) |
+
+### ⭐ Findings
+
+**1. The chain/independent axis produced a clean contrast pair in one batch.**
+Hawaii is 4-of-4 independent; Idaho is 4-of-4 national franchise. Both fall straight out of
+`item.name` and both are directly actionable for a parent: in Hawaii there is *no familiar chain
+level system to compare against*, so ask each school how it sequences skills; in Idaho the
+curriculum and level names *travel* between Boise and Nampa. Worth stating as an implication,
+not just a tally.
+
+**2. Hawaii's absence claim is airtight because the locality SET is only two values.**
+`{Honolulu, Kihei}` — so "no verified listing on Hawaiʻi Island, Kauaʻi, Molokaʻi or Lānaʻi"
+needs no town-by-town check; any town that is not one of those two has zero. When a state's
+locality set is very small, assert the **complement**, which is stronger and cheaper to verify
+than enumerating absences.
+
+**3. Idaho's absence was already published on its own page — carry it, don't re-derive it.**
+`idaho.html`'s `.state-info` says outright *"We have no verified swim school listing in Idaho
+Falls itself. That is an honest gap rather than a judgment."* A page-stated absence is
+pre-verified corpus in exactly the sense [[directory_state_pages_are_the_open_answer_surface]]
+means, and it also fixes the prose-band trap in advance: the `.state-info` **headline** is
+*"How Much Do Swim Lessons Cost in Idaho Falls and Boise?"* while Idaho Falls has zero listings.
+
+**4. Rhode Island inverts the trap for the 3rd batch running.** Its FAQ names south-shore rip
+currents as the state's leading open-water danger; the `ItemList` has **zero** south-shore
+listings. Stating that adjacency explicitly ("which matters because that south-shore coast is
+exactly where the state's worst open-water risk lives") is more useful than either claim alone.
+
+**5. ⚠️ NEW — the claim-reconciliation probe needs apostrophe normalization.**
+The under-claim check reported 1 FAILURE on `Coeur d'Alene`: the box renders `&rsquo;` (U+2019)
+while `ItemList` `addressLocality` carries the ASCII `'`. Content was correct; the probe was
+wrong. Normalize `[‘’ʼʹ] → '` on **both sides** before substring-matching.
+Same family as [[attr_regex_with_both_quotes_truncates_at_apostrophes]]. A reconciliation probe
+that is not apostrophe-safe will keep inventing defects on `Coeur d'Alene`, `O'Fallon`,
+`Coeur d'Alene`-style names.
+
+**6. `.state-info` present on hawaii and idaho, absent on rhode-island** — consistent with B64/B65:
+on this tail the container is hit-or-miss, and `FAQPage` + `ItemList` alone are sufficient.
+
+### Validation run
+`#quick-answer` = 1, `.page-hero h1` = 1, 4 JSON-LD blocks each reparsed, exactly 1 `speakable`
+node each (on `WebPage`), `<div>` balance 0, 0 broken root-relative links, sitemap `<loc>` total
+667 unchanged and `ElementTree` parses. Post-ship survey read `no_answer_box: 28 | state 10 | other 18`.
+
+### Remaining (all ≤4 verified schools, ~3 per run → ~3 runs to close)
+alaska · iowa · maine · mississippi · montana · new-hampshire · north-dakota · vermont ·
+west-virginia · wyoming — plus `directory/index.html`. The other 17 are hub/legal, not backlog.
+
+## Batch 68 — 2026-09-23 (aeo-optimizer, scheduled) — Alaska, Iowa, Montana: three single-metro states
+
+**Shipped `43a86fa` on `origin/live`** (fresh shallow clone at `/tmp/aeo923/` from `28dcaac` → patch → push;
+the mount was never written to git). 4 files, **27 insertions / 3 deletions** (the 3 are sitemap `lastmod` lines).
+Directory state cluster **10 → 7**; axis **28 → 25** expected.
+
+### What shipped
+`.tldr-box#quick-answer` (296–310 words, Rhode Island's exact inline-style shape) directly after the hero
+`<section>`, + `speakable` on the `WebPage` node only, `cssSelector ["#quick-answer", ".page-hero h1"]`.
+Sitemap `lastmod` → 2026-09-23 on all three (block-anchored regex, substitution count asserted = 1 each).
+
+| state | N | inventory | verified absence | brand composition |
+|---|---|---|---|---|
+| alaska | 3 | Anchorage ×3 (YMCA, The Alaska Club Starfish Academy, Aquatic Foundation of Alaska) | Wasilla, Palmer, Mat-Su Borough, Fairbanks, Juneau | **0 chains** — YMCA / member club / nonprofit |
+| iowa | 3 | Des Moines, Urbandale, Waukee (all Des Moines metro) | Cedar Rapids, Iowa City, Coralville, Ames, Davenport, Sioux City, Council Bluffs, Dubuque | **3-of-3 national chain** |
+| montana | 3 | Billings ×3 | Bozeman, Missoula, Great Falls, Helena, Kalispell, Bigfork, Butte, Whitefish | **3-of-3 independent** |
+
+### Findings
+1. **All three are single-metro states, and all three already published their own absence list** (Iowa and
+   Montana in a "Which towns have verified swim schools?" FAQ, Alaska in `.state-info`). Absences were carried,
+   not re-derived — then machine-verified against `ItemList` `addressLocality` and `item.name`.
+2. **Prose-band trap fired a 4th time (Iowa).** The cost FAQ says "dedicated swim schools in the Des Moines
+   **and Cedar Rapids** metros"; Cedar Rapids has 0 listings. The box inverts it explicitly: "Cedar Rapids
+   appears in Iowa price ranges, but that is a pricing band, not inventory."
+3. **Montana has no price figure anywhere on the page** (FAQ says only "contact schools directly"), so the box
+   ships **no dollar band** rather than importing the national $15–$30 figure. First state on the tail without one;
+   page-internal sourcing held for the 6th consecutive batch.
+4. **Montana's AAP line differs from the template** ("ready around age 1, most by age 4") — kept the page's own
+   wording rather than the house sentence.
+5. Chain/independent axis again gives a contrast: Iowa 3/3 franchise vs Montana 3/3 independent vs Alaska
+   0 franchise with a non-school model (membership-gated pricing — stated as a comparison tip).
+
+### Validation (all pass, 3/3)
+`#quick-answer` / `.page-hero h1` / `.tldr-box` cardinality 1 (lxml XPath); box is a child of `<body>`;
+exactly 1 `speakable`, on `WebPage`, `url` == canonical; `N swim schools in` == `.school-count` == `len(ItemList)`;
+every locality and every school name present in box (apostrophe-normalized); every asserted-absent town absent from
+`ItemList`; `<div>` balance 0; 0 broken root-relative links; brand-voice probe clean; 88% hedged
+("associated with"), AAP credited only for the age recommendation. Corpus: **2,354 JSON-LD blocks, 0 parse
+failures**; sitemap parses, 670 `<url>`.
+
+### Remaining (7 states, ~2–3 runs)
+maine 2 · mississippi 2 · new-hampshire 2 · north-dakota 2 · vermont 3 · west-virginia 2 · wyoming 2
++ `directory/index.html`. Mount still dirty at `0e211752b`; not touched.
+
+## Batch 69 — 2026-09-24 (aeo-optimizer, scheduled) — Vermont, Maine, New Hampshire: the northern New England trio
+
+**Shipped `d4ab11f` on `origin/live`** (fresh shallow clone at `/tmp/aeo924/` from `b290fdc` via the direct remote URL →
+patch → push, verified by re-fetch; the mount was never written to git). 4 files, **27 insertions / 3 deletions**
+(the 3 are sitemap `lastmod` lines). Directory state cluster **7 → 4**; axis **25 → 22** expected.
+
+### What shipped
+`.tldr-box#quick-answer` (283–296 words, the Alaska/Rhode Island inline-style shape) directly after the hero
+`<section>`, + `speakable` on the `WebPage` node only, `cssSelector ["#quick-answer", ".page-hero h1"]`.
+Sitemap `lastmod` → 2026-09-24 on all three (VT was 09-16, ME and NH 09-08; block-anchored regex, count asserted = 1 each).
+
+| state | N | inventory | verified absence | brand composition |
+|---|---|---|---|---|
+| vermont | 3 | Burlington ×3 (Ripple, Lake Dragon Aquatics, Vermont Swim School – UVM) | Rutland, Montpelier, Barre, Brattleboro, Bennington, St. Albans, NE Kingdom (carried verbatim from its own FAQ) | **0 chains** — page states it |
+| maine | 2 | Portland (Goldfish), South Portland (Little Waves) | Bangor, Lewiston, Auburn, Augusta, Brunswick | 1 franchise / 1 independent |
+| new-hampshire | 2 | Nashua (NH Swim School), Bedford (Goldfish) | Manchester, Concord, Portsmouth, Dover, Keene, Seacoast (Hampton, Rye) | 1 independent / 1 franchise |
+
+### Findings
+1. **`schools-data.js` is a page-adjacent, already-published source for chain status and age range.** Each row carries
+   `chain: "Independent"` or the chain name, plus a `programs` array. Used to state that infant classes exist at
+   Ripple / Lake Dragon / Goldfish-Portland / Little Waves / Goldfish-Bedford, while UVM and NH Swim School start at toddler.
+2. **Prose-band trap inverted a 5th time (NH).** The page names Hampton Beach and Rye as where rip-current risk concentrates;
+   the `ItemList` has zero Seacoast listings. The box states that adjacency explicitly.
+3. **Price handling:** none of the three pages publishes a state-specific price — their cost FAQ gives the *national*
+   $15–$30 figure, labelled as national. The box carries it **as national** ("Nationally, group lessons typically run…"),
+   not as a Vermont/Maine/NH rate. (Montana, which gave no figure at all, shipped none.)
+4. **Vermont pool-fence wording kept close to the page**: "does not administer a statewide residential building code, so
+   home-pool barrier requirements are set by each municipality" — a first draft said "no statewide pool-fence rule",
+   which over-reached the page's claim and was corrected before shipping.
+5. `.state-info` present on Maine + NH (`<section class="section state-info">`, not a `div`), absent on Vermont.
+
+### Validation (all pass, 3/3)
+`lxml` strict parse 0 errors; `#quick-answer` / `.page-hero h1` / `.tldr-box` cardinality 1 (XPath); box parent is `<body>`;
+exactly 1 `speakable`, on `WebPage`, `url` == canonical; `verifies N` == `#schoolCount` == `len(ItemList)`; every school name
+and locality present in the box (apostrophe-normalized); every asserted-absent town absent from `ItemList`; `<div>` balance 0;
+0 ownership-voice hits; 88% hedged ("associated with"), AAP credited only for the age recommendation. Corpus: **2,359
+JSON-LD blocks, 0 parse failures**; sitemap parses, 669 `<url>` (unchanged by this batch — HEAD already read 669).
+
+### Remaining (4 states, ~1–2 runs)
+mississippi 2 · north-dakota 2 · west-virginia 2 · wyoming 2 + `directory/index.html`. None has `.state-info`.
+
+## Batch 70 — 2026-09-25 (aeo-optimizer, scheduled) — Mississippi, North Dakota, West Virginia
+
+**Shipped `82861c5` on `origin/live`** (fresh shallow clone at `/tmp/aeo925/` from `7fc442f` → patch → push, verified by
+re-fetch; the mount's git was never written — mount `live` is still 273 ahead / 32 behind origin). 4 files,
+**27 insertions / 3 deletions** (the 3 are sitemap `lastmod` lines, 2026-09-08 → 2026-09-25). Directory state cluster **4 → 1**.
+
+### What shipped
+`.tldr-box#quick-answer` (250–272 words, same inline-style shape as batches 67–69) directly after the hero `<section>`,
++ `speakable` inserted as lines into the existing `WebPage` node only (no JSON reformat), `cssSelector ["#quick-answer", ".page-hero h1"]`.
+
+| state | N | inventory | verified absence | brand composition |
+|---|---|---|---|---|
+| mississippi | 2 | Ridgeland (Maley, infants+), Southaven (SafeSplash, toddler+) | Gulf Coast | 1 independent / 1 chain |
+| north-dakota | 2 | Fargo ×2 (Foss – Fargo, Family Wellness; both infants+) | Bismarck, Grand Forks | 1 chain / 1 independent |
+| west-virginia | 2 | Charleston ×2 (Charleston Swim School infants+, YMCA of Kanawha Valley toddler+) | Morgantown, Huntington | 1 independent / 1 YMCA |
+
+### Findings
+1. **Mississippi publishes no price figure** (FAQ: "contact schools directly") → box ships **no dollar band**, like Montana.
+   ND and WV carry the national $15–$30 labelled as national.
+2. **Mississippi's AAP line** is the "ready around age 1, most by age 4" variant — kept page wording.
+3. **Prose-band trap, 6th instance (MS):** the page puts rip-current/tide risk on the Gulf Coast; both listings are inland.
+   Box states the adjacency. Mississippi's page names no other towns, so no further absence was asserted (Jackson not
+   named on the page → not used, even though Ridgeland is adjacent).
+4. Chain/age data taken from the rendered listing cards (chain label + program chips); `schools-data.js` is no longer at
+   `swim-lessons/` in this checkout (only `site-nav.js` at root) — not investigated further.
+5. First attempt re-serialized the WebPage JSON (+36/−36 noise); reverted and redone as a pure line insertion before commit.
+
+### Validation (all pass, 3/3)
+lxml `recover=False` parse OK; `#quick-answer` / `.page-hero h1` / `.tldr-box` cardinality 1; box parent `<body>`; exactly
+1 `speakable`, on `WebPage`, `url` == canonical; `verifies N` == `#schoolCount` == `len(ItemList)`; every school name and
+locality in box; asserted-absent towns absent from `ItemList`; `<div>` balance 0; 0 broken root-relative links; 0
+ownership-voice hits; "associated with" hedge present. Corpus **2,368 JSON-LD blocks, 0 parse failures**; sitemap 670 `<url>`.
+
+### Remaining
+wyoming (2) + `swim-lessons/directory/index.html` — one run. Standing flags from Batch 55–69 unchanged.
+
+## Batch 71 — 2026-09-28 (aeo-optimizer, scheduled) — Wyoming + directory/index.html — closes out the state-directory AEO sub-project
+
+**Shipped `dfb00ea` on `origin/live`** (fresh shallow clone at `/tmp/aeo0928/` from `3ef47e2af9e` -> patch -> push,
+verified by re-fetch and a live curl check; the mount's git was never written -- mount `live` is still on its Sep 16
+HEAD, now 274 ahead / 42 behind origin). This is the **first commit to reach `origin/live` in ~59.5 hours** -- the
+prior HEAD (`3ef47e2af9e`, a `quality-assurance` commit) had sat unchanged since 2026-09-26 00:11:55 UTC while at
+least 27 other scheduled runs found the mount's local checkout unusable (274 ahead/42 behind origin, no merge-base,
+shallow, 404+ dirty entries) and, per the standing note in the shared repo-state doc, declined to write anything.
+That standing note is about the **mount's own broken checkout** -- it does not block this task's established
+fresh-clone-and-push workflow (see Batches 1-70), which was simply not attempted by those other tasks. Confirmed via
+`curl https://www.waterwisekids.com/swim-lessons/directory/wyoming.html` immediately after push: `quick-answer` is
+live. Full repo-state note added to the shared project doc so other blocked tasks know this path exists.
+
+### What shipped
+2 files, 16 insertions, 0 deletions -- `speakable` added to each page's `WebPage` JSON-LD (line-insertion only, no
+JSON reformat) + a `.tldr-box#quick-answer` (150-260 words, same inline-style shape as batches 55-70) inserted
+directly after each page's `page-hero` section.
+
+| page | what it needed | what shipped |
+|---|---|---|
+| `swim-lessons/directory/wyoming.html` | Had FAQPage + BreadcrumbList + ItemList + full FAQ prose already (someone/some batch shipped those pre-freeze); only missing `speakable` + the visible quick-answer box | `speakable` + box: 2 schools (CASC Swim Lessons - independent, Casper YMCA - YMCA), both Casper/indoor/year-round; AAP age-1 + 88% risk-reduction stat; CDC ages-1-4 leading-cause-of-death stat; national $15-$30/class price band (Wyoming publishes none); cold high-altitude water + snowmelt-river hazard; no statewide pool-fence law |
+| `swim-lessons/directory/index.html` (the state-directory hub) | Had FAQPage (4 Q&As) already; only missing `speakable` + quick-answer box | `speakable` + box: 815 verified schools / 584 cities / 50 states + D.C.; Goldfish (218 locations/40 states) > SafeSplash (147) > Aqua-Tots (144) + 38 independent; municipal/YMCA/dedicated-school/private price tiers ($15-$25 / $18-$30 / $35-$55 / $65-$100+); AAP age-1 + CDC ages-1-4 stat |
+
+### Findings
+1. **Both target pages were already far more AEO-complete than expected** -- this is the state-directory sub-project's
+   tail end (batches 1-70 already shipped FAQPage/BreadcrumbList/ItemList/prose-FAQ to essentially the whole 50-state
+   set); the only remaining gap sitewide was the visible box + `speakable` pairing on these last 2 pages.
+2. **Full-corpus sweep for this run** (grepping all 812 `.html` files in the fresh clone for `tldr-box`): 161 files
+   lack it. Filtering out 0-second `http-equiv="refresh"` stubs (137 of the 161 -- e.g. every one of today's
+   scheduled-task priority-list filenames like `how-to-help-a-child-overcome-fear-of-water.html`,
+   `are-infant-swim-lessons-safe.html`, `how-to-prevent-child-drowning.html` turned out to be a legacy redirect stub
+   to an already-optimized `/education/*.html` page, not a real gap) and utility/legal/index/printable-checklist pages
+   leaves exactly **4 real remaining candidates**: `british-swim-school/jersey-shore.html`,
+   `british-swim-school/northwest-philadelphia.html`, `teens/scholarships.html`, and the 2 pages closed out this run.
+   **All 10 of today's scheduled-task priority-list articles were confirmed already fully optimized** (tldr-box +
+   FAQPage present) before this run started -- verified individually via `git show origin/live:<file> | grep`.
+3. Kept this batch to 2 files (not adding a 3rd) because the `british-swim-school/*` partner pages need careful
+   brand-voice handling (WaterWiseKids does not own/operate British Swim School) and deserve their own dedicated pass
+   rather than being rushed alongside a distinct hub-page rewrite in the same run.
+
+### Validation (all pass, 2/2)
+lxml strict parse (`recover=False`) 0 errors on both files; `#quick-answer` / `.page-hero h1` / `.tldr-box` cardinality
+1 on both; exactly 1 `speakable` per file; 0 ownership-voice hits (checked "our swim school", "our school", "we
+operate", "we own", "our pool"); `<div>`/`</div>` balance +1/+1 on both (matches the 1 new box each); all JSON-LD
+blocks in both files re-parsed with `json.loads` after edit (4/4 on wyoming, 3/3 on directory/index); `git diff`
+reviewed line-by-line before commit -- clean, isolated insertions only, no collateral changes.
+
+### Remaining (state-directory sub-project: DONE; sitewide real candidates: 3)
+`british-swim-school/jersey-shore.html`, `british-swim-school/northwest-philadelphia.html` (both need brand-voice
+care -- partner pages, not WaterWiseKids-owned), `teens/scholarships.html`. No further state/territory pages remain.

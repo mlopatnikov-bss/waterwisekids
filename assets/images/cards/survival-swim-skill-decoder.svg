@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="A decoder card beside a pool showing survival swim skill names being translated into plain language, with a child floating on their back in the water">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="180" fill="url(#sky)"/>
+
+  <!-- water -->
+  <path d="M0 112 Q 25 106 50 112 T 100 112 T 150 112 T 200 112 T 250 112 T 300 112 L300 180 L0 180 Z" fill="url(#water)"/>
+  <path d="M0 112 Q 25 106 50 112 T 100 112 T 150 112 T 200 112 T 250 112 T 300 112" fill="none" stroke="#bae6fd" stroke-width="2.5"/>
+
+  <!-- child floating on back -->
+  <g>
+    <ellipse cx="196" cy="132" rx="34" ry="9" fill="#7dd3fc" opacity="0.55"/>
+    <circle cx="169" cy="128" r="8" fill="#fcd34d"/>
+    <path d="M169 121 q6 -5 11 -1" fill="none" stroke="#92400e" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="177" y="124" width="42" height="9" rx="4.5" fill="#c2410c"/>
+    <path d="M219 128 q9 3 16 9" fill="none" stroke="#fcd34d" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- decoder card -->
+  <g>
+    <rect x="20" y="22" width="150" height="78" rx="8" fill="#ffffff" stroke="#bae6fd" stroke-width="3"/>
+    <rect x="20" y="22" width="150" height="18" rx="8" fill="#0369a1"/>
+    <rect x="20" y="32" width="150" height="8" fill="#0369a1"/>
+    <text x="30" y="36" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="700" fill="#ffffff">SKILL DECODER</text>
+
+    <text x="30" y="56" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#0c4a6e">roll to back float</text>
+    <text x="112" y="56" font-family="Inter, Arial, sans-serif" font-size="9" fill="#475569">turn up, breathe</text>
+    <line x1="30" y1="60" x2="160" y2="60" stroke="#e2e8f0" stroke-width="1.5"/>
+
+    <text x="30" y="74" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#0c4a6e">jump-turn-swim</text>
+    <text x="112" y="74" font-family="Inter, Arial, sans-serif" font-size="9" fill="#475569">back to wall</text>
+    <line x1="30" y1="78" x2="160" y2="78" stroke="#e2e8f0" stroke-width="1.5"/>
+
+    <text x="30" y="92" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#0c4a6e">swim-float-swim</text>
+    <text x="112" y="92" font-family="Inter, Arial, sans-serif" font-size="9" fill="#475569">go, rest, go</text>
+  </g>
+
+  <!-- arrow from card to swimmer -->
+  <path d="M176 66 q22 2 30 34" fill="none" stroke="#0284c7" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5"/>
+  <path d="M201 96 l6 8 l7 -7" fill="none" stroke="#0284c7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

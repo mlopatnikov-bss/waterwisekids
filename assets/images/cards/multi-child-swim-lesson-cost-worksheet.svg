@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" role="img" aria-label="A parent holding a cost comparison worksheet with three columns and dollar signs, while two children swim in the pool below">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="300" height="180" fill="url(#sky)"/>
+
+  <!-- worksheet / clipboard, centre-left -->
+  <g>
+    <rect x="86" y="14" width="96" height="96" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="120" y="9" width="28" height="9" rx="3" fill="#94a3b8"/>
+    <!-- header row -->
+    <rect x="93" y="23" width="82" height="12" fill="#e0f2fe"/>
+    <g fill="#0369a1" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="700" text-anchor="middle">
+      <text x="126" y="32">A</text>
+      <text x="146" y="32">B</text>
+      <text x="166" y="32">C</text>
+    </g>
+    <!-- grid -->
+    <g stroke="#cbd5e1" stroke-width="1.2">
+      <line x1="93" y1="35" x2="175" y2="35"/>
+      <line x1="93" y1="47" x2="175" y2="47"/>
+      <line x1="93" y1="59" x2="175" y2="59"/>
+      <line x1="93" y1="71" x2="175" y2="71"/>
+      <line x1="93" y1="83" x2="175" y2="83"/>
+      <line x1="116" y1="23" x2="116" y2="95"/>
+      <line x1="136" y1="23" x2="136" y2="95"/>
+      <line x1="156" y1="23" x2="156" y2="95"/>
+    </g>
+    <!-- row labels -->
+    <g stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round">
+      <line x1="97" y1="41" x2="112" y2="41"/>
+      <line x1="97" y1="53" x2="112" y2="53"/>
+      <line x1="97" y1="65" x2="112" y2="65"/>
+      <line x1="97" y1="77" x2="112" y2="77"/>
+    </g>
+    <!-- dollar entries -->
+    <g fill="#0369a1" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" text-anchor="middle">
+      <text x="126" y="44">$</text>
+      <text x="146" y="44">$</text>
+      <text x="166" y="44">$</text>
+      <text x="126" y="56">$</text>
+      <text x="146" y="56">$</text>
+    </g>
+    <!-- total row highlighted -->
+    <rect x="93" y="83" width="82" height="12" fill="#fef3c7"/>
+    <g stroke="#b45309" stroke-width="2.5" stroke-linecap="round">
+      <line x1="97" y1="89" x2="112" y2="89"/>
+    </g>
+    <text x="146" y="93" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="700" fill="#b45309" text-anchor="middle">$$</text>
+    <!-- pencil -->
+    <g transform="rotate(38 186 96)">
+      <rect x="182" y="70" width="8" height="30" rx="1.5" fill="#fbbf24"/>
+      <path d="M182 100 h8 l-4 8 z" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+      <rect x="182" y="64" width="8" height="7" rx="2" fill="#f472b6"/>
+    </g>
+  </g>
+
+  <!-- parent on deck, left -->
+  <g>
+    <circle cx="42" cy="60" r="13" fill="#fcd9b8"/>
+    <path d="M29 58 a13 13 0 0 1 26 0 q-13 -7 -26 0 z" fill="#5b3a1a"/>
+    <path d="M28 112 v-28 a14 14 0 0 1 28 0 v28 z" fill="#0ea5e9"/>
+    <path d="M56 90 q14 2 26 6" stroke="#fcd9b8" stroke-width="7" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- pool deck -->
+  <rect y="112" width="300" height="10" fill="#e2e8f0"/>
+  <rect y="112" width="300" height="3" fill="#cbd5e1"/>
+
+  <!-- water -->
+  <rect y="122" width="300" height="58" fill="url(#water)"/>
+  <g stroke="#bae6fd" stroke-width="2.5" stroke-linecap="round" opacity="0.6" fill="none">
+    <path d="M12 168 q10 -6 20 0 t20 0"/>
+    <path d="M204 170 q10 -6 20 0 t20 0"/>
+  </g>
+
+  <!-- two children swimming -->
+  <g>
+    <ellipse cx="88" cy="146" rx="28" ry="7" fill="#0c4a6e" opacity="0.25"/>
+    <circle cx="68" cy="142" r="8" fill="#fcd9b8"/>
+    <path d="M60 139 a8 8 0 0 1 16 0 z" fill="#7c4a21"/>
+    <rect x="76" y="137" width="32" height="10" rx="5" fill="#f472b6"/>
+    <rect x="106" y="139" width="12" height="6" rx="3" fill="#fcd9b8"/>
+  </g>
+  <g>
+    <ellipse cx="212" cy="162" rx="26" ry="7" fill="#0c4a6e" opacity="0.25"/>
+    <circle cx="194" cy="158" r="7" fill="#e8b58a"/>
+    <path d="M187 156 a7 7 0 0 1 14 0 z" fill="#1f2937"/>
+    <rect x="201" y="154" width="28" height="9" rx="4.5" fill="#22c55e"/>
+    <rect x="227" y="156" width="11" height="5" rx="2.5" fill="#e8b58a"/>
+  </g>
+</svg>
