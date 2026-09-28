@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A baby in a swim diaper held at the edge of a pool, beside a plan card listing check, change, rinse and wash">
+  <defs>
+    <linearGradient id="dp-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="dp-pool" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#dp-bg)"/>
+  <rect x="0" y="230" width="400" height="130" fill="url(#dp-pool)"/>
+  <path d="M0 250 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#e0f2fe" stroke-width="3" opacity="0.7"/>
+  <path d="M0 290 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#e0f2fe" stroke-width="3" opacity="0.5"/>
+  <!-- baby -->
+  <ellipse cx="200" cy="205" rx="44" ry="50" fill="#fcd9b6"/>
+  <circle cx="200" cy="120" r="38" fill="#fcd9b6"/>
+  <path d="M176 92 q24 -22 48 0" fill="none" stroke="#92400e" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="188" cy="122" r="3.5" fill="#1f2937"/><circle cx="212" cy="122" r="3.5" fill="#1f2937"/>
+  <path d="M190 136 q10 9 20 0" fill="none" stroke="#1f2937" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="176" cy="134" r="5" fill="#fca5a5" opacity="0.6"/><circle cx="224" cy="134" r="5" fill="#fca5a5" opacity="0.6"/>
+  <!-- swim diaper -->
+  <path d="M158 218 q42 30 84 0 l-6 30 q-36 20 -72 0 z" fill="#0ea5e9" stroke="#0369a1" stroke-width="3"/>
+  <path d="M170 230 q30 12 60 0" fill="none" stroke="#e0f2fe" stroke-width="2.5"/>
+  <!-- arms -->
+  <path d="M158 190 q-26 10 -32 34" fill="none" stroke="#fcd9b6" stroke-width="14" stroke-linecap="round"/>
+  <path d="M242 190 q26 10 32 34" fill="none" stroke="#fcd9b6" stroke-width="14" stroke-linecap="round"/>
+  <!-- plan card -->
+  <rect x="408" y="30" width="176" height="230" rx="12" fill="#ffffff" stroke="#0369a1" stroke-width="3"/>
+  <rect x="408" y="30" width="176" height="36" rx="12" fill="#0369a1"/>
+  <rect x="408" y="54" width="176" height="12" fill="#0369a1"/>
+  <text x="496" y="54" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" fill="#ffffff">ACCIDENT PLAN</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="13" fill="#1f2937">
+    <g><rect x="422" y="82" width="13" height="13" rx="3" fill="none" stroke="#0369a1" stroke-width="2"/><path d="M425 89 l3 3 l5 -7" fill="none" stroke="#16a34a" stroke-width="2.2"/><text x="444" y="94">Check diaper</text></g>
+    <g><rect x="422" y="112" width="13" height="13" rx="3" fill="none" stroke="#0369a1" stroke-width="2"/><path d="M425 119 l3 3 l5 -7" fill="none" stroke="#16a34a" stroke-width="2.2"/><text x="444" y="124">Change on land</text></g>
+    <g><rect x="422" y="142" width="13" height="13" rx="3" fill="none" stroke="#0369a1" stroke-width="2"/><path d="M425 149 l3 3 l5 -7" fill="none" stroke="#16a34a" stroke-width="2.2"/><text x="444" y="154">Quick rinse</text></g>
+    <g><rect x="422" y="172" width="13" height="13" rx="3" fill="none" stroke="#0369a1" stroke-width="2"/><text x="444" y="184">Tell the instructor</text></g>
+    <g><rect x="422" y="202" width="13" height="13" rx="3" fill="none" stroke="#0369a1" stroke-width="2"/><text x="444" y="214">Wash hands</text></g>
+    <g><rect x="422" y="232" width="13" height="13" rx="3" fill="none" stroke="#0369a1" stroke-width="2"/><text x="444" y="244">Stay home if sick</text></g>
+  </g>
+</svg>
