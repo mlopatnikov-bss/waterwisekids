@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A wall calendar with two missed swim classes crossed out, a make-up class circled, and a swim bag beside it">
+  <defs>
+    <linearGradient id="mk-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="mk-pool" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#mk-bg)"/>
+  <rect x="0" y="290" width="600" height="70" fill="url(#mk-pool)"/>
+  <path d="M0 308 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#e0f2fe" stroke-width="3" opacity="0.7"/>
+  <!-- calendar -->
+  <rect x="70" y="40" width="330" height="230" rx="12" fill="#ffffff" stroke="#0369a1" stroke-width="3"/>
+  <rect x="70" y="40" width="330" height="42" rx="12" fill="#0369a1"/>
+  <rect x="70" y="66" width="330" height="16" fill="#0369a1"/>
+  <text x="235" y="68" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff">SWIM CLASS CALENDAR</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="14" fill="#1f2937" text-anchor="middle">
+    <g fill="#64748b" font-size="12" font-weight="700"><text x="110" y="104">MON</text><text x="170" y="104">TUE</text><text x="230" y="104">WED</text><text x="290" y="104">THU</text><text x="350" y="104">FRI</text></g>
+    <rect x="86" y="114" width="48" height="34" rx="6" fill="#f0f9ff" stroke="#bae6fd"/><text x="110" y="137">1</text>
+    <rect x="146" y="114" width="48" height="34" rx="6" fill="#f0f9ff" stroke="#bae6fd"/><text x="170" y="137">2</text>
+    <rect x="206" y="114" width="48" height="34" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/><text x="230" y="137">3</text><path d="M212 118 L248 144 M248 118 L212 144" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+    <rect x="266" y="114" width="48" height="34" rx="6" fill="#f0f9ff" stroke="#bae6fd"/><text x="290" y="137">4</text>
+    <rect x="326" y="114" width="48" height="34" rx="6" fill="#f0f9ff" stroke="#bae6fd"/><text x="350" y="137">5</text>
+    <rect x="86" y="158" width="48" height="34" rx="6" fill="#f0f9ff" stroke="#bae6fd"/><text x="110" y="181">8</text>
+    <rect x="146" y="158" width="48" height="34" rx="6" fill="#f0f9ff" stroke="#bae6fd"/><text x="170" y="181">9</text>
+    <rect x="206" y="158" width="48" height="34" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/><text x="230" y="181">10</text><path d="M212 162 L248 188 M248 162 L212 188" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+    <rect x="266" y="158" width="48" height="34" rx="6" fill="#f0f9ff" stroke="#bae6fd"/><text x="290" y="181">11</text>
+    <rect x="326" y="158" width="48" height="34" rx="6" fill="#f0f9ff" stroke="#bae6fd"/><text x="350" y="181">12</text>
+    <rect x="86" y="202" width="48" height="34" rx="6" fill="#f0f9ff" stroke="#bae6fd"/><text x="110" y="225">15</text>
+    <rect x="146" y="202" width="48" height="34" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/><text x="170" y="225">16</text><path d="M155 246 h30" stroke="#16a34a" stroke-width="0"/>
+    <rect x="206" y="202" width="48" height="34" rx="6" fill="#f0f9ff" stroke="#bae6fd"/><text x="230" y="225">17</text>
+    <rect x="266" y="202" width="48" height="34" rx="6" fill="#f0f9ff" stroke="#bae6fd"/><text x="290" y="225">18</text>
+    <rect x="326" y="202" width="48" height="34" rx="6" fill="#f0f9ff" stroke="#bae6fd"/><text x="350" y="225">19</text>
+  </g>
+  <text x="235" y="258" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#15803d">Make-up booked before the deadline</text>
+  <!-- swim bag -->
+  <rect x="440" y="150" width="120" height="110" rx="16" fill="#0ea5e9" stroke="#0369a1" stroke-width="3"/>
+  <path d="M470 150 q30 -50 60 0" fill="none" stroke="#0369a1" stroke-width="7" stroke-linecap="round"/>
+  <rect x="462" y="188" width="76" height="40" rx="8" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+  <text x="500" y="214" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#0c4a6e">SWIM</text>
+</svg>
