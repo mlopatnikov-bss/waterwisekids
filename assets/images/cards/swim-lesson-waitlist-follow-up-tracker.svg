@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A clipboard with a waitlist tracker listing three swim schools, one with a check mark and an offer, beside a swim bag">
+  <defs>
+    <linearGradient id="wl-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="wl-pool" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#wl-bg)"/>
+  <rect x="0" y="290" width="600" height="70" fill="url(#wl-pool)"/>
+  <path d="M0 308 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#e0f2fe" stroke-width="3" opacity="0.7"/>
+  <rect x="70" y="30" width="340" height="245" rx="12" fill="#ffffff" stroke="#0369a1" stroke-width="3"/>
+  <rect x="190" y="18" width="100" height="26" rx="8" fill="#0369a1"/>
+  <text x="240" y="70" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#0c4a6e">WAITLIST TRACKER</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="13" fill="#1f2937">
+    <rect x="88" y="86" width="304" height="44" rx="8" fill="#f0f9ff" stroke="#bae6fd"/><text x="100" y="106" font-weight="700">School A</text><text x="100" y="122" fill="#64748b" font-size="11">Follow up: Oct 14</text>
+    <rect x="88" y="138" width="304" height="44" rx="8" fill="#f0f9ff" stroke="#bae6fd"/><text x="100" y="158" font-weight="700">School B</text><text x="100" y="174" fill="#64748b" font-size="11">Follow up: Oct 21</text>
+    <rect x="88" y="190" width="304" height="44" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="100" y="210" font-weight="700">School C</text><text x="100" y="226" fill="#15803d" font-size="11" font-weight="700">Offer! Reply by Friday</text>
+    <circle cx="362" cy="212" r="15" fill="#16a34a"/><path d="M354 212 l6 6 l10 -12" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="240" y="260" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#0369a1">Ask, log, follow up, answer fast</text>
+  <rect x="440" y="150" width="120" height="110" rx="16" fill="#0ea5e9" stroke="#0369a1" stroke-width="3"/>
+  <path d="M470 150 q30 -50 60 0" fill="none" stroke="#0369a1" stroke-width="7" stroke-linecap="round"/>
+  <rect x="462" y="188" width="76" height="40" rx="8" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+  <text x="500" y="214" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#0c4a6e">SWIM</text>
+</svg>
