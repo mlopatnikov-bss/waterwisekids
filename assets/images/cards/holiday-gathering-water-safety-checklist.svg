@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A holiday dinner table with a pool outside the window and a water watcher checklist">
+  <defs>
+    <linearGradient id="hg-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fef3c7"/><stop offset="1" stop-color="#ffedd5"/></linearGradient>
+    <linearGradient id="hg-pool" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0369a1"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#hg-bg)"/>
+  <rect x="30" y="30" width="250" height="170" rx="10" fill="#e0f2fe" stroke="#0369a1" stroke-width="4"/>
+  <rect x="30" y="130" width="250" height="70" fill="url(#hg-pool)"/>
+  <path d="M30 150 q20 -8 40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#e0f2fe" stroke-width="3" opacity="0.8"/>
+  <line x1="155" y1="30" x2="155" y2="200" stroke="#0369a1" stroke-width="4"/>
+  <rect x="20" y="250" width="300" height="24" rx="8" fill="#92400e"/>
+  <rect x="50" y="274" width="14" height="60" fill="#78350f"/><rect x="276" y="274" width="14" height="60" fill="#78350f"/>
+  <ellipse cx="110" cy="244" rx="46" ry="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <ellipse cx="220" cy="244" rx="46" ry="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <ellipse cx="110" cy="240" rx="28" ry="12" fill="#f59e0b"/><ellipse cx="220" cy="240" rx="28" ry="12" fill="#b45309"/>
+  <g transform="translate(400 70)">
+    <rect x="0" y="0" width="170" height="230" rx="12" fill="#ffffff" stroke="#0369a1" stroke-width="3"/>
+    <rect x="45" y="-12" width="80" height="26" rx="8" fill="#0369a1"/>
+    <g font-family="Inter, Arial, sans-serif" font-size="13" fill="#1f2937" font-weight="700">
+      <rect x="12" y="34" width="146" height="34" rx="8" fill="#f0f9ff" stroke="#bae6fd"/><text x="44" y="56">Scan for water</text><path d="M20 52 l5 5 l10 -12" fill="none" stroke="#16a34a" stroke-width="3.5"/>
+      <rect x="12" y="78" width="146" height="34" rx="8" fill="#f0f9ff" stroke="#bae6fd"/><text x="44" y="100">Water watcher</text><path d="M20 96 l5 5 l10 -12" fill="none" stroke="#16a34a" stroke-width="3.5"/>
+      <rect x="12" y="122" width="146" height="34" rx="8" fill="#f0f9ff" stroke="#bae6fd"/><text x="44" y="144">15-min shifts</text><path d="M20 140 l5 5 l10 -12" fill="none" stroke="#16a34a" stroke-width="3.5"/>
+      <rect x="12" y="166" width="146" height="34" rx="8" fill="#f0f9ff" stroke="#bae6fd"/><text x="44" y="188">Drain the tub</text><path d="M20 184 l5 5 l10 -12" fill="none" stroke="#16a34a" stroke-width="3.5"/>
+    </g>
+  </g>
+</svg>
