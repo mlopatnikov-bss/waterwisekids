@@ -476,6 +476,15 @@ function showFormspreeSuccess(form) {
       'browse the guides</a>.';
   }
 
+  // Invite every new subscriber (not contact inquiries) to the parent group.
+  // 2026-10-04: the group is the only follow-up channel, since no email is sent.
+  if (!isInquiry) {
+    html += '<br>' +
+      '<a href="https://www.facebook.com/groups/694731473703325" target="_blank" rel="noopener" ' +
+      'data-cta="signup-join-group" style="color:#075985;font-weight:600;text-decoration:underline;">' +
+      'Join our free parent group on Facebook</a> for a new checklist every week.';
+  }
+
   var msg = document.createElement('div');
   msg.setAttribute('role', 'status');
   msg.style.cssText = 'background:#dcfce7;color:#166534;padding:14px;border-radius:8px;' +
@@ -633,3 +642,13 @@ function initNavlistShapeTagging() {
     document.body.appendChild(js);
   }
 })();
+
+/* Parent-group join links (data-cta ends in "join-group"): push a named
+   event so the clicks can be counted in GTM/GA4. Delegated, so it also
+   covers the link injected into the signup success message. */
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[data-cta$="join-group"]') : null;
+  if (a && window.dataLayer) {
+    window.dataLayer.push({ event: 'group_join_click', cta_id: a.getAttribute('data-cta') });
+  }
+});
