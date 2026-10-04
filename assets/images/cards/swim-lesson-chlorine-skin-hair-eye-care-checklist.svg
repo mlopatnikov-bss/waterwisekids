@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A swim bag with goggles, a bottle of moisturizer and a water droplet">
+  <defs>
+    <linearGradient id="sk-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="sk-pool" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#sk-bg)"/>
+  <rect x="0" y="290" width="600" height="70" fill="url(#sk-pool)"/>
+  <rect x="90" y="150" width="150" height="110" rx="16" fill="#0369a1"/>
+  <path d="M120 150 q45 -50 90 0" fill="none" stroke="#0c4a6e" stroke-width="10"/>
+  <rect x="270" y="170" width="60" height="100" rx="10" fill="#fff" stroke="#0369a1" stroke-width="4"/>
+  <rect x="285" y="150" width="30" height="24" rx="4" fill="#0369a1"/>
+  <rect x="280" y="200" width="40" height="30" rx="4" fill="#bae6fd"/>
+  <circle cx="400" cy="215" r="26" fill="none" stroke="#0369a1" stroke-width="8"/>
+  <circle cx="460" cy="215" r="26" fill="none" stroke="#0369a1" stroke-width="8"/>
+  <path d="M426 215 h8" stroke="#0369a1" stroke-width="8"/>
+  <path d="M500 90 q30 45 0 70 q-30 -25 0 -70z" fill="#38bdf8"/>
+</svg>
