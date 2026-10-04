@@ -652,3 +652,23 @@ document.addEventListener('click', function (e) {
     window.dataLayer.push({ event: 'group_join_click', cta_id: a.getAttribute('data-cta') });
   }
 });
+
+/* 2026-10-04: ~90 pages run their own inline Formspree handler
+   (data-formspree-inline="1") and write the success text into
+   .newsletter-fallback-message, so showFormspreeSuccess() never runs there.
+   Watch those boxes and append the same parent-group invitation once a
+   signup succeeds ("You're in ..."). Error text is left alone. */
+(function wwkInviteAfterInlineSignup() {
+  if (!window.MutationObserver) { return; }
+  var boxes = document.querySelectorAll('.newsletter-fallback-message');
+  Array.prototype.forEach.call(boxes, function (box) {
+    new MutationObserver(function () {
+      if (box.querySelector('a[data-cta="signup-join-group"]')) { return; }
+      if ((box.textContent || '').indexOf('You\'re in') !== 0) { return; }
+      box.insertAdjacentHTML('beforeend', '<br>' +
+        '<a href="https://www.facebook.com/groups/694731473703325" target="_blank" rel="noopener" ' +
+        'data-cta="signup-join-group" style="color:#075985;font-weight:600;text-decoration:underline;">' +
+        'Join our free parent group on Facebook</a> for a new checklist every week.');
+    }).observe(box, { childList: true });
+  });
+})();
