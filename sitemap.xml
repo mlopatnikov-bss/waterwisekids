@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.waterwisekids.com/cartoons/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.waterwisekids.com/about/</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -638,7 +644,7 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -2021,7 +2027,7 @@
   <url><loc>https://www.waterwisekids.com/education/teaching-water-respect.html</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/paddleboard-safety-kids.html</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/kayak-canoe-safety-kids.html</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.waterwisekids.com/education/swimming-after-eating-myth.html</loc><lastmod>2026-08-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.waterwisekids.com/education/swimming-after-eating-myth.html</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.waterwisekids.com/education/pool-floaties-dangers.html</loc><lastmod>2026-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/isr-vs-traditional-swim-lessons.html</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/survival-swim-street-clothes-science.html</loc><lastmod>2026-09-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

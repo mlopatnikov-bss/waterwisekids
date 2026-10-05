@@ -810,6 +810,126 @@
         font-size: 1rem;
       }
     }
+
+    /* ══════════════════════════════════════
+       WATER SAFETY CARTOONS (2026-10-05)
+       Sits on .featured-articles so it inherits that section's desktop
+       padding and the mobile rail rules in m-app.css. Own card class on
+       purpose: m-app.css restyles .article-card on phones.
+    ══════════════════════════════════════ */
+    .cartoon-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .cartoon-card {
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: 12px;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .cartoon-card .wwk-video {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #0c4a6e;
+    }
+
+    /* Pinned to the box, so the 16:9 frame holds whatever display value
+       m-app.css gives links on phones. */
+    .cartoon-card .wwk-video > a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .cartoon-card .wwk-video img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cartoon-card .wwk-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .cartoon-card .wwk-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(12, 74, 110, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .cartoon-card .wwk-play::before {
+      content: "";
+      display: block;
+      margin-left: 5px;
+      border-style: solid;
+      border-width: 14px 0 14px 24px;
+      border-color: transparent transparent transparent #ffffff;
+    }
+
+    .cartoon-card-body {
+      padding: 20px 24px 24px;
+    }
+
+    .cartoon-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .cartoon-card p {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      margin: 0;
+    }
+
+    .cartoons-home-more {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cartoons-home-more a {
+      display: inline-block;
+      color: var(--blue-700);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 6px 0;
+    }
+
+    @media (max-width: 768px) {
+      .cartoon-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .cartoons-home-more {
+        margin-top: 24px;
+      }
+    }
 </style>
 
   <!--
@@ -883,6 +1003,50 @@
       <div class="stat-item">
         <span class="stat-number">800+</span>
         <span class="stat-label">Schools Listed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       WATER SAFETY CARTOONS
+  ════════════════════════════════════════ -->
+  <section class="featured-articles cartoons-home" id="cartoons">
+    <div class="container">
+      <div class="section-header">
+        <h2>Water Safety Cartoons for Kids</h2>
+        <p>Two-minute cartoons to watch together. Each one ends with a rule to say out loud.</p>
+      </div>
+
+      <div class="cartoon-grid">
+        <div class="cartoon-card">
+          <div class="wwk-video">
+            <a href="https://www.youtube.com/watch?v=m8KZCjGQkEY" target="_blank" rel="noopener" data-yt="m8KZCjGQkEY" data-title="Nana Flo's Thirty Minutes: water safety cartoon for kids" data-cta="home-play-ep2" aria-label="Play Nana Flo's Thirty Minutes, a 2-minute water safety cartoon for kids">
+              <img src="/assets/images/wwk-show-ep2-nana-flos-thirty-minutes.jpg" alt="Cartoon scene: Nana Flo the flamingo holds up a red kitchen timer beside a backyard pool" width="1280" height="720" loading="lazy" decoding="async" />
+              <span class="wwk-play" aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="cartoon-card-body">
+            <h3>Nana Flo's Thirty Minutes</h3>
+            <p>Today's rule: A grown-up watches, every time!</p>
+          </div>
+        </div>
+
+        <div class="cartoon-card">
+          <div class="wwk-video">
+            <a href="https://www.youtube.com/watch?v=7QhfmW-_EJ0" target="_blank" rel="noopener" data-yt="7QhfmW-_EJ0" data-title="The Bright Swimsuit: water safety cartoon for kids" data-cta="home-play-ep1" aria-label="Play The Bright Swimsuit, a 2-minute water safety cartoon for kids">
+              <img src="/assets/images/wwk-show-ep1-bright-swimsuit.jpg" alt="Cartoon scene: Gus the hippo looks for Tilly the rabbit, whose navy swimsuit blends into the pool water" width="1280" height="720" loading="lazy" decoding="async" />
+              <span class="wwk-play" aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="cartoon-card-body">
+            <h3>The Bright Swimsuit</h3>
+            <p>Today's rule: Bright suit, easy to see!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cartoons-home-more">
+        <a href="/cartoons/" data-cta="home-all-cartoons">See All Cartoons →</a>
       </div>
     </div>
   </section>
@@ -1161,6 +1325,25 @@
         });
       });
     });
+  </script>
+  <script>
+  /* Cartoons: swap the picture for the YouTube player on click. Without
+     JavaScript the link opens the video on YouTube. */
+  (function(){
+    var links = document.querySelectorAll('.wwk-video a[data-yt]');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function(e){
+        e.preventDefault();
+        var a = this;
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + a.getAttribute('data-yt') + '?autoplay=1&rel=0';
+        f.title = a.getAttribute('data-title') || 'WaterWiseKids cartoon';
+        f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share';
+        f.allowFullscreen = true;
+        a.parentNode.replaceChild(f, a);
+      });
+    }
+  })();
   </script>
   <script src="/assets/js/main.js?v=20261004b"></script>
   <!-- Mobile app experience — direct load as failsafe -->
