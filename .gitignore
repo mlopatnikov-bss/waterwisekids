@@ -62,3 +62,6 @@ VISUAL-DESIGN-REPORT-*.md
 audit-*-site-health.md
 functionality-validation-*.md
 mobile-consistency-*.md
+
+# local task outputs and working files (never publish)
+/Claude outputs/
