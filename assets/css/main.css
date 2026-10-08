@@ -3383,3 +3383,205 @@ aside p a {
   .filter-pills .pill { min-height: 44px; }
   .swim-schools-page .state-chip { min-height: 44px; }
 }
+
+
+/* ── Follow WaterWiseKids (social links) — added 2026-10-08 ─────────────────
+   One set of platform pills reused in four places: the band above the footer
+   (every page), the article sidebar card, the homepage cartoons section and the
+   /cartoons/ hero, plus a row inside the mobile menu. Text pills in each
+   platform's colour (white text 5.6:1 or better); no platform logos.
+   Pill selectors are .wwk-soc-row > li > a so they outrank the sitewide
+   `.wwk-navlist > li > a` 24px floor that main.js puts on link lists
+   (m-app.css carries that floor with !important, hence the !important here). */
+.wwk-soc-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wwk-soc-row li { margin: 0; padding: 0; }
+.wwk-soc-row > li > a.wwk-soc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center !important;
+  min-height: 44px !important;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 6px rgba(12, 74, 110, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.wwk-soc-row > li > a.wwk-soc:hover, .wwk-soc-row > li > a.wwk-soc:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(12, 74, 110, 0.25);
+}
+.wwk-soc-row > li > a.wwk-soc:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+.wwk-soc-yt { background: #CC0000; }
+.wwk-soc-ig { background: #B5257A; }
+.wwk-soc-tt { background: #111111; }
+.wwk-soc-fb { background: #1565C0; }
+.wwk-soc-li { background: #0A66C2; }
+.wwk-soc-row.wwk-soc-sm > li > a.wwk-soc { min-height: 36px !important; padding: 0 14px; font-size: 0.85rem; }
+
+/* Band above the footer, every page */
+.wwk-follow {
+  background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 100%);
+  border-top: 1px solid #bae6fd;
+  padding: 40px 24px;
+}
+.wwk-follow-inner {
+  max-width: 1112px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  grid-template-areas: "pic copy" "pic soc" "pic group";
+  column-gap: 28px;
+  row-gap: 16px;
+  align-items: center;
+}
+.wwk-follow-pic {
+  grid-area: pic;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 14px rgba(12, 74, 110, 0.18);
+  object-fit: cover;
+  object-position: 50% 6%;
+  align-self: start;
+}
+.wwk-follow-copy { grid-area: copy; }
+.wwk-follow h2.wwk-follow-title {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: #0c4a6e;
+  text-align: left;
+}
+.wwk-follow-copy p {
+  margin: 0;
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.wwk-follow .wwk-soc-row { grid-area: soc; }
+.wwk-follow-group {
+  grid-area: group;
+  font-size: 0.98rem;
+  color: #334155;
+  margin: 0;
+}
+.wwk-follow-group a,
+.wwk-follow p.wwk-follow-group a[data-cta] {
+  /* a sentence link: keep it inline (m-app.css lifts every a[data-cta] to a
+     44px inline-flex box on phones, which split this line in two) */
+  display: inline !important;
+  min-height: 0 !important;
+  color: #0c4a6e;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 768px) {
+  .wwk-follow { padding: 32px 20px; }
+  .wwk-follow-inner {
+    grid-template-columns: 64px 1fr;
+    grid-template-areas: "pic copy" "soc soc" "group group";
+    column-gap: 16px;
+  }
+  .wwk-follow-pic { width: 64px; height: 64px; align-self: center; }
+  .wwk-follow h2.wwk-follow-title { font-size: 1.25rem; }
+  .wwk-follow-copy p { font-size: 0.95rem; }
+  .wwk-follow .wwk-soc-row { gap: 8px; }
+  .wwk-follow .wwk-soc-row > li > a.wwk-soc { padding: 0 14px; font-size: 0.9rem; }
+}
+
+/* Article sidebar card (sticky with the sidebar on desktop) */
+.sidebar-follow {
+  background: #ffffff;
+  border: 1px solid #bae6fd;
+  border-radius: 16px;
+  padding: 20px;
+}
+.sidebar-follow .sidebar-follow-title {
+  margin: 0 0 4px;
+  font-weight: 800;
+  font-size: 1.02rem;
+  color: #0c4a6e;
+}
+.sidebar-follow p.sidebar-follow-sub {
+  margin: 0 0 12px;
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.45;
+}
+.sidebar-follow .wwk-soc-row { gap: 8px; }
+
+/* Homepage cartoons section and /cartoons/ hero */
+.wwk-follow-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px auto 0;
+}
+.wwk-follow-inline .wwk-follow-inline-label {
+  font-weight: 700;
+  color: #0c4a6e;
+  margin: 0;
+  font-size: 1rem;
+}
+.page-hero .wwk-follow-inline .wwk-follow-inline-label { color: inherit; }
+.wwk-follow-inline .wwk-soc-row { justify-content: center; }
+@media (max-width: 480px) {
+  /* 4 pills as an even 2 x 2 grid instead of a ragged 3 + 1 wrap */
+  .wwk-follow-inline { flex-direction: column; gap: 10px; }
+  .wwk-follow-inline .wwk-soc-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 340px;
+  }
+  .wwk-follow-inline .wwk-soc-row > li > a.wwk-soc { display: flex; width: 100%; }
+}
+
+/* Row inside the mobile menu; hidden in the desktop nav */
+.nav-links > li.nav-follow { display: none; }
+@media (max-width: 768px) {
+  .nav-links > li.nav-follow {
+    display: block;
+    padding: 16px 20px 8px;
+    border-top: 1px solid #e2e8f0;
+  }
+  .nav-links > li.nav-follow .nav-follow-label {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #475569;
+  }
+  .nav-links > li.nav-follow .wwk-soc-row { gap: 8px; }
+  .nav-links > li.nav-follow .wwk-soc-row > li > a.wwk-soc {
+    display: inline-flex !important;
+    width: auto !important;
+    min-height: 40px !important;
+    padding: 0 14px !important;
+    font-size: 0.88rem;
+    border: 0 !important;
+  }
+}
+
+@media print {
+  .wwk-follow, .sidebar-follow, .wwk-follow-inline, .nav-follow { display: none !important; }
+}
