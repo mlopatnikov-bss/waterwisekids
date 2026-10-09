@@ -234,3 +234,149 @@
   }
 
 })();
+/* ════════════════════════════════════════════════════════════════════════════
+   WWK mobile P1 "quick wins" — task WWK-MOBILE-IMPLEMENTATION-018 r1, from the accepted
+   WWK-REQ-efec08fb r1 package plus the r1 F1 correction at the end. Self-contained;
+   runs only at <=768px; remove this block (and restore the main.js loader version)
+   to roll back.
+   ════════════════════════════════════════════════════════════════════════════ */
+(function () {
+  'use strict';
+  if (window.innerWidth > 768 || window.__wwkP1) return;
+  window.__wwkP1 = true;
+
+  // O-2: Escape closes the open header menu and returns focus to the toggle.
+  var nav = document.querySelector('nav'), toggle = document.querySelector('.hamburger');
+  if (nav && toggle) {
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('mobile-open')) {
+        nav.classList.remove('mobile-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
+  }
+
+  // O-6: the home "Search safety guides" pill links to /education/ but lands 7.5 screens
+  // above the guide search. Point it at the search field itself.
+  var pill = document.querySelector('.mobile-app-search-pill');
+  if (pill && document.location.pathname === '/' ) pill.setAttribute('href', '/education/#articleSearch');
+
+  // O-10 scrollable-region-focusable: horizontal scrollers with no focusable content
+  // become keyboard-reachable regions. Runs after load so m-app.css has applied.
+  function tagScrollers() {
+    var all = document.querySelectorAll('body *');
+    for (var i = 0; i < all.length; i++) {
+      var el = all[i], cs = getComputedStyle(el);
+      if ((cs.overflowX === 'auto' || cs.overflowX === 'scroll') && el.scrollWidth > el.clientWidth + 1 &&
+          !el.querySelector('a[href], button, input, select, textarea, [tabindex]')) {
+        el.setAttribute('tabindex', '0');
+        if (!el.hasAttribute('role')) el.setAttribute('role', 'region');
+        if (!el.hasAttribute('aria-label')) el.setAttribute('aria-label', ((el.querySelector('h2, h3, strong') || {}).textContent || 'Scrollable content').trim());
+      }
+    }
+  }
+  if (document.readyState === 'complete') tagScrollers(); else window.addEventListener('load', tagScrollers);
+})();
+
+/* ── F1 (r1, lifecycle r2): pin the /education/ guide search bar below the measured sticky header ──
+   m-app.js (unchanged) adds `.sticky` at a fixed 48px threshold/offset under a 72px header.
+   While active, this block removes that class as soon as it is added (MutationObserver callbacks
+   run before the next paint) and pins the bar with `.wwk-p1-fixed` once its natural top reaches
+   the header's actual bottom edge, with its own spacer so the page does not jump.
+   It is active only while (max-width: 768px) matches AND the F1 CSS block is detected
+   (.wwk-p1-search-spacer computes to display:none). Above 768px it tears down completely: observer
+   disconnected, F1 classes, spacer and --wwk-p1-header-h removed, so the unchanged original handler
+   is in charge again (its state re-syncs on the next scroll). Returning to <=768px re-activates once,
+   only if the F1 CSS is detected. If the F1 CSS is missing (an older cached m-app.css, or a
+   part-applied deployment) it stands down for the page's lifetime. Listeners are added once. */
+(function () {
+  'use strict';
+  if (window.__wwkP1F1) return;
+  var bar = document.querySelector('.search-filter-bar');
+  var header = document.querySelector('header');
+  if (!bar || !header) return;
+  window.__wwkP1F1 = true;
+  var root = document.documentElement;
+  var mq = window.matchMedia ? window.matchMedia('(max-width: 768px)') : null;
+  var spacer = document.createElement('div');
+  spacer.className = 'wwk-p1-search-spacer';
+  spacer.setAttribute('aria-hidden', 'true');
+  var active = false, cssMissing = false, loaded = document.readyState === 'complete';
+  var observer = null, lastH = -1, naturalH = 0, ticking = false;
+  function isMobile() { return mq ? mq.matches : window.innerWidth <= 768; }
+  function attachSpacer() {
+    spacer.classList.remove('is-active');
+    spacer.style.height = '0';
+    if (spacer.parentNode !== bar.parentNode || spacer.previousSibling !== bar) bar.parentNode.insertBefore(spacer, bar.nextSibling);
+  }
+  function detachSpacer() {
+    spacer.classList.remove('is-active');
+    spacer.style.height = '0';
+    if (spacer.parentNode) spacer.parentNode.removeChild(spacer);
+  }
+  function headerBottom() { return Math.max(0, Math.round(header.getBoundingClientRect().bottom)); }
+  function update() {
+    ticking = false;
+    if (!active) return;
+    var h = headerBottom();
+    if (h !== lastH) { root.style.setProperty('--wwk-p1-header-h', h + 'px'); lastH = h; }
+    var fixed = bar.classList.contains('wwk-p1-fixed');
+    if (!fixed) naturalH = bar.offsetHeight;
+    var naturalTop = (fixed ? spacer : bar).getBoundingClientRect().top;
+    if (naturalTop < h && !fixed) {
+      spacer.style.height = naturalH + 'px';
+      spacer.classList.add('is-active');
+      bar.classList.add('wwk-p1-fixed');
+    } else if (naturalTop >= h && fixed) {
+      bar.classList.remove('wwk-p1-fixed');
+      spacer.classList.remove('is-active');
+      spacer.style.height = '0';
+    }
+  }
+  function schedule() { if (active && !ticking) { ticking = true; window.requestAnimationFrame(update); } }
+  function activate() {
+    if (active || cssMissing || !isMobile()) return;
+    attachSpacer();
+    if (window.getComputedStyle(spacer).display !== 'none') {   // F1 CSS not (yet) applied
+      detachSpacer();
+      if (loaded) cssMissing = true;                             // after window load: stand down for good
+      return;
+    }
+    active = true;
+    root.classList.add('wwk-p1-search');
+    if (window.MutationObserver) {
+      observer = new MutationObserver(function () {
+        if (active && bar.classList.contains('sticky')) bar.classList.remove('sticky');
+      });
+      observer.observe(bar, { attributes: true, attributeFilter: ['class'] });
+    }
+    bar.classList.remove('sticky');
+    lastH = -1;
+    update();
+  }
+  function deactivate() {
+    if (!active) return;
+    active = false;
+    ticking = false;
+    if (observer) { observer.disconnect(); observer = null; }
+    bar.classList.remove('wwk-p1-fixed');
+    detachSpacer();
+    root.classList.remove('wwk-p1-search');
+    root.style.removeProperty('--wwk-p1-header-h');
+    lastH = -1;
+  }
+  function sync() {
+    if (isMobile()) { if (active) schedule(); else activate(); }
+    else deactivate();
+  }
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', sync);
+  window.addEventListener('hashchange', schedule);
+  if (mq) { if (mq.addEventListener) mq.addEventListener('change', sync); else if (mq.addListener) mq.addListener(sync); }
+  // m-app.css is injected by main.js and may still be loading: retry when it loads, and at window load.
+  var links = document.querySelectorAll('link[rel="stylesheet"][href*="m-app.css"]');
+  for (var i = 0; i < links.length; i++) links[i].addEventListener('load', sync);
+  if (!loaded) window.addEventListener('load', function () { loaded = true; sync(); });
+  sync();
+})();

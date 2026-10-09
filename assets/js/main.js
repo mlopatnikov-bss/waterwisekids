@@ -634,11 +634,11 @@ function initNavlistShapeTagging() {
   if (window.innerWidth <= 768) {
     var css = document.createElement('link');
     css.rel = 'stylesheet';
-    css.href = '/assets/css/m-app.css?v=20260921a';
+    css.href = '/assets/css/m-app.css?v=20261009p1';
     document.head.appendChild(css);
 
     var js = document.createElement('script');
-    js.src = '/assets/js/m-app.js?v=20260903a';
+    js.src = '/assets/js/m-app.js?v=20261009p1';
     document.body.appendChild(js);
   }
 })();
