@@ -352,6 +352,28 @@
     </div>
   </section>
 
+  <!-- WWK near-me and ZIP search: proposed 2026-10-08, task WWK-REQ-fa3fd2ee; files revised 2026-10-09, task WWK-NEAR-MANHATTAN-010 -->
+  <link rel="stylesheet" href="/assets/css/wwk-near.css?v=20261016b">
+  <section class="wwk-near" id="find-near-you" aria-labelledby="wwk-near-title" hidden>
+    <div class="wwk-near-panel">
+      <h2 id="wwk-near-title" class="wwk-near-title">Find swim schools near you</h2>
+      <div class="wwk-near-row">
+        <button type="button" id="wwk-near-me" class="wwk-near-btn" aria-describedby="wwk-near-privacy">Swim schools near me</button>
+        <span class="wwk-near-or" aria-hidden="true">or</span>
+        <form id="wwk-zip-form" class="wwk-near-zip" novalidate>
+          <label for="wwk-zip">ZIP code</label>
+          <input id="wwk-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="10" placeholder="e.g. 07731" aria-describedby="wwk-zip-error wwk-near-privacy">
+          <button type="submit" class="wwk-near-btn wwk-near-btn-alt">Search ZIP</button>
+        </form>
+      </div>
+      <p id="wwk-zip-error" class="wwk-near-error" role="alert" hidden></p>
+      <p id="wwk-near-privacy" class="wwk-near-privacy">Your browser asks before sharing your location. We use it only on this page to find nearby listings; it is not saved or sent anywhere.</p>
+      <div id="wwk-near-choice" class="wwk-near-choice" hidden></div>
+      <p id="wwk-near-status" class="wwk-near-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+  <script src="/assets/js/wwk-near.js?v=20261016b" defer></script>
+  <!-- /WWK near-me and ZIP search -->
   <div class="tldr-box" id="quick-answer" style="background:#f0f7ff;border-left:4px solid #0077b6;padding:16px 20px;margin:20px auto;border-radius:8px;max-width:820px;color:#334155;line-height:1.65;">
     <strong style="color:#0c4a6e;">Quick Answer:</strong> WaterWiseKids&rsquo; directory lists <strong>799 verified swim schools</strong> across <strong>573 cities in all 50 states and Washington, D.C.</strong> Goldfish Swim School is the largest chain (218 locations in 40 states), followed by SafeSplash (147 locations) and Aqua-Tots (144 locations); 38 listings are independent, locally owned schools. Typical group-lesson pricing runs <strong>$15&ndash;$25 at a municipal pool, $18&ndash;$30 at a YMCA, and $35&ndash;$55 at a dedicated swim school</strong>, with private instruction often $65&ndash;$100 or more. The <a href="https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx" style="color:#0369a1;" rel="nofollow noopener" target="_blank">American Academy of Pediatrics</a> recommends most children start formal swim lessons around age 1, and the <a href="https://www.cdc.gov/drowning/data-research/facts/index.html" style="color:#0369a1;" rel="nofollow noopener" target="_blank">CDC</a> reports drowning is the leading cause of unintentional-injury death for children ages 1&ndash;4 in the United States &mdash; formal swim lessons are associated with a substantially lower risk. Choose your state below to browse verified listings, compare programs, and read what to check before you enrol.
   </div>

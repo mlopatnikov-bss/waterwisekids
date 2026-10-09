@@ -1,0 +1,48 @@
+/* WaterWiseKids near-me and ZIP search panel: proposed 2026-10-08 (task WWK-REQ-fa3fd2ee), not published.
+   Own class prefix (wwk-near-) only; result cards reuse the directory's existing .school-card styles. */
+.wwk-near { max-width: 900px; margin: 1.5rem auto 1.5rem; padding: 0 1.5rem; position: relative; }
+.wwk-near[hidden] { display: none; }
+.wwk-near-panel { background: #ffffff; border: 1px solid #bae6fd; border-radius: 16px; padding: 1.25rem 1.5rem; box-shadow: 0 4px 18px rgba(12, 74, 110, 0.10); }
+.wwk-near-title { margin: 0 0 0.75rem; font-size: 1.2rem; color: #0c4a6e; }
+.wwk-near-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.75rem 1rem; }
+.wwk-near-or { align-self: center; color: #475569; font-weight: 600; }
+.wwk-near-zip { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.5rem; margin: 0; }
+.wwk-near-zip label { flex-basis: 100%; font-size: 0.8rem; font-weight: 600; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; }
+.wwk-near-zip input { width: 9.5rem; min-height: 44px; padding: 0 0.75rem; border: 1px solid #94a3b8; border-radius: 10px; font: inherit; font-size: 1rem; color: #0f172a; background: #ffffff; }
+.wwk-near-zip input[aria-invalid="true"] { border-color: #b91c1c; box-shadow: 0 0 0 1px #b91c1c; }
+.wwk-near-btn, .wwk-near-choice-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 1.1rem;
+  border-radius: 999px; border: 2px solid #0c4a6e; background: #0c4a6e; color: #ffffff; font: inherit; font-size: 0.95rem; font-weight: 700; cursor: pointer; }
+.wwk-near-btn-alt, .wwk-near-choice-btn { background: #ffffff; color: #0c4a6e; }
+.wwk-near-btn:hover { background: #075985; border-color: #075985; color: #ffffff; }
+.wwk-near-btn-alt:hover, .wwk-near-choice-btn:hover { background: #e0f2fe; color: #0c4a6e; }
+.wwk-near-btn[disabled] { opacity: 0.7; cursor: progress; }
+.wwk-near-btn:focus-visible, .wwk-near-choice-btn:focus-visible, .wwk-near-zip input:focus-visible, .wwk-near-choice select:focus-visible {
+  outline: 3px solid #0c4a6e; outline-offset: 2px; }
+.wwk-near-error { margin: 0.5rem 0 0; color: #b91c1c; font-weight: 700; font-size: 0.92rem; }
+.wwk-near-error[hidden] { display: none; }
+.wwk-near-privacy { margin: 0.75rem 0 0; color: #475569; font-size: 0.88rem; line-height: 1.45; }
+.wwk-near-status { margin: 0.5rem 0 0; min-height: 1.2em; color: #0c4a6e; font-weight: 700; font-size: 0.92rem; }
+.wwk-near-choice { margin: 0.75rem 0 0; padding: 0.75rem 1rem; border-radius: 12px; background: #f0f9ff; border: 1px solid #bae6fd; }
+.wwk-near-choice[hidden] { display: none; }
+.wwk-near-choice-q { display: block; margin: 0 0 0.5rem; font-weight: 700; color: #0c4a6e; }
+.wwk-near-choice-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.wwk-near-choice select { min-height: 44px; margin: 0 0.5rem 0.5rem 0; padding: 0 0.5rem; border: 1px solid #94a3b8; border-radius: 10px; font: inherit; }
+.wwk-near-results .wwk-near-heading { margin: 0 0 0.5rem; font-size: 1.3rem; color: #0f172a; }
+.wwk-near-results .wwk-near-heading:focus { outline: none; }
+.wwk-near-results .wwk-near-sub { margin: 1.25rem 0 0.5rem; font-size: 1.05rem; color: #075985; }
+.wwk-near-results .wwk-near-note, .wwk-near-results .wwk-near-coverage { color: #475569; font-size: 0.9rem; line-height: 1.5; }
+.wwk-near-results .wwk-near-coverage { margin-top: 1.25rem; border-top: 1px solid #e2e8f0; padding-top: 0.75rem; }
+.wwk-near-distance { color: #166534; font-weight: 700; }
+.wwk-near-venue { margin-top: 0.15rem; color: #0f172a; }
+.wwk-near-venue-link { display: inline-flex; align-items: center; min-height: 44px; color: #0c4a6e; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.wwk-near-venue-link:focus-visible { outline: 3px solid #0c4a6e; outline-offset: 2px; border-radius: 4px; }
+@media (max-width: 600px) {
+  .wwk-near { padding: 0 1rem; }
+  .wwk-near-panel { padding: 1rem; }
+  .wwk-near-row { flex-direction: column; align-items: stretch; }
+  .wwk-near-or { align-self: flex-start; }
+  .wwk-near-btn { width: 100%; }
+  .wwk-near-zip input { flex: 1 1 8rem; width: auto; }
+}
+@media print { .wwk-near { display: none !important; } }
+.wwk-near-results .visit-site-btn { display: inline-flex; align-items: center; min-height: 44px; }

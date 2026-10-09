@@ -1,0 +1,305 @@
+{
+ "about": "Verified facility coordinates for WaterWiseKids directory rows that have them. Source: WWK-GROWTH-002 revision-2 geocode evidence (US Census Geocoder address interpolation, state/county official address points, one operator map pin), reviewed by Codex 2026-10-06. Rows without a verified address are not listed here and are shown without a distance. Venues (added 2026-10-09, WWK-NEAR-MANHATTAN-010): verified pool points for a directory row that has several pools; the row's distance is its nearest pool. A venue is used only when its row is in the public directory.",
+ "verified_on": "2026-10-06",
+ "rows": [
+  {
+   "state": "NJ",
+   "name": "Aqua-Tots - Old Bridge",
+   "lat": 40.3657,
+   "lon": -74.30497,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NJ",
+   "name": "Bear Paddle Swim School - Marlton",
+   "lat": 39.90111,
+   "lon": -74.9338,
+   "uncertainty_mi": 0.3,
+   "method": "census"
+  },
+  {
+   "state": "NJ",
+   "name": "Bear Paddle Swim School - Turnersville",
+   "lat": 39.7634,
+   "lon": -75.0483,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NJ",
+   "name": "British Swim School at Echelon Voorhees",
+   "lat": 39.85179,
+   "lon": -74.98473,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NJ",
+   "name": "British Swim School at LA Fitness Brick",
+   "lat": 40.05801,
+   "lon": -74.14076,
+   "uncertainty_mi": 0.25,
+   "method": "official_address_point"
+  },
+  {
+   "state": "NJ",
+   "name": "British Swim School at LA Fitness East Brunswick",
+   "lat": 40.45255,
+   "lon": -74.39903,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NJ",
+   "name": "British Swim School at LA Fitness Howell",
+   "lat": 40.1289,
+   "lon": -74.21669,
+   "uncertainty_mi": 0.35,
+   "method": "census"
+  },
+  {
+   "state": "NJ",
+   "name": "British Swim School at LA Fitness Toms River",
+   "lat": 39.98516,
+   "lon": -74.17912,
+   "uncertainty_mi": 0.45,
+   "method": "census"
+  },
+  {
+   "state": "NJ",
+   "name": "Goldfish Swim School - Middletown",
+   "lat": 40.38007,
+   "lon": -74.092,
+   "uncertainty_mi": 0.3,
+   "method": "census"
+  },
+  {
+   "state": "NJ",
+   "name": "Goldfish Swim School - Mount Laurel",
+   "lat": 39.96538,
+   "lon": -74.89729,
+   "uncertainty_mi": 0.06,
+   "method": "official_address_point"
+  },
+  {
+   "state": "NJ",
+   "name": "SafeSplash - Voorhees Township",
+   "lat": 39.85359,
+   "lon": -74.98239,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NY",
+   "name": "Goldfish Swim School - Astoria",
+   "lat": 40.75572,
+   "lon": -73.92805,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NY",
+   "name": "Goldfish Swim School - Brooklyn",
+   "lat": 40.67913,
+   "lon": -73.98348,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NY",
+   "name": "Goldfish Swim School - Flushing",
+   "lat": 40.75924,
+   "lon": -73.83395,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NY",
+   "name": "Goldfish Swim School - Glen Oaks",
+   "lat": 40.74587,
+   "lon": -73.71429,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NY",
+   "name": "Goldfish Swim School - Glendale",
+   "lat": 40.70782,
+   "lon": -73.86939,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NY",
+   "name": "Goldfish Swim School - Staten Island South",
+   "lat": 40.56776,
+   "lon": -74.1124,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NY",
+   "name": "Saf-T-Swim - Little Neck",
+   "lat": 40.75858,
+   "lon": -73.73603,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NY",
+   "name": "SafeSplash - Yonkers",
+   "lat": 40.91666,
+   "lon": -73.90527,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "NY",
+   "name": "SwimJim - Brooklyn",
+   "lat": 40.73343,
+   "lon": -73.9575,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "PA",
+   "name": "Big Blue Swim School - Fairless Hills",
+   "lat": 40.19066,
+   "lon": -74.83308,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "PA",
+   "name": "Big Blue Swim School - Paoli",
+   "lat": 40.04183,
+   "lon": -75.48535,
+   "uncertainty_mi": 0.5,
+   "method": "census"
+  },
+  {
+   "state": "PA",
+   "name": "British Swim School at LA Fitness Cheltenham",
+   "lat": 40.07305,
+   "lon": -75.154,
+   "uncertainty_mi": 0.1,
+   "method": "official_address_point"
+  },
+  {
+   "state": "PA",
+   "name": "Goldfish Swim School - Langhorne",
+   "lat": 40.18178,
+   "lon": -74.87646,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "PA",
+   "name": "Goldfish Swim School - Malvern",
+   "lat": 40.03917,
+   "lon": -75.54946,
+   "uncertainty_mi": 0.15,
+   "method": "census"
+  },
+  {
+   "state": "PA",
+   "name": "Goldfish Swim School - Media",
+   "lat": 39.91318,
+   "lon": -75.43731,
+   "uncertainty_mi": 0.3,
+   "method": "census"
+  },
+  {
+   "state": "PA",
+   "name": "Goldfish Swim School - Oaks",
+   "lat": 40.12651,
+   "lon": -75.45506,
+   "uncertainty_mi": 0.1,
+   "method": "operator_pin"
+  }
+ ],
+ "venues_verified_on": "2026-10-09",
+ "venues": [
+  {
+   "state": "NY",
+   "name": "British Swim School of Manhattan",
+   "venue": "Upper East Side – Dwight School",
+   "url": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/",
+   "lat": 40.791389,
+   "lon": -73.937589,
+   "uncertainty_mi": 0.1,
+   "method": "nyc_pad_address_point"
+  },
+  {
+   "state": "NY",
+   "name": "British Swim School of Manhattan",
+   "venue": "St. Bart’s Church",
+   "url": "https://britishswimschool.com/manhattan/location/st-barts/",
+   "lat": 40.757222,
+   "lon": -73.973003,
+   "uncertainty_mi": 0.05,
+   "method": "nyc_pad_address_point"
+  },
+  {
+   "state": "NY",
+   "name": "British Swim School of Manhattan",
+   "venue": "East Village",
+   "url": "https://britishswimschool.com/manhattan/location/east-village/",
+   "lat": 40.726352,
+   "lon": -73.976389,
+   "uncertainty_mi": 0.1,
+   "method": "nyc_pad_address_point"
+  },
+  {
+   "state": "NY",
+   "name": "British Swim School of Manhattan",
+   "venue": "BMCC (Borough of Manhattan Community College)",
+   "url": "https://britishswimschool.com/manhattan/location/bmcc/",
+   "lat": 40.718857,
+   "lon": -74.011849,
+   "uncertainty_mi": 0.05,
+   "method": "nyc_pad_address_point"
+  },
+  {
+   "state": "NY",
+   "name": "British Swim School of Manhattan",
+   "venue": "John Jay College",
+   "url": "https://britishswimschool.com/manhattan/location/john-jay-college/",
+   "lat": 40.770887,
+   "lon": -73.989726,
+   "uncertainty_mi": 0.05,
+   "method": "nyc_pad_address_point"
+  },
+  {
+   "state": "NY",
+   "name": "British Swim School of Manhattan",
+   "venue": "Liberty Terrace",
+   "url": "https://britishswimschool.com/manhattan/location/liberty-terrace/",
+   "lat": 40.709184,
+   "lon": -74.018032,
+   "uncertainty_mi": 0.05,
+   "method": "nyc_pad_address_point"
+  },
+  {
+   "state": "NY",
+   "name": "British Swim School of Manhattan",
+   "venue": "Wall Street",
+   "url": "https://britishswimschool.com/manhattan/location/wall-street/",
+   "lat": 40.708954,
+   "lon": -74.006017,
+   "uncertainty_mi": 0.05,
+   "method": "nyc_pad_address_point"
+  },
+  {
+   "state": "NY",
+   "name": "British Swim School of Manhattan",
+   "venue": "The Continental",
+   "url": "https://britishswimschool.com/manhattan/location/the-continental/",
+   "lat": 40.74843,
+   "lon": -73.989282,
+   "uncertainty_mi": 0.05,
+   "method": "nyc_pad_address_point"
+  }
+ ]
+}
