@@ -539,109 +539,8 @@
     .dir-coverage ul{list-style:disc}
     .dir-coverage ul li{margin:0 0 .45rem}
   </style>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Swim Schools in Louisiana",
-  "description": "Directory of 6 swim schools listed in Louisiana on WaterWiseKids.",
-  "url": "https://www.waterwisekids.com/swim-lessons/directory/louisiana.html",
-  "numberOfItems": 6,
-  "itemListOrder": "https://schema.org/ItemListUnordered",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "Crawfish Swim School",
-        "url": "https://crawfishswimschool.com/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Baton Rouge",
-          "addressRegion": "LA",
-          "addressCountry": "US"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "Tadpole Academy",
-        "url": "https://tadpoleacademy.com/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Prairieville",
-          "addressRegion": "LA",
-          "addressCountry": "US"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "Safe Swim Kids",
-        "url": "https://www.safeswimkids.com/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Metairie",
-          "addressRegion": "LA",
-          "addressCountry": "US"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "Love Swimming",
-        "url": "https://loveswimming.com/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "New Orleans",
-          "addressRegion": "LA",
-          "addressCountry": "US"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 5,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "Seven Seas Swim School",
-        "url": "https://www.sevenseasbtr.com/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Baton Rouge",
-          "addressRegion": "LA",
-          "addressCountry": "US"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 6,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "Goldfish Swim School - Covington",
-        "url": "https://goldfishswimschool.com/covington/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Covington",
-          "addressRegion": "LA",
-          "addressCountry": "US"
-        }
-      }
-    }
-  ]
-}
-  </script>
+
+<script type="application/ld+json" id="wwk-verified-school-contacts">{"@context": "https://schema.org", "@type": "ItemList", "name": "Verified swim school contact details in LA", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "SportsActivityLocation", "name": "Crawfish Swim School", "address": {"@type": "PostalAddress", "streetAddress": "8556 Siegen Lane", "addressLocality": "Baton Rouge", "addressRegion": "LA", "postalCode": "70810", "addressCountry": "US"}, "telephone": "+12257576867", "url": "https://crawfishswimschool.com/"}}, {"@type": "ListItem", "position": 2, "item": {"@type": "SportsActivityLocation", "name": "Love Swimming", "address": {"@type": "PostalAddress", "streetAddress": "5221 S. Front Street", "addressLocality": "New Orleans", "addressRegion": "LA", "postalCode": "70115", "addressCountry": "US"}, "telephone": "+15048914662", "url": "https://loveswimming.com/"}}, {"@type": "ListItem", "position": 3, "item": {"@type": "SportsActivityLocation", "name": "Safe Swim Kids", "address": {"@type": "PostalAddress", "streetAddress": "2208 Judith Street", "addressLocality": "Metairie", "addressRegion": "LA", "postalCode": "70003", "addressCountry": "US"}, "telephone": "+15046450749", "url": "https://www.safeswimkids.com/"}}, {"@type": "ListItem", "position": 4, "item": {"@type": "SportsActivityLocation", "name": "Seven Seas Swim School", "address": {"@type": "PostalAddress", "streetAddress": "8350 One Calais Ave", "addressLocality": "Baton Rouge", "addressRegion": "LA", "postalCode": "70809", "addressCountry": "US"}, "telephone": "+12257610333", "url": "https://www.sevenseasbtr.com/"}}, {"@type": "ListItem", "position": 5, "item": {"@type": "SportsActivityLocation", "name": "Tadpole Academy", "address": {"@type": "PostalAddress", "addressRegion": "LA", "addressCountry": "US"}, "telephone": "+12256789772", "url": "https://tadpoleacademy.com/"}}]}</script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -698,7 +597,8 @@
       <h1>Swim Lessons in Louisiana</h1>
       <p class="hero-sub">Find verified swimming programs and lessons across Louisiana. Search, compare, and read reviews from other parents.</p>
     </div>
-  </section>
+  <div class="back-links"><a href="/swim-lessons/directory/">&larr; Browse All States</a> &nbsp; <a href="/swim-lessons/">&larr; Back to Find Lessons</a></div>
+</section>
 
   <!-- State Intro -->
   <section class="section" style="padding-bottom: 0;">
@@ -718,7 +618,7 @@
     <div class="search-box">
       <div class="search-controls">
         <input type="text" id="schoolSearch" placeholder="Search by school name..." aria-label="Search by school name">
-        <input type="text" id="citySearch" placeholder="Search by city..." aria-label="Search by city">
+        <select id="citySearch" aria-label="City"><option value="">All cities</option></select>
       </div>
       <button class="btn btn-primary" onclick="applySearch()">Search</button>
     </div>
@@ -726,30 +626,14 @@
     <!-- Schools List -->
     <p class="directory-note">Visit each school&#39;s website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>
     <div class="school-count" id="schoolCount">6 swim schools found in Louisiana</div>
-    <div class="schools-list" id="schoolsList"><div class="school-card"><div class="school-header"><div><h3 class="school-name">Crawfish Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Baton Rouge, LA</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://crawfishswimschool.com/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Crawfish Swim School website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Tadpole Academy</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Prairieville, LA</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://tadpoleacademy.com/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Tadpole Academy website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Safe Swim Kids</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Metairie, LA</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span><span class="program-badge">Adults</span></div><div class="school-contact"><a href="https://www.safeswimkids.com/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Safe Swim Kids website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Love Swimming</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> New Orleans, LA</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span><span class="program-badge">Adults</span></div><div class="school-contact"><a href="https://loveswimming.com/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Love Swimming website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Seven Seas Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Baton Rouge, LA</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span><span class="program-badge">Adults</span></div><div class="school-contact"><a href="https://www.sevenseasbtr.com/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Seven Seas Swim School website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Goldfish Swim School - Covington</h3><span class="school-chain">Goldfish Swim School</span></div></div><div class="school-info"><div><strong>City:</strong> Covington, LA</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://goldfishswimschool.com/covington/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Goldfish Swim School - Covington website (opens in a new tab)">Visit Website &rarr;</a></div></div></div>
-    <noscript>
-
-      <div style="padding: 2rem; background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; margin: 1rem 0;">
-
-        <p style="margin: 0; color: #92400e; font-size: 0.95rem;"><strong>Note:</strong> Search, filtering, and parent reviews require JavaScript. All 6 Louisiana swim school listings are shown above.</p>
-
-      </div>
-
-      <div style="padding: 1rem; background: #f3f4f6; border-radius: 8px;">
-
-        <p style="margin: 0; color: #374151; font-size: 0.9rem;"><strong>Louisiana Swim Schools</strong><br>
-
-        Discover quality swim lessons in Louisiana. Our directory contains verified swim schools offering lessons for all ages and skill levels. Browse the verified schools we list below, then visit each school&#39;s website for enrollment details.</p>
-
-      </div>
-
-    </noscript>
-
-    <!-- Back Links -->
-    <div class="back-links">
-      <a href="/swim-lessons/directory/">← Browse All States</a>
-      <a href="/swim-lessons/">← Back to Find Lessons</a>
-    </div>
+    <div class="schools-list" id="schoolsList">
+<div class="school-card" id="school-crawfish-swim-school-la"><div class="school-header"><div><h3 class="school-name">Crawfish Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Baton Rouge, LA</div><div><strong>Address:</strong> 8556 Siegen Lane, Baton Rouge, LA 70810</div><div><strong>Phone:</strong> <a href="tel:+12257576867">(225) 757-6867</a></div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://crawfishswimschool.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+<div class="school-card" id="school-tadpole-academy-la"><div class="school-header"><div><h3 class="school-name">Tadpole Academy</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Prairieville, LA</div><div>Street address awaiting verification — see school website.</div><div><strong>Phone:</strong> <a href="tel:+12256789772">(225) 678-9772</a></div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://tadpoleacademy.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+<div class="school-card" id="school-safe-swim-kids-la"><div class="school-header"><div><h3 class="school-name">Safe Swim Kids</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Metairie, LA</div><div><strong>Address:</strong> 2208 Judith Street, Metairie, LA 70003</div><div><strong>Phone:</strong> <a href="tel:+15046450749">(504) 645-0749</a></div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://www.safeswimkids.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+<div class="school-card" id="school-love-swimming-la"><div class="school-header"><div><h3 class="school-name">Love Swimming</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> New Orleans, LA</div><div><strong>Address:</strong> 5221 S. Front Street, New Orleans, LA 70115</div><div><strong>Phone:</strong> <a href="tel:+15048914662">(504) 891-4662</a></div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://loveswimming.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+<div class="school-card" id="school-seven-seas-swim-school-la"><div class="school-header"><div><h3 class="school-name">Seven Seas Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Baton Rouge, LA</div><div><strong>Address:</strong> 8350 One Calais Ave, Baton Rouge, LA 70809</div><div><strong>Phone:</strong> <a href="tel:+12257610333">(225) 761-0333</a></div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://www.sevenseasbtr.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+<div class="school-card" id="school-goldfish-swim-school-covington-la"><div class="school-header"><div><h3 class="school-name">Goldfish Swim School - Covington</h3><span class="school-chain">Goldfish Swim School</span></div></div><div class="school-info"><div><strong>City:</strong> Covington, LA</div><div>Street address awaiting verification — see school website.</div><div>Phone awaiting verification — see school website.</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://goldfishswimschool.com/covington/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+</div>
   </section>
 
   <!-- State depth: bridge + visible FAQ (matches FAQPage schema) -->
@@ -851,7 +735,7 @@
     </div>
   </footer>
 
-  <script src="schools-data.js?v=20260913a"></script>
+  <script src="schools-data.js?v=20261011d017"></script>
   <script>
     const STATE_CODE = "LA";
     const STATE_NAME = "Louisiana";
@@ -861,6 +745,9 @@
 
     // Initialize page
     function init() {
+      var cities = Array.from(new Set((SWIM_SCHOOLS_DATA[STATE_CODE] || []).map(function(s) { return s.city; }))).sort();
+      document.getElementById('citySearch').innerHTML = '<option value="">All cities</option>' + cities.map(function(c) { return '<option value="' + safeAttr(c) + '">' + safeAttr(c) + '</option>'; }).join('');
+      document.getElementById('citySearch').addEventListener('change', applySearch);
       renderStateSchools();
       setupStarRating();
       setupEnterKey();
@@ -907,7 +794,7 @@
       const schools = SWIM_SCHOOLS_DATA[STATE_CODE] || [];
       const filtered = schools.filter(school => {
         if (schoolName && !school.name.toLowerCase().includes(schoolName)) return false;
-        if (city && !school.city.toLowerCase().includes(city)) return false;
+        if (city && school.city.toLowerCase() !== city) return false;
         return true;
       }).map(s => ({ ...s, id: `${s.name}-${s.state}` }));
 
@@ -935,6 +822,17 @@
       return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;')
                       .replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
+
+    function schoolContactHTML(school) {
+      var result = school.openingSoon ? '<div class="wwk-opening-soon">Opening soon</div>' : '';
+      if (school.address) result += '<div><strong>Address:</strong> ' + safeAttr(school.address) + '</div>';
+      else if (school.poolAddresses && school.poolAddresses.length) result += '<details><summary>Verified pool addresses (' + school.poolAddresses.length + ')</summary><ul>' + school.poolAddresses.map(function(p) { return '<li><strong>' + safeAttr(p.venue || 'Pool') + ':</strong> ' + safeAttr(p.address) + '</li>'; }).join('') + '</ul></details>';
+      else result += '<div>Street address awaiting verification — see school website.</div>';
+      if (school.phone) result += '<div><strong>Phone:</strong> <a href="tel:' + safeAttr(school.phone) + '">' + safeAttr(formatPhone(school.phone)) + '</a></div>';
+      else if (!school.openingSoon) result += '<div>Phone awaiting verification — see school website.</div>';
+      return result;
+    }
+    function formatPhone(p) { return /^\+1\d{10}$/.test(p) ? '(' + p.slice(2,5) + ') ' + p.slice(5,8) + '-' + p.slice(8) : p; }
 
     function renderSchoolCard(school) {
       const programLabels = {
@@ -991,6 +889,7 @@
 
           <div class="school-info">
             <div><strong>City:</strong> ${school.city}, ${school.state}</div>
+            ${schoolContactHTML(school)}
             <div><strong>Type:</strong> ${school.indoor ? 'Indoor' : 'Outdoor'}${school.yearRound ? ' • Year-round' : ''}</div>
           </div>
 
@@ -1087,7 +986,10 @@
     function apply() {
       var f = document.getElementById('citySearch');
       if (!f) return;
-      f.value = c;
+      if (c.toLowerCase() === 'new york') c = 'Manhattan';
+      var match = Array.from(f.options).find(function(o) { return o.value.toLowerCase() === c.toLowerCase(); });
+      if (!match) return;
+      f.value = match.value;
       if (typeof applySearch === 'function') applySearch();
     }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply);

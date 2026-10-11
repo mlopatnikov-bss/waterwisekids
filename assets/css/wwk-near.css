@@ -46,3 +46,14 @@
 }
 @media print { .wwk-near { display: none !important; } }
 .wwk-near-results .visit-site-btn { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* Results also work directly on the Find Lessons page. */
+.wwk-near-hub-results { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+.wwk-near-hub-results:empty { display: none; }
+.wwk-near-hub-results .school-card { border: 1px solid #dbe5ee; border-radius: 12px; padding: 1.25rem; margin: .75rem 0; background: white; }
+.wwk-near-hub-results .school-name { color: #0c4a6e; font-size: 1.05rem; margin: 0 0 .4rem; }
+.wwk-near-hub-results .school-chain, .wwk-near-hub-results .program-badge { display: inline-block; border-radius: 999px; background: #e0f2fe; color: #075985; padding: .2rem .6rem; font-size: .8rem; margin: .2rem .3rem .2rem 0; }
+.wwk-near-hub-results .school-info { margin: .75rem 0; line-height: 1.7; }
+.wwk-near-hub-results .visit-site-btn { color: white; background: #0c4a6e; padding: .5rem 1rem; border-radius: 8px; text-decoration: none; }
+.wwk-pool-addresses li { margin: .5rem 0; }
+.wwk-address-pending { color: #64748b; }

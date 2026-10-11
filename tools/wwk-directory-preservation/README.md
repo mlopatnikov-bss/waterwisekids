@@ -1,0 +1,3 @@
+Canonical directory source: swim-lessons/directory/schools-data.js and the state-page HTML/JSON-LD.
+
+This checker preserves all 799 listing identities and exactly their reviewed contact representations, city selectors, direct ZIP panel and sitemap membership. policy.json pins the accepted search behavior/CSS/venue coordinates. The installed pre-push wrapper checks the actual live commit and retains the existing mobile P1 guard. Legacy .deploy/directory-gen output is not an accepted contact source: its contact loss must fail this guard. A future contact or protected-search change needs a reviewed expectation/policy update through Codex; unrelated article/sitemap additions remain permitted. Local hook protection does not cover other checkouts or deliberate hook bypass.

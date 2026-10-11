@@ -539,79 +539,9 @@
     .dir-coverage ul{list-style:disc}
     .dir-coverage ul li{margin:0 0 .45rem}
   </style>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Swim Schools in Idaho",
-  "description": "Directory of 4 swim schools listed in Idaho on WaterWiseKids.",
-  "url": "https://www.waterwisekids.com/swim-lessons/directory/idaho.html",
-  "numberOfItems": 4,
-  "itemListOrder": "https://schema.org/ItemListUnordered",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "Goldfish Swim School - Boise",
-        "url": "https://goldfishswimschool.com/boise/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Boise",
-          "addressRegion": "ID",
-          "addressCountry": "US"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "Aqua-Tots - Boise",
-        "url": "https://www.aqua-tots.com/boise/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Boise",
-          "addressRegion": "ID",
-          "addressCountry": "US"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "Goldfish Swim School - Nampa",
-        "url": "https://goldfishswimschool.com/nampa/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Nampa",
-          "addressRegion": "ID",
-          "addressCountry": "US"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "SafeSplash - Coeur d'Alene",
-        "url": "https://www.safesplashswimlabs.com/locations/coeur-d-alene-id",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Coeur d'Alene",
-          "addressRegion": "ID",
-          "addressCountry": "US"
-        }
-      }
-    }
-  ]
-}
-  </script>
+
+
+<script type="application/ld+json" id="wwk-verified-school-contacts">{"@context": "https://schema.org", "@type": "ItemList", "name": "Verified swim school contact details in ID", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "SportsActivityLocation", "name": "Aqua-Tots - Boise", "address": {"@type": "PostalAddress", "streetAddress": "3116 E. State St., Ste. 180", "addressLocality": "Eagle", "addressRegion": "ID", "postalCode": "83616", "addressCountry": "US"}, "telephone": "+12089389300", "url": "https://www.aqua-tots.com/boise/"}}, {"@type": "ListItem", "position": 2, "item": {"@type": "SportsActivityLocation", "name": "Goldfish Swim School - Boise", "address": {"@type": "PostalAddress", "streetAddress": "1001 N. Milwaukee Street", "addressLocality": "Boise", "addressRegion": "ID", "postalCode": "83704", "addressCountry": "US"}, "telephone": "+12088000823", "url": "https://goldfishswimschool.com/boise/"}}, {"@type": "ListItem", "position": 3, "item": {"@type": "SportsActivityLocation", "name": "Goldfish Swim School - Nampa", "address": {"@type": "PostalAddress", "streetAddress": "1205 N Galleria Drive", "addressLocality": "Nampa", "addressRegion": "ID", "postalCode": "83687", "addressCountry": "US"}, "telephone": "+12089749021", "url": "https://goldfishswimschool.com/nampa/"}}, {"@type": "ListItem", "position": 4, "item": {"@type": "SportsActivityLocation", "name": "SafeSplash - Coeur d'Alene", "address": {"@type": "PostalAddress", "streetAddress": "3810 N Schreiber Way", "addressLocality": "Coeur d'Alene", "addressRegion": "ID", "postalCode": "83815", "addressCountry": "US"}, "telephone": "+12083702223", "url": "https://www.safesplashswimlabs.com/locations/coeur-d-alene-id"}}]}</script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -668,7 +598,8 @@
       <h1>Swim Lessons in Idaho</h1>
       <p class="hero-sub">Find verified swimming programs and lessons across Idaho. Search, compare, and read reviews from other parents.</p>
     </div>
-  </section>
+  <div class="back-links"><a href="/swim-lessons/directory/">&larr; Browse All States</a> &nbsp; <a href="/swim-lessons/">&larr; Back to Find Lessons</a></div>
+</section>
 
   <!-- State Intro -->
   <section class="section" style="padding-bottom: 0;">
@@ -689,7 +620,7 @@
     <div class="search-box">
       <div class="search-controls">
         <input type="text" id="schoolSearch" placeholder="Search by school name..." aria-label="Search by school name">
-        <input type="text" id="citySearch" placeholder="Search by city..." aria-label="Search by city">
+        <select id="citySearch" aria-label="City"><option value="">All cities</option></select>
       </div>
       <button class="btn btn-primary" onclick="applySearch()">Search</button>
     </div>
@@ -697,30 +628,12 @@
     <!-- Schools List -->
     <p class="directory-note">Visit each school&#39;s website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>
     <div class="school-count" id="schoolCount">4 swim schools found in Idaho</div>
-    <div class="schools-list" id="schoolsList"><div class="school-card"><div class="school-header"><div><h3 class="school-name">Goldfish Swim School - Boise</h3><span class="school-chain">Goldfish Swim School</span></div></div><div class="school-info"><div><strong>City:</strong> Boise, ID</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://goldfishswimschool.com/boise/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Goldfish Swim School - Boise website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Aqua-Tots - Boise</h3><span class="school-chain">Aqua-Tots</span></div></div><div class="school-info"><div><strong>City:</strong> Boise, ID</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://www.aqua-tots.com/boise/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Aqua-Tots - Boise website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Goldfish Swim School - Nampa</h3><span class="school-chain">Goldfish Swim School</span></div></div><div class="school-info"><div><strong>City:</strong> Nampa, ID</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://goldfishswimschool.com/nampa/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Goldfish Swim School - Nampa website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">SafeSplash - Coeur d'Alene</h3><span class="school-chain">SafeSplash</span></div></div><div class="school-info"><div><strong>City:</strong> Coeur d'Alene, ID</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span><span class="program-badge">Adults</span></div><div class="school-contact"><a href="https://www.safesplashswimlabs.com/locations/coeur-d-alene-id" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the SafeSplash - Coeur d'Alene website (opens in a new tab)">Visit Website &rarr;</a></div></div></div>
-    <noscript>
-
-      <div style="padding: 2rem; background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; margin: 1rem 0;">
-
-        <p style="margin: 0; color: #92400e; font-size: 0.95rem;"><strong>Note:</strong> Search, filtering, and parent reviews require JavaScript. All 4 Idaho swim school listings are shown above.</p>
-
-      </div>
-
-      <div style="padding: 1rem; background: #f3f4f6; border-radius: 8px;">
-
-        <p style="margin: 0; color: #374151; font-size: 0.9rem;"><strong>Idaho Swim Schools</strong><br>
-
-        Discover quality swim lessons in Idaho. Our directory contains verified swim schools offering lessons for all ages and skill levels. Browse the verified schools we list below, then visit each school&#39;s website for enrollment details.</p>
-
-      </div>
-
-    </noscript>
-
-    <!-- Back Links -->
-    <div class="back-links">
-      <a href="/swim-lessons/directory/">← Browse All States</a>
-      <a href="/swim-lessons/">← Back to Find Lessons</a>
-    </div>
+    <div class="schools-list" id="schoolsList">
+<div class="school-card" id="school-goldfish-swim-school-boise-id"><div class="school-header"><div><h3 class="school-name">Goldfish Swim School - Boise</h3><span class="school-chain">Goldfish Swim School</span></div></div><div class="school-info"><div><strong>City:</strong> Boise, ID</div><div><strong>Address:</strong> 1001 N. Milwaukee Street, Boise, ID 83704</div><div><strong>Phone:</strong> <a href="tel:+12088000823">(208) 800-0823</a></div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://goldfishswimschool.com/boise/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+<div class="school-card" id="school-aqua-tots-boise-id"><div class="school-header"><div><h3 class="school-name">Aqua-Tots - Boise</h3><span class="school-chain">Aqua-Tots</span></div></div><div class="school-info"><div><strong>City:</strong> Boise, ID</div><div><strong>Address:</strong> 3116 E. State St., Ste. 180, Eagle, ID 83616</div><div><strong>Phone:</strong> <a href="tel:+12089389300">(208) 938-9300</a></div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.aqua-tots.com/boise/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+<div class="school-card" id="school-goldfish-swim-school-nampa-id"><div class="school-header"><div><h3 class="school-name">Goldfish Swim School - Nampa</h3><span class="school-chain">Goldfish Swim School</span></div></div><div class="school-info"><div><strong>City:</strong> Nampa, ID</div><div><strong>Address:</strong> 1205 N Galleria Drive, Nampa, ID 83687</div><div><strong>Phone:</strong> <a href="tel:+12089749021">(208) 974-9021</a></div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://goldfishswimschool.com/nampa/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+<div class="school-card" id="school-safesplash-coeur-d-alene-id"><div class="school-header"><div><h3 class="school-name">SafeSplash - Coeur d&#x27;Alene</h3><span class="school-chain">SafeSplash</span></div></div><div class="school-info"><div><strong>City:</strong> Coeur d&#x27;Alene, ID</div><div><strong>Address:</strong> 3810 N Schreiber Way, Coeur d&#x27;Alene, ID 83815</div><div><strong>Phone:</strong> <a href="tel:+12083702223">(208) 370-2223</a></div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://www.safesplashswimlabs.com/locations/coeur-d-alene-id" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+</div>
   </section>
 
   <!-- State depth: bridge + visible FAQ (matches FAQPage schema) -->
@@ -828,7 +741,7 @@
     </div>
   </footer>
 
-  <script src="schools-data.js?v=20260913a"></script>
+  <script src="schools-data.js?v=20261011d017"></script>
   <script>
     const STATE_CODE = "ID";
     const STATE_NAME = "Idaho";
@@ -838,6 +751,9 @@
 
     // Initialize page
     function init() {
+      var cities = Array.from(new Set((SWIM_SCHOOLS_DATA[STATE_CODE] || []).map(function(s) { return s.city; }))).sort();
+      document.getElementById('citySearch').innerHTML = '<option value="">All cities</option>' + cities.map(function(c) { return '<option value="' + safeAttr(c) + '">' + safeAttr(c) + '</option>'; }).join('');
+      document.getElementById('citySearch').addEventListener('change', applySearch);
       renderStateSchools();
       setupStarRating();
       setupEnterKey();
@@ -884,7 +800,7 @@
       const schools = SWIM_SCHOOLS_DATA[STATE_CODE] || [];
       const filtered = schools.filter(school => {
         if (schoolName && !school.name.toLowerCase().includes(schoolName)) return false;
-        if (city && !school.city.toLowerCase().includes(city)) return false;
+        if (city && school.city.toLowerCase() !== city) return false;
         return true;
       }).map(s => ({ ...s, id: `${s.name}-${s.state}` }));
 
@@ -912,6 +828,17 @@
       return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;')
                       .replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
+
+    function schoolContactHTML(school) {
+      var result = school.openingSoon ? '<div class="wwk-opening-soon">Opening soon</div>' : '';
+      if (school.address) result += '<div><strong>Address:</strong> ' + safeAttr(school.address) + '</div>';
+      else if (school.poolAddresses && school.poolAddresses.length) result += '<details><summary>Verified pool addresses (' + school.poolAddresses.length + ')</summary><ul>' + school.poolAddresses.map(function(p) { return '<li><strong>' + safeAttr(p.venue || 'Pool') + ':</strong> ' + safeAttr(p.address) + '</li>'; }).join('') + '</ul></details>';
+      else result += '<div>Street address awaiting verification — see school website.</div>';
+      if (school.phone) result += '<div><strong>Phone:</strong> <a href="tel:' + safeAttr(school.phone) + '">' + safeAttr(formatPhone(school.phone)) + '</a></div>';
+      else if (!school.openingSoon) result += '<div>Phone awaiting verification — see school website.</div>';
+      return result;
+    }
+    function formatPhone(p) { return /^\+1\d{10}$/.test(p) ? '(' + p.slice(2,5) + ') ' + p.slice(5,8) + '-' + p.slice(8) : p; }
 
     function renderSchoolCard(school) {
       const programLabels = {
@@ -968,6 +895,7 @@
 
           <div class="school-info">
             <div><strong>City:</strong> ${school.city}, ${school.state}</div>
+            ${schoolContactHTML(school)}
             <div><strong>Type:</strong> ${school.indoor ? 'Indoor' : 'Outdoor'}${school.yearRound ? ' • Year-round' : ''}</div>
           </div>
 
@@ -1064,7 +992,10 @@
     function apply() {
       var f = document.getElementById('citySearch');
       if (!f) return;
-      f.value = c;
+      if (c.toLowerCase() === 'new york') c = 'Manhattan';
+      var match = Array.from(f.options).find(function(o) { return o.value.toLowerCase() === c.toLowerCase(); });
+      if (!match) return;
+      f.value = match.value;
       if (typeof applySearch === 'function') applySearch();
     }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply);

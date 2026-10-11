@@ -1,0 +1,9 @@
+{
+  "task_id": "WWK-DIRECTORY-CONTACTS-017",
+  "exact_assets": {
+    "assets/js/wwk-near.js": "cef0c144a4bb4750cfeb4c313c42c40eb81dbd4adf7b565977ce44267a184d14",
+    "assets/css/wwk-near.css": "94d6d847556af7c32d18eaceb5678f5cc8def008245fffe911ae000c7061c75c",
+    "swim-lessons/directory/schools-geo.json": "e0e333785688b3d2ca3c23866a4f7e55d26db05faf6d41f3875f6328738ed321"
+  },
+  "expectations_sha256": "5d88d759fe47e702a28958d7ea719f242e6dc49aaa146a1165c3fe940ad05012"
+}

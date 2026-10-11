@@ -27,7 +27,7 @@
   'use strict';
 
   var ZIP_URL = '/assets/data/wwk-zip-points.json';
-  var GEO_URL = '/swim-lessons/directory/schools-geo.json';
+  var GEO_URL = '/swim-lessons/directory/schools-geo.json?v=20261011d017';
   var RADIUS_MI = 60;          // verified-distance results shown within this straight-line radius
   var NEARBY_STATE_MI = 10;    // another state counts as "also near" if a ZIP area center is this close
   var OUTSIDE_MI = 150;        // farther than this from every ZIP area center: outside the U.S. areas we cover
@@ -93,7 +93,7 @@
   function clearOurResults() {
     if (out.querySelector('.wwk-near-results')) clear(out);
   }
-  ['stateFilter'].forEach(function (id) {
+  ['stateFilter', 'citySearch'].forEach(function (id) {
     var e = document.getElementById(id);
     if (e) e.addEventListener('change', function () { seq++; request++; busy(false); });
   });
@@ -211,26 +211,45 @@
   }
 
   // ---- Results ----
+  function formatPhone(p) { return /^\+1\d{10}$/.test(p) ? '(' + p.slice(2,5) + ') ' + p.slice(5,8) + '-' + p.slice(8) : p; }
   function card(row, dist, venue) {
     var c = el('div', 'school-card wwk-near-card');
     var h = el('div', 'school-header');
     var hd = el('div');
-    hd.appendChild(el('h3', 'school-name', row.name));
+    hd.appendChild(el('h3', 'school-name', row.name + (venue ? ' — ' + venue.venue : '')));
     hd.appendChild(el('span', 'school-chain', row.chain || ''));
     h.appendChild(hd);
     c.appendChild(h);
     var info = el('div', 'school-info');
     info.appendChild(el('div', null, 'Location: ' + row.city + ', ' + (NAMES[row.state] || row.state)));
-    if (dist != null) info.appendChild(el('div', 'wwk-near-distance', distanceText(dist) + ' (straight line)' + (venue ? ' to the nearest pool' : '')));
+    var address = venue && venue.address ? venue.address : row.address;
+    var zip = (venue && venue.postalCode) || (row.postalAddress && row.postalAddress.postalCode) || ((address || '').match(/\b\d{5}\b/) || [])[0];
+    if (zip) info.appendChild(el('div', 'wwk-near-zip', 'ZIP: ' + zip));
+    if (row.openingSoon) info.appendChild(el('div', 'wwk-opening-soon', 'Opening soon'));
+    if (address) info.appendChild(el('div', 'wwk-near-address', 'Address: ' + address));
+    else info.appendChild(el('div', 'wwk-near-note', 'Street address awaiting verification — see school website.'));
+    if (dist != null) info.appendChild(el('div', 'wwk-near-distance', distanceText(dist) + (venue ? ' to this pool' : '')));
     var vurl = venue ? venueUrl(row, venue) : null;
     if (vurl) {
       var vp = el('div', 'wwk-near-venue');
-      vp.appendChild(document.createTextNode('Nearest pool: '));
+      vp.appendChild(document.createTextNode('Pool: '));
       var va = el('a', 'wwk-near-venue-link', venue.venue);
       va.href = vurl; va.target = '_blank'; va.rel = 'noopener';
-      va.setAttribute('aria-label', 'Nearest pool: ' + venue.venue + ' (opens the pool page in a new tab)');
+      va.setAttribute('aria-label', 'Pool: ' + venue.venue + ' (opens the pool page in a new tab)');
       vp.appendChild(va);
       info.appendChild(vp);
+    }
+    if (row.phone) {
+      var tel = el('a', 'wwk-near-phone', 'Phone: ' + formatPhone(row.phone));
+      tel.href = 'tel:' + row.phone;
+      info.appendChild(tel);
+    }
+    if (!address && Array.isArray(row.poolAddresses)) {
+      var details = el('details', 'wwk-pool-addresses');
+      details.appendChild(el('summary', null, 'Verified pool addresses (' + row.poolAddresses.length + ')'));
+      var addresses = el('ul');
+      row.poolAddresses.forEach(function(p) { addresses.appendChild(el('li', null, p.venue + ': ' + p.address)); });
+      details.appendChild(addresses); info.appendChild(details);
     }
     c.appendChild(info);
     if (Array.isArray(row.programs) && row.programs.length) {
@@ -269,16 +288,31 @@
         }
       }
     }
-    near.sort(function (a, b) { return a.d - b.d || a.row.name.localeCompare(b.row.name); });
+    var manhattan = [], other = [];
+    if (opts.manhattan) {
+      near.forEach(function(n) {
+        if (n.row.state === 'NY' && n.row.city === 'Manhattan') {
+          var pools = venueData['NY|' + n.row.name] || [];
+          if (pools.length) pools.forEach(function(v) {
+            if (venueUrl(n.row, v)) manhattan.push({row: n.row, venue: v,
+              d: opts.point ? miles(opts.point.lat, opts.point.lon, v.lat, v.lon) : null});
+          });
+          else manhattan.push(n);
+        } else other.push(n);
+      });
+    }
+    function byDistance(a,b) { return (a.d == null ? Infinity : a.d) - (b.d == null ? Infinity : b.d) || a.row.name.localeCompare(b.row.name); }
+    near.sort(byDistance); manhattan.sort(byDistance); other.sort(byDistance);
     var rest = [];
     opts.states.forEach(function (st) {
       (D[st] || []).forEach(function (row) {
         if (seen[st + '|' + row.name]) return;
+        if (opts.manhattan && !(st === 'NY' && row.city === 'Manhattan')) return;
         var r = opts.point ? rowDistance(st, row, geo, opts.point) : null;
         rest.push({row: row, d: r ? r.d : null, venue: r ? r.venue : null});
       });
     });
-    rest.sort(function (a, b) { return a.row.state.localeCompare(b.row.state) || a.row.city.localeCompare(b.row.city) || a.row.name.localeCompare(b.row.name); });
+    rest.sort(function (a, b) { return (a.d != null || b.d != null) ? byDistance(a,b) : a.row.state.localeCompare(b.row.state) || a.row.city.localeCompare(b.row.city) || a.row.name.localeCompare(b.row.name); });
     var stNames = opts.states.map(function (s) { return NAMES[s] || s; }).join(' and ');
 
     clear(out);
@@ -287,17 +321,20 @@
     head.id = 'wwk-near-heading'; head.tabIndex = -1;
     wrap.appendChild(head);
     if (opts.point) {
-      wrap.appendChild(el('h3', 'wwk-near-sub', 'Within ' + RADIUS_MI + ' miles of ' + opts.place + ' (verified addresses only)'));
-      if (near.length) {
+      function group(title, rows) {
+        wrap.appendChild(el('h3', 'wwk-near-sub', title));
         var list = el('div', 'wwk-near-list');
-        near.forEach(function (n) { list.appendChild(card(n.row, n.d, n.venue)); });
+        rows.forEach(function(n) { list.appendChild(card(n.row, n.d, n.venue)); });
         wrap.appendChild(list);
-      } else {
-        wrap.appendChild(el('p', 'wwk-near-note', 'None of the schools with a verified address are within ' + RADIUS_MI + ' miles.'));
       }
+      if (opts.manhattan) {
+        group('Manhattan schools and pools, nearest first', manhattan);
+        if (other.length) group('Other nearby schools, nearest first', other);
+      } else if (near.length) group('Within ' + RADIUS_MI + ' miles of ' + opts.place, near);
+      if (!near.length) wrap.appendChild(el('p', 'wwk-near-note', 'No schools with a verified address found within ' + RADIUS_MI + ' miles.'));
     }
-    if (opts.states.length) {
-      wrap.appendChild(el('h3', 'wwk-near-sub', (opts.point ? 'More listings in ' : 'Listings in ') + stNames + ', by town'));
+    if (opts.states.length && (!opts.manhattan || rest.length)) {
+      wrap.appendChild(el('h3', 'wwk-near-sub', (opts.point ? 'More listings in ' : 'Listings in ') + (opts.manhattan ? 'Manhattan' : stNames) + ', by town'));
       if (rest.length) {
         var anyDist = rest.some(function (r) { return r.d != null; });
         wrap.appendChild(el('p', 'wwk-near-note', opts.point
@@ -314,13 +351,13 @@
     var cov = el('p', 'wwk-near-coverage');
     cov.textContent = 'Distances are available for ' + totalGeo + ' of ' + totalRows + ' listings so far' +
       (totalGeo ? ' (' + Object.keys(geoStates).sort().map(function (s) { return NAMES[s] || s; }).join(', ') + ')' : '') +
-      '. Distances are straight-line from ' + (opts.method === 'zip' ? 'the center of the ZIP code' : 'your approximate location') +
+      '. Approximate distances from ' + (opts.method === 'zip' ? 'the center of the ZIP code' : 'your approximate location') +
       ', not driving distance. WaterWiseKids lists a curated selection of schools, not every provider.';
     wrap.appendChild(cov);
     out.appendChild(wrap);
     head.focus();
     var msg = opts.point
-      ? near.length + ' with a verified distance within ' + RADIUS_MI + ' miles; ' + rest.length + ' more listed in ' + stNames + '.'
+      ? (opts.manhattan ? manhattan.length + other.length : near.length) + ' with a verified distance within ' + RADIUS_MI + ' miles; ' + rest.length + ' more listed in ' + (opts.manhattan ? 'Manhattan' : stNames) + '.'
       : rest.length + ' listing' + (rest.length === 1 ? '' : 's') + ' in ' + stNames + '.';
     say((opts.prefix ? opts.prefix + ' ' : '') + msg);
   }
@@ -427,14 +464,14 @@
           return;
         }
         track('zip', 'ok');
-        render({point: point, place: place, states: covered, method: 'zip', title: 'Swim schools near ' + place}, token);
+        render({point: point, place: place, states: covered, manhattan: /^10[012]/.test(z) && covered.indexOf('NY') !== -1, method: 'zip', title: 'Swim schools near ' + place}, token);
         return;
       }
       var pre = zipData.prefixes[z.slice(0, 3)] || [];
       var prCovered = pre.filter(function (s) { return D[s]; });
       if (pre.length === 1 && prCovered.length === 1) {
         track('zip', 'prefix_only');
-        render({point: null, place: NAMES[pre[0]], states: prCovered, method: 'zip', title: 'Listings in ' + NAMES[pre[0]],
+        render({point: null, place: NAMES[pre[0]], states: prCovered, manhattan: /^10[012]/.test(z) && pre[0] === 'NY', method: 'zip', title: 'Listings in ' + NAMES[pre[0]],
                 prefix: 'We could not find ZIP ' + z + ' on the Census ZIP map (it may be a PO box or business ZIP), so we used its first three digits.'}, token);
         return;
       }

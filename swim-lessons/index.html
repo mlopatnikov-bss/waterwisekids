@@ -404,9 +404,33 @@
     <div class="hero-content">
       <h1>Find Swim Lessons Near You</h1>
       <p class="hero-sub">Browse our nationwide directory of swim schools, explore featured programs, and use expert guides to find the right fit for your family.</p>
-      <p class="wwk-near-entry" style="margin:1.1rem 0 0;"><a href="/swim-lessons/directory/#find-near-you" style="display:inline-flex;align-items:center;min-height:44px;padding:0 1.25rem;border-radius:999px;background:#ffffff;color:#0c4a6e;font-weight:700;text-decoration:none;">Swim schools near me &rarr;</a></p>
     </div>
   </section>
+  <!-- WWK near-me and ZIP search: proposed 2026-10-08, task WWK-REQ-fa3fd2ee; files revised 2026-10-09, task WWK-NEAR-MANHATTAN-010 -->
+  <link rel="stylesheet" href="/assets/css/wwk-near.css?v=20261011d017">
+  <section class="wwk-near" id="find-near-you" aria-labelledby="wwk-near-title">
+    <div class="wwk-near-panel">
+      <h2 id="wwk-near-title" class="wwk-near-title">Find swim schools near you</h2>
+      <div class="wwk-near-row">
+        <button type="button" id="wwk-near-me" class="wwk-near-btn" aria-describedby="wwk-near-privacy">Swim schools near me</button>
+        <span class="wwk-near-or" aria-hidden="true">or</span>
+        <form id="wwk-zip-form" class="wwk-near-zip" novalidate>
+          <label for="wwk-zip">ZIP code</label>
+          <input id="wwk-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="10" placeholder="e.g. 07731" aria-describedby="wwk-zip-error wwk-near-privacy">
+          <button type="submit" class="wwk-near-btn wwk-near-btn-alt">Search ZIP</button>
+        </form>
+      </div>
+      <p id="wwk-zip-error" class="wwk-near-error" role="alert"></p>
+      <p id="wwk-near-privacy" class="wwk-near-privacy">Your browser asks before sharing your location. We use it only on this page to find nearby listings; it is not saved or sent anywhere.</p>
+      <div id="wwk-near-choice" class="wwk-near-choice"></div>
+      <p id="wwk-near-status" class="wwk-near-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+  <script src="/swim-lessons/directory/schools-data.js?v=20261011d017"></script>
+  <script src="/assets/js/wwk-near.js?v=20261011d017" defer></script>
+  <!-- /WWK near-me and ZIP search -->
+  <section id="wwk-near-results" class="wwk-near-hub-results" aria-label="Nearby swim schools"></section>
+
 
   <main>
     <!-- ================================ -->

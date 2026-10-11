@@ -564,64 +564,8 @@
     .dir-coverage ul{list-style:disc}
     .dir-coverage ul li{margin:0 0 .45rem}
   </style>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Swim Schools in Vermont",
-  "description": "Directory of 3 swim schools listed in Vermont on WaterWiseKids.",
-  "url": "https://www.waterwisekids.com/swim-lessons/directory/vermont.html",
-  "numberOfItems": 3,
-  "itemListOrder": "https://schema.org/ItemListUnordered",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "Lake Dragon Aquatics",
-        "url": "https://lakedragonaquatics.com/",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Burlington",
-          "addressRegion": "VT",
-          "addressCountry": "US"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "Ripple Swim School",
-        "url": "https://www.rippleswimvt.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Burlington",
-          "addressRegion": "VT",
-          "addressCountry": "US"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "item": {
-        "@type": "LocalBusiness",
-        "name": "Vermont Swim School - UVM",
-        "url": "https://uvmcampusrec.com/sports/vermont-swim-school",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Burlington",
-          "addressRegion": "VT",
-          "addressCountry": "US"
-        }
-      }
-    }
-  ]
-}
-  </script>
+
+<script type="application/ld+json" id="wwk-verified-school-contacts">{"@context": "https://schema.org", "@type": "ItemList", "name": "Verified swim school contact details in VT", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "SportsActivityLocation", "name": "Lake Dragon Aquatics", "address": {"@type": "PostalAddress", "addressRegion": "VT", "addressCountry": "US"}, "telephone": "+18024959393", "url": "https://lakedragonaquatics.com/"}}, {"@type": "ListItem", "position": 2, "item": {"@type": "SportsActivityLocation", "name": "Ripple Swim School", "address": {"@type": "PostalAddress", "streetAddress": "373 Blair Park Rd Ste 100", "addressLocality": "Williston", "addressRegion": "VT", "postalCode": "05495", "addressCountry": "US"}, "url": "https://www.rippleswimvt.com"}}, {"@type": "ListItem", "position": 3, "item": {"@type": "SportsActivityLocation", "name": "Vermont Swim School - UVM", "address": {"@type": "PostalAddress", "addressRegion": "VT", "addressCountry": "US"}, "telephone": "+18026564473", "url": "https://uvmcampusrec.com/sports/vermont-swim-school"}}]}</script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -689,7 +633,7 @@
     <div class="search-box">
       <div class="search-controls">
         <input type="text" id="schoolSearch" placeholder="Search by school name..." aria-label="Search by school name">
-        <input type="text" id="citySearch" placeholder="Search by city..." aria-label="Search by city">
+        <select id="citySearch" aria-label="City"><option value="">All cities</option></select>
       </div>
       <button class="btn btn-primary" onclick="applySearch()">Search</button>
     </div>
@@ -697,22 +641,11 @@
     <!-- Schools List -->
     <p class="directory-note">Visit each school&#39;s website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>
     <div class="school-count" id="schoolCount">3 swim schools found in Vermont</div>
-    <div class="schools-list" id="schoolsList"><div class="school-card"><div class="school-header"><div><h3 class="school-name">Lake Dragon Aquatics</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://lakedragonaquatics.com/" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Lake Dragon Aquatics website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Ripple Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Infants</span><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://www.rippleswimvt.com" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Ripple Swim School website (opens in a new tab)">Visit Website &rarr;</a></div></div><div class="school-card"><div class="school-header"><div><h3 class="school-name">Vermont Swim School - UVM</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">Toddlers</span><span class="program-badge">Preschool</span><span class="program-badge">School-age</span></div><div class="school-contact"><a href="https://uvmcampusrec.com/sports/vermont-swim-school" target="_blank" rel="noopener" class="visit-site-btn" aria-label="Visit the Vermont Swim School - UVM website (opens in a new tab)">Visit Website &rarr;</a></div></div></div>
-    <noscript>
-
-      <div style="padding: 2rem; background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; margin: 1rem 0;">
-
-        <p style="margin: 0; color: #92400e; font-size: 0.95rem;"><strong>Note:</strong> Search, filtering, and parent reviews require JavaScript. All 3 Vermont swim school listings are shown above.</p>
-
-      </div>
-
-      <div style="padding: 1rem; background: #f3f4f6; border-radius: 8px;">
-
-        <p style="margin: 0; color: #374151; font-size: 0.9rem;"><strong>Vermont Swim Schools</strong><br>
-
-        Discover quality swim lessons in Vermont. Our directory contains verified swim schools offering lessons for all ages and skill levels. Browse the verified schools we list below, then visit each school&#39;s website for enrollment details.</p>
-
-      </div>
+    <div class="schools-list" id="schoolsList">
+<div class="school-card" id="school-lake-dragon-aquatics-vt"><div class="school-header"><div><h3 class="school-name">Lake Dragon Aquatics</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div>Street address awaiting verification — see school website.</div><div><strong>Phone:</strong> <a href="tel:+18024959393">(802) 495-9393</a></div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://lakedragonaquatics.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+<div class="school-card" id="school-ripple-swim-school-vt"><div class="school-header"><div><h3 class="school-name">Ripple Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div><strong>Address:</strong> 373 Blair Park Rd Ste 100, Williston, VT 05495</div><div>Phone awaiting verification — see school website.</div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.rippleswimvt.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+<div class="school-card" id="school-vermont-swim-school-uvm-vt"><div class="school-header"><div><h3 class="school-name">Vermont Swim School - UVM</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div>Street address awaiting verification — see school website.</div><div><strong>Phone:</strong> <a href="tel:+18026564473">(802) 656-4473</a></div><div><strong>Type:</strong> Indoor &bull; Year-round</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://uvmcampusrec.com/sports/vermont-swim-school" target="_blank" rel="noopener" class="visit-site-btn">Visit Website &rarr;</a></div></div>
+</div>
 
     </noscript>
 
@@ -837,7 +770,7 @@
     </div>
   </footer>
 
-  <script src="schools-data.js?v=20260913a"></script>
+  <script src="schools-data.js?v=20261011d017"></script>
   <script>
     const STATE_CODE = "VT";
     const STATE_NAME = "Vermont";
@@ -847,6 +780,9 @@
 
     // Initialize page
     function init() {
+      var cities = Array.from(new Set((SWIM_SCHOOLS_DATA[STATE_CODE] || []).map(function(s) { return s.city; }))).sort();
+      document.getElementById('citySearch').innerHTML = '<option value="">All cities</option>' + cities.map(function(c) { return '<option value="' + safeAttr(c) + '">' + safeAttr(c) + '</option>'; }).join('');
+      document.getElementById('citySearch').addEventListener('change', applySearch);
       renderStateSchools();
       setupStarRating();
       setupEnterKey();
@@ -893,7 +829,7 @@
       const schools = SWIM_SCHOOLS_DATA[STATE_CODE] || [];
       const filtered = schools.filter(school => {
         if (schoolName && !school.name.toLowerCase().includes(schoolName)) return false;
-        if (city && !school.city.toLowerCase().includes(city)) return false;
+        if (city && school.city.toLowerCase() !== city) return false;
         return true;
       }).map(s => ({ ...s, id: `${s.name}-${s.state}` }));
 
@@ -921,6 +857,17 @@
       return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;')
                       .replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
+
+    function schoolContactHTML(school) {
+      var result = school.openingSoon ? '<div class="wwk-opening-soon">Opening soon</div>' : '';
+      if (school.address) result += '<div><strong>Address:</strong> ' + safeAttr(school.address) + '</div>';
+      else if (school.poolAddresses && school.poolAddresses.length) result += '<details><summary>Verified pool addresses (' + school.poolAddresses.length + ')</summary><ul>' + school.poolAddresses.map(function(p) { return '<li><strong>' + safeAttr(p.venue || 'Pool') + ':</strong> ' + safeAttr(p.address) + '</li>'; }).join('') + '</ul></details>';
+      else result += '<div>Street address awaiting verification — see school website.</div>';
+      if (school.phone) result += '<div><strong>Phone:</strong> <a href="tel:' + safeAttr(school.phone) + '">' + safeAttr(formatPhone(school.phone)) + '</a></div>';
+      else if (!school.openingSoon) result += '<div>Phone awaiting verification — see school website.</div>';
+      return result;
+    }
+    function formatPhone(p) { return /^\+1\d{10}$/.test(p) ? '(' + p.slice(2,5) + ') ' + p.slice(5,8) + '-' + p.slice(8) : p; }
 
     function renderSchoolCard(school) {
       const programLabels = {
@@ -977,6 +924,7 @@
 
           <div class="school-info">
             <div><strong>City:</strong> ${school.city}, ${school.state}</div>
+            ${schoolContactHTML(school)}
             <div><strong>Type:</strong> ${school.indoor ? 'Indoor' : 'Outdoor'}${school.yearRound ? ' • Year-round' : ''}</div>
           </div>
 
@@ -1073,7 +1021,10 @@
     function apply() {
       var f = document.getElementById('citySearch');
       if (!f) return;
-      f.value = c;
+      if (c.toLowerCase() === 'new york') c = 'Manhattan';
+      var match = Array.from(f.options).find(function(o) { return o.value.toLowerCase() === c.toLowerCase(); });
+      if (!match) return;
+      f.value = match.value;
       if (typeof applySearch === 'function') applySearch();
     }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply);
