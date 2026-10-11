@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A parent seated on a dry pool deck bench holding a toddler by the hand while an older child waits beside them, with a swimmer in the pool beyond">
+  <defs>
+    <linearGradient id="sd-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="sd-pool" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#sd-bg)"/>
+  <rect x="0" y="190" width="600" height="170" fill="url(#sd-pool)"/>
+  <path d="M0 215 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#e0f2fe" stroke-width="3" opacity="0.7"/>
+  <rect x="0" y="262" width="600" height="98" fill="#f1f5f9"/>
+  <rect x="0" y="258" width="600" height="8" fill="#cbd5e1"/>
+  <rect x="60" y="212" width="190" height="14" rx="6" fill="#0369a1"/>
+  <rect x="70" y="226" width="10" height="36" fill="#0c4a6e"/><rect x="230" y="226" width="10" height="36" fill="#0c4a6e"/>
+  <circle cx="130" cy="160" r="22" fill="#fcd9b6"/><rect x="108" y="182" width="44" height="34" rx="12" fill="#0ea5e9"/>
+  <circle cx="190" cy="184" r="15" fill="#fcd9b6"/><rect x="176" y="200" width="28" height="22" rx="9" fill="#f59e0b"/>
+  <path d="M152 200 L176 206" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="290" cy="170" r="17" fill="#fcd9b6"/><rect x="274" y="188" width="32" height="40" rx="10" fill="#16a34a"/>
+  <rect x="270" y="226" width="12" height="36" rx="4" fill="#0c4a6e"/><rect x="298" y="226" width="12" height="36" rx="4" fill="#0c4a6e"/>
+  <circle cx="470" cy="238" r="16" fill="#fcd9b6"/><path d="M440 262 q30 -22 60 0" fill="#ef4444"/><path d="M486 232 l34 -12" stroke="#fcd9b6" stroke-width="7" stroke-linecap="round"/>
+  <rect x="330" y="40" width="240" height="96" rx="12" fill="#ffffff" stroke="#0369a1" stroke-width="3"/>
+  <text x="450" y="76" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#0c4a6e">WHO WATCHES WHOM?</text>
+  <text x="450" y="104" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#1f2937">Name it. Seat it. Say it.</text>
+  <path d="M376 118 l6 6 l12 -14" fill="none" stroke="#16a34a" stroke-width="4"/>
+</svg>
