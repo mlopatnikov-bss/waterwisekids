@@ -1,0 +1,222 @@
+/* ════════════════════════════════════════════════════════════════════════════
+   WaterWiseKids mobile v4 — WWK-MOBILE-FULL-019 (r1)
+   Requested by /assets/js/main.js at <=768px (on load, or when a wider session narrows).
+   Every layout rule is inside @media (max-width:768px) AND scoped to html.wwk-v4. That class
+   is added only by wwk-v4.js, and only after this stylesheet has applied and the v4
+   navigation is built; until then (or if a file fails) the existing navigation stays.
+   No HTML file changes: v4 chrome and task blocks are added by /assets/js/wwk-v4.js; page
+   text, links, JSON-LD, data-cta hooks, school contacts and the near-me panel stay as served.
+   While active on phones it hides (never deletes) the injected search pill, the sticky
+   category-icon bar (it sat at top:48px under the 72px sticky header, half-clipping the
+   icons while scrolling), the stats chips and the 5-link injected bottom bar; replaced by
+   a non-sticky topic row, a 56px app bar, a tab bar and a modal More sheet.
+   html.wwk-v4.v4-full (set only when v4 activates before the first contentful paint) also enables
+   the content restyles (home task cards, stats chips hidden, article prose, related rows, school
+   cards). When v4 arrives after the page has painted, those wait for the next page view so content
+   on screen never jumps; the chrome and the retirement of the clipped category bar still apply.
+   ════════════════════════════════════════════════════════════════════════════ */
+/* Load probe read by wwk-v4.js: the layer activates only once this rule has applied. */
+:root { --wwk-v4-css: 1; }
+
+/* Anything v4 built stays out of the page whenever the layer is not active. */
+html:not(.wwk-v4) .v4-tabbar, html:not(.wwk-v4) .v4-appbar-search, html:not(.wwk-v4) .v4-block,
+html:not(.wwk-v4) .v4-home-states, html:not(.wwk-v4) .v4-toc, html:not(.wwk-v4) .v4-lessons-card,
+html:not(.wwk-v4) dialog.v4-sheet { display: none !important; }
+
+@media (max-width: 768px) {
+  html.wwk-v4 {
+    --v4-brand-900: #0c4a6e; --v4-brand-700: #0369a1; --v4-brand-600: #0284c7; --v4-brand-100: #dbeffe; --v4-brand-50: #eff8ff;
+    --v4-teal-700: #0f766e; --v4-ink: #111827; --v4-text: #1f2937; --v4-muted: #4b5563; --v4-line: #e5e7eb; --v4-surface-2: #f6f8fa;
+    --v4-tap: 44px; --v4-r: 12px; --v4-r-pill: 999px;
+    --v4-appbar-h: 56px; --v4-tabbar-h: 60px;
+    --v4-safe-b: env(safe-area-inset-bottom, 0px);
+    --v4-header-h: 56px;  /* measured by wwk-v4.js */
+    scroll-padding-top: calc(var(--v4-header-h) + 8px);
+    scroll-padding-bottom: calc(var(--v4-tabbar-real, calc(var(--v4-tabbar-h) + var(--v4-safe-b))) + 8px);   /* A8: focus never lands under the tab bar */
+  }
+
+  /* ── retired injected elements: hidden only while v4 is active, so they return on fallback.
+     The category-icon bar is never sticky under v4 (it was clipped under the header); with the full
+     design it and the search pill are hidden. When v4 arrived after paint they stay in place,
+     un-stuck, until the next page view, so removing them does not jump the page. */
+  html.wwk-v4 .mobile-category-bar { position: static !important; top: auto !important; }
+  html.wwk-v4 .mobile-bottom-nav,
+  html.wwk-v4.v4-full .mobile-category-bar,
+  html.wwk-v4.v4-full .mobile-app-search-header,
+  html.wwk-v4.v4-full .stats-bar { display: none !important; }
+
+  /* ── App bar: same <header>, 56px, logo + search + menu ───────────────────────── */
+  html.wwk-v4 header > .container > nav,
+  html.wwk-v4 header > nav { height: var(--v4-appbar-h) !important; min-height: var(--v4-appbar-h) !important; gap: 4px !important; }
+  html.wwk-v4 header .nav-logo { font-size: 1.0625rem !important; font-weight: 700 !important; margin-right: auto !important; }
+  html.wwk-v4 .v4-appbar-search {
+    display: inline-flex; align-items: center; justify-content: center; width: var(--v4-tap); height: var(--v4-tap); flex: none;
+    border: 0; background: transparent; color: var(--v4-ink); border-radius: var(--v4-r-pill); padding: 0; cursor: pointer;
+  }
+  html.wwk-v4 .v4-appbar-search:focus-visible,
+  html.wwk-v4 .hamburger:focus-visible { outline: 3px solid var(--v4-brand-700); outline-offset: 2px; }
+  /* the old dropdown never opens under v4: the hamburger opens the More sheet instead */
+  html.wwk-v4 nav.mobile-open .nav-links { display: none !important; }
+
+  /* ── Tab bar ─────────────────────────────────────────────────────────────────── */
+  html.wwk-v4 body { padding-bottom: var(--v4-tabbar-real, calc(var(--v4-tabbar-h) + var(--v4-safe-b))) !important; }   /* measured by wwk-v4.js */
+  html.wwk-v4 .v4-tabbar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 210;
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    min-height: var(--v4-tabbar-h); padding: 0 0 var(--v4-safe-b); margin: 0;
+    background: rgba(255,255,255,.98); border-top: 1px solid var(--v4-line);
+    -webkit-backdrop-filter: saturate(1.4) blur(12px); backdrop-filter: saturate(1.4) blur(12px);
+  }
+  html.wwk-v4 .v4-tabbar a, html.wwk-v4 .v4-tabbar button {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    min-height: var(--v4-tabbar-h); padding: 6px 2px; margin: 0; border: 0; border-radius: 0; background: transparent; cursor: pointer;
+    font-family: inherit; font-size: 12px; font-weight: 600; line-height: 1.2; letter-spacing: 0;
+    color: var(--v4-muted) !important; text-decoration: none !important; white-space: nowrap;
+  }
+  html.wwk-v4 .v4-tabbar svg { width: 24px; height: 24px; flex: none; }
+  html.wwk-v4 .v4-tabbar [aria-current="page"] { color: var(--v4-brand-700) !important; }
+  html.wwk-v4 .v4-tabbar [aria-current="page"] span { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+  html.wwk-v4 .v4-tabbar a:focus-visible, html.wwk-v4 .v4-tabbar button:focus-visible { outline: 3px solid var(--v4-brand-700); outline-offset: -3px; }
+  html.wwk-v4 .v4-tabbar .lbl-short { display: none; }
+  @media (max-width: 374px) { html.wwk-v4 .v4-tabbar .lbl-long { display: none; } html.wwk-v4 .v4-tabbar .lbl-short { display: inline; } }
+  @media (max-height: 480px) and (orientation: landscape) {
+    html.wwk-v4 .v4-tabbar { display: none; }
+    html.wwk-v4 body { padding-bottom: 0 !important; }
+    html.wwk-v4 { scroll-padding-bottom: 0; }
+  }
+
+  /* ── Sheets (native <dialog>) ────────────────────────────────────────────────── */
+  html.wwk-v4 dialog.v4-sheet {
+    position: fixed; inset: auto 0 0 0; width: 100%; max-width: 100%; max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); margin: 0;
+    padding: 0 0 var(--v4-safe-b); border: 0; border-radius: 16px 16px 0 0; background: #fff; color: var(--v4-text);
+    box-shadow: 0 -8px 24px rgba(17,24,39,.18); overflow: auto; overscroll-behavior: contain; box-sizing: border-box;
+  }
+  html.wwk-v4 dialog.v4-sheet::backdrop { background: rgba(17,24,39,.45); }
+  html.wwk-v4 .v4-sheet-head { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between;
+    padding: 8px 8px 8px 20px; background: #fff; border-bottom: 1px solid var(--v4-line); }
+  html.wwk-v4 .v4-sheet-head h2 { margin: 0 !important; font-size: 1.125rem !important; line-height: 1.3 !important; color: var(--v4-ink) !important; }
+  html.wwk-v4 .v4-icon-btn { display: inline-flex; align-items: center; justify-content: center; width: var(--v4-tap); height: var(--v4-tap);
+    border: 0; border-radius: var(--v4-r-pill); background: transparent; color: var(--v4-ink); cursor: pointer; padding: 0; }
+  html.wwk-v4 .v4-icon-btn:focus-visible { outline: 3px solid var(--v4-brand-700); outline-offset: 2px; }
+  html.wwk-v4 .v4-sheet-body { padding: 8px 20px 24px; }
+  html.wwk-v4 .v4-group h3 { margin: 16px 0 4px !important; font-size: .8125rem !important; letter-spacing: .04em; text-transform: uppercase; color: var(--v4-muted) !important; }
+  html.wwk-v4 .v4-rows { list-style: none !important; margin: 0 !important; padding: 0 !important; }
+  html.wwk-v4 .v4-rows li { margin: 0 !important; padding: 0 !important; border-bottom: 1px solid var(--v4-line); list-style: none !important; }
+  html.wwk-v4 .v4-rows li::before { content: none !important; }
+  html.wwk-v4 .v4-rows li:last-child { border-bottom: 0; }
+  html.wwk-v4 .v4-rows a { display: flex; align-items: center; min-height: 52px; padding: 8px 0; color: var(--v4-ink) !important;
+    font-size: 1rem; font-weight: 600; text-decoration: none !important; }
+  html.wwk-v4 .v4-rows a small { display: block; font-weight: 400; color: var(--v4-muted); font-size: .8125rem; margin-top: 2px; }
+  html.wwk-v4 .v4-rows a:focus-visible { outline: 3px solid var(--v4-brand-700); outline-offset: 2px; }
+  html.wwk-v4 .v4-follow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+
+  /* ── Shared task components ──────────────────────────────────────────────────── */
+  html.wwk-v4 .v4-block, html.wwk-v4 section.v4-block { margin: 20px 20px 0 !important; padding: 0 !important; text-align: left; background: transparent !important; border: 0 !important; min-height: 0 !important; }
+  html.wwk-v4 .v4-block h2, html.wwk-v4 .v4-card h2 { font-size: 1.25rem !important; line-height: 1.25 !important; margin: 0 0 10px !important; color: var(--v4-ink) !important; text-align: left !important; }
+  html.wwk-v4 .v4-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  html.wwk-v4 .v4-head a { font-size: .9375rem; font-weight: 600; color: var(--v4-brand-700) !important; min-height: var(--v4-tap); display: inline-flex; align-items: center; }
+  html.wwk-v4 .v4-search {
+    display: flex; align-items: center; gap: 10px; width: 100%; min-height: 52px; padding: 0 16px; margin: 0; box-sizing: border-box;
+    border: 1px solid #9ca3af; border-radius: var(--v4-r); background: #fff; color: var(--v4-muted);
+    font-family: inherit; font-size: 1rem; font-weight: 400; line-height: 1.3; text-align: left; cursor: pointer; box-shadow: 0 1px 2px rgba(17,24,39,.06);
+    justify-content: flex-start !important;
+  }
+  html.wwk-v4 .v4-search svg { flex: none; width: 22px; height: 22px; color: var(--v4-ink); }
+  html.wwk-v4 .v4-search:focus-visible, html.wwk-v4 .v4-search:focus-within { outline: 3px solid var(--v4-brand-700); outline-offset: 2px; }
+  html.wwk-v4 .v4-chips { display: flex !important; gap: 8px; overflow-x: auto; scroll-snap-type: x proximity; scroll-padding-left: 20px; padding: 2px 20px 6px !important; margin: 0 -20px !important;
+    list-style: none; scrollbar-width: none; position: static !important; }   /* never sticky: the old sticky icon bar was clipped under the header */
+  html.wwk-v4 .v4-chips::-webkit-scrollbar { display: none; }
+  html.wwk-v4 .v4-chip { flex: none; scroll-snap-align: start; display: inline-flex; align-items: center; gap: 6px; min-height: var(--v4-tap);
+    padding: 0 16px; margin: 0; border: 1px solid #d1d5db; border-radius: var(--v4-r-pill); background: #fff; color: var(--v4-ink) !important;
+    font-family: inherit; font-size: .9375rem; font-weight: 600; line-height: 1; text-decoration: none !important; cursor: pointer; white-space: nowrap; }
+  html.wwk-v4 .v4-chip:focus-visible { outline: 3px solid var(--v4-brand-700); outline-offset: 2px; }
+  html.wwk-v4 .v4-guide-rows { list-style: none !important; margin: 0 !important; padding: 0 !important; border-top: 1px solid var(--v4-line); }
+  html.wwk-v4 .v4-guide-rows li { margin: 0 !important; padding: 0 !important; border-bottom: 1px solid var(--v4-line); list-style: none !important; }
+  html.wwk-v4 .v4-guide-rows li::before { content: none !important; }
+  html.wwk-v4 .v4-guide-rows a { display: grid !important; grid-template-columns: 1fr 20px; align-items: center; gap: 12px; min-height: 72px; padding: 10px 0 !important;
+    color: var(--v4-ink) !important; text-decoration: none !important; }
+  html.wwk-v4 .v4-guide-rows a::after { content: ""; width: 9px; height: 9px; border-right: 2px solid #9ca3af; border-top: 2px solid #9ca3af; transform: rotate(45deg); justify-self: center; }
+  html.wwk-v4 .v4-guide-rows .cat { display: block; font-size: .8125rem; font-weight: 600; color: var(--v4-teal-700); margin-bottom: 2px; }
+  html.wwk-v4 .v4-guide-rows strong { display: block; font-size: 1rem; line-height: 1.35; font-weight: 600; }
+  html.wwk-v4 .v4-card { border: 1px solid var(--v4-line); border-radius: 16px; padding: 16px; background: #fff; text-align: left; }
+  html.wwk-v4 .v4-card.tint { background: var(--v4-brand-50); border-color: var(--v4-brand-100); }
+  html.wwk-v4 .v4-field label { display: block; font-size: .9375rem; font-weight: 600; color: var(--v4-ink); margin: 0 0 6px; }
+  html.wwk-v4 .v4-select { display: block; width: 100%; min-height: 48px; box-sizing: border-box; padding: 0 12px; margin: 0;
+    font-family: inherit; font-size: 1rem; color: var(--v4-ink); background-color: #fff; border: 1px solid #9ca3af; border-radius: var(--v4-r); }
+  html.wwk-v4 .v4-select:focus-visible { outline: 3px solid var(--v4-brand-700); outline-offset: 2px; }
+  html.wwk-v4 .v4-btn { display: flex !important; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; margin: 12px 0 0;
+    padding: 0 16px; box-sizing: border-box; border-radius: var(--v4-r); font-family: inherit; font-size: 1rem; font-weight: 700; line-height: 1.2;
+    text-decoration: none !important; cursor: pointer; }
+  html.wwk-v4 .v4-btn.primary { background: var(--v4-brand-700) !important; color: #fff !important; border: 1px solid var(--v4-brand-700); }
+  html.wwk-v4 .v4-btn.secondary { background: #fff !important; color: var(--v4-brand-700) !important; border: 1px solid var(--v4-brand-700); }
+  html.wwk-v4 .v4-btn:focus-visible { outline: 3px solid var(--v4-brand-900); outline-offset: 2px; }
+  html.wwk-v4 .v4-muted { color: var(--v4-muted) !important; font-size: .9375rem !important; line-height: 1.45 !important; margin: 0 0 4px !important; }
+  html.wwk-v4 .v4-visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* ── Home ────────────────────────────────────────────────────────────────────── */
+  html.wwk-v4.v4-full body.v4-home .hero { padding-bottom: 8px !important; }
+  html.wwk-v4.v4-full body.v4-home .hero-ctas { display: grid !important; grid-template-columns: 1fr 1fr; gap: 10px !important; margin-top: 16px !important; }
+  html.wwk-v4.v4-full body.v4-home .hero-ctas .btn {
+    display: flex !important; flex-direction: column; align-items: flex-start !important; justify-content: flex-end; gap: 4px;
+    min-height: 96px; padding: 14px !important; border-radius: 16px !important; text-align: left !important; white-space: normal !important;
+    font-size: 1rem !important; line-height: 1.25 !important; width: auto !important; max-width: none !important; margin: 0 !important; box-sizing: border-box;
+  }
+  html.wwk-v4.v4-full body.v4-home .hero-ctas .btn::before { content: ""; width: 28px; height: 28px; margin-bottom: auto; background: currentColor;
+    -webkit-mask: var(--v4-ico) center/contain no-repeat; mask: var(--v4-ico) center/contain no-repeat; }
+  html.wwk-v4.v4-full body.v4-home .hero-ctas [data-cta="home-safety-guides"] { --v4-ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5C17 4.5 14 5 12 6.5Z'/%3E%3Cpath d='M12 6.5v13'/%3E%3C/svg%3E"); }
+  html.wwk-v4.v4-full body.v4-home .hero-ctas [data-cta="home-find-lessons"] { --v4-ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11Z'/%3E%3Ccircle cx='12' cy='10' r='2.4'/%3E%3C/svg%3E"); }
+  /* the 50-link state grid is replaced on phones by the state picker (its links stay in the HTML) */
+  html.wwk-v4 body.v4-home .state-grid { display: none !important; }
+  html.wwk-v4 .v4-home-states { margin: 0 0 16px; }
+
+  /* ── Articles: readable prose, contents disclosure, Find Lessons card ───────── */
+  html.wwk-v4.v4-full main.article .article-body,
+  html.wwk-v4.v4-full main.article .article-body p,
+  html.wwk-v4.v4-full main.article .article-body li { font-size: 1.0625rem !important; line-height: 1.65 !important; }
+  html.wwk-v4.v4-full main.article .article-body h2 { font-size: 1.375rem !important; line-height: 1.25 !important; margin-top: 32px !important; }
+  html.wwk-v4.v4-full main.article .article-body h3 { font-size: 1.125rem !important; line-height: 1.3 !important; }
+  html.wwk-v4.v4-full main.article .article-excerpt { font-size: 1.0625rem !important; line-height: 1.55 !important; }
+  html.wwk-v4 .v4-toc { margin: 16px 0 8px; border: 1px solid var(--v4-line); border-radius: var(--v4-r); background: #fff; }
+  html.wwk-v4 .v4-toc summary { display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 16px; cursor: pointer;
+    font-weight: 700; font-size: 1rem; color: var(--v4-ink); list-style: none; }
+  html.wwk-v4 .v4-toc summary::-webkit-details-marker { display: none; }
+  html.wwk-v4 .v4-toc summary::after { content: ""; width: 9px; height: 9px; border-right: 2px solid #6b7280; border-bottom: 2px solid #6b7280; transform: rotate(45deg); margin-top: -4px; }
+  html.wwk-v4 .v4-toc[open] summary::after { transform: rotate(-135deg); margin-top: 4px; }
+  html.wwk-v4 .v4-toc summary:focus-visible { outline: 3px solid var(--v4-brand-700); outline-offset: 2px; border-radius: var(--v4-r); }
+  html.wwk-v4 .v4-toc ol { margin: 0 !important; padding: 0 16px 8px 36px !important; }
+  html.wwk-v4 .v4-toc li { margin: 0 !important; padding: 0 !important; font-size: 1rem !important; line-height: 1.35 !important; }
+  html.wwk-v4 .v4-toc a { display: block; padding: 10px 0; color: var(--v4-brand-700) !important; }
+  html.wwk-v4 .v4-lessons-card { margin: 28px 0 8px; }
+  html.wwk-v4 .v4-lessons-card h2 { margin-top: 0 !important; font-size: 1.125rem !important; }
+  html.wwk-v4.v4-full .related-grid { display: block !important; }
+  html.wwk-v4.v4-full .related-card { display: block !important; margin: 0 !important; padding: 14px 0 !important; border: 0 !important; border-bottom: 1px solid var(--v4-line) !important;
+    border-radius: 0 !important; box-shadow: none !important; background: transparent !important; min-height: 44px; }
+  html.wwk-v4.v4-full .related-card-title { font-size: 1rem !important; line-height: 1.35 !important; }
+
+  /* ── Find Lessons hub / directory / state pages (contact text is never hidden or clamped) */
+  html.wwk-v4.v4-full .school-card { border-radius: 16px !important; padding: 16px !important; }
+  html.wwk-v4.v4-full .school-card .school-name { font-size: 1.0625rem !important; line-height: 1.3 !important; overflow-wrap: anywhere; }
+  html.wwk-v4.v4-full .school-card .school-info,
+  html.wwk-v4.v4-full .school-card .school-info div { font-size: .9375rem !important; line-height: 1.45 !important; overflow-wrap: anywhere; white-space: normal !important; }
+  html.wwk-v4.v4-full .school-card a[href^="tel:"] { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+  html.wwk-v4.v4-full .school-card .visit-site-btn { display: flex !important; align-items: center; justify-content: center; min-height: 48px; width: 100%; box-sizing: border-box; }
+  html.wwk-v4.v4-full #schoolSearch, html.wwk-v4.v4-full #citySearch { min-height: 48px; font-size: 1rem !important; box-sizing: border-box; }
+}
+
+/* Wider than 768px: everything v4 added stays out of the desktop layout, active or not. */
+@media (min-width: 769px) {
+  .v4-tabbar, .v4-appbar-search, .v4-block, .v4-home-states,
+  .v4-toc, .v4-lessons-card, dialog.v4-sheet { display: none !important; }
+}
+
+/* Static full design: desktop keeps the original presentation. */
+@media(min-width:769px){html[data-v4-static] .v4-tabbar,html[data-v4-static] .v4-appbar-search,html[data-v4-static] .v4-block,html[data-v4-static] .v4-home-states,html[data-v4-static] .v4-toc,html[data-v4-static] .v4-lessons-card,html[data-v4-static] dialog.v4-sheet{display:none!important}}
+@media(max-width:768px){html[data-v4-static] .v4-tabbar a,html[data-v4-static] .v4-appbar-search{ text-decoration:none;} html[data-v4-static] .v4-program-filters{display:flex;overflow:auto;gap:8px;padding-top:8px}html[data-v4-static] .v4-program-filters [aria-pressed="true"]{background:#0369a1;color:white}html[data-v4-static] .v4-editorial-mobile{margin:1rem 0;} html[data-v4-static] .directory-search{position:sticky;top:calc(var(--v4-header-h) + 4px);z-index:100;background:#fff;padding:12px;border-radius:12px;} }
+@media(max-width:768px){html[data-v4-static] body[data-v4-task-order]{display:block}body[data-v4-task-order]>*{min-width:0;max-width:100%;box-sizing:border-box}body[data-v4-task-order]>header{order:0}body[data-v4-task-order]>.page-breadcrumb{order:1}body[data-v4-task-order]>.page-hero{order:2}body[data-v4-task-order]>#find-near-you{order:3}body[data-v4-task-order]>.v4-lessons-tasks{order:4}body[data-v4-task-order]>section{order:5}body[data-v4-task-order]>[data-v4-editorial]{order:6}body[data-v4-task-order]>footer{order:8}}@media(min-width:769px){[data-v4-disclosure]>summary{display:none}}@media(max-width:768px){[data-v4-guide-order]{display:flex;flex-direction:column}[data-v4-guide-order]>*{min-width:0}[data-v4-guide-order]>.hub-filter-bar{order:0}[data-v4-guide-order]>.articles-section{order:1}[data-v4-guide-order]>.hub-intro{order:2}[data-v4-disclosure]>summary{font-weight:700;padding:16px 0;cursor:pointer}}
+@media(min-width:769px){body[data-v4-task-order],[data-v4-guide-order]{display:flex;flex-direction:column}body[data-v4-task-order]>*,[data-v4-guide-order]>*{order:var(--v4-original-order,0)}body[data-v4-task-order]>section,[data-v4-guide-order]>section{width:100%;box-sizing:border-box}body[data-v4-task-order]>header,body[data-v4-task-order]>.page-breadcrumb,body[data-v4-task-order]>footer{width:100%}}
+
+@media(max-width:768px){html.wwk-v4 .v4-tabbar{box-sizing:border-box}html[data-v4-static] .directory-search{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 48px;gap:6px;padding:4px!important;box-sizing:border-box}html[data-v4-static] .directory-search .search-controls{display:contents}html[data-v4-static] .directory-search #schoolSearch,html[data-v4-static] .directory-search #citySearch{min-height:44px;height:44px;width:100%;padding:4px!important}html[data-v4-static] .directory-search>.btn{height:44px;min-height:44px;padding:0!important;margin:0;font-size:14px}.v4-program-filters{margin:0 0 16px}}
+
+@media(max-width:768px){html[data-v4-static] body[data-v4-task-order]>section.v4-block{width:calc(100% - 40px)!important}}
+
+@media(max-width:768px){body[data-v4-task-order]>section{width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;margin-left:0!important;margin-right:0!important}.v4-program-filters{max-width:100%;min-width:0;overflow-x:auto}}
