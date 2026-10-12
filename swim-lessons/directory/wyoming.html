@@ -576,8 +576,8 @@
     <p class="directory-note">Visit each school's website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>
     <div class="school-count" id="schoolCount">2 swim schools found in Wyoming</div>
     <div class="schools-list" id="schoolsList">
-<div class="school-card" id="school-casc-swim-lessons-wy"><div class="school-header"><div><h3 class="school-name">CASC Swim Lessons</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Casper, WY</div><div>Street address awaiting verification — see school website.</div><div>Phone awaiting verification — see school website.</div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.cascswimlessons.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
-<div class="school-card" id="school-casper-ymca-swim-lessons-wy"><div class="school-header"><div><h3 class="school-name">Casper YMCA Swim Lessons</h3><span class="school-chain">YMCA</span></div></div><div class="school-info"><div><strong>City:</strong> Casper, WY</div><div><strong>Address:</strong> 1611 Casper Mountain Road, Casper, WY 82601</div><div><strong>Phone:</strong> <a href="tel:+13072349187">(307) 234-9187</a></div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://casperymca.org/aquatics/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-casc-swim-lessons-wy" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">CASC Swim Lessons</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Casper, WY</div><div>Street address awaiting verification — see school website.</div><div>Phone awaiting verification — see school website.</div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.cascswimlessons.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-casper-ymca-swim-lessons-wy" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Casper YMCA Swim Lessons</h3><span class="school-chain">YMCA</span></div></div><div class="school-info"><div><strong>City:</strong> Casper, WY</div><div><strong>Address:</strong> 1611 Casper Mountain Road, Casper, WY 82601</div><div><strong>Phone:</strong> <a href="tel:+13072349187">(307) 234-9187</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://casperymca.org/aquatics/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
 </div>
 
     
@@ -690,6 +690,7 @@
   </footer>
 
   <script src="schools-data.js?v=20261011d017"></script>
+  <script src="/assets/js/wwk-lesson-attrs.js?v=20261012a1"></script>
   <script>
     const STATE_CODE = "WY";
     const STATE_NAME = "Wyoming";
@@ -832,7 +833,7 @@
       }
 
       return `
-        <div class="school-card">
+        <div class="school-card"${window.wwkLessonAttrData ? window.wwkLessonAttrData(school) : ''}>
           <div class="school-header">
             <div>
               <h3 class="school-name">${school.name}</h3>
@@ -844,7 +845,7 @@
           <div class="school-info">
             <div><strong>City:</strong> ${school.city}, ${school.state}</div>
             ${schoolContactHTML(school)}
-            <div><strong>Type:</strong> ${school.indoor ? 'Indoor' : 'Outdoor'}${school.yearRound ? ' • Year-round' : ''}</div>
+            ${window.wwkLessonAttrLine ? window.wwkLessonAttrLine(school) : ''}
           </div>
 
           <div class="school-programs">

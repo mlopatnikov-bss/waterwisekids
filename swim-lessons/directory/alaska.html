@@ -576,9 +576,9 @@
     <p class="directory-note">Visit each school's website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>
     <div class="school-count" id="schoolCount">3 swim schools found in Alaska</div>
     <div class="schools-list" id="schoolsList">
-<div class="school-card" id="school-ymca-alaska-anchorage-ak"><div class="school-header"><div><h3 class="school-name">YMCA Alaska - Anchorage</h3><span class="school-chain">YMCA</span></div></div><div class="school-info"><div><strong>City:</strong> Anchorage, AK</div><div><strong>Address:</strong> 5353 Lake Otis Pkwy, Anchorage, AK 99507</div><div><strong>Phone:</strong> <a href="tel:+19075633211">(907) 563-3211</a></div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://ymcaalaska.org/programs/aquatics/swim-lessons/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
-<div class="school-card" id="school-the-alaska-club-starfish-academy-ak"><div class="school-header"><div><h3 class="school-name">The Alaska Club Starfish Academy</h3><span class="school-chain">The Alaska Club</span></div></div><div class="school-info"><div><strong>City:</strong> Anchorage, AK</div><div>Street address awaiting verification — see school website.</div><div><strong>Phone:</strong> <a href="tel:+19073657393">(907) 365-7393</a></div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.thealaskaclub.com/youth-and-family/starfish-academy-swim-lessons" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
-<div class="school-card" id="school-aquatic-foundation-of-alaska-ak"><div class="school-header"><div><h3 class="school-name">Aquatic Foundation of Alaska</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Anchorage, AK</div><div><strong>Address:</strong> 2801 Spirit Way Drive, Anchorage, AK 99508</div><div>Phone awaiting verification — see school website.</div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.swimyetiswim.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-ymca-alaska-anchorage-ak" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">YMCA Alaska - Anchorage</h3><span class="school-chain">YMCA</span></div></div><div class="school-info"><div><strong>City:</strong> Anchorage, AK</div><div><strong>Address:</strong> 5353 Lake Otis Pkwy, Anchorage, AK 99507</div><div><strong>Phone:</strong> <a href="tel:+19075633211">(907) 563-3211</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://ymcaalaska.org/programs/aquatics/swim-lessons/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-the-alaska-club-starfish-academy-ak" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">The Alaska Club Starfish Academy</h3><span class="school-chain">The Alaska Club</span></div></div><div class="school-info"><div><strong>City:</strong> Anchorage, AK</div><div>Street address awaiting verification — see school website.</div><div><strong>Phone:</strong> <a href="tel:+19073657393">(907) 365-7393</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.thealaskaclub.com/youth-and-family/starfish-academy-swim-lessons" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-aquatic-foundation-of-alaska-ak" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Aquatic Foundation of Alaska</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Anchorage, AK</div><div><strong>Address:</strong> 2801 Spirit Way Drive, Anchorage, AK 99508</div><div>Phone awaiting verification — see school website.</div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.swimyetiswim.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
 </div>
   </section>
 
@@ -701,6 +701,7 @@
   </footer>
 
   <script src="schools-data.js?v=20261011d017"></script>
+  <script src="/assets/js/wwk-lesson-attrs.js?v=20261012a1"></script>
   <script>
     const STATE_CODE = "AK";
     const STATE_NAME = "Alaska";
@@ -843,7 +844,7 @@
       }
 
       return `
-        <div class="school-card">
+        <div class="school-card"${window.wwkLessonAttrData ? window.wwkLessonAttrData(school) : ''}>
           <div class="school-header">
             <div>
               <h3 class="school-name">${school.name}</h3>
@@ -855,7 +856,7 @@
           <div class="school-info">
             <div><strong>City:</strong> ${school.city}, ${school.state}</div>
             ${schoolContactHTML(school)}
-            <div><strong>Type:</strong> ${school.indoor ? 'Indoor' : 'Outdoor'}${school.yearRound ? ' • Year-round' : ''}</div>
+            ${window.wwkLessonAttrLine ? window.wwkLessonAttrLine(school) : ''}
           </div>
 
           <div class="school-programs">

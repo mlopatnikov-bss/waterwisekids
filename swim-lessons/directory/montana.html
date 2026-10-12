@@ -623,9 +623,9 @@
     <p class="directory-note">Visit each school's website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>
     <div class="school-count" id="schoolCount">3 swim schools found in Montana</div>
     <div class="schools-list" id="schoolsList">
-<div class="school-card" id="school-montana-swim-academy-mt"><div class="school-header"><div><h3 class="school-name">Montana Swim Academy</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Billings, MT</div><div><strong>Address:</strong> 4908 Southgate Dr, Billings, MT 59101</div><div><strong>Phone:</strong> <a href="tel:+14062008462">(406) 200-8462</a></div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://montanaswimacademy.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
-<div class="school-card" id="school-barracuda-swim-club-mt"><div class="school-header"><div><h3 class="school-name">Barracuda Swim Club</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Billings, MT</div><div>Street address awaiting verification — see school website.</div><div>Phone awaiting verification — see school website.</div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://barracudaswim.club/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
-<div class="school-card" id="school-granite-swim-lessons-mt"><div class="school-header"><div><h3 class="school-name">Granite Swim Lessons</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Billings, MT</div><div><strong>Address:</strong> 3838 Ave. B, Billings, MT 59102</div><div><strong>Phone:</strong> <a href="tel:+14062945040">(406) 294-5040</a></div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://granitebillings.com/pages/swimlessons" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-montana-swim-academy-mt" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Montana Swim Academy</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Billings, MT</div><div><strong>Address:</strong> 4908 Southgate Dr, Billings, MT 59101</div><div><strong>Phone:</strong> <a href="tel:+14062008462">(406) 200-8462</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://montanaswimacademy.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-barracuda-swim-club-mt" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Barracuda Swim Club</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Billings, MT</div><div>Street address awaiting verification — see school website.</div><div>Phone awaiting verification — see school website.</div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://barracudaswim.club/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-granite-swim-lessons-mt" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Granite Swim Lessons</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Billings, MT</div><div><strong>Address:</strong> 3838 Ave. B, Billings, MT 59102</div><div><strong>Phone:</strong> <a href="tel:+14062945040">(406) 294-5040</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://granitebillings.com/pages/swimlessons" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
 </div>
   </section>
 
@@ -739,6 +739,7 @@
   </footer>
 
   <script src="schools-data.js?v=20261011d017"></script>
+  <script src="/assets/js/wwk-lesson-attrs.js?v=20261012a1"></script>
   <script>
     const STATE_CODE = "MT";
     const STATE_NAME = "Montana";
@@ -881,7 +882,7 @@
       }
 
       return `
-        <div class="school-card">
+        <div class="school-card"${window.wwkLessonAttrData ? window.wwkLessonAttrData(school) : ''}>
           <div class="school-header">
             <div>
               <h3 class="school-name">${school.name}</h3>
@@ -893,7 +894,7 @@
           <div class="school-info">
             <div><strong>City:</strong> ${school.city}, ${school.state}</div>
             ${schoolContactHTML(school)}
-            <div><strong>Type:</strong> ${school.indoor ? 'Indoor' : 'Outdoor'}${school.yearRound ? ' • Year-round' : ''}</div>
+            ${window.wwkLessonAttrLine ? window.wwkLessonAttrLine(school) : ''}
           </div>
 
           <div class="school-programs">

@@ -616,8 +616,8 @@
     <p class="directory-note">Visit each school's website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>
     <div class="school-count" id="schoolCount">2 swim schools found in Mississippi</div>
     <div class="schools-list" id="schoolsList">
-<div class="school-card" id="school-maley-swim-school-ms"><div class="school-header"><div><h3 class="school-name">Maley Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Ridgeland, MS</div><div>Street address awaiting verification — see school website.</div><div>Phone awaiting verification — see school website.</div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.yelp.com/biz/maley-swim-school-ridgeland" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
-<div class="school-card" id="school-safesplash-southaven-ms"><div class="school-header"><div><h3 class="school-name">SafeSplash - Southaven</h3><span class="school-chain">SafeSplash</span></div></div><div class="school-info"><div><strong>City:</strong> Southaven, MS</div><div><strong>Address:</strong> 3146 Goodman Rd E, Southaven, MS 38672</div><div><strong>Phone:</strong> <a href="tel:+16622001437">(662) 200-1437</a></div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://www.safesplash.com/locations/desoto-southaven-ms" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-maley-swim-school-ms" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Maley Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Ridgeland, MS</div><div>Street address awaiting verification — see school website.</div><div>Phone awaiting verification — see school website.</div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.yelp.com/biz/maley-swim-school-ridgeland" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-safesplash-southaven-ms" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">SafeSplash - Southaven</h3><span class="school-chain">SafeSplash</span></div></div><div class="school-info"><div><strong>City:</strong> Southaven, MS</div><div><strong>Address:</strong> 3146 Goodman Rd E, Southaven, MS 38672</div><div><strong>Phone:</strong> <a href="tel:+16622001437">(662) 200-1437</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://www.safesplash.com/locations/desoto-southaven-ms" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
 </div>
   </section>
 
@@ -723,6 +723,7 @@
   </footer>
 
   <script src="schools-data.js?v=20261011d017"></script>
+  <script src="/assets/js/wwk-lesson-attrs.js?v=20261012a1"></script>
   <script>
     const STATE_CODE = "MS";
     const STATE_NAME = "Mississippi";
@@ -865,7 +866,7 @@
       }
 
       return `
-        <div class="school-card">
+        <div class="school-card"${window.wwkLessonAttrData ? window.wwkLessonAttrData(school) : ''}>
           <div class="school-header">
             <div>
               <h3 class="school-name">${school.name}</h3>
@@ -877,7 +878,7 @@
           <div class="school-info">
             <div><strong>City:</strong> ${school.city}, ${school.state}</div>
             ${schoolContactHTML(school)}
-            <div><strong>Type:</strong> ${school.indoor ? 'Indoor' : 'Outdoor'}${school.yearRound ? ' • Year-round' : ''}</div>
+            ${window.wwkLessonAttrLine ? window.wwkLessonAttrLine(school) : ''}
           </div>
 
           <div class="school-programs">

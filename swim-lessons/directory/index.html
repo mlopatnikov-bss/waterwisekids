@@ -553,6 +553,7 @@
   </footer>
 
   <script src="schools-data.js?v=20261011d017"></script>
+  <script src="/assets/js/wwk-lesson-attrs.js?v=20261012a1"></script>
   <script>
     const STATE_NAMES = {
       "AL":"Alabama","AK":"Alaska","AZ":"Arizona","AR":"Arkansas",
@@ -749,7 +750,7 @@
 
       var safeName = school.name.replace(/'/g, "\\'");
 
-      return '<div class="school-card">' +
+      return '<div class="school-card"' + (window.wwkLessonAttrData ? window.wwkLessonAttrData(school) : '') + '>' +
         '<div class="school-header"><div>' +
         '<h3 class="school-name">' + school.name + '</h3>' +
         '<span class="school-chain">' + school.chain + '</span>' +
@@ -758,7 +759,7 @@
         '<div><strong>Location:</strong> ' + safeAttr(school.city) + ', ' + (STATE_NAMES[school.state] || school.state) + '</div>' +
         addressHTML(school) +
         (school.phone ? '<div><strong>Phone:</strong> <a href="tel:' + safeAttr(school.phone) + '">' + safeAttr(formatPhone(school.phone)) + '</a></div>' : '') +
-        '<div><strong>Type:</strong> ' + (school.indoor ? 'Indoor' : 'Outdoor') + (school.yearRound ? ' &bull; Year-round' : '') + '</div>' +
+        (window.wwkLessonAttrLine ? window.wwkLessonAttrLine(school) : '') +
         '</div>' +
         '<div class="school-programs">' + badges + '</div>' +
         reviewsHTML +

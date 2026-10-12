@@ -629,8 +629,8 @@
     <p class="directory-note">Visit each school's website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>
     <div class="school-count" id="schoolCount">2 swim schools found in North Dakota</div>
     <div class="schools-list" id="schoolsList">
-<div class="school-card" id="school-foss-swim-school-fargo-nd"><div class="school-header"><div><h3 class="school-name">Foss Swim School - Fargo</h3><span class="school-chain">Foss Swim School</span></div></div><div class="school-info"><div><strong>City:</strong> Fargo, ND</div><div><strong>Address:</strong> 1615 38th Street S., Fargo, ND 58103</div><div><strong>Phone:</strong> <a href="tel:+17018097946">(701) 809-7946</a></div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.fossswimschool.com/swimming-lesson-locations/fargo-nd/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
-<div class="school-card" id="school-family-wellness-swim-school-nd"><div class="school-header"><div><h3 class="school-name">Family Wellness Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Fargo, ND</div><div><strong>Address:</strong> 2960 Seter Parkway, Fargo, ND 58104</div><div><strong>Phone:</strong> <a href="tel:+17012342400">(701) 234-2400</a></div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://www.familywellnessfargo.org/youth-family/swim-school/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-foss-swim-school-fargo-nd" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Foss Swim School - Fargo</h3><span class="school-chain">Foss Swim School</span></div></div><div class="school-info"><div><strong>City:</strong> Fargo, ND</div><div><strong>Address:</strong> 1615 38th Street S., Fargo, ND 58103</div><div><strong>Phone:</strong> <a href="tel:+17018097946">(701) 809-7946</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.fossswimschool.com/swimming-lesson-locations/fargo-nd/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-family-wellness-swim-school-nd" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Family Wellness Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Fargo, ND</div><div><strong>Address:</strong> 2960 Seter Parkway, Fargo, ND 58104</div><div><strong>Phone:</strong> <a href="tel:+17012342400">(701) 234-2400</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://www.familywellnessfargo.org/youth-family/swim-school/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
 </div>
 
     
@@ -743,6 +743,7 @@
   </footer>
 
   <script src="schools-data.js?v=20261011d017"></script>
+  <script src="/assets/js/wwk-lesson-attrs.js?v=20261012a1"></script>
   <script>
     const STATE_CODE = "ND";
     const STATE_NAME = "North Dakota";
@@ -885,7 +886,7 @@
       }
 
       return `
-        <div class="school-card">
+        <div class="school-card"${window.wwkLessonAttrData ? window.wwkLessonAttrData(school) : ''}>
           <div class="school-header">
             <div>
               <h3 class="school-name">${school.name}</h3>
@@ -897,7 +898,7 @@
           <div class="school-info">
             <div><strong>City:</strong> ${school.city}, ${school.state}</div>
             ${schoolContactHTML(school)}
-            <div><strong>Type:</strong> ${school.indoor ? 'Indoor' : 'Outdoor'}${school.yearRound ? ' • Year-round' : ''}</div>
+            ${window.wwkLessonAttrLine ? window.wwkLessonAttrLine(school) : ''}
           </div>
 
           <div class="school-programs">

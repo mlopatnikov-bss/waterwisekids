@@ -639,9 +639,9 @@
     <p class="directory-note">Visit each school's website for current addresses, phone numbers, and enrollment details. Listings are compiled from operator location lists and school websites.</p>
     <div class="school-count" id="schoolCount">3 swim schools found in Vermont</div>
     <div class="schools-list" id="schoolsList">
-<div class="school-card" id="school-lake-dragon-aquatics-vt"><div class="school-header"><div><h3 class="school-name">Lake Dragon Aquatics</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div>Street address awaiting verification — see school website.</div><div><strong>Phone:</strong> <a href="tel:+18024959393">(802) 495-9393</a></div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://lakedragonaquatics.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
-<div class="school-card" id="school-ripple-swim-school-vt"><div class="school-header"><div><h3 class="school-name">Ripple Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div><strong>Address:</strong> 373 Blair Park Rd Ste 100, Williston, VT 05495</div><div>Phone awaiting verification — see school website.</div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.rippleswimvt.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
-<div class="school-card" id="school-vermont-swim-school-uvm-vt"><div class="school-header"><div><h3 class="school-name">Vermont Swim School - UVM</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div>Street address awaiting verification — see school website.</div><div><strong>Phone:</strong> <a href="tel:+18026564473">(802) 656-4473</a></div><div><strong>Type:</strong> Indoor • Year-round</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://uvmcampusrec.com/sports/vermont-swim-school" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-lake-dragon-aquatics-vt" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Lake Dragon Aquatics</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div>Street address awaiting verification — see school website.</div><div><strong>Phone:</strong> <a href="tel:+18024959393">(802) 495-9393</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://lakedragonaquatics.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-ripple-swim-school-vt" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Ripple Swim School</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div><strong>Address:</strong> 373 Blair Park Rd Ste 100, Williston, VT 05495</div><div>Phone awaiting verification — see school website.</div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.rippleswimvt.com" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-vermont-swim-school-uvm-vt" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Vermont Swim School - UVM</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Burlington, VT</div><div>Street address awaiting verification — see school website.</div><div><strong>Phone:</strong> <a href="tel:+18026564473">(802) 656-4473</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://uvmcampusrec.com/sports/vermont-swim-school" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
 </div>
 
     
@@ -768,6 +768,7 @@
   </footer>
 
   <script src="schools-data.js?v=20261011d017"></script>
+  <script src="/assets/js/wwk-lesson-attrs.js?v=20261012a1"></script>
   <script>
     const STATE_CODE = "VT";
     const STATE_NAME = "Vermont";
@@ -910,7 +911,7 @@
       }
 
       return `
-        <div class="school-card">
+        <div class="school-card"${window.wwkLessonAttrData ? window.wwkLessonAttrData(school) : ''}>
           <div class="school-header">
             <div>
               <h3 class="school-name">${school.name}</h3>
@@ -922,7 +923,7 @@
           <div class="school-info">
             <div><strong>City:</strong> ${school.city}, ${school.state}</div>
             ${schoolContactHTML(school)}
-            <div><strong>Type:</strong> ${school.indoor ? 'Indoor' : 'Outdoor'}${school.yearRound ? ' • Year-round' : ''}</div>
+            ${window.wwkLessonAttrLine ? window.wwkLessonAttrLine(school) : ''}
           </div>
 
           <div class="school-programs">
