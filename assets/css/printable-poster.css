@@ -1033,3 +1033,19 @@ footer p {
 @media print {
   .wwk-follow, .sidebar-follow, .wwk-follow-inline, .nav-follow { display: none !important; }
 }
+
+/* WWK-EDUCATORS-027 NAV FIT START
+   Mirror of the main.css block for standalone poster printables (they load no main.css).
+   r1: selectors include "> li > a" so they are at least as specific as any earlier nav rule in this sheet
+   (WWK-POOLS-NATIONWIDE-025 adds "header nav .nav-links > li > a"); being last, this block then wins. */
+@media (min-width: 1150px) {
+  header nav .nav-links > li > a, header nav .nav-links a { padding: 8px 5px; font-size: 0.86rem; }
+  header nav .nav-links:not(:has(> li:nth-child(11))) > li > a { padding: 8px 7px; font-size: 0.9rem; }
+}
+@media (min-width: 769px) and (max-width: 1060px) {
+  header nav .nav-links:has(> li:nth-child(10)) { flex-basis: 100%; }
+}
+@media (min-width: 769px) and (max-width: 1145px) {
+  header nav .nav-links:has(> li:nth-child(11)) { flex-basis: 100%; }
+}
+/* WWK-EDUCATORS-027 NAV FIT END */

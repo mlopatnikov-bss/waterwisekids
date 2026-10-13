@@ -3581,3 +3581,23 @@ aside p a {
 @media print {
   .wwk-follow, .sidebar-follow, .wwk-follow-inline, .nav-follow { display: none !important; }
 }
+
+/* WWK-EDUCATORS-027 NAV FIT START
+   Adds room for "For Educators" (and, if present, WWK-POOLS-NATIONWIDE-025's "Find a Pool").
+   Desktop (>=1150px) content box is 1112px. With 9 header links, 7px side padding fits; with 10 links
+   (li:nth-child(11) = 10 links + the hidden "Follow us" item) links drop to 5px padding and 0.86rem.
+   The default is the tighter 10-link value, so a browser without :has() never overflows; :has() then
+   relaxes it when there are 9 or fewer links. In the 769-1149px band the wrapped link row spans the rail
+   (flex-basis:100%) up to each count's measured wrap width, so the existing justify-content:center works.
+   Measured 2026-10-12 in Chromium with Inter: tools/check_nav_fit.py in the 027 bundle. */
+@media (min-width: 1150px) {
+  .nav-links > li > a { padding: 8px 5px; font-size: 0.86rem; }
+  .nav-links:not(:has(> li:nth-child(11))) > li > a { padding: 8px 7px; font-size: 0.9rem; }
+}
+@media (min-width: 769px) and (max-width: 1060px) {
+  .nav-links:has(> li:nth-child(10)) { flex-basis: 100%; }
+}
+@media (min-width: 769px) and (max-width: 1145px) {
+  .nav-links:has(> li:nth-child(11)) { flex-basis: 100%; }
+}
+/* WWK-EDUCATORS-027 NAV FIT END */
