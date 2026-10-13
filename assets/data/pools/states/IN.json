@@ -1,0 +1,515 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "IN",
+ "name": "Indiana",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-in-bloomington-bryan-park-pool",
+   "name": "Bryan Park Pool",
+   "official_name": "Bryan Park Pool",
+   "operator": "City of Bloomington Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "IN",
+   "region": "Indiana",
+   "city": "Bloomington",
+   "address": {
+    "street": "1020 S. Woodlawn Ave.",
+    "locality": "Bloomington",
+    "region": "IN",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.bloomington.in.gov/parks/pools/bryan-park-pool",
+   "hours_fees_url": "https://www.bloomington.in.gov/parks/pools/bryan-park-pool",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Closed for the 2026 season.",
+     "source": "https://bloomington.in.gov/parks/parks/bryan-park"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 14 must be supervised by an adult 18 or older at all times.",
+     "source": "https://www.bloomington.in.gov/parks/pools/bryan-park-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool or parts of it may close for lifeguard shortages, low attendance or weather; the city runs a status hotline.",
+     "source": "https://www.bloomington.in.gov/parks/pools/bryan-park-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Pool admission fee waivers require proof of residency within Bloomington city limits.",
+     "source": "https://www.bloomington.in.gov/parks/pools/bryan-park-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "All children under 14 must be supervised by an adult 18 or older at all times.",
+     "source": "https://www.bloomington.in.gov/parks/pools/bryan-park-pool"
+    },
+    {
+     "text": "The zero-depth activity pool is for children under 10.",
+     "source": "https://www.bloomington.in.gov/parks/pools/bryan-park-pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://bloomington.in.gov/parks/parks/bryan-park",
+     "https://www.bloomington.in.gov/parks/pools/bryan-park-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.bloomington.in.gov/parks/pools/bryan-park-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://www.bloomington.in.gov/parks/pools/bryan-park-pool"
+     ],
+     "lessons": [
+      "https://www.bloomington.in.gov/parks/pools/bryan-park-pool"
+     ]
+    },
+    "address": [
+     "https://www.bloomington.in.gov/parks/pools/bryan-park-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-in-columbus-donner-aquatic-center",
+   "name": "Donner Aquatic Center",
+   "official_name": "Donner Aquatic Center",
+   "operator": "Columbus Parks and Recreation (City of Columbus, Indiana)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "IN",
+   "region": "Indiana",
+   "city": "Columbus",
+   "address": {
+    "street": "739 22nd Street",
+    "locality": "Columbus",
+    "region": "IN",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://columbusparksandrec.com/?p=12044",
+   "hours_fees_url": "https://columbusparksandrec.com/?p=12044",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only facility; the 2026 public season has ended.",
+     "source": "https://columbusparksandrec.com/?p=12044"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 10 and under must be accompanied by a responsible person 18 or older.",
+     "source": "https://columbusparksandrec.com/?p=12044"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The aquatic center does not open when it is raining and may close early in cool weather.",
+     "source": "https://columbusparksandrec.com/?p=12044"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "All children 10 and under must be accompanied by a responsible person 18 or older.",
+     "source": "https://columbusparksandrec.com/?p=12044"
+    },
+    {
+     "text": "Preschool Swim Time in the leisure pool is for parents with children 6 and under.",
+     "source": "https://columbusparksandrec.com/?p=12044"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Masters/lap swimming is for adults 18 and over during set sessions.",
+      "source": "https://columbusparksandrec.com/?p=12044"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://columbusparksandrec.com/?p=12044"
+    ],
+    "access": {
+     "public_admission": [
+      "https://columbusparksandrec.com/?p=12044"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://columbusparksandrec.com/?p=12044"
+     ],
+     "lap_swim": [
+      "https://columbusparksandrec.com/?p=12044"
+     ],
+     "lessons": [
+      "https://columbusparksandrec.com/?p=12044"
+     ]
+    },
+    "address": [
+     "https://columbusparksandrec.com/?p=12044"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-in-indianapolis-indy-island-aquatic-center",
+   "name": "Indy Island Aquatic Center (Raymond Park)",
+   "official_name": "Indy Island Aquatic Center (Raymond Park)",
+   "operator": "Indy Parks and Recreation (City of Indianapolis)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "IN",
+   "region": "Indiana",
+   "city": "Indianapolis",
+   "address": {
+    "street": "8300 E Raymond St",
+    "locality": "Indianapolis",
+    "region": "IN",
+    "postal_code": "46239",
+    "precision": "street_number"
+   },
+   "official_url": "https://parks.indy.gov/parks/raymond-park-2/",
+   "hours_fees_url": "https://parks.indy.gov/parks/raymond-park-2/",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Indy Parks policy requires an adult (over 18) in the pool within arm's reach of swimmers under 9.",
+     "source": "https://parks.indy.gov/wp-content/uploads/2023/03/Krannert-Fun-Guide-FallWinter-2026.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "The large water slide requires riders to be at least 48 inches tall.",
+     "source": "https://parks.indy.gov/parks/raymond-park-2/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Indy Parks policy: an adult over 18 must be in the pool and within arm's reach of swimmers under 9.",
+     "source": "https://parks.indy.gov/wp-content/uploads/2023/03/Krannert-Fun-Guide-FallWinter-2026.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Open swim is limited to posted days; the pool is closed for lessons on Tuesdays and Thursdays.",
+      "source": "https://parks.indy.gov/parks/raymond-park-2/"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Lap swimming is available only on request and as lanes allow.",
+      "source": "https://parks.indy.gov/parks/raymond-park-2/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://parks.indy.gov/parks/raymond-park-2/",
+     "https://parks.indy.gov/programs/poolsandsplashpads/"
+    ],
+    "season": [
+     "https://parks.indy.gov/parks/raymond-park-2/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://parks.indy.gov/parks/raymond-park-2/",
+      "https://parks.indy.gov/wp-content/uploads/2023/03/Krannert-Fun-Guide-FallWinter-2026.pdf"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://parks.indy.gov/parks/raymond-park-2/"
+     ],
+     "lap_swim": [
+      "https://parks.indy.gov/parks/raymond-park-2/"
+     ],
+     "lessons": [
+      "https://parks.indy.gov/parks/raymond-park-2/"
+     ]
+    },
+    "address": [
+     "https://parks.indy.gov/parks/raymond-park-2/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-in-indianapolis-krannert-park-indoor-pool",
+   "name": "Krannert Park Indoor Pool",
+   "official_name": "Krannert Park Indoor Pool (Krannert Family Center)",
+   "operator": "Indy Parks and Recreation (City of Indianapolis)",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "IN",
+   "region": "Indiana",
+   "city": "Indianapolis",
+   "address": {
+    "street": "605 S High School Rd",
+    "locality": "Indianapolis",
+    "region": "IN",
+    "postal_code": "46241",
+    "precision": "street_number"
+   },
+   "official_url": "https://parks.indy.gov/parks/krannert-park",
+   "hours_fees_url": "https://parks.indy.gov/parks/krannert-park",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Public pool hours are limited to the posted aquatic center hours; morning hours are limited due to staffing.",
+     "source": "https://parks.indy.gov/wp-content/uploads/2023/03/Krannert-Fun-Guide-FallWinter-2026.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Indy Parks policy requires an adult (over 18) in the pool within arm's reach of swimmers under 9.",
+     "source": "https://parks.indy.gov/wp-content/uploads/2023/03/Krannert-Fun-Guide-FallWinter-2026.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "At the family center, children 8 and under must be supervised by a responsible person 18 or older.",
+     "source": "https://parks.indy.gov/wp-content/uploads/2023/03/Krannert-Fun-Guide-FallWinter-2026.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Park construction (playground, courts, trails) is under way through late 2026; some outdoor amenities may be unavailable.",
+     "source": "https://parks.indy.gov/parks/krannert-park"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Indy Parks policy: an adult over 18 must be in the pool and within arm's reach of swimmers under 9.",
+     "source": "https://parks.indy.gov/wp-content/uploads/2023/03/Krannert-Fun-Guide-FallWinter-2026.pdf"
+    },
+    {
+     "text": "Children 8 and under must always be supervised by a responsible person 18 or older (family center rule).",
+     "source": "https://parks.indy.gov/wp-content/uploads/2023/03/Krannert-Fun-Guide-FallWinter-2026.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://parks.indy.gov/parks/krannert-park",
+     "https://parks.indy.gov/programs/poolsandsplashpads/"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://parks.indy.gov/parks/krannert-park",
+      "https://parks.indy.gov/wp-content/uploads/2023/03/Krannert-Fun-Guide-FallWinter-2026.pdf"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://parks.indy.gov/parks/krannert-park",
+      "https://parks.indy.gov/wp-content/uploads/2023/03/Krannert-Fun-Guide-FallWinter-2026.pdf"
+     ],
+     "lap_swim": [
+      "https://parks.indy.gov/wp-content/uploads/2023/03/Krannert-Fun-Guide-FallWinter-2026.pdf"
+     ],
+     "lessons": [
+      "https://parks.indy.gov/wp-content/uploads/2023/03/Krannert-Fun-Guide-FallWinter-2026.pdf"
+     ]
+    },
+    "address": [
+     "https://parks.indy.gov/parks/krannert-park"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

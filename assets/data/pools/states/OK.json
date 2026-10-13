@@ -1,0 +1,576 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "OK",
+ "name": "Oklahoma",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ok-moore-the-station-aquatic-center",
+   "name": "The Station Aquatic Center",
+   "official_name": "The Station Aquatic Center (The Station at Central Park)",
+   "operator": "City of Moore Parks & Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "OK",
+   "region": "Oklahoma",
+   "city": "Moore",
+   "address": {
+    "street": "700 S Broadway Ave",
+    "locality": "Moore",
+    "region": "OK",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center",
+   "hours_fees_url": "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     },
+     "label": "lap"
+    },
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "residents",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "In summer, everyone 15 and under must come with a parent or legal guardian who has photo ID, and the adult must stay in the facility.",
+     "source": "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Resident rates need proof of a Moore address (for example a Moore utility bill); non-residents pay the non-resident rate.",
+     "source": "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Entry passes do not allow re-entry; leaving means buying a new pass.",
+     "source": "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Seasonal outdoor facility, currently closed until the 2027 season.",
+     "source": "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Parents or guardians must supervise all children 12 and under and stay within arm's reach of any child under 7.",
+     "source": "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center"
+    },
+    {
+     "text": "Parents or guardians must remain in the facility at all times.",
+     "source": "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center"
+    ],
+    "season": [
+     "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center"
+     ],
+     "residents": [
+      "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/aquatic-center"
+     ]
+    },
+    "address": [
+     "https://www.cityofmooreok.gov/departments-divisions/parks-recreation/station-recreation-aquatic-center/recreation-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ok-norman-westwood-family-aquatic-center",
+   "name": "Westwood Family Aquatic Center",
+   "official_name": "Westwood Family Aquatic Center",
+   "operator": "City of Norman Parks & Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "OK",
+   "region": "Oklahoma",
+   "city": "Norman",
+   "address": {
+    "street": "1007 Fairway Dr",
+    "locality": "Norman",
+    "region": "OK",
+    "postal_code": "73069",
+    "precision": "street_number"
+   },
+   "official_url": "https://normanok.gov/westwood-family-aquatic-center-rules-and-guidelines",
+   "hours_fees_url": "https://www.normanok.gov/residents-visitors/parks-recreation/westwood-family-aquatic-center/swim-times-and-admission-prices",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "unknown"
+     }
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only facility: daily from late May to early August, then weekends only until Labor Day.",
+     "source": "https://www.normanok.gov/residents-visitors/parks-recreation/westwood-family-aquatic-center/swim-times-and-admission-prices"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Season pass holders get the first hour each day; general admission starts after that.",
+     "source": "https://www.normanok.gov/residents-visitors/parks-recreation/westwood-family-aquatic-center/swim-times-and-admission-prices"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Lifeguards may ask any swimmer to show they can swim 15 yards nonstop and tread water for 1 minute.",
+     "source": "https://normanok.gov/westwood-family-aquatic-center-rules-and-guidelines"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "No weapons, glass, or outside food and drinks are allowed.",
+     "source": "https://normanok.gov/westwood-family-aquatic-center-rules-and-guidelines"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "The aquatic center holds up to 860 visitors.",
+     "source": "https://normanok.gov/westwood-family-aquatic-center-rules-and-guidelines"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Parents or guardians must supervise all children 15 and under and stay within arm's reach of any child under 7.",
+     "source": "https://normanok.gov/westwood-family-aquatic-center-rules-and-guidelines"
+    },
+    {
+     "text": "Swimmers 13 to 15 cannot be dropped off alone unless with an adult 18+ or they have completed the Jr. Elite Lifeguard or Teen Aquatic Safety Program.",
+     "source": "https://normanok.gov/westwood-family-aquatic-center-rules-and-guidelines"
+    },
+    {
+     "text": "Non-swimmers must wear a Coast Guard-approved life jacket and stay within arm's length of an adult; life jackets are available.",
+     "source": "https://normanok.gov/westwood-family-aquatic-center-rules-and-guidelines"
+    },
+    {
+     "text": "In the toddler pool, an adult must stay within arm's length at all times.",
+     "source": "https://normanok.gov/westwood-family-aquatic-center-rules-and-guidelines"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.normanok.gov/residents-visitors/parks-recreation/westwood-family-aquatic-center/swim-times-and-admission-prices"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.normanok.gov/news/city-norman-announces-summer-opening-westwood-family-aquatic-center-and-splash-pads",
+      "https://www.normanok.gov/residents-visitors/parks-recreation/westwood-family-aquatic-center/swim-times-and-admission-prices"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.normanok.gov/residents-visitors/parks-recreation/westwood-family-aquatic-center/swim-times-and-admission-prices"
+     ],
+     "lap_swim": [
+      "https://www.normanok.gov/residents-visitors/parks-recreation/westwood-family-aquatic-center/swim-times-and-admission-prices"
+     ],
+     "lessons": [
+      "https://www.normanok.gov/residents-visitors/parks-recreation/westwood-family-aquatic-center/swim-lessons"
+     ]
+    },
+    "address": [
+     "https://www.normanok.gov/residents-visitors/parks-recreation/westwood-family-aquatic-center/swim-times-and-admission-prices"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ok-oklahoma-city-northeast-community-pool",
+   "name": "Northeast Community Pool",
+   "official_name": "Northeast Community Pool",
+   "operator": "City of Oklahoma City Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "OK",
+   "region": "Oklahoma",
+   "city": "Oklahoma City",
+   "address": {
+    "street": "1226 NE 33rd Street",
+    "locality": "Oklahoma City",
+    "region": "OK",
+    "postal_code": "73111",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.okc.gov/departments/parks-recreation/aquatics/community-pools",
+   "hours_fees_url": "https://www.okc.gov/departments/parks-recreation/aquatics/community-pools",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; the 2026 season ran June 9 to August 2.",
+     "source": "https://okc.gov/departments/parks-recreation/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Closed on Mondays during the season.",
+     "source": "https://okc.gov/departments/parks-recreation/aquatics"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and younger must be accompanied by an adult in the water and on the pool deck.",
+     "source": "https://okc.gov/departments/parks-recreation/aquatics"
+    },
+    {
+     "text": "Children 11 to 12 need an adult on the pool deck watching them (the adult does not have to swim).",
+     "source": "https://okc.gov/departments/parks-recreation/aquatics"
+    },
+    {
+     "text": "Children 13 and older may swim without an adult, but guardian contact information is required for anyone under 18.",
+     "source": "https://okc.gov/departments/parks-recreation/aquatics"
+    },
+    {
+     "text": "A child who needs a flotation device must be within arm's reach of an adult in the pool, and only Coast Guard-approved devices are allowed.",
+     "source": "https://okc.gov/departments/parks-recreation/aquatics"
+    },
+    {
+     "text": "Children 2 and younger, or anyone in diapers, must wear a swim diaper.",
+     "source": "https://okc.gov/departments/parks-recreation/aquatics"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.okc.gov/departments/parks-recreation/aquatics/community-pools"
+    ],
+    "season": [
+     "https://okc.gov/departments/parks-recreation/aquatics"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.okc.gov/departments/parks-recreation/aquatics/community-pools"
+     ],
+     "day_pass": [
+      "https://www.okc.gov/departments/parks-recreation/aquatics/community-pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://okc.gov/departments/parks-recreation/aquatics"
+     ]
+    },
+    "address": [
+     "https://www.okc.gov/departments/parks-recreation/aquatics/community-pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ok-oklahoma-city-willa-d-johnson-recreation-center",
+   "name": "Willa D. Johnson Recreation Center",
+   "official_name": "Willa D. Johnson Recreation Center",
+   "operator": "City of Oklahoma City Parks & Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "OK",
+   "region": "Oklahoma",
+   "city": "Oklahoma City",
+   "address": {
+    "street": "909 Frederick Douglas Avenue",
+    "locality": "Oklahoma City",
+    "region": "OK",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://okc.gov/departments/parks-recreation/recreation-centers/willa-d-johnson-recreation-center",
+   "hours_fees_url": "https://okc.gov/departments/parks-recreation/recreation-centers/willa-d-johnson-recreation-center",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "The pool is closed to drop-in swimmers on Tuesdays and Thursdays (registered programs and rentals only).",
+     "source": "https://okc.gov/departments/parks-recreation/recreation-centers/willa-d-johnson-recreation-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "The center is closed on Sundays, and pool hours change in summer.",
+     "source": "https://okc.gov/departments/parks-recreation/recreation-centers/willa-d-johnson-recreation-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Fitness swim is for ages 16 and older; Toddler Time is for ages 5 and younger with an adult.",
+     "source": "https://okc.gov/departments/parks-recreation/recreation-centers/willa-d-johnson-recreation-center"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and younger must be accompanied by an adult in the water and on the pool deck.",
+     "source": "https://okc.gov/departments/parks-recreation/aquatics"
+    },
+    {
+     "text": "Children 11 to 12 need an adult on the pool deck watching them (the adult does not have to swim).",
+     "source": "https://okc.gov/departments/parks-recreation/aquatics"
+    },
+    {
+     "text": "Children 13 and older may swim without an adult, but guardian contact information is required for anyone under 18.",
+     "source": "https://okc.gov/departments/parks-recreation/aquatics"
+    },
+    {
+     "text": "A child who needs a flotation device must be within arm's reach of an adult in the pool, and only Coast Guard-approved devices are allowed.",
+     "source": "https://okc.gov/departments/parks-recreation/aquatics"
+    },
+    {
+     "text": "Children 2 and younger, or anyone in diapers, must wear a swim diaper.",
+     "source": "https://okc.gov/departments/parks-recreation/aquatics"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Open swim has limited capacity and day-pass sales may be capped; call ahead to check capacity and hours.",
+      "source": "https://okc.gov/departments/parks-recreation/recreation-centers/willa-d-johnson-recreation-center"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://okc.gov/departments/parks-recreation/aquatics"
+    ],
+    "season": [
+     "https://okc.gov/departments/parks-recreation/aquatics"
+    ],
+    "access": {
+     "day_pass": [
+      "https://okc.gov/departments/parks-recreation/aquatics",
+      "https://okc.gov/departments/parks-recreation/recreation-centers/willa-d-johnson-recreation-center"
+     ],
+     "members": [
+      "https://okc.gov/departments/parks-recreation/aquatics",
+      "https://okc.gov/departments/parks-recreation/recreation-centers/willa-d-johnson-recreation-center"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://okc.gov/departments/parks-recreation/aquatics",
+      "https://okc.gov/departments/parks-recreation/recreation-centers/willa-d-johnson-recreation-center"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://okc.gov/departments/parks-recreation/aquatics"
+     ]
+    },
+    "address": [
+     "https://okc.gov/departments/parks-recreation/recreation-centers/willa-d-johnson-recreation-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

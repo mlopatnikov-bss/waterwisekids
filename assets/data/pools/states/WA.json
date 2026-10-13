@@ -1,0 +1,570 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "WA",
+ "name": "Washington",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-wa-seattle-lowery-c-pop-mounger-pool",
+   "name": "Lowery C. \"Pop\" Mounger Pool",
+   "official_name": "Lowery C. \"Pop\" Mounger Pool",
+   "operator": "Seattle Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "WA",
+   "region": "Washington",
+   "city": "Seattle",
+   "address": {
+    "street": "2535 32nd Ave W",
+    "locality": "Seattle",
+    "region": "WA",
+    "postal_code": "98199",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.seattle.gov/parks/pools/mounger-pool",
+   "hours_fees_url": "https://www.seattle.gov/parks/pools/mounger-pool",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Open only from May to September; the 2026 season is over.",
+     "source": "https://www.seattle.gov/parks/pools/mounger-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "The Big Pool is at most 6 feet deep and diving is not allowed; the Little Pool is up to 3.5 feet deep.",
+     "source": "https://www.seattle.gov/parks/pools/mounger-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 6 or under 48 inches tall must be directly supervised in the water by an adult within arm's reach.",
+     "source": "https://www.seattle.gov/parks/pools/mounger-pool"
+    },
+    {
+     "text": "During Family Swim, children under 18 must be accompanied into the pool by a responsible adult.",
+     "source": "https://www.seattle.gov/parks/pools/mounger-pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Swimmers under 18 must pass a swim test before using the deep end.",
+      "source": "https://www.seattle.gov/parks/pools/mounger-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.seattle.gov/parks/pools",
+     "https://www.seattle.gov/parks/pools/mounger-pool"
+    ],
+    "season": [
+     "https://www.seattle.gov/parks/pools/mounger-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.seattle.gov/parks/pools/mounger-pool"
+     ],
+     "day_pass": [
+      "https://www.seattle.gov/parks/pools/mounger-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.seattle.gov/parks/pools/mounger-pool"
+     ],
+     "lap_swim": [
+      "https://www.seattle.gov/parks/pools/mounger-pool"
+     ],
+     "lessons": [
+      "https://www.seattle.gov/parks/pools/mounger-pool"
+     ]
+    },
+    "address": [
+     "https://www.seattle.gov/parks/pools/mounger-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-wa-seattle-medgar-evers-pool",
+   "name": "Medgar Evers Pool",
+   "official_name": "Medgar Evers Pool",
+   "operator": "Seattle Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "WA",
+   "region": "Washington",
+   "city": "Seattle",
+   "address": {
+    "street": "500 23rd Ave",
+    "locality": "Seattle",
+    "region": "WA",
+    "postal_code": "98122",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.seattle.gov/parks/pools/medgar-evers-pool",
+   "hours_fees_url": "https://www.seattle.gov/parks/pools/medgar-evers-pool",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool is closed on several holiday and staff dates this fall; check the posted closure list.",
+     "source": "https://www.seattle.gov/parks/pools/medgar-evers-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 6 or under 48 inches tall must be directly supervised in the water by an adult within arm's reach.",
+     "source": "https://www.seattle.gov/parks/pools/medgar-evers-pool"
+    },
+    {
+     "text": "During Family Swim, children under 18 must be accompanied into the pool by a responsible adult.",
+     "source": "https://www.seattle.gov/parks/pools/medgar-evers-pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Swimmers under 18 must pass a swim test before using the deep end.",
+      "source": "https://www.seattle.gov/parks/pools/medgar-evers-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.seattle.gov/parks/pools"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.seattle.gov/parks/pools/medgar-evers-pool"
+     ],
+     "day_pass": [
+      "https://www.seattle.gov/parks/pools/medgar-evers-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.seattle.gov/parks/pools/medgar-evers-pool"
+     ],
+     "lap_swim": [
+      "https://www.seattle.gov/parks/pools/medgar-evers-pool"
+     ],
+     "lessons": [
+      "https://www.seattle.gov/parks/pools/medgar-evers-pool"
+     ]
+    },
+    "address": [
+     "https://www.seattle.gov/parks/pools/medgar-evers-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-wa-seattle-rainier-beach-pool",
+   "name": "Rainier Beach Pool",
+   "official_name": "Rainier Beach Pool",
+   "operator": "Seattle Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "WA",
+   "region": "Washington",
+   "city": "Seattle",
+   "address": {
+    "street": "8825 Rainier Ave S",
+    "locality": "Seattle",
+    "region": "WA",
+    "postal_code": "98118",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.seattle.gov/parks/pools/rainier-beach-pool",
+   "hours_fees_url": "https://www.seattle.gov/parks/pools/rainier-beach-pool",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Admission is sold shortly before each swim session and sessions can sell out.",
+     "source": "https://www.seattle.gov/parks/pools/rainier-beach-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool is closed on several holiday and staff dates this fall; check the posted closure list.",
+     "source": "https://www.seattle.gov/parks/pools/rainier-beach-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Swimmers must be at least 48 inches tall to use the water slide.",
+     "source": "https://www.seattle.gov/parks/pools/rainier-beach-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 6 or under 48 inches tall must be directly supervised in the water by an adult within arm's reach.",
+     "source": "https://www.seattle.gov/parks/pools/rainier-beach-pool"
+    },
+    {
+     "text": "During Family Swim, children under 18 must be accompanied into the pool by a responsible adult.",
+     "source": "https://www.seattle.gov/parks/pools/rainier-beach-pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Swimmers under 18 must pass a swim test before using the deep end.",
+      "source": "https://www.seattle.gov/parks/pools/rainier-beach-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.seattle.gov/parks/pools"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.seattle.gov/parks/pools/rainier-beach-pool"
+     ],
+     "day_pass": [
+      "https://www.seattle.gov/parks/pools/rainier-beach-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.seattle.gov/parks/pools/rainier-beach-pool"
+     ],
+     "lap_swim": [
+      "https://www.seattle.gov/parks/pools/rainier-beach-pool"
+     ],
+     "lessons": [
+      "https://www.seattle.gov/parks/pools/rainier-beach-pool"
+     ]
+    },
+    "address": [
+     "https://www.seattle.gov/parks/pools/rainier-beach-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-wa-vancouver-firstenburg-community-center-pool",
+   "name": "Firstenburg Community Center Pool",
+   "official_name": "Firstenburg Community Center Pool",
+   "operator": "City of Vancouver Parks, Recreation and Cultural Services",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "WA",
+   "region": "Washington",
+   "city": "Vancouver",
+   "address": {
+    "street": "700 NE 136th Ave.",
+    "locality": "Vancouver",
+    "region": "WA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/",
+   "hours_fees_url": "https://www.cityofvancouver.us/community/community-centers/firstenburg-community-center/",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "residents",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lessons": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "residents",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Drop-in visitors must create an online city recreation (ActiveNet) account before paying.",
+     "source": "https://www.cityofvancouver.us/community/community-centers/firstenburg-community-center/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Non-residents of Vancouver may drop in but pay a higher daily fee.",
+     "source": "https://www.cityofvancouver.us/community/community-centers/firstenburg-community-center/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Spectators are not allowed on the pool deck; there is a viewing area in the lobby.",
+     "source": "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The center is closed on Sundays and on listed holidays.",
+     "source": "https://www.cityofvancouver.us/community/community-centers/firstenburg-community-center/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Non-swimmers and children under 7, with or without a life jacket, must always be within arm's reach of a parent or responsible adult.",
+     "source": "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/"
+    },
+    {
+     "text": "One adult must be in the water for every three children under 7.",
+     "source": "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/"
+    },
+    {
+     "text": "Children 7 and older may swim on their own, but a parent must be on the premises for children 10 and under.",
+     "source": "https://www.cityofvancouver.us/community/community-centers/firstenburg-community-center/"
+    },
+    {
+     "text": "During family swim, children under 16 must be accompanied in the water by a parent or guardian.",
+     "source": "https://www.cityofvancouver.us/community/community-centers/firstenburg-community-center/"
+    },
+    {
+     "text": "Children 3 and under and anyone not toilet trained must wear swim diapers and plastic pants.",
+     "source": "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/"
+    },
+    {
+     "text": "Riders must be at least 48 inches tall for the water slide.",
+     "source": "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Public Swim capacity depends on lifeguard staffing; swim bands are handed out shortly before each session.",
+      "source": "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/",
+      "https://www.cityofvancouver.us/community/community-centers/firstenburg-community-center/"
+     ],
+     "day_pass": [
+      "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/",
+      "https://www.cityofvancouver.us/community/community-centers/firstenburg-community-center/"
+     ],
+     "residents": [
+      "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/",
+      "https://www.cityofvancouver.us/community/community-centers/firstenburg-community-center/"
+     ],
+     "members": [
+      "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/",
+      "https://www.cityofvancouver.us/community/community-centers/firstenburg-community-center/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://cityofvancouver.us/community/community-centers/firstenburg-community-center/firstenburg-pool/"
+     ]
+    },
+    "address": [
+     "https://www.cityofvancouver.us/community/community-centers/firstenburg-community-center/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

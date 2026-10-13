@@ -1,0 +1,561 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "SD",
+ "name": "South Dakota",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-sd-sioux-falls-midco-aquatic-center",
+   "name": "Midco Aquatic Center",
+   "official_name": "Midco Aquatic Center",
+   "operator": "Sioux Falls Parks and Recreation (City of Sioux Falls)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "SD",
+   "region": "South Dakota",
+   "city": "Sioux Falls",
+   "address": {
+    "street": "1601 S Western Avenue",
+    "locality": "Sioux Falls",
+    "region": "SD",
+    "postal_code": "57105",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/midco-aquatic-center",
+   "hours_fees_url": "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/midco-aquatic-center/admission",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Water wings, puddle jumpers and personal life jackets are not allowed unless needed for a special need.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/midco-aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Swim pass holders must have a photo on file to be admitted.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/rules"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 6 and under must come with an adult and be supervised at all times by an adult or a student 16 or older.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/rules"
+    },
+    {
+     "text": "One adult may supervise no more than five children age 6 and under.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/rules"
+    },
+    {
+     "text": "For infants and toddlers, an adult should be in the water within arm's reach.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/rules"
+    },
+    {
+     "text": "Children who are not toilet trained must wear a swim diaper under a swimsuit.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/rules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/midco-aquatic-center"
+    ],
+    "season": [
+     "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/midco-aquatic-center"
+    ],
+    "access": {
+     "day_pass": [
+      "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/midco-aquatic-center/admission"
+     ],
+     "members": [
+      "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/midco-aquatic-center/admission"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/midco-aquatic-center"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/midco-aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-sd-sioux-falls-terrace-park-family-aquatic-center",
+   "name": "Terrace Park Family Aquatic Center",
+   "official_name": "Terrace Park Family Aquatic Center",
+   "operator": "Sioux Falls Parks and Recreation (City of Sioux Falls)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "SD",
+   "region": "South Dakota",
+   "city": "Sioux Falls",
+   "address": {
+    "street": "1001 W Madison St",
+    "locality": "Sioux Falls",
+    "region": "SD",
+    "postal_code": "57103",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/terrace-park",
+   "hours_fees_url": "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/midco-aquatic-center/admission",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Outdoor summer pool only; it is closed for the season until next summer.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/terrace-park"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Lifeguards may ask children to take a swim test before using high diving boards.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Everyone must leave the water and deck for thunder or lightning.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/rules"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 6 and under must come with an adult and be supervised at all times by an adult or a student 16 or older.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/rules"
+    },
+    {
+     "text": "One adult may supervise no more than five children age 6 and under.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/rules"
+    },
+    {
+     "text": "For infants and toddlers, an adult should be in the water within arm's reach.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/rules"
+    },
+    {
+     "text": "Children who are not toilet trained must wear a swim diaper under a swimsuit.",
+     "source": "https://www.siouxfalls.gov/activities-recreation/aquatics/rules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads",
+     "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/terrace-park"
+    ],
+    "season": [
+     "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/midco-aquatic-center/admission",
+     "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/terrace-park"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/midco-aquatic-center/admission",
+      "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/terrace-park"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/terrace-park"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/terrace-park"
+     ]
+    },
+    "address": [
+     "https://www.siouxfalls.gov/activities-recreation/aquatics/pools-splash-pads/terrace-park"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-sd-yankton-huether-family-aquatics-center",
+   "name": "Huether Family Aquatics Center",
+   "official_name": "Huether Family Aquatics Center",
+   "operator": "City of Yankton Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "SD",
+   "region": "South Dakota",
+   "city": "Yankton",
+   "address": {
+    "street": "2020 Douglas Ave",
+    "locality": "Yankton",
+    "region": "SD",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.yanktonaquatics.com/",
+   "hours_fees_url": "https://www.yanktonaquatics.com/plan-your-trip/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Outdoor summer pool only; it is closed for the season until next summer.",
+     "source": "https://www.yanktonaquatics.com/plan-your-trip/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Everyone entering pays admission, even if not swimming.",
+     "source": "https://www.yanktonaquatics.com/plan-your-trip/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Guests may be asked to pass a swim test before using the diving well.",
+     "source": "https://www.yanktonaquatics.com/plan-your-trip/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Water wings, arm floats and kickboards are not allowed during open swim.",
+     "source": "https://www.yanktonaquatics.com/plan-your-trip/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children ages 0 to 3 must come with a paying adult.",
+     "source": "https://www.yanktonaquatics.com/plan-your-trip/"
+    },
+    {
+     "text": "Children under 48 inches must wear a life jacket in the lazy river.",
+     "source": "https://www.yanktonaquatics.com/plan-your-trip/"
+    },
+    {
+     "text": "Children under 42 inches must be actively supervised in the lazy river by someone 15 or older.",
+     "source": "https://www.yanktonaquatics.com/plan-your-trip/"
+    },
+    {
+     "text": "A child in a life jacket must be actively supervised by someone 15 or older.",
+     "source": "https://www.yanktonaquatics.com/plan-your-trip/"
+    },
+    {
+     "text": "Children who are not toilet trained must wear swim diapers.",
+     "source": "https://www.yanktonaquatics.com/plan-your-trip/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap swimming lanes are for ages 18 and up.",
+      "source": "https://www.yanktonaquatics.com/plan-your-trip/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/pool-waterslide"
+    ],
+    "season": [
+     "https://www.yanktonaquatics.com/",
+     "https://www.yanktonaquatics.com/plan-your-trip/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.yanktonaquatics.com/plan-your-trip/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.yanktonaquatics.com/plan-your-trip/"
+     ],
+     "lap_swim": [
+      "https://www.yanktonaquatics.com/plan-your-trip/"
+     ],
+     "lessons": [
+      "https://www.yanktonaquatics.com/plan-your-trip/"
+     ]
+    },
+    "address": [
+     "https://www.yanktonaquatics.com/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-sd-yankton-summit-activities-center",
+   "name": "Summit Activities Center",
+   "official_name": "Summit Activities Center",
+   "operator": "City of Yankton Parks and Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "SD",
+   "region": "South Dakota",
+   "city": "Yankton",
+   "address": {
+    "street": "1801 Summit Street",
+    "locality": "Yankton",
+    "region": "SD",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/pool-waterslide",
+   "hours_fees_url": "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/memberships-daily-rates",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Members and day-pass users must check in at the front desk to get a stamp or ID card.",
+     "source": "https://www.cityofyankton.org/departments/parks-recreation-city-events/summit-activities-center/pool-waterslide/pool-and-waterslide-rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Call ahead, because parts of the facility can close for meets, maintenance or weather.",
+     "source": "https://www.cityofyankton.org/departments/parks-recreation-city-events/summit-activities-center/facility-hours"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 8 and under must be supervised at all times by an adult or a youth 14 or older.",
+     "source": "https://www.cityofyankton.org/departments/parks-recreation-city-events/summit-activities-center/pool-waterslide/pool-and-waterslide-rules"
+    },
+    {
+     "text": "A child in a strapped-on life jacket must have an adult or someone 15 or older within arm's length.",
+     "source": "https://www.cityofyankton.org/departments/parks-recreation-city-events/summit-activities-center/pool-waterslide/pool-and-waterslide-rules"
+    },
+    {
+     "text": "Supervisor ratios: one supervisor per 5 children under 5, and one per 10 children 5 and older.",
+     "source": "https://www.cityofyankton.org/departments/parks-recreation-city-events/summit-activities-center/pool-waterslide/pool-and-waterslide-rules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Open swim runs only during set weekly sessions, so check the schedule before going.",
+      "source": "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/pool-waterslide"
+     },
+     {
+      "text": "There were no scheduled indoor open swims in summer 2026.",
+      "source": "https://www.cityofyankton.org/departments/parks-recreation-city-events/summit-activities-center/facility-hours"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Lap swimming is for ages 18 and up.",
+      "source": "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/pool-waterslide"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/memberships-daily-rates"
+    ],
+    "season": [
+     "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/pool-waterslide",
+     "https://www.cityofyankton.org/departments/parks-recreation-city-events/summit-activities-center/facility-hours"
+    ],
+    "access": {
+     "day_pass": [
+      "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/pool-waterslide",
+      "https://www.cityofyankton.org/departments/parks-recreation-city-events/summit-activities-center/facility-hours"
+     ],
+     "members": [
+      "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/pool-waterslide",
+      "https://www.cityofyankton.org/departments/parks-recreation-city-events/summit-activities-center/facility-hours"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/pool-waterslide",
+      "https://www.cityofyankton.org/departments/parks-recreation-city-events/summit-activities-center/facility-hours"
+     ],
+     "lap_swim": [
+      "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/pool-waterslide"
+     ],
+     "lessons": [
+      "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/pool-waterslide"
+     ]
+    },
+    "address": [
+     "https://www.cityofyankton.org/departments-services/parks-recreation/summit-activities-center/pool-waterslide"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

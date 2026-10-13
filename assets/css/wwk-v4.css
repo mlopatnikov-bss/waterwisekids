@@ -76,6 +76,9 @@ html:not(.wwk-v4) dialog.v4-sheet { display: none !important; }
   html.wwk-v4 .v4-tabbar svg { width: 24px; height: 24px; flex: none; }
   html.wwk-v4 .v4-tabbar [aria-current="page"] { color: var(--v4-brand-700) !important; }
   html.wwk-v4 .v4-tabbar [aria-current="page"] span { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+  /* WWK-POOLS-NATIONWIDE-025: pages reached from the More menu (e.g. Find a Pool) highlight More, not a lesson or guide tab */
+  html.wwk-v4 .v4-tabbar .v4-more-current { color: var(--v4-brand-700) !important; }
+  html.wwk-v4 .v4-tabbar .v4-more-current span { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
   html.wwk-v4 .v4-tabbar a:focus-visible, html.wwk-v4 .v4-tabbar button:focus-visible { outline: 3px solid var(--v4-brand-700); outline-offset: -3px; }
   html.wwk-v4 .v4-tabbar .lbl-short { display: none; }
   @media (max-width: 374px) { html.wwk-v4 .v4-tabbar .lbl-long { display: none; } html.wwk-v4 .v4-tabbar .lbl-short { display: inline; } }
@@ -108,6 +111,7 @@ html:not(.wwk-v4) dialog.v4-sheet { display: none !important; }
     font-size: 1rem; font-weight: 600; text-decoration: none !important; }
   html.wwk-v4 .v4-rows a small { display: block; font-weight: 400; color: var(--v4-muted); font-size: .8125rem; margin-top: 2px; }
   html.wwk-v4 .v4-rows a:focus-visible { outline: 3px solid var(--v4-brand-700); outline-offset: 2px; }
+  html.wwk-v4 .v4-rows a[aria-current="page"] { font-weight: 700; color: var(--v4-brand-700) !important; }   /* 025: current section in the More menu */
   html.wwk-v4 .v4-follow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
 
   /* ── Shared task components ──────────────────────────────────────────────────── */

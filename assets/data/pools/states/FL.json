@@ -1,0 +1,727 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "FL",
+ "name": "Florida",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-fl-fort-lauderdale-fort-lauderdale-aquatic-center",
+   "name": "Fort Lauderdale Aquatic Center",
+   "official_name": "Fort Lauderdale Aquatic Center",
+   "operator": "City of Fort Lauderdale Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "FL",
+   "region": "Florida",
+   "city": "Fort Lauderdale",
+   "address": {
+    "street": "501 Seabreeze Boulevard",
+    "locality": "Fort Lauderdale",
+    "region": "FL",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex",
+   "hours_fees_url": "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "lap_swim": "public"
+     }
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 12 must be with an adult or guardian aged 18 or older.",
+     "source": "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Public hours currently posted are for lap swim only; there is no general open swim schedule on the page.",
+     "source": "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Construction nearby may cause unexpected schedule changes or temporary closures.",
+     "source": "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool closes or changes hours for events, including a full closure for a November swim meet.",
+     "source": "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "All public swimmers must sign in at the entrance.",
+     "source": "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "No flotation devices or toys are allowed.",
+     "source": "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Parking is not included with admission and is paid separately.",
+     "source": "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied by an adult or guardian 18 or older.",
+     "source": "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+    },
+    {
+     "text": "Children not yet potty trained must wear a swim diaper.",
+     "source": "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "The posted Learn to Swim class covers Levels 3 to 5.",
+      "source": "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+     ],
+     "day_pass": [
+      "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+     ],
+     "lessons": [
+      "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+     ]
+    },
+    "address": [
+     "https://parks.fortlauderdale.gov/beach/aquatics/fort-lauderdale-aquatic-complex"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-fl-gainesville-dwight-h-hunter-pool",
+   "name": "Dwight H. Hunter Pool",
+   "official_name": "Dwight H. Hunter Pool",
+   "operator": "City of Gainesville Parks, Recreation and Cultural Affairs",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "FL",
+   "region": "Florida",
+   "city": "Gainesville",
+   "address": {
+    "street": "1100 NE 14th Street",
+    "locality": "Gainesville",
+    "region": "FL",
+    "postal_code": "32601",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.gainesvillefl.gov/Parks/Dwight-H.-Hunter-Pool",
+   "hours_fees_url": "https://www.gainesvillefl.gov/Parks/Dwight-H.-Hunter-Pool",
+   "setting": "unknown",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children must pass the swim test and be at least 10 years old to be left at the pool without an adult.",
+     "source": "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Any child who cannot pass the swim test must have an adult with them in the water.",
+     "source": "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers under 16 must pass a swim test and wear a wristband to use deep water, the slide or the diving boards.",
+     "source": "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool does not open to the public when freezing conditions are forecast.",
+     "source": "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool closes when lightning is detected within 10 miles of the facility.",
+     "source": "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Pools"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children must pass the swim test and be at least 10 years old to be dropped off without an adult.",
+     "source": "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Pools"
+    },
+    {
+     "text": "Any child who cannot pass the swim test must be accompanied by an adult in the pool.",
+     "source": "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Pools"
+    },
+    {
+     "text": "Children under 10 using the slide must have adult supervision.",
+     "source": "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Pools"
+    },
+    {
+     "text": "Swim diapers only; regular diapers are not allowed in the pool.",
+     "source": "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap lanes are only for paid lap swimmers; recreational swimmers may not use them.",
+      "source": "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Pools"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Fall lessons at Hunter Pool ran August 18 to September 10, 2026; check the lessons page for the next session.",
+      "source": "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Swim-Lessons"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Pools",
+     "https://www.gainesvillefl.gov/Parks/Dwight-H.-Hunter-Pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs",
+      "https://www.gainesvillefl.gov/Parks/Dwight-H.-Hunter-Pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.gainesvillefl.gov/Parks/Dwight-H.-Hunter-Pool"
+     ],
+     "lap_swim": [
+      "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Pools",
+      "https://www.gainesvillefl.gov/Parks/Dwight-H.-Hunter-Pool"
+     ],
+     "lessons": [
+      "https://www.gainesvillefl.gov/Government-Pages/Government/Departments/Parks-Recreation-Cultural-Affairs/Sports-Swimming-Fitness/Aquatics-Programs/Swim-Lessons"
+     ]
+    },
+    "address": [
+     "https://www.gainesvillefl.gov/Parks/Dwight-H.-Hunter-Pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-fl-orlando-college-park-pool",
+   "name": "College Park Pool",
+   "official_name": "College Park Pool",
+   "operator": "City of Orlando Families, Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "FL",
+   "region": "Florida",
+   "city": "Orlando",
+   "address": {
+    "street": "2411 Elizabeth Avenue",
+    "locality": "Orlando",
+    "region": "FL",
+    "postal_code": "32804",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Find-a-Pool/College-Park-Pool",
+   "hours_fees_url": "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Sign-Up-for-Swimming-Lessons-Activities/Swim-in-a-City-Pool",
+   "setting": "unknown",
+   "season": "year_round",
+   "access": [
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "unknown",
+     "season": "year_round",
+     "o": {
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "residents",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 10 must be with an adult at all times.",
+     "source": "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Sign-Up-for-Swimming-Lessons-Activities/Swim-in-a-City-Pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 6 and under must have an adult with them in the water.",
+     "source": "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Sign-Up-for-Swimming-Lessons-Activities/Swim-in-a-City-Pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Be prepared to show a government-issued ID or other proof of city residency.",
+     "source": "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Sign-Up-for-Swimming-Lessons-Activities/Swim-in-a-City-Pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 10 must be accompanied by an adult at all times.",
+     "source": "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Sign-Up-for-Swimming-Lessons-Activities/Swim-in-a-City-Pool"
+    },
+    {
+     "text": "Children 6 and under must be accompanied in the water by an adult at all times.",
+     "source": "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Sign-Up-for-Swimming-Lessons-Activities/Swim-in-a-City-Pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Swim lessons are offered in summer.",
+      "source": "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Find-a-Pool/College-Park-Pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Find-a-Pool/College-Park-Pool",
+     "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Sign-Up-for-Swimming-Lessons-Activities/Swim-in-a-City-Pool"
+    ],
+    "access": {
+     "residents": [
+      "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Sign-Up-for-Swimming-Lessons-Activities/Swim-in-a-City-Pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Find-a-Pool/College-Park-Pool"
+     ],
+     "lessons": [
+      "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Find-a-Pool/College-Park-Pool"
+     ]
+    },
+    "address": [
+     "https://www.orlando.gov/Community-Programs-Events/Sports-Aquatics-Fitness/Find-a-Pool/College-Park-Pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-fl-st-petersburg-north-shore-aquatic-complex",
+   "name": "North Shore Aquatic Complex",
+   "official_name": "North Shore Aquatic Complex",
+   "operator": "City of St. Petersburg Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "FL",
+   "region": "Florida",
+   "city": "St. Petersburg",
+   "address": {
+    "street": "901 North Shore Dr. NE",
+    "locality": "St. Petersburg",
+    "region": "FL",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.stpeteparksrec.org/parks___facilities/north_shore_aquatic_complex.php",
+   "hours_fees_url": "https://www.stpeteparksrec.org/parks___facilities/north_shore_aquatic_complex.php",
+   "setting": "unknown",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "year_round",
+     "o": {},
+     "label": "main"
+    },
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "year_round",
+     "o": {}
+    },
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "year_round",
+     "o": {}
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Swim lessons run on a summer session schedule.",
+      "source": "https://www.stpeteparksrec.org/programs___events/aquatics/swim_lessons.php"
+     },
+     {
+      "text": "Reduced-rate lessons require two forms of ID showing St. Petersburg residency; full-price lessons do not state a residency rule.",
+      "source": "https://www.stpeteparksrec.org/programs___events/aquatics/swim_lessons.php"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.stpeteparksrec.org/parks___facilities/north_shore_aquatic_complex.php",
+     "https://www.stpeteparksrec.org/programs___events/aquatics/swim_lessons.php"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.stpeteparksrec.org/parks___facilities/north_shore_aquatic_complex.php"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.stpeteparksrec.org/programs___events/aquatics/swim_lessons.php"
+     ]
+    },
+    "address": [
+     "https://www.stpeteparksrec.org/parks___facilities/north_shore_aquatic_complex.php"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-fl-tampa-danny-del-rio-pool",
+   "name": "Danny Del Rio Pool",
+   "official_name": "Danny Del Rio Pool",
+   "operator": "City of Tampa Parks and Recreation (Aquatics)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "FL",
+   "region": "Florida",
+   "city": "Tampa",
+   "address": {
+    "street": "10105 N Boulevard",
+    "locality": "Tampa",
+    "region": "FL",
+    "postal_code": "33612",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics/pool-facilities/danny-del-rio-pool-schedule",
+   "hours_fees_url": "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics",
+   "setting": "unknown",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public"
+     },
+     "label": "main"
+    },
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public"
+     },
+     "label": "activity"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "A parent or guardian must be at the pool with children 8 and under.",
+     "source": "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "All swimmers under 18 are swim tested and banded to show which areas they may use.",
+     "source": "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "A paid admission and a completed participant waiver are required for entry.",
+     "source": "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Business hours do not match programming hours, so check the pool's seasonal schedule before going.",
+     "source": "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics/pool-facilities"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "All City of Tampa pools close on certain city-wide closure dates around the holidays.",
+     "source": "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics/pool-facilities"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool closes during lightning or thunder and stays closed until 30 minutes after the last strike.",
+     "source": "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "A parent or guardian must be present in or around the pool with children 8 and under.",
+     "source": "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics"
+    },
+    {
+     "text": "If a child is given a red band after the swim test, the parent or guardian must stay within arm's reach.",
+     "source": "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics"
+    },
+    {
+     "text": "Children who are not toilet trained must wear swim diapers.",
+     "source": "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics",
+     "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics/pool-facilities"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics"
+     ],
+     "day_pass": [
+      "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics",
+      "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics/pool-facilities/danny-del-rio-pool-schedule"
+     ],
+     "lap_swim": [
+      "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics"
+     ],
+     "lessons": [
+      "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics/pool-facilities/danny-del-rio-pool-schedule",
+      "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics/swimming-lessons"
+     ]
+    },
+    "address": [
+     "https://www.tampa.gov/parks-and-recreation/activities-recreation/aquatics/pool-facilities"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

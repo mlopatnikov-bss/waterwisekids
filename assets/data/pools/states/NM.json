@@ -1,0 +1,617 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "NM",
+ "name": "New Mexico",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-nm-albuquerque-highland-pool",
+   "name": "Highland Pool",
+   "official_name": "Highland Pool",
+   "operator": "City of Albuquerque Parks & Recreation (Aquatics)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NM",
+   "region": "New Mexico",
+   "city": "Albuquerque",
+   "address": {
+    "street": "400 Jackson SE",
+    "locality": "Albuquerque",
+    "region": "NM",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/highland-pool",
+   "hours_fees_url": "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees",
+   "setting": "both",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "lap_swim": "public",
+      "open_swim": "public"
+     }
+    },
+    {
+     "s": "outdoor",
+     "e": "unknown",
+     "season": "unknown",
+     "o": {},
+     "label": "wading"
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Children 8 and under who pass a staff swim test can get a swimmer wristband and swim without a parent in the water.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/pool-rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "The pool is also used for Albuquerque Public Schools events.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/highland-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 10 must be accompanied by a responsible adult (venue page).",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/highland-pool"
+    },
+    {
+     "text": "Children 8 and under must have an adult in the water with them at all times.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/highland-pool"
+    },
+    {
+     "text": "Children 11 and younger are not admitted without an adult or legal guardian present (citywide rule).",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/pool-rules"
+    },
+    {
+     "text": "Children 8 and under, and any child using a flotation device, must have an adult in the water with them.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/pool-rules"
+    },
+    {
+     "text": "The parent or guardian must be in the pool within arm's reach of the child.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/pool-rules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Weekend lap swim has limited lanes.",
+      "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/highland-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/highland-pool"
+    ],
+    "season": [
+     "https://www.cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/highland-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees",
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/highland-pool"
+     ],
+     "members": [
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees",
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/highland-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/highland-pool"
+     ],
+     "lap_swim": [
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/highland-pool"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/highland-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nm-albuquerque-sierra-vista-pool",
+   "name": "Sierra Vista Pool",
+   "official_name": "Sierra Vista Pool",
+   "operator": "City of Albuquerque Parks & Recreation (Aquatics)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NM",
+   "region": "New Mexico",
+   "city": "Albuquerque",
+   "address": {
+    "street": "5001 Montaño NW",
+    "locality": "Albuquerque",
+    "region": "NM",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cabq.gov/parksandrecreation/recreation/swimming/outdoor-pools/sierra-vista-pool",
+   "hours_fees_url": "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "Summer season only; in 2026 it opened May 30 and ran weekends-only from August 8 to September 7.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/outdoor-pools/sierra-vista-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Each pool has a maximum bather load, so entry can close when full.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Children 8 and under who pass a staff swim test can get a swimmer wristband and swim without a parent in the water.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/pool-rules"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 11 and younger are not admitted without an adult or legal guardian present (citywide rule).",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/pool-rules"
+    },
+    {
+     "text": "Children 8 and under, and any child using a flotation device, must have an adult in the water with them.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/pool-rules"
+    },
+    {
+     "text": "The parent or guardian must be in the pool within arm's reach of the child.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/pool-rules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Recreational swim uses session wristbands sold on the day until capacity is reached; a limited number can be bought online up to two days ahead.",
+      "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.cabq.gov/parksandrecreation/recreation/swimming/outdoor-pools/sierra-vista-pool"
+    ],
+    "season": [
+     "https://www.cabq.gov/parksandrecreation/recreation/swimming/outdoor-pools/sierra-vista-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees"
+     ],
+     "members": [
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees",
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/outdoor-pools/sierra-vista-pool"
+     ],
+     "lap_swim": [
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees",
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/outdoor-pools/sierra-vista-pool"
+     ],
+     "lessons": [
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/swimming-lessons"
+     ]
+    },
+    "address": [
+     "https://www.cabq.gov/parksandrecreation/recreation/swimming/outdoor-pools/sierra-vista-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nm-albuquerque-west-mesa-aquatic-center",
+   "name": "West Mesa Aquatic Center",
+   "official_name": "West Mesa Aquatic Center",
+   "operator": "City of Albuquerque Parks & Recreation (Aquatics)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "NM",
+   "region": "New Mexico",
+   "city": "Albuquerque",
+   "address": {
+    "street": "6705 Fortuna NW",
+    "locality": "Albuquerque",
+    "region": "NM",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center",
+   "hours_fees_url": "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees",
+   "setting": "both",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {},
+     "label": "recreation"
+    },
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {},
+     "label": "recreation"
+    },
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "lap_swim": "public"
+     },
+     "label": "olympic"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "ticket",
+     "text": "Everyone, including non-swimmers and pass holders, needs a wristband; in-person wristbands are same-day only and sell until capacity is reached.",
+     "source": "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "A set number of wristbands is sold per session based on health-code bather load limits.",
+     "source": "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Everyone must leave between sessions so the facility can be cleaned.",
+     "source": "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Some days are closed for events; check the closures list before going.",
+     "source": "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Children 8 and under who pass a staff swim test can get a swimmer wristband and swim without a parent in the water.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/pool-rules"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children younger than 10 must be accompanied by a responsible adult (venue page).",
+     "source": "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center"
+    },
+    {
+     "text": "Children 8 and under must have an adult in the water with them at all times.",
+     "source": "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center"
+    },
+    {
+     "text": "Children 11 and younger are not admitted without an adult or legal guardian present (citywide rule).",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/pool-rules"
+    },
+    {
+     "text": "Children 8 and under, and any child using a flotation device, must have an adult in the water with them.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/pool-rules"
+    },
+    {
+     "text": "The parent or guardian must be in the pool within arm's reach of the child.",
+     "source": "https://www.cabq.gov/parksandrecreation/recreation/swimming/pool-rules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center",
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees"
+     ],
+     "members": [
+      "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center",
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center",
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/admission-fees"
+     ],
+     "lap_swim": [
+      "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center"
+     ],
+     "lessons": [
+      "https://www.cabq.gov/parksandrecreation/recreation/swimming/swimming-lessons"
+     ]
+    },
+    "address": [
+     "https://cabq.gov/parksandrecreation/recreation/swimming/indoor-pools/west-mesa-aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nm-santa-fe-bicentennial-pool",
+   "name": "Bicentennial Pool",
+   "official_name": "Bicentennial Pool",
+   "operator": "City of Santa Fe Recreation Division",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NM",
+   "region": "New Mexico",
+   "city": "Santa Fe",
+   "address": {
+    "street": "1121 Alto St.",
+    "locality": "Santa Fe",
+    "region": "NM",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://santafenm.gov/community-services/recreation/bicentennial-pool",
+   "hours_fees_url": "https://santafenm.gov/community-services/recreation/bicentennial-pool",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    },
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     },
+     "label": "tot"
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "Open in summer only, typically from the day after Memorial Day to Labor Day.",
+     "source": "https://santafenm.gov/community-services/recreation/bicentennial-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Kids 11 to 17 must be checked in by a parent who gives emergency contact information before they can be left alone.",
+     "source": "https://santafenm.gov/community-services/recreation/bicentennial-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "All city pools close during a lightning watch.",
+     "source": "https://santafenm.gov/community-services/recreation/recreation-policies"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Kids 7 and under must have a parent in the water with them at all times.",
+     "source": "https://santafenm.gov/community-services/recreation/bicentennial-pool"
+    },
+    {
+     "text": "Kids 10 and under must be accompanied by an adult in the facility.",
+     "source": "https://santafenm.gov/community-services/recreation/bicentennial-pool"
+    },
+    {
+     "text": "Kids 11 to 17 may stay unaccompanied after a parent checks them in.",
+     "source": "https://santafenm.gov/community-services/recreation/bicentennial-pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://santafenm.gov/community-services/recreation/bicentennial-pool"
+    ],
+    "season": [
+     "https://santafenm.gov/community-services/recreation/bicentennial-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://santafenm.gov/community-services/recreation/bicentennial-pool"
+     ],
+     "members": [
+      "https://santafenm.gov/community-services/recreation/bicentennial-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://santafenm.gov/community-services/recreation/bicentennial-pool"
+     ],
+     "lap_swim": [
+      "https://santafenm.gov/community-services/recreation/bicentennial-pool"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://santafenm.gov/community-services/recreation/bicentennial-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

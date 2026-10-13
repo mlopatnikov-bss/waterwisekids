@@ -1,0 +1,376 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "KY",
+ "name": "Kentucky",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ky-danville-bunny-davis-pool",
+   "name": "Bunny Davis Pool",
+   "official_name": "Bunny Davis Pool (William E. \"Bunny\" Davis Recreation Complex)",
+   "operator": "Danville-Boyle County Parks & Recreation (City of Danville)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "KY",
+   "region": "Kentucky",
+   "city": "Danville",
+   "address": {
+    "street": "110 Man-O-War Drive",
+    "locality": "Danville",
+    "region": "KY",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://danvilleky.org/374/William-E-Bunny-Davis-Recreation-Complex",
+   "hours_fees_url": "https://danvilleky.org/374/William-E-Bunny-Davis-Recreation-Complex",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "unknown",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 14 and under must be accompanied by an adult.",
+     "source": "https://danvilleky.org/374/William-E-Bunny-Davis-Recreation-Complex"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Pool hours can differ from the recreation complex's hours; call ahead.",
+     "source": "https://danvilleky.org/374/William-E-Bunny-Davis-Recreation-Complex"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 14 and under must be accompanied by an adult.",
+     "source": "https://danvilleky.org/374/William-E-Bunny-Davis-Recreation-Complex"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://danvilleky.org/374/William-E-Bunny-Davis-Recreation-Complex",
+      "https://danvilleky.org/490/Swim"
+     ],
+     "day_pass": [
+      "https://danvilleky.org/374/William-E-Bunny-Davis-Recreation-Complex",
+      "https://danvilleky.org/490/Swim"
+     ],
+     "members": [
+      "https://danvilleky.org/374/William-E-Bunny-Davis-Recreation-Complex",
+      "https://danvilleky.org/490/Swim"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://danvilleky.org/374/William-E-Bunny-Davis-Recreation-Complex"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ky-owensboro-combest-pool",
+   "name": "Combest Pool",
+   "official_name": "Combest Pool",
+   "operator": "Owensboro Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "KY",
+   "region": "Kentucky",
+   "city": "Owensboro",
+   "address": {
+    "street": "1530 McJohnson Avenue",
+    "locality": "Owensboro",
+    "region": "KY",
+    "postal_code": "42303",
+    "precision": "street_number"
+   },
+   "official_url": "https://owensboroparks.org/facilities/combest_pool/index.php",
+   "hours_fees_url": "https://owensboroparks.org/facilities/combest_pool/index.php",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool that opens Memorial Day weekend; it is closed for the season now.",
+     "source": "https://owensboroparks.org/facilities/combest_pool/index.php"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Anyone 15 and younger must come with someone 16 or older to get in.",
+     "source": "https://owensboroparks.org/facilities/combest_pool/index.php"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Anyone 15 and younger must be accompanied by someone 16 or older to enter.",
+     "source": "https://owensboroparks.org/facilities/combest_pool/index.php"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://owensboroparks.org/facilities/combest_pool/index.php",
+     "https://owensboroparks.org/news_detail_T2_R88.php"
+    ],
+    "access": {
+     "public_admission": [
+      "https://owensboroparks.org/facilities/combest_pool/index.php"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://owensboroparks.org/facilities/combest_pool/index.php",
+      "https://owensboroparks.org/news_detail_T2_R84.php"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://owensboroparks.org/news_detail_T2_R84.php"
+     ]
+    },
+    "address": [
+     "https://owensboroparks.org/facilities/combest_pool/index.php"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ky-paducah-noble-park-pool",
+   "name": "Noble Park Pool",
+   "official_name": "Noble Park Pool",
+   "operator": "City of Paducah Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "KY",
+   "region": "Kentucky",
+   "city": "Paducah",
+   "address": {
+    "street": "2801 Park Avenue",
+    "locality": "Paducah",
+    "region": "KY",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.paducahky.gov/node/2995",
+   "hours_fees_url": "https://www.paducahky.gov/node/2995",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; the 2026 season ran from late May into early August.",
+     "source": "https://www.paducahky.gov/node/2995"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 13 must be with a parent, guardian or responsible adult (18+) for their whole visit.",
+     "source": "https://www.paducahky.gov/news/2026-season-noble-park-pool-and-spraygrounds"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Teens 13 to 17 must come with an adult unless they have a Pool Teen Access Pass.",
+     "source": "https://www.paducahky.gov/news/2026-season-noble-park-pool-and-spraygrounds"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers must pass a swim test before using the diving area.",
+     "source": "https://www.paducahky.gov/node/2995"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 13 must be with a parent, guardian or responsible adult (18+) for their whole visit.",
+     "source": "https://www.paducahky.gov/news/2026-season-noble-park-pool-and-spraygrounds"
+    },
+    {
+     "text": "Teens 13 to 17 need an adult with them unless they hold a Pool Teen Access Pass.",
+     "source": "https://www.paducahky.gov/node/2995"
+    },
+    {
+     "text": "Younger children who are not potty trained must wear a swim diaper and be actively supervised.",
+     "source": "https://www.paducahky.gov/node/2995"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Children must be at least 4 to join swim lessons.",
+      "source": "https://www.paducahky.gov/node/2995"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.paducahky.gov/news/2026-season-noble-park-pool-and-spraygrounds",
+     "https://www.paducahky.gov/node/2995"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.paducahky.gov/node/2995"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.paducahky.gov/node/2995"
+     ]
+    },
+    "address": [
+     "https://www.paducahky.gov/node/2995"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

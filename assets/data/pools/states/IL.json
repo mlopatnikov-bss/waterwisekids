@@ -1,0 +1,674 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "IL",
+ "name": "Illinois",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-il-chicago-portage-park-pools",
+   "name": "Portage Park Pools (Indoor and Outdoor)",
+   "official_name": "Portage Park Pools (Indoor and Outdoor)",
+   "operator": "Chicago Park District",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "IL",
+   "region": "Illinois",
+   "city": "Chicago",
+   "address": {
+    "street": "4100 N. Long Ave.",
+    "locality": "Chicago",
+    "region": "IL",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.chicagoparkdistrict.com/parks-facilities/portage-pool-indoor",
+   "hours_fees_url": "https://files.chicagoparkdistrict.com/2026-09/Sept%2021-Dec%2013%2C%202026%20Portage%20Pool%20Schedule.pdf?VersionId=Aex2Y6HlWF4FrDCc1QBJvR049IrogDE8",
+   "setting": "both",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "members",
+      "lessons": "unknown"
+     }
+    },
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Swimming is by scheduled session type (open swim, youth swim, adult swim, parent and child); check the posted schedule.",
+     "source": "https://www.chicagoparkdistrict.com/parks-facilities/portage-pool-indoor"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 8 and under who are not at least 8 inches taller than the shallow end must be accompanied by an adult.",
+     "source": "https://www.chicagoparkdistrict.com/facilities/swimming-pools"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "closure",
+     "text": "The indoor pool has modified hours on some holidays (Oct. 12, Nov. 11, Nov. 26).",
+     "source": "https://files.chicagoparkdistrict.com/2026-09/Sept%2021-Dec%2013%2C%202026%20Portage%20Pool%20Schedule.pdf?VersionId=Aex2Y6HlWF4FrDCc1QBJvR049IrogDE8"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "The outdoor pool is summer-only, typically mid-June to August.",
+     "source": "https://www.chicagoparkdistrict.com/facilities/swimming-pools"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 8 and under who are not at least 8 inches taller than the shallow end must be accompanied by an adult.",
+     "source": "https://www.chicagoparkdistrict.com/facilities/swimming-pools"
+    },
+    {
+     "text": "During Parent & Child Swim, parents or guardians must accompany children in the water.",
+     "source": "https://files.chicagoparkdistrict.com/2026-09/Sept%2021-Dec%2013%2C%202026%20Portage%20Pool%20Schedule.pdf?VersionId=Aex2Y6HlWF4FrDCc1QBJvR049IrogDE8"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Adult Swim sessions are for swimmers over 18.",
+      "source": "https://files.chicagoparkdistrict.com/2026-09/Sept%2021-Dec%2013%2C%202026%20Portage%20Pool%20Schedule.pdf?VersionId=Aex2Y6HlWF4FrDCc1QBJvR049IrogDE8"
+     },
+     {
+      "text": "During Parent & Child Swim, an adult must be in the water with children, with a maximum of 3 children per adult.",
+      "source": "https://files.chicagoparkdistrict.com/2026-09/Sept%2021-Dec%2013%2C%202026%20Portage%20Pool%20Schedule.pdf?VersionId=Aex2Y6HlWF4FrDCc1QBJvR049IrogDE8"
+     },
+     {
+      "text": "Youth Swim sessions have a minimum height requirement of 42 inches.",
+      "source": "https://files.chicagoparkdistrict.com/2026-09/Sept%2021-Dec%2013%2C%202026%20Portage%20Pool%20Schedule.pdf?VersionId=Aex2Y6HlWF4FrDCc1QBJvR049IrogDE8"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.chicagoparkdistrict.com/facilities/swimming-pools",
+     "https://www.chicagoparkdistrict.com/parks-facilities/portage-pool-indoor",
+     "https://www.chicagoparkdistrict.com/parks-facilities/portage-pool-outdoor"
+    ],
+    "season": [
+     "https://www.chicagoparkdistrict.com/facilities/swimming-pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.chicagoparkdistrict.com/facilities/swimming-pools"
+     ],
+     "members": [
+      "https://www.chicagoparkdistrict.com/facilities/swimming-pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://files.chicagoparkdistrict.com/2026-09/Sept%2021-Dec%2013%2C%202026%20Portage%20Pool%20Schedule.pdf?VersionId=Aex2Y6HlWF4FrDCc1QBJvR049IrogDE8",
+      "https://www.chicagoparkdistrict.com/facilities/swimming-pools"
+     ],
+     "lap_swim": [
+      "https://files.chicagoparkdistrict.com/2026-09/Sept%2021-Dec%2013%2C%202026%20Portage%20Pool%20Schedule.pdf?VersionId=Aex2Y6HlWF4FrDCc1QBJvR049IrogDE8",
+      "https://www.chicagoparkdistrict.com/facilities/swimming-pools"
+     ],
+     "lessons": [
+      "https://files.chicagoparkdistrict.com/2026-09/Sept%2021-Dec%2013%2C%202026%20Portage%20Pool%20Schedule.pdf?VersionId=Aex2Y6HlWF4FrDCc1QBJvR049IrogDE8"
+     ]
+    },
+    "address": [
+     "https://www.chicagoparkdistrict.com/parks-facilities/portage-pool-indoor"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-il-springfield-eisenhower-indoor-pool",
+   "name": "Eisenhower Indoor Pool",
+   "official_name": "Eisenhower Indoor Pool (Eisenhower Aquatic Center)",
+   "operator": "Springfield Park District",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "IL",
+   "region": "Illinois",
+   "city": "Springfield",
+   "address": {
+    "street": "2351 E Cornell Ave",
+    "locality": "Springfield",
+    "region": "IL",
+    "postal_code": "62703",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.springfieldparks.org/locations/42/eisenhower-indoor-pool/springfield/facility-details",
+   "hours_fees_url": "https://www.springfieldparks.org/locations/42/eisenhower-indoor-pool/springfield/facility-details",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "program_registration_only"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "program_registration_only",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 10 and under must be accompanied and supervised by a responsible adult 16 or older.",
+     "source": "https://www.springfieldparks.org/activities-and-events/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers may be asked to pass a swim test before entering deep water.",
+     "source": "https://www.springfieldparks.org/activities-and-events/aquatics"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and under must be accompanied and supervised by a responsible adult 16 or older.",
+     "source": "https://www.springfieldparks.org/activities-and-events/aquatics"
+    },
+    {
+     "text": "Children under 6 must have an adult 16 or older within arm's reach at all times.",
+     "source": "https://www.springfieldparks.org/activities-and-events/aquatics"
+    },
+    {
+     "text": "Children wearing flotation devices must stay within arm's reach of a swimming adult.",
+     "source": "https://www.springfieldparks.org/activities-and-events/aquatics"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap swim runs at set hours; check the posted swim schedule.",
+      "source": "https://www.springfieldparks.org/locations/42/eisenhower-indoor-pool/springfield/facility-details"
+     },
+     {
+      "text": "Lap swim pricing is for ages 13 and up.",
+      "source": "https://www.springfieldparks.org/locations/42/eisenhower-indoor-pool/springfield/facility-details"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.springfieldparks.org/locations/42/eisenhower-indoor-pool/springfield/facility-details"
+    ],
+    "season": [
+     "https://www.springfieldparks.org/activities-and-events/aquatics",
+     "https://www.springfieldparks.org/locations/42/eisenhower-indoor-pool/springfield/facility-details"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.springfieldparks.org/locations/42/eisenhower-indoor-pool/springfield/facility-details"
+     ],
+     "program_registration_only": [
+      "https://www.springfieldparks.org/locations/42/eisenhower-indoor-pool/springfield/facility-details"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://www.springfieldparks.org/activities-and-events/aquatics",
+      "https://www.springfieldparks.org/locations/42/eisenhower-indoor-pool/springfield/facility-details"
+     ],
+     "lessons": [
+      "https://www.springfieldparks.org/activities-and-events/aquatics"
+     ]
+    },
+    "address": [
+     "https://www.springfieldparks.org/locations/42/eisenhower-indoor-pool/springfield/facility-details"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-il-springfield-nelson-center-outdoor-pool",
+   "name": "Nelson Center Outdoor Pool",
+   "official_name": "Nelson Center Outdoor Pool",
+   "operator": "Springfield Park District",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "IL",
+   "region": "Illinois",
+   "city": "Springfield",
+   "address": {
+    "street": "1601 North 5th Street",
+    "locality": "Springfield",
+    "region": "IL",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.springfieldparks.org/locations/56/nelson-center-outdoor-pool/springfield/facility-details",
+   "hours_fees_url": "https://www.springfieldparks.org/locations/56/nelson-center-outdoor-pool/springfield/facility-details",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Closed for the season until summer 2027.",
+     "source": "https://www.springfieldparks.org/locations/56/nelson-center-outdoor-pool/springfield/facility-details"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Only clear or see-through mesh bags are allowed past the admissions desk during public swim.",
+     "source": "https://www.springfieldparks.org/locations/56/nelson-center-outdoor-pool/springfield/facility-details"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.springfieldparks.org/locations/56/nelson-center-outdoor-pool/springfield/facility-details"
+    ],
+    "season": [
+     "https://www.springfieldparks.org/locations/56/nelson-center-outdoor-pool/springfield/facility-details"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.springfieldparks.org/locations/56/nelson-center-outdoor-pool/springfield/facility-details"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.springfieldparks.org/locations/56/nelson-center-outdoor-pool/springfield/facility-details"
+     ],
+     "lap_swim": [
+      "https://www.springfieldparks.org/locations/56/nelson-center-outdoor-pool/springfield/facility-details"
+     ],
+     "lessons": [
+      "https://www.springfieldparks.org/activities-and-events/aquatics"
+     ]
+    },
+    "address": [
+     "https://www.springfieldparks.org/locations/56/nelson-center-outdoor-pool/springfield/facility-details"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-il-urbana-crystal-lake-park-family-aquatic-center",
+   "name": "Crystal Lake Park Family Aquatic Center",
+   "official_name": "Crystal Lake Park Family Aquatic Center",
+   "operator": "Urbana Park District",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "IL",
+   "region": "Illinois",
+   "city": "Urbana",
+   "address": {
+    "street": "1401 N. Broadway",
+    "locality": "Urbana",
+    "region": "IL",
+    "postal_code": "61801",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.urbanaparks.org/crystal-lake-family-aquatic-center",
+   "hours_fees_url": "https://www.urbanaparks.org/crystal-lake-family-aquatic-center",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "residents",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Closed for the season now.",
+     "source": "https://www.urbanaparks.org/crystal-lake-family-aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 11 must be accompanied by a paying adult.",
+     "source": "https://www.urbanaparks.org/upload/facilities/crystal-lake-park-family-aquatic-center/CLPFAC_Pool_Rules.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Resident rates require proof of residency (Urbana or Champaign Park District) at the pay window.",
+     "source": "https://www.urbanaparks.org/crystal-lake-family-aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Riders must be at least 48 inches tall to use any waterslide.",
+     "source": "https://www.urbanaparks.org/crystal-lake-family-aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Swimming stops for lightning or thunder, for 30 minutes after the last observation.",
+     "source": "https://www.urbanaparks.org/upload/facilities/crystal-lake-park-family-aquatic-center/CLPFAC_Pool_Rules.pdf"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Youth under age 11 must be accompanied by a paying adult any time they visit.",
+     "source": "https://www.urbanaparks.org/upload/facilities/crystal-lake-park-family-aquatic-center/CLPFAC_Pool_Rules.pdf"
+    },
+    {
+     "text": "Parents or guardians are responsible for supervising their children.",
+     "source": "https://www.urbanaparks.org/upload/facilities/crystal-lake-park-family-aquatic-center/CLPFAC_Pool_Rules.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.urbanaparks.org/crystal-lake-family-aquatic-center"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.urbanaparks.org/crystal-lake-family-aquatic-center",
+      "https://www.urbanaparks.org/upload/facilities/crystal-lake-park-family-aquatic-center/CLPFAC_Pool_Rules.pdf"
+     ],
+     "residents": [
+      "https://www.urbanaparks.org/crystal-lake-family-aquatic-center",
+      "https://www.urbanaparks.org/upload/facilities/crystal-lake-park-family-aquatic-center/CLPFAC_Pool_Rules.pdf"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.urbanaparks.org/crystal-lake-family-aquatic-center"
+     ],
+     "lap_swim": [
+      "https://www.urbanaparks.org/crystal-lake-family-aquatic-center"
+     ],
+     "lessons": [
+      "https://www.urbanaparks.org/aquatic-programs"
+     ]
+    },
+    "address": [
+     "https://www.urbanaparks.org/crystal-lake-family-aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-il-urbana-urbana-indoor-aquatic-center",
+   "name": "Urbana Indoor Aquatic Center",
+   "official_name": "Urbana Indoor Aquatic Center",
+   "operator": "Urbana Park District (in partnership with Urbana School District)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "IL",
+   "region": "Illinois",
+   "city": "Urbana",
+   "address": {
+    "street": "102 E. Michigan",
+    "locality": "Urbana",
+    "region": "IL",
+    "postal_code": "61801",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.urbanaparks.org/urbana-indoor-aquatic-center",
+   "hours_fees_url": "https://www.urbanaparks.org/urbana-indoor-aquatic-center",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Closed on several listed holidays and some evenings.",
+     "source": "https://www.urbanaparks.org/urbana-indoor-aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Park only in the blue-lined spaces; other spaces are reserved for school district staff and cars may be towed.",
+     "source": "https://www.urbanaparks.org/urbana-indoor-aquatic-center"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Public swim times are limited and change by season; fall break (Oct 12-16) has its own hours, so check the schedule.",
+      "source": "https://www.urbanaparks.org/urbana-indoor-aquatic-center"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Lap swim is for swimmers aged 15 and up.",
+      "source": "https://www.urbanaparks.org/urbana-indoor-aquatic-center"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.urbanaparks.org/urbana-indoor-aquatic-center"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.urbanaparks.org/urbana-indoor-aquatic-center"
+     ],
+     "members": [
+      "https://www.urbanaparks.org/urbana-indoor-aquatic-center"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.urbanaparks.org/urbana-indoor-aquatic-center"
+     ],
+     "lap_swim": [
+      "https://www.urbanaparks.org/urbana-indoor-aquatic-center"
+     ],
+     "lessons": [
+      "https://www.urbanaparks.org/urbana-indoor-aquatic-center"
+     ]
+    },
+    "address": [
+     "https://www.urbanaparks.org/urbana-indoor-aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

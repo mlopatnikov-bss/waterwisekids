@@ -1,0 +1,567 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "OH",
+ "name": "Ohio",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-oh-cincinnati-mt-auburn-indoor-pool",
+   "name": "Mt. Auburn Indoor Pool",
+   "official_name": "Mt. Auburn Indoor Pool",
+   "operator": "Cincinnati Recreation Commission (City of Cincinnati)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "OH",
+   "region": "Ohio",
+   "city": "Cincinnati",
+   "address": {
+    "street": "2034 Young St.",
+    "locality": "Cincinnati",
+    "region": "OH",
+    "postal_code": "45219",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cincinnati-oh.gov/crc/aquatics/mt-auburn-indoor-pool/",
+   "hours_fees_url": "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "members"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Everyone entering, including infants and supervising adults, needs a pool membership or must pay the daily user fee.",
+     "source": "https://www.cincinnati-oh.gov/crc/aquatics/pool-membership/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool is not open on holidays, and the schedule can change.",
+     "source": "https://www.cincinnati-oh.gov/sites/crc/assets/PDFs/Mt.-Auburn-Fall-26-Schedule-and-Program-Info.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children age 8 must be accompanied and supervised by an adult (18+) during open swim.",
+     "source": "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 7 and younger must wear a red wristband and be actively supervised within touch by an adult (18+), with no more than three children per adult.",
+     "source": "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/"
+    },
+    {
+     "text": "Children age 8 must be accompanied and supervised by an adult (18+) during open swim.",
+     "source": "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/"
+    },
+    {
+     "text": "Children 9 to 11 may swim without an adult only with a signed parent permission form on file at the pool.",
+     "source": "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Swim lessons require a CRC pool membership.",
+      "source": "https://www.cincinnati-oh.gov/sites/crc/assets/PDFs/Mt.-Auburn-Fall-26-Schedule-and-Program-Info.pdf"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://cincinnati-oh.gov/crc/find-a-facility/aquatics-facility",
+     "https://www.cincinnati-oh.gov/sites/crc/assets/PDFs/Mt.-Auburn-Fall-26-Schedule-and-Program-Info.pdf"
+    ],
+    "season": [
+     "https://cincinnati-oh.gov/crc/find-a-facility/aquatics-facility"
+    ],
+    "access": {
+     "day_pass": [
+      "https://www.cincinnati-oh.gov/crc/aquatics/pool-membership/",
+      "https://www.cincinnati-oh.gov/sites/crc/assets/PDFs/Mt.-Auburn-Fall-26-Schedule-and-Program-Info.pdf"
+     ],
+     "members": [
+      "https://www.cincinnati-oh.gov/crc/aquatics/pool-membership/",
+      "https://www.cincinnati-oh.gov/sites/crc/assets/PDFs/Mt.-Auburn-Fall-26-Schedule-and-Program-Info.pdf"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.cincinnati-oh.gov/sites/crc/assets/PDFs/Mt.-Auburn-Fall-26-Schedule-and-Program-Info.pdf"
+     ],
+     "lap_swim": [
+      "https://www.cincinnati-oh.gov/sites/crc/assets/PDFs/Mt.-Auburn-Fall-26-Schedule-and-Program-Info.pdf"
+     ],
+     "lessons": [
+      "https://www.cincinnati-oh.gov/crc/aquatics/mt-auburn-indoor-pool/",
+      "https://www.cincinnati-oh.gov/sites/crc/assets/PDFs/Mt.-Auburn-Fall-26-Schedule-and-Program-Info.pdf"
+     ]
+    },
+    "address": [
+     "https://www.cincinnati-oh.gov/sites/crc/assets/PDFs/Mt.-Auburn-Fall-26-Schedule-and-Program-Info.pdf"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-oh-cincinnati-otto-armleder-memorial-regional-aquatic-center-at-dunham",
+   "name": "Otto Armleder Memorial Regional Aquatic Center at Dunham",
+   "official_name": "Otto Armleder Memorial Regional Aquatic Center at Dunham (Dunham Pool)",
+   "operator": "Cincinnati Recreation Commission (City of Cincinnati)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "OH",
+   "region": "Ohio",
+   "city": "Cincinnati",
+   "address": {
+    "street": "4356 Dunham Lane",
+    "locality": "Cincinnati",
+    "region": "OH",
+    "postal_code": "45238",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/",
+   "hours_fees_url": "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "On Friday to Sunday, late-afternoon entry is for members only because of capacity; daily-fee guests must arrive earlier.",
+     "source": "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "This is a summer facility.",
+     "source": "https://www.cincinnati-oh.gov/crc/aquatics/pool-membership/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Everyone entering, including infants and supervising adults, needs a membership or must pay the daily user fee.",
+     "source": "https://www.cincinnati-oh.gov/crc/aquatics/pool-membership/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children age 8 must be accompanied and supervised by an adult (18+) during open swim.",
+     "source": "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 7 and younger must wear a red wristband and be actively supervised within touch by an adult (18+), with no more than three children per adult.",
+     "source": "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/"
+    },
+    {
+     "text": "Children age 8 must be accompanied and supervised by an adult (18+) during open swim.",
+     "source": "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/"
+    },
+    {
+     "text": "Children 9 to 11 may swim without an adult only with a signed parent permission form on file at the pool.",
+     "source": "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.cincinnati-oh.gov/crc/aquatics/pool-membership/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/",
+      "https://www.cincinnati-oh.gov/crc/aquatics/pool-membership/"
+     ],
+     "members": [
+      "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/",
+      "https://www.cincinnati-oh.gov/crc/aquatics/pool-membership/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.cincinnati-oh.gov/crc/aquatics/pool-information/"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.cincinnati-oh.gov/crc/aquatics/pool-membership/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-oh-columbus-columbus-aquatics-center",
+   "name": "Columbus Aquatics Center",
+   "official_name": "Columbus Aquatics Center",
+   "operator": "City of Columbus Recreation and Parks Department",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "OH",
+   "region": "Ohio",
+   "city": "Columbus",
+   "address": {
+    "street": "1160 Hunter Ave.",
+    "locality": "Columbus",
+    "region": "OH",
+    "postal_code": "43201",
+    "precision": "street_number"
+   },
+   "official_url": "https://columbusrecparks.com/facilities/columbusaquaticscenter",
+   "hours_fees_url": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/indoorpasses/",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Closed about 30 days in late summer for maintenance, and no public open or lap swim during the summer.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/faq/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Everyone 3 and older needs a Columbus Recreation and Parks Leisure Card to enter.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/indoorpasses/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 13 must be accompanied by an adult during all open and lap swim times.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/indoorpasses/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Walk-ins are accepted as space allows.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/faq/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Non-resident fees apply to indoor season passes.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/indoorpasses/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 13 must be accompanied and supervised by an adult over 18.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/indoorpasses/"
+    },
+    {
+     "text": "Children under 9 must stay within arm's reach of an adult over 18, who must be in swimwear and stay with them in and out of the water.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/indoorpasses/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Children must pass a swim test and swim at an exercise pace to join lap swim.",
+      "source": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/indoorpasses/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/indoorpasses/",
+     "https://columbusrecparks.com/facilities/aquatics/pools/pools-frequently-asked-questions/"
+    ],
+    "season": [],
+    "access": {
+     "day_pass": [
+      "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/faq/"
+     ],
+     "members": [
+      "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/faq/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/faq/"
+     ],
+     "lap_swim": [
+      "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/faq/",
+      "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/indoorpasses/"
+     ],
+     "lessons": [
+      "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/swimminglessons/"
+     ]
+    },
+    "address": [
+     "https://columbusrecparks.com/facilities/columbusaquaticscenter"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-oh-columbus-tuttle-pool",
+   "name": "Tuttle Pool",
+   "official_name": "Tuttle Pool",
+   "operator": "City of Columbus Recreation and Parks Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "OH",
+   "region": "Ohio",
+   "city": "Columbus",
+   "address": {
+    "street": "240 W. Oakland Ave.",
+    "locality": "Columbus",
+    "region": "OH",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://columbusrecparks.com/facilities/aquatics/pools/",
+   "hours_fees_url": "https://columbusrecparks.com/facilities/aquatics/pools/",
+   "setting": "outdoor",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Closed for the season now; check the city's pools page for next summer's opening.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/pools/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Pools have capacity limits; check the city's pools page for real-time capacity and closures before going.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/pools/pools-frequently-asked-questions/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Everyone 3 and older needs a Columbus Recreation and Parks Leisure Card for pool entry.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/pools/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Pools are cashless; a credit or debit card is needed to pay entry.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/pools/pools-frequently-asked-questions/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 13 must be with an adult; under 9 must stay within arm's reach of an adult in swimwear.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/pools/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 13 must be accompanied and supervised by an adult over 18.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/pools/"
+    },
+    {
+     "text": "Children under 9 must be within arm's reach of an adult over 18, who must stay with them in and out of the water.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/pools/"
+    },
+    {
+     "text": "Children 9 to 12 must come with a parent or guardian but need not be directly supervised in the water; 13 and up may come alone.",
+     "source": "https://columbusrecparks.com/facilities/aquatics/pools/pools-frequently-asked-questions/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://columbusrecparks.com/facilities/aquatics/pools/"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://columbusrecparks.com/facilities/aquatics/pools/",
+      "https://columbusrecparks.com/facilities/aquatics/pools/pools-frequently-asked-questions/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://columbusrecparks.com/facilities/aquatics/pools/pools-frequently-asked-questions/"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://columbusrecparks.com/facilities/aquatics/pools/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

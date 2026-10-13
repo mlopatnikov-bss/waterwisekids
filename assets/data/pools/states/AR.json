@@ -1,0 +1,416 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "AR",
+ "name": "Arkansas",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ar-bentonville-bentonville-community-center",
+   "name": "Bentonville Community Center (natatorium)",
+   "official_name": "Bentonville Community Center (natatorium)",
+   "operator": "City of Bentonville Parks & Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "AR",
+   "region": "Arkansas",
+   "city": "Bentonville",
+   "address": {
+    "street": "1101 SW Citizens Circle",
+    "locality": "Bentonville",
+    "region": "AR",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.bentonville.ar.gov/359/Community-Center",
+   "hours_fees_url": "https://www.bentonville.ar.gov/438/Aquatics",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "lap_swim": "public"
+     }
+    },
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "season": "unknown",
+     "o": {
+      "open_swim": "unknown"
+     },
+     "label": "leisure"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Non-member access is confirmed only for lap swim in the competition pool; check with the center before visiting for open swim.",
+     "source": "https://www.bentonville.ar.gov/438/Aquatics"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Preschool Play sessions are reserved for children 5 and under, with only the zero-entry pool open.",
+      "source": "https://www.bentonville.ar.gov/438/Aquatics"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Lap swimmers must be at least 12 years old.",
+      "source": "https://www.bentonville.ar.gov/438/Aquatics"
+     },
+     {
+      "text": "Only a limited number of lap lanes may be open during program hours; expect to share lanes.",
+      "source": "https://www.bentonville.ar.gov/438/Aquatics"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.bentonville.ar.gov/1988/Membership",
+     "https://www.bentonville.ar.gov/359/Community-Center"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.bentonville.ar.gov/438/Aquatics"
+     ],
+     "members": [
+      "https://www.bentonville.ar.gov/1988/Membership",
+      "https://www.bentonville.ar.gov/438/Aquatics"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.bentonville.ar.gov/438/Aquatics"
+     ],
+     "lap_swim": [
+      "https://www.bentonville.ar.gov/438/Aquatics"
+     ],
+     "lessons": [
+      "https://www.bentonville.ar.gov/1391/Group-Swim-Lessons"
+     ]
+    },
+    "address": [
+     "https://www.bentonville.ar.gov/359/Community-Center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ar-bentonville-melvin-ford-aquatic-center",
+   "name": "Melvin Ford Aquatic Center",
+   "official_name": "Melvin Ford Aquatic Center",
+   "operator": "City of Bentonville Parks & Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "AR",
+   "region": "Arkansas",
+   "city": "Bentonville",
+   "address": {
+    "street": "2000 NE Memorial Park Square",
+    "locality": "Bentonville",
+    "region": "AR",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.bentonville.ar.gov/881/Melvin-Ford-Aquatic-Center",
+   "hours_fees_url": "https://www.bentonville.ar.gov/881/Melvin-Ford-Aquatic-Center",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     },
+     "label": "competition"
+    },
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {},
+     "label": "wading"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only outdoor pool, closed until the 2027 season.",
+     "source": "https://www.bentonville.ar.gov/Facilities/Facility/Details/Melvin-Form-Aquatic-Center-30"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "In 2026 the facility was closed to the public for the Trifest for MS event on the weekend before Labor Day.",
+     "source": "https://www.bentonville.ar.gov/881/Melvin-Ford-Aquatic-Center"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Swimmers must be 12 or older for lap swim outside open swim times.",
+      "source": "https://www.bentonville.ar.gov/881/Melvin-Ford-Aquatic-Center"
+     },
+     {
+      "text": "The number of lap lanes varies through the day.",
+      "source": "https://www.bentonville.ar.gov/881/Melvin-Ford-Aquatic-Center"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.bentonville.ar.gov/Facilities/Facility/Details/Melvin-Form-Aquatic-Center-30"
+    ],
+    "season": [
+     "https://www.bentonville.ar.gov/1297/Melvin-Ford-Swim-Lessons",
+     "https://www.bentonville.ar.gov/881/Melvin-Ford-Aquatic-Center"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.bentonville.ar.gov/881/Melvin-Ford-Aquatic-Center"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.bentonville.ar.gov/881/Melvin-Ford-Aquatic-Center"
+     ],
+     "lap_swim": [
+      "https://www.bentonville.ar.gov/881/Melvin-Ford-Aquatic-Center"
+     ],
+     "lessons": [
+      "https://www.bentonville.ar.gov/1297/Melvin-Ford-Swim-Lessons"
+     ]
+    },
+    "address": [
+     "https://www.bentonville.ar.gov/881/Melvin-Ford-Aquatic-Center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ar-fayetteville-wilson-park-pool",
+   "name": "Wilson Park Pool",
+   "official_name": "Wilson Park Pool",
+   "operator": "City of Fayetteville Parks, Natural Resources and Cultural Affairs Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "AR",
+   "region": "Arkansas",
+   "city": "Fayetteville",
+   "address": {
+    "street": "675 N. Park Avenue",
+    "locality": "Fayetteville",
+    "region": "AR",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.fayetteville-ar.gov/483/Wilson-Park-Pool",
+   "hours_fees_url": "https://www.fayetteville-ar.gov/483/Wilson-Park-Pool",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool (Memorial Day to Labor Day); closed until the 2027 season.",
+     "source": "https://www.fayetteville-ar.gov/483/Wilson-Park-Pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Day care, camp and other groups should notify the pool five days ahead.",
+     "source": "https://www.fayetteville-ar.gov/483/Wilson-Park-Pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 15 must be accompanied by someone 15 or older.",
+     "source": "https://www.fayetteville-ar.gov/483/Wilson-Park-Pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap swim sessions are adult lap swim.",
+      "source": "https://www.fayetteville-ar.gov/483/Wilson-Park-Pool"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Parents are not allowed on the shallow end of the deck once lessons start; they can wait by the concession area or diving well.",
+      "source": "https://www.fayetteville-ar.gov/4012/Swim-Team-and-Swim-Lessons"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.fayetteville-ar.gov/483/Wilson-Park-Pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.fayetteville-ar.gov/483/Wilson-Park-Pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.fayetteville-ar.gov/483/Wilson-Park-Pool"
+     ],
+     "lap_swim": [
+      "https://www.fayetteville-ar.gov/483/Wilson-Park-Pool"
+     ],
+     "lessons": [
+      "https://www.fayetteville-ar.gov/4012/Swim-Team-and-Swim-Lessons"
+     ]
+    },
+    "address": [
+     "https://www.fayetteville-ar.gov/483/Wilson-Park-Pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

@@ -1,0 +1,543 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "NY",
+ "name": "New York",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ny-queens-astoria-astoria-pool",
+   "name": "Astoria Pool",
+   "official_name": "Astoria Pool",
+   "operator": "NYC Department of Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NY",
+   "region": "New York",
+   "city": "Queens (Astoria)",
+   "address": {
+    "street": "19th Street and 23rd Drive (Astoria Park)",
+    "locality": "Queens (Astoria)",
+    "region": "NY",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.nycgovparks.org/parks/astoria-park/facilities/outdoor-pools",
+   "hours_fees_url": "https://www.nycgovparks.org/parks/astoria-park/facilities/outdoor-pools",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     },
+     "label": "olympic"
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Open only in the summer pool season; closed the rest of the year.",
+     "source": "https://www.nycgovparks.org/parks/astoria-park/facilities/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "On busy days there may be a line, timed swim sessions and limits on how long you can swim.",
+     "source": "https://www.nycgovparks.org/parks/astoria-park/facilities/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Bring a sturdy lock; locks are required to enter and luggage locks are not accepted.",
+     "source": "https://www.nycgovparks.org/facilities/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "A swimsuit is required to enter the pool area, and only plain white shirts or hats are allowed as cover-ups on deck.",
+     "source": "https://www.nycgovparks.org/parks/astoria-park/facilities/outdoor-pools"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Babies and toddlers can wear swim diapers in the water.",
+     "source": "https://www.nycgovparks.org/parks/astoria-park/facilities/outdoor-pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.nycgovparks.org/facilities/outdoor-pools",
+     "https://www.nycgovparks.org/parks/astoria-park/facilities/outdoor-pools"
+    ],
+    "season": [
+     "https://www.nycgovparks.org/parks/astoria-park/facilities/outdoor-pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.nycgovparks.org/facilities/indoor-pools",
+      "https://www.nycgovparks.org/facilities/outdoor-pools",
+      "https://www.nycgovparks.org/parks/astoria-park/facilities/outdoor-pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.nycgovparks.org/facilities/outdoor-pools",
+      "https://www.nycgovparks.org/parks/astoria-park/facilities/outdoor-pools"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.nycgovparks.org/parks/astoria-park/facilities/outdoor-pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ny-queens-flushing-flushing-meadows-corona-park-aquatics-center",
+   "name": "Flushing Meadows Corona Park Aquatics Center",
+   "official_name": "Flushing Meadows Corona Park Aquatics Center (Pool & Rink)",
+   "operator": "NYC Department of Parks & Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "NY",
+   "region": "New York",
+   "city": "Queens (Flushing)",
+   "address": {
+    "street": "Avery Avenue and 131 Street (Flushing Meadows Corona Park)",
+    "locality": "Queens (Flushing)",
+    "region": "NY",
+    "postal_code": null,
+    "precision": "street"
+   },
+   "official_url": "https://www.nycgovparks.org/parks/flushing-meadows-corona-park/facilities/indoor-pools",
+   "hours_fees_url": "https://www.nycgovparks.org/facilities/recreationcenters/Q099/schedule",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "restricted",
+     "season": "year_round",
+     "o": {
+      "open_swim": "members",
+      "lap_swim": "members",
+      "lessons": "unknown"
+     },
+     "label": "olympic"
+    }
+   ],
+   "public_access": "restricted",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "You need an NYC Parks Recreation Center membership to use this pool.",
+     "source": "https://www.nycgovparks.org/parks/flushing-meadows-corona-park/facilities/indoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Join in person with a registration form and ID; youth may use a student ID, passport or birth certificate.",
+     "source": "http://www.nycgovparks.org/programs/recreation-centers/membership"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Bridge construction inside the park blocks cars on Meridian Road, so plan a detour.",
+     "source": "https://www.nycgovparks.org/parks/flushing-meadows-corona-park/facilities/indoor-pools"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap swim sessions are listed for adults and seniors.",
+      "source": "https://www.nycgovparks.org/facilities/recreationcenters/Q099/schedule"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Children's Learn to Swim places are filled by lottery after a water test.",
+      "source": "https://www.nycgovparks.org/facilities/recreationcenters/Q099/schedule"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.nycgovparks.org/parks/flushing-meadows-corona-park/facilities/indoor-pools"
+    ],
+    "season": [
+     "https://www.nycgovparks.org/parks/flushing-meadows-corona-park/facilities/indoor-pools"
+    ],
+    "access": {
+     "members": [
+      "https://www.nycgovparks.org/parks/flushing-meadows-corona-park/facilities/indoor-pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.nycgovparks.org/facilities/recreationcenters/Q099/schedule"
+     ],
+     "lap_swim": [
+      "https://www.nycgovparks.org/facilities/recreationcenters/Q099/schedule",
+      "https://www.nycgovparks.org/parks/flushing-meadows-corona-park/facilities/indoor-pools"
+     ],
+     "lessons": [
+      "https://www.nycgovparks.org/facilities/recreationcenters/Q099/schedule"
+     ]
+    },
+    "address": [
+     "https://www.nycgovparks.org/parks/flushing-meadows-corona-park/facilities/indoor-pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ny-syracuse-southwest-community-center-pool",
+   "name": "Southwest Community Center Pool",
+   "official_name": "Southwest Community Center Pool",
+   "operator": "City of Syracuse Department of Parks, Recreation & Youth Programs",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NY",
+   "region": "New York",
+   "city": "Syracuse",
+   "address": {
+    "street": "230 Lincoln Avenue at Clover Street (behind the Southwest Community Center)",
+    "locality": "Syracuse",
+    "region": "NY",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features",
+   "hours_fees_url": "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers under 42 inches tall (floor to underarm) must pass a swim test at each visit or stay within arm's length of a parent in the water.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers shorter than the pool's posted height must pass a swim test at every visit or stay within arm's length of a parent or guardian in the water.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "escort",
+     "text": "One parent or guardian may supervise at most three swimmers who are below the height requirement.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Masks, fins, snorkels, water toys, noodles and water wings are not allowed.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool may close when Syracuse City School District schools close or cancel activities during the school year.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children shorter than 42 inches (floor to underarm) must pass a swim test or stay within arm's length of a parent in the water.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    },
+    {
+     "text": "Children below the height requirement who cannot pass the swim test must stay within arm's length of a parent or guardian standing in the water.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    },
+    {
+     "text": "Infants must wear properly fitted swim diapers with elastic bottoms.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Lessons require online registration, which opens about two weeks before classes start.",
+      "source": "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules",
+      "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules",
+      "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+     ],
+     "lap_swim": [
+      "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+     ],
+     "lessons": [
+      "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+     ]
+    },
+    "address": [
+     "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ny-syracuse-thornden-park-pool",
+   "name": "Thornden Park Pool",
+   "official_name": "Thornden Park Pool",
+   "operator": "City of Syracuse Department of Parks, Recreation & Youth Programs",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NY",
+   "region": "New York",
+   "city": "Syracuse",
+   "address": {
+    "street": "610 S. Beech Street (Thornden Park)",
+    "locality": "Syracuse",
+    "region": "NY",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features",
+   "hours_fees_url": "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers under 36 inches tall (floor to underarm) must pass a swim test at each visit or stay within arm's length of a parent in the water.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers shorter than the pool's posted height must pass a swim test at every visit or stay within arm's length of a parent or guardian in the water.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "escort",
+     "text": "One parent or guardian may supervise at most three swimmers who are below the height requirement.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Masks, fins, snorkels, water toys, noodles and water wings are not allowed.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Open only in summer, typically mid-June to mid-August.",
+     "source": "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "There are no lockers at outdoor pools.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children shorter than 36 inches (floor to underarm) must pass a swim test or stay within arm's length of a parent in the water.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    },
+    {
+     "text": "Children below the height requirement who cannot pass the swim test must stay within arm's length of a parent or guardian standing in the water.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    },
+    {
+     "text": "Infants must wear properly fitted swim diapers with elastic bottoms.",
+     "source": "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+    ],
+    "season": [
+     "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.syr.gov/Departments/Parks-Recreation/Pool-Rules",
+      "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.syr.gov/Living/Our-Community/Parks-Recreation-Youth-Services/Find-Activities-and-Events/Swimming-Spray-Features"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

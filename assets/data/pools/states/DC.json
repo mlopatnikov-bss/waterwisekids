@@ -1,0 +1,636 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "DC",
+ "name": "Washington, DC",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-dc-washington-deanwood-aquatic-center",
+   "name": "Deanwood Aquatic Center",
+   "official_name": "Deanwood Aquatic Center",
+   "operator": "DC Department of Parks and Recreation (DPR)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "DC",
+   "region": "Washington, DC",
+   "city": "Washington",
+   "address": {
+    "street": "1350 49th Street, NE",
+    "locality": "Washington",
+    "region": "DC",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://dpr.dc.gov/page/deanwood-aquatic-center",
+   "hours_fees_url": "https://dpr.dc.gov/page/indoor-pools",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {}
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "residents",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Non-residents must pay to use DC Department of Parks and Recreation pools.",
+     "source": "https://dpr.dc.gov/page/aquatics-admission-and-fees"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "ticket",
+     "text": "Non-residents must buy a swim pass before the visit (online or at a DPR recreation center) and bring the receipt; DPR does not accept cash.",
+     "source": "https://dpr.dc.gov/service/get-swim-pass"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "id",
+     "text": "A photo ID is required to enter DPR indoor pools.",
+     "source": "https://dpr.dc.gov/page/aquatics-admission-and-fees"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers may be asked to pass a swim test before using the deep end.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Children and their guardians must leave the pool during the scheduled safety breaks.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "hours",
+     "text": "The slide is offline during DPR programs.",
+     "source": "https://dpr.dc.gov/page/indoor-pools"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 13 must be accompanied and supervised by an adult 18 or older at all times.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "text": "Children under 6 need an adult in swimwear within arm's length in the pool, with no more than three young children per adult.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "text": "One parent may supervise no more than six children ages 6 to 12.",
+     "source": "https://dpr.dc.gov/poolrules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://dpr.dc.gov/page/deanwood-aquatic-center"
+    ],
+    "season": [
+     "https://dpr.dc.gov/poolrules"
+    ],
+    "access": {
+     "public_admission": [
+      "https://dpr.dc.gov/page/family-aquatics",
+      "https://dpr.dc.gov/page/indoor-pools",
+      "https://dpr.dc.gov/service/get-swim-pass"
+     ],
+     "day_pass": [
+      "https://dpr.dc.gov/page/family-aquatics",
+      "https://dpr.dc.gov/page/indoor-pools",
+      "https://dpr.dc.gov/service/get-swim-pass"
+     ],
+     "residents": [
+      "https://dpr.dc.gov/page/family-aquatics",
+      "https://dpr.dc.gov/page/indoor-pools",
+      "https://dpr.dc.gov/service/get-swim-pass"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://dpr.dc.gov/page/deanwood-aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-dc-washington-francis-pool",
+   "name": "Francis Pool",
+   "official_name": "Francis Pool",
+   "operator": "DC Department of Parks and Recreation (DPR)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "DC",
+   "region": "Washington, DC",
+   "city": "Washington",
+   "address": {
+    "street": "2435 N Street, NW",
+    "locality": "Washington",
+    "region": "DC",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://dpr.dc.gov/page/francis-pool",
+   "hours_fees_url": "https://dpr.dc.gov/page/outdoor-pools",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "residents",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Non-residents must pay to use DC Department of Parks and Recreation pools.",
+     "source": "https://dpr.dc.gov/page/aquatics-admission-and-fees"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "ticket",
+     "text": "Non-residents must buy a swim pass before the visit (online or at a DPR recreation center) and bring the receipt; DPR does not accept cash.",
+     "source": "https://dpr.dc.gov/service/get-swim-pass"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers may be asked to pass a swim test before using the deep end.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Children and their guardians must leave the pool during the scheduled safety breaks.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "Open in summer only; the pool is closed for the rest of 2026.",
+     "source": "https://dpr.dc.gov/page/francis-pool"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "capacity",
+     "text": "When the pool is full, entry is one-in, one-out.",
+     "source": "https://dpr.dc.gov/page/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "A government-issued photo ID is required to enter all DPR aquatic facilities.",
+     "source": "https://dpr.dc.gov/page/francis-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 13 must be accompanied and supervised by an adult 18 or older at all times.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "text": "Children under 6 need an adult in swimwear within arm's length in the pool, with no more than three young children per adult.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "text": "One parent may supervise no more than six children ages 6 to 12.",
+     "source": "https://dpr.dc.gov/poolrules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://dpr.dc.gov/page/francis-pool"
+    ],
+    "season": [
+     "https://dpr.dc.gov/page/francis-pool",
+     "https://dpr.dc.gov/page/outdoor-pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://dpr.dc.gov/page/outdoor-pools",
+      "https://dpr.dc.gov/service/get-swim-pass"
+     ],
+     "day_pass": [
+      "https://dpr.dc.gov/page/outdoor-pools",
+      "https://dpr.dc.gov/service/get-swim-pass"
+     ],
+     "residents": [
+      "https://dpr.dc.gov/page/outdoor-pools",
+      "https://dpr.dc.gov/service/get-swim-pass"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://dpr.dc.gov/page/francis-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-dc-washington-takoma-aquatic-center",
+   "name": "Takoma Aquatic Center",
+   "official_name": "Takoma Aquatic Center",
+   "operator": "DC Department of Parks and Recreation (DPR)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "DC",
+   "region": "Washington, DC",
+   "city": "Washington",
+   "address": {
+    "street": "300 Van Buren Street, NW",
+    "locality": "Washington",
+    "region": "DC",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://dpr.dc.gov/page/takoma-aquatic-center",
+   "hours_fees_url": "https://dpr.dc.gov/page/indoor-pools",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {}
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "residents",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Non-residents must pay to use DC Department of Parks and Recreation pools.",
+     "source": "https://dpr.dc.gov/page/aquatics-admission-and-fees"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "ticket",
+     "text": "Non-residents must buy a swim pass before the visit (online or at a DPR recreation center) and bring the receipt; DPR does not accept cash.",
+     "source": "https://dpr.dc.gov/service/get-swim-pass"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "id",
+     "text": "A photo ID is required to enter DPR indoor pools.",
+     "source": "https://dpr.dc.gov/page/aquatics-admission-and-fees"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers may be asked to pass a swim test before using the deep end.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Children and their guardians must leave the pool during the scheduled safety breaks.",
+     "source": "https://dpr.dc.gov/poolrules"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 13 must be accompanied and supervised by an adult 18 or older at all times.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "text": "Children under 6 need an adult in swimwear within arm's length in the pool, with no more than three young children per adult.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "text": "One parent may supervise no more than six children ages 6 to 12.",
+     "source": "https://dpr.dc.gov/poolrules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://dpr.dc.gov/page/takoma-aquatic-center"
+    ],
+    "season": [
+     "https://dpr.dc.gov/poolrules"
+    ],
+    "access": {
+     "public_admission": [
+      "https://dpr.dc.gov/page/family-aquatics",
+      "https://dpr.dc.gov/page/indoor-pools",
+      "https://dpr.dc.gov/service/get-swim-pass"
+     ],
+     "day_pass": [
+      "https://dpr.dc.gov/page/family-aquatics",
+      "https://dpr.dc.gov/page/indoor-pools",
+      "https://dpr.dc.gov/service/get-swim-pass"
+     ],
+     "residents": [
+      "https://dpr.dc.gov/page/family-aquatics",
+      "https://dpr.dc.gov/page/indoor-pools",
+      "https://dpr.dc.gov/service/get-swim-pass"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://dpr.dc.gov/page/takoma-aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-dc-washington-wilson-aquatic-center",
+   "name": "Wilson Aquatic Center",
+   "official_name": "Wilson Aquatic Center",
+   "operator": "DC Department of Parks and Recreation (DPR)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "DC",
+   "region": "Washington, DC",
+   "city": "Washington",
+   "address": {
+    "street": "4551 Fort Drive, NW",
+    "locality": "Washington",
+    "region": "DC",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://dpr.dc.gov/page/wilson-aquatic-center",
+   "hours_fees_url": "https://dpr.dc.gov/page/indoor-pools",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {}
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "residents",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Non-residents must pay to use DC Department of Parks and Recreation pools.",
+     "source": "https://dpr.dc.gov/page/aquatics-admission-and-fees"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "ticket",
+     "text": "Non-residents must buy a swim pass before the visit (online or at a DPR recreation center) and bring the receipt; DPR does not accept cash.",
+     "source": "https://dpr.dc.gov/service/get-swim-pass"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "id",
+     "text": "A photo ID is required to enter DPR indoor pools.",
+     "source": "https://dpr.dc.gov/page/aquatics-admission-and-fees"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers may be asked to pass a swim test before using the deep end.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Children and their guardians must leave the pool during the scheduled safety breaks.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "hours",
+     "text": "On school days the leisure (children's) pool and family changing areas are closed to the public during the school day.",
+     "source": "https://dpr.dc.gov/page/wilson-aquatic-center"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "hours",
+     "text": "Access to the leisure pool may be limited during DPR programs.",
+     "source": "https://dpr.dc.gov/page/indoor-pools"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 13 must be accompanied and supervised by an adult 18 or older at all times.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "text": "Children under 6 need an adult in swimwear within arm's length in the pool, with no more than three young children per adult.",
+     "source": "https://dpr.dc.gov/poolrules"
+    },
+    {
+     "text": "One parent may supervise no more than six children ages 6 to 12.",
+     "source": "https://dpr.dc.gov/poolrules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://dpr.dc.gov/page/wilson-aquatic-center"
+    ],
+    "season": [
+     "https://dpr.dc.gov/poolrules"
+    ],
+    "access": {
+     "public_admission": [
+      "https://dpr.dc.gov/page/family-aquatics",
+      "https://dpr.dc.gov/page/indoor-pools",
+      "https://dpr.dc.gov/service/get-swim-pass"
+     ],
+     "day_pass": [
+      "https://dpr.dc.gov/page/family-aquatics",
+      "https://dpr.dc.gov/page/indoor-pools",
+      "https://dpr.dc.gov/service/get-swim-pass"
+     ],
+     "residents": [
+      "https://dpr.dc.gov/page/family-aquatics",
+      "https://dpr.dc.gov/page/indoor-pools",
+      "https://dpr.dc.gov/service/get-swim-pass"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://dpr.dc.gov/page/wilson-aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

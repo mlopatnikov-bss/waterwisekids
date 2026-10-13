@@ -1,0 +1,491 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "WV",
+ "name": "West Virginia",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-wv-charleston-kanawha-city-community-center-pool",
+   "name": "Kanawha City Community Center Pool",
+   "official_name": "Kanawha City Community Center Pool",
+   "operator": "City of Charleston Parks and Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "WV",
+   "region": "West Virginia",
+   "city": "Charleston",
+   "address": {
+    "street": "3511 Venable Ave",
+    "locality": "Charleston",
+    "region": "WV",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "http://getactivecwv.com/kanawha-city",
+   "hours_fees_url": "https://www.charlestonwv.gov/government/city-departments/parks-recreation",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "escort",
+     "text": "Children under 12 must be accompanied by an adult.",
+     "source": "https://www.charlestonwv.gov/government/city-departments/parks-recreation"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "Open only in summer, from Memorial Day weekend through Labor Day.",
+     "source": "https://www.charlestonwv.gov/government/city-departments/parks-recreation"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Pools can close for weather or maintenance; check the city's pool status updates before going.",
+     "source": "https://www.charlestonwv.gov/government/city-departments/parks-recreation"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied by an adult.",
+     "source": "https://www.charlestonwv.gov/government/city-departments/parks-recreation"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "http://getactivecwv.com/kanawha-city"
+    ],
+    "season": [
+     "http://getactivecwv.com/kanawha-city",
+     "https://www.charlestonwv.gov/government/city-departments/parks-recreation"
+    ],
+    "access": {
+     "public_admission": [
+      "http://getactivecwv.com/kanawha-city",
+      "https://www.charlestonwv.gov/government/city-departments/parks-recreation",
+      "https://www.charlestonwv.gov/news-items/mon-06012026-1603/cato-pool-update"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "http://getactivecwv.com/kanawha-city"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-wv-morgantown-marilla-pool-complex",
+   "name": "Marilla Pool Complex",
+   "official_name": "Marilla Pool Complex",
+   "operator": "Morgantown Board of Parks and Recreation Commissioners (BOPARC)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "WV",
+   "region": "West Virginia",
+   "city": "Morgantown",
+   "address": {
+    "street": "705 East Brockway Avenue",
+    "locality": "Morgantown",
+    "region": "WV",
+    "postal_code": "26501",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.boparc.org/pools.html",
+   "hours_fees_url": "https://www.boparc.org/pools.html",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "Summer season only; closed until the 2027 season.",
+     "source": "https://www.boparc.org/pools.html"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "escort",
+     "text": "Children under 12 must be accompanied and supervised by a paying guardian 16 or older at all times.",
+     "source": "https://www.boparc.org/pools.html"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "age",
+     "text": "Riders must be 48 inches tall to use the slides, and life jackets are not allowed on slides.",
+     "source": "https://www.boparc.org/pools.html"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "other",
+     "text": "Hourly adult swim: children must leave the pools for a short adult-only period each hour.",
+     "source": "https://www.boparc.org/pools.html"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Everyone entering pays admission, including non-swimmers.",
+     "source": "https://www.boparc.org/pools.html"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied and supervised by a paying guardian age 16 or older at all times.",
+     "source": "https://www.boparc.org/pools.html"
+    },
+    {
+     "text": "Only US Coast Guard-approved life jackets are allowed; no swimmies or inflatables.",
+     "source": "https://www.boparc.org/pools.html"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.boparc.org/marilla-park.html"
+    ],
+    "season": [
+     "https://www.boparc.org/pools.html"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.boparc.org/pools.html"
+     ],
+     "day_pass": [
+      "https://www.boparc.org/pools.html"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.boparc.org/pools.html"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-wv-morgantown-peak-health-aquatic-center-at-mylan-park",
+   "name": "Peak Health Aquatic Center at Mylan Park",
+   "official_name": "Peak Health Aquatic Center at Mylan Park (Huntington Community Pool)",
+   "operator": "Mylan Park Foundation, Inc.",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "WV",
+   "region": "West Virginia",
+   "city": "Morgantown",
+   "address": {
+    "street": "1847 Fitness Way",
+    "locality": "Morgantown",
+    "region": "WV",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://mylanpark.org/aquatic-center/",
+   "hours_fees_url": "https://mylanpark.org/visit-passes/",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Non-members under 14 cannot enter without an adult present.",
+     "source": "https://mylanpark.org/visit-passes/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Anyone 17 or younger needs a waiver signed by an adult 18 or older before their first visit.",
+     "source": "https://mylanpark.org/visit-passes/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "ticket",
+     "text": "Day passes are good for one entry only; you cannot leave and re-enter on the same pass.",
+     "source": "https://mylanpark.org/visit-passes/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Hours vary; check the current schedule before visiting.",
+     "source": "https://mylanpark.org/facility-hours/aquatics/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 14 who are not members must be with an adult.",
+     "source": "https://mylanpark.org/visit-passes/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://mylanpark.org/aquatic-center/"
+    ],
+    "season": [
+     "https://mylanpark.org/aquatic-center/",
+     "https://mylanpark.org/community-pool/"
+    ],
+    "access": {
+     "day_pass": [
+      "https://mylanpark.org/visit-passes/"
+     ],
+     "members": [
+      "https://mylanpark.org/visit-passes/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://mylanpark.org/visit-passes/"
+     ],
+     "lap_swim": [
+      "https://mylanpark.org/community-pool/",
+      "https://mylanpark.org/visit-passes/"
+     ],
+     "lessons": [
+      "https://mylanpark.org/community-pool/",
+      "https://mylanpark.org/learn-to-swim/"
+     ]
+    },
+    "address": [
+     "https://mylanpark.org/facility-hours/aquatics/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-wv-wheeling-wheeling-park-swimming-pool",
+   "name": "Wheeling Park Swimming Pool",
+   "official_name": "Wheeling Park Swimming Pool",
+   "operator": "Wheeling Park (Oglebay / Wheeling Park official site)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "WV",
+   "region": "West Virginia",
+   "city": "Wheeling",
+   "address": {
+    "street": "1801 National Road",
+    "locality": "Wheeling",
+    "region": "WV",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://oglebay.com/explore/wheeling-park/recreational-activities/",
+   "hours_fees_url": "https://oglebay.com/explore/wheeling-park/recreational-activities/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "Summer season only; closed for the rest of 2026.",
+     "source": "https://oglebay.com/explore/wheeling-park/recreational-activities/"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "swim_test",
+     "text": "To ride the waterslide, swimmers must be 4 feet tall or pass a swim test.",
+     "source": "https://oglebay.com/explore/wheeling-park/recreational-activities/"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://oglebay.com/explore/wheeling-park/recreational-activities/"
+    ],
+    "season": [
+     "https://oglebay.com/explore/wheeling-park/recreational-activities/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://oglebay.com/explore/wheeling-park/recreational-activities/"
+     ],
+     "day_pass": [
+      "https://oglebay.com/explore/wheeling-park/recreational-activities/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://oglebay.com/explore/wheeling-park/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

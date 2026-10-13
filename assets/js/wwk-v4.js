@@ -28,7 +28,7 @@
   if (window.__wwkV4) return;
   var state = window.__wwkV4 = { status: 'waiting', built: false, active: false, full: false, reason: '' };
   var doc = document, root = doc.documentElement;
-  var CSS_URL = '/assets/css/wwk-v4.css?v=20261011r1';
+  var CSS_URL = '/assets/css/wwk-v4.css?v=025nav1';
   var DATA_URL = '/assets/data/wwk-v4-data.json?v=20261010v4';
   var mq = window.matchMedia ? window.matchMedia('(max-width: 768px)') : null;
   function isPhone() { return mq ? mq.matches : window.innerWidth <= 768; }
@@ -242,13 +242,17 @@
   function build() {
     // More sheet: every header destination (so Jobs, About, Contact... stay one tap from the menu) + follow links
     more = sheet('v4-more', 'Menu');
+    var moreCurrent = false;
     var links = [];
     each(doc.querySelectorAll('header .nav-links > li > a'), function (a) { links.push({ href: a.getAttribute('href'), text: a.textContent.trim() }); });
-    if (!links.length) links = [{ href: '/education/', text: 'Water Safety' }, { href: '/swim-lessons/', text: 'Find Lessons' }, { href: '/aquatic-jobs/', text: 'Aquatic Jobs' }, { href: '/about/', text: 'About' }, { href: '/contact/', text: 'Contact' }];
+    if (!links.length) links = [{ href: '/education/', text: 'Water Safety' }, { href: '/swim-lessons/', text: 'Find Lessons' }, { href: '/find-a-pool/', text: 'Find a Pool' }, { href: '/aquatic-jobs/', text: 'Aquatic Jobs' }, { href: '/about/', text: 'About' }, { href: '/contact/', text: 'Contact' }];
     var have = {}; links.forEach(function (l) { have[l.href] = 1; });
     [{ href: '/tools/', text: 'Free tools & printables' }, { href: '/cartoons/', text: 'Cartoons' }].forEach(function (l) { if (!have[l.href]) links.push(l); });
+    // Current section (WWK-POOLS-NATIONWIDE-025): the row whose section path contains this page is marked, e.g. Find a Pool on /find-a-pool/ pages
+    var inSection = function (h) { return !!h && h !== '/' && h.charAt(0) === '/' && h.charAt(h.length - 1) === '/' && path.indexOf(h) === 0; };
+    moreCurrent = links.some(function (l) { return inSection(l.href); });
     var html = '<div class="v4-group"><h3>WaterWiseKids</h3><ul class="v4-rows">' + links.map(function (l) {
-      return '<li><a href="' + esc(l.href) + '">' + esc(l.text) + '</a></li>';
+      return '<li><a href="' + esc(l.href) + '"' + (inSection(l.href) ? ' aria-current="page"' : '') + '>' + esc(l.text) + '</a></li>';
     }).join('') + '</ul></div>';
     var soc = doc.querySelectorAll('header .wwk-soc-row a');
     if (soc.length) {
@@ -292,7 +296,7 @@
       var tb = el('nav', { 'class': 'v4-tabbar', 'aria-label': 'Primary' });
       tb.innerHTML = tab('home', '/', I.home, 'Home') + tab('guides', '/education/', I.guides, 'Guides') +
         tab('lessons', '/swim-lessons/', I.pin, 'Find lessons', 'Lessons') + tab('tools', '/tools/', I.tools, 'Tools') +
-        '<button type="button" data-v4-open="more" aria-haspopup="dialog" aria-expanded="false" aria-controls="v4-more">' + I.more + '<span>More</span></button>';
+        '<button type="button"' + (!cur && moreCurrent ? ' class="v4-more-current"' : '') + ' data-v4-open="more" aria-haspopup="dialog" aria-expanded="false" aria-controls="v4-more">' + I.more + '<span>More</span></button>';
       doc.body.appendChild(add(tb));
     }
 

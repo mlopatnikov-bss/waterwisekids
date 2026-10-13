@@ -1,0 +1,675 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "VA",
+ "name": "Virginia",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-va-alexandria-chinquapin-park-recreation-center-aquatics-facility",
+   "name": "Chinquapin Park Recreation Center & Aquatics Facility",
+   "official_name": "Chinquapin Park Recreation Center & Aquatics Facility",
+   "operator": "City of Alexandria Department of Recreation, Parks & Cultural Activities (RPCA)",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "VA",
+   "region": "Virginia",
+   "city": "Alexandria",
+   "address": {
+    "street": "3210 King St.",
+    "locality": "Alexandria",
+    "region": "VA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility",
+   "hours_fees_url": "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "The pool is busy at peak times and may reach capacity; you may be asked to wait for space.",
+     "source": "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Guests 13 and older must show a photo ID.",
+     "source": "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The facility closes each year for maintenance in late summer (Aug. 29 to Sept. 11 in 2026).",
+     "source": "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 12 and under must be with an adult at all times; children 5 and under need the adult in the water within arm's reach.",
+     "source": "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+    },
+    {
+     "text": "Teens 13 to 17 must be supervised by a paying adult unless a parent has filed a Teen Registration Form.",
+     "source": "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+    },
+    {
+     "text": "Anyone wearing a life jacket must stay within arm's reach of an adult; water wings and inflatable floats are not allowed.",
+     "source": "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Children must pass a swim test before using the diving well or diving board.",
+      "source": "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Lane availability varies with programs and events; check the monthly pool schedule.",
+      "source": "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+    ],
+    "season": [
+     "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+     ],
+     "day_pass": [
+      "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+     ],
+     "lap_swim": [
+      "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.alexandriava.gov/recreation-centers/chinquapin-park-recreation-center-aquatics-facility"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-va-alexandria-old-town-pool",
+   "name": "Old Town Pool",
+   "official_name": "Old Town Pool",
+   "operator": "City of Alexandria Department of Recreation, Parks & Cultural Activities (RPCA)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "VA",
+   "region": "Virginia",
+   "city": "Alexandria",
+   "address": {
+    "street": "1609 Cameron St.",
+    "locality": "Alexandria",
+    "region": "VA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.alexandriava.gov/aquatics/old-town-pool",
+   "hours_fees_url": "https://www.alexandriava.gov/aquatics/old-town-pool",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "Open only in the warm months, May through September; closed for the rest of 2026.",
+     "source": "https://www.alexandriava.gov/aquatics/old-town-pool"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "hours",
+     "text": "In 2026 the pool was closed on Wednesdays.",
+     "source": "https://www.alexandriava.gov/aquatics/old-town-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "The pool can reach capacity at peak times, and you may be asked to wait for space.",
+     "source": "https://www.alexandriava.gov/aquatics/old-town-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Guests 13 and older must show a photo ID.",
+     "source": "https://www.alexandriava.gov/aquatics/old-town-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 12 and under must be with an adult at all times; children 5 and under need the adult in the water within arm's reach.",
+     "source": "https://www.alexandriava.gov/aquatics/old-town-pool"
+    },
+    {
+     "text": "Teens 13 to 17 must be supervised by a paying adult unless a parent has filed a Teen Registration Form.",
+     "source": "https://www.alexandriava.gov/aquatics/old-town-pool"
+    },
+    {
+     "text": "Anyone wearing a life jacket must stay within arm's reach of an adult; water wings and inflatable floats are not allowed.",
+     "source": "https://www.alexandriava.gov/aquatics/old-town-pool"
+    },
+    {
+     "text": "Children 4 and under and weak swimmers should stay in the shallow area or be within arm's reach of an adult.",
+     "source": "https://www.alexandriava.gov/aquatics/old-town-pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Children must pass a swim test before using the diving well or diving board.",
+      "source": "https://www.alexandriava.gov/aquatics/old-town-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.alexandriava.gov/aquatics/old-town-pool"
+    ],
+    "season": [
+     "https://www.alexandriava.gov/aquatics/old-town-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.alexandriava.gov/aquatics/old-town-pool"
+     ],
+     "day_pass": [
+      "https://www.alexandriava.gov/aquatics/old-town-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.alexandriava.gov/aquatics/old-town-pool"
+     ],
+     "lap_swim": [
+      "https://www.alexandriava.gov/aquatics/old-town-pool"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.alexandriava.gov/aquatics/old-town-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-va-arlington-long-bridge-aquatics-fitness-center",
+   "name": "Long Bridge Aquatics & Fitness Center",
+   "official_name": "Long Bridge Aquatics & Fitness Center",
+   "operator": "Arlington County Department of Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "VA",
+   "region": "Virginia",
+   "city": "Arlington",
+   "address": {
+    "street": "333 Long Bridge Drive",
+    "locality": "Arlington",
+    "region": "VA",
+    "postal_code": "22202",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center",
+   "hours_fees_url": "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Get-a-Membership",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "escort",
+     "text": "Children under 13 must be accompanied at all times by a responsible person 16 or older.",
+     "source": "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Frequently-Asked-Questions-FAQs"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "An adult 18 or older must buy the day pass for anyone 17 and under.",
+     "source": "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Frequently-Asked-Questions-FAQs"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Out-of-county visitors are welcome but pay a higher daily rate.",
+     "source": "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Get-a-Membership"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "other",
+     "text": "The diving area is by reservation only for certified diving coaches; it is not open for general use.",
+     "source": "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Frequently-Asked-Questions-FAQs"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "There are October closures and schedule changes; check the pool hours page before going.",
+     "source": "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 13 must be accompanied at all times by a responsible person 16 or older.",
+     "source": "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Frequently-Asked-Questions-FAQs"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Frequently-Asked-Questions-FAQs",
+      "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Get-a-Membership"
+     ],
+     "day_pass": [
+      "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Frequently-Asked-Questions-FAQs",
+      "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Get-a-Membership"
+     ],
+     "members": [
+      "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Frequently-Asked-Questions-FAQs",
+      "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Get-a-Membership"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center"
+     ],
+     "lap_swim": [
+      "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center/Amenities"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.arlingtonva.us/Government/Departments/Parks-Recreation/Locations/Indoor-Facilities/Long-Bridge-Aquatics-Fitness-Center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-va-chantilly-cub-run-rec-center",
+   "name": "Cub Run Rec Center (Cub Run Indoor Water Park)",
+   "official_name": "Cub Run Rec Center (Cub Run Indoor Water Park)",
+   "operator": "Fairfax County Park Authority",
+   "facility_type": "county",
+   "country": "US",
+   "state": "VA",
+   "region": "Virginia",
+   "city": "Chantilly",
+   "address": {
+    "street": "4630 Stonecroft Blvd.",
+    "locality": "Chantilly",
+    "region": "VA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.fairfaxcounty.gov/parks/reccenter/cub-run/indoor-water-park",
+   "hours_fees_url": "https://www.fairfaxcounty.gov/parks/passes",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public"
+     }
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lap_swim": "public",
+      "lessons": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "escort",
+     "text": "Children under 10 must be accompanied and directly supervised by someone 16 or older at all times.",
+     "source": "https://www.fairfaxcounty.gov/parks/node/606"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Anyone may walk in and pay; non-county residents pay a higher rate, and weekend/holiday water park admission costs more than weekdays.",
+     "source": "https://www.fairfaxcounty.gov/parks/passes"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "age",
+     "text": "Riders must be at least 48 inches tall to use the large water slides.",
+     "source": "https://www.fairfaxcounty.gov/parks/reccenter/cub-run/indoor-water-park"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Youth groups need one paying chaperone age 16+ for every 8 children.",
+     "source": "https://www.fairfaxcounty.gov/parks/node/606"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 10 must be accompanied and directly supervised by a person 16 or older at all times.",
+     "source": "https://www.fairfaxcounty.gov/parks/node/606"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.fairfaxcounty.gov/parks/reccenter/cub-run/indoor-water-park"
+    ],
+    "season": [
+     "https://www.fairfaxcounty.gov/parks/reccenter/cub-run/indoor-water-park"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.fairfaxcounty.gov/parks/passes"
+     ],
+     "day_pass": [
+      "https://www.fairfaxcounty.gov/parks/passes"
+     ],
+     "members": [
+      "https://www.fairfaxcounty.gov/parks/passes"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.fairfaxcounty.gov/parks/reccenter/cub-run/indoor-water-park"
+     ],
+     "lap_swim": [
+      "https://www.fairfaxcounty.gov/parks/reccenter/cub-run/swimming"
+     ],
+     "lessons": [
+      "https://www.fairfaxcounty.gov/parks/reccenter/cub-run/swimming"
+     ]
+    },
+    "address": [
+     "https://www.fairfaxcounty.gov/parks/reccenter/cub-run/location"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-va-virginia-beach-kempsville-recreation-center",
+   "name": "Kempsville Recreation Center",
+   "official_name": "Kempsville Recreation Center",
+   "operator": "City of Virginia Beach Parks & Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "VA",
+   "region": "Virginia",
+   "city": "Virginia Beach",
+   "address": {
+    "street": "800 Monmouth Lane",
+    "locality": "Virginia Beach",
+    "region": "VA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://parks.virginiabeach.gov/rec-centers/kempsville",
+   "hours_fees_url": "https://parks.virginiabeach.gov/rec-centers/membership",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "season": "unknown",
+     "o": {}
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "indoor",
+     "kind": "closure",
+     "text": "The Kempsville pool closes for annual maintenance from Feb. 28 to March 14, 2027.",
+     "source": "https://parks.virginiabeach.gov/rec-centers/maintenance-weeks"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Day passes are sold in person only at the center.",
+     "source": "https://parks.virginiabeach.gov/rec-centers/membership"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://parks.virginiabeach.gov/rec-centers/kempsville"
+    ],
+    "season": [],
+    "access": {
+     "members": [
+      "https://parks.virginiabeach.gov/rec-centers/kempsville",
+      "https://parks.virginiabeach.gov/rec-centers/membership"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://parks.virginiabeach.gov/rec-centers/kempsville"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

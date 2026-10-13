@@ -1,0 +1,388 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "ME",
+ "name": "Maine",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-me-bangor-beth-pancoe-aquatic-center",
+   "name": "Beth Pancoe Aquatic Center",
+   "official_name": "Beth Pancoe Aquatic Center",
+   "operator": "City of Bangor Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "ME",
+   "region": "Maine",
+   "city": "Bangor",
+   "address": {
+    "street": "175 13th Street",
+    "locality": "Bangor",
+    "region": "ME",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://bangormaine.gov/348/Pool-Information",
+   "hours_fees_url": "https://bangormaine.gov/348/Pool-Information",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool is closed for the season now; days and hours can change with staffing and weather.",
+     "source": "https://bangormaine.gov/348/Pool-Information"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Bring ID to get the resident rate; without it you pay the non-resident rate.",
+     "source": "https://bangormaine.gov/348/Pool-Information"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "The pool accepts cash only.",
+     "source": "https://bangormaine.gov/348/Pool-Information"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Swimmers must be at least 48 inches tall to use the water slides.",
+     "source": "https://bangormaine.gov/348/Pool-Information"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Babies must wear swim diapers.",
+     "source": "https://bangormaine.gov/348/Pool-Information"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Youth lessons are for ages 3 to 12, and children must be potty trained.",
+      "source": "https://bangormaine.gov/788/Swimming-Lessons"
+     },
+     {
+      "text": "Lesson registration and payment are not taken at the pool; register through the city's online system.",
+      "source": "https://bangormaine.gov/788/Swimming-Lessons"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://bangormaine.gov/348/Pool-Information"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://bangormaine.gov/348/Pool-Information"
+     ],
+     "lap_swim": [
+      "https://bangormaine.gov/348/Pool-Information"
+     ],
+     "lessons": [
+      "https://bangormaine.gov/788/Swimming-Lessons"
+     ]
+    },
+    "address": [
+     "https://bangormaine.gov/Facilities/Facility/Details/Beth-Pancoe-Municipal-Aquatic-Center-81"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-me-bangor-dakin-pool",
+   "name": "Dakin Pool",
+   "official_name": "Dakin Pool",
+   "operator": "City of Bangor Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "ME",
+   "region": "Maine",
+   "city": "Bangor",
+   "address": {
+    "street": "380 Pine St.",
+    "locality": "Bangor",
+    "region": "ME",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://bangormaine.gov/348/Pool-Information",
+   "hours_fees_url": "https://bangormaine.gov/348/Pool-Information",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool is closed for the season now; days and hours can change with staffing and weather.",
+     "source": "https://bangormaine.gov/348/Pool-Information"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Bring ID to get the resident rate; without it you pay the non-resident rate.",
+     "source": "https://bangormaine.gov/348/Pool-Information"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "The pool accepts cash only.",
+     "source": "https://bangormaine.gov/348/Pool-Information"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Babies must wear swim diapers.",
+     "source": "https://bangormaine.gov/348/Pool-Information"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://bangormaine.gov/348/Pool-Information"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://bangormaine.gov/348/Pool-Information"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://bangormaine.gov/348/Pool-Information"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-me-south-portland-south-portland-municipal-pool",
+   "name": "South Portland Municipal Pool",
+   "official_name": "South Portland Municipal Pool (South Portland Community Center)",
+   "operator": "City of South Portland Parks, Recreation & Waterfront",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "ME",
+   "region": "Maine",
+   "city": "South Portland",
+   "address": {
+    "street": "21 Nelson Road",
+    "locality": "South Portland",
+    "region": "ME",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://southportland.gov/567/Aquatics-Programs",
+   "hours_fees_url": "https://southportland.gov/567/Aquatics-Programs",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Public swims run only at scheduled drop-in times that change monthly; check the current schedule first.",
+     "source": "https://southportland.gov/567/Aquatics-Programs"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "The community center, and so the pool, is closed on weekends from Memorial Day to Labor Day.",
+     "source": "https://southportland.gov/567/Aquatics-Programs"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool is closed to regular swims on Friday, October 16 for a special event.",
+     "source": "https://southportlandme.myrec.com/info/facilities/details.aspx?FacilityID=14837"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 10 must be accompanied and supervised by a swimmer 16 or older during open swim.",
+     "source": "https://southportland.gov/567/Aquatics-Programs"
+    },
+    {
+     "text": "Non-swimmers wearing a life jacket must stay within arm's reach of a parent or guardian at all times.",
+     "source": "https://southportland.gov/567/Aquatics-Programs"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Adult Lap Swim sessions are for ages 18 and older.",
+      "source": "https://southportland.gov/567/Aquatics-Programs"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Lessons are open to non-residents, but South Portland residents register first and classes fill fast.",
+      "source": "https://southportland.gov/567/Aquatics-Programs"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://southportland.gov/567/Aquatics-Programs"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://southportland.gov/567/Aquatics-Programs"
+     ],
+     "lap_swim": [
+      "https://southportland.gov/567/Aquatics-Programs"
+     ],
+     "lessons": [
+      "https://southportland.gov/567/Aquatics-Programs"
+     ]
+    },
+    "address": [
+     "https://southportland.gov/Facilities/Facility/Details/South-Portland-Community-Center-33"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

@@ -1,0 +1,2797 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "PA",
+ "name": "Pennsylvania",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-pa-bethel-park-south-park-wave-pool",
+   "name": "South Park Wave Pool",
+   "official_name": "South Park Wave Pool",
+   "operator": "Allegheny County Parks Department",
+   "facility_type": "county",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "Bethel Park",
+   "address": {
+    "street": "280 Wave Pool Drive",
+    "locality": "Bethel Park",
+    "region": "PA",
+    "postal_code": "15102",
+    "precision": "street_number"
+   },
+   "official_url": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools",
+   "hours_fees_url": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "If the pool has not opened by 2 PM due to weather, it stays closed that day.",
+       "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+      },
+      {
+       "text": "Admission closes for the rest of the day once the pool reaches capacity.",
+       "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+      },
+      {
+       "text": "Allegheny County residents get the resident rate; non-residents are admitted too.",
+       "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Visitors 17 and under must be with an adult 21+ who has valid photo ID.",
+     "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+    },
+    {
+     "text": "A parent may bring all their own children; other chaperones 21+ may bring at most four youths.",
+     "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+    },
+    {
+     "text": "Chaperones must be there at entry and stay for the whole visit.",
+     "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": {
+    "text": "All county pools are closed for the season.",
+    "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+   },
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-carlisle-carlisle-community-pool",
+   "name": "Carlisle Community Pool",
+   "official_name": "Carlisle Community Pool",
+   "operator": "Carlisle Borough Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "Carlisle",
+   "address": {
+    "street": "1236 Franklin Street",
+    "locality": "Carlisle",
+    "region": "PA",
+    "postal_code": "17013",
+    "precision": "street_number"
+   },
+   "official_url": "https://carlislepa.org/parks___recreation/carlisle_community_pool.php",
+   "hours_fees_url": "https://carlislepa.org/parks___recreation/season_pass_and_admission_fees.php",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "The 2026 season ran May 23 to September 7.",
+       "source": "https://carlislepa.org/parks___recreation/carlisle_community_pool.php"
+      },
+      {
+       "text": "Closed on weekdays while Carlisle Area School District is in session.",
+       "source": "https://carlislepa.org/parks___recreation/carlisle_community_pool.php"
+      },
+      {
+       "text": "Borough residents need proof of residency for the resident rate.",
+       "source": "https://carlislepa.org/parks___recreation/season_pass_and_admission_fees.php"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Summer season only; no lap-swim hours are listed.",
+      "source": "https://carlislepa.org/parks___recreation/carlisle_community_pool.php"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://carlislepa.org/parks___recreation/carlisle_community_pool.php"
+    ],
+    "access": {
+     "public_admission": [
+      "https://carlislepa.org/parks___recreation/carlisle_community_pool.php",
+      "https://carlislepa.org/parks___recreation/season_pass_and_admission_fees.php"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://carlislepa.org/parks___recreation/carlisle_community_pool.php"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://carlislepa.org/parks___recreation/carlisle_community_pool.php"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-erie-eastside-family-ymca",
+   "name": "Eastside Family YMCA",
+   "official_name": "Eastside Family YMCA",
+   "operator": "YMCA of Greater Erie",
+   "facility_type": "ymca",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "Erie",
+   "address": {
+    "street": "2101 Nagle Road",
+    "locality": "Erie",
+    "region": "PA",
+    "postal_code": "16510",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.ymcaerie.org/branch/eastside",
+   "hours_fees_url": "https://www.ymcaerie.org/join/guest-and-day-passes/",
+   "setting": "both",
+   "season": "year_round",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "season": "year_round",
+     "o": {}
+    },
+    {
+     "s": "outdoor",
+     "e": "restricted",
+     "season": "unknown",
+     "o": {}
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": [
+      {
+       "text": "At Eastside, day passes sell only before 2:30 PM on weekdays and after 2:30 PM on Saturdays.",
+       "source": "https://www.ymcaerie.org/join/guest-and-day-passes/"
+      },
+      {
+       "text": "Day-pass buyers must be 18 or older and show photo ID.",
+       "source": "https://www.ymcaerie.org/join/guest-and-day-passes/"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Members may bring one guest at a time; each guest may visit 3 times a year.",
+       "source": "https://www.ymcaerie.org/join/guest-and-day-passes/"
+      },
+      {
+       "text": "The member must accompany the guest.",
+       "source": "https://www.ymcaerie.org/join/guest-and-day-passes/"
+      },
+      {
+       "text": "Guests may use the outdoor pool with a member on weekdays and Saturdays before 3 PM.",
+       "source": "https://www.ymcaerie.org/join/guest-and-day-passes/"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Guests under 18 need a parent-signed waiver and must be with an adult 18+.",
+     "source": "https://www.ymcaerie.org/join/guest-and-day-passes/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Learn-to-swim is part of year-round aquatics programs.",
+      "source": "https://www.ymcaerie.org/branch/eastside"
+     }
+    ]
+   },
+   "card_note": {
+    "text": "The Y reports repeated indoor pool closures while renovations continue.",
+    "source": "https://www.ymcaerie.org/2026/06/29/eastside-ymca-indoor-pool-area-updates/"
+   },
+   "sources": {
+    "setting": [
+     "https://www.ymcaerie.org/2026/06/29/eastside-ymca-indoor-pool-area-updates/",
+     "https://www.ymcaerie.org/join/guest-and-day-passes/"
+    ],
+    "season": [
+     "https://www.ymcaerie.org/branch/eastside"
+    ],
+    "access": {
+     "day_pass": [
+      "https://www.ymcaerie.org/join/guest-and-day-passes/"
+     ],
+     "members": [
+      "https://www.ymcaerie.org/join/guest-and-day-passes/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.ymcaerie.org/branch/eastside"
+     ]
+    },
+    "address": [
+     "https://www.ymcaerie.org/branch/eastside"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-harrisburg-jackson-lick-swimming-pool",
+   "name": "Jackson Lick Swimming Pool",
+   "official_name": "Jackson Lick Swimming Pool",
+   "operator": "City of Harrisburg Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "Harrisburg",
+   "address": {
+    "street": "1200 N 7th St",
+    "locality": "Harrisburg",
+    "region": "PA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://harrisburgpa.gov/services/parks_recreation/jackson_lick_swimming_pool.php",
+   "hours_fees_url": "https://harrisburgpa.gov/services/parks_recreation/jackson_lick_swimming_pool.php",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Updated 2026 entry, conduct and dress-code rules apply; review them before visiting.",
+       "source": "https://harrisburgpa.gov/services/parks_recreation/jackson_lick_swimming_pool.php"
+      },
+      {
+       "text": "A school or photo ID is required.",
+       "source": "https://harrisburgpa.gov/services/parks_recreation/jackson_lick_swimming_pool.php"
+      },
+      {
+       "text": "Staff may deny entry to anyone who does not follow the rules.",
+       "source": "https://harrisburgpa.gov/services/parks_recreation/jackson_lick_swimming_pool.php"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Parents must supervise children at all times.",
+     "source": "https://harrisburgpa.gov/services/parks_recreation/jackson_lick_swimming_pool.php"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://harrisburgpa.gov/services/parks_recreation/jackson_lick_swimming_pool.php"
+    ],
+    "access": {
+     "public_admission": [
+      "https://harrisburgpa.gov/services/parks_recreation/jackson_lick_swimming_pool.php"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://harrisburgpa.gov/services/parks_recreation/jackson_lick_swimming_pool.php"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-hollidaysburg-blair-regional-ymca",
+   "name": "Blair Regional YMCA",
+   "official_name": "Blair Regional YMCA",
+   "operator": "Blair Regional YMCA",
+   "facility_type": "ymca",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "Hollidaysburg",
+   "address": {
+    "street": "1111 Hewit Street",
+    "locality": "Hollidaysburg",
+    "region": "PA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://blairregionalymca.org/our-y/our-facility/",
+   "hours_fees_url": "https://blairregionalymca.org/membership/member-benefits-rates",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "day_pass",
+    "members",
+    "program_registration_only"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "o": {
+      "open_swim": "unknown",
+      "lap_swim": "unknown",
+      "lessons": "public"
+     },
+     "season": "unknown"
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": [
+      {
+       "text": "Programs may limit space or close a pool to general use; check the monthly pool schedule.",
+       "source": "https://blairregionalymca.org/programs/aquatics/"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Short-term memberships cover 3 months and are paid in full.",
+       "source": "https://blairregionalymca.org/membership/member-benefits-rates"
+      }
+     ]
+    },
+    {
+     "type": "program_registration_only",
+     "conditions": [
+      {
+       "text": "Aquatic programs are open to members and the general public.",
+       "source": "https://blairregionalymca.org/programs/aquatics/"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Guests 14 and under must be supervised by a parent or guardian 16 or older.",
+     "source": "https://blairregionalymca.org/membership/member-benefits-rates"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Families can use the lap pool during scheduled open swim hours.",
+      "source": "https://blairregionalymca.org/our-y/our-facility/"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Both pools are open daily for lap swimming, subject to programs.",
+      "source": "https://blairregionalymca.org/programs/aquatics/"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Lessons start at 6 months, with group and private options.",
+      "source": "https://blairregionalymca.org/our-y/our-facility/"
+     },
+     {
+      "text": "Group lessons run from infant up to preteen.",
+      "source": "https://blairregionalymca.org/programs/aquatics/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://blairregionalymca.org/our-y/our-facility/"
+    ],
+    "season": [],
+    "access": {
+     "day_pass": [
+      "https://blairregionalymca.org/membership/member-benefits-rates",
+      "https://blairregionalymca.org/programs/aquatics/"
+     ],
+     "members": [
+      "https://blairregionalymca.org/membership/member-benefits-rates",
+      "https://blairregionalymca.org/our-y/our-facility/"
+     ],
+     "program_registration_only": [
+      "https://blairregionalymca.org/programs/aquatics/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://blairregionalymca.org/our-y/our-facility/"
+     ],
+     "lap_swim": [
+      "https://blairregionalymca.org/programs/aquatics/"
+     ],
+     "lessons": [
+      "https://blairregionalymca.org/our-y/our-facility/",
+      "https://blairregionalymca.org/programs/aquatics/"
+     ]
+    },
+    "address": [
+     "https://blairregionalymca.org/our-y/our-facility/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-pittsburgh-highland-park-pool",
+   "name": "Highland Park Pool (Highland Pool)",
+   "official_name": "Highland Park Pool (Highland Pool)",
+   "operator": "City of Pittsburgh CitiParks",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "Pittsburgh",
+   "address": {
+    "street": "151 Lake Drive",
+    "locality": "Pittsburgh",
+    "region": "PA",
+    "postal_code": "15206",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.pittsburghpa.gov/Recreation-Events/Pools/Outdoor-Pools",
+   "hours_fees_url": "https://www.pittsburghpa.gov/Recreation-Events/CitiParks/Aquatics/Pool-Fees",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Swim with a daily admission ticket or a season pool tag.",
+       "source": "https://www.pittsburghpa.gov/Recreation-Events/CitiParks/Aquatics/Pool-Fees"
+      }
+     ]
+    },
+    {
+     "type": "residents",
+     "conditions": [
+      {
+       "text": "Resident pool tags require proof of City of Pittsburgh residency.",
+       "source": "https://www.pittsburghpa.gov/Recreation-Events/CitiParks/Aquatics/Pool-Fees"
+      },
+      {
+       "text": "Pool tags are sold only in person at open city pools.",
+       "source": "https://www.pittsburghpa.gov/Recreation-Events/CitiParks/Aquatics/Pool-Fees"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "During Family Swim, kids 15 and under must be with a parent or adult 21 or older.",
+     "source": "https://www.pittsburghpa.gov/Recreation-Events/Pools/Outdoor-Pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": {
+    "text": "All city outdoor pools are closed for the rest of the 2026 season.",
+    "source": "https://www.pittsburghpa.gov/Recreation-Events/Pools/Outdoor-Pools"
+   },
+   "sources": {
+    "setting": [
+     "https://www.pittsburghpa.gov/Recreation-Events/Pools/Outdoor-Pools"
+    ],
+    "season": [
+     "https://www.pittsburghpa.gov/Recreation-Events/Pools/Outdoor-Pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.pittsburghpa.gov/Recreation-Events/CitiParks/Aquatics/Pool-Fees"
+     ],
+     "residents": [
+      "https://www.pittsburghpa.gov/Recreation-Events/CitiParks/Aquatics/Pool-Fees"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.pittsburghpa.gov/Recreation-Events/Pools/Outdoor-Pools"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.pittsburghpa.gov/Recreation-Events/Pools/Outdoor-Pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-pittsburgh-oliver-bath-house",
+   "name": "Oliver Bath House",
+   "official_name": "Oliver Bath House",
+   "operator": "City of Pittsburgh CitiParks",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "Pittsburgh",
+   "address": {
+    "street": "38 South 10th Street",
+    "locality": "Pittsburgh",
+    "region": "PA",
+    "postal_code": "15203",
+    "precision": "street_number"
+   },
+   "official_url": "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House",
+   "hours_fees_url": "https://www.pittsburghpa.gov/Recreation-Events/CitiParks/Aquatics/Pool-Fees",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Anyone can pay daily admission at any city pool, including Oliver.",
+       "source": "https://www.pittsburghpa.gov/Recreation-Events/CitiParks/Aquatics/Pool-Fees"
+      }
+     ]
+    },
+    {
+     "type": "residents",
+     "conditions": [
+      {
+       "text": "Resident pool tags require proof of City of Pittsburgh residency.",
+       "source": "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Family Swim: children under 16 must be with an adult 21 or older.",
+     "source": "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Adult Lap Swim is for ages 16 and up.",
+      "source": "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Children's lessons are for ages 6 to 15.",
+      "source": "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House"
+     },
+     {
+      "text": "Preschool and infant classes need a parent in the water.",
+      "source": "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House",
+      "https://www.pittsburghpa.gov/Recreation-Events/CitiParks/Aquatics/Pool-Fees"
+     ],
+     "residents": [
+      "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House"
+     ],
+     "lap_swim": [
+      "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House"
+     ],
+     "lessons": [
+      "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House"
+     ]
+    },
+    "address": [
+     "https://pittsburghpa.gov/Recreation-Events/Pools/Oliver-Bath-House"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-robinson-settlers-cabin-wave-pool",
+   "name": "Settlers Cabin Wave Pool",
+   "official_name": "Settlers Cabin Wave Pool",
+   "operator": "Allegheny County Parks Department",
+   "facility_type": "county",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "Robinson",
+   "address": {
+    "street": "600 Ridge Road",
+    "locality": "Robinson",
+    "region": "PA",
+    "postal_code": "15205",
+    "precision": "street_number"
+   },
+   "official_url": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools",
+   "hours_fees_url": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "If the pool has not opened by 2 PM due to weather, it stays closed that day.",
+       "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+      },
+      {
+       "text": "Admission closes for the rest of the day once the pool reaches capacity.",
+       "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+      },
+      {
+       "text": "Allegheny County residents get the resident rate; non-residents are admitted too.",
+       "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Visitors 17 and under must be with an adult 21+ who has valid photo ID.",
+     "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+    },
+    {
+     "text": "A parent may bring all their own children; other chaperones 21+ may bring at most four youths.",
+     "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+    },
+    {
+     "text": "Chaperones must be there at entry and stay for the whole visit.",
+     "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": {
+    "text": "All county pools are closed for the season.",
+    "source": "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+   },
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://alleghenycounty.us/Parks-and-Events/Activities/Swimming-and-Wave-Pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-scranton-nay-aug-park-pool",
+   "name": "Nay Aug Park Pool",
+   "official_name": "Nay Aug Park Pool",
+   "operator": "City of Scranton Department of Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "Scranton",
+   "address": {
+    "street": "400 Arthur Avenue",
+    "locality": "Scranton",
+    "region": "PA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://scrantonpa.gov/PARKS",
+   "hours_fees_url": "https://scrantonpa.gov/PARKS",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "City outdoor pools are open to the public.",
+       "source": "https://scrantonpa.gov/PARKS"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": {
+    "text": "Closed for the season; summer dates and hours are not on the city page.",
+    "source": "https://scrantonpa.gov/PARKS"
+   },
+   "sources": {
+    "setting": [
+     "https://scrantonpa.gov/PARKS"
+    ],
+    "season": [
+     "https://scrantonpa.gov/PARKS"
+    ],
+    "access": {
+     "public_admission": [
+      "https://scrantonpa.gov/PARKS"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://scrantonpa.gov/PARKS"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-scranton-weston-field-house-pools",
+   "name": "Weston Field House Pools",
+   "official_name": "Weston Field House Pools",
+   "operator": "City of Scranton Department of Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "Scranton",
+   "address": {
+    "street": "982 Providence Road",
+    "locality": "Scranton",
+    "region": "PA",
+    "postal_code": "18508",
+    "precision": "street_number"
+   },
+   "official_url": "https://scrantonpa.gov/PARKS",
+   "hours_fees_url": "https://scrantonpa.gov/PARKS",
+   "setting": "both",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public"
+     }
+    },
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {}
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Indoor Adult Swim runs weekdays 9 AM to 1 PM.",
+       "source": "https://scrantonpa.gov/PARKS"
+      },
+      {
+       "text": "Indoor pool pricing depends on age and Scranton residency.",
+       "source": "https://scrantonpa.gov/PARKS"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Indoor Family Swim is Monday to Friday, 3 to 5 PM; no weekend hours are listed.",
+      "source": "https://scrantonpa.gov/PARKS"
+     }
+    ]
+   },
+   "card_note": {
+    "text": "Indoor and outdoor pools share this site; the outdoor Weston pool is closed for the season.",
+    "source": "https://scrantonpa.gov/PARKS"
+   },
+   "sources": {
+    "setting": [
+     "https://scrantonpa.gov/PARKS"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://scrantonpa.gov/PARKS"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://scrantonpa.gov/PARKS"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://scrantonpa.gov/PARKS"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-state-college-park-forest-community-pool",
+   "name": "Park Forest Community Pool",
+   "official_name": "Park Forest Community Pool",
+   "operator": "Centre Region Parks & Recreation (CRPR)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "State College",
+   "address": {
+    "street": "2100 School Drive",
+    "locality": "State College",
+    "region": "PA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.crpr.org/aquatics",
+   "hours_fees_url": "https://www.crpr.org/season-pass-admission-fees",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Resident rates are for State College Borough and College, Harris, Ferguson or Patton Townships.",
+       "source": "https://www.crpr.org/season-pass-admission-fees"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and under must be with an adult 16 or older.",
+     "source": "https://www.crpr.org/aquatics-schedule-rules"
+    },
+    {
+     "text": "Children under 16 must have a supervising adult poolside.",
+     "source": "https://www.crpr.org/aquatics-schedule-rules"
+    },
+    {
+     "text": "Children 2 and under who enter the water need an in-water chaperone.",
+     "source": "https://www.crpr.org/season-pass-admission-fees"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "General Swim hours are open to all ages.",
+      "source": "https://www.crpr.org/aquatics-schedule-rules"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Lap swim at Park Forest is 7 to 8 PM.",
+      "source": "https://www.crpr.org/aquatics-schedule-rules"
+     },
+     {
+      "text": "Adult Lap Swim is for ages 16 and older.",
+      "source": "https://www.crpr.org/aquatics-schedule-rules"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Lessons are held at both Centre Region pools during the summer.",
+      "source": "https://www.crpr.org/aquatics"
+     }
+    ]
+   },
+   "card_note": {
+    "text": "Pools are closed for the season and reopen in 2027.",
+    "source": "https://www.crpr.org/aquatics-schedule-rules"
+   },
+   "sources": {
+    "setting": [
+     "https://www.crpr.org/aquatics"
+    ],
+    "season": [
+     "https://www.crpr.org/season-pass-admission-fees"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.crpr.org/season-pass-admission-fees"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.crpr.org/aquatics-schedule-rules"
+     ],
+     "lap_swim": [
+      "https://www.crpr.org/aquatics-schedule-rules"
+     ],
+     "lessons": [
+      "https://www.crpr.org/aquatics"
+     ]
+    },
+    "address": [
+     "https://www.crpr.org/aquatics"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-state-college-william-l-welch-community-pool",
+   "name": "William L. Welch Community Pool",
+   "official_name": "William L. Welch Community Pool",
+   "operator": "Centre Region Parks & Recreation (CRPR)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "State College",
+   "address": {
+    "street": "670 Westerly Parkway",
+    "locality": "State College",
+    "region": "PA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.crpr.org/aquatics",
+   "hours_fees_url": "https://www.crpr.org/season-pass-admission-fees",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Resident rates are for State College Borough and College, Harris, Ferguson or Patton Townships.",
+       "source": "https://www.crpr.org/season-pass-admission-fees"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and under must be with an adult 16 or older.",
+     "source": "https://www.crpr.org/aquatics-schedule-rules"
+    },
+    {
+     "text": "Children under 16 must have a supervising adult poolside.",
+     "source": "https://www.crpr.org/aquatics-schedule-rules"
+    },
+    {
+     "text": "Children 2 and under who enter the water need an in-water chaperone.",
+     "source": "https://www.crpr.org/season-pass-admission-fees"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "General Swim hours are open to all ages.",
+      "source": "https://www.crpr.org/aquatics-schedule-rules"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Lessons are held at both Centre Region pools during the summer.",
+      "source": "https://www.crpr.org/aquatics"
+     }
+    ]
+   },
+   "card_note": {
+    "text": "Pools are closed for the season and reopen in 2027.",
+    "source": "https://www.crpr.org/aquatics-schedule-rules"
+   },
+   "sources": {
+    "setting": [
+     "https://www.crpr.org/aquatics"
+    ],
+    "season": [
+     "https://www.crpr.org/season-pass-admission-fees"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.crpr.org/season-pass-admission-fees"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.crpr.org/aquatics-schedule-rules"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.crpr.org/aquatics"
+     ]
+    },
+    "address": [
+     "https://www.crpr.org/aquatics"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-york-graham-aquatic-center-graham-outdoor-pool",
+   "name": "Graham Aquatic Center - Graham Outdoor Pool",
+   "official_name": "Graham Aquatic Center - Graham Outdoor Pool",
+   "operator": "YMCA of the Roses (Arthur J. Glatfelter YMCA, York)",
+   "facility_type": "ymca",
+   "country": "US",
+   "state": "PA",
+   "region": "Central & Western Pennsylvania",
+   "city": "York",
+   "address": {
+    "street": "543 N Newberry St.",
+    "locality": "York",
+    "region": "PA",
+    "postal_code": "17401",
+    "precision": "street_number"
+   },
+   "official_url": "https://rosesymca.org/outdoorpool",
+   "hours_fees_url": "https://rosesymca.org/outdoorpool",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": [
+      {
+       "text": "Open daily June 6 to August 16, plus select other summer dates.",
+       "source": "https://rosesymca.org/outdoorpool"
+      },
+      {
+       "text": "Some evenings are members-only swim nights.",
+       "source": "https://rosesymca.org/outdoorpool"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Resident pricing requires living in the York City School District.",
+       "source": "https://rosesymca.org/outdoorpool"
+      },
+      {
+       "text": "Members and guests 18+ show photo ID at first registration.",
+       "source": "https://rosesymca.org/outdoorpool"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Kids 13 and under must be with an adult 18+ and wear a swim band.",
+     "source": "https://rosesymca.org/outdoorpool"
+    },
+    {
+     "text": "Children with a red band need a parent within arm's reach in the pool area.",
+     "source": "https://rosesymca.org/outdoorpool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://rosesymca.org/outdoorpool"
+    ],
+    "season": [
+     "https://rosesymca.org/outdoorpool"
+    ],
+    "access": {
+     "day_pass": [
+      "https://rosesymca.org/outdoorpool"
+     ],
+     "members": [
+      "https://rosesymca.org/outdoorpool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://rosesymca.org/outdoorpool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-allentown-cedar-beach-pool",
+   "name": "Cedar Beach Pool",
+   "official_name": "Cedar Beach Pool",
+   "operator": "City of Allentown Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Eastern Pennsylvania",
+   "city": "Allentown",
+   "address": {
+    "street": "101 N Ott St.",
+    "locality": "Allentown",
+    "region": "PA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.allentownpa.gov/en-us/Government/Departments/Parks-Recreation/Pools-Spray-Parks",
+   "hours_fees_url": "https://www.allentownpa.gov/en-us/Government/Departments/Parks-Recreation/Pools-Spray-Parks",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "2026 season May 23 to September 7; many early and late-season weekdays are 4 to 7 PM only.",
+       "source": "https://www.allentownpa.gov/en-us/Government/Departments/Parks-Recreation/Pools-Spray-Parks"
+      },
+      {
+       "text": "Resident rates need proof of Allentown residency.",
+       "source": "https://www.allentownpa.gov/en-us/Government/Departments/Parks-Recreation/Pools-Spray-Parks"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Resident season passes need proof of Allentown residency.",
+       "source": "https://www.allentownpa.gov/en-us/Government/Departments/Parks-Recreation/Pools-Spray-Parks"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Morning lap swim is Monday to Saturday, 8 to 10 AM, in season.",
+      "source": "https://www.allentownpa.gov/en-us/Government/Departments/Parks-Recreation/Pools-Spray-Parks"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.allentownpa.gov/en-us/Government/Departments/Parks-Recreation/Pools-Spray-Parks"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.allentownpa.gov/en-us/Government/Departments/Parks-Recreation/Pools-Spray-Parks"
+     ],
+     "members": [
+      "https://www.allentownpa.gov/en-us/Government/Departments/Parks-Recreation/Pools-Spray-Parks"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://www.allentownpa.gov/en-us/Government/Departments/Parks-Recreation/Pools-Spray-Parks"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.allentownpa.gov/en-us/Government/Departments/Parks-Recreation/Pools-Spray-Parks"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-bethlehem-memorial-pool",
+   "name": "Memorial Pool",
+   "official_name": "Memorial Pool",
+   "operator": "City of Bethlehem Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Eastern Pennsylvania",
+   "city": "Bethlehem",
+   "address": {
+    "street": "259 Illick's Mill Road",
+    "locality": "Bethlehem",
+    "region": "PA",
+    "postal_code": "18017",
+    "precision": "street_number"
+   },
+   "official_url": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools",
+   "hours_fees_url": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "residents",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "restricted",
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "restricted",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "residents",
+     "conditions": [
+      {
+       "text": "Noon to 1 PM is for Regional season pass holders only.",
+       "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+      },
+      {
+       "text": "Daily passes are sold only to Bethlehem residents and their guests.",
+       "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+      },
+      {
+       "text": "An adult resident may sponsor up to two non-resident guests.",
+       "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "All Regional Pool Pass holders, resident or non-resident, are admitted.",
+       "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+      },
+      {
+       "text": "Neighborhood-only passes work here only after neighborhood pools close in August.",
+       "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+      },
+      {
+       "text": "No one is admitted once posted capacity is reached.",
+       "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Introductory lessons are for ages 4 to 12 during the summer season.",
+      "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+     },
+     {
+      "text": "Lessons require advance registration.",
+      "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+    ],
+    "access": {
+     "residents": [
+      "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+     ],
+     "members": [
+      "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+     ]
+    },
+    "address": [
+     "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-bethlehem-westside-pool",
+   "name": "Westside Pool",
+   "official_name": "Westside Pool",
+   "operator": "City of Bethlehem Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Eastern Pennsylvania",
+   "city": "Bethlehem",
+   "address": {
+    "street": "244 13th Avenue",
+    "locality": "Bethlehem",
+    "region": "PA",
+    "postal_code": "18018",
+    "precision": "street_number"
+   },
+   "official_url": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools",
+   "hours_fees_url": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Daily-pass entry is 1 to 7 PM; noon to 1 PM is season pass holders only.",
+       "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+      },
+      {
+       "text": "Resident rates need proof of residency when buying daily passes.",
+       "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+      },
+      {
+       "text": "Entry stops once the posted capacity is reached.",
+       "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Season pass holders get exclusive access from noon to 1 PM.",
+       "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+      },
+      {
+       "text": "Resident season-pass rates require proof of residency.",
+       "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 6 and under may use the wading pool only with adult supervision.",
+     "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "The permanent lap lane is for adults.",
+      "source": "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+     ],
+     "members": [
+      "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://bethlehem-pa.gov/Recreation/Recreation-Activities/Pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-east-stroudsburg-dansbury-pool",
+   "name": "Dansbury Pool (Dansbury Park)",
+   "official_name": "Dansbury Pool (Dansbury Park)",
+   "operator": "Stroud Region Open Space & Recreation Commission (Borough of East Stroudsburg park)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Eastern Pennsylvania",
+   "city": "East Stroudsburg",
+   "address": {
+    "street": "15 Day Street",
+    "locality": "East Stroudsburg",
+    "region": "PA",
+    "postal_code": "18301",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.srosrc.org/aquatics",
+   "hours_fees_url": "https://www.srosrc.org/aquatics",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "The adult accompanying a child also needs a pool pass.",
+       "source": "https://www.srosrc.org/aquatics"
+      },
+      {
+       "text": "Without proof of residency, the non-resident rate applies.",
+       "source": "https://www.srosrc.org/aquatics"
+      },
+      {
+       "text": "At capacity, entry pauses until others leave.",
+       "source": "https://www.srosrc.org/aquatics"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Season passes work at both Dansbury and Stroudsburg pools.",
+       "source": "https://www.srosrc.org/aquatics"
+      },
+      {
+       "text": "Resident season passes need proof of residency at purchase.",
+       "source": "https://www.srosrc.org/aquatics"
+      },
+      {
+       "text": "Family members cannot be added to a family pass later.",
+       "source": "https://www.srosrc.org/aquatics"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 14 must be with an adult 18+ who supervises them at all times.",
+     "source": "https://www.srosrc.org/aquatics"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Dedicated lap swim is Monday to Thursday, 11:30 AM to noon.",
+      "source": "https://www.srosrc.org/aquatics"
+     },
+     {
+      "text": "One lap lane stays open during open swim.",
+      "source": "https://www.srosrc.org/aquatics"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Summer outdoor lessons here are run by the Pocono Family YMCA.",
+      "source": "https://www.poconoymca.org/aquatics/"
+     },
+     {
+      "text": "Levels 1–4, Monday to Thursday mornings for two weeks.",
+      "source": "https://www.poconoymca.org/aquatics/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.poconoymca.org/aquatics/"
+    ],
+    "season": [
+     "https://www.srosrc.org/aquatics"
+    ],
+    "access": {
+     "public_admission": [
+      "https://eaststroudsburgboro.org/recreation/",
+      "https://www.srosrc.org/aquatics"
+     ],
+     "members": [
+      "https://www.srosrc.org/aquatics"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.srosrc.org/aquatics"
+     ],
+     "lap_swim": [
+      "https://www.srosrc.org/aquatics"
+     ],
+     "lessons": [
+      "https://www.poconoymca.org/aquatics/"
+     ]
+    },
+    "address": [
+     "https://www.srosrc.org/aquatics"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-easton-eddyside-pool",
+   "name": "Eddyside Pool",
+   "official_name": "Eddyside Pool",
+   "operator": "City of Easton (2026 season managed by River Crossing YMCA)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Eastern Pennsylvania",
+   "city": "Easton",
+   "address": {
+    "street": "Route 611 N near Lafayette Street",
+    "locality": "Easton",
+    "region": "PA",
+    "postal_code": null,
+    "precision": "street"
+   },
+   "official_url": "https://easton-pa.com/266/Swimming-Pools",
+   "hours_fees_url": "https://ymcarivercrossing.org/swimming/city-easton-outdoor-pools",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "2026 dates: Memorial Day weekend, then June 6 to August 23.",
+       "source": "https://ymcarivercrossing.org/swimming/city-easton-outdoor-pools"
+      },
+      {
+       "text": "Noon to 1 PM is for Easton residents and season pass holders only.",
+       "source": "https://easton-pa.com/266/Swimming-Pools"
+      },
+      {
+       "text": "Resident rates are only for 18042 addresses inside city limits.",
+       "source": "https://easton-pa.com/266/Swimming-Pools"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Season passes are sold in person at the Easton YMCA branch with proof of residency.",
+       "source": "https://ymcarivercrossing.org/swimming/city-easton-outdoor-pools"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://ymcarivercrossing.org/swimming/city-easton-outdoor-pools"
+    ],
+    "season": [
+     "https://easton-pa.com/266/Swimming-Pools",
+     "https://ymcarivercrossing.org/swimming/city-easton-outdoor-pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://easton-pa.com/266/Swimming-Pools",
+      "https://ymcarivercrossing.org/swimming/city-easton-outdoor-pools"
+     ],
+     "members": [
+      "https://easton-pa.com/266/Swimming-Pools",
+      "https://ymcarivercrossing.org/swimming/city-easton-outdoor-pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://ymcarivercrossing.org/swimming/city-easton-outdoor-pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-kennett-square-kennett-area-ymca",
+   "name": "Kennett Area YMCA",
+   "official_name": "Kennett Area YMCA",
+   "operator": "YMCA of Greater Brandywine",
+   "facility_type": "ymca",
+   "country": "US",
+   "state": "PA",
+   "region": "Eastern Pennsylvania",
+   "city": "Kennett Square",
+   "address": {
+    "street": "101 Race Street",
+    "locality": "Kennett Square",
+    "region": "PA",
+    "postal_code": "19348",
+    "precision": "street_number"
+   },
+   "official_url": "https://ymcagbw.org/locations/kennett-area-ymca",
+   "hours_fees_url": "https://ymcagbw.org/locations/kennett-area-ymca",
+   "setting": "both",
+   "season": "unknown",
+   "access": [
+    "members",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {}
+    },
+    {
+     "s": "outdoor",
+     "e": "restricted",
+     "season": "unknown",
+     "o": {}
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Membership includes indoor pool access.",
+       "source": "https://ymcagbw.org/locations/kennett-area-ymca"
+      },
+      {
+       "text": "The outdoor pool has its own separate memberships.",
+       "source": "https://ymcagbw.org/locations/kennett-area-ymca"
+      }
+     ]
+    },
+    {
+     "type": "day_pass",
+     "conditions": [
+      {
+       "text": "Non-members can use indoor facilities with a day pass when space permits.",
+       "source": "https://kb.ymcagbw.org/ygbw-guest-policy"
+      },
+      {
+       "text": "Day-pass guests 18 and older must show a valid photo ID.",
+       "source": "https://kb.ymcagbw.org/ygbw-guest-policy"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Day-pass guests under 18 must be with an adult 18 or older at all times.",
+     "source": "https://kb.ymcagbw.org/ygbw-guest-policy"
+    },
+    {
+     "text": "Non-members 14 and under are swim band-tested before using the pools.",
+     "source": "https://kb.ymcagbw.org/ygbw-guest-policy"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": {
+    "text": "The day pass is for indoor facilities; the outdoor pool has separate memberships.",
+    "source": "https://kb.ymcagbw.org/ygbw-guest-policy"
+   },
+   "sources": {
+    "setting": [
+     "https://ymcagbw.org/locations/kennett-area-ymca"
+    ],
+    "season": [],
+    "access": {
+     "members": [
+      "https://ymcagbw.org/locations/kennett-area-ymca"
+     ],
+     "day_pass": [
+      "https://kb.ymcagbw.org/ygbw-guest-policy"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://ymcagbw.org/locations/kennett-area-ymca"
+     ]
+    },
+    "address": [
+     "https://ymcagbw.org/locations/kennett-area-ymca"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-lancaster-lancaster-county-swimming-pool",
+   "name": "Lancaster County Swimming Pool",
+   "official_name": "Lancaster County Swimming Pool",
+   "operator": "Lancaster County Department of Parks & Recreation",
+   "facility_type": "county",
+   "country": "US",
+   "state": "PA",
+   "region": "Eastern Pennsylvania",
+   "city": "Lancaster",
+   "address": {
+    "street": "Lancaster County Central Park",
+    "locality": "Lancaster",
+    "region": "PA",
+    "postal_code": null,
+    "precision": "park"
+   },
+   "official_url": "https://co.lancaster.pa.us/255/Pool",
+   "hours_fees_url": "https://co.lancaster.pa.us/DocumentCenter/View/9633",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Weekends only on Memorial Day weekend and from August 17 to September 7.",
+       "source": "https://co.lancaster.pa.us/255/Pool"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "The Monday–Thursday pass is valid only Monday through Thursday.",
+       "source": "https://co.lancaster.pa.us/DocumentCenter/View/9633"
+      },
+      {
+       "text": "Family passes: everyone at one address, up to 8 people.",
+       "source": "https://co.lancaster.pa.us/DocumentCenter/View/9633"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 55 inches need active poolside supervision by someone 16+, unless proven 13 or older.",
+     "source": "https://co.lancaster.pa.us/DocumentCenter/View/10286"
+    },
+    {
+     "text": "Children under 6 must have someone 16 or older in the water with them.",
+     "source": "https://co.lancaster.pa.us/DocumentCenter/View/10286"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Group and private lessons are offered.",
+      "source": "https://co.lancaster.pa.us/255/Pool"
+     },
+     {
+      "text": "Group lessons: register online or at the Parks Office.",
+      "source": "https://co.lancaster.pa.us/255/Pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://co.lancaster.pa.us/255/Pool",
+     "https://co.lancaster.pa.us/DocumentCenter/View/9633"
+    ],
+    "access": {
+     "public_admission": [
+      "https://co.lancaster.pa.us/255/Pool",
+      "https://co.lancaster.pa.us/DocumentCenter/View/10286"
+     ],
+     "members": [
+      "https://co.lancaster.pa.us/255/Pool",
+      "https://co.lancaster.pa.us/DocumentCenter/View/9633"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://co.lancaster.pa.us/255/Pool"
+     ]
+    },
+    "address": [
+     "https://co.lancaster.pa.us/244/Lancaster-County-Central-Park"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-lancaster-overlook-park-pool",
+   "name": "Overlook Park Pool",
+   "official_name": "Overlook Park Pool",
+   "operator": "Manheim Township Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Eastern Pennsylvania",
+   "city": "Lancaster",
+   "address": {
+    "street": "301 Golf Drive",
+    "locality": "Lancaster",
+    "region": "PA",
+    "postal_code": "17601",
+    "precision": "street_number"
+   },
+   "official_url": "https://manheimtownship.org/1489/Overlook-Pool",
+   "hours_fees_url": "https://www.manheimtownship.org/1257/Park-and-Pool-Hours",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Open seasonally to Manheim Township residents and non-residents.",
+       "source": "https://manheimtownship.org/1489/Overlook-Pool"
+      },
+      {
+       "text": "Hours depend on staffing and weather.",
+       "source": "https://www.manheimtownship.org/1257/Park-and-Pool-Hours"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Season passes are sold online or by phone.",
+       "source": "https://www.manheimtownship.org/1257/Park-and-Pool-Hours"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "The 2026 season ran June 6 to September 7.",
+      "source": "https://www.manheimtownship.org/1257/Park-and-Pool-Hours"
+     },
+     {
+      "text": "Open swim is weekdays noon to 8 PM in season.",
+      "source": "https://www.manheimtownship.org/1257/Park-and-Pool-Hours"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://manheimtownship.org/1489/Overlook-Pool",
+     "https://www.manheimtownship.org/1257/Park-and-Pool-Hours"
+    ],
+    "access": {
+     "public_admission": [
+      "https://manheimtownship.org/1489/Overlook-Pool",
+      "https://www.manheimtownship.org/1257/Park-and-Pool-Hours"
+     ],
+     "members": [
+      "https://www.manheimtownship.org/1257/Park-and-Pool-Hours"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.manheimtownship.org/1257/Park-and-Pool-Hours"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://manheimtownship.org/1489/Overlook-Pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-perkasie-menlo-aquatics-center",
+   "name": "Menlo Aquatics Center",
+   "official_name": "Menlo Aquatics Center",
+   "operator": "Perkasie Borough Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Eastern Pennsylvania",
+   "city": "Perkasie",
+   "address": {
+    "street": "425 Arthur Avenue",
+    "locality": "Perkasie",
+    "region": "PA",
+    "postal_code": "18944",
+    "precision": "street_number"
+   },
+   "official_url": "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/",
+   "hours_fees_url": "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "members",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Public entry starts at 1 PM; noon to 1 PM is members and their guests only.",
+       "source": "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/"
+      },
+      {
+       "text": "Three Member Fridays each summer are members only; no public day passes.",
+       "source": "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/"
+      },
+      {
+       "text": "Holidays are open only to members, their guests and Perkasie resident day passes.",
+       "source": "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/"
+      }
+     ]
+    },
+    {
+     "type": "day_pass",
+     "conditions": [
+      {
+       "text": "Day passes are not valid on holidays or Member Fridays.",
+       "source": "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Guests must be directly accompanied and signed in by a member.",
+       "source": "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+      },
+      {
+       "text": "Members show their key tag and photo to enter.",
+       "source": "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+      },
+      {
+       "text": "2026 membership sales ended August 14.",
+       "source": "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/"
+      }
+     ]
+    },
+    {
+     "type": "residents",
+     "conditions": [
+      {
+       "text": "Holiday resident day passes are for Perkasie Borough residents.",
+       "source": "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/"
+      },
+      {
+       "text": "A Perkasie Borough resident is a household with Borough electric service.",
+       "source": "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 14 must be with and directly supervised by a caretaker 16 or older.",
+     "source": "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+    },
+    {
+     "text": "If no parent is present, a caretaker may supervise at most three children.",
+     "source": "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Public open swim is 1 to 8 PM in full season.",
+      "source": "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Lap swimmers must be 16 or older.",
+      "source": "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+     },
+     {
+      "text": "Non-members register and pay online for early-morning lap swim.",
+      "source": "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Register online; group classes start at age 4.",
+      "source": "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/learn-to-swim/"
+     },
+     {
+      "text": "'Everybody Swims' lessons are only for Perkasie Borough children.",
+      "source": "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/learn-to-swim/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+    ],
+    "season": [
+     "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/",
+     "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+    ],
+    "access": {
+     "public_admission": [
+      "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/"
+     ],
+     "day_pass": [
+      "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/"
+     ],
+     "members": [
+      "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/",
+      "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+     ],
+     "residents": [
+      "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/",
+      "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/"
+     ],
+     "lap_swim": [
+      "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/",
+      "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+     ],
+     "lessons": [
+      "https://perkasieborough.org/departments/parks-recreation/menlo-aquatics-center/learn-to-swim/"
+     ]
+    },
+    "address": [
+     "https://www.perkasieborough.org/media/4112/2026-program-guide.pdf"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-spring-city-spring-city-community-pool",
+   "name": "Spring City Community Pool",
+   "official_name": "Spring City Community Pool",
+   "operator": "Spring City Borough",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Eastern Pennsylvania",
+   "city": "Spring City",
+   "address": {
+    "street": "268 Brown Street",
+    "locality": "Spring City",
+    "region": "PA",
+    "postal_code": "19475",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.springcitypa.gov/community/page/spring-city-community-pool",
+   "hours_fees_url": "https://www.springcitypa.gov/community/page/spring-city-community-pool",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Open daily June 20 to August 23.",
+       "source": "https://www.springcitypa.gov/community/page/spring-city-community-pool"
+      },
+      {
+       "text": "July 4 is members only.",
+       "source": "https://www.springcitypa.gov/community/page/spring-city-community-pool"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Memberships are also sold to non-Borough residents from surrounding communities.",
+       "source": "https://www.springcitypa.gov/community/page/spring-city-community-pool"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Ages 15 and under must be with an adult 21 or older.",
+     "source": "https://www.springcitypa.gov/community/page/spring-city-community-pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": {
+    "text": "Closed for the season; the pool reopens in 2027.",
+    "source": "https://www.springcitypa.gov/community/page/spring-city-community-pool"
+   },
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.springcitypa.gov/community/page/spring-city-community-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.springcitypa.gov/community/page/spring-city-community-pool"
+     ],
+     "members": [
+      "https://www.springcitypa.gov/community/page/spring-city-community-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.springcitypa.gov/community/page/spring-city-community-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-pa-west-reading-west-reading-pool",
+   "name": "West Reading Pool",
+   "official_name": "West Reading Pool",
+   "operator": "Borough of West Reading",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "PA",
+   "region": "Eastern Pennsylvania",
+   "city": "West Reading",
+   "address": {
+    "street": "475 Museum Road",
+    "locality": "West Reading",
+    "region": "PA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.westreadingborough.com/recreation/swimming-pool/",
+   "hours_fees_url": "https://www.westreadingborough.com/recreation/swimming-pool/",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Late-season closures in 2026, including August 24–28 and August 31–September 4.",
+       "source": "https://www.westreadingborough.com/recreation/swimming-pool/"
+      },
+      {
+       "text": "Guests 16 and older must show ID to register for a pool pass.",
+       "source": "https://www.westreadingborough.com/recreation/swimming-pool/"
+      },
+      {
+       "text": "The pool may close for bad weather or low attendance.",
+       "source": "https://www.westreadingborough.com/recreation/swimming-pool/"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Resident memberships require proof of residency.",
+       "source": "https://www.westreadingborough.com/recreation/swimming-pool/"
+      },
+      {
+       "text": "Only adults 18 or older may sign the pool registration form.",
+       "source": "https://www.westreadingborough.com/recreation/swimming-pool/"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must always be with a responsible adult.",
+     "source": "https://www.westreadingborough.com/recreation/swimming-pool/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Lessons are for children ages 3 to 12.",
+      "source": "https://www.westreadingborough.com/recreation/swimming-pool/"
+     },
+     {
+      "text": "Lesson dates are listed as TBA.",
+      "source": "https://www.westreadingborough.com/recreation/swimming-pool/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.westreadingborough.com/recreation/swimming-pool/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.westreadingborough.com/recreation/swimming-pool/"
+     ],
+     "members": [
+      "https://www.westreadingborough.com/recreation/swimming-pool/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.westreadingborough.com/recreation/swimming-pool/"
+     ]
+    },
+    "address": [
+     "https://www.westreadingborough.com/recreation/swimming-pool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  }
+ ]
+}

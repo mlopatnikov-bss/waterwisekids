@@ -1,0 +1,691 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "AL",
+ "name": "Alabama",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-al-auburn-lake-wilmore-park-recreation-center-pool",
+   "name": "Lake Wilmore Park Recreation Center Pool",
+   "official_name": "Lake Wilmore Park Recreation Center Pool",
+   "operator": "City of Auburn Parks and Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "AL",
+   "region": "Alabama",
+   "city": "Auburn",
+   "address": {
+    "street": "2000 Grove Hill Rd, Ste 200",
+    "locality": "Auburn",
+    "region": "AL",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.auburnal.gov/aquatics/",
+   "hours_fees_url": "https://www.auburnal.gov/aquatics/",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 12 and under must be with a parent or guardian aged 19 or older at all times.",
+     "source": "https://www.auburnal.gov/parks/programs/aquatics-homepage/faqs/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Children 13 and older may swim without a parent but may be asked to take a swim test.",
+     "source": "https://www.auburnal.gov/parks/programs/aquatics-homepage/faqs/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Groups of 8 or more must schedule their visit ahead of time.",
+     "source": "https://www.auburnal.gov/aquatics/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Parts of the park are still under construction; keep away from construction zones.",
+     "source": "https://www.auburnal.gov/parks/facilities/lake-wilmore/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 12 and under must be accompanied by a parent or guardian aged 19 or older at all times.",
+     "source": "https://www.auburnal.gov/parks/programs/aquatics-homepage/faqs/"
+    },
+    {
+     "text": "Any child using a flotation device must be within arm's reach of an adult.",
+     "source": "https://www.auburnal.gov/parks/programs/aquatics-homepage/faqs/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "day_pass": [
+      "https://www.auburnal.gov/aquatics/"
+     ],
+     "members": [
+      "https://www.auburnal.gov/aquatics/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.auburnal.gov/aquatics/"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.auburnal.gov/aquatics/"
+     ]
+    },
+    "address": [
+     "https://www.auburnal.gov/parks/facilities/lake-wilmore/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-al-auburn-samford-pool",
+   "name": "Samford Pool",
+   "official_name": "Samford Pool",
+   "operator": "City of Auburn Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "AL",
+   "region": "Alabama",
+   "city": "Auburn",
+   "address": {
+    "street": "465 Wrights Mill Road",
+    "locality": "Auburn",
+    "region": "AL",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.auburnal.gov/parks/facilities/samford-pool/",
+   "hours_fees_url": "https://www.auburnal.gov/aquatics/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {},
+     "label": "main"
+    },
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {},
+     "label": "children's"
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Closed for the 2026 season; the City says it re-opens on May 29, 2027.",
+     "source": "https://www.auburnal.gov/aquatics/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 12 and under must be with a parent or guardian aged 19 or older at all times.",
+     "source": "https://www.auburnal.gov/parks/programs/aquatics-homepage/faqs/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Children 13 and older may swim without a parent but may be asked to take a swim test.",
+     "source": "https://www.auburnal.gov/parks/programs/aquatics-homepage/faqs/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Groups of 8 or more must schedule their visit ahead of time.",
+     "source": "https://www.auburnal.gov/aquatics/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Swimming in the diving well is not allowed except when staff are supervising, such as for swim tests.",
+     "source": "https://www.auburnal.gov/parks/programs/aquatics-homepage/faqs/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 13 must pass a diving board test and be at least 4 feet tall to use the diving boards.",
+     "source": "https://www.auburnal.gov/parks/programs/aquatics-homepage/faqs/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 12 and under must be accompanied by a parent or guardian aged 19 or older at all times.",
+     "source": "https://www.auburnal.gov/parks/programs/aquatics-homepage/faqs/"
+    },
+    {
+     "text": "Any child using a flotation device must be within arm's reach of an adult.",
+     "source": "https://www.auburnal.gov/parks/programs/aquatics-homepage/faqs/"
+    },
+    {
+     "text": "Children under 6 are not permitted to use the diving boards.",
+     "source": "https://www.auburnal.gov/parks/programs/aquatics-homepage/faqs/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.auburnal.gov/aquatics/",
+     "https://www.auburnal.gov/parks/facilities/samford-pool/"
+    ],
+    "season": [
+     "https://www.auburnal.gov/aquatics/"
+    ],
+    "access": {
+     "day_pass": [
+      "https://www.auburnal.gov/aquatics/"
+     ],
+     "members": [
+      "https://www.auburnal.gov/aquatics/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.auburnal.gov/parks/facilities/samford-pool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-al-huntsville-dr-richard-showers-sr-pool",
+   "name": "Dr. Richard Showers, Sr. Pool",
+   "official_name": "Dr. Richard Showers, Sr. Pool",
+   "operator": "City of Huntsville Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "AL",
+   "region": "Alabama",
+   "city": "Huntsville",
+   "address": {
+    "street": "4600 Blue Spring Road NW",
+    "locality": "Huntsville",
+    "region": "AL",
+    "postal_code": "35810",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/dr-richard-showers-sr-pool/",
+   "hours_fees_url": "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/dr-richard-showers-sr-pool/",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Some weekday afternoon and Saturday-morning hours are lap swim only.",
+     "source": "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/dr-richard-showers-sr-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Hours can change for holidays and weather; call ahead to confirm.",
+     "source": "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Only people 19 or older can buy a swim pass; single-visit general admission is also available.",
+     "source": "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/dr-richard-showers-sr-pool/"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Lesson schedules change by season.",
+      "source": "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/swim-lessons/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/",
+     "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/swim-lessons/"
+    ],
+    "season": [
+     "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/dr-richard-showers-sr-pool/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/dr-richard-showers-sr-pool/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/dr-richard-showers-sr-pool/"
+     ],
+     "lap_swim": [
+      "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/dr-richard-showers-sr-pool/"
+     ],
+     "lessons": [
+      "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/dr-richard-showers-sr-pool/",
+      "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/swim-lessons/"
+     ]
+    },
+    "address": [
+     "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/dr-richard-showers-sr-pool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-al-huntsville-huntsville-aquatics-center",
+   "name": "Huntsville Aquatics Center",
+   "official_name": "Huntsville Aquatics Center",
+   "operator": "City of Huntsville Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "AL",
+   "region": "Alabama",
+   "city": "Huntsville",
+   "address": {
+    "street": "2213 Drake Ave SW",
+    "locality": "Huntsville",
+    "region": "AL",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/huntsville-aquatics-center/",
+   "hours_fees_url": "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/huntsville-aquatics-center/",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public"
+     },
+     "label": "instructional"
+    },
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    },
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "lap_swim": "public"
+     },
+     "label": "competition"
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Swimmers under 16 must be with an adult over 18.",
+     "source": "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/huntsville-aquatics-center/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Each pool has its own public swim and lap swim times, and some lap swim times are for ages 12 and up; check the schedule.",
+     "source": "https://www.huntsvilleal.gov/wp-content/uploads/2026/08/Huntsville-Aquatics-Center-Schedule_updated2026.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The whole facility closes for some events and City holidays, including October 15-18.",
+     "source": "https://www.huntsvilleal.gov/wp-content/uploads/2026/08/Huntsville-Aquatics-Center-Schedule_updated2026.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Hours can change for holidays and weather; call ahead to confirm.",
+     "source": "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Only people 19 or older can buy a swim pass; single-visit general admission is also available.",
+     "source": "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/huntsville-aquatics-center/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Swimmers under 16 must be accompanied by an adult over 18.",
+     "source": "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/huntsville-aquatics-center/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/",
+      "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/huntsville-aquatics-center/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/huntsville-aquatics-center/",
+      "https://www.huntsvilleal.gov/wp-content/uploads/2026/08/Huntsville-Aquatics-Center-Schedule_updated2026.pdf"
+     ],
+     "lap_swim": [
+      "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/huntsville-aquatics-center/",
+      "https://www.huntsvilleal.gov/wp-content/uploads/2026/08/Huntsville-Aquatics-Center-Schedule_updated2026.pdf"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.huntsvilleal.gov/environment/parks-recreation/recreation/aquatics/huntsville-aquatics-center/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-al-mobile-hillsdale-park-community-center-pool",
+   "name": "Hillsdale Park & Community Center Pool",
+   "official_name": "Hillsdale Park & Community Center Pool",
+   "operator": "City of Mobile Parks and Recreation Department (MPRD)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "AL",
+   "region": "Alabama",
+   "city": "Mobile",
+   "address": {
+    "street": "558 E. Felhorn Road",
+    "locality": "Mobile",
+    "region": "AL",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cityofmobile.gov/parks-rec/aquatics",
+   "hours_fees_url": "https://www.cityofmobile.gov/parks-rec/aquatics",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {}
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "The pool is open only in summer (May to August).",
+     "source": "https://www.cityofmobile.gov/parks-rec/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "City outdoor pools are closed on Sundays and City holidays.",
+     "source": "https://www.cityofmobile.gov/parks-rec/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 10 must be with an adult 18 or older.",
+     "source": "http://mprd.recdesk.com/RecDeskPortal/Portals/640/MPRD%20Aquatic%20Facility%20Rules%20(Pools).pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 4 feet tall must have a parent, guardian or instructor with them in the water unless they pass a swim test on that visit.",
+     "source": "http://mprd.recdesk.com/RecDeskPortal/Portals/640/MPRD%20Aquatic%20Facility%20Rules%20(Pools).pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Swimming is allowed only when lifeguards are on duty.",
+     "source": "http://mprd.recdesk.com/RecDeskPortal/Portals/640/MPRD%20Aquatic%20Facility%20Rules%20(Pools).pdf"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 10 must be accompanied by an adult 18 or older.",
+     "source": "http://mprd.recdesk.com/RecDeskPortal/Portals/640/MPRD%20Aquatic%20Facility%20Rules%20(Pools).pdf"
+    },
+    {
+     "text": "Children under 4 feet tall must be accompanied in the water by a parent, guardian or instructor unless they pass a swim test each visit.",
+     "source": "http://mprd.recdesk.com/RecDeskPortal/Portals/640/MPRD%20Aquatic%20Facility%20Rules%20(Pools).pdf"
+    },
+    {
+     "text": "Children who are not toilet-trained must wear a swim diaper with a bathing suit.",
+     "source": "http://mprd.recdesk.com/RecDeskPortal/Portals/640/MPRD%20Aquatic%20Facility%20Rules%20(Pools).pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "City swim classes run in June and July.",
+      "source": "https://www.cityofmobile.gov/parks-rec/aquatics"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.cityofmobile.gov/parks-rec/aquatics"
+    ],
+    "season": [
+     "https://www.cityofmobile.gov/parks-rec/aquatics"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.cityofmobile.gov/parks-rec/aquatics"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.cityofmobile.gov/parks-rec/aquatics"
+     ]
+    },
+    "address": [
+     "https://www.cityofmobile.gov/parks-rec/aquatics"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

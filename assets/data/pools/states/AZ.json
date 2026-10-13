@@ -1,0 +1,556 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "AZ",
+ "name": "Arizona",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-az-mesa-skyline-aquatic-center",
+   "name": "Skyline Aquatic Center",
+   "official_name": "Skyline Aquatic Center",
+   "operator": "City of Mesa Parks, Recreation and Community Facilities",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "AZ",
+   "region": "Arizona",
+   "city": "Mesa",
+   "address": {
+    "street": "845 S. Crismon Rd.",
+    "locality": "Mesa",
+    "region": "AZ",
+    "postal_code": "85208",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics/Skyline",
+   "hours_fees_url": "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "All Mesa pools are closed on Labor Day.",
+     "source": "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics/Skyline"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Riders must be at least 48 inches tall for the water slide.",
+     "source": "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics/Skyline"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Only Coast Guard-approved flotation devices are allowed; no arm floaties.",
+     "source": "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied and attended by an adult or a responsible teen aged 16 or older.",
+     "source": "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics"
+    },
+    {
+     "text": "Stay within arm's reach of children under 8.",
+     "source": "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics"
+    },
+    {
+     "text": "Children under 8 wear a wristband so lifeguards can recognize them.",
+     "source": "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Public swim is summer only; in 2026 it ran from May 23 and was weekends-only from July 25 to September 6.",
+      "source": "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics"
+     },
+     {
+      "text": "Public swim passes are valid only during designated public swim hours.",
+      "source": "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Lap swim at Skyline closes for annual maintenance from January 11 to January 29, 2027.",
+      "source": "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics/Skyline"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics"
+     ],
+     "day_pass": [
+      "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics",
+      "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics/Skyline"
+     ],
+     "lap_swim": [
+      "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics",
+      "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics/Skyline"
+     ],
+     "lessons": [
+      "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics/Skyline"
+     ]
+    },
+    "address": [
+     "https://www.mesaaz.gov/Activities-Culture/Parks-Recreation-and-Community-Facilities/Pools-and-Aquatics/Skyline"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-az-phoenix-pecos-pool",
+   "name": "Pecos Pool",
+   "official_name": "Pecos Pool",
+   "operator": "City of Phoenix Parks and Recreation Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "AZ",
+   "region": "Arizona",
+   "city": "Phoenix",
+   "address": {
+    "street": "17010 S 48th St",
+    "locality": "Phoenix",
+    "region": "AZ",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.phoenix.gov/administration/departments/parks/activities-facilities/pools/pecos-pool.html",
+   "hours_fees_url": "https://www.phoenix.gov/administration/departments/parks/activities-facilities/pools/pecos-pool.html",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer season only; in 2026 it ran Memorial Day weekend, May 30 to July 26, then weekends through Labor Day.",
+     "source": "https://www.phoenix.gov/administration/departments/parks/activities-facilities/pools/pecos-pool.html"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Only U.S. Coast Guard-approved flotation devices may be used in the pool.",
+     "source": "https://www.phoenix.gov/administration/departments/parks/classes-programs/aquatics-programs/pool-safety-information.html"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 6 and under must be accompanied and stay within arm's reach of a responsible person 13 or older.",
+     "source": "https://www.phoenix.gov/administration/departments/parks/classes-programs/aquatics-programs/pool-safety-information.html"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Closed on Fridays during the season.",
+      "source": "https://www.phoenix.gov/administration/departments/parks/activities-facilities/pools/pecos-pool.html"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.phoenix.gov/administration/departments/parks/activities-facilities/pools/pecos-pool.html"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.phoenix.gov/administration/departments/parks/activities-facilities/pools/pecos-pool.html",
+      "https://www.phoenix.gov/administration/departments/parks/classes-programs/aquatics-programs/pool-safety-information.html"
+     ],
+     "day_pass": [
+      "https://www.phoenix.gov/administration/departments/parks/activities-facilities/pools/pecos-pool.html",
+      "https://www.phoenix.gov/administration/departments/parks/classes-programs/aquatics-programs/pool-safety-information.html"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.phoenix.gov/administration/departments/parks/activities-facilities/pools/pecos-pool.html"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.phoenix.gov/administration/departments/parks/activities-facilities/pools/pecos-pool.html"
+     ]
+    },
+    "address": [
+     "https://www.phoenix.gov/administration/departments/parks/activities-facilities/pools/pecos-pool.html"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-az-tucson-clements-pool",
+   "name": "Clements Pool",
+   "official_name": "Clements Pool",
+   "operator": "City of Tucson Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "AZ",
+   "region": "Arizona",
+   "city": "Tucson",
+   "address": {
+    "street": "8155 E. Poinciana Dr",
+    "locality": "Tucson",
+    "region": "AZ",
+    "postal_code": "85730",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Clements-Pool",
+   "hours_fees_url": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Lap-Swim",
+   "setting": "unknown",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Slides, water toys and diving boards are closed September through May.",
+     "source": "https://www.tucsonaz.gov/files/sharedassets/public/v/7/living-and-working/parks-and-recreation/documents/aquatics/winter-pool-schedule.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "All city pools close on several holidays; check the posted schedule.",
+     "source": "https://www.tucsonaz.gov/files/sharedassets/public/v/7/living-and-working/parks-and-recreation/documents/aquatics/winter-pool-schedule.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Flotation devices must be Coast Guard-approved and worn only by non-swimmers with one-to-one adult supervision.",
+     "source": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Clements-Pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Clements is closed from late December to mid-January in the 2026-27 winter schedule.",
+     "source": "https://www.tucsonaz.gov/files/sharedassets/public/v/7/living-and-working/parks-and-recreation/documents/aquatics/winter-pool-schedule.pdf"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 7 are not admitted to the pool area unless accompanied by an adult 18 or older.",
+     "source": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Clements-Pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "A lap swim pass is required to lap swim or water walk; passes are not sold at the pool, and first-time buyers must register in person at a designated city location.",
+      "source": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Lap-Swim"
+     },
+     {
+      "text": "Non-residents pay a higher lap swim pass rate than Tucson residents.",
+      "source": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Lap-Swim"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads",
+     "https://www.tucsonaz.gov/files/sharedassets/public/v/7/living-and-working/parks-and-recreation/documents/aquatics/winter-pool-schedule.pdf"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads",
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Clements-Pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads",
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Clements-Pool"
+     ],
+     "lap_swim": [
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Clements-Pool",
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Lap-Swim"
+     ],
+     "lessons": [
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Swim-Lessons"
+     ]
+    },
+    "address": [
+     "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Clements-Pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-az-tucson-fort-lowell-pool",
+   "name": "Fort Lowell Pool",
+   "official_name": "Fort Lowell Pool",
+   "operator": "City of Tucson Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "AZ",
+   "region": "Arizona",
+   "city": "Tucson",
+   "address": {
+    "street": "2900 N. Craycroft Rd",
+    "locality": "Tucson",
+    "region": "AZ",
+    "postal_code": "85712",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Fort-Lowell-Pool",
+   "hours_fees_url": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Lap-Swim",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Slides, water toys and diving boards are closed September through May.",
+     "source": "https://www.tucsonaz.gov/files/sharedassets/public/v/7/living-and-working/parks-and-recreation/documents/aquatics/winter-pool-schedule.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "All city pools close on several holidays; check the posted schedule.",
+     "source": "https://www.tucsonaz.gov/files/sharedassets/public/v/7/living-and-working/parks-and-recreation/documents/aquatics/winter-pool-schedule.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Flotation devices must be Coast Guard-approved and worn only by non-swimmers with one-to-one adult supervision.",
+     "source": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Fort-Lowell-Pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Extended-season pool, open roughly May to October; the 2026 fall schedule ends November 7.",
+     "source": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 7 are not admitted to the pool area unless accompanied by an adult 18 or older.",
+     "source": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Fort-Lowell-Pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "A lap swim pass is required to lap swim or water walk; passes are not sold at the pool, and first-time buyers must register in person at a designated city location.",
+      "source": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Lap-Swim"
+     },
+     {
+      "text": "Non-residents pay a higher lap swim pass rate than Tucson residents.",
+      "source": "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Lap-Swim"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads",
+     "https://www.tucsonaz.gov/files/sharedassets/public/v/9/living-and-working/parks-and-recreation/documents/aquatics/fall-pool-season.pdf"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads",
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Fort-Lowell-Pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Fort-Lowell-Pool"
+     ],
+     "lap_swim": [
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Fort-Lowell-Pool",
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Lap-Swim"
+     ],
+     "lessons": [
+      "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Swim-Lessons"
+     ]
+    },
+    "address": [
+     "https://www.tucsonaz.gov/Departments/Parks-and-Recreation/Pools-and-Splash-Pads/Fort-Lowell-Pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

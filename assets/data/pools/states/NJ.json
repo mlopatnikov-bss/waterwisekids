@@ -1,0 +1,2254 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "NJ",
+ "name": "New Jersey",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-nj-atlantic-city-island-waterpark",
+   "name": "Island Waterpark",
+   "official_name": "Island Waterpark",
+   "operator": "Island Waterpark AC (at Showboat Resort Atlantic City)",
+   "facility_type": "other",
+   "country": "US",
+   "state": "NJ",
+   "region": "Central & South Jersey",
+   "city": "Atlantic City",
+   "address": {
+    "street": "801 Boardwalk",
+    "locality": "Atlantic City",
+    "region": "NJ",
+    "postal_code": "08401",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.islandwaterparkac.com/",
+   "hours_fees_url": "https://www.islandwaterparkac.com/tickets_page",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Open days vary by month; on some schedules it is closed Monday to Thursday.",
+       "source": "https://www.islandwaterparkac.com/"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": {
+    "text": "The Paradise Island VIP area with the Bliss Pool is for ages 21 and over only.",
+    "source": "https://www.islandwaterparkac.com/tickets_page"
+   },
+   "sources": {
+    "setting": [
+     "https://www.islandwaterparkac.com/"
+    ],
+    "season": [
+     "https://www.islandwaterparkac.com/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.islandwaterparkac.com/",
+      "https://www.islandwaterparkac.com/tickets_page"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.islandwaterparkac.com/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-bridgewater-bridgewater-ymca",
+   "name": "Bridgewater YMCA",
+   "official_name": "Bridgewater YMCA",
+   "operator": "Greater Somerset County YMCA",
+   "facility_type": "ymca",
+   "country": "US",
+   "state": "NJ",
+   "region": "Central & South Jersey",
+   "city": "Bridgewater",
+   "address": {
+    "street": "601 Garretson Road",
+    "locality": "Bridgewater",
+    "region": "NJ",
+    "postal_code": "08807",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.gscymca.org/locations/bridgewater-ymca/",
+   "hours_fees_url": "https://www.gscymca.org/programs/facility-schedules/",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "restricted",
+     "season": "unknown",
+     "o": {
+      "open_swim": "unknown",
+      "lessons": "members"
+     }
+    }
+   ],
+   "public_access": "restricted",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Open swim at both pools is described as a member benefit.",
+       "source": "https://www.gscymca.org/programs/aquatics/bridgewater/"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Open swim runs most days; check the pool schedule before you go.",
+      "source": "https://www.gscymca.org/programs/aquatics/bridgewater/"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Swim lessons are for members only.",
+      "source": "https://www.gscymca.org/programs/aquatics/bridgewater/"
+     },
+     {
+      "text": "Private lessons are offered for ages 3 and up.",
+      "source": "https://www.gscymca.org/locations/bridgewater-ymca/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.gscymca.org/locations/",
+     "https://www.gscymca.org/locations/bridgewater-ymca/"
+    ],
+    "season": [],
+    "access": {
+     "members": [
+      "https://www.gscymca.org/programs/aquatics/bridgewater/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.gscymca.org/programs/aquatics/bridgewater/"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.gscymca.org/locations/bridgewater-ymca/",
+      "https://www.gscymca.org/programs/aquatics/bridgewater/"
+     ]
+    },
+    "address": [
+     "https://www.gscymca.org/locations/bridgewater-ymca/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-cape-may-cape-may-city-elementary-school-pool",
+   "name": "Cape May City Elementary School Pool",
+   "official_name": "Cape May City Elementary School Pool (City of Cape May Indoor Pool Programs)",
+   "operator": "City of Cape May Recreation Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NJ",
+   "region": "Central & South Jersey",
+   "city": "Cape May",
+   "address": {
+    "street": "921 Lafayette St.",
+    "locality": "Cape May",
+    "region": "NJ",
+    "postal_code": "08204",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.capemaycity.com/indoorpool",
+   "hours_fees_url": "https://www.capemaycity.com/media/Convention%20Hall/2026-2027%20Sept-May%20Pool%20Schedule.pdf",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "The current schedule runs September 8 to May 27, with holiday closures.",
+       "source": "https://www.capemaycity.com/media/Convention%20Hall/2026-2027%20Sept-May%20Pool%20Schedule.pdf"
+      },
+      {
+       "text": "Adult Swim sessions are for ages 50 and older only.",
+       "source": "https://www.capemaycity.com/media/Convention%20Hall/2026-2027%20Sept-May%20Pool%20Schedule.pdf"
+      },
+      {
+       "text": "Sessions have attendance caps; adult sessions are limited to 40.",
+       "source": "https://www.capemaycity.com/media/Convention%20Hall/2026-2027%20Sept-May%20Pool%20Schedule.pdf"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "In Family Swim, every child must be with a parent or guardian.",
+     "source": "https://www.capemaycity.com/media/Convention%20Hall/2026-2027%20Sept-May%20Pool%20Schedule.pdf"
+    },
+    {
+     "text": "Families with more than 4 children need both parents or two adults; Family Swim is capped at 50.",
+     "source": "https://www.capemaycity.com/media/Convention%20Hall/2026-2027%20Sept-May%20Pool%20Schedule.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Family Swim is the parent-and-child session; the other is labelled Adult Lap & Open Swim.",
+      "source": "https://www.capemaycity.com/media/Convention%20Hall/2026-2027%20Sept-May%20Pool%20Schedule.pdf"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Lap swim is part of the Adult Lap & Open Swim session.",
+      "source": "https://www.capemaycity.com/media/Convention%20Hall/2026-2027%20Sept-May%20Pool%20Schedule.pdf"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.capemaycity.com/indoorpool"
+    ],
+    "season": [
+     "https://www.capemaycity.com/indoorpool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.capemaycity.com/media/Convention%20Hall/2026-2027%20Sept-May%20Pool%20Schedule.pdf"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.capemaycity.com/media/Convention%20Hall/2026-2027%20Sept-May%20Pool%20Schedule.pdf"
+     ],
+     "lap_swim": [
+      "https://www.capemaycity.com/media/Convention%20Hall/2026-2027%20Sept-May%20Pool%20Schedule.pdf"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.capemaycity.com/indoorpool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-east-brunswick-crystal-springs-family-waterpark",
+   "name": "Crystal Springs Family Waterpark",
+   "official_name": "Crystal Springs Family Waterpark",
+   "operator": "Township of East Brunswick Recreation and Parks",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NJ",
+   "region": "Central & South Jersey",
+   "city": "East Brunswick",
+   "address": {
+    "street": "380 Dunhams Corner Road",
+    "locality": "East Brunswick",
+    "region": "NJ",
+    "postal_code": "08816",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.eastbrunswick.org/250/Crystal-Springs",
+   "hours_fees_url": "https://www.eastbrunswick.org/264/CSWP-Daily-Admissions",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Daily tickets are sold online only, by credit card.",
+       "source": "https://www.eastbrunswick.org/264/CSWP-Daily-Admissions"
+      },
+      {
+       "text": "Tickets go on sale after 5 PM the day before your visit.",
+       "source": "https://www.eastbrunswick.org/264/CSWP-Daily-Admissions"
+      },
+      {
+       "text": "Daily-ticket holders can enter from noon on normal operating days.",
+       "source": "https://www.eastbrunswick.org/264/CSWP-Daily-Admissions"
+      }
+     ]
+    },
+    {
+     "type": "residents",
+     "conditions": [
+      {
+       "text": "Residents must buy through their approved online account to get the resident rate.",
+       "source": "https://www.eastbrunswick.org/264/CSWP-Daily-Admissions"
+      },
+      {
+       "text": "Without an account, submit a Household Information Form with proofs and wait for approval.",
+       "source": "https://www.eastbrunswick.org/264/CSWP-Daily-Admissions"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 13 must be accompanied by an adult.",
+     "source": "https://www.eastbrunswick.org/264/CSWP-Daily-Admissions"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Summer-only program: StarTots for toddlers and Swim School for elementary-age swimmers.",
+      "source": "https://www.eastbrunswick.org/709/Swim-Lessons"
+     },
+     {
+      "text": "StarTots is for ages 2 to 5.",
+      "source": "https://www.eastbrunswick.org/709/Swim-Lessons"
+     }
+    ]
+   },
+   "card_note": {
+    "text": "Crystal Springs is closed for the 2026 season.",
+    "source": "https://www.eastbrunswick.org/264/CSWP-Daily-Admissions"
+   },
+   "sources": {
+    "setting": [
+     "https://www.eastbrunswick.org/250/Crystal-Springs"
+    ],
+    "season": [
+     "https://www.eastbrunswick.org/250/Crystal-Springs"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.eastbrunswick.org/264/CSWP-Daily-Admissions"
+     ],
+     "residents": [
+      "https://www.eastbrunswick.org/264/CSWP-Daily-Admissions"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.eastbrunswick.org/709/Swim-Lessons"
+     ]
+    },
+    "address": [
+     "https://www.eastbrunswick.org/250/Crystal-Springs"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-hamilton-hamilton-area-ymca-john-k-rafferty",
+   "name": "Hamilton Area YMCA - John K. Rafferty (JKR) Branch",
+   "official_name": "Hamilton Area YMCA - John K. Rafferty (JKR) Branch",
+   "operator": "Hamilton Area YMCA",
+   "facility_type": "ymca",
+   "country": "US",
+   "state": "NJ",
+   "region": "Central & South Jersey",
+   "city": "Hamilton",
+   "address": {
+    "street": "1315 Whitehorse-Mercerville Road",
+    "locality": "Hamilton",
+    "region": "NJ",
+    "postal_code": "08619",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.hamiltonymca.org/about-us/jkr-branch",
+   "hours_fees_url": "https://www.hamiltonymca.org/about-us/jkr-branch",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "members",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "o": {
+      "open_swim": "members",
+      "lap_swim": "unknown",
+      "lessons": "public"
+     },
+     "season": "unknown"
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Guests under 18 must be signed in by, and stay with, an adult on the membership.",
+       "source": "https://www.hamiltonymca.org/about-us/jkr-branch"
+      },
+      {
+       "text": "Guests may visit at most 3 times per calendar year.",
+       "source": "https://www.hamiltonymca.org/about-us/jkr-branch"
+      },
+      {
+       "text": "At most two guests per membership at one time.",
+       "source": "https://www.hamiltonymca.org/about-us/jkr-branch"
+      }
+     ]
+    },
+    {
+     "type": "day_pass",
+     "conditions": [
+      {
+       "text": "No youth (0–17) day pass is listed without a member.",
+       "source": "https://www.hamiltonymca.org/about-us/jkr-branch"
+      },
+      {
+       "text": "Guests 18 and older must show a physical, valid ID.",
+       "source": "https://www.hamiltonymca.org/about-us/jkr-branch"
+      },
+      {
+       "text": "All guests sign a Code of Conduct before using the facility.",
+       "source": "https://www.hamiltonymca.org/about-us/jkr-branch"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 8 and under need a parent or guardian 18+ in the pool.",
+     "source": "https://www.hamiltonymca.org/docs/default-source/programs-and-schedules/pool-schedule878dd130-3f29-47ff-8862-486f9185ac17.pdf?sfvrsn=27e61dd1_1"
+    },
+    {
+     "text": "Children 9 to 11 need a parent or guardian 18+ in the building.",
+     "source": "https://www.hamiltonymca.org/docs/default-source/programs-and-schedules/pool-schedule878dd130-3f29-47ff-8862-486f9185ac17.pdf?sfvrsn=27e61dd1_1"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "No open or family swim on weekdays from about 4:30 to 7 PM.",
+      "source": "https://www.hamiltonymca.org/docs/default-source/programs-and-schedules/pool-schedule878dd130-3f29-47ff-8862-486f9185ac17.pdf?sfvrsn=27e61dd1_1"
+     },
+     {
+      "text": "Pool space can change because of programs.",
+      "source": "https://www.hamiltonymca.org/docs/default-source/programs-and-schedules/pool-schedule878dd130-3f29-47ff-8862-486f9185ac17.pdf?sfvrsn=27e61dd1_1"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "No lap lanes on most weekdays from 5 to 7 PM.",
+      "source": "https://www.hamiltonymca.org/docs/default-source/programs-and-schedules/pool-schedule878dd130-3f29-47ff-8862-486f9185ac17.pdf?sfvrsn=27e61dd1_1"
+     },
+     {
+      "text": "Members 12 and older in the lanes must be swimming laps.",
+      "source": "https://www.hamiltonymca.org/docs/default-source/programs-and-schedules/pool-schedule878dd130-3f29-47ff-8862-486f9185ac17.pdf?sfvrsn=27e61dd1_1"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Infant, toddler and early-stage classes need a parent in the water.",
+      "source": "https://www.hamiltonymca.org/programs/aquatics-swim-lessons"
+     },
+     {
+      "text": "New swimmers 3+ joining above Acclimation need a swim evaluation first.",
+      "source": "https://www.hamiltonymca.org/programs/aquatics-swim-lessons"
+     }
+    ]
+   },
+   "card_note": {
+    "text": "Open swim is listed for members; ask whether a day pass includes pool time.",
+    "source": "https://www.hamiltonymca.org/docs/default-source/programs-and-schedules/pool-schedule878dd130-3f29-47ff-8862-486f9185ac17.pdf?sfvrsn=27e61dd1_1"
+   },
+   "sources": {
+    "setting": [
+     "https://www.hamiltonymca.org/about-us/jkr-branch"
+    ],
+    "season": [],
+    "access": {
+     "members": [
+      "https://www.hamiltonymca.org/about-us/jkr-branch",
+      "https://www.hamiltonymca.org/docs/default-source/programs-and-schedules/pool-schedule878dd130-3f29-47ff-8862-486f9185ac17.pdf?sfvrsn=27e61dd1_1"
+     ],
+     "day_pass": [
+      "https://www.hamiltonymca.org/about-us/jkr-branch"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.hamiltonymca.org/docs/default-source/programs-and-schedules/pool-schedule878dd130-3f29-47ff-8862-486f9185ac17.pdf?sfvrsn=27e61dd1_1"
+     ],
+     "lap_swim": [
+      "https://www.hamiltonymca.org/docs/default-source/programs-and-schedules/pool-schedule878dd130-3f29-47ff-8862-486f9185ac17.pdf?sfvrsn=27e61dd1_1"
+     ],
+     "lessons": [
+      "https://www.hamiltonymca.org/programs/aquatics-swim-lessons"
+     ]
+    },
+    "address": [
+     "https://www.hamiltonymca.org/about-us/jkr-branch"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-ocean-city-ocean-city-aquatic-fitness-center",
+   "name": "Ocean City Aquatic & Fitness Center",
+   "official_name": "Ocean City Aquatic & Fitness Center",
+   "operator": "City of Ocean City (Recreation)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NJ",
+   "region": "Central & South Jersey",
+   "city": "Ocean City",
+   "address": {
+    "street": "1735 Simpson Avenue",
+    "locality": "Ocean City",
+    "region": "NJ",
+    "postal_code": "08226",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.ocnj.us/aquaticfitnesscenter",
+   "hours_fees_url": "https://www.ocnj.us/aquaticfitnesscenter",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "unknown",
+     "o": {
+      "open_swim": "unknown",
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     },
+     "season": "unknown"
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": [
+      {
+       "text": "Daily passes are sold September 1 to June 15 only, not in summer.",
+       "source": "https://evogov.s3.us-west-2.amazonaws.com/19/media/468919.pdf"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Membership applications must be completed in person.",
+       "source": "https://evogov.s3.us-west-2.amazonaws.com/19/media/468919.pdf"
+      },
+      {
+       "text": "Resident rates need proof of Ocean City residency.",
+       "source": "https://evogov.s3.us-west-2.amazonaws.com/19/media/468919.pdf"
+      },
+      {
+       "text": "Guests only with an active member 18+ present; two guests per member.",
+       "source": "https://evogov.s3.us-west-2.amazonaws.com/19/media/468919.pdf"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 11 need a parent or guardian for recreational swim (rule written for members).",
+     "source": "https://evogov.s3.us-west-2.amazonaws.com/19/media/468919.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Recreational swim uses only 2 lanes at scheduled times; most lanes are lap swim.",
+      "source": "https://www.ocnj.us/media/Aquatic%20Fitness/AFC%20Pool%20Schedules/2026%20Pool%20Fall%20Schedule.pdf"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Lap lanes are for swimmers 14 and older.",
+      "source": "https://www.ocnj.us/media/Aquatic%20Fitness/AFC%20Pool%20Schedules/2026%20Pool%20Fall%20Schedule.pdf"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Only private swim lessons are listed.",
+      "source": "https://www.ocnj.us/AnF-Programs"
+     },
+     {
+      "text": "Private lessons start with an inquiry form.",
+      "source": "https://www.ocnj.us/AnF-Programs"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "day_pass": [
+      "https://evogov.s3.us-west-2.amazonaws.com/19/media/468919.pdf"
+     ],
+     "members": [
+      "https://evogov.s3.us-west-2.amazonaws.com/19/media/468919.pdf",
+      "https://www.ocnj.us/aquaticfitnesscenter"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://evogov.s3.us-west-2.amazonaws.com/19/media/468919.pdf",
+      "https://www.ocnj.us/media/Aquatic%20Fitness/AFC%20Pool%20Schedules/2026%20Pool%20Fall%20Schedule.pdf"
+     ],
+     "lap_swim": [
+      "https://www.ocnj.us/media/Aquatic%20Fitness/AFC%20Pool%20Schedules/2026%20Pool%20Fall%20Schedule.pdf"
+     ],
+     "lessons": [
+      "https://www.ocnj.us/AnF-Programs"
+     ]
+    },
+    "address": [
+     "https://www.ocnj.us/aquaticfitnesscenter"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-princeton-princeton-ymca",
+   "name": "Princeton YMCA",
+   "official_name": "Princeton YMCA",
+   "operator": "Greater Somerset County YMCA",
+   "facility_type": "ymca",
+   "country": "US",
+   "state": "NJ",
+   "region": "Central & South Jersey",
+   "city": "Princeton",
+   "address": {
+    "street": "59 Paul Robeson Place",
+    "locality": "Princeton",
+    "region": "NJ",
+    "postal_code": "08540",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.gscymca.org/locations/princeton-ymca/",
+   "hours_fees_url": "https://www.gscymca.org/programs/facility-schedules/",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "restricted",
+     "season": "unknown",
+     "o": {
+      "open_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "restricted",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "A membership card or fob must be shown to get in.",
+       "source": "https://www.gscymca.org/membership/policies-procedures/"
+      },
+      {
+       "text": "Guests may come only with a member 18 or older, who stays with them.",
+       "source": "https://www.gscymca.org/membership/policies-procedures/"
+      },
+      {
+       "text": "Guests sign a waiver and show photo ID.",
+       "source": "https://www.gscymca.org/membership/policies-procedures/"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 11 and under must be in a Y program or with a parent or guardian 18+.",
+     "source": "https://www.gscymca.org/membership/policies-procedures/"
+    },
+    {
+     "text": "Parents of children 6 and under must be in the water, in swimwear, within arm's reach.",
+     "source": "https://www.gscymca.org/membership/policies-procedures/"
+    },
+    {
+     "text": "During open swim, parents of children 7 to 10 must be on deck in swimwear, supervising.",
+     "source": "https://www.gscymca.org/membership/policies-procedures/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Swimmers 12 and under take a short swim test before family or lap swim.",
+      "source": "https://www.gscymca.org/membership/policies-procedures/"
+     },
+     {
+      "text": "Children who do not pass the test stay in designated shallow areas.",
+      "source": "https://www.gscymca.org/membership/policies-procedures/"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Private lessons are for ages 3 and up.",
+      "source": "https://www.gscymca.org/locations/princeton-ymca/"
+     },
+     {
+      "text": "Group lessons run in sessions, one to four times a week.",
+      "source": "https://www.gscymca.org/locations/princeton-ymca/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.gscymca.org/locations/"
+    ],
+    "season": [],
+    "access": {
+     "members": [
+      "https://www.gscymca.org/locations/",
+      "https://www.gscymca.org/membership/policies-procedures/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.gscymca.org/membership/policies-procedures/",
+      "https://www.gscymca.org/programs/aquatics/family-and-open-swim/"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.gscymca.org/locations/princeton-ymca/",
+      "https://www.gscymca.org/programs/aquatics/family-and-open-swim/"
+     ]
+    },
+    "address": [
+     "https://www.gscymca.org/locations/princeton-ymca/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-west-windsor-west-windsor-waterworks-family-aquatic-center",
+   "name": "West Windsor WaterWorks Family Aquatic Center",
+   "official_name": "West Windsor WaterWorks Family Aquatic Center",
+   "operator": "West Windsor Township Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NJ",
+   "region": "Central & South Jersey",
+   "city": "West Windsor",
+   "address": {
+    "street": "193 Princeton-Hightstown Road",
+    "locality": "West Windsor",
+    "region": "NJ",
+    "postal_code": "08550",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.westwindsortwp.gov/departments/parks_recreation/waterworks.php",
+   "hours_fees_url": "https://www.westwindsortwp.gov/departments/parks_recreation/waterworks.php",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "residents",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "restricted",
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "restricted",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "residents",
+     "conditions": [
+      {
+       "text": "Closed for the fall and winter seasons.",
+       "source": "https://www.westwindsortwp.gov/departments/parks_recreation/waterworks.php"
+      },
+      {
+       "text": "Daily admission is only for West Windsor residents or guests of members.",
+       "source": "https://www.westwindsortwp.gov/departments/parks_recreation/waterworks.php"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Non-residents can get in only with a season membership or as a member's guest.",
+       "source": "https://www.westwindsortwp.gov/Documents/Departments%20And%20Divisions/Parks%20and%20Recreation/Waterworks%20Family%20Aquatic%20Center/2026/2026%20Non-Resident%20Letter.pdf"
+      },
+      {
+       "text": "Members may buy guest passes, up to 15 per membership.",
+       "source": "https://www.westwindsortwp.gov/Documents/Departments%20And%20Divisions/Parks%20and%20Recreation/Waterworks%20Family%20Aquatic%20Center/2026/2026%20Non-Resident%20Letter.pdf"
+      },
+      {
+       "text": "Nannies, live-in helpers and grandparents are not covered by a family membership.",
+       "source": "https://www.westwindsortwp.gov/Documents/Departments%20And%20Divisions/Parks%20and%20Recreation/Waterworks%20Family%20Aquatic%20Center/2026/2026%20Non-Resident%20Letter.pdf"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Register using the 2026 swim lesson schedule and registration form.",
+      "source": "https://www.westwindsortwp.gov/departments/parks_recreation/waterworks.php"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.westwindsortwp.gov/departments/parks_recreation/waterworks.php"
+    ],
+    "access": {
+     "residents": [
+      "https://www.westwindsortwp.gov/departments/parks_recreation/waterworks.php"
+     ],
+     "members": [
+      "https://www.westwindsortwp.gov/Documents/Departments%20And%20Divisions/Parks%20and%20Recreation/Waterworks%20Family%20Aquatic%20Center/2026/2026%20Non-Resident%20Letter.pdf"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.westwindsortwp.gov/departments/parks_recreation/waterworks.php"
+     ]
+    },
+    "address": [
+     "https://www.westwindsortwp.gov/departments/parks_recreation/waterworks.php"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-chatham-memorial-park-pool",
+   "name": "Memorial Park Pool",
+   "official_name": "Memorial Park Pool",
+   "operator": "Borough of Chatham (Chatham Borough/Township Joint Recreation)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NJ",
+   "region": "North Jersey",
+   "city": "Chatham",
+   "address": {
+    "street": "Memorial Park, North Passaic Avenue",
+    "locality": "Chatham",
+    "region": "NJ",
+    "postal_code": null,
+    "precision": "street"
+   },
+   "official_url": "https://chathamborough.org/recreation-page-list/250-swimming-pool",
+   "hours_fees_url": "https://chathamborough.org/recreation-page-list/250-swimming-pool",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "unknown",
+     "o": {
+      "lessons": "public"
+     },
+     "season": "seasonal"
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Season memberships are for Chatham residents and area non-residents, at different rates.",
+       "source": "https://chathamborough.org/departments/recreation"
+      },
+      {
+       "text": "Guest passes are only for guests coming with a member.",
+       "source": "https://chathamborough.org/recreation-page-list/250-swimming-pool"
+      },
+      {
+       "text": "The page lists adult and child day passes but does not say who may buy them.",
+       "source": "https://chathamborough.org/recreation-page-list/250-swimming-pool"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Resident children under 10 must be with an adult family member on their account.",
+     "source": "https://chathamborough.org/recreation-page-list/250-swimming-pool"
+    },
+    {
+     "text": "Non-resident children under 14 must be with an adult family member on their account.",
+     "source": "https://chathamborough.org/recreation-page-list/250-swimming-pool"
+    },
+    {
+     "text": "Children who cannot stand or swim on their own need a parent directly supervising in the main pool.",
+     "source": "https://chathamborough.org/recreation-page-list/250-swimming-pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Members get priority registration; non-members may also enroll.",
+      "source": "https://chathamborough.org/recreation-page-list/250-swimming-pool"
+     },
+     {
+      "text": "Summer session July 6 to August 22, Monday to Thursday mornings.",
+      "source": "https://chathamborough.org/recreation-page-list/250-swimming-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://chathamborough.org/departments/recreation"
+    ],
+    "access": {
+     "members": [
+      "https://chathamborough.org/departments/recreation",
+      "https://chathamborough.org/recreation-page-list/250-swimming-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://chathamborough.org/recreation-page-list/250-swimming-pool"
+     ]
+    },
+    "address": [
+     "https://chathamborough.org/departments/recreation"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-jersey-city-lafayette-aquatics-center",
+   "name": "Lafayette Aquatics Center",
+   "official_name": "Lafayette Aquatics Center",
+   "operator": "City of Jersey City Department of Recreation & Youth Development",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "NJ",
+   "region": "North Jersey",
+   "city": "Jersey City",
+   "address": {
+    "street": "303 Van Horne Street",
+    "locality": "Jersey City",
+    "region": "NJ",
+    "postal_code": "07305",
+    "precision": "street_number"
+   },
+   "official_url": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=17",
+   "hours_fees_url": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=17",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Summer season only; the 2026 season ran June 30 to September 7.",
+       "source": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=17"
+      },
+      {
+       "text": "Weekdays 7 to 9 AM are adult swim; no one 17 or under is allowed.",
+       "source": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=17"
+      },
+      {
+       "text": "Adults 18+ show photo ID; without Jersey City proof of residency, the non-resident rate applies.",
+       "source": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=17"
+      }
+     ]
+    },
+    {
+     "type": "residents",
+     "conditions": [
+      {
+       "text": "Jersey City resident adults and seniors get resident entry by showing proof of residency.",
+       "source": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=17"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Weekday family swim, 9 AM to 1 PM, is shared with camp groups.",
+      "source": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=17"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=17"
+    ],
+    "access": {
+     "public_admission": [
+      "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=17"
+     ],
+     "residents": [
+      "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=17"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=17"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=17"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-jersey-city-pershing-field-pool",
+   "name": "Pershing Field Pool",
+   "official_name": "Pershing Field Pool",
+   "operator": "City of Jersey City Department of Recreation & Youth Development",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NJ",
+   "region": "North Jersey",
+   "city": "Jersey City",
+   "address": {
+    "street": "201 Central Ave",
+    "locality": "Jersey City",
+    "region": "NJ",
+    "postal_code": "07307",
+    "precision": "street_number"
+   },
+   "official_url": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=2",
+   "hours_fees_url": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=2",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "No public entry on weekdays from 3:30 to 5:15 PM (swim programs).",
+       "source": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=2"
+      },
+      {
+       "text": "Weekdays 7 to 10 AM are Adult Swim.",
+       "source": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=2"
+      },
+      {
+       "text": "Adults 18+ show photo ID; the resident rate needs Jersey City proof of residency.",
+       "source": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=2"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Family Swim runs only in set time blocks, such as weekdays 10 AM to noon.",
+      "source": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=2"
+     },
+     {
+      "text": "Weekend Family Swim runs in afternoon blocks.",
+      "source": "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=2"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=2"
+    ],
+    "season": [
+     "https://jerseycitynj.gov/news/mayor_unveils_retractable_roof_on_pershing_pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=2"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=2"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://jcrec.recdesk.com/Community/Facility/Detail?facilityId=2"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-newton-newton-town-pool",
+   "name": "Newton Town Pool",
+   "official_name": "Newton Town Pool",
+   "operator": "Town of Newton Recreation Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NJ",
+   "region": "North Jersey",
+   "city": "Newton",
+   "address": {
+    "street": "111 Moran St.",
+    "locality": "Newton",
+    "region": "NJ",
+    "postal_code": "07860",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.newtontownhall.com/190/Newton-Town-Pool",
+   "hours_fees_url": "https://www.newtontownhall.com/310/Pricing",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "residents",
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "residents",
+     "conditions": [
+      {
+       "text": "Residents must register and get a pool tag before using the pool.",
+       "source": "https://www.newtontownhall.com/310/Pricing"
+      },
+      {
+       "text": "You must live in the Town of Newton; a Newton mailing address alone does not count.",
+       "source": "https://www.newtontownhall.com/310/Pricing"
+      },
+      {
+       "text": "From June 19, registration is in person at the pool desk.",
+       "source": "https://www.newtontownhall.com/309/Announcements"
+      }
+     ]
+    },
+    {
+     "type": "day_pass",
+     "conditions": [
+      {
+       "text": "Day passes are for non-residents, including nearby townships with Newton mailing addresses.",
+       "source": "https://www.newtontownhall.com/310/Pricing"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Non-resident season memberships are offered.",
+       "source": "https://www.newtontownhall.com/310/Pricing"
+      },
+      {
+       "text": "Family membership covers 2 adults and up to 4 dependent children under 21 at one address.",
+       "source": "https://www.newtontownhall.com/310/Pricing"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "The 2026 full-time season ran June 19 to September 7.",
+      "source": "https://www.newtontownhall.com/309/Announcements"
+     },
+     {
+      "text": "Before that, public open swim ran on two June weekends.",
+      "source": "https://www.newtontownhall.com/309/Announcements"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "New participants complete a swim assessment before placement.",
+      "source": "https://www.newtontownhall.com/312/Swim-Lessons"
+     },
+     {
+      "text": "A registration form is required.",
+      "source": "https://www.newtontownhall.com/312/Swim-Lessons"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.newtontownhall.com/309/Announcements"
+    ],
+    "access": {
+     "residents": [
+      "https://www.newtontownhall.com/309/Announcements",
+      "https://www.newtontownhall.com/310/Pricing"
+     ],
+     "day_pass": [
+      "https://www.newtontownhall.com/310/Pricing"
+     ],
+     "members": [
+      "https://www.newtontownhall.com/310/Pricing"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.newtontownhall.com/309/Announcements"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.newtontownhall.com/312/Swim-Lessons"
+     ]
+    },
+    "address": [
+     "https://www.newtontownhall.com/309/Announcements"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-north-bergen-north-bergen-pool-complex",
+   "name": "North Bergen Pool Complex",
+   "official_name": "North Bergen Pool Complex",
+   "operator": "Township of North Bergen",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NJ",
+   "region": "North Jersey",
+   "city": "North Bergen",
+   "address": {
+    "street": "2111 91st Street",
+    "locality": "North Bergen",
+    "region": "NJ",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.northbergen.org/News/View/11758/the-pool-is-open-every-day-beginning-saturday-jun-27",
+   "hours_fees_url": "https://www.northbergen.org/_Content/pdf/Pool-Registration-2026.pdf",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "restricted",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "restricted",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "residents",
+     "conditions": [
+      {
+       "text": "Registration needs 2 proofs of residency, such as a utility or tax bill; IDs are not accepted.",
+       "source": "https://www.northbergen.org/_Content/pdf/Pool-Registration-2026.pdf"
+      },
+      {
+       "text": "Birth certificates are required for all children.",
+       "source": "https://www.northbergen.org/_Content/pdf/Pool-Registration-2026.pdf"
+      },
+      {
+       "text": "Non-residents can come only as guests of full-time seasonal members.",
+       "source": "https://www.northbergen.org/News/View/11758/the-pool-is-open-every-day-beginning-saturday-jun-27"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.northbergen.org/News/View/11758/the-pool-is-open-every-day-beginning-saturday-jun-27"
+    ],
+    "access": {
+     "residents": [
+      "https://www.northbergen.org/News/View/11758/the-pool-is-open-every-day-beginning-saturday-jun-27",
+      "https://www.northbergen.org/_Content/pdf/Pool-Registration-2026.pdf"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.northbergen.org/_Content/pdf/Pool-Registration-2026.pdf"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-palisades-park-palisades-park-swim-club",
+   "name": "Palisades Park Swim Club",
+   "official_name": "Palisades Park Swim Club (Palisades Park Pool Complex)",
+   "operator": "Borough of Palisades Park",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NJ",
+   "region": "North Jersey",
+   "city": "Palisades Park",
+   "address": {
+    "street": "End of Roosevelt Place",
+    "locality": "Palisades Park",
+    "region": "NJ",
+    "postal_code": "07650",
+    "precision": "street"
+   },
+   "official_url": "https://palisadesparknj.org/departments/town-pool/",
+   "hours_fees_url": "https://palisadesparknj.org/departments/town-pool/",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": [
+      {
+       "text": "Before opening day (June 21) general swim is weekends only; the page gives no year.",
+       "source": "https://palisadesparknj.org/departments/town-pool/"
+      },
+      {
+       "text": "Bring photo ID; the daily pass rate depends on where you live.",
+       "source": "https://palisadesparknj.org/departments/town-pool/"
+      }
+     ]
+    },
+    {
+     "type": "day_pass",
+     "conditions": [
+      {
+       "text": "Bring photo ID.",
+       "source": "https://palisadesparknj.org/departments/town-pool/"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Season memberships use a resident/non-resident application.",
+       "source": "https://palisadesparknj.org/departments/town-pool/"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Only pre-season weekend hours are listed; full-season hours are not on the page.",
+      "source": "https://palisadesparknj.org/departments/town-pool/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://palisadesparknj.org/departments/town-pool/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://palisadesparknj.org/departments/town-pool/"
+     ],
+     "day_pass": [
+      "https://palisadesparknj.org/departments/town-pool/"
+     ],
+     "members": [
+      "https://palisadesparknj.org/departments/town-pool/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://palisadesparknj.org/departments/town-pool/"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://palisadesparknj.org/departments/town-pool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-summit-summit-family-aquatic-center",
+   "name": "Summit Family Aquatic Center",
+   "official_name": "Summit Family Aquatic Center",
+   "operator": "City of Summit Department of Community Programs",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NJ",
+   "region": "North Jersey",
+   "city": "Summit",
+   "address": {
+    "street": "100 Ashwood Avenue",
+    "locality": "Summit",
+    "region": "NJ",
+    "postal_code": "07901",
+    "precision": "street_number"
+   },
+   "official_url": "https://summitcommunityprograms.com/160/Family-Aquatic-Center",
+   "hours_fees_url": "https://summitcommunityprograms.com/163/Fees-Registration",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "restricted",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "unknown",
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "restricted",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Membership is required; no day passes are sold.",
+       "source": "https://summitcommunityprograms.com/160/Family-Aquatic-Center"
+      },
+      {
+       "text": "Guests must be accompanied by a member at all times.",
+       "source": "https://summitcommunityprograms.com/163/Fees-Registration"
+      },
+      {
+       "text": "Membership cards must be made in person at the Community Center before your first visit.",
+       "source": "https://summitcommunityprograms.com/163/Fees-Registration"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Open weekends only until June 19, then daily once Summit schools let out.",
+      "source": "https://summitcommunityprograms.com/160/Family-Aquatic-Center"
+     },
+     {
+      "text": "Weekday parent/child swim is 10 AM to noon at the leisure pool.",
+      "source": "https://summitcommunityprograms.com/160/Family-Aquatic-Center"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Early-morning lap swim is on weekdays only.",
+      "source": "https://summitcommunityprograms.com/160/Family-Aquatic-Center"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Swim lessons are part of weekday morning programming once school ends.",
+      "source": "https://summitcommunityprograms.com/160/Family-Aquatic-Center"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://summitcommunityprograms.com/160/Family-Aquatic-Center"
+    ],
+    "access": {
+     "members": [
+      "https://summitcommunityprograms.com/160/Family-Aquatic-Center",
+      "https://summitcommunityprograms.com/163/Fees-Registration"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://summitcommunityprograms.com/160/Family-Aquatic-Center"
+     ],
+     "lap_swim": [
+      "https://summitcommunityprograms.com/160/Family-Aquatic-Center"
+     ],
+     "lessons": [
+      "https://summitcommunityprograms.com/160/Family-Aquatic-Center"
+     ]
+    },
+    "address": [
+     "https://summitcommunityprograms.com/Facilities"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-tenafly-kaplen-jcc-on-the-palisades-aquatics",
+   "name": "Kaplen JCC on the Palisades Aquatics",
+   "official_name": "Kaplen JCC on the Palisades Aquatics (Epstein Aquatic Center and outdoor pools)",
+   "operator": "Kaplen JCC on the Palisades",
+   "facility_type": "jcc",
+   "country": "US",
+   "state": "NJ",
+   "region": "North Jersey",
+   "city": "Tenafly",
+   "address": {
+    "street": "411 East Clinton Avenue",
+    "locality": "Tenafly",
+    "region": "NJ",
+    "postal_code": "07670",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.jccotp.org/aquatics/",
+   "hours_fees_url": "https://www.jccotp.org/membership/",
+   "setting": "both",
+   "season": "unknown",
+   "access": [
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "restricted",
+     "season": "unknown",
+     "o": {}
+    },
+    {
+     "s": "outdoor",
+     "e": "restricted",
+     "season": "seasonal",
+     "o": {
+      "lap_swim": "members"
+     }
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "restricted",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Summer memberships come in 1- to 4-month options.",
+       "source": "https://www.jccotp.org/membership/"
+      },
+      {
+       "text": "A 3-day trial is available by contacting Membership.",
+       "source": "https://www.jccotp.org/membership/"
+      },
+      {
+       "text": "Members may bring a friend on the 3rd Wednesday of each month.",
+       "source": "https://www.jccotp.org/membership/"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 6 and under must be with an adult within arm's reach, outside aquatics programs.",
+     "source": "https://www.jccotp.org/aquatics/"
+    },
+    {
+     "text": "Children 10 and under must be supervised by an adult at all times.",
+     "source": "https://www.jccotp.org/aquatics/"
+    },
+    {
+     "text": "Non-swimmers need an adult supervising them in the water.",
+     "source": "https://www.jccotp.org/aquatics/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Adult lap swim is for members 14 and up.",
+      "source": "https://www.jccotp.org/aquatics/"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Group, private and adaptive swim lessons are offered.",
+      "source": "https://www.jccotp.org/aquatics/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.jccotp.org/aquatics/"
+    ],
+    "season": [
+     "https://www.jccotp.org/aquatics/"
+    ],
+    "access": {
+     "members": [
+      "https://www.jccotp.org/membership/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://www.jccotp.org/aquatics/"
+     ],
+     "lessons": [
+      "https://www.jccotp.org/aquatics/"
+     ]
+    },
+    "address": [
+     "https://www.jccotp.org/about/facilities/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-verona-verona-community-pool",
+   "name": "Verona Community Pool",
+   "official_name": "Verona Community Pool",
+   "operator": "Township of Verona (Recreation Department)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NJ",
+   "region": "North Jersey",
+   "city": "Verona",
+   "address": {
+    "street": "257 Fairview Avenue",
+    "locality": "Verona",
+    "region": "NJ",
+    "postal_code": "07044",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.veronanj.org/PoolMembershipInformation",
+   "hours_fees_url": "https://www.veronanj.org/PoolMembershipInformation",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "residents",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "restricted",
+     "season": "unknown",
+     "o": {
+      "lessons": "public"
+     }
+    }
+   ],
+   "public_access": "restricted",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "residents",
+     "conditions": [
+      {
+       "text": "Resident adult day passes: Verona residents 18+, weekdays only, 3 per season.",
+       "source": "https://www.veronanj.org/PoolMembershipInformation"
+      },
+      {
+       "text": "A membership tag is required to enter the pool grounds.",
+       "source": "https://www.veronanj.org/PoolMembershipInformation"
+      },
+      {
+       "text": "New resident members need two IDs with a Verona address.",
+       "source": "https://www.veronanj.org/PoolMembershipInformation"
+      }
+     ]
+    },
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Only 100 non-resident memberships are offered per season.",
+       "source": "https://www.veronanj.org/PoolMembershipInformation"
+      },
+      {
+       "text": "Non-residents beyond 1.25 miles of Verona need a referral from a current member.",
+       "source": "https://www.veronanj.org/PoolMembershipInformation"
+      },
+      {
+       "text": "Guest passes require entering with an adult member.",
+       "source": "https://www.veronanj.org/PoolMembershipInformation"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Group lessons are for ages 3 to 10.",
+      "source": "https://www.veronanj.org/departments/pool/summerprogramsatthepool"
+     },
+     {
+      "text": "Non-members can join group lessons only if classes are not full.",
+      "source": "https://www.veronanj.org/departments/pool/summerprogramsatthepool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "residents": [
+      "https://www.veronanj.org/PoolMembershipInformation"
+     ],
+     "members": [
+      "https://www.veronanj.org/PoolMembershipInformation"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.veronanj.org/departments/pool/summerprogramsatthepool"
+     ]
+    },
+    "address": [
+     "https://www.veronanj.org/PoolMembershipInformation"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-wayne-james-w-roe-memorial-pool",
+   "name": "James W. Roe Memorial Pool",
+   "official_name": "James W. Roe Memorial Pool",
+   "operator": "Township of Wayne Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NJ",
+   "region": "North Jersey",
+   "city": "Wayne",
+   "address": {
+    "street": "133 Garside Ave.",
+    "locality": "Wayne",
+    "region": "NJ",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://waynetownship.com/parks-recreation/parks-recreation-swimming-facilities/",
+   "hours_fees_url": "https://waynetownship.com/parks-recreation/parks-recreation-swimming-facilities/membership-information/",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "restricted",
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "restricted",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "residents",
+     "conditions": [
+      {
+       "text": "The pool is for Wayne residents with a pool membership only.",
+       "source": "https://waynetownship.com/parks-recreation/parks-recreation-swimming-facilities/"
+      },
+      {
+       "text": "Others may enter only as a paying guest of a member.",
+       "source": "https://waynetownship.com/parks-recreation/parks-recreation-swimming-facilities/membership-information/"
+      },
+      {
+       "text": "Guest packs are sold only at the Wayne Community Center, with a valid membership.",
+       "source": "https://waynetownship.com/parks-recreation/parks-recreation-swimming-facilities/membership-information/"
+      }
+     ]
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Swim lessons are offered; who may enroll as a non-member is not stated.",
+      "source": "https://waynetownship.com/parks-recreation/parks-recreation-swimming-facilities/membership-information/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://waynetownship.com/parks-recreation/parks-recreation-swimming-facilities/membership-information/"
+    ],
+    "access": {
+     "residents": [
+      "https://waynetownship.com/parks-recreation/parks-recreation-swimming-facilities/",
+      "https://waynetownship.com/parks-recreation/parks-recreation-swimming-facilities/membership-information/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://waynetownship.com/parks-recreation/parks-recreation-swimming-facilities/membership-information/"
+     ]
+    },
+    "address": [
+     "https://waynetownship.com/parks-recreation/parks-recreation-swimming-facilities/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  },
+  {
+   "id": "us-nj-west-orange-jcc-metrowest-aquatics",
+   "name": "JCC MetroWest Aquatics",
+   "official_name": "JCC MetroWest Aquatics (Helen Messing and Ken Heyman Memorial Pools)",
+   "operator": "JCC MetroWest",
+   "facility_type": "jcc",
+   "country": "US",
+   "state": "NJ",
+   "region": "North Jersey",
+   "city": "West Orange",
+   "address": {
+    "street": "760 Northfield Avenue",
+    "locality": "West Orange",
+    "region": "NJ",
+    "postal_code": "07052",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.jccmetrowest.org/aquatics",
+   "hours_fees_url": "https://jccmetrowest.org/membership/",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "members",
+    "program_registration_only"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "restricted",
+     "season": "unknown",
+     "o": {
+      "open_swim": "unknown",
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "restricted",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": [
+      {
+       "text": "Pools close Monday to Thursday, 2 to 3:30 PM; holiday hours vary.",
+       "source": "https://www.jccmetrowest.org/aquatics"
+      },
+      {
+       "text": "Members receive complimentary guest passes.",
+       "source": "https://jccmetrowest.org/membership/"
+      }
+     ]
+    },
+    {
+     "type": "program_registration_only",
+     "conditions": [
+      {
+       "text": "Non-members can register for swim classes at a non-member rate; shown for a teen/adult class.",
+       "source": "https://www.jccmetrowest.org/aquatics"
+      },
+      {
+       "text": "Classes must be registered within set registration windows.",
+       "source": "https://www.jccmetrowest.org/aquatics"
+      }
+     ]
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Pools are open to children 6 months and older.",
+     "source": "https://www.jccmetrowest.org/aquatics"
+    },
+    {
+     "text": "A parent must be in the water with non-swimmers and children under 8.",
+     "source": "https://www.jccmetrowest.org/aquatics"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Family swim runs at set Family Splash Times, not all pool hours.",
+      "source": "https://www.jccmetrowest.org/aquatics"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Lessons start as young as 6 months; members get reduced rates.",
+      "source": "https://jccmetrowest.org/membership/"
+     },
+     {
+      "text": "Registration is required within the listed registration period.",
+      "source": "https://www.jccmetrowest.org/aquatics"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://jccmetrowest.org/membership/"
+    ],
+    "season": [],
+    "access": {
+     "members": [
+      "https://jccmetrowest.org/membership/",
+      "https://www.jccmetrowest.org/aquatics"
+     ],
+     "program_registration_only": [
+      "https://www.jccmetrowest.org/aquatics"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.jccmetrowest.org/aquatics"
+     ],
+     "lap_swim": [
+      "https://www.jccmetrowest.org/aquatics"
+     ],
+     "lessons": [
+      "https://jccmetrowest.org/membership/",
+      "https://www.jccmetrowest.org/aquatics"
+     ]
+    },
+    "address": [
+     "https://jccmetrowest.org/contact-us/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website"
+  }
+ ]
+}

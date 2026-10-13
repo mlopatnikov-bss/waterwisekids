@@ -1,0 +1,516 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "NH",
+ "name": "New Hampshire",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-nh-dover-dover-indoor-pool",
+   "name": "Dover Indoor Pool",
+   "official_name": "Dover Indoor Pool",
+   "operator": "City of Dover Recreation Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NH",
+   "region": "New Hampshire",
+   "city": "Dover",
+   "address": {
+    "street": "9 Henry Law Ave.",
+    "locality": "Dover",
+    "region": "NH",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.dover.nh.gov/government/city-operations/recreation/aquatics/index.html",
+   "hours_fees_url": "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/indoor-pool/DIP-Pool-schedule-9.14-11.15-FALL-revised-9.16.26.pdf",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Parking next to the pool on Henry Law is metered.",
+     "source": "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/indoor-pool/Fall-2026-Revised-8.8.26.pdf"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 3 and under must wear a swim diaper in the pool.",
+     "source": "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/indoor-pool/Fall-2026-Revised-8.8.26.pdf"
+    },
+    {
+     "text": "Children under 45 inches tall need a parent in the water.",
+     "source": "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/indoor-pool/DIP-Pool-schedule-9.14-11.15-FALL-revised-9.16.26.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Hours are subject to change, so check the current schedule before going.",
+      "source": "https://www.dover.nh.gov/government/city-operations/recreation/aquatics/index.html"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Non-residents may register for swim lessons, but registration opens to them one week after Dover residents.",
+      "source": "https://www.dover.nh.gov/government/city-operations/recreation/aquatics/index.html"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.dover.nh.gov/government/city-operations/recreation/aquatics/index.html"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/indoor-pool/DIP-Pool-schedule-9.14-11.15-FALL-revised-9.16.26.pdf"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/indoor-pool/DIP-Pool-schedule-9.14-11.15-FALL-revised-9.16.26.pdf",
+      "https://www.dover.nh.gov/government/city-operations/recreation/aquatics/index.html"
+     ],
+     "lap_swim": [
+      "https://www.dover.nh.gov/government/city-operations/recreation/aquatics/index.html"
+     ],
+     "lessons": [
+      "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/indoor-pool/Fall-2026-Revised-8.8.26.pdf",
+      "https://www.dover.nh.gov/government/city-operations/recreation/aquatics/index.html"
+     ]
+    },
+    "address": [
+     "https://www.dover.nh.gov/government/city-operations/recreation/aquatics/index.html"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nh-dover-jenny-thompson-outdoor-pool",
+   "name": "Jenny Thompson Outdoor Pool",
+   "official_name": "Jenny Thompson Outdoor Pool",
+   "operator": "City of Dover Recreation Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NH",
+   "region": "New Hampshire",
+   "city": "Dover",
+   "address": {
+    "street": "140 Portland Ave.",
+    "locality": "Dover",
+    "region": "NH",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.dover.nh.gov/government/city-operations/recreation/jenny-thompson-pool/",
+   "hours_fees_url": "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/jenny-thompson-pool/JTP-Pool-schedule-9.1-9.7-FALL-2027-Final-revised.pdf",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "This is a summer-only pool (June to Labor Day) and is closed for the off-season now.",
+     "source": "https://www.dover.nh.gov/government/city-operations/recreation/jenny-thompson-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool closes to the public on various summer days for swim meets, so call ahead.",
+     "source": "https://www.dover.nh.gov/government/city-operations/recreation/jenny-thompson-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool was closed from August 2025 for a major rehabilitation and was slated to reopen July 1, 2026.",
+     "source": "https://www.dover.nh.gov/services/online-services/news-events/news-2026/jenny-thompson-outdoor-pool-slated-to-reopen-july-1.html"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 45 inches tall need a parent in the water.",
+     "source": "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/jenny-thompson-pool/JTP-Pool-schedule-9.1-9.7-FALL-2027-Final-revised.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.dover.nh.gov/government/city-operations/recreation/jenny-thompson-pool/"
+    ],
+    "season": [
+     "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/jenny-thompson-pool/JTP-Pool-schedule-9.1-9.7-FALL-2027-Final-revised.pdf",
+     "https://www.dover.nh.gov/government/city-operations/recreation/jenny-thompson-pool/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/jenny-thompson-pool/JTP-Pool-schedule-9.1-9.7-FALL-2027-Final-revised.pdf",
+      "https://www.dover.nh.gov/government/city-operations/recreation/jenny-thompson-pool/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/jenny-thompson-pool/JTP-Pool-schedule-9.1-9.7-FALL-2027-Final-revised.pdf",
+      "https://www.dover.nh.gov/government/city-operations/recreation/jenny-thompson-pool/"
+     ],
+     "lap_swim": [
+      "https://www.dover.nh.gov/Assets/government/city-operations/2document/recreation/jenny-thompson-pool/JTP-Pool-schedule-9.1-9.7-FALL-2027-Final-revised.pdf"
+     ],
+     "lessons": [
+      "https://www.dover.nh.gov/government/city-operations/recreation/jenny-thompson-pool/"
+     ]
+    },
+    "address": [
+     "https://www.dover.nh.gov/government/city-operations/recreation/jenny-thompson-pool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nh-portsmouth-peirce-island-outdoor-pool",
+   "name": "Peirce Island Outdoor Pool",
+   "official_name": "Peirce Island Outdoor Pool",
+   "operator": "City of Portsmouth Recreation Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NH",
+   "region": "New Hampshire",
+   "city": "Portsmouth",
+   "address": {
+    "street": "99 Peirce Island Rd",
+    "locality": "Portsmouth",
+    "region": "NH",
+    "postal_code": "03801",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.portsmouthnh.gov/recreation/outdoor",
+   "hours_fees_url": "https://www.portsmouthnh.gov/recreation/outdoor/admission",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; the 2026 season ran June 22 to August 21 and it is closed now.",
+     "source": "https://www.portsmouthnh.gov/recreation/outdoor"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Portsmouth residents must bring ID on each visit to get the resident rate.",
+     "source": "https://www.portsmouthnh.gov/recreation/outdoor/admission"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "The pool takes cash or checks only, not cards.",
+     "source": "https://www.portsmouthnh.gov/recreation/outdoor"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "No diving is allowed.",
+     "source": "https://www.portsmouthnh.gov/recreation/outdoor"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children must be watched by their adult at all times.",
+     "source": "https://www.portsmouthnh.gov/recreation/outdoor"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Numbered learn-to-swim levels start at age 5; younger children go in parent/child or preschool classes.",
+      "source": "https://www.portsmouthnh.gov/recreation/outdoor/swim-lesson-information"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.portsmouthnh.gov/recreation/outdoor"
+    ],
+    "season": [
+     "https://www.portsmouthnh.gov/recreation/outdoor"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.portsmouthnh.gov/recreation/outdoor",
+      "https://www.portsmouthnh.gov/recreation/outdoor/admission"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.portsmouthnh.gov/recreation/outdoor"
+     ],
+     "lap_swim": [
+      "https://www.portsmouthnh.gov/recreation/outdoor"
+     ],
+     "lessons": [
+      "https://www.portsmouthnh.gov/recreation/outdoor/swim-lesson-information"
+     ]
+    },
+    "address": [
+     "https://www.portsmouthnh.gov/recreation/outdoor"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nh-portsmouth-portsmouth-indoor-pool",
+   "name": "Portsmouth Indoor Pool",
+   "official_name": "Portsmouth Indoor Pool",
+   "operator": "City of Portsmouth Recreation Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NH",
+   "region": "New Hampshire",
+   "city": "Portsmouth",
+   "address": {
+    "street": "48 Andrew Jarvis Drive",
+    "locality": "Portsmouth",
+    "region": "NH",
+    "postal_code": "03801",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.portsmouthnh.gov/recreation/indoor",
+   "hours_fees_url": "https://www.portsmouthnh.gov/recreation/indoor/membership-pricing-information",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "unknown",
+      "lap_swim": "unknown",
+      "lessons": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool lists Columbus Day (Monday, October 12) as a closure date.",
+     "source": "https://www.portsmouthnh.gov/recreation/indoor"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Use only the signed pool parking; school lots can lead to towing during school hours.",
+     "source": "https://www.portsmouthnh.gov/recreation/indoor"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "During open swim, children under 48 inches tall must be accompanied in the water by an adult.",
+     "source": "https://www.portsmouthnh.gov/recreation/indoor/indoor-pool-schedule"
+    },
+    {
+     "text": "At First Fridays for Families, children under 45 inches must be accompanied in the water by an adult.",
+     "source": "https://www.portsmouthnh.gov/recreation/indoor/indoor-pool-programs"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "The monthly First Fridays for Families pool nights (open to non-residents) require preregistration and often sell out.",
+      "source": "https://www.portsmouthnh.gov/recreation/indoor/indoor-pool-programs"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.portsmouthnh.gov/recreation/indoor"
+    ],
+    "season": [],
+    "access": {
+     "day_pass": [
+      "https://www.portsmouthnh.gov/recreation/indoor/indoor-pool-programs",
+      "https://www.portsmouthnh.gov/recreation/indoor/membership-pricing-information"
+     ],
+     "members": [
+      "https://www.portsmouthnh.gov/recreation/indoor/indoor-pool-programs",
+      "https://www.portsmouthnh.gov/recreation/indoor/membership-pricing-information"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.portsmouthnh.gov/recreation/indoor/indoor-pool-programs",
+      "https://www.portsmouthnh.gov/recreation/indoor/indoor-pool-schedule"
+     ],
+     "lap_swim": [
+      "https://www.portsmouthnh.gov/recreation/indoor/indoor-pool-schedule"
+     ],
+     "lessons": [
+      "https://www.portsmouthnh.gov/recreation/indoor/programs"
+     ]
+    },
+    "address": [
+     "https://www.portsmouthnh.gov/recreation/indoor"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

@@ -1,0 +1,391 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "LA",
+ "name": "Louisiana",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-la-baton-rouge-anna-t-jordan-community-park-pool",
+   "name": "Anna T. Jordan Community Park Pool",
+   "official_name": "Anna T. Jordan Community Park Pool",
+   "operator": "BREC (Recreation and Park Commission for the Parish of East Baton Rouge)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "LA",
+   "region": "Louisiana",
+   "city": "Baton Rouge",
+   "address": {
+    "street": "1750 Stilt St.",
+    "locality": "Baton Rouge",
+    "region": "LA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.brec.org/annatjordan",
+   "hours_fees_url": "https://www.brec.org/aquatics",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "members"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; BREC community pools closed for the season on July 31, 2026.",
+     "source": "https://www.brec.org/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "The pool is closed one weekday each week; BREC pages list different closed days, so check before going.",
+     "source": "https://www.brec.org/annatjordan"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Adults supervising children must bring a valid photo ID.",
+     "source": "https://www.brec.org/aquatics/community-pool-rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Clear bags only.",
+     "source": "https://www.brec.org/aquatics/community-pool-rules"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Youth under 16 must be actively supervised by an adult 18 or older at all times.",
+     "source": "https://www.brec.org/aquatics/community-pool-rules"
+    },
+    {
+     "text": "Supervising adults must stay on the pool deck in direct line of sight while youth are in the water.",
+     "source": "https://www.brec.org/aquatics/community-pool-rules"
+    },
+    {
+     "text": "One adult may supervise no more than four youths under 16.",
+     "source": "https://www.brec.org/aquatics/community-pool-rules"
+    },
+    {
+     "text": "Only BREC-issued life jackets or flotation devices are allowed.",
+     "source": "https://www.brec.org/aquatics/community-pool-rules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Summer swim lessons at BREC community pools are for East Baton Rouge Parish residents only.",
+      "source": "https://www.brec.org/aquatics"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.brec.org/aquatics"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.brec.org/aquatics"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.brec.org/annatjordan",
+      "https://www.brec.org/aquatics"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.brec.org/aquatics"
+     ]
+    },
+    "address": [
+     "https://www.brec.org/annatjordan"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-la-new-orleans-gert-town-natatorium",
+   "name": "Gert Town Natatorium",
+   "official_name": "Gert Town Natatorium",
+   "operator": "New Orleans Recreation Development Commission (NORDC)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "LA",
+   "region": "Louisiana",
+   "city": "New Orleans",
+   "address": {
+    "street": "3411 Broadway St.",
+    "locality": "New Orleans",
+    "region": "LA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://nordc.org/parks/gert-town-natatorium/",
+   "hours_fees_url": "https://nordc.org/parks/gert-town-natatorium/",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "season": "year_round",
+     "o": {
+      "open_swim": "unknown",
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "ticket",
+     "text": "The facility page asks visitors to make a reservation through the NORDC online calendar; call the pool to confirm before going.",
+     "source": "https://nordc.org/parks/gert-town-natatorium/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Closed Sundays and Mondays in the fall schedule.",
+     "source": "https://nordc.org/parks/gert-town-natatorium/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Pools close immediately for lightning or thunder and reopen 30 minutes after the last strike.",
+     "source": "https://nordc.org/programs-activities/aquatics"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and younger must be accompanied by an adult 18 or older.",
+     "source": "https://nordc.org/nordc/media/NORDC_Next/Tagged-PDFs/Pool-Rules_Website_WCAG-tag.pdf"
+    },
+    {
+     "text": "Children 48 inches tall or shorter need one-on-one adult supervision in the pool.",
+     "source": "https://nordc.org/nordc/media/NORDC_Next/Tagged-PDFs/Pool-Rules_Website_WCAG-tag.pdf"
+    },
+    {
+     "text": "Children who are not toilet-trained must wear a swim diaper.",
+     "source": "https://nordc.org/nordc/media/NORDC_Next/Tagged-PDFs/Pool-Rules_Website_WCAG-tag.pdf"
+    },
+    {
+     "text": "NORDC highly recommends life jackets for all non-swimming children in the pool area.",
+     "source": "https://nordc.org/nordc/media/NORDC_Next/Tagged-PDFs/Pool-Rules_Website_WCAG-tag.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Some lap swim sessions are for ages 16 and older only.",
+      "source": "https://nordc.org/nordc/media/Assets/Files/POOL-PROGRAMMING-SCHEDULE-(FALL-2026)-(1).pdf"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Lesson registration opens online the first week of each month and requires a Rec Trac account.",
+      "source": "https://nordc.org/programs-activities/aquatics"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://nordc.org/parks/gert-town-natatorium/"
+    ],
+    "season": [
+     "https://nordc.org/parks/gert-town-natatorium/",
+     "https://nordc.org/programs-activities/aquatics"
+    ],
+    "access": {},
+    "offerings": {
+     "open_swim": [
+      "https://nordc.org/nordc/media/Assets/Files/POOL-PROGRAMMING-SCHEDULE-(FALL-2026)-(1).pdf"
+     ],
+     "lap_swim": [
+      "https://nordc.org/nordc/media/Assets/Files/POOL-PROGRAMMING-SCHEDULE-(FALL-2026)-(1).pdf",
+      "https://nordc.org/programs-activities/aquatics"
+     ],
+     "lessons": [
+      "https://nordc.org/nordc/media/Assets/Files/POOL-PROGRAMMING-SCHEDULE-(FALL-2026)-(1).pdf",
+      "https://nordc.org/programs-activities/aquatics"
+     ]
+    },
+    "address": [
+     "https://nordc.org/parks/gert-town-natatorium/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-la-shreveport-southern-hills-park-and-community-center-pool",
+   "name": "Southern Hills Park and Community Center Pool",
+   "official_name": "Southern Hills Park and Community Center Pool",
+   "operator": "Shreveport Public Assembly & Recreation (SPAR), City of Shreveport",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "LA",
+   "region": "Louisiana",
+   "city": "Shreveport",
+   "address": {
+    "street": "1002 Bert Kouns Industrial Loop",
+    "locality": "Shreveport",
+    "region": "LA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "http://myspar.org/309/Southern-Hills",
+   "hours_fees_url": "http://myspar.org/383/Aquatics",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool, open from about the end of June and on weekends through Labor Day.",
+     "source": "http://myspar.org/383/Aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "City pools are closed on Mondays.",
+     "source": "http://myspar.org/383/Aquatics"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "http://myspar.org/383/Aquatics"
+    ],
+    "access": {
+     "public_admission": [
+      "http://myspar.org/383/Aquatics"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "http://myspar.org/383/Aquatics"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "http://myspar.org/309/Southern-Hills"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

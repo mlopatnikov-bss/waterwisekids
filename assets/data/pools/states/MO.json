@@ -1,0 +1,588 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "MO",
+ "name": "Missouri",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-mo-columbia-activity-recreation-center-water-zone",
+   "name": "Activity & Recreation Center (ARC) Water Zone",
+   "official_name": "Activity & Recreation Center (ARC) Water Zone",
+   "operator": "City of Columbia Parks and Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "MO",
+   "region": "Missouri",
+   "city": "Columbia",
+   "address": {
+    "street": "1701 W. Ash St.",
+    "locality": "Columbia",
+    "region": "MO",
+    "postal_code": "65203",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.como.gov/contacts/arc-water-zone/",
+   "hours_fees_url": "https://www.como.gov/contacts/activity-recreation-center-arc/membership-admission-fees-and-policies/",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     },
+     "label": "leisure"
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 10 and under must be accompanied and supervised by a paying adult aged 16 or older.",
+     "source": "https://www.como.gov/contacts/activity-recreation-center-arc/membership-admission-fees-and-policies/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and under must be accompanied and supervised by a paying adult aged 16 or older.",
+     "source": "https://www.como.gov/contacts/activity-recreation-center-arc/membership-admission-fees-and-policies/"
+    },
+    {
+     "text": "Ages 11 and up may use the facility without adult supervision (with limits in fitness areas).",
+     "source": "https://www.como.gov/contacts/activity-recreation-center-arc/membership-admission-fees-and-policies/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Recreational swim runs only on certain days and times each week; check the weekly pool schedule.",
+      "source": "https://www.como.gov/contacts/arc-water-zone/"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Lap swim and water walking are closed while lessons are running.",
+      "source": "https://www.como.gov/contacts/arc-water-zone/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.como.gov/contacts/activity-recreation-center-arc/",
+     "https://www.como.gov/contacts/arc-water-zone/"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.como.gov/contacts/activity-recreation-center-arc/membership-admission-fees-and-policies/"
+     ],
+     "day_pass": [
+      "https://www.como.gov/contacts/activity-recreation-center-arc/membership-admission-fees-and-policies/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.como.gov/contacts/activity-recreation-center-arc/membership-admission-fees-and-policies/",
+      "https://www.como.gov/contacts/arc-water-zone/"
+     ],
+     "lap_swim": [
+      "https://www.como.gov/contacts/arc-water-zone/"
+     ],
+     "lessons": [
+      "https://www.como.gov/parks-and-recreation/aquatics/swim-lessons-aquatic-classes/"
+     ]
+    },
+    "address": [
+     "https://www.como.gov/contacts/activity-recreation-center-arc/other-arc-information/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-mo-columbia-albert-oakland-family-aquatic-center",
+   "name": "Albert-Oakland Family Aquatic Center",
+   "official_name": "Albert-Oakland Family Aquatic Center",
+   "operator": "City of Columbia Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "MO",
+   "region": "Missouri",
+   "city": "Columbia",
+   "address": {
+    "street": "1900 Blue Ridge Rd.",
+    "locality": "Columbia",
+    "region": "MO",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.como.gov/contacts/albert-oakland-family-aquatic-center/",
+   "hours_fees_url": "https://www.como.gov/parks-and-recreation/aquatics/admission-fees-season-passes/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only; the 2026 season ended September 7, with weekend-only days from mid-August.",
+     "source": "https://www.como.gov/parks-and-recreation/aquatics/pool-hours-schedules-programs-events/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Outdoor pools stay closed on days forecast to stay below 75 degrees, and may close early for low attendance or weather.",
+     "source": "https://www.como.gov/parks-and-recreation/aquatics/pool-hours-schedules-programs-events/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Summer season passes need a photo ID taken in person at the ARC.",
+     "source": "https://www.como.gov/parks-and-recreation/aquatics/admission-fees-season-passes/"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.como.gov/contacts/albert-oakland-family-aquatic-center/"
+    ],
+    "season": [
+     "https://www.como.gov/parks-and-recreation/aquatics/pool-hours-schedules-programs-events/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.como.gov/parks-and-recreation/aquatics/admission-fees-season-passes/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://www.como.gov/parks-and-recreation/aquatics/admission-fees-season-passes/",
+      "https://www.como.gov/parks-and-recreation/aquatics/pool-hours-schedules-programs-events/"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.como.gov/contacts-feature/aquatic-facilities/?department=parks-and-recreation"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-mo-kansas-city-tony-aguirre-community-center-pools",
+   "name": "Tony Aguirre Community Center Pools",
+   "official_name": "Tony Aguirre Community Center Pools",
+   "operator": "Kansas City Parks & Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "MO",
+   "region": "Missouri",
+   "city": "Kansas City",
+   "address": {
+    "street": "2050 W Pennway St",
+    "locality": "Kansas City",
+    "region": "MO",
+    "postal_code": "64108",
+    "precision": "street_number"
+   },
+   "official_url": "https://kcparks.org/places/tony-aguirre-pool/",
+   "hours_fees_url": "https://kcparks.org/places/tony-aguirre-pool/",
+   "setting": "both",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public"
+     }
+    },
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "The outdoor pool is closed for the season; season dates are not posted.",
+     "source": "https://kcparks.org/places/tony-aguirre-outdoor-pool/"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "closure",
+     "text": "The city asks swimmers to call and confirm the indoor pool is open before coming, as emergency closings happen.",
+     "source": "https://kcparks.org/places/tony-aguirre-pool/"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "closure",
+     "text": "The pool closes immediately for thunder or lightning and reopens 30 minutes after the last strike.",
+     "source": "https://kcparks.org/places/tony-aguirre-pool/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must have someone 18 or older on the pool deck with them (indoor pool rules).",
+     "source": "https://kcparks.org/places/tony-aguirre-pool/"
+    },
+    {
+     "text": "Tiny Tot Time at the outdoor pool is a calm play session for children 5 and under.",
+     "source": "https://kcparks.org/places/tony-aguirre-outdoor-pool/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://kcparks.org/places/tony-aguirre-outdoor-pool/",
+     "https://kcparks.org/places/tony-aguirre-pool/"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://kcparks.org/places/tony-aguirre-outdoor-pool/",
+      "https://kcparks.org/places/tony-aguirre-pool/"
+     ],
+     "day_pass": [
+      "https://kcparks.org/places/tony-aguirre-outdoor-pool/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://kcparks.org/places/tony-aguirre-pool/"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://kcparks.org/places/tony-aguirre-pool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-mo-springfield-doling-indoor-aquatic-center",
+   "name": "Doling Indoor Aquatic Center",
+   "official_name": "Doling Indoor Aquatic Center",
+   "operator": "Springfield-Greene County Park Board",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "MO",
+   "region": "Missouri",
+   "city": "Springfield",
+   "address": {
+    "street": "301 E. Talmage St.",
+    "locality": "Springfield",
+    "region": "MO",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://parkboard.org/170/Doling-Indoor-Aquatic-Center",
+   "hours_fees_url": "https://parkboard.org/170/Doling-Indoor-Aquatic-Center",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "The pool closes for a mid-afternoon break on weekdays.",
+     "source": "https://parkboard.org/170/Doling-Indoor-Aquatic-Center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Weekday and Saturday mornings are adult swim time; youth under 18 may join only later in the morning and only with an adult in the water.",
+     "source": "https://parkboard.org/170/Doling-Indoor-Aquatic-Center"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "During the late-morning youth window before open swim, anyone under 18 must be directly supervised by an adult 18 or older in the water.",
+     "source": "https://parkboard.org/170/Doling-Indoor-Aquatic-Center"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Classes and programs may run during open swim and limit use of water features.",
+      "source": "https://parkboard.org/170/Doling-Indoor-Aquatic-Center"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://parkboard.org/170/Doling-Indoor-Aquatic-Center"
+    ],
+    "season": [
+     "https://parkboard.org/170/Doling-Indoor-Aquatic-Center"
+    ],
+    "access": {
+     "public_admission": [
+      "https://parkboard.org/170/Doling-Indoor-Aquatic-Center"
+     ],
+     "day_pass": [
+      "https://parkboard.org/170/Doling-Indoor-Aquatic-Center"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://parkboard.org/170/Doling-Indoor-Aquatic-Center"
+     ],
+     "lap_swim": [
+      "https://parkboard.org/170/Doling-Indoor-Aquatic-Center"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://parkboard.org/170/Doling-Indoor-Aquatic-Center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-mo-springfield-fassnight-pool",
+   "name": "Fassnight Pool",
+   "official_name": "Fassnight Pool",
+   "operator": "Springfield-Greene County Park Board",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "MO",
+   "region": "Missouri",
+   "city": "Springfield",
+   "address": {
+    "street": "1305 S. Main Ave.",
+    "locality": "Springfield",
+    "region": "MO",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://parkboard.org/460/Fassnight-Pool",
+   "hours_fees_url": "https://parkboard.org/460/Fassnight-Pool",
+   "setting": "outdoor",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {},
+     "label": "leisure"
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Closed for the 2026 season; 2027 dates not yet posted.",
+     "source": "https://parkboard.org/460/Fassnight-Pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "The fenced splash and kiddie pool area is for children 6 and under.",
+     "source": "https://parkboard.org/460/Fassnight-Pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://parkboard.org/460/Fassnight-Pool",
+     "https://parkboard.org/686/Outdoor-Pools"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://parkboard.org/460/Fassnight-Pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://parkboard.org/460/Fassnight-Pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

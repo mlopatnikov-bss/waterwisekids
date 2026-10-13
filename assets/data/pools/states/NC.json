@@ -1,0 +1,585 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "NC",
+ "name": "North Carolina",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-nc-charlotte-cordelia-pool",
+   "name": "Cordelia Pool",
+   "official_name": "Cordelia Pool",
+   "operator": "Mecklenburg County Park and Recreation",
+   "facility_type": "county",
+   "country": "US",
+   "state": "NC",
+   "region": "North Carolina",
+   "city": "Charlotte",
+   "address": {
+    "street": "2100 N Davidson St",
+    "locality": "Charlotte",
+    "region": "NC",
+    "postal_code": "28205",
+    "precision": "street_number"
+   },
+   "official_url": "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/cordelia-pool",
+   "hours_fees_url": "https://news.mecknc.gov/mecklenburg-county-announces-2026-outdoor-water-attraction-hours-and-swim-lessons",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool is closed for the rest of 2026; the county has not yet posted 2027 dates.",
+     "source": "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/cordelia-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "In summer the pool opened weekends only early and late in the season, and only on certain weekdays mid-summer.",
+     "source": "https://news.mecknc.gov/mecklenburg-county-announces-2026-outdoor-water-attraction-hours-and-swim-lessons"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Swimming is in two fixed sessions per day rather than all-day entry.",
+      "source": "https://news.mecknc.gov/mecklenburg-county-announces-2026-outdoor-water-attraction-hours-and-swim-lessons"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Lessons need registration for each week, which opens the Saturday before.",
+      "source": "https://news.mecknc.gov/mecklenburg-county-announces-2026-outdoor-water-attraction-hours-and-swim-lessons"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://news.mecknc.gov/mecklenburg-county-announces-2026-outdoor-water-attraction-hours-and-swim-lessons",
+     "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/cordelia-pool"
+    ],
+    "season": [
+     "https://news.mecknc.gov/mecklenburg-county-announces-2026-outdoor-water-attraction-hours-and-swim-lessons"
+    ],
+    "access": {
+     "public_admission": [
+      "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/cordelia-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://news.mecknc.gov/mecklenburg-county-announces-2026-outdoor-water-attraction-hours-and-swim-lessons",
+      "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/cordelia-pool"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://news.mecknc.gov/mecklenburg-county-announces-2026-outdoor-water-attraction-hours-and-swim-lessons"
+     ]
+    },
+    "address": [
+     "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/cordelia-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nc-charlotte-marion-diehl-recreation-center-and-indoor-pool",
+   "name": "Marion Diehl Recreation Center and Indoor Pool",
+   "official_name": "Marion Diehl Recreation Center and Indoor Pool",
+   "operator": "Mecklenburg County Park and Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "NC",
+   "region": "North Carolina",
+   "city": "Charlotte",
+   "address": {
+    "street": "2219 Tyvola Road",
+    "locality": "Charlotte",
+    "region": "NC",
+    "postal_code": "28210",
+    "precision": "street_number"
+   },
+   "official_url": "https://parkandrec.mecknc.gov/places-to-visit/rec-centers/marion-diehl-recreation-center-and-indoor-pool",
+   "hours_fees_url": "https://parkandrec.mecknc.gov/places-to-visit/rec-centers/marion-diehl-recreation-center-and-indoor-pool",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "indoor",
+     "kind": "hours",
+     "text": "The pool keeps its own, shorter hours than the rest of the recreation center, with a midday break on weekdays.",
+     "source": "https://parkandrec.mecknc.gov/places-to-visit/rec-centers/marion-diehl-recreation-center-and-indoor-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Daily pool passes are sold to non-county residents at a higher rate than county residents.",
+     "source": "https://parkandrec.mecknc.gov/places-to-visit/rec-centers/marion-diehl-recreation-center-and-indoor-pool"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://parkandrec.mecknc.gov/places-to-visit/rec-centers/marion-diehl-recreation-center-and-indoor-pool"
+    ],
+    "season": [],
+    "access": {
+     "day_pass": [
+      "https://parkandrec.mecknc.gov/places-to-visit/rec-centers/marion-diehl-recreation-center-and-indoor-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://parkandrec.mecknc.gov/places-to-visit/rec-centers/marion-diehl-recreation-center-and-indoor-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nc-charlotte-mecklenburg-county-aquatic-center",
+   "name": "Mecklenburg County Aquatic Center",
+   "official_name": "Mecklenburg County Aquatic Center",
+   "operator": "Mecklenburg County Park and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "NC",
+   "region": "North Carolina",
+   "city": "Charlotte",
+   "address": {
+    "street": "800 E Martin Luther King Jr Blvd",
+    "locality": "Charlotte",
+    "region": "NC",
+    "postal_code": "28202",
+    "precision": "street_number"
+   },
+   "official_url": "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/mecklenburg-county-aquatic-center",
+   "hours_fees_url": "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/mecklenburg-county-aquatic-center",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The center is closed to members and the public on several October dates for a swim championship, and swim meets limit lap lanes on other days; check the upcoming schedule before going.",
+     "source": "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/mecklenburg-county-aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Daily pool passes are sold to both county and non-county residents, with a higher non-resident rate.",
+     "source": "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/mecklenburg-county-aquatic-center"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "hours",
+     "text": "The warm pool closes to general use in the late afternoon and evening for lessons and programs.",
+     "source": "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/mecklenburg-county-aquatic-center"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/mecklenburg-county-aquatic-center"
+    ],
+    "season": [],
+    "access": {
+     "day_pass": [
+      "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/mecklenburg-county-aquatic-center"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/mecklenburg-county-aquatic-center"
+     ],
+     "lessons": [
+      "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/mecklenburg-county-aquatic-center"
+     ]
+    },
+    "address": [
+     "https://parkandrec.mecknc.gov/Places-to-Visit/Pools-Beaches-Spraygrounds/mecklenburg-county-aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nc-greensboro-greensboro-aquatic-center",
+   "name": "Greensboro Aquatic Center",
+   "official_name": "Greensboro Aquatic Center",
+   "operator": "Greensboro Aquatic Center (Greensboro Coliseum Complex)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "NC",
+   "region": "North Carolina",
+   "city": "Greensboro",
+   "address": {
+    "street": "1921 W. Gate City Blvd.",
+    "locality": "Greensboro",
+    "region": "NC",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://greensboroaquaticcenter.com/about-the-gac/",
+   "hours_fees_url": "https://greensboroaquaticcenter.com/admissions/",
+   "setting": "unknown",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     },
+     "label": "recreation"
+    },
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "lap_swim": "public"
+     },
+     "label": "training"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "year_round",
+     "o": {
+      "lessons": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Major swim meets can close the pools to regular users, so check the event schedule before going.",
+     "source": "https://greensboroaquaticcenter.com/admissions/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "The competition pool is reserved for meets and club teams and is not open to the public.",
+     "source": "https://greensboroaquaticcenter.com/pool-policies/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children age 5 and under must have a parent or guardian (18+) with them in the water.",
+     "source": "https://greensboroaquaticcenter.com/pool-policies/"
+    },
+    {
+     "text": "Children who cannot walk across the deepest part of the pool (4 feet) without help need a parent or guardian in the water.",
+     "source": "https://greensboroaquaticcenter.com/pool-policies/"
+    },
+    {
+     "text": "Children 12 and under need adult supervision.",
+     "source": "https://greensboroaquaticcenter.com/pool-policies/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Swimmers under 18 must pass a swim test before lap swimming in the training pool.",
+      "source": "https://greensboroaquaticcenter.com/admissions/"
+     },
+     {
+      "text": "Only some lanes are public at a given time; the public lane schedule shows how many.",
+      "source": "https://greensboroaquaticcenter.com/admissions/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://greensboroaquaticcenter.com/about-the-gac/",
+     "https://greensboroaquaticcenter.com/programs/swim-lessons-3/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://greensboroaquaticcenter.com/about-the-gac/",
+      "https://greensboroaquaticcenter.com/admissions/"
+     ],
+     "day_pass": [
+      "https://greensboroaquaticcenter.com/about-the-gac/",
+      "https://greensboroaquaticcenter.com/admissions/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://greensboroaquaticcenter.com/family-recreational-swimming/"
+     ],
+     "lap_swim": [
+      "https://greensboroaquaticcenter.com/admissions/"
+     ],
+     "lessons": [
+      "https://greensboroaquaticcenter.com/programs/swim-lessons-3/"
+     ]
+    },
+    "address": [
+     "https://greensboroaquaticcenter.com/admissions/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nc-greensboro-warnersville-pool",
+   "name": "Warnersville Pool",
+   "official_name": "Warnersville Pool",
+   "operator": "City of Greensboro Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NC",
+   "region": "North Carolina",
+   "city": "Greensboro",
+   "address": {
+    "street": "601 Doak St.",
+    "locality": "Greensboro",
+    "region": "NC",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://greensboro-nc.gov/departments/parks-recreation/pools-spraygrounds",
+   "hours_fees_url": "https://greensboro-nc.gov/departments/parks-recreation/pools-spraygrounds",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Open only in summer, mostly on weekends, and the city says dates may change.",
+     "source": "https://greensboro-nc.gov/departments/parks-recreation/pools-spraygrounds"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Entry is first come, first served, and groups cannot be accommodated.",
+     "source": "https://greensboro-nc.gov/departments/parks-recreation/pools-spraygrounds"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Swim lessons require advance registration.",
+      "source": "https://www.greensboro-nc.gov/departments/parks-recreation/pools-spraygrounds/swim-lessons"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://greensboro-nc.gov/departments/parks-recreation/pools-spraygrounds"
+    ],
+    "season": [
+     "https://greensboro-nc.gov/departments/parks-recreation/pools-spraygrounds"
+    ],
+    "access": {
+     "public_admission": [
+      "https://greensboro-nc.gov/departments/parks-recreation/pools-spraygrounds"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.greensboro-nc.gov/departments/parks-recreation/pools-spraygrounds/swim-lessons"
+     ]
+    },
+    "address": [
+     "https://greensboro-nc.gov/departments/parks-recreation/pools-spraygrounds"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

@@ -1,0 +1,416 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "MN",
+ "name": "Minnesota",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-mn-richfield-richfield-outdoor-pool",
+   "name": "Richfield Outdoor Pool",
+   "official_name": "Richfield Outdoor Pool",
+   "operator": "City of Richfield Recreation Services",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "MN",
+   "region": "Minnesota",
+   "city": "Richfield",
+   "address": {
+    "street": "630 E 66th St",
+    "locality": "Richfield",
+    "region": "MN",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.richfieldmn.gov/621/Outdoor-Pool",
+   "hours_fees_url": "https://www.richfieldmn.gov/621/Outdoor-Pool",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; closed for the 2026 season and expected back in 2027.",
+     "source": "https://www.richfieldmn.gov/621/Outdoor-Pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers must pass a swim test before using the deep end, diving board and climbing attractions.",
+     "source": "https://www.richfieldmn.gov/1056/Outdoor-Pool-FAQs"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Same-day re-entry depends on how full the pool is.",
+     "source": "https://www.richfieldmn.gov/1056/Outdoor-Pool-FAQs"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and under must be accompanied by an adult or a responsible person 16 or older.",
+     "source": "https://www.richfieldmn.gov/621/Outdoor-Pool"
+    },
+    {
+     "text": "A child in a life jacket needs a parent or responsible adult in the water within arm's reach.",
+     "source": "https://www.richfieldmn.gov/1056/Outdoor-Pool-FAQs"
+    },
+    {
+     "text": "The wading pool is for children 10 and younger.",
+     "source": "https://www.richfieldmn.gov/1056/Outdoor-Pool-FAQs"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.richfieldmn.gov/621/Outdoor-Pool"
+    ],
+    "season": [
+     "https://www.richfieldmn.gov/621/Outdoor-Pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.richfieldmn.gov/621/Outdoor-Pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.richfieldmn.gov/1056/Outdoor-Pool-FAQs",
+      "https://www.richfieldmn.gov/621/Outdoor-Pool"
+     ],
+     "lap_swim": [
+      "https://www.richfieldmn.gov/1056/Outdoor-Pool-FAQs",
+      "https://www.richfieldmn.gov/621/Outdoor-Pool"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.richfieldmn.gov/621/Outdoor-Pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-mn-saint-paul-great-river-water-park",
+   "name": "Great River Water Park (Oxford Community Center)",
+   "official_name": "Great River Water Park (Oxford Community Center)",
+   "operator": "City of Saint Paul Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "MN",
+   "region": "Minnesota",
+   "city": "Saint Paul",
+   "address": {
+    "street": "270 N. Lexington Parkway",
+    "locality": "Saint Paul",
+    "region": "MN",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park",
+   "hours_fees_url": "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park",
+   "setting": "indoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "members"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Open fall through spring only; for summer the city points swimmers to its outdoor pools.",
+     "source": "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The city lists several closure dates during the 2026-27 season, so check the closures list before going.",
+     "source": "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied by an adult during open swim.",
+     "source": "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+    },
+    {
+     "text": "For ages 12 to 14 to stay without a parent, a parent or guardian must first check in with an aquatics supervisor.",
+     "source": "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Open swim runs only at posted times and is not offered every day of the week.",
+      "source": "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Swimming lessons here are for Saint Paul residents.",
+      "source": "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+    ],
+    "season": [
+     "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+     ],
+     "day_pass": [
+      "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+     ],
+     "lap_swim": [
+      "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+     ],
+     "lessons": [
+      "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+     ]
+    },
+    "address": [
+     "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-mn-saint-paul-highland-park-aquatic-center",
+   "name": "Highland Park Aquatic Center",
+   "official_name": "Highland Park Aquatic Center",
+   "operator": "City of Saint Paul Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "MN",
+   "region": "Minnesota",
+   "city": "Saint Paul",
+   "address": {
+    "street": "1840 Edgcumbe Rd.",
+    "locality": "Saint Paul",
+    "region": "MN",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center",
+   "hours_fees_url": "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "members"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only outdoor pool; it is closed for the season now.",
+     "source": "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "No one is admitted during the daily lifeguard safety break.",
+     "source": "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied by an adult during open swim.",
+     "source": "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+    },
+    {
+     "text": "For ages 12 to 14 to stay without a parent, a parent or guardian must first check in with an aquatics supervisor.",
+     "source": "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+    },
+    {
+     "text": "Tot Time is a separate session for children 6 and under with their adults, in the children's pool only.",
+     "source": "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Youth swimming lessons are for Saint Paul residents only.",
+      "source": "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+    ],
+    "season": [
+     "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center",
+     "https://www.stpaul.gov/departments/parks-and-recreation/aquatics/great-river-water-park"
+    ],
+    "access": {
+     "public_admission": [
+      "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+     ],
+     "day_pass": [
+      "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+     ],
+     "lap_swim": [
+      "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+     ],
+     "lessons": [
+      "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+     ]
+    },
+    "address": [
+     "https://stpaul.gov/departments/parks-and-recreation/aquatics/highland-park-aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

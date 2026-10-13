@@ -1,0 +1,619 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "TX",
+ "name": "Texas",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-tx-austin-big-stacy-pool",
+   "name": "Big Stacy Pool",
+   "official_name": "Big Stacy Pool",
+   "operator": "City of Austin Parks and Recreation (Aquatic Division)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "TX",
+   "region": "Texas",
+   "city": "Austin",
+   "address": {
+    "street": "700 East Live Oak St.",
+    "locality": "Austin",
+    "region": "TX",
+    "postal_code": "78704",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.austintexas.gov/parks/locations/big-stacy-pool",
+   "hours_fees_url": "https://www.austintexas.gov/parks/locations/big-stacy-pool",
+   "setting": "outdoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "City pools close when the air temperature on the pool deck is at or below freezing and reopen once it warms up.",
+     "source": "https://austintexas.gov/pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "On Monday and Wednesday mornings the whole pool is closed to the public for a city swim program.",
+     "source": "https://www.austintexas.gov/parks/locations/big-stacy-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Closed on major holidays such as Thanksgiving, Christmas and New Year's Day.",
+     "source": "https://www.austintexas.gov/parks/locations/big-stacy-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Groups of 6 or more on a one-time visit must complete the city's one-day visit form first.",
+     "source": "https://austintexas.gov/pools"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.austintexas.gov/parks/locations/big-stacy-pool"
+    ],
+    "season": [
+     "https://austintexas.gov/pools",
+     "https://www.austintexas.gov/parks/locations/big-stacy-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://austintexas.gov/pools",
+      "https://www.austintexas.gov/parks/locations/big-stacy-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.austintexas.gov/parks/locations/big-stacy-pool"
+     ],
+     "lap_swim": [
+      "https://www.austintexas.gov/parks/locations/big-stacy-pool"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.austintexas.gov/parks/locations/big-stacy-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-tx-dallas-bachman-indoor-pool",
+   "name": "Bachman Indoor Pool",
+   "official_name": "Bachman Indoor Pool",
+   "operator": "City of Dallas Park and Recreation Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "TX",
+   "region": "Texas",
+   "city": "Dallas",
+   "address": {
+    "street": "2750 Bachman Dr.",
+    "locality": "Dallas",
+    "region": "TX",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://dallasaquatics.org/100",
+   "hours_fees_url": "https://dallasaquatics.org/159/Pricing",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Without a Dallas recreation card, you can only swim during the posted open swim and lap swim times.",
+     "source": "https://dallasaquatics.org/159/Pricing"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "The pool is closed on Sundays.",
+     "source": "https://dallasaquatics.org/100"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "In the parent-child swim class (6 months to 3 years), a parent or guardian must be in the water with the child.",
+     "source": "https://dallasaquatics.org/136/Swim-Lessons"
+    },
+    {
+     "text": "Minors need a parent or legal guardian present to register for a recreation card.",
+     "source": "https://dallasaquatics.org/159/Pricing"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Classes need a City of Dallas recreation card; registration asks for government ID and proof of Dallas residency, though a non-resident card rate is also listed.",
+      "source": "https://dallasaquatics.org/159/Pricing"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://dallasaquatics.org/100"
+    ],
+    "season": [
+     "https://dallasaquatics.org/100"
+    ],
+    "access": {
+     "public_admission": [
+      "https://dallasaquatics.org/100",
+      "https://dallasaquatics.org/159/Pricing"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://dallasaquatics.org/100",
+      "https://dallasaquatics.org/159/Pricing"
+     ],
+     "lap_swim": [
+      "https://dallasaquatics.org/100",
+      "https://dallasaquatics.org/159/Pricing"
+     ],
+     "lessons": [
+      "https://dallasaquatics.org/100",
+      "https://dallasaquatics.org/159/Pricing"
+     ]
+    },
+    "address": [
+     "https://dallasaquatics.org/100"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-tx-el-paso-armijo-aquatic-center",
+   "name": "Armijo Aquatic Center",
+   "official_name": "Armijo Aquatic Center",
+   "operator": "City of El Paso Parks and Recreation Department",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "TX",
+   "region": "Texas",
+   "city": "El Paso",
+   "address": {
+    "street": "911 S. Ochoa St.",
+    "locality": "El Paso",
+    "region": "TX",
+    "postal_code": "79901",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.elpasotexas.gov/parks-and-recreation/aquatics",
+   "hours_fees_url": "https://www.elpasotexas.gov/parks-and-recreation/aquatics",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    },
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public"
+     },
+     "label": "leisure"
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "The pool closes to the public for school team practice on some weekday mornings.",
+     "source": "https://www.elpasotexas.gov/parks-and-recreation/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Closed on Sundays.",
+     "source": "https://www.elpasotexas.gov/parks-and-recreation/aquatics"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap lanes are only for swimmers who can swim continuous laps; others will be asked to leave the lap lanes.",
+      "source": "https://www.elpasotexas.gov/parks-and-recreation/aquatics"
+     },
+     {
+      "text": "Lap lanes are shared by four to eight swimmers at a time.",
+      "source": "https://www.elpasotexas.gov/parks-and-recreation/aquatics"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.elpasotexas.gov/parks-and-recreation/aquatics"
+    ],
+    "season": [
+     "https://www.elpasotexas.gov/parks-and-recreation/aquatics"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.elpasotexas.gov/parks-and-recreation/aquatics"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.elpasotexas.gov/parks-and-recreation/aquatics"
+     ],
+     "lap_swim": [
+      "https://www.elpasotexas.gov/parks-and-recreation/aquatics"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.elpasotexas.gov/parks-and-recreation/aquatics"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-tx-fort-worth-forest-park-pool",
+   "name": "Forest Park Pool",
+   "official_name": "Forest Park Pool",
+   "operator": "City of Fort Worth Park & Recreation Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "TX",
+   "region": "Texas",
+   "city": "Fort Worth",
+   "address": {
+    "street": "2850 Park Place Ave",
+    "locality": "Fort Worth",
+    "region": "TX",
+    "postal_code": "76110",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/forest-park-pool",
+   "hours_fees_url": "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/forest-park-pool",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Seasonal pool: open late May to early September, with lap swim only on fall weekends through mid-October; dates can change with weather.",
+     "source": "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/forest-park-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Proper swim attire is required.",
+     "source": "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/forest-park-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and under must have a guardian age 16 or older with them and may never be left unattended.",
+     "source": "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/pool-rules-and-regulations"
+    },
+    {
+     "text": "Groups need at least one guardian for every 15 children age 10 and under.",
+     "source": "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/pool-rules-and-regulations"
+    },
+    {
+     "text": "Children in diapers must wear swim diapers.",
+     "source": "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/pool-rules-and-regulations"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "The lap pool is not available during after-hours private rentals.",
+      "source": "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/forest-park-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/forest-park-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/forest-park-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/forest-park-pool"
+     ],
+     "lap_swim": [
+      "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/forest-park-pool"
+     ],
+     "lessons": [
+      "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/swimming-lessons"
+     ]
+    },
+    "address": [
+     "https://www.fortworthtexas.gov/departments/parks/services/pools-and-aquatics/forest-park-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-tx-san-antonio-atanacio-garcia-natatorium",
+   "name": "Atanacio Garcia Natatorium",
+   "official_name": "Atanacio Garcia Natatorium",
+   "operator": "City of San Antonio Parks and Recreation Department",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "TX",
+   "region": "Texas",
+   "city": "San Antonio",
+   "address": {
+    "street": "1430 West Durango Blvd.",
+    "locality": "San Antonio",
+    "region": "TX",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Buildings-Centers/Atanacio-Garcia-Natatorium",
+   "hours_fees_url": "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Buildings-Centers/Atanacio-Garcia-Natatorium",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool closes to the public during school swim meets; check the posted meet calendar before you go.",
+     "source": "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Buildings-Centers/Atanacio-Garcia-Natatorium"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "City pools close during lightning and thunderstorms.",
+     "source": "https://www.sa.gov/Directory/Departments/Parks/Programs-Classes/Swimming-Aquatics"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and under must be accompanied and directly supervised by an adult 18 or older at all times.",
+     "source": "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Parks/Specialty-Parks-Amenities/Swimming-Pools"
+    },
+    {
+     "text": "Non-swimmers 10 and under must stay within arm's reach of an adult in the water.",
+     "source": "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Parks/Specialty-Parks-Amenities/Swimming-Pools"
+    },
+    {
+     "text": "Keep at least one adult for every two children age 9 and under.",
+     "source": "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Parks/Specialty-Parks-Amenities/Swimming-Pools"
+    },
+    {
+     "text": "Arm floaties are not allowed; only Coast Guard approved life jackets.",
+     "source": "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Parks/Specialty-Parks-Amenities/Swimming-Pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Some lap swim sessions are for adults and seniors only, others for teens and adults.",
+      "source": "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Buildings-Centers/Atanacio-Garcia-Natatorium"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Buildings-Centers/Atanacio-Garcia-Natatorium",
+     "https://www.sa.gov/Directory/Departments/Parks/Programs-Classes/Swimming-Aquatics"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Buildings-Centers/Atanacio-Garcia-Natatorium"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Buildings-Centers/Atanacio-Garcia-Natatorium"
+     ],
+     "lap_swim": [
+      "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Buildings-Centers/Atanacio-Garcia-Natatorium"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.sa.gov/Directory/Departments/Parks/Parks-Facilities/Buildings-Centers/Atanacio-Garcia-Natatorium"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

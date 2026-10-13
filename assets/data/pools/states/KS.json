@@ -1,0 +1,565 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "KS",
+ "name": "Kansas",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ks-lawrence-lawrence-indoor-aquatic-center",
+   "name": "Lawrence Indoor Aquatic Center",
+   "official_name": "Lawrence Indoor Aquatic Center",
+   "operator": "City of Lawrence Parks, Recreation and Culture",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "KS",
+   "region": "Kansas",
+   "city": "Lawrence",
+   "address": {
+    "street": "4706 Overland Drive",
+    "locality": "Lawrence",
+    "region": "KS",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center",
+   "hours_fees_url": "https://www.lawrenceks.gov/City/PRC/Aquatics",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "lap_swim": "public"
+     },
+     "label": "competition"
+    },
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "indoor",
+     "kind": "hours",
+     "text": "The family pool, waterslide and diving area are open only on Friday evenings and weekend afternoons.",
+     "source": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The center has scheduled maintenance shutdowns (in 2026, late July to mid-August), so check the schedule before going.",
+     "source": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Everyone entering pays admission or has a membership; areas may be reserved for lessons or events.",
+     "source": "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Riders must be at least 45 inches tall for the waterslides.",
+     "source": "https://www.lawrenceks.gov/files/assets/public/v/1/prc/documents/aquatics/rules-and-regulations-for-aquatic-facilities.pdf"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and younger must be accompanied by a paying adult.",
+     "source": "https://www.lawrenceks.gov/City/PRC/Aquatics"
+    },
+    {
+     "text": "Up to three children age 2 and younger may enter per paying adult.",
+     "source": "https://www.lawrenceks.gov/City/PRC/Aquatics"
+    },
+    {
+     "text": "Only approved swim diapers are allowed; regular diapers and plastic pants are not.",
+     "source": "https://www.lawrenceks.gov/files/assets/public/v/1/prc/documents/aquatics/rules-and-regulations-for-aquatic-facilities.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.lawrenceks.gov/City/PRC/Aquatics",
+     "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    ],
+    "season": [
+     "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.lawrenceks.gov/City/PRC/Aquatics",
+      "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+     ],
+     "members": [
+      "https://www.lawrenceks.gov/City/PRC/Aquatics",
+      "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.lawrenceks.gov/City/PRC/Aquatics",
+      "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+     ],
+     "lap_swim": [
+      "https://www.lawrenceks.gov/City/PRC/Aquatics",
+      "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.lawrenceks.gov/City/PRC/Aquatics/Indoor-Aquatic-Center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ks-lenexa-flat-rock-creek-pool",
+   "name": "Flat Rock Creek Pool",
+   "official_name": "Flat Rock Creek Pool",
+   "operator": "City of Lenexa Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "KS",
+   "region": "Kansas",
+   "city": "Lenexa",
+   "address": {
+    "street": "13120 W. 103rd St.",
+    "locality": "Lenexa",
+    "region": "KS",
+    "postal_code": "66215",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.lenexa.com/Parks-Places/Public-Pools/Flat-Rock-Creek-Pool",
+   "hours_fees_url": "https://www.lenexa.com/Parks-Places/Public-Pools/Outdoor-Pool-Memberships",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Outdoor summer pool only; it is closed until late May 2027.",
+     "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Flat-Rock-Creek-Pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Lenexa residents pay a lower daily rate; non-residents are welcome at the non-resident rate.",
+     "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Flat-Rock-Creek-Pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool can close for weather, swim meets or special events and may limit swimmers to prevent overcrowding; call the weather hotline before going.",
+     "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Pool-Rules-Policies"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "During safety swim times, children must be in direct contact with an adult.",
+     "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Pool-Rules-Policies"
+    },
+    {
+     "text": "An adult must stay within arm's length of anyone wearing a life jacket.",
+     "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Pool-Rules-Policies"
+    },
+    {
+     "text": "Splash With Me time is for children 5 and younger with adult supervision.",
+     "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Flat-Rock-Creek-Pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.lenexa.com/Parks-Places/Public-Pools/Outdoor-Pool-Memberships"
+    ],
+    "season": [
+     "https://www.lenexa.com/Parks-Places/Public-Pools/Flat-Rock-Creek-Pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.lenexa.com/Parks-Places/Public-Pools/Flat-Rock-Creek-Pool",
+      "https://www.lenexa.com/Parks-Places/Public-Pools/Outdoor-Pool-Memberships"
+     ],
+     "members": [
+      "https://www.lenexa.com/Parks-Places/Public-Pools/Flat-Rock-Creek-Pool",
+      "https://www.lenexa.com/Parks-Places/Public-Pools/Outdoor-Pool-Memberships"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://www.lenexa.com/Parks-Places/Public-Pools/Flat-Rock-Creek-Pool"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.lenexa.com/Parks-Places/Public-Pools/Flat-Rock-Creek-Pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ks-lenexa-lenexa-rec-center-indoor-pool",
+   "name": "Lenexa Rec Center Indoor Pool",
+   "official_name": "Lenexa Rec Center Indoor Pool",
+   "operator": "City of Lenexa Parks & Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "KS",
+   "region": "Kansas",
+   "city": "Lenexa",
+   "address": {
+    "street": "17201 W. 87th St. Pkwy.",
+    "locality": "Lenexa",
+    "region": "KS",
+    "postal_code": "66219",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.lenexa.com/Parks-Places/Public-Pools/Rec-Center-Indoor-Pool",
+   "hours_fees_url": "https://www.lenexa.com/Parks-Places/Rec-Center/Rec-Center-Admission-Passes",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Day-pass holders need a photo ID on file, and adults 18 and older need a driver's license to enter.",
+     "source": "https://www.lenexa.com/Parks-Places/Rec-Center/Rec-Center-Admission-Passes"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Riders must be at least 42 inches tall for the blue slide and 48 inches for the orange slide.",
+     "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Rec-Center-Indoor-Pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "The pool may limit the number of swimmers or close sections to prevent overcrowding.",
+     "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Pool-Rules-Policies"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 8 and younger need an adult 18 or older in the building and direct supervision by someone 14 or older.",
+     "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Rec-Center-Indoor-Pool"
+    },
+    {
+     "text": "Children 9 to 11 need an adult 18 or older in the building.",
+     "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Rec-Center-Indoor-Pool"
+    },
+    {
+     "text": "An adult must stay within arm's length of anyone wearing a life jacket.",
+     "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Pool-Rules-Policies"
+    },
+    {
+     "text": "Swim diapers, worn under a swimsuit, are required for anyone not potty trained.",
+     "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Pool-Rules-Policies"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "General open swim runs only during set weekday-evening and weekend hours, and some features may close for lessons or classes.",
+      "source": "https://www.lenexa.com/Parks-Places/Public-Pools/Rec-Center-Indoor-Pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.lenexa.com/Parks-Places/Public-Pools/Rec-Center-Indoor-Pool"
+    ],
+    "season": [
+     "https://www.lenexa.com/Parks-Places/Public-Pools/Rec-Center-Indoor-Pool",
+     "https://www.lenexa.com/Parks-Places/Rec-Center"
+    ],
+    "access": {
+     "day_pass": [
+      "https://www.lenexa.com/Parks-Places/Public-Pools/Rec-Center-Indoor-Pool",
+      "https://www.lenexa.com/Parks-Places/Rec-Center/Rec-Center-Admission-Passes"
+     ],
+     "members": [
+      "https://www.lenexa.com/Parks-Places/Public-Pools/Rec-Center-Indoor-Pool",
+      "https://www.lenexa.com/Parks-Places/Rec-Center/Rec-Center-Admission-Passes"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.lenexa.com/Parks-Places/Public-Pools/Rec-Center-Indoor-Pool"
+     ],
+     "lap_swim": [
+      "https://www.lenexa.com/Parks-Places/Public-Pools/Rec-Center-Indoor-Pool"
+     ],
+     "lessons": [
+      "https://www.lenexa.com/Parks-Places/Public-Pools/Rec-Center-Indoor-Pool"
+     ]
+    },
+    "address": [
+     "https://www.lenexa.com/Parks-Places/Rec-Center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ks-topeka-blaisdell-family-aquatic-center",
+   "name": "Blaisdell Family Aquatic Center",
+   "official_name": "Blaisdell Family Aquatic Center",
+   "operator": "Shawnee County Parks + Recreation",
+   "facility_type": "county",
+   "country": "US",
+   "state": "KS",
+   "region": "Kansas",
+   "city": "Topeka",
+   "address": {
+    "street": "SW 6th & Gage Boulevard (Gage Park)",
+    "locality": "Topeka",
+    "region": "KS",
+    "postal_code": null,
+    "precision": "street"
+   },
+   "official_url": "https://parks.snco.gov/facilities/facility/details/Blaisdell-Family-Aquatic-Center-98",
+   "hours_fees_url": "https://parks.snco.gov/468/Aquatic-Admission-Rates",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; the 2026 season ended August 9.",
+     "source": "https://parks.snco.gov/facilities/facility/details/Blaisdell-Family-Aquatic-Center-98"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The facility will not open, and can close, if the air temperature is below 70 degrees.",
+     "source": "https://parks.snco.gov/DocumentCenter/View/3408/WEATHER-POLICY-2021"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Everyone entering pays admission, even if not swimming.",
+     "source": "https://parks.snco.gov/DocumentCenter/View/3402/Blaisdell-General-Rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Maximum occupancy is posted at 820 people.",
+     "source": "https://parks.snco.gov/DocumentCenter/View/3402/Blaisdell-General-Rules"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and under must be accompanied by an adult.",
+     "source": "https://parks.snco.gov/facilities/facility/details/Blaisdell-Family-Aquatic-Center-98"
+    },
+    {
+     "text": "Children who need flotation support must stay within arm's reach of a guardian at all times.",
+     "source": "https://parks.snco.gov/DocumentCenter/View/3402/Blaisdell-General-Rules"
+    },
+    {
+     "text": "Non-potty-trained children must wear a swim diaper.",
+     "source": "https://parks.snco.gov/DocumentCenter/View/3402/Blaisdell-General-Rules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://parks.snco.gov/42/Aquatics",
+     "https://parks.snco.gov/facilities/facility/details/Blaisdell-Family-Aquatic-Center-98"
+    ],
+    "access": {
+     "public_admission": [
+      "https://parks.snco.gov/468/Aquatic-Admission-Rates",
+      "https://parks.snco.gov/facilities/facility/details/Blaisdell-Family-Aquatic-Center-98"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://parks.snco.gov/468/Aquatic-Admission-Rates"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://parks.snco.gov/469/Aquatic-Programming"
+     ]
+    },
+    "address": [
+     "https://parks.snco.gov/facilities/facility/details/Blaisdell-Family-Aquatic-Center-98"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

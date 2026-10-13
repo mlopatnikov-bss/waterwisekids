@@ -1,0 +1,408 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "CT",
+ "name": "Connecticut",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ct-manchester-manchester-high-school-pool",
+   "name": "Manchester High School Pool",
+   "official_name": "Manchester High School Pool",
+   "operator": "Town of Manchester Leisure, Family and Recreation Department",
+   "facility_type": "school_university",
+   "country": "US",
+   "state": "CT",
+   "region": "Connecticut",
+   "city": "Manchester",
+   "address": {
+    "street": "134 Middle Turnpike E",
+    "locality": "Manchester",
+    "region": "CT",
+    "postal_code": "06040",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.manchesterct.gov/Government/Departments/Leisure-Family-and-Recreation-Department/Recreation-Divison/Parks-Pools-Locator/Manchester-High-School-Pool",
+   "hours_fees_url": "https://www.manchesterct.gov/Government/Departments/Leisure-Family-and-Recreation-Department/Recreation-Divison/Parks-Pools-Locator/Manchester-High-School-Pool",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "season": "unknown",
+     "o": {
+      "open_swim": "unknown",
+      "lessons": "members"
+     }
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pools close on some holidays and over the winter break; check the schedule before going.",
+     "source": "https://www.manchesterct.gov/Government/Departments/Leisure-Family-and-Recreation-Department/Recreation-Divison/Parks-Pools-Locator/Manchester-High-School-Pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Use the IOH main entrance; parking and the pool entrance are on Brookfield Street.",
+     "source": "https://www.manchesterct.gov/Government/Departments/Leisure-Family-and-Recreation-Department/Recreation-Divison/Parks-Pools-Locator/Manchester-High-School-Pool"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Swim lessons here are for Manchester residents only.",
+      "source": "https://www.manchesterct.gov/Government/Departments/Leisure-Family-and-Recreation-Department/Recreation-Divison/Parks-Pools-Locator/Manchester-High-School-Pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.manchesterct.gov/Government/Departments/Leisure-Family-and-Recreation-Department/Recreation-Divison/Parks-Pools-Locator/Manchester-High-School-Pool"
+    ],
+    "season": [],
+    "access": {},
+    "offerings": {
+     "open_swim": [
+      "https://www.manchesterct.gov/Government/Departments/Leisure-Family-and-Recreation-Department/Recreation-Divison/Parks-Pools-Locator/Manchester-High-School-Pool"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.manchesterct.gov/Government/Departments/Leisure-Family-and-Recreation-Department/Recreation-Divison/Parks-Pools-Locator/Manchester-High-School-Pool"
+     ]
+    },
+    "address": [
+     "https://www.manchesterct.gov/Government/Departments/Leisure-Family-and-Recreation-Department/Recreation-Divison/Parks-Pools-Locator/Manchester-High-School-Pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ct-west-hartford-cornerstone-aquatics-center",
+   "name": "Cornerstone Aquatics Center",
+   "official_name": "Cornerstone Aquatics Center",
+   "operator": "Town of West Hartford Leisure Services (managed by HealthFitness, Inc.)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "CT",
+   "region": "Connecticut",
+   "city": "West Hartford",
+   "address": {
+    "street": "55 Buena Vista Road",
+    "locality": "West Hartford",
+    "region": "CT",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center",
+   "hours_fees_url": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/join",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "lap_swim": "public",
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Day passes may be limited or refused when the facility is near capacity, especially on winter weekends.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/join"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Any swimmer may be asked to take a swim test at the lifeguard's discretion.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/facility"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "No one under 16 may use the hot hydrotherapy spa pool.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/facility"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Only Coast Guard approved flotation devices are allowed; no inflatables.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/facility"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Non-swimmers and children under 6 must have an adult in the water within arm's reach at all times.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/facility"
+    },
+    {
+     "text": "Intermediate swimmers and children aged 6 to 12 must have an adult present in the pool area.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/facility"
+    },
+    {
+     "text": "Children who are not toilet trained must wear a swim diaper.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/facility"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Families with children can buy day passes only on weekends.",
+      "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center"
+    ],
+    "season": [],
+    "access": {
+     "day_pass": [
+      "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center",
+      "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/join"
+     ],
+     "members": [
+      "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center",
+      "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/join"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center",
+      "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/facility"
+     ],
+     "lap_swim": [
+      "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center"
+     ],
+     "lessons": [
+      "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/join"
+     ]
+    },
+    "address": [
+     "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ct-west-hartford-fernridge-pool",
+   "name": "Fernridge Pool",
+   "official_name": "Fernridge Pool",
+   "operator": "Town of West Hartford Leisure Services (outdoor pools managed by Cornerstone Aquatics Center)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "CT",
+   "region": "Connecticut",
+   "city": "West Hartford",
+   "address": {
+    "street": "567 Fern Street",
+    "locality": "West Hartford",
+    "region": "CT",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools",
+   "hours_fees_url": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 12 must be with an adult or guardian who is at least 16.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "escort",
+     "text": "One adult may bring at most four children.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "A Cornerstone RecDesk account is needed to buy pool passes and register for lessons.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Discount punch cards are for West Hartford residents only; non-residents pay the daily rate.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Groups of 10 or more need a group use permit from Leisure Services.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer only; all outdoor pools are closed for the rest of 2026.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied by an adult or guardian aged 16 or older.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+    },
+    {
+     "text": "A non-swimming child may wear a Coast Guard approved life jacket but must stay in shallow water within arm's reach of the adult.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+    },
+    {
+     "text": "Children who are not toilet trained must wear a disposable swim diaper.",
+     "source": "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+    ],
+    "season": [
+     "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/join",
+      "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+     ],
+     "members": [
+      "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/join",
+      "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.westhartfordct.gov/town-departments/leisure-services/aquatics/cornerstone-aquatics-center/outdoor-pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

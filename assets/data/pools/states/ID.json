@@ -1,0 +1,534 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "ID",
+ "name": "Idaho",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-id-boise-boise-city-aquatic-center",
+   "name": "Boise City Aquatic Center",
+   "official_name": "Boise City Aquatic Center",
+   "operator": "City of Boise (operated by the West Boise YMCA)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "ID",
+   "region": "Idaho",
+   "city": "Boise",
+   "address": {
+    "street": "5959 N Discovery Way",
+    "locality": "Boise",
+    "region": "ID",
+    "postal_code": "83713",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cityofboise.org/departments/parks-and-recreation/pools/boise-city-aquatic-center/",
+   "hours_fees_url": "https://www.cityofboise.org/departments/parks-and-recreation/pools/boise-city-aquatic-center/",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "residents",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "restricted",
+     "season": "unknown",
+     "o": {}
+    }
+   ],
+   "public_access": "restricted",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "residents",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Open only to Boise residents (who buy a YMCA aquatics day pass) and YMCA members.",
+     "source": "https://www.cityofboise.org/departments/parks-and-recreation/pools/boise-city-aquatic-center/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "City season swim passes are not valid here.",
+     "source": "https://www.cityofboise.org/departments/parks-and-recreation/pools/boise-city-aquatic-center/"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.cityofboise.org/departments/parks-and-recreation/pools/boise-city-aquatic-center/"
+    ],
+    "season": [],
+    "access": {
+     "residents": [
+      "https://www.cityofboise.org/departments/parks-and-recreation/pools/boise-city-aquatic-center/"
+     ],
+     "members": [
+      "https://www.cityofboise.org/departments/parks-and-recreation/pools/boise-city-aquatic-center/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.cityofboise.org/departments/parks-and-recreation/pools/boise-city-aquatic-center/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-id-boise-borah-pool",
+   "name": "Borah Pool",
+   "official_name": "Borah Pool",
+   "operator": "City of Boise Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "ID",
+   "region": "Idaho",
+   "city": "Boise",
+   "address": {
+    "street": "801 Aurora Dr",
+    "locality": "Boise",
+    "region": "ID",
+    "postal_code": "83709",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cityofboise.org/departments/parks-and-recreation/pools/borah-pool/",
+   "hours_fees_url": "https://www.cityofboise.org/departments/parks-and-recreation/pools/borah-pool/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; it is closed for the 2026 season and reopens next summer.",
+     "source": "https://www.cityofboise.org/departments/parks-and-recreation/pools/borah-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 8 and younger must be supervised in the water by a guardian aged 16 or older; age 9+ may come without an adult.",
+     "source": "https://www.cityofboise.org/departments/parks-and-recreation/pools/borah-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Groups of 50 or more are asked to call the pool before arriving because of capacity.",
+     "source": "https://www.cityofboise.org/departments/parks-and-recreation/pools/borah-pool/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children must be 9 or older to visit the pool without an adult.",
+     "source": "https://www.cityofboise.org/departments/parks-and-recreation/pools/borah-pool/"
+    },
+    {
+     "text": "Kids 8 and younger must be supervised in the water by a guardian who is 16 or older.",
+     "source": "https://www.cityofboise.org/departments/parks-and-recreation/pools/borah-pool/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap swim is for ages 16 and older.",
+      "source": "https://www.cityofboise.org/departments/parks-and-recreation/pools-aquatics/adult-lap-swim-16plus/"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Preschool lessons (ages 2-4) need an adult in the water; other group classes start at age 4; all lessons need advance registration.",
+      "source": "https://www.cityofboise.org/departments/parks-and-recreation/activities-classes-and-sports/youth-activities/swim-lessons/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.cityofboise.org/departments/parks-and-recreation/aquatics/",
+     "https://www.cityofboise.org/departments/parks-and-recreation/pools-aquatics/adult-lap-swim-16plus/"
+    ],
+    "season": [
+     "https://www.cityofboise.org/departments/parks-and-recreation/pools/borah-pool/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.cityofboise.org/departments/parks-and-recreation/pools-aquatics/adult-lap-swim-16plus/",
+      "https://www.cityofboise.org/departments/parks-and-recreation/pools/borah-pool/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.cityofboise.org/departments/parks-and-recreation/pools-aquatics/adult-lap-swim-16plus/",
+      "https://www.cityofboise.org/departments/parks-and-recreation/pools/borah-pool/"
+     ],
+     "lap_swim": [
+      "https://www.cityofboise.org/departments/parks-and-recreation/pools-aquatics/adult-lap-swim-16plus/",
+      "https://www.cityofboise.org/departments/parks-and-recreation/pools/borah-pool/"
+     ],
+     "lessons": [
+      "https://www.cityofboise.org/departments/parks-and-recreation/activities-classes-and-sports/youth-activities/swim-lessons/"
+     ]
+    },
+    "address": [
+     "https://www.cityofboise.org/departments/parks-and-recreation/pools/borah-pool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-id-idaho-falls-wes-deist-aquatic-center",
+   "name": "Wes Deist Aquatic Center",
+   "official_name": "Wes Deist Aquatic Center",
+   "operator": "City of Idaho Falls Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "ID",
+   "region": "Idaho",
+   "city": "Idaho Falls",
+   "address": {
+    "street": "149 Seventh Street",
+    "locality": "Idaho Falls",
+    "region": "ID",
+    "postal_code": "83401",
+    "precision": "street_number"
+   },
+   "official_url": "https://idahofallsidaho.gov/627/Aquatic-Center",
+   "hours_fees_url": "https://www.idahofallsidaho.gov/650/Public-Swim-Hours",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 5 and younger need a parent or adult (18+) in the water, with one adult for every four children.",
+     "source": "https://www.idahofallsidaho.gov/650/Public-Swim-Hours"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool closes for swim meets and events on some dates (e.g. Oct 24 morning and all day Oct 31, 2026).",
+     "source": "https://www.idahofallsidaho.gov/650/Public-Swim-Hours"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "City residents get a lower rate only with an Idaho Falls utility bill and matching photo ID; others pay the general rate.",
+     "source": "https://www.idahofallsidaho.gov/650/Public-Swim-Hours"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 5 and younger must have a parent or supervising adult (18+) in the water.",
+     "source": "https://www.idahofallsidaho.gov/650/Public-Swim-Hours"
+    },
+    {
+     "text": "There must be one adult for every four children in the water.",
+     "source": "https://www.idahofallsidaho.gov/650/Public-Swim-Hours"
+    },
+    {
+     "text": "During Toddler Time all swimmers must have an adult (18+) in the water with them.",
+     "source": "https://www.idahofallsidaho.gov/650/Public-Swim-Hours"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Non-members swim during the posted public swim sessions, which are subject to change; check the calendar before going.",
+      "source": "https://www.idahofallsidaho.gov/650/Public-Swim-Hours"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.idahofallsidaho.gov/DocumentCenter/View/15585"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.idahofallsidaho.gov/2067/Frequently-Asked-Questions",
+      "https://www.idahofallsidaho.gov/650/Public-Swim-Hours"
+     ],
+     "members": [
+      "https://www.idahofallsidaho.gov/2067/Frequently-Asked-Questions",
+      "https://www.idahofallsidaho.gov/650/Public-Swim-Hours"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.idahofallsidaho.gov/2067/Frequently-Asked-Questions",
+      "https://www.idahofallsidaho.gov/650/Public-Swim-Hours"
+     ],
+     "lap_swim": [
+      "https://www.idahofallsidaho.gov/650/Public-Swim-Hours"
+     ],
+     "lessons": [
+      "https://idahofallsidaho.gov/732/Swim-Lessons",
+      "https://www.idahofallsidaho.gov/650/Public-Swim-Hours"
+     ]
+    },
+    "address": [
+     "https://idahofallsidaho.gov/627/Aquatic-Center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-id-pocatello-pocatello-community-recreation-center",
+   "name": "Pocatello Community Recreation Center",
+   "official_name": "Pocatello Community Recreation Center",
+   "operator": "City of Pocatello Parks and Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "ID",
+   "region": "Idaho",
+   "city": "Pocatello",
+   "address": {
+    "street": "144 Wilson Avenue",
+    "locality": "Pocatello",
+    "region": "ID",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://pocatello.gov/297/Community-Recreation-Center",
+   "hours_fees_url": "https://pocatello.gov/586/Public-Swimming",
+   "setting": "unknown",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Non-members may use the pool only during the few weekly public swim sessions.",
+     "source": "https://pocatello.gov/586/Public-Swimming"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The center closes each year for maintenance in late August to early September.",
+     "source": "https://pocatello.gov/583/Hours-of-Operation"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Non-swimmers must stay in the shallow end.",
+     "source": "https://pocatello.gov/586/Public-Swimming"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "During member swim time, swimmers 17 and under must be accompanied by an adult member.",
+     "source": "https://pocatello.gov/586/Public-Swimming"
+    },
+    {
+     "text": "Life jackets are allowed only under adult supervision; air-filled floats are not allowed.",
+     "source": "https://pocatello.gov/586/Public-Swimming"
+    },
+    {
+     "text": "Children under 15 may not be in or near the spa.",
+     "source": "https://pocatello.gov/586/Public-Swimming"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap lanes are for adult swimmers only.",
+      "source": "https://pocatello.gov/586/Public-Swimming"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://pocatello.gov/586/Public-Swimming"
+    ],
+    "access": {
+     "public_admission": [
+      "https://pocatello.gov/582/Daily-Admission-Fees",
+      "https://pocatello.gov/586/Public-Swimming"
+     ],
+     "members": [
+      "https://pocatello.gov/582/Daily-Admission-Fees",
+      "https://pocatello.gov/586/Public-Swimming"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://pocatello.gov/586/Public-Swimming"
+     ],
+     "lap_swim": [
+      "https://pocatello.gov/586/Public-Swimming"
+     ],
+     "lessons": [
+      "https://pocatello.gov/710/Swim-Lessons-Dance-Classes"
+     ]
+    },
+    "address": [
+     "https://pocatello.gov/582/Daily-Admission-Fees"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

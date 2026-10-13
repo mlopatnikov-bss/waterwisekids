@@ -1,0 +1,421 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "RI",
+ "name": "Rhode Island",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ri-cranston-budlong-aquatic-center",
+   "name": "Budlong Aquatic Center (Budlong Pool)",
+   "official_name": "Budlong Aquatic Center (Budlong Pool)",
+   "operator": "City of Cranston Parks and Recreation Department",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "RI",
+   "region": "Rhode Island",
+   "city": "Cranston",
+   "address": {
+    "street": "222 Aqueduct Road",
+    "locality": "Cranston",
+    "region": "RI",
+    "postal_code": "02910",
+    "precision": "street_number"
+   },
+   "official_url": "https://cranstonri.gov/cranston-budlong-aquatic-center.aspx",
+   "hours_fees_url": "https://cranstonri.gov/cranston-budlong-aquatic-center.aspx",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 8 and under must be accompanied by a parent, guardian or responsible person at least 16 years old.",
+     "source": "https://www.cranstonri.gov/_resources/common/userfiles/file/Parks%20and%20Recreation/Budlong%20Pool%20Rules%202026.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Open in the summer season only.",
+     "source": "https://cranstonri.gov/cranston-budlong-aquatic-center.aspx"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Cranston residents must show photo ID to get resident rates.",
+     "source": "https://cranstonri.gov/_resources/common/userfiles/file/Parks and Recreation/Budlong Pool Day Season Fees 2026 Final.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "The facility is cashless.",
+     "source": "https://cranstonri.gov/cranston-budlong-aquatic-center.aspx"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Staff may ask anyone to show their swimming ability.",
+     "source": "https://www.cranstonri.gov/_resources/common/userfiles/file/Parks%20and%20Recreation/Budlong%20Pool%20Rules%202026.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool may close for thunder, lightning, steady rain or cold weather.",
+     "source": "https://www.cranstonri.gov/_resources/common/userfiles/file/Parks%20and%20Recreation/Budlong%20Pool%20Rules%202026.pdf"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 8 and under must be accompanied by a parent, guardian or responsible person aged 16 or older, who must supervise directly.",
+     "source": "https://www.cranstonri.gov/_resources/common/userfiles/file/Parks%20and%20Recreation/Budlong%20Pool%20Rules%202026.pdf"
+    },
+    {
+     "text": "Children 4 and under must be accompanied by an adult.",
+     "source": "https://cranstonri.gov/cranston-budlong-aquatic-center.aspx"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://cranstonri.gov/cranston-budlong-aquatic-center.aspx"
+    ],
+    "access": {
+     "public_admission": [
+      "https://cranstonri.gov/cranston-budlong-aquatic-center.aspx",
+      "https://www.cranstonri.gov/_resources/common/userfiles/file/Parks%20and%20Recreation/Budlong%20Pool%20Rules%202026.pdf"
+     ],
+     "day_pass": [
+      "https://cranstonri.gov/cranston-budlong-aquatic-center.aspx",
+      "https://www.cranstonri.gov/_resources/common/userfiles/file/Parks%20and%20Recreation/Budlong%20Pool%20Rules%202026.pdf"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://cranstonri.gov/cranston-budlong-aquatic-center.aspx"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.cranstonri.gov/cranston-budlong-pool-noi-prof/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ri-north-providence-north-providence-pool-fitness-center",
+   "name": "North Providence Pool & Fitness Center",
+   "official_name": "North Providence Pool & Fitness Center",
+   "operator": "Town of North Providence Recreation Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "RI",
+   "region": "Rhode Island",
+   "city": "North Providence",
+   "address": {
+    "street": "1810 Mineral Spring Avenue (rear of building)",
+    "locality": "North Providence",
+    "region": "RI",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://northprovidenceri.gov/recreation-department/pool-fitness-center/",
+   "hours_fees_url": "https://northprovidenceri.gov/recreation-department/pool-fitness-center/",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "season": "unknown",
+     "o": {
+      "lap_swim": "unknown",
+      "lessons": "members"
+     }
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Swimmers under 16 must have a parent or guardian present to use the pool.",
+     "source": "https://northprovidenceri.gov/recreation-department/pool-rules/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Day-pass guests must leave a photo ID at the desk.",
+     "source": "https://northprovidenceri.gov/recreation-department/pool-rules/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "No toys, noodles, inflatable water wings or floats are allowed in the pool.",
+     "source": "https://northprovidenceri.gov/recreation-department/pool-rules/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 16 must have a parent or guardian present to use the pool.",
+     "source": "https://northprovidenceri.gov/recreation-department/pool-rules/"
+    },
+    {
+     "text": "Infants and young children must wear swim pants, not regular diapers.",
+     "source": "https://northprovidenceri.gov/recreation-department/pool-rules/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://northprovidenceri.gov/recreation-department/pool-fitness-center-facility/"
+    ],
+    "season": [],
+    "access": {
+     "members": [
+      "https://northprovidenceri.gov/recreation-department/pool-rules/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://northprovidenceri.gov/recreation-department/pool-fitness-center-facility/"
+     ],
+     "lessons": [
+      "https://northprovidenceri.gov/recreation-department/pool-fitness-center-facility/"
+     ]
+    },
+    "address": [
+     "https://northprovidenceri.gov/recreation-department/pool-fitness-center-facility/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ri-warwick-mcdermott-pool",
+   "name": "McDermott Pool",
+   "official_name": "McDermott Pool",
+   "operator": "City of Warwick Parks and Recreation Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "RI",
+   "region": "Rhode Island",
+   "city": "Warwick",
+   "address": {
+    "street": "955 Sandy Lane",
+    "locality": "Warwick",
+    "region": "RI",
+    "postal_code": "02889",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.warwickri.gov/parks-and-recreation/pages/mcdermott-pool",
+   "hours_fees_url": "https://www.warwickri.gov/parks-and-recreation/pages/mcdermott-pool",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     },
+     "label": "main"
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Day-pass swimmers must show ID and sign in at the desk.",
+     "source": "https://www.warwickri.gov/parks-and-recreation/pages/mcdermott-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool closes on some dates for swim meets, rentals and holidays, so check the current brochure before going.",
+     "source": "https://www.warwickri.gov/DocumentCenter/View/8976/McDermott-Pool-Fall-brochure-2026"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "The separate warm pool is for adults 18 and older only.",
+     "source": "https://www.warwickri.gov/parks-and-recreation/pages/mcdermott-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children aged 7 and under, and non-swimmers, must have an adult with them in the water.",
+     "source": "https://www.warwickri.gov/parks-and-recreation/pages/mcdermott-pool"
+    },
+    {
+     "text": "Children aged 8 to 12 need an adult on the pool deck close by.",
+     "source": "https://www.warwickri.gov/parks-and-recreation/pages/mcdermott-pool"
+    },
+    {
+     "text": "Teens aged 13 to 17 may swim without supervision, but an adult must sign them in and leave an emergency contact.",
+     "source": "https://www.warwickri.gov/parks-and-recreation/pages/mcdermott-pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Adult Swim sessions are for adults 18 and over only.",
+      "source": "https://www.warwickri.gov/DocumentCenter/View/8976/McDermott-Pool-Fall-brochure-2026"
+     },
+     {
+      "text": "Anyone under 18 must pass a swim test, given at every visit, before using the deep end.",
+      "source": "https://www.warwickri.gov/parks-and-recreation/pages/mcdermott-pool"
+     },
+     {
+      "text": "Groups of six or more must call ahead to reserve an open swim spot.",
+      "source": "https://www.warwickri.gov/parks-and-recreation/pages/mcdermott-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "day_pass": [
+      "https://www.warwickri.gov/DocumentCenter/View/8976/McDermott-Pool-Fall-brochure-2026"
+     ],
+     "members": [
+      "https://www.warwickri.gov/DocumentCenter/View/8976/McDermott-Pool-Fall-brochure-2026"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.warwickri.gov/DocumentCenter/View/8976/McDermott-Pool-Fall-brochure-2026",
+      "https://www.warwickri.gov/parks-and-recreation/pages/mcdermott-pool"
+     ],
+     "lap_swim": [
+      "https://www.warwickri.gov/DocumentCenter/View/8976/McDermott-Pool-Fall-brochure-2026"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.warwickri.gov/parks-and-recreation/pages/mcdermott-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

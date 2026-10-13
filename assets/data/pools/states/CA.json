@@ -1,0 +1,669 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "CA",
+ "name": "California",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ca-berkeley-king-pool",
+   "name": "King Pool",
+   "official_name": "King Pool",
+   "operator": "City of Berkeley Parks, Recreation & Waterfront",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "CA",
+   "region": "California",
+   "city": "Berkeley",
+   "address": {
+    "street": "1700 Hopkins St",
+    "locality": "Berkeley",
+    "region": "CA",
+    "postal_code": "94707",
+    "precision": "street_number"
+   },
+   "official_url": "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs/king-pool",
+   "hours_fees_url": "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs",
+   "setting": "outdoor",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "residents",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "ticket",
+     "text": "All swim sessions must be pre-paid and pre-registered online; every participant needs a pass regardless of age.",
+     "source": "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Non-residents are welcome but pay a slightly higher rate.",
+     "source": "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Closed on City holidays.",
+     "source": "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs/king-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Family Swim in the shallow pool is open to all ages.",
+     "source": "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs"
+    },
+    {
+     "text": "The dive tank is for ages 18 and older during independent exercise; lap swim is ages 16 and older.",
+     "source": "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Family Swim uses the shallow pool; whole-pool Community Swim at King Pool is summer only.",
+      "source": "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs/king-pool"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs",
+      "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs/king-pool"
+     ],
+     "day_pass": [
+      "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs",
+      "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs/king-pool"
+     ],
+     "residents": [
+      "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs",
+      "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs/king-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs"
+     ],
+     "lap_swim": [
+      "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs",
+      "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs/king-pool"
+     ],
+     "lessons": [
+      "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs"
+     ]
+    },
+    "address": [
+     "https://berkeleyca.gov/community-recreation/parks-recreation/facilities/pools-and-aquatic-programs/king-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ca-los-angeles-lincoln-park-pool",
+   "name": "Lincoln Park Pool",
+   "official_name": "Lincoln Park Pool",
+   "operator": "City of Los Angeles Department of Recreation and Parks",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "CA",
+   "region": "California",
+   "city": "Los Angeles",
+   "address": {
+    "street": "3501 Valley Blvd.",
+    "locality": "Los Angeles",
+    "region": "CA",
+    "postal_code": "90032",
+    "precision": "street_number"
+   },
+   "official_url": "https://recreation.parks.lacity.gov/aquatic/year-round/lincoln-park-pool",
+   "hours_fees_url": "https://recreation.parks.lacity.gov/aquatic/year-round/lincoln-park-pool",
+   "setting": "outdoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool is temporarily closed for maintenance; the operator projects reopening on November 6, 2026.",
+     "source": "https://recreation.parks.lacity.gov/aquatic/year-round/lincoln-park-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Admission is cash only.",
+     "source": "https://recreation.parks.lacity.gov/aquatic/year-round/lincoln-park-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 7 are not admitted unless accompanied by an adult on a one-to-one basis.",
+     "source": "https://recreation.parks.lacity.gov/sites/default/files/aquatic/pdf/2025/pool-slide-rules-water-watcher.pdf"
+    },
+    {
+     "text": "Children under 4 must wear an approved swim diaper or plastic pants with elastic at the waist and legs.",
+     "source": "https://recreation.parks.lacity.gov/sites/default/files/aquatic/pdf/2025/pool-slide-rules-water-watcher.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Children need a swim assessment by a lifeguard before signing up for lessons.",
+      "source": "https://recreation.parks.lacity.gov/sites/default/files/reccenter/lincoln-park-pool/media/lincoln-park-pool-fall-2026-tri-fold-brochure-2.pdf"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://recreation.parks.lacity.gov/aquatic/year-round/lincoln-park-pool"
+    ],
+    "season": [
+     "https://recreation.parks.lacity.gov/aquatic/year-round/lincoln-park-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://recreation.parks.lacity.gov/aquatic/year-round/lincoln-park-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://recreation.parks.lacity.gov/aquatic/year-round/lincoln-park-pool",
+      "https://recreation.parks.lacity.gov/sites/default/files/reccenter/lincoln-park-pool/media/lincoln-park-pool-fall-2026-tri-fold-brochure-2.pdf"
+     ]
+    },
+    "address": [
+     "https://recreation.parks.lacity.gov/aquatic/year-round/lincoln-park-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ca-los-angeles-venice-high-school-indoor-pool",
+   "name": "Venice High School Indoor Pool",
+   "official_name": "Venice High School Indoor Pool",
+   "operator": "City of Los Angeles Department of Recreation and Parks",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "CA",
+   "region": "California",
+   "city": "Los Angeles",
+   "address": {
+    "street": "2490 Walgrove Ave.",
+    "locality": "Los Angeles",
+    "region": "CA",
+    "postal_code": "90066",
+    "precision": "street_number"
+   },
+   "official_url": "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool",
+   "hours_fees_url": "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool closes for maintenance starting December 18, 2026, with no reopening date announced; check before going.",
+     "source": "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Admission is cash only.",
+     "source": "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 7 are not admitted unless accompanied by an adult on a one-to-one basis.",
+     "source": "https://recreation.parks.lacity.gov/sites/default/files/aquatic/pdf/2025/pool-slide-rules-water-watcher.pdf"
+    },
+    {
+     "text": "Children under 4 must wear an approved swim diaper or plastic pants with elastic at the waist and legs.",
+     "source": "https://recreation.parks.lacity.gov/sites/default/files/aquatic/pdf/2025/pool-slide-rules-water-watcher.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Recreational swim is offered only during set weekday-afternoon and weekend-afternoon sessions.",
+      "source": "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Lap lanes are limited during lap swim.",
+      "source": "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool"
+    ],
+    "season": [
+     "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool"
+     ],
+     "lap_swim": [
+      "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool"
+     ],
+     "lessons": [
+      "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool"
+     ]
+    },
+    "address": [
+     "https://recreation.parks.lacity.gov/aquatic/year-round/venice-high-school-indoor-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ca-sacramento-north-natomas-aquatics-complex",
+   "name": "North Natomas Aquatics Complex",
+   "official_name": "North Natomas Aquatics Complex",
+   "operator": "City of Sacramento Youth, Parks & Community Enrichment",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "CA",
+   "region": "California",
+   "city": "Sacramento",
+   "address": {
+    "street": "2601 New Market Dr.",
+    "locality": "Sacramento",
+    "region": "CA",
+    "postal_code": "95835",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cityofsacramento.gov/ypce/aquatics/pools/north-natomas-aquatics-complex",
+   "hours_fees_url": "https://www.cityofsacramento.gov/ypce/aquatics/pools/north-natomas-aquatics-complex",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     }
+    },
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {},
+     "label": "competition"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Recreational (family) swim is closed for the season and returns in spring 2027.",
+     "source": "https://www.cityofsacramento.gov/ypce/aquatics/pools/north-natomas-aquatics-complex"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers must pass a deep-water swim test and buy a wristband to use the 50-meter pool, which is at least 7 feet deep.",
+     "source": "https://www.cityofsacramento.gov/ypce/aquatics/pools/north-natomas-aquatics-complex"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers must pass a swim test to go in water deeper than chest depth.",
+     "source": "https://www.cityofsacramento.gov/content/dam/portal/ypce/Aquatics/169350257_city_pool_rules_pdf.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Bags and coolers are checked at entry to recreational swim.",
+     "source": "https://www.cityofsacramento.gov/ypce/aquatics/pools/north-natomas-aquatics-complex"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 13 may not use the pool without a supervising adult present.",
+     "source": "https://www.cityofsacramento.gov/content/dam/portal/ypce/Aquatics/169350257_city_pool_rules_pdf.pdf"
+    },
+    {
+     "text": "Non-swimmers must stay within arm's reach of a supervising adult.",
+     "source": "https://www.cityofsacramento.gov/content/dam/portal/ypce/Aquatics/169350257_city_pool_rules_pdf.pdf"
+    },
+    {
+     "text": "Children who are not toilet trained must wear disposable swim diapers.",
+     "source": "https://www.cityofsacramento.gov/content/dam/portal/ypce/Aquatics/169350257_city_pool_rules_pdf.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Adult lap swim is for swimmers 16 and older.",
+      "source": "https://www.cityofsacramento.gov/ypce/aquatics/programming/lap-swim.html"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.cityofsacramento.gov/ypce/aquatics/pools/north-natomas-aquatics-complex"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.cityofsacramento.gov/content/dam/portal/ypce/Aquatics/169350257_city_pool_rules_pdf.pdf",
+      "https://www.cityofsacramento.gov/ypce/aquatics/pools/north-natomas-aquatics-complex"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.cityofsacramento.gov/ypce/aquatics/pools/north-natomas-aquatics-complex"
+     ],
+     "lap_swim": [
+      "https://www.cityofsacramento.gov/ypce/aquatics/programming/lap-swim.html"
+     ],
+     "lessons": [
+      "https://www.cityofsacramento.gov/ypce/aquatics/programming/swim-lessons.html"
+     ]
+    },
+    "address": [
+     "https://www.cityofsacramento.gov/ypce/aquatics/pools/north-natomas-aquatics-complex"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ca-san-diego-bud-kearns-memorial-pool",
+   "name": "Bud Kearns Memorial Pool",
+   "official_name": "Bud Kearns Memorial Pool",
+   "operator": "City of San Diego Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "CA",
+   "region": "California",
+   "city": "San Diego",
+   "address": {
+    "street": "2229 Morley Field Dr",
+    "locality": "San Diego",
+    "region": "CA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.sandiego.gov/pools/bud-kearns-memorial-pool",
+   "hours_fees_url": "https://www.sandiego.gov/pools/fees",
+   "setting": "outdoor",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Closed for scheduled maintenance from March 1 to May 31, 2027.",
+     "source": "https://www.sandiego.gov/sites/default/files/2026-09/-parks_poolclosures_cal_8.5x11_v05_web.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Everyone entering during recreation and lap swim must pay admission; non-paying adults stay in the spectator area.",
+     "source": "https://www.sandiego.gov/pools/fees"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Swim passes (multi-visit) need an online city recreation account; single visits are paid at the pool.",
+     "source": "https://www.sandiego.gov/pools/fees"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 8 or under 4 feet tall must be accompanied by a paying adult in a swimsuit who stays within arm's reach.",
+     "source": "https://www.sandiego.gov/pools/fees"
+    },
+    {
+     "text": "Children under 4 must wear a swim diaper.",
+     "source": "https://www.sandiego.gov/pools/rules-regulations"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.sandiego.gov/pools/bud-kearns-memorial-pool"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.sandiego.gov/pools/fees"
+     ],
+     "day_pass": [
+      "https://www.sandiego.gov/pools/fees"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.sandiego.gov/sites/default/files/prpoolsswimschedule.pdf"
+     ],
+     "lap_swim": [
+      "https://www.sandiego.gov/sites/default/files/prpoolsswimschedule.pdf"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.sandiego.gov/pools/bud-kearns-memorial-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

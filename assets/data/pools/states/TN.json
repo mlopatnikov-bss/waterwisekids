@@ -1,0 +1,532 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "TN",
+ "name": "Tennessee",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-tn-chattanooga-south-chattanooga-community-center-indoor-pool",
+   "name": "South Chattanooga Community Center (South Chattanooga Complex) Indoor Pool",
+   "official_name": "South Chattanooga Community Center (South Chattanooga Complex) Indoor Pool",
+   "operator": "City of Chattanooga (Department of Community Development)",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "TN",
+   "region": "Tennessee",
+   "city": "Chattanooga",
+   "address": {
+    "street": "1151 W 40th St",
+    "locality": "Chattanooga",
+    "region": "TN",
+    "postal_code": "37409",
+    "precision": "street_number"
+   },
+   "official_url": "https://chattanooga.gov/services/community-centers/south-chattanooga-community-center",
+   "hours_fees_url": "https://chattanooga.gov/things-to-do/swimming-pools",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "indoor",
+     "kind": "dates",
+     "text": "The city states pool entry terms only for May 26 to August 28 (summer 2026); entry terms for fall and winter are not published, so call the center first.",
+     "source": "https://chattanooga.gov/things-to-do/swimming-pools"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "hours",
+     "text": "The published swim sessions are adult lap/open swim times; family swim times are not listed.",
+     "source": "https://chattanooga.gov/things-to-do/swimming-pools"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "age",
+     "text": "Children under 5 must be accompanied by an adult in the water.",
+     "source": "https://chattanooga.gov/things-to-do/swimming-pools"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 5 must be accompanied by an adult in the water.",
+     "source": "https://chattanooga.gov/things-to-do/swimming-pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://chattanooga.gov/services/community-centers/south-chattanooga-community-center",
+     "https://chattanooga.gov/things-to-do/swimming-pools"
+    ],
+    "season": [
+     "https://chattanooga.gov/things-to-do/swimming-pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://chattanooga.gov/things-to-do/swimming-pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://chattanooga.gov/things-to-do/swimming-pools"
+     ],
+     "lessons": [
+      "https://chattanooga.gov/things-to-do/swimming-pools"
+     ]
+    },
+    "address": [
+     "https://chattanooga.gov/services/community-centers/south-chattanooga-community-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-tn-chattanooga-warner-park-pool",
+   "name": "Warner Park Pool",
+   "official_name": "Warner Park Pool",
+   "operator": "City of Chattanooga (Department of Community Development)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "TN",
+   "region": "Tennessee",
+   "city": "Chattanooga",
+   "address": {
+    "street": "1254 East Third Street",
+    "locality": "Chattanooga",
+    "region": "TN",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://chattanooga.gov/things-to-do/swimming-pools",
+   "hours_fees_url": "https://chattanooga.gov/things-to-do/swimming-pools",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "This is a seasonal pool; the city lists a late-May opening date.",
+     "source": "https://chattanooga.gov/things-to-do/swimming-pools"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "age",
+     "text": "Children under 6 must be accompanied by an adult in the water.",
+     "source": "https://chattanooga.gov/things-to-do/swimming-pools"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "swim_test",
+     "text": "Swimmers must pass a swim test to use the deep end.",
+     "source": "https://chattanooga.gov/things-to-do/swimming-pools"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "other",
+     "text": "Inflatables, water wings and pool noodles are not allowed; life jackets must be Coast Guard approved.",
+     "source": "https://chattanooga.gov/things-to-do/swimming-pools"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 6 must be accompanied by an adult in the water.",
+     "source": "https://chattanooga.gov/things-to-do/swimming-pools"
+    },
+    {
+     "text": "Swimmers who are not potty trained must wear a swim diaper.",
+     "source": "https://chattanooga.gov/things-to-do/swimming-pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Adult lap swim runs only during part of the summer.",
+      "source": "https://chattanooga.gov/things-to-do/swimming-pools"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Swim lesson registration is through the city app, and space is limited.",
+      "source": "https://chattanooga.gov/things-to-do/swimming-pools"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://chattanooga.gov/things-to-do/swimming-pools"
+    ],
+    "season": [
+     "https://chattanooga.gov/things-to-do/swimming-pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://chattanooga.gov/things-to-do/swimming-pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://chattanooga.gov/things-to-do/swimming-pools"
+     ],
+     "lessons": [
+      "https://chattanooga.gov/things-to-do/swimming-pools"
+     ]
+    },
+    "address": [
+     "https://chattanooga.gov/things-to-do/swimming-pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-tn-nashville-centennial-sportsplex",
+   "name": "Centennial Sportsplex (Aquatics)",
+   "official_name": "Centennial Sportsplex (Aquatics)",
+   "operator": "Metro Nashville Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "TN",
+   "region": "Tennessee",
+   "city": "Nashville",
+   "address": {
+    "street": "222 25th Avenue North",
+    "locality": "Nashville",
+    "region": "TN",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics",
+   "hours_fees_url": "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public"
+     },
+     "label": "recreation"
+    },
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "lap_swim": "public"
+     }
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Pools are sometimes closed to the public for swim meets; check the aquatics calendar before going.",
+     "source": "https://www.nashville.gov/departments/parks/centennial-sportsplex"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 12 and under must be accompanied by an adult on deck or in the water.",
+     "source": "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Outside recreational flotation devices and leg restraints such as mermaid tails are not allowed.",
+     "source": "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 12 and under must be accompanied by an adult on deck or in the water.",
+     "source": "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics"
+    },
+    {
+     "text": "Children four and under and under four feet tall need an adult in the water at all times, with no more than two children per adult.",
+     "source": "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics"
+    },
+    {
+     "text": "Children three and under must wear a swim diaper.",
+     "source": "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Only a few lanes are open for public lap swimming during team practice and long-course setup.",
+      "source": "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics"
+    ],
+    "season": [
+     "https://www.nashville.gov/departments/parks/centennial-sportsplex",
+     "https://www.nashville.gov/departments/parks/water-activities/swimming-pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.nashville.gov/departments/parks/centennial-sportsplex",
+      "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics"
+     ],
+     "members": [
+      "https://www.nashville.gov/departments/parks/centennial-sportsplex",
+      "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics",
+      "https://www.nashville.gov/departments/parks/centennial-sportsplex/contact-us/frequently-asked-questions"
+     ],
+     "lap_swim": [
+      "https://www.nashville.gov/departments/parks/centennial-sportsplex/aquatics",
+      "https://www.nashville.gov/departments/parks/centennial-sportsplex/contact-us/frequently-asked-questions"
+     ],
+     "lessons": [
+      "https://www.nashville.gov/departments/parks/centennial-sportsplex/contact-us/frequently-asked-questions"
+     ]
+    },
+    "address": [
+     "https://www.nashville.gov/departments/parks/centennial-sportsplex/contact-us/frequently-asked-questions"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-tn-nashville-coleman-park-community-center",
+   "name": "Coleman Park Community Center",
+   "official_name": "Coleman Park Community Center (Coleman Regional Center)",
+   "operator": "Metro Nashville Parks and Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "TN",
+   "region": "Tennessee",
+   "city": "Nashville",
+   "address": {
+    "street": "384 Thompson Lane",
+    "locality": "Nashville",
+    "region": "TN",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.nashville.gov/departments/parks/community-centers-and-recreation/regional-recreation-centers/coleman-park-community-center",
+   "hours_fees_url": "https://www.nashville.gov/departments/parks/community-centers-and-recreation/regional-recreation-centers/coleman-park-community-center",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Public entry is during scheduled open swim and lap swim times; check the center's current activity schedule.",
+     "source": "https://www.nashville.gov/departments/parks/water-activities/swimming-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Children under three and anyone not fully toilet trained must wear a swim diaper.",
+     "source": "https://www.nashville.gov/departments/parks/water-activities/swimming-pools"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under three and anyone not fully toilet trained must wear a swim diaper.",
+     "source": "https://www.nashville.gov/departments/parks/water-activities/swimming-pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.nashville.gov/departments/parks/community-centers-and-recreation/regional-recreation-centers/coleman-park-community-center"
+    ],
+    "season": [
+     "https://www.nashville.gov/departments/parks/water-activities/swimming-pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.nashville.gov/departments/parks/water-activities/swimming-pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.nashville.gov/departments/parks/water-activities/swimming-pools"
+     ],
+     "lap_swim": [
+      "https://www.nashville.gov/departments/parks/water-activities/swimming-pools"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.nashville.gov/departments/parks/community-centers-and-recreation/regional-recreation-centers/coleman-park-community-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

@@ -1,0 +1,428 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "AK",
+ "name": "Alaska",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ak-anchorage-west-pool",
+   "name": "West Pool",
+   "official_name": "West Pool",
+   "operator": "Municipality of Anchorage Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "AK",
+   "region": "Alaska",
+   "city": "Anchorage",
+   "address": {
+    "street": "1700 Hillcrest Drive",
+    "locality": "Anchorage",
+    "region": "AK",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.muni.org/Departments/parks/Pages/WestPool.aspx",
+   "hours_fees_url": "https://www.muni.org/Departments/parks/Pages/Pools.aspx",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "West Pool is closed on Mondays starting October 19, 2026.",
+     "source": "https://www.muni.org/Departments/parks/Pages/WestPool.aspx"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Children under 7 must ride the slide with a paying customer 13 or older and have a paying adult in the water.",
+     "source": "https://www.muni.org/Departments/parks/Pages/WestPool.aspx"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 7 using the slide must be accompanied by a paying adult in the water at all times.",
+     "source": "https://www.muni.org/Departments/parks/Pages/WestPool.aspx"
+    },
+    {
+     "text": "At Parent & Me Swim (children 5 and under), parents must be in the water with their children.",
+     "source": "https://www.muni.org/Departments/parks/Pages/WestPool.aspx"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Open swim is offered only in a short weekend session; activities and times may change.",
+      "source": "https://www.muni.org/Departments/parks/Pages/WestPool.aspx"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.muni.org/Departments/parks/Pages/Pools.aspx"
+     ],
+     "members": [
+      "https://www.muni.org/Departments/parks/Pages/Pools.aspx"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.muni.org/Departments/parks/Pages/Pools.aspx",
+      "https://www.muni.org/Departments/parks/Pages/WestPool.aspx"
+     ],
+     "lap_swim": [
+      "https://www.muni.org/Departments/parks/Pages/Pools.aspx",
+      "https://www.muni.org/Departments/parks/Pages/WestPool.aspx"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.muni.org/Departments/parks/Pages/WestPool.aspx"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ak-fairbanks-hamme-pool",
+   "name": "Hamme Pool",
+   "official_name": "Hamme Pool",
+   "operator": "Fairbanks North Star Borough Parks and Recreation",
+   "facility_type": "county",
+   "country": "US",
+   "state": "AK",
+   "region": "Alaska",
+   "city": "Fairbanks",
+   "address": {
+    "street": "931 Airport Way",
+    "locality": "Fairbanks",
+    "region": "AK",
+    "postal_code": "99701",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.fnsb.gov/1191/Aquatic-Programs",
+   "hours_fees_url": "https://www.fnsb.gov/1191/Aquatic-Programs",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Pool hours are currently limited because of a lifeguard shortage; check the calendar before going.",
+     "source": "https://www.fnsb.gov/1191/Aquatic-Programs"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 6 and under need an adult (16+) in the water; ages 7-8 need an adult in the building; 9+ may come alone.",
+     "source": "https://www.fnsb.gov/1191/Aquatic-Programs"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "One adult (16+) must be in the water with all family members 6 and under.",
+     "source": "https://www.fnsb.gov/1191/Aquatic-Programs"
+    },
+    {
+     "text": "One adult (16+) must be in the building with swimmers ages 7-8.",
+     "source": "https://www.fnsb.gov/1191/Aquatic-Programs"
+    },
+    {
+     "text": "Family Swim requires a parent or guardian in the water with their children.",
+     "source": "https://www.fnsb.gov/1191/Aquatic-Programs"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Family Swim needs a parent or guardian in the water and may be limited to shallow water.",
+      "source": "https://www.fnsb.gov/1191/Aquatic-Programs"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.fnsb.gov/1191/Aquatic-Programs"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.fnsb.gov/1191/Aquatic-Programs"
+     ],
+     "lap_swim": [
+      "https://www.fnsb.gov/1191/Aquatic-Programs"
+     ],
+     "lessons": [
+      "https://www.fnsb.gov/1191/Aquatic-Programs"
+     ]
+    },
+    "address": [
+     "https://www.fnsb.gov/1191/Aquatic-Programs"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ak-juneau-dimond-park-aquatic-center",
+   "name": "Dimond Park Aquatic Center",
+   "official_name": "Dimond Park Aquatic Center",
+   "operator": "City and Borough of Juneau Parks & Recreation (Juneau Pools)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "AK",
+   "region": "Alaska",
+   "city": "Juneau",
+   "address": {
+    "street": "3045 Dimond Park Loop",
+    "locality": "Juneau",
+    "region": "AK",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://juneau.org/parks-recreation/juneau-pools",
+   "hours_fees_url": "https://juneau.org/parks-recreation/juneau-pools/swim-fees",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     },
+     "label": "lap"
+    },
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public"
+     }
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Swimmers under 8 (or who cannot pass the swim requirement) need a guest 15+ within arm's reach; one adult per three children.",
+     "source": "https://juneau.org/parks-recreation/juneau-pools/entry-accessibility"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Youth under 15 must wear a wristband (issued after a swim check) or be with a guest 15 or older.",
+     "source": "https://juneau.org/parks-recreation/juneau-pools/rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Pools may close without prior notice.",
+     "source": "https://juneau.org/parks-recreation/juneau-pools/rules"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Guests must be 8 and able to swim a pool width (or 8 and 48 inches tall); otherwise they need a guest 15+ within arm's reach.",
+     "source": "https://juneau.org/parks-recreation/juneau-pools/entry-accessibility"
+    },
+    {
+     "text": "Supervision ratio is one adult to every three children.",
+     "source": "https://juneau.org/parks-recreation/juneau-pools/entry-accessibility"
+    },
+    {
+     "text": "Life jackets only under direct adult supervision; water wings not allowed.",
+     "source": "https://juneau.org/parks-recreation/juneau-pools/entry-accessibility"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "The recreation pool is closed to the public during swim lessons.",
+      "source": "https://juneau.org/parks-recreation/juneau-pools"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "A 15-yard swim test is required to use the lap pool area.",
+      "source": "https://juneau.org/parks-recreation/juneau-pools/rules"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://juneau.org/parks-recreation/juneau-pools/swim-fees"
+     ],
+     "members": [
+      "https://juneau.org/parks-recreation/juneau-pools/swim-fees"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://juneau.org/parks-recreation/juneau-pools",
+      "https://juneau.org/parks-recreation/juneau-pools/swim-fees"
+     ],
+     "lap_swim": [
+      "https://juneau.org/parks-recreation/juneau-pools/rules",
+      "https://juneau.org/parks-recreation/juneau-pools/swim-fees"
+     ],
+     "lessons": [
+      "https://juneau.org/parks-recreation/juneau-pools/lesson-registration-schedule"
+     ]
+    },
+    "address": [
+     "https://juneau.org/parks-recreation/juneau-pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

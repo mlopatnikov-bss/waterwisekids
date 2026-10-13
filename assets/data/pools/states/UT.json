@@ -1,0 +1,711 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "UT",
+ "name": "Utah",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ut-riverton-south-county-pool",
+   "name": "South County Pool",
+   "official_name": "South County Pool",
+   "operator": "Salt Lake County Parks & Recreation",
+   "facility_type": "county",
+   "country": "US",
+   "state": "UT",
+   "region": "Utah",
+   "city": "Riverton",
+   "address": {
+    "street": "12765 South 1125 West",
+    "locality": "Riverton",
+    "region": "UT",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/south-county-pool/",
+   "hours_fees_url": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/south-county-pool/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "outdoor",
+     "kind": "closure",
+     "text": "Closed for the 2026 season; scheduled to reopen Memorial Day weekend 2027.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/south-county-pool/"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "Outdoor pools operate in the summer season only.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 5 and under must have a parent, guardian or chaperone aged 14 or older in the water within arm's reach, even with a life jacket.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+    },
+    {
+     "text": "Children 6 to 9 must be supervised in the pool area by someone 14 or older.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+    },
+    {
+     "text": "Children 9 and under must always be accompanied by a parent, guardian or chaperone 14 or older.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/south-county-pool/"
+    ],
+    "season": [
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/",
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/south-county-pool/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf",
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/south-county-pool/"
+     ],
+     "day_pass": [
+      "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf",
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/south-county-pool/"
+     ],
+     "members": [
+      "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf",
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/south-county-pool/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/south-county-pool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ut-salt-lake-city-fairmont-aquatic-center",
+   "name": "Fairmont Aquatic Center",
+   "official_name": "Fairmont Aquatic Center",
+   "operator": "Salt Lake County Parks & Recreation",
+   "facility_type": "county",
+   "country": "US",
+   "state": "UT",
+   "region": "Utah",
+   "city": "Salt Lake City",
+   "address": {
+    "street": "1044 East Sugarmont Drive",
+    "locality": "Salt Lake City",
+    "region": "UT",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/Recreation-Centers/fairmont/Pools/",
+   "hours_fees_url": "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public"
+     },
+     "label": "leisure"
+    },
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "lap_swim": "public"
+     },
+     "label": "lap"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Pool hours and options are limited; check with the front desk or call ahead.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/Recreation-Centers/fairmont/Pools/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Closed on most federal and state holidays; check the holiday list before going.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/Recreation-Centers/fairmont/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 5 and under must have a parent, guardian or chaperone aged 14 or older in the water within arm's reach, even with a life jacket.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+    },
+    {
+     "text": "Children 6 to 9 must be supervised in the pool area by someone 14 or older.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+    },
+    {
+     "text": "Children 9 and under must always be accompanied by a parent, guardian or chaperone 14 or older.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap swimmers 13 and under need supervision by someone 18 or older, must swim consecutive laps, and need approval from the aquatics coordinator.",
+      "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/Recreation-Centers/fairmont/Pools/"
+    ],
+    "season": [
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/"
+    ],
+    "access": {
+     "day_pass": [
+      "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf"
+     ],
+     "members": [
+      "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf",
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/"
+     ],
+     "lap_swim": [
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/",
+      "https://www.saltlakecounty.gov/parks-recreation/rules/"
+     ],
+     "lessons": [
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/Recreation-Centers/fairmont/Pools/"
+     ]
+    },
+    "address": [
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/Recreation-Centers/fairmont/Pools/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ut-salt-lake-city-liberty-park-pool",
+   "name": "Liberty Park Pool",
+   "official_name": "Liberty Park Pool",
+   "operator": "Salt Lake County Parks & Recreation",
+   "facility_type": "county",
+   "country": "US",
+   "state": "UT",
+   "region": "Utah",
+   "city": "Salt Lake City",
+   "address": {
+    "street": "900 South 650 East",
+    "locality": "Salt Lake City",
+    "region": "UT",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/liberty-park-pool/",
+   "hours_fees_url": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/liberty-park-pool/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "outdoor",
+     "kind": "closure",
+     "text": "Closed for the remainder of 2026.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/liberty-park-pool/"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "Outdoor pools operate in the summer season only.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 5 and under must have a parent, guardian or chaperone aged 14 or older in the water within arm's reach, even with a life jacket.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+    },
+    {
+     "text": "Children 6 to 9 must be supervised in the pool area by someone 14 or older.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+    },
+    {
+     "text": "Children 9 and under must always be accompanied by a parent, guardian or chaperone 14 or older.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/liberty-park-pool/"
+    ],
+    "season": [
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/",
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/liberty-park-pool/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf",
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/liberty-park-pool/"
+     ],
+     "day_pass": [
+      "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf",
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/liberty-park-pool/"
+     ],
+     "members": [
+      "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf",
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/liberty-park-pool/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/liberty-park-pool/"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/liberty-park-pool/"
+     ]
+    },
+    "address": [
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/liberty-park-pool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ut-sandy-dimple-dell-recreation-center",
+   "name": "Dimple Dell Recreation Center",
+   "official_name": "Dimple Dell Recreation Center",
+   "operator": "Salt Lake County Parks & Recreation",
+   "facility_type": "county",
+   "country": "US",
+   "state": "UT",
+   "region": "Utah",
+   "city": "Sandy",
+   "address": {
+    "street": "10670 South 1000 East",
+    "locality": "Sandy",
+    "region": "UT",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/Recreation-Centers/dimple-dell/Indoor-Pools/",
+   "hours_fees_url": "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public"
+     },
+     "label": "leisure"
+    },
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "lap_swim": "public"
+     },
+     "label": "lap"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Pool hours and options are limited; check with the front desk or call ahead.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/Recreation-Centers/dimple-dell/Indoor-Pools/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 5 and under must have a parent, guardian or chaperone aged 14 or older in the water within arm's reach, even with a life jacket.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+    },
+    {
+     "text": "Children 6 to 9 must be supervised in the pool area by someone 14 or older.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+    },
+    {
+     "text": "Children 9 and under must always be accompanied by a parent, guardian or chaperone 14 or older.",
+     "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap swimmers 13 and under need supervision by someone 18 or older, must swim consecutive laps, and need approval from the aquatics coordinator.",
+      "source": "https://www.saltlakecounty.gov/parks-recreation/rules/"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Swim lessons are in very high demand; the county suggests group lessons at Draper Recreation Center instead.",
+      "source": "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/Recreation-Centers/dimple-dell/Indoor-Pools/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/Recreation-Centers/dimple-dell/Indoor-Pools/"
+    ],
+    "season": [
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/"
+    ],
+    "access": {
+     "day_pass": [
+      "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf"
+     ],
+     "members": [
+      "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.saltlakecounty.gov/globalassets/2-parks--rec/fees/pnr-fee-schedule-20262.pdf",
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/"
+     ],
+     "lap_swim": [
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/pools/",
+      "https://www.saltlakecounty.gov/parks-recreation/rules/"
+     ],
+     "lessons": [
+      "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/Recreation-Centers/dimple-dell/Indoor-Pools/"
+     ]
+    },
+    "address": [
+     "https://www.saltlakecounty.gov/parks-recreation/facilities-and-golf/Recreation-Centers/dimple-dell/Indoor-Pools/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ut-st-george-st-george-municipal-pool",
+   "name": "St. George Municipal Pool (City Pool)",
+   "official_name": "St. George Municipal Pool (City Pool)",
+   "operator": "City of St. George Parks and Community Services",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "UT",
+   "region": "Utah",
+   "city": "St. George",
+   "address": {
+    "street": "250 East 700 South Street",
+    "locality": "St. George",
+    "region": "UT",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://sgcityutah.gov/business_detail_T18_R122.php",
+   "hours_fees_url": "https://sgcityutah.gov/business_detail_T18_R122.php",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    },
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {},
+     "label": "toddler"
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "The toddler pool is for children 3 and under.",
+     "source": "https://sgcityutah.gov/business_detail_T18_R122.php"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Anyone 3 or under must wear a life jacket.",
+     "source": "https://sgcityutah.gov/business_detail_T18_R122.php"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Swimmers 2 and under, or who lack bowel control, must wear three layers: swim diaper, plastic cover and swimsuit.",
+     "source": "https://sgcityutah.gov/business_detail_T18_R122.php"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer season only; open swim ran May 22 to September 7 on the current schedule.",
+     "source": "https://sgcityutah.gov/business_detail_T18_R122.php"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Season passes have separate resident and non-resident rates.",
+     "source": "https://sgcityutah.gov/business_detail_T18_R122.php"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "All swimmers 13 and under must be accompanied by an adult 18 or older at all times.",
+     "source": "https://sgcityutah.gov/business_detail_T18_R122.php"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://sgcityutah.gov/business_detail_T18_R122.php"
+    ],
+    "access": {
+     "public_admission": [
+      "https://sgcityutah.gov/business_detail_T18_R122.php"
+     ],
+     "members": [
+      "https://sgcityutah.gov/business_detail_T18_R122.php"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://sgcityutah.gov/business_detail_T18_R122.php"
+     ],
+     "lap_swim": [
+      "https://sgcityutah.gov/business_detail_T18_R122.php"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://sgcityutah.gov/business_detail_T18_R122.php"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

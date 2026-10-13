@@ -1,0 +1,480 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "NV",
+ "name": "Nevada",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-nv-carson-city-carson-city-aquatic-facility",
+   "name": "Carson City Aquatic Facility",
+   "official_name": "Carson City Aquatic Facility",
+   "operator": "Carson City Parks, Recreation & Open Space",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NV",
+   "region": "Nevada",
+   "city": "Carson City",
+   "address": {
+    "street": "841 N. Roop St.",
+    "locality": "Carson City",
+    "region": "NV",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility",
+   "hours_fees_url": "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility",
+   "setting": "both",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public"
+     }
+    },
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {}
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "residents",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Monthly and annual passes are for Carson City residents only; drop-in and punch passes have no residency rule stated.",
+     "source": "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "The outdoor pool runs only from early May to mid-September, weather permitting.",
+     "source": "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Flotation devices are not allowed.",
+     "source": "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 6 and under must be accompanied in the water by someone at least 15 years old who is in a swimsuit.",
+     "source": "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+    },
+    {
+     "text": "The parent/tot pool is for children 6 and under and non-swimmers, with a swimming adult (15+) within arm's reach.",
+     "source": "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+    },
+    {
+     "text": "Children not yet toilet trained must wear swim diapers.",
+     "source": "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Open swim uses the shallow end of the 50-meter indoor pool.",
+      "source": "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+    ],
+    "season": [
+     "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+     ],
+     "day_pass": [
+      "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+     ],
+     "residents": [
+      "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+     ]
+    },
+    "address": [
+     "https://www.carsoncity.gov/government/departments-g-z/parks-recreation-open-space/parks-and-places/special-interest-facilities/recreation-centers/aquatic-facility"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nv-henderson-henderson-multigenerational-center-aquatic-complex",
+   "name": "Henderson Multigenerational Center Aquatic Complex",
+   "official_name": "Henderson Multigenerational Center Aquatic Complex",
+   "operator": "City of Henderson Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NV",
+   "region": "Nevada",
+   "city": "Henderson",
+   "address": {
+    "street": "250 S. Green Valley Pkwy.",
+    "locality": "Henderson",
+    "region": "NV",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/182/785",
+   "hours_fees_url": "https://www.cityofhenderson.com/government/departments/parks-and-recreation/centers-pools/aquatic-facilities/aquatics-daily-admission",
+   "setting": "both",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {}
+    },
+    {
+     "s": "outdoor",
+     "e": "unknown",
+     "season": "year_round",
+     "o": {},
+     "label": "competition"
+    },
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {},
+     "label": "activity"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Swimmers need a City of Henderson Participant ID badge to enter.",
+     "source": "https://www.cityofhenderson.com/government/departments/parks-and-recreation/centers-pools/aquatic-facilities/aquatic-rules-regulations"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Non-residents may use city facilities but pay a higher rate than Henderson residents.",
+     "source": "https://www.cityofhenderson.com/government/departments/parks-and-recreation/online-registration/new-rate-structure"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Children who want to swim in water deeper than they can stand in must show they can tread water and swim across the pool.",
+     "source": "https://www.cityofhenderson.com/government/departments/parks-and-recreation/centers-pools/aquatic-facilities/aquatic-rules-regulations"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "The activity pool with the water slide is a summer-only pool.",
+     "source": "https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/333/785"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 8 must be supervised in the water, within arm's reach, by a parent or guardian at least 15 years old, with one adult for every five children under 8.",
+     "source": "https://www.cityofhenderson.com/government/departments/parks-and-recreation/centers-pools/aquatic-facilities/aquatic-rules-regulations"
+    },
+    {
+     "text": "The spa is for ages 18 and older.",
+     "source": "https://www.cityofhenderson.com/government/departments/parks-and-recreation/centers-pools/aquatic-facilities/aquatic-rules-regulations"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/180",
+     "https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/182/785"
+    ],
+    "season": [
+     "https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/180",
+     "https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/182/785",
+     "https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/333/785"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.cityofhenderson.com/government/departments/parks-and-recreation/centers-pools/aquatic-facilities/aquatic-rules-regulations",
+      "https://www.cityofhenderson.com/government/departments/parks-and-recreation/centers-pools/aquatic-facilities/aquatics-daily-admission",
+      "https://www.cityofhenderson.com/government/departments/parks-and-recreation/online-registration/new-rate-structure"
+     ],
+     "members": [
+      "https://www.cityofhenderson.com/government/departments/parks-and-recreation/centers-pools/aquatic-facilities/aquatic-rules-regulations",
+      "https://www.cityofhenderson.com/government/departments/parks-and-recreation/centers-pools/aquatic-facilities/aquatics-daily-admission",
+      "https://www.cityofhenderson.com/government/departments/parks-and-recreation/online-registration/new-rate-structure"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/182/785",
+      "https://www.cityofhenderson.com/government/departments/parks-and-recreation/online-registration/new-rate-structure"
+     ]
+    },
+    "address": [
+     "https://www.cityofhenderson.com/Home/Components/FacilityDirectory/FacilityDirectory/182/785"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nv-las-vegas-pavilion-center-pool-complex",
+   "name": "Pavilion Center Pool Complex",
+   "official_name": "Pavilion Center Pool Complex",
+   "operator": "City of Las Vegas Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "NV",
+   "region": "Nevada",
+   "city": "Las Vegas",
+   "address": {
+    "street": "101 S. Pavilion Center Drive",
+    "locality": "Las Vegas",
+    "region": "NV",
+    "postal_code": "89144",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool",
+   "hours_fees_url": "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool",
+   "setting": "both",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    },
+    {
+     "s": "outdoor",
+     "e": "unknown",
+     "season": "year_round",
+     "o": {
+      "lap_swim": "unknown"
+     }
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "outdoor",
+     "kind": "other",
+     "text": "The outdoor 50-meter pool is 7 feet deep everywhere, with no shallow end, and its posted schedule is lap swim only.",
+     "source": "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The complex is closed on Sundays and holidays.",
+     "source": "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "hours",
+     "text": "Recreational swim in the indoor pool is offered only during set hours; lap lanes can be limited.",
+     "source": "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Each child under 7 or under 48 inches tall must be accompanied by an adult aged 18 or older at all times, one adult per child.",
+     "source": "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+    },
+    {
+     "text": "Young children must wear an approved swim diaper.",
+     "source": "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+    ],
+    "season": [
+     "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+     ],
+     "day_pass": [
+      "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+     ],
+     "lap_swim": [
+      "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+     ],
+     "lessons": [
+      "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+     ]
+    },
+    "address": [
+     "https://www.lasvegasnevada.gov/Residents/Parks-Facilities/Pavilion-Center-Pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

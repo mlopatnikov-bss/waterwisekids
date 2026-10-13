@@ -1,0 +1,514 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "WI",
+ "name": "Wisconsin",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-wi-eau-claire-fairfax-municipal-pool",
+   "name": "Fairfax Municipal Pool",
+   "official_name": "Fairfax Municipal Pool",
+   "operator": "City of Eau Claire Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "WI",
+   "region": "Wisconsin",
+   "city": "Eau Claire",
+   "address": {
+    "street": "4200 Fairfax Street",
+    "locality": "Eau Claire",
+    "region": "WI",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.eauclairewi.gov/538",
+   "hours_fees_url": "https://www.eauclairewi.gov/538",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; it is closed for the 2026 season and 2027 dates are not posted yet.",
+     "source": "https://www.eauclairewi.gov/538"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 8 and younger are admitted only with a responsible supervisor aged 13 or older.",
+     "source": "https://www.eauclairewi.gov/538"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The city may close the pool for bad weather or very low attendance.",
+     "source": "https://www.eauclairewi.gov/538"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 8 and younger must be accompanied by a responsible supervisor at least 13 years old.",
+     "source": "https://www.eauclairewi.gov/538"
+    },
+    {
+     "text": "Groups must bring at least one adult for every 10 children.",
+     "source": "https://www.eauclairewi.gov/538"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.eauclairewi.gov/538"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.eauclairewi.gov/538"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.eauclairewi.gov/538"
+     ],
+     "lap_swim": [
+      "https://www.eauclairewi.gov/538"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.eauclairewi.gov/538"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-wi-green-bay-colburn-pool",
+   "name": "Colburn Pool",
+   "official_name": "Colburn Pool",
+   "operator": "City of Green Bay Parks, Recreation & Forestry",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "WI",
+   "region": "Wisconsin",
+   "city": "Green Bay",
+   "address": {
+    "street": "1025 S Fisk Street",
+    "locality": "Green Bay",
+    "region": "WI",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.greenbaywi.gov/Facilities/Facility/Details/Colburn-Pool-11",
+   "hours_fees_url": "https://www.greenbaywi.gov/862/Pool-Hours-Admission",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; the 2026 season ended August 23.",
+     "source": "https://www.greenbaywi.gov/862/Pool-Hours-Admission"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 11 and under must have a parent or guardian on site.",
+     "source": "https://wi-greenbay.civicplus.com/Faq.aspx?QID=130"
+    },
+    {
+     "text": "Children 7 and under must have an adult or responsible older sibling in the water.",
+     "source": "https://wi-greenbay.civicplus.com/Faq.aspx?QID=130"
+    },
+    {
+     "text": "Children 12 and older may be at the pool unsupervised.",
+     "source": "https://wi-greenbay.civicplus.com/Faq.aspx?QID=130"
+    },
+    {
+     "text": "Children wearing a life jacket must have an adult with them in the water.",
+     "source": "https://wi-greenbay.civicplus.com/Faq.aspx?QID=130"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Lesson registration opens two weeks later for non-residents than for Green Bay residents.",
+      "source": "https://www.greenbaywi.gov/858/Swim-Lessons-Programs"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.greenbaywi.gov/418/Aquatic-Facilities",
+     "https://www.greenbaywi.gov/858/Swim-Lessons-Programs"
+    ],
+    "season": [
+     "https://www.greenbaywi.gov/862/Pool-Hours-Admission"
+    ],
+    "access": {
+     "public_admission": [
+      "https://wi-greenbay.civicplus.com/Faq.aspx?QID=130",
+      "https://www.greenbaywi.gov/862/Pool-Hours-Admission"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [
+      "https://www.greenbaywi.gov/862/Pool-Hours-Admission"
+     ],
+     "lessons": [
+      "https://www.greenbaywi.gov/858/Swim-Lessons-Programs"
+     ]
+    },
+    "address": [
+     "https://www.greenbaywi.gov/Facilities/Facility/Details/Colburn-Pool-11"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-wi-madison-irwin-a-and-robert-d-goodman-pool",
+   "name": "Irwin A. and Robert D. Goodman Pool",
+   "official_name": "Irwin A. and Robert D. Goodman Pool",
+   "operator": "City of Madison Parks Division",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "WI",
+   "region": "Wisconsin",
+   "city": "Madison",
+   "address": {
+    "street": "325 W. Olin Ave.",
+    "locality": "Madison",
+    "region": "WI",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cityofmadison.com/parks/pool/",
+   "hours_fees_url": "https://www.cityofmadison.com/parks/pool/prices",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool is closed for the season and the city plans to reopen it in June 2027.",
+     "source": "https://www.cityofmadison.com/parks/pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "The 2026 summer season ran from June 11 to August 23.",
+     "source": "https://www.cityofmadison.com/parks/pool/hours"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Every visitor aged 3 and up needs a signed Pool Waiver on file, set up through an online household account, before entering.",
+     "source": "https://www.cityofmadison.com/parks/pool/checklist"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "A photo, taken by pool staff, is required to enter.",
+     "source": "https://www.cityofmadison.com/parks/pool/checklist"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers 12 and under must pass a swim test to use the diving board or the deep end of the lap pool.",
+     "source": "https://www.cityofmadison.com/parks/pool/rules-expectations"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 10 and under must be actively supervised within arm's reach by a caregiver aged 16 or older.",
+     "source": "https://www.cityofmadison.com/parks/pool/rules-expectations"
+    },
+    {
+     "text": "Children wearing a life jacket must be within arm's reach of a caregiver aged 16 or older.",
+     "source": "https://www.cityofmadison.com/parks/pool/rules-expectations"
+    },
+    {
+     "text": "Ages 11 to 15 may come without a parent once the waiver is on file and they follow the pool behavior policy.",
+     "source": "https://www.cityofmadison.com/parks/pool/rules-expectations"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://mscr.org/?p=694",
+     "https://www.cityofmadison.com/node/16821"
+    ],
+    "season": [
+     "https://www.cityofmadison.com/parks/pool/",
+     "https://www.cityofmadison.com/parks/pool/prices"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.cityofmadison.com/parks/pool/checklist",
+      "https://www.cityofmadison.com/parks/pool/prices"
+     ],
+     "day_pass": [
+      "https://www.cityofmadison.com/parks/pool/checklist",
+      "https://www.cityofmadison.com/parks/pool/prices"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.cityofmadison.com/parks/pool/hours",
+      "https://www.cityofmadison.com/parks/pool/prices"
+     ],
+     "lap_swim": [
+      "https://www.cityofmadison.com/parks/pool/prices"
+     ],
+     "lessons": [
+      "https://mscr.org/?p=694",
+      "https://www.cityofmadison.com/parks/pool/classes-lessons-programs"
+     ]
+    },
+    "address": [
+     "https://www.cityofmadison.com/parks/pool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-wi-milwaukee-macdowell-school-community-center",
+   "name": "MacDowell School Community Center (indoor pool)",
+   "official_name": "MacDowell School Community Center (indoor pool)",
+   "operator": "Milwaukee Recreation (Milwaukee Public Schools)",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "WI",
+   "region": "Wisconsin",
+   "city": "Milwaukee",
+   "address": {
+    "street": "6415 W. Mt. Vernon Ave.",
+    "locality": "Milwaukee",
+    "region": "WI",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.milwaukeerecreation.net/about-us/locations/community-centers/macdowell-school-community-center",
+   "hours_fees_url": "https://www.milwaukeerecreation.net/enrichment-programs/aquatics/lap-open-swim",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "ticket",
+     "text": "Community open swim and lap swim sessions require registration.",
+     "source": "https://www.milwaukeerecreation.net/enrichment-programs/aquatics/lap-open-swim"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 7 must be accompanied by an adult in the water, within arm's reach at all times.",
+     "source": "https://www.milwaukeerecreation.net/enrichment-programs/aquatics/lap-open-swim"
+    },
+    {
+     "text": "During open swim, children 7 and under need an adult one-on-one in the water within arm's reach.",
+     "source": "https://www.milwaukeerecreation.net/enrichment-programs/aquatics"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "The fall 2026 public session at MacDowell runs on Saturdays only, September 19 to December 12.",
+      "source": "https://www.milwaukeerecreation.net/enrichment-programs/aquatics/lap-open-swim"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.milwaukeerecreation.net/about-us/locations/indoor-pools"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.milwaukeerecreation.net/about-us/locations/indoor-pools",
+      "https://www.milwaukeerecreation.net/enrichment-programs/aquatics/lap-open-swim"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.milwaukeerecreation.net/enrichment-programs/aquatics/lap-open-swim"
+     ],
+     "lap_swim": [
+      "https://www.milwaukeerecreation.net/enrichment-programs/aquatics/lap-open-swim"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.milwaukeerecreation.net/about-us/locations/community-centers/macdowell-school-community-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

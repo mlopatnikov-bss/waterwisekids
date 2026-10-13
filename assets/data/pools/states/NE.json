@@ -1,0 +1,516 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "NE",
+ "name": "Nebraska",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ne-hastings-hastings-aquacourt-water-park",
+   "name": "Hastings Aquacourt Water Park",
+   "official_name": "Hastings Aquacourt Water Park",
+   "operator": "City of Hastings Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "NE",
+   "region": "Nebraska",
+   "city": "Hastings",
+   "address": {
+    "street": "2200 West Third Street",
+    "locality": "Hastings",
+    "region": "NE",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cityofhastings.org/parks/hastings-aquacourt",
+   "hours_fees_url": "https://www.cityofhastings.org/departments/parks-and-recreation/aquatics/rates.html",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only facility; it is closed for the season.",
+     "source": "https://www.cityofhastings.org/parks/hastings-aquacourt"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "It closes for public swimming when the air is below 70 degrees or for bad weather; call the daily status line before going.",
+     "source": "https://www.cityofhastings.org/departments/parks-and-recreation/aquatics/rates.html"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 9 and under must be accompanied and directly supervised by someone 14 or older to be admitted.",
+     "source": "https://www.cityofhastings.org/departments/parks-and-recreation/aquatics/rates.html"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.cityofhastings.org/departments/parks-and-recreation/aquatics/rates.html",
+     "https://www.cityofhastings.org/parks/hastings-aquacourt"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.cityofhastings.org/departments/parks-and-recreation/aquatics/rates.html"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.cityofhastings.org/departments/parks-and-recreation/aquatics/rates.html"
+     ],
+     "lap_swim": [
+      "https://www.cityofhastings.org/parks/hastings-aquacourt"
+     ],
+     "lessons": [
+      "https://www.cityofhastings.org/departments/parks-and-recreation/aquatics/hastings-aquacourt/swim-lessons.html"
+     ]
+    },
+    "address": [
+     "https://www.cityofhastings.org/parks/hastings-aquacourt"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ne-lincoln-star-city-shores-aquatic-center",
+   "name": "Star City Shores Aquatic Center",
+   "official_name": "Star City Shores Aquatic Center",
+   "operator": "City of Lincoln Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "NE",
+   "region": "Nebraska",
+   "city": "Lincoln",
+   "address": {
+    "street": "4375 S. 33rd Ct",
+    "locality": "Lincoln",
+    "region": "NE",
+    "postal_code": "68516",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Star-City-Shores-Aquatic-Center",
+   "hours_fees_url": "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Fees-and-Passes",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Closed for the season; check the city pools page for next season's opening.",
+     "source": "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Star-City-Shores-Aquatic-Center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Riders must be 48 inches tall for the larger slides, and life jackets are not allowed on the slides.",
+     "source": "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Star-City-Shores-Aquatic-Center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool may close for the day if the air temperature stays below 70 degrees by mid-afternoon.",
+     "source": "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 7 must be with someone 16 or older.",
+     "source": "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools"
+    },
+    {
+     "text": "Children who wear diapers must wear swim diapers.",
+     "source": "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools"
+    },
+    {
+     "text": "Water wings and other floats are allowed only in the baby pool; Coast Guard or Red Cross life jackets are allowed.",
+     "source": "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Fees-and-Passes",
+      "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Star-City-Shores-Aquatic-Center"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Star-City-Shores-Aquatic-Center",
+      "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Swimming-Lessons"
+     ]
+    },
+    "address": [
+     "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Star-City-Shores-Aquatic-Center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ne-omaha-common-ground-recreation-and-aquatic-center",
+   "name": "Common Ground Recreation and Aquatic Center",
+   "official_name": "Common Ground Recreation and Aquatic Center",
+   "operator": "City of Omaha Parks and Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "NE",
+   "region": "Nebraska",
+   "city": "Omaha",
+   "address": {
+    "street": "1701 Veterans Dr.",
+    "locality": "Omaha",
+    "region": "NE",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://parks.omaha.gov/common-ground-aquatics/",
+   "hours_fees_url": "https://parks.omaha.gov/common-ground-membership-information",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Day-pass guests must show photo ID, have a guardian signature on file for minors, and complete paperwork at the welcome desk.",
+     "source": "https://parks.omaha.gov/common-ground-membership-information"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 5 and under must have a paying adult 16 or older in the water within arm's reach.",
+     "source": "https://parks.omaha.gov/common-ground-aquatics/"
+    },
+    {
+     "text": "Children 6 to 9 must have a paying adult in the building.",
+     "source": "https://parks.omaha.gov/common-ground-aquatics/"
+    },
+    {
+     "text": "Diaper-age children must wear swim diapers in the pool.",
+     "source": "https://parks.omaha.gov/common-ground-aquatics/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Open swim runs only at set times (the facility lists weekend afternoons), so check the pool calendar before going.",
+      "source": "https://parks.omaha.gov/common-ground-recreation-and-aquatic-center"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "No one under 10 may swim during lap swim, and ages 10 to 15 need a paid adult with them; no lifeguards are on duty during lap swim.",
+      "source": "https://parks.omaha.gov/common-ground-aquatics/"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Non-members can register for lessons, but registration opens a week after member registration.",
+      "source": "https://parks.omaha.gov/swim-lessons"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://parks.omaha.gov/pool-locations-passes-punchcards"
+    ],
+    "season": [
+     "https://parks.omaha.gov/common-ground-aquatics/"
+    ],
+    "access": {
+     "day_pass": [
+      "https://parks.omaha.gov/common-ground-aquatics/",
+      "https://parks.omaha.gov/common-ground-membership-information"
+     ],
+     "members": [
+      "https://parks.omaha.gov/common-ground-aquatics/",
+      "https://parks.omaha.gov/common-ground-membership-information"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://parks.omaha.gov/common-ground-aquatics/",
+      "https://parks.omaha.gov/common-ground-membership-information",
+      "https://parks.omaha.gov/common-ground-recreation-and-aquatic-center"
+     ],
+     "lap_swim": [
+      "https://parks.omaha.gov/common-ground-aquatics/",
+      "https://parks.omaha.gov/common-ground-membership-information"
+     ],
+     "lessons": [
+      "https://parks.omaha.gov/common-ground-aquatics/",
+      "https://parks.omaha.gov/swim-lessons"
+     ]
+    },
+    "address": [
+     "https://parks.omaha.gov/common-ground-recreation-and-aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ne-omaha-montclair-community-center-and-pool",
+   "name": "Montclair Community Center and Pool",
+   "official_name": "Montclair Community Center and Pool",
+   "operator": "City of Omaha Parks and Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "NE",
+   "region": "Nebraska",
+   "city": "Omaha",
+   "address": {
+    "street": "2304 South 135th Avenue",
+    "locality": "Omaha",
+    "region": "NE",
+    "postal_code": "68144",
+    "precision": "street_number"
+   },
+   "official_url": "https://parks.omaha.gov/montclair-community-center-and-pool",
+   "hours_fees_url": "https://parks.omaha.gov/montclair-aquatics/",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Everyone on the pool deck must pay admission, and ages 9 to 15 need an adult on deck during lap swim.",
+     "source": "https://parks.omaha.gov/montclair-aquatics/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool has periodic temporary closures, so check the center's schedule before going.",
+     "source": "https://parks.omaha.gov/wp-content/uploads/Montclair-Fall-Brochure-2026.pdf"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 9 and younger must be with a parent or responsible person 16 or older.",
+     "source": "https://parks.omaha.gov/pool-rules-regulations"
+    },
+    {
+     "text": "Children 5 and younger must stay within arm's reach of a parent or responsible person 16 or older.",
+     "source": "https://parks.omaha.gov/pool-rules-regulations"
+    },
+    {
+     "text": "If a young child is in the water, the adult must be in the water too.",
+     "source": "https://parks.omaha.gov/pool-rules-regulations"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Public open swim is offered on weekend afternoons only.",
+      "source": "https://parks.omaha.gov/montclair-aquatics/"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "Children 8 and under are not allowed in lap swim.",
+      "source": "https://parks.omaha.gov/montclair-aquatics/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://parks.omaha.gov/pool-locations-passes-punchcards"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://parks.omaha.gov/montclair-aquatics/",
+      "https://parks.omaha.gov/pool-locations-passes-punchcards"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://parks.omaha.gov/montclair-aquatics/"
+     ],
+     "lap_swim": [
+      "https://parks.omaha.gov/montclair-aquatics/"
+     ],
+     "lessons": [
+      "https://parks.omaha.gov/montclair-aquatics/"
+     ]
+    },
+    "address": [
+     "https://parks.omaha.gov/wp-content/uploads/Montclair-Fall-Brochure-2026.pdf"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

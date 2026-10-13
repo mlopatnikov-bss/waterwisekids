@@ -1,0 +1,460 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "SC",
+ "name": "South Carolina",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-sc-columbia-greenview-pool",
+   "name": "Greenview Pool",
+   "official_name": "Greenview Pool",
+   "operator": "City of Columbia Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "SC",
+   "region": "South Carolina",
+   "city": "Columbia",
+   "address": {
+    "street": "6700 David St",
+    "locality": "Columbia",
+    "region": "SC",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://parksandrec.columbiasc.gov/pools-splash/",
+   "hours_fees_url": "https://parksandrec.columbiasc.gov/pools-splash/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Open only in the summer season; after early August public swim is weekends only.",
+     "source": "https://parksandrec.columbiasc.gov/pools-splash/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "When the pool is full, swimmers may be limited to two hours and rotated out using color-coded wristbands.",
+     "source": "https://parksandrec.columbiasc.gov/pools-splash/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool may close early on some swim-meet days.",
+     "source": "https://parksandrec.columbiasc.gov/pools-splash/"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Swim lessons at the outdoor pools are for children 5 and older.",
+      "source": "https://parksandrec.columbiasc.gov/pools-splash/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://parksandrec.columbiasc.gov/pools-splash/"
+    ],
+    "season": [
+     "https://parksandrec.columbiasc.gov/pools-splash/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://parksandrec.columbiasc.gov/pools-splash/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://parksandrec.columbiasc.gov/pools-splash/"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://parksandrec.columbiasc.gov/pools-splash/"
+     ]
+    },
+    "address": [
+     "https://parksandrec.columbiasc.gov/pools-splash/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-sc-columbia-maxcy-gregg-pool",
+   "name": "Maxcy Gregg Pool",
+   "official_name": "Maxcy Gregg Pool",
+   "operator": "City of Columbia Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "SC",
+   "region": "South Carolina",
+   "city": "Columbia",
+   "address": {
+    "street": "1650 Park Circle",
+    "locality": "Columbia",
+    "region": "SC",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://parksandrec.columbiasc.gov/pools-splash/",
+   "hours_fees_url": "https://parksandrec.columbiasc.gov/pools-splash/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Open only in the summer season; after early August public swim is weekends only.",
+     "source": "https://parksandrec.columbiasc.gov/pools-splash/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "When the pool is full, swimmers may be limited to two hours and rotated out using color-coded wristbands.",
+     "source": "https://parksandrec.columbiasc.gov/pools-splash/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool may close early on some swim-meet days.",
+     "source": "https://parksandrec.columbiasc.gov/pools-splash/"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Swim lessons at the outdoor pools are for children 5 and older.",
+      "source": "https://parksandrec.columbiasc.gov/pools-splash/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://parksandrec.columbiasc.gov/pools-splash/"
+    ],
+    "season": [
+     "https://parksandrec.columbiasc.gov/pools-splash/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://parksandrec.columbiasc.gov/pools-splash/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://parksandrec.columbiasc.gov/pools-splash/"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://parksandrec.columbiasc.gov/pools-splash/"
+     ]
+    },
+    "address": [
+     "https://parksandrec.columbiasc.gov/pools-splash/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-sc-greenville-greenville-county-aquatic-complex",
+   "name": "Greenville County Aquatic Complex",
+   "official_name": "Greenville County Aquatic Complex",
+   "operator": "Greenville County Parks, Recreation & Tourism",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "SC",
+   "region": "South Carolina",
+   "city": "Greenville",
+   "address": {
+    "street": "2700 W. Blue Ridge Drive",
+    "locality": "Greenville",
+    "region": "SC",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://aquatics.greenvillerec.com",
+   "hours_fees_url": "https://aquatics.greenvillerec.com/hours-rates/",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "season": "unknown",
+     "o": {
+      "open_swim": "unknown",
+      "lap_swim": "unknown"
+     }
+    },
+    {
+     "s": "indoor",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Entry is sold as memberships: the complex lists 3-visit, monthly and annual memberships, with non-resident rates, and does not list a single-visit admission. Ask whether non-members can swim before you go.",
+     "source": "https://aquatics.greenvillerec.com/hours-rates/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers must pass a swim test to use any of the deeper water.",
+     "source": "https://aquatics.greenvillerec.com/the-facility/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The complex closes on several holidays, including Thanksgiving, Christmas and New Year's Day.",
+     "source": "https://aquatics.greenvillerec.com/hours-rates/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Anyone 42 inches tall or under must wear a life jacket.",
+     "source": "https://aquatics.greenvillerec.com/the-facility/"
+    },
+    {
+     "text": "Children should not be in the pool without supervision.",
+     "source": "https://aquatics.greenvillerec.com/the-facility/"
+    },
+    {
+     "text": "Parent-and-child classes require one parent in the water per child.",
+     "source": "https://aquatics.greenvillerec.com/swimming-lessons/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lane availability changes through the day; check the pool lane schedule before going.",
+      "source": "https://aquatics.greenvillerec.com/hours-rates/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://aquatics.greenvillerec.com/the-facility/"
+    ],
+    "season": [],
+    "access": {
+     "members": [
+      "https://aquatics.greenvillerec.com/hours-rates/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://aquatics.greenvillerec.com/the-facility/"
+     ],
+     "lap_swim": [
+      "https://aquatics.greenvillerec.com/hours-rates/",
+      "https://aquatics.greenvillerec.com/the-facility/"
+     ],
+     "lessons": [
+      "https://aquatics.greenvillerec.com/swimming-lessons/"
+     ]
+    },
+    "address": [
+     "https://aquatics.greenvillerec.com/the-facility/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-sc-myrtle-beach-pepper-geddings-recreation-center",
+   "name": "Pepper Geddings Recreation Center",
+   "official_name": "Pepper Geddings Recreation Center",
+   "operator": "City of Myrtle Beach Parks, Recreation & Sports Tourism",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "SC",
+   "region": "South Carolina",
+   "city": "Myrtle Beach",
+   "address": {
+    "street": "3205 North Oak Street",
+    "locality": "Myrtle Beach",
+    "region": "SC",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cityofmyrtlebeach.com/i_want_to/find/pepper_geddings_recreation_center.php",
+   "hours_fees_url": "https://www.myrtlebeachprst.com/aquatic_programs.php",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "season": "unknown",
+     "o": {
+      "open_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [],
+   "conditions": [],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://cityofmyrtlebeach.com/departments/aquatic_programs.php",
+     "https://www.myrtlebeachprst.com/memberships.php"
+    ],
+    "season": [],
+    "access": {},
+    "offerings": {
+     "open_swim": [
+      "https://www.myrtlebeachprst.com/aquatic_programs.php"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://cityofmyrtlebeach.com/departments/aquatic_programs.php"
+     ]
+    },
+    "address": [
+     "https://www.cityofmyrtlebeach.com/i_want_to/find/pepper_geddings_recreation_center.php"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

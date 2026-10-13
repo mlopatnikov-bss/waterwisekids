@@ -7,7 +7,12 @@
    pools or access arrangements at the same venue are never combined (e.g. a public indoor pass plus a
    members-only outdoor pool is not a "public outdoor" match). With "Open to the public", an offering filter
    only matches when the operator confirms non-members can take part in that offering.
-   The finder starts on "Open to the public"; "Clear filters" returns to that default. Unknown never matches. */
+   The finder starts on "Open to the public"; "Clear filters" returns to that default. Unknown never matches.
+   WWK-POOLS-NATIONWIDE-025 r1: a link from the nationwide search carries its filter context (?access=&setting=&season=&lessons=
+   &open-swim=&lap-swim=) plus #pool-id. Those values preset the form, so the selected pool is shown with its own banner, and a
+   pool linked by #id that the current filters would hide (e.g. a bare link to a members-only pool) switches "Who can swim" to
+   that pool's group. Ordinary visits without parameters or a pool anchor keep the public default. The target pool is scrolled
+   into view and focused; "Clear filters" still returns to the public default. */
 (function () {
   'use strict';
   var form = document.getElementById('poolFilters');
@@ -64,10 +69,58 @@
     note.hidden = !detail;
     if (defNote) defNote.hidden = !(f.access === 'open' && !detail && hiddenOther > 0);
   }
+  var ctxNote = document.getElementById('poolContextNote');
+  var GROUP = { open: 'open', conditional: 'open', unknown: 'unknown', restricted: 'restricted' };
+  function setField(name, v) {
+    var el = form.elements[name]; if (!el) return false;
+    if (el.type === 'checkbox') { el.checked = v === 'yes'; return true; }
+    for (var i = 0; i < el.options.length; i++) { if (el.options[i].value === v) { el.value = v; return true; } }
+    return false;
+  }
+  function targetCard() {
+    var id; try { id = decodeURIComponent((location.hash || '').slice(1)); } catch (e) { return null; }
+    if (!id) return null;
+    var c = document.getElementById(id);
+    return c && c.classList.contains('pool-card') ? c : null;
+  }
+  function nonDefault() { return val('access') !== 'open' || !!(val('setting') || val('season') || val('lessons') || val('open-swim') || val('lap-swim')); }
+  function explain(why, card) {
+    if (!ctxNote) return;
+    var lab = { open: 'pools open to the public', unknown: 'pools whose public access is not confirmed', restricted: 'pools for members, residents or guests only', '': 'all pools' }[val('access')];
+    var name = card && card.querySelector('.pool-name') ? card.querySelector('.pool-name').textContent : 'this pool';
+    ctxNote.textContent = !nonDefault() ? '' : why === 'search' ? 'Filters from your search are applied (' + lab + '), so ' + name + ' is shown. Choose "Clear filters" to return to pools open to the public.'
+      : 'Showing ' + lab + ' because you followed a link to ' + name + '. Choose "Clear filters" to return to pools open to the public.';
+    ctxNote.hidden = !ctxNote.textContent;
+  }
+  function reveal(card, why) {
+    if (!card) return;
+    if (card.hidden) {   // reconcile: show the linked pool in its own group (never relabels it as public)
+      form.reset();
+      setField('access', GROUP[card.getAttribute('data-public')] || '');
+      apply();
+      why = why || 'link';
+    }
+    if (card.hidden) { form.reset(); setField('access', ''); apply(); }
+    explain(why, card);
+    if (!card.hasAttribute('tabindex')) card.setAttribute('tabindex', '-1');
+    try { card.scrollIntoView({ block: 'start', behavior: 'instant' }); } catch (e) { card.scrollIntoView(); }   // a deep link jumps; no long smooth scroll
+    try { card.focus({ preventScroll: true }); } catch (e) { card.focus(); }
+  }
   form.hidden = false;
-  form.addEventListener('change', apply);
+  // filter context carried from the nationwide search (only recognised values; anything else is ignored)
+  var params = {}; var fromSearch = false;
+  (location.search || '').replace(/^\?/, '').split('&').forEach(function (kv) {
+    if (!kv) return; var i = kv.indexOf('=');
+    try { params[decodeURIComponent(kv.slice(0, i < 0 ? kv.length : i))] = i < 0 ? '' : decodeURIComponent(kv.slice(i + 1).replace(/\+/g, ' ')); } catch (e) {}
+  });
+  ['access', 'setting', 'season', 'lessons', 'open-swim', 'lap-swim'].forEach(function (k) { if (k in params && setField(k, params[k])) fromSearch = true; });
+  form.addEventListener('change', function () { if (ctxNote) ctxNote.hidden = true; apply(); });
   form.addEventListener('submit', function (e) { e.preventDefault(); });
   var reset = form.querySelector('[data-pool-reset]');
-  if (reset) reset.addEventListener('click', function () { form.reset(); apply(); });
+  if (reset) reset.addEventListener('click', function () { form.reset(); if (ctxNote) ctxNote.hidden = true; apply(); });
   apply();
+  var t0 = targetCard();
+  if (t0) reveal(t0, fromSearch ? 'search' : '');
+  else if (fromSearch) explain('search', null);
+  window.addEventListener('hashchange', function () { reveal(targetCard(), 'link'); });
 })();

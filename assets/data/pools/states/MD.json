@@ -1,0 +1,577 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "MD",
+ "name": "Maryland",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-md-annapolis-arundel-olympic-swim-center",
+   "name": "Arundel Olympic Swim Center",
+   "official_name": "Arundel Olympic Swim Center",
+   "operator": "Anne Arundel County Department of Recreation and Parks",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "MD",
+   "region": "Maryland",
+   "city": "Annapolis",
+   "address": {
+    "street": "2690 Riva Road",
+    "locality": "Annapolis",
+    "region": "MD",
+    "postal_code": "21401",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center",
+   "hours_fees_url": "https://www.aacounty.org/recreation-parks/aquatic-centers/admission-fees",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "escort",
+     "text": "Children 12 and under must come with a paying adult 18 or older, at least one adult for every five children.",
+     "source": "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Swimmers must be at least 3 years old and fully toilet-trained; swim diapers are not allowed.",
+     "source": "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Staff may require a swim test (tread water 60 seconds and swim 25 yards) before using the deep end.",
+     "source": "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Non-county residents pay a higher daily rate; ID is needed for the resident discount.",
+     "source": "https://www.aacounty.org/recreation-parks/aquatic-centers/admission-fees"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "hours",
+     "text": "Areas of the indoor pools may be closed at times for programs or classes.",
+     "source": "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The center has an annual summer maintenance closure; in 2026 it was closed July 4 to Sept. 7.",
+     "source": "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 12 and under must be accompanied by a paying adult 18 or older who directly supervises them.",
+     "source": "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+    },
+    {
+     "text": "Children in flotation devices must have direct parental supervision.",
+     "source": "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+    },
+    {
+     "text": "All children must be fully toilet-trained; no swim diapers.",
+     "source": "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+    ],
+    "season": [
+     "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.aacounty.org/recreation-parks/aquatic-centers/admission-fees",
+      "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+     ],
+     "day_pass": [
+      "https://www.aacounty.org/recreation-parks/aquatic-centers/admission-fees",
+      "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+     ],
+     "lap_swim": [
+      "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+     ],
+     "lessons": [
+      "https://www.aacounty.org/recreation-parks/aquatic-centers/lessons"
+     ]
+    },
+    "address": [
+     "https://www.aacounty.org/recreation-parks/aquatic-centers/arundel-olympic-swim-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-md-boyds-germantown-indoor-swim-center",
+   "name": "Germantown Indoor Swim Center",
+   "official_name": "Germantown Indoor Swim Center",
+   "operator": "Montgomery County Recreation (Montgomery County, MD)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "MD",
+   "region": "Maryland",
+   "city": "Boyds",
+   "address": {
+    "street": "18000 Central Park Circle",
+    "locality": "Boyds",
+    "region": "MD",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/germantown-indoor-swim-center",
+   "hours_fees_url": "https://www.montgomerycountymd.gov/montgomery-county-recreation/memberships/aquatic-passes",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Daily admission is open to non-residents, but at a higher non-resident rate than for county residents.",
+     "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/memberships/aquatic-passes"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "The county may refuse entry when the pool reaches capacity.",
+     "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/activities-programs/aquatics/swimming-pool-rules-regulations"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "hours",
+     "text": "On weekends the pools close for programming during parts of the day.",
+     "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/germantown-indoor-swim-center"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied and cared for at poolside by a responsible person 16 or older.",
+     "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/activities-programs/aquatics/swimming-pool-rules-regulations"
+    },
+    {
+     "text": "Children under 6 must have a responsible person 16 or older in the water with them, within arm's reach.",
+     "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/activities-programs/aquatics/swimming-pool-rules-regulations"
+    },
+    {
+     "text": "Anyone wearing a flotation device must have an adult in the pool within arm's reach; water wings are not allowed.",
+     "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/activities-programs/aquatics/swimming-pool-rules-regulations"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Open swim times vary with programming, so check the facility schedule before you go.",
+      "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/germantown-indoor-swim-center"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/germantown-indoor-swim-center"
+    ],
+    "season": [
+     "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/activities-programs/aquatics/swimming-pool-rules-regulations",
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/memberships/aquatic-passes"
+     ],
+     "day_pass": [
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/activities-programs/aquatics/swimming-pool-rules-regulations",
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/memberships/aquatic-passes"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/germantown-indoor-swim-center"
+     ],
+     "lap_swim": [
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/germantown-indoor-swim-center"
+     ],
+     "lessons": [
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/germantown-indoor-swim-center"
+     ]
+    },
+    "address": [
+     "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/germantown-indoor-swim-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-md-capitol-heights-j-franklyn-bourne-memorial-pool",
+   "name": "J. Franklyn Bourne Memorial Pool",
+   "official_name": "J. Franklyn Bourne Memorial Pool",
+   "operator": "M-NCPPC, Department of Parks and Recreation, Prince George's County",
+   "facility_type": "county",
+   "country": "US",
+   "state": "MD",
+   "region": "Maryland",
+   "city": "Capitol Heights",
+   "address": {
+    "street": "6500 Calmos Street",
+    "locality": "Capitol Heights",
+    "region": "MD",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.pgparks.com/facilities/j-franklyn-bourne-memorial-pool-aquatic-center",
+   "hours_fees_url": "https://www.pgparks.com/facilities-rentals/community-center-fees",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "Summer season only; the pool is closed until the 2027 season.",
+     "source": "https://www.pgparks.com/facilities/j-franklyn-bourne-memorial-pool-aquatic-center"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "capacity",
+     "text": "Weekend sessions often fill up; walk-in admission is only available until the pool reaches capacity, so online reservations are encouraged.",
+     "source": "https://www.pgparks.com/facilities-rentals/community-center-fees"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Non-residents of Prince George's and Montgomery counties pay a higher daily rate.",
+     "source": "https://www.pgparks.com/facilities-rentals/community-center-fees"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Admission is charged per session, paid at the start of each session.",
+     "source": "https://www.pgparks.com/facilities-rentals/community-center-fees"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "A non-swimmer wearing a life jacket must have an adult in the pool within arm's reach.",
+     "source": "https://www.pgparks.com/about/safety-policy/policies"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.pgparks.com/facilities/j-franklyn-bourne-memorial-pool-aquatic-center"
+    ],
+    "season": [
+     "https://www.pgparks.com/facilities/j-franklyn-bourne-memorial-pool-aquatic-center"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.pgparks.com/facilities-rentals/community-center-fees"
+     ],
+     "day_pass": [
+      "https://www.pgparks.com/facilities-rentals/community-center-fees"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.pgparks.com/facilities/j-franklyn-bourne-memorial-pool-aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-md-silver-spring-martin-luther-king-jr-swim-center-and-martin-luther-king-jr",
+   "name": "Martin Luther King Jr. Swim Center (Indoor Pool) and Martin Luther King Jr. Outdoor Pool",
+   "official_name": "Martin Luther King Jr. Swim Center (Indoor Pool) and Martin Luther King Jr. Outdoor Pool",
+   "operator": "Montgomery County Recreation (Montgomery County, MD)",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "MD",
+   "region": "Maryland",
+   "city": "Silver Spring",
+   "address": {
+    "street": "1201 Jackson Road",
+    "locality": "Silver Spring",
+    "region": "MD",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/martin-luther-king-jr-swim-center-indoor-pool",
+   "hours_fees_url": "https://www.montgomerycountymd.gov/montgomery-county-recreation/memberships/aquatic-passes",
+   "setting": "both",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    },
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Daily admission is open to non-residents, but at a higher non-resident rate than for county residents.",
+     "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/memberships/aquatic-passes"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "The county may refuse entry when the pool reaches capacity.",
+     "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/activities-programs/aquatics/swimming-pool-rules-regulations"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "The outdoor pool opens only in summer, from Memorial Day weekend through Labor Day weekend.",
+     "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied and cared for at poolside by a responsible person 16 or older.",
+     "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/activities-programs/aquatics/swimming-pool-rules-regulations"
+    },
+    {
+     "text": "Children under 6 must have a responsible person 16 or older in the water with them, within arm's reach.",
+     "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/activities-programs/aquatics/swimming-pool-rules-regulations"
+    },
+    {
+     "text": "Anyone wearing a flotation device must have an adult in the pool within arm's reach; water wings are not allowed.",
+     "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/activities-programs/aquatics/swimming-pool-rules-regulations"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Open swim times vary with programming, so check the facility schedule before you go.",
+      "source": "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/martin-luther-king-jr-swim-center-indoor-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/martin-luther-king-jr-swim-center-indoor-pool",
+     "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/outdoor-pools"
+    ],
+    "season": [
+     "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/activities-programs/aquatics/swimming-pool-rules-regulations",
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/memberships/aquatic-passes"
+     ],
+     "day_pass": [
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/activities-programs/aquatics/swimming-pool-rules-regulations",
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/memberships/aquatic-passes"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/martin-luther-king-jr-swim-center-indoor-pool"
+     ],
+     "lap_swim": [
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/martin-luther-king-jr-swim-center-indoor-pool"
+     ],
+     "lessons": [
+      "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/martin-luther-king-jr-swim-center-indoor-pool"
+     ]
+    },
+    "address": [
+     "https://www.montgomerycountymd.gov/montgomery-county-recreation/facilities/aquatic-centers/martin-luther-king-jr-swim-center-indoor-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

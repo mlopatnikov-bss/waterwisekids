@@ -1,0 +1,514 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "ND",
+ "name": "North Dakota",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-nd-bismarck-bsc-aquatic-wellness-center",
+   "name": "BSC Aquatic & Wellness Center",
+   "official_name": "BSC Aquatic & Wellness Center",
+   "operator": "Bismarck Parks and Recreation District",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "ND",
+   "region": "North Dakota",
+   "city": "Bismarck",
+   "address": {
+    "street": "1601 Canary Ave.",
+    "locality": "Bismarck",
+    "region": "ND",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.bisparks.org/facilities/bsc-aquatic-wellness-center/",
+   "hours_fees_url": "https://www.bisparks.org/facilities/bsc-aquatic-wellness-center/",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Diving boards and inflatable water toys are for ages 6 and up, and everyone must pass a lifeguard swim test first.",
+     "source": "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-indoor/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "The pools close earlier than the rest of the building, and the schedule can change, so check the pool calendar before going.",
+     "source": "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-indoor/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Bring your own Coast Guard-approved life jacket; none are provided and water wings are not allowed.",
+     "source": "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-indoor/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 8, or anyone in a life jacket, must have a person 16 or older with them in the water.",
+     "source": "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-indoor/"
+    },
+    {
+     "text": "There must be two people 16 or older in the water for every 10 children under 8 or in life jackets.",
+     "source": "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-indoor/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-indoor/"
+    ],
+    "season": [
+     "https://www.bisparks.org/facilities/bsc-aquatic-wellness-center/",
+     "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-indoor/"
+    ],
+    "access": {
+     "day_pass": [
+      "https://www.bisparks.org/facilities/bsc-aquatic-wellness-center/",
+      "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-indoor/"
+     ],
+     "members": [
+      "https://www.bisparks.org/facilities/bsc-aquatic-wellness-center/",
+      "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-indoor/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.bisparks.org/programs-activities/aquatics/swim-lessons-group-indoor/"
+     ]
+    },
+    "address": [
+     "https://www.bisparks.org/facilities/bsc-aquatic-wellness-center/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nd-bismarck-hillside-aquatic-complex",
+   "name": "Hillside Aquatic Complex",
+   "official_name": "Hillside Aquatic Complex",
+   "operator": "Bismarck Parks and Recreation District",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "ND",
+   "region": "North Dakota",
+   "city": "Bismarck",
+   "address": {
+    "street": "1719 E. Boulevard Ave.",
+    "locality": "Bismarck",
+    "region": "ND",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.bisparks.org/facilities/hillside-aquatic-complex/",
+   "hours_fees_url": "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-outdoor/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Outdoor summer pool; the 2026 season ended August 9.",
+     "source": "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-outdoor/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Weather cancellations are posted on the website alert bar and Facebook, so check before going.",
+     "source": "https://www.bisparks.org/facilities/hillside-aquatic-complex/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Children 6 and older must swim 25 yards for a lifeguard before using water 5 feet deep or more.",
+     "source": "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-outdoor/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "The waterslide requires riders to be at least 48 inches tall.",
+     "source": "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-outdoor/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 8, or anyone in a life jacket, must have a person 16 or older with them in the water.",
+     "source": "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-outdoor/"
+    },
+    {
+     "text": "There must be two people 16 or older in the water for every 12 children under 8 or in life jackets.",
+     "source": "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-outdoor/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.bisparks.org/facilities/hillside-aquatic-complex/",
+     "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-outdoor/"
+    ],
+    "season": [
+     "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-outdoor/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-outdoor/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-outdoor/"
+     ],
+     "lap_swim": [
+      "https://www.bisparks.org/parks-facilities/aquatic-facilities/pools-outdoor/"
+     ],
+     "lessons": [
+      "https://www.bisparks.org/programs-activities/aquatics/swim-lessons-group-outdoor/"
+     ]
+    },
+    "address": [
+     "https://www.bisparks.org/facilities/hillside-aquatic-complex/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nd-fargo-island-park-pool",
+   "name": "Island Park Pool",
+   "official_name": "Island Park Pool",
+   "operator": "Fargo Park District",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "ND",
+   "region": "North Dakota",
+   "city": "Fargo",
+   "address": {
+    "street": "502 1st Ave S",
+    "locality": "Fargo",
+    "region": "ND",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://fargoparks.com/outdoor-pools",
+   "hours_fees_url": "https://fargoparks.com/outdoor-pools",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Outdoor summer pool; in 2026 regular hours ran through August 25, with extra weekend days through Labor Day.",
+     "source": "https://fargoparks.com/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "A signed waiver is required to use the FlyTyme slide, and a parent or guardian must sign for anyone under 18.",
+     "source": "https://fargoparks.com/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Riders must be at least 48 inches tall for the large waterslides.",
+     "source": "https://fargoparks.com/outdoor-pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Non-swimmers must wear a life jacket in the main pool.",
+     "source": "https://fargoparks.com/outdoor-pools"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Only children 9 and older may be at the pool without an adult; younger children need someone at least 16 with them.",
+     "source": "https://fargoparks.com/outdoor-pools"
+    },
+    {
+     "text": "Children who are not toilet trained must wear a waterproof swim diaper.",
+     "source": "https://fargoparks.com/outdoor-pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://fargoparks.com/outdoor-pools"
+    ],
+    "season": [
+     "https://fargoparks.com/outdoor-pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://fargoparks.com/outdoor-pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://fargoparks.com/outdoor-pools"
+     ],
+     "lap_swim": [
+      "https://fargoparks.com/outdoor-pools"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://fargoparks.com/outdoor-pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-nd-grand-forks-elks-pool",
+   "name": "Elks Pool",
+   "official_name": "Elks Pool",
+   "operator": "Grand Forks Park District",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "ND",
+   "region": "North Dakota",
+   "city": "Grand Forks",
+   "address": {
+    "street": "1002 13th Avenue South",
+    "locality": "Grand Forks",
+    "region": "ND",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/",
+   "hours_fees_url": "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Outdoor summer pool only; it is closed for the season until next summer.",
+     "source": "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Large groups such as daycares must contact the park district before visiting because of pool capacity.",
+     "source": "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Flotation devices may be used only during the evening part of the weekday schedule.",
+     "source": "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 4 and under are admitted only with an adult.",
+     "source": "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/"
+    },
+    {
+     "text": "Swim diapers are required for little ones who need them.",
+     "source": "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.gfparks.org/parks-facilities/parks/elks/",
+     "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/"
+    ],
+    "season": [
+     "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/",
+      "https://www.gfparks.org/programs-activities/youth/swimming/"
+     ],
+     "lap_swim": [
+      "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/"
+     ],
+     "lessons": [
+      "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/",
+      "https://www.gfparks.org/programs-activities/youth/swimming/"
+     ]
+    },
+    "address": [
+     "https://www.gfparks.org/parks-facilities/pools-spray-parks/elks-pool-and-spray-park/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

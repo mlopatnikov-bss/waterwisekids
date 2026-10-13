@@ -1,0 +1,581 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "VT",
+ "name": "Vermont",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-vt-barre-barre-city-municipal-swimming-pool",
+   "name": "Barre City Municipal Swimming Pool",
+   "official_name": "Barre City Municipal Swimming Pool",
+   "operator": "City of Barre Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "VT",
+   "region": "Vermont",
+   "city": "Barre",
+   "address": {
+    "street": "59 Parkside Terrace",
+    "locality": "Barre",
+    "region": "VT",
+    "postal_code": "05641",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.barrecity.org/pool.html",
+   "hours_fees_url": "https://www.barrecity.org/pool.html",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; closed now, with opening day listed as June 26, 2027.",
+     "source": "https://www.barrecity.org/pool.html"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Barre City resident pass rates need proof of residency, such as a utility bill or driver's license.",
+     "source": "https://www.barrecity.org/pool.html"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool may close early on cold or rainy days or because of staffing.",
+     "source": "https://www.barrecity.org/pool.html"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "To stay for Family Swim, swimmers must be high school students or be accompanied and supervised by someone 18 or older.",
+     "source": "https://www.barrecity.org/pool.html"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.barrecity.org/pool.html"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.barrecity.org/pool.html"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.barrecity.org/pool.html"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.barrecity.org/pool.html"
+     ]
+    },
+    "address": [
+     "https://www.barrecity.org/pool.html"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-vt-brattleboro-living-memorial-park-swimming-pool",
+   "name": "Living Memorial Park Swimming Pool",
+   "official_name": "Living Memorial Park Swimming Pool",
+   "operator": "Brattleboro Recreation & Parks Department (Town of Brattleboro)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "VT",
+   "region": "Vermont",
+   "city": "Brattleboro",
+   "address": {
+    "street": "61 Guilford St",
+    "locality": "Brattleboro",
+    "region": "VT",
+    "postal_code": "05301",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.brattleboro.gov/pool",
+   "hours_fees_url": "https://www.brattleboro.gov/pool",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; it is closed for the 2026 season and expected to reopen in summer 2027.",
+     "source": "https://www.brattleboro.gov/pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Public swimming is closed during swim team home meets.",
+     "source": "https://www.brattleboro.gov/pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 10 must be accompanied by someone 12 or older during General Swim.",
+     "source": "https://www.brattleboro.gov/pool"
+    },
+    {
+     "text": "During Parent/Tot Swim, participants stay in the 3-foot end of the pool.",
+     "source": "https://www.brattleboro.gov/pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Family & Teen Swim is for those entering 7th grade or swimming with someone 18 or older.",
+      "source": "https://www.brattleboro.gov/pool"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Lessons are mainly for Brattleboro residents; non-residents are accepted only if space is available.",
+      "source": "https://www.brattleboro.gov/pool"
+     },
+     {
+      "text": "Children must be at least 3 years old by the season cutoff date to take swim lessons.",
+      "source": "https://www.brattleboro.gov/pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.brattleboro.gov/pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.brattleboro.gov/pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.brattleboro.gov/pool"
+     ],
+     "lap_swim": [
+      "https://www.brattleboro.gov/pool"
+     ],
+     "lessons": [
+      "https://www.brattleboro.gov/pool"
+     ]
+    },
+    "address": [
+     "https://www.brattleboro.gov/pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-vt-essex-junction-maple-street-pool",
+   "name": "Maple Street Pool",
+   "official_name": "Maple Street Pool",
+   "operator": "Essex Junction Recreation & Parks (City of Essex Junction)",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "VT",
+   "region": "Vermont",
+   "city": "Essex Junction",
+   "address": {
+    "street": "75 Maple Street",
+    "locality": "Essex Junction",
+    "region": "VT",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://nextrec.essexjunction.org/parks-facilities/maple-street-pool",
+   "hours_fees_url": "https://nextrec.essexjunction.org/parks-facilities/maple-street-pool",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "residents",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; the 2026 season ran June 20 to August 21 and it is closed now.",
+     "source": "https://nextrec.essexjunction.org/parks-facilities/maple-street-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "The pool area has a maximum capacity.",
+     "source": "https://nextrec.essexjunction.org/fileadmin/files/Rec/Maple_Street_Pool_Rules_and_FAQs_.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "The discounted resident rate is only for City of Essex Junction residents and needs proof of residency at entry; others pay the non-resident rate.",
+     "source": "https://nextrec.essexjunction.org/parks-facilities/maple-street-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Everyone entering the pool area pays admission or has a pass, even if not swimming.",
+     "source": "https://nextrec.essexjunction.org/fileadmin/files/Rec/Maple_Street_Pool_Rules_and_FAQs_.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Children must pass a swim test to swim in the large pool or use the diving boards.",
+     "source": "https://nextrec.essexjunction.org/fileadmin/files/Rec/Maple_Street_Pool_Rules_and_FAQs_.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "The pool is not heated.",
+     "source": "https://nextrec.essexjunction.org/parks-facilities/maple-street-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 8 and under must be accompanied by a responsible person at least 14 years old who stays at the pool.",
+     "source": "https://nextrec.essexjunction.org/fileadmin/files/Rec/Maple_Street_Pool_Rules_and_FAQs_.pdf"
+    },
+    {
+     "text": "During Family Swim, anyone 17 or under must be with a parent or guardian.",
+     "source": "https://nextrec.essexjunction.org/fileadmin/files/Rec/Maple_Street_Pool_Rules_and_FAQs_.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "During the scheduled Adult Swim breaks, children aged 3 to 17 must leave the water.",
+      "source": "https://nextrec.essexjunction.org/fileadmin/files/Rec/Maple_Street_Pool_Rules_and_FAQs_.pdf"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://nextrec.essexjunction.org/parks-facilities/maple-street-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://nextrec.essexjunction.org/fileadmin/files/Rec/Maple_Street_Pool_Rules_and_FAQs_.pdf",
+      "https://nextrec.essexjunction.org/parks-facilities/maple-street-pool"
+     ],
+     "residents": [
+      "https://nextrec.essexjunction.org/fileadmin/files/Rec/Maple_Street_Pool_Rules_and_FAQs_.pdf",
+      "https://nextrec.essexjunction.org/parks-facilities/maple-street-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://nextrec.essexjunction.org/fileadmin/files/Rec/Maple_Street_Pool_Rules_and_FAQs_.pdf",
+      "https://nextrec.essexjunction.org/parks-facilities/maple-street-pool"
+     ],
+     "lap_swim": [
+      "https://nextrec.essexjunction.org/parks-facilities/maple-street-pool"
+     ],
+     "lessons": [
+      "https://nextrec.essexjunction.org/maple-street-pool/swim-lessons"
+     ]
+    },
+    "address": [
+     "https://nextrec.essexjunction.org/parks-facilities/maple-street-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-vt-white-river-junction-upper-valley-aquatic-center",
+   "name": "Upper Valley Aquatic Center (UVAC)",
+   "official_name": "Upper Valley Aquatic Center (UVAC)",
+   "operator": "Upper Valley Aquatic Center",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "VT",
+   "region": "Vermont",
+   "city": "White River Junction",
+   "address": {
+    "street": "100 Arboretum Lane",
+    "locality": "White River Junction",
+    "region": "VT",
+    "postal_code": "05001",
+    "precision": "street_number"
+   },
+   "official_url": "https://uvacswim.org/our-pools",
+   "hours_fees_url": "https://uvacswim.org/day-passes",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    },
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "lap_swim": "public"
+     },
+     "label": "competition"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "indoor",
+     "kind": "capacity",
+     "text": "At busy times there may be a wait list for the Splash Park and Warm Water Pool, so call before coming.",
+     "source": "https://uvacswim.org/day-passes"
+    },
+    {
+     "applies_to": "indoor",
+     "kind": "closure",
+     "text": "The Warm Water Pool and Splash Park may close during swim meets.",
+     "source": "https://uvacswim.org/day-passes"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "All adults need a valid ID to check in.",
+     "source": "https://uvacswim.org/day-passes"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Everyone on the pool deck needs a day pass, even if not swimming.",
+     "source": "https://uvacswim.org/day-passes"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Children 13 and under must pass a lifeguard swim test to swim in the competition pool without a parent in the water.",
+     "source": "https://uvacswim.org/competition-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Riders on the 110-foot slide must be at least 48 inches tall.",
+     "source": "https://uvacswim.org/day-passes"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 7 and under must be accompanied in the water within arm's reach.",
+     "source": "https://uvacswim.org/day-passes"
+    },
+    {
+     "text": "Children 13 and under must be supervised at all times by a paying parent or guardian aged 18 or older.",
+     "source": "https://uvacswim.org/day-passes"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Day-pass guests must call ahead to reserve lap swimming.",
+      "source": "https://uvacswim.org/day-passes"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://uvacswim.org/day-passes",
+     "https://uvacswim.org/our-pools"
+    ],
+    "season": [],
+    "access": {
+     "day_pass": [
+      "https://uvacswim.org/competition-pool",
+      "https://uvacswim.org/day-passes"
+     ],
+     "members": [
+      "https://uvacswim.org/competition-pool",
+      "https://uvacswim.org/day-passes"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://uvacswim.org/day-passes"
+     ],
+     "lap_swim": [
+      "https://uvacswim.org/day-passes",
+      "https://uvacswim.org/warm-water-pool"
+     ],
+     "lessons": [
+      "https://uvacswim.org/youth-swim-lessons"
+     ]
+    },
+    "address": [
+     "https://uvacswim.org/hours-directions"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

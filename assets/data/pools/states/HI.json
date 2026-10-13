@@ -1,0 +1,292 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "HI",
+ "name": "Hawaii",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-hi-honolulu-harry-m-mamizuka-swimming-complex",
+   "name": "Harry M. Mamizuka Swimming Complex",
+   "official_name": "Harry M. Mamizuka Swimming Complex",
+   "operator": "City and County of Honolulu Department of Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "HI",
+   "region": "Hawaii",
+   "city": "Honolulu",
+   "address": {
+    "street": "2721 Ka‘aipu Avenue",
+    "locality": "Honolulu",
+    "region": "HI",
+    "postal_code": "96822",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.honolulu.gov/dpr/pools-in-parks/",
+   "hours_fees_url": "https://pros.hnl.info",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "unknown",
+     "o": {}
+    },
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "unknown",
+     "o": {},
+     "label": "training"
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Hours vary by pool; check the city's online schedule (PROS) before going.",
+     "source": "https://www.honolulu.gov/dpr/pools-in-parks/"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.honolulu.gov/dpr/pools-in-parks/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.honolulu.gov/dpr/pools-in-parks/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-hi-kailua-kailua-district-park-pool",
+   "name": "Kailua District Park Pool",
+   "official_name": "Kailua District Park Pool",
+   "operator": "City and County of Honolulu Department of Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "HI",
+   "region": "Hawaii",
+   "city": "Kailua",
+   "address": {
+    "street": "21 South Kainalu Drive",
+    "locality": "Kailua",
+    "region": "HI",
+    "postal_code": "96734",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.honolulu.gov/dpr/pools-in-parks/",
+   "hours_fees_url": "https://pros.hnl.info",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "unknown",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Hours vary by pool; check the city's online schedule (PROS) before going.",
+     "source": "https://www.honolulu.gov/dpr/pools-in-parks/"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.honolulu.gov/dpr/pools-in-parks/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.honolulu.gov/dpr/pools-in-parks/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-hi-waipah-k-mark-takai-veterans-memorial-aquatics-center",
+   "name": "K. Mark Takai Veterans Memorial Aquatics Center",
+   "official_name": "K. Mark Takai Veterans Memorial Aquatics Center",
+   "operator": "City and County of Honolulu Department of Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "HI",
+   "region": "Hawaii",
+   "city": "Waipahū",
+   "address": {
+    "street": "94-801 Kamehameha Highway",
+    "locality": "Waipahū",
+    "region": "HI",
+    "postal_code": "96797",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.honolulu.gov/dpr/pools-in-parks/",
+   "hours_fees_url": "https://pros.hnl.info",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "unknown",
+     "o": {}
+    },
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "unknown",
+     "o": {}
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Hours vary by pool; check the city's online schedule (PROS) before going.",
+     "source": "https://www.honolulu.gov/dpr/pools-in-parks/"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.honolulu.gov/dpr/pools-in-parks/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.honolulu.gov/dpr/pools-in-parks/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

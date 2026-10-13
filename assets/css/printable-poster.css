@@ -1034,6 +1034,27 @@ footer p {
   .wwk-follow, .sidebar-follow, .wwk-follow-inline, .nav-follow { display: none !important; }
 }
 
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   NINTH HEADER LINK (Find a Pool) — 2026-10-12, WWK-POOLS-NATIONWIDE-025
+   Adding "Find a Pool" after "Find Lessons" makes the desktop link row ~100px wider. Measured before this
+   block (Chromium): the row overhung the nav rail by 46px at 1150px and 36px at 1200-1440px, and in the
+   769-1149px band the ul wrapped onto two rows at 800-834px (header 82 -> 121px). Link text is trimmed
+   slightly (padding and size only; labels, order, touch HEIGHT and wrapping behaviour unchanged) so the row
+   fits on one line beside the logo at >=1150px and keeps one row at the common tablet widths.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (min-width: 1150px) {
+  header nav .nav-links > li > a { padding: 8px 8px; font-size: 0.86rem; }
+}
+@media (min-width: 769px) and (max-width: 1149px) {
+  header nav .nav-links > li > a { padding: 8px 4px; font-size: 0.8rem; }
+}
+/* The wider row now sits on its own line under the logo up to 967px (measured; it was 936px), so the
+   "WRAPPED NAV ROW HUGS THE LEFT RAIL" centring rule is extended to the new threshold. */
+@media (min-width: 769px) and (max-width: 967px) {
+  header nav .nav-links { flex-basis: 100%; }
+}
+
 /* WWK-EDUCATORS-027 NAV FIT START
    Mirror of the main.css block for standalone poster printables (they load no main.css).
    r1: selectors include "> li > a" so they are at least as specific as any earlier nav rule in this sheet

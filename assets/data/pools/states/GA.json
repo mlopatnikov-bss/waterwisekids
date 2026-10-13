@@ -1,0 +1,668 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "GA",
+ "name": "Georgia",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ga-athens-bishop-park-pool",
+   "name": "Bishop Park Pool",
+   "official_name": "Bishop Park Pool",
+   "operator": "Athens-Clarke County Unified Government, Leisure Services",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "GA",
+   "region": "Georgia",
+   "city": "Athens",
+   "address": {
+    "street": "705 Sunset Drive",
+    "locality": "Athens",
+    "region": "GA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.accgov.com/aquatics",
+   "hours_fees_url": "https://www.accgov.com/aquatics",
+   "setting": "unknown",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only pool; it is closed until the next summer season, and closed on Mondays during the season.",
+     "source": "https://www.accgov.com/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "The pool has a set capacity, so entry can be limited on busy days.",
+     "source": "https://www.accgov.com/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "The deep end closes and new entries stop near the end of each day.",
+     "source": "https://www.accgov.com/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Admission is cash only.",
+     "source": "https://www.accgov.com/aquatics"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Swimmers must pass a swim test to use the diving boards.",
+     "source": "https://www.accgov.com/aquatics"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children may not use the pool without an adult in attendance.",
+     "source": "https://www.accgov.com/aquatics"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://www.accgov.com/aquatics"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.accgov.com/aquatics"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.accgov.com/aquatics"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.accgov.com/aquatics"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ga-atlanta-washington-park-natatorium",
+   "name": "Washington Park Natatorium",
+   "official_name": "Washington Park Natatorium",
+   "operator": "City of Atlanta Department of Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "GA",
+   "region": "Georgia",
+   "city": "Atlanta",
+   "address": {
+    "street": "102 Ollie Street NW",
+    "locality": "Atlanta",
+    "region": "GA",
+    "postal_code": "30314",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.atlantaga.gov/government/departments/department-parks-recreation/office-of-recreation/aquatics/washington-park-natatorium",
+   "hours_fees_url": "https://www.atlantaga.gov/government/departments/department-parks-recreation/office-of-recreation/aquatics/washington-park-natatorium",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "season": "unknown",
+     "o": {
+      "open_swim": "unknown",
+      "lap_swim": "unknown"
+     },
+     "label": "competition"
+    },
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     },
+     "label": "therapy"
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "The natatorium does not accept cash; bring a card, check or money order.",
+     "source": "https://www.atlantaga.gov/government/departments/department-parks-recreation/office-of-recreation/aquatics/washington-park-natatorium"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 12 and under must be accompanied by a paying adult.",
+     "source": "https://www.atlantaga.gov/government/departments/department-parks-recreation/office-of-recreation/aquatics/pools-indoor-outdoor"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.atlantaga.gov/government/departments/department-parks-recreation/office-of-recreation/aquatics/pools-indoor-outdoor",
+     "https://www.atlantaga.gov/government/departments/department-parks-recreation/office-of-recreation/aquatics/washington-park-natatorium"
+    ],
+    "season": [],
+    "access": {
+     "members": [
+      "https://www.atlantaga.gov/government/departments/department-parks-recreation/office-of-recreation/aquatics/washington-park-natatorium"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.atlantaga.gov/government/departments/department-parks-recreation/office-of-recreation/aquatics/washington-park-natatorium"
+     ],
+     "lap_swim": [
+      "https://www.atlantaga.gov/government/departments/department-parks-recreation/office-of-recreation/aquatics/washington-park-natatorium"
+     ],
+     "lessons": [
+      "https://www.atlantaga.gov/government/departments/department-parks-recreation/office-of-recreation/aquatics/washington-park-natatorium"
+     ]
+    },
+    "address": [
+     "https://www.atlantaga.gov/government/departments/department-parks-recreation/office-of-recreation/aquatics/washington-park-natatorium"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ga-berkeley-lake-west-gwinnett-park-aquatic-center",
+   "name": "West Gwinnett Park Aquatic Center",
+   "official_name": "West Gwinnett Park Aquatic Center",
+   "operator": "Gwinnett County Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "GA",
+   "region": "Georgia",
+   "city": "Berkeley Lake",
+   "address": {
+    "street": "4488 Peachtree Industrial Boulevard",
+    "locality": "Berkeley Lake",
+    "region": "GA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.gwinnettcounty.com/government/departments/parks-recreation/parks/west-gwinnett/aquatic-center",
+   "hours_fees_url": "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/fun-card",
+   "setting": "both",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "year_round",
+     "o": {},
+     "label": "lap"
+    },
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "year_round",
+     "o": {},
+     "label": "instructional"
+    },
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {},
+     "label": "leisure"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Anyone can pay daily admission; people who live outside Gwinnett County pay a higher non-resident rate.",
+     "source": "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/fun-card"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Groups from outside Gwinnett County may only enter in the late afternoon.",
+     "source": "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/safety-rules"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "dates",
+     "text": "The outdoor leisure pool is summer-only and is closed for the season now.",
+     "source": "https://www.gwinnettcounty.com/government/departments/parks-recreation/parks/west-gwinnett/aquatic-center"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 6 and younger must be with a paying adult (18+) in a swimsuit, within arm's reach.",
+     "source": "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/safety-rules"
+    },
+    {
+     "text": "Children 7 to 10 must be with a paying adult (18+) in a swimsuit, with one adult per ten children.",
+     "source": "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/safety-rules"
+    },
+    {
+     "text": "Non-swimmers and children in life vests must always be accompanied.",
+     "source": "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/safety-rules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.gwinnettcounty.com/government/departments/parks-recreation/parks/west-gwinnett/aquatic-center"
+    ],
+    "season": [
+     "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics",
+     "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/fun-card",
+     "https://www.gwinnettcounty.com/government/departments/parks-recreation/parks/west-gwinnett/aquatic-center"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/fun-card"
+     ],
+     "day_pass": [
+      "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/fun-card"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.gwinnettcounty.com/government/departments/parks-recreation/parks/west-gwinnett/aquatic-center"
+     ]
+    },
+    "address": [
+     "https://www.gwinnettcounty.com/government/departments/parks-recreation/parks/west-gwinnett/aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ga-lawrenceville-rhodes-jordan-park-pool",
+   "name": "Rhodes Jordan Park Pool",
+   "official_name": "Rhodes Jordan Park Pool",
+   "operator": "Gwinnett County Parks and Recreation",
+   "facility_type": "county",
+   "country": "US",
+   "state": "GA",
+   "region": "Georgia",
+   "city": "Lawrenceville",
+   "address": {
+    "street": "100 East Crogan Street",
+    "locality": "Lawrenceville",
+    "region": "GA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.gwinnettcounty.com/government/departments/parks-recreation/parks/rhodes-jordan/pool",
+   "hours_fees_url": "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/fun-card",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     },
+     "label": "leisure"
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Anyone can pay daily admission; people who live outside Gwinnett County pay a higher non-resident rate.",
+     "source": "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/fun-card"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Groups from outside Gwinnett County may only enter in the late afternoon.",
+     "source": "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/safety-rules"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "This is a seasonal summer pool and is closed for the season now.",
+     "source": "https://www.gwinnettcounty.com/government/departments/parks-recreation/parks/rhodes-jordan/pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 6 and younger must be with a paying adult (18+) in a swimsuit, within arm's reach.",
+     "source": "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/safety-rules"
+    },
+    {
+     "text": "Children 7 to 10 must be with a paying adult (18+) in a swimsuit, with one adult per ten children.",
+     "source": "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/safety-rules"
+    },
+    {
+     "text": "Non-swimmers and children in life vests must always be accompanied.",
+     "source": "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/safety-rules"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.gwinnettcounty.com/government/departments/parks-recreation/parks/rhodes-jordan/pool"
+    ],
+    "season": [
+     "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics",
+     "https://www.gwinnettcounty.com/government/departments/parks-recreation/parks/rhodes-jordan/pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/fun-card"
+     ],
+     "day_pass": [
+      "https://www.gwinnettcounty.com/government/departments/parks-recreation/aquatics/fun-card"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.gwinnettcounty.com/government/departments/parks-recreation/parks/rhodes-jordan/pool"
+     ]
+    },
+    "address": [
+     "https://www.gwinnettcounty.com/government/departments/parks-recreation/parks/rhodes-jordan/pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ga-savannah-chatham-county-aquatic-center",
+   "name": "Chatham County Aquatic Center",
+   "official_name": "Chatham County Aquatic Center",
+   "operator": "Chatham County Parks and Recreation",
+   "facility_type": "aquatic_center",
+   "country": "US",
+   "state": "GA",
+   "region": "Georgia",
+   "city": "Savannah",
+   "address": {
+    "street": "7240 Sallie Mood Drive",
+    "locality": "Savannah",
+    "region": "GA",
+    "postal_code": "31406",
+    "precision": "street_number"
+   },
+   "official_url": "https://aquatic.chathamcountyga.gov/",
+   "hours_fees_url": "https://aquatic.chathamcountyga.gov/Resources/AdmissionRates",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "lap_swim": "public"
+     },
+     "label": "lap"
+    },
+    {
+     "s": "unknown",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public"
+     },
+     "label": "recreation"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "year_round",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Children 15 and under must be supervised by someone 18 or older, who may need to show proof of age.",
+     "source": "https://parks.chathamcountyga.gov/parks/park/aquatic-center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "All swimmers check in at the front desk first, and recreational swimmers may be given wristbands.",
+     "source": "https://aquatic.chathamcountyga.gov/Resources/KnowBeforeYouGo"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Swimmers 15 and younger must be accompanied and supervised by someone at least 18 (with proof of age).",
+     "source": "https://aquatic.chathamcountyga.gov/Resources/KnowBeforeYouGo"
+    },
+    {
+     "text": "Children 3 and younger must have an adult with them in the pool.",
+     "source": "https://aquatic.chathamcountyga.gov/Resources/KnowBeforeYouGo"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap swimmers must share lanes when it is busy; the center suggests coming at slow times.",
+      "source": "https://aquatic.chathamcountyga.gov/"
+     }
+    ],
+    "lessons": [
+     {
+      "text": "Group lessons need advance registration, which opens monthly.",
+      "source": "https://aquatic.chathamcountyga.gov/Programs/SwimLessonsGroup"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [
+     "https://aquatic.chathamcountyga.gov/Programs/SwimLessonsGroup"
+    ],
+    "access": {
+     "public_admission": [
+      "https://aquatic.chathamcountyga.gov/Resources/AdmissionRates"
+     ],
+     "day_pass": [
+      "https://aquatic.chathamcountyga.gov/Resources/AdmissionRates"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://aquatic.chathamcountyga.gov/",
+      "https://aquatic.chathamcountyga.gov/Resources/KnowBeforeYouGo"
+     ],
+     "lap_swim": [
+      "https://aquatic.chathamcountyga.gov/",
+      "https://aquatic.chathamcountyga.gov/Resources/KnowBeforeYouGo"
+     ],
+     "lessons": [
+      "https://aquatic.chathamcountyga.gov/Programs/SwimLessonsGroup"
+     ]
+    },
+    "address": [
+     "https://parks.chathamcountyga.gov/parks/park/aquatic-center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

@@ -1,0 +1,550 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "MA",
+ "name": "Massachusetts",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-ma-cambridge-gold-star-mothers-pool",
+   "name": "Gold Star Mothers Pool (Gold Star Pool)",
+   "official_name": "Gold Star Mothers Pool (Gold Star Pool)",
+   "operator": "City of Cambridge Department of Human Service Programs, Recreation Division",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "MA",
+   "region": "Massachusetts",
+   "city": "Cambridge",
+   "address": {
+    "street": "123 Berkshire Street",
+    "locality": "Cambridge",
+    "region": "MA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cambridgema.gov/Services/recgoldstarpool",
+   "hours_fees_url": "https://www.cambridgema.gov/Services/recgoldstarpool",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "unknown",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "unknown"
+     }
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "residents",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Open swim is described for Cambridge residents; the city does not say non-residents may swim.",
+     "source": "https://www.cambridgema.gov/Services/recgoldstarpool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Entry can stop when the pool reaches its legal capacity.",
+     "source": "https://www.cambridgema.gov/Services/recgoldstarpool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer season only; the pool is closed for the rest of the year.",
+     "source": "https://www.cambridgema.gov/services/recpoolsandswimming"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Swimmies, tubes and other flotation devices are not allowed in the pool.",
+     "source": "https://www.cambridgema.gov/Services/recgoldstarpool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 12 and under must come with an adult (18 or older) who stays with them in the water.",
+     "source": "https://www.cambridgema.gov/Services/recgoldstarpool"
+    },
+    {
+     "text": "Children who are not toilet trained must wear a swim diaper.",
+     "source": "https://www.cambridgema.gov/Services/recgoldstarpool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.cambridgema.gov/services/recpoolsandswimming"
+    ],
+    "season": [
+     "https://www.cambridgema.gov/Services/recgoldstarpool",
+     "https://www.cambridgema.gov/services/recpoolsandswimming"
+    ],
+    "access": {
+     "residents": [
+      "https://www.cambridgema.gov/Services/recgoldstarpool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.cambridgema.gov/Services/recgoldstarpool"
+     ],
+     "lap_swim": [],
+     "lessons": []
+    },
+    "address": [
+     "https://www.cambridgema.gov/Services/recgoldstarpool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ma-cambridge-war-memorial-recreation-center-pools",
+   "name": "War Memorial Recreation Center Pools",
+   "official_name": "War Memorial Recreation Center Pools",
+   "operator": "City of Cambridge Department of Human Service Programs, Recreation Division",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "MA",
+   "region": "Massachusetts",
+   "city": "Cambridge",
+   "address": {
+    "street": "1640 Cambridge St. (Door 15)",
+    "locality": "Cambridge",
+    "region": "MA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.cambridgema.gov/Services/recwarmemorialrecreationcenter",
+   "hours_fees_url": "https://www.cambridgema.gov/-/media/Files/DHSP/Recreation/programbrochures/warmemorialbrochurefall.pdf",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "The public can swim only during the scheduled Family Swim and Adult Lap Swim sessions, so check the current pool schedule first.",
+     "source": "https://www.cambridgema.gov/services/recpoolsandswimming"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Pool passes are sold in person at the center, not online.",
+     "source": "https://www.cambridgema.gov/Services/recwarmemorialrecreationcenter"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Children must pass a swim test before using the lap pool or the diving tank.",
+     "source": "https://www.cambridgema.gov/Services/recwarmemorialrecreationcenter"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The center closes on several holidays and over the winter break; check the closure dates in the current brochure before going.",
+     "source": "https://www.cambridgema.gov/-/media/Files/DHSP/Recreation/programbrochures/warmemorialbrochurefall.pdf"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied by an adult during family swim.",
+     "source": "https://www.cambridgema.gov/-/media/Files/DHSP/Recreation/programbrochures/warmemorialbrochurefall.pdf"
+    },
+    {
+     "text": "Children must pass a swim test before using the lap pool or diving tank.",
+     "source": "https://www.cambridgema.gov/Services/recwarmemorialrecreationcenter"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Arm floaties are allowed only in the shallow instructional pool and must be Coast Guard approved.",
+      "source": "https://www.cambridgema.gov/Services/recwarmemorialrecreationcenter"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.cambridgema.gov/services/recpoolsandswimming"
+    ],
+    "season": [
+     "https://www.cambridgema.gov/services/recpoolsandswimming"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.cambridgema.gov/-/media/Files/DHSP/Recreation/programbrochures/warmemorialbrochurefall.pdf",
+      "https://www.cambridgema.gov/services/recpoolsandswimming"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.cambridgema.gov/Services/recwarmemorialrecreationcenter",
+      "https://www.cambridgema.gov/services/recpoolsandswimming"
+     ],
+     "lap_swim": [
+      "https://www.cambridgema.gov/services/recpoolsandswimming"
+     ],
+     "lessons": [
+      "https://www.cambridgema.gov/-/media/Files/DHSP/Recreation/programbrochures/warmemorialbrochurefall.pdf"
+     ]
+    },
+    "address": [
+     "https://www.cambridgema.gov/Services/recwarmemorialrecreationcenter"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ma-newton-newtonville-gath-memorial-pool",
+   "name": "Gath Memorial Pool",
+   "official_name": "Gath Memorial Pool",
+   "operator": "City of Newton Parks, Recreation & Culture Department",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "MA",
+   "region": "Massachusetts",
+   "city": "Newton (Newtonville)",
+   "address": {
+    "street": "256 Albemarle Road",
+    "locality": "Newton (Newtonville)",
+    "region": "MA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool",
+   "hours_fees_url": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 12 must be with an adult at all times; children 12 and older may enter on their own.",
+     "source": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "ticket",
+     "text": "Everyone entering needs a summer membership or a day pass bought at the front desk.",
+     "source": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Bring ID showing a Newton address to get the resident day-pass rate.",
+     "source": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "swim_test",
+     "text": "Children must pass a deep-water test before using the diving boards.",
+     "source": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+    },
+    {
+     "applies_to": "outdoor",
+     "kind": "other",
+     "text": "Riders must be at least 44 inches tall to use the water slide.",
+     "source": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer season only; the pool is closed until next summer.",
+     "source": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied by an adult at all times.",
+     "source": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+    },
+    {
+     "text": "A child wearing a life jacket must be accompanied by a parent or guardian.",
+     "source": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Children in summer swim lessons also need a summer pool membership.",
+      "source": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+    ],
+    "season": [
+     "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+    ],
+    "access": {
+     "day_pass": [
+      "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+     ],
+     "members": [
+      "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool",
+      "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/swimming-lessons"
+     ]
+    },
+    "address": [
+     "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/gath-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-ma-sudbury-atkinson-pool",
+   "name": "Atkinson Pool",
+   "official_name": "Atkinson Pool",
+   "operator": "Town of Sudbury Park and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "MA",
+   "region": "Massachusetts",
+   "city": "Sudbury",
+   "address": {
+    "street": "40 Fairbank Road",
+    "locality": "Sudbury",
+    "region": "MA",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.sudbury.ma.us/atkinsonpool/",
+   "hours_fees_url": "https://sudburyma.myrec.com/info/activities/program_details.aspx?ProgramID=30890",
+   "setting": "unknown",
+   "season": "unknown",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "unknown",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "lap_swim": "public",
+      "open_swim": "public"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "ticket",
+     "text": "Day passes cover weekday access only; weekend swimming needs a separate reservation.",
+     "source": "https://sudburyma.myrec.com/info/activities/program_details.aspx?ProgramID=30890"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool is closed on all legal holidays.",
+     "source": "https://sudburyma.myrec.com/info/activities/program_details.aspx?ProgramID=30890"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Check in at the Parks and Recreation front desk before entering the pool.",
+     "source": "https://sudburyma.myrec.com/info/activities/program_details.aspx?ProgramID=30890"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Family swim does not reserve a lane for one family, so space may need to be shared.",
+      "source": "https://sudburyma.myrec.com/info/activities/program_details.aspx?ProgramID=30935"
+     }
+    ],
+    "lap_swim": [
+     {
+      "text": "The weekday drop-in day pass is for swimmers aged 14 and up.",
+      "source": "https://sudburyma.myrec.com/info/activities/program_details.aspx?ProgramID=30890"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [],
+    "season": [],
+    "access": {
+     "day_pass": [
+      "https://sudburyma.myrec.com/info/activities/program_details.aspx?ProgramID=30890",
+      "https://www.sudbury.ma.us/atkinsonpool/"
+     ],
+     "members": [
+      "https://sudburyma.myrec.com/info/activities/program_details.aspx?ProgramID=30890",
+      "https://www.sudbury.ma.us/atkinsonpool/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://sudburyma.myrec.com/info/activities/program_details.aspx?ProgramID=30935"
+     ],
+     "lap_swim": [
+      "https://sudburyma.myrec.com/info/activities/program_details.aspx?ProgramID=30890"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.sudbury.ma.us/atkinsonpool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

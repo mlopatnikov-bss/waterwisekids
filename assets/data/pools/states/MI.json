@@ -1,0 +1,656 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "MI",
+ "name": "Michigan",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-mi-ann-arbor-fuller-park-pool",
+   "name": "Fuller Park Pool",
+   "official_name": "Fuller Park Pool",
+   "operator": "City of Ann Arbor Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "MI",
+   "region": "Michigan",
+   "city": "Ann Arbor",
+   "address": {
+    "street": "1519 Fuller Road",
+    "locality": "Ann Arbor",
+    "region": "MI",
+    "postal_code": "48105",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/",
+   "hours_fees_url": "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Summer-only outdoor pool; the 2026 season ended Sept. 20.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 12 must be accompanied by someone 16 or older.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Children under 12 must pass a deep-end test to use the deep end.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Groups of more than 10 people cannot be accommodated.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool closes for thunder and lightning.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied by someone age 16 or older.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+    },
+    {
+     "text": "Children under 12 must pass a deep-end test before swimming in the deep end.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+    },
+    {
+     "text": "The wading pool is for children 7 and under, accompanied by a parent or guardian.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.a2gov.org/parks-and-recreation/activities/outdoor-pools/",
+     "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+    ],
+    "season": [
+     "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+     ],
+     "lap_swim": [
+      "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+     ],
+     "lessons": [
+      "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+     ]
+    },
+    "address": [
+     "https://www.a2gov.org/parks-and-recreation/parks-and-places/fuller-park-outdoor-pool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-mi-ann-arbor-mack-indoor-pool",
+   "name": "Mack Indoor Pool",
+   "official_name": "Mack Indoor Pool",
+   "operator": "City of Ann Arbor Parks and Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "MI",
+   "region": "Michigan",
+   "city": "Ann Arbor",
+   "address": {
+    "street": "715 Brooks Street",
+    "locality": "Ann Arbor",
+    "region": "MI",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/",
+   "hours_fees_url": "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/",
+   "setting": "indoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "The indoor pool operates only during its fall-to-spring season (late September through April).",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The pool is closed on several listed holidays.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 12 must be accompanied by someone 16 or older.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "Children under 12 must pass a deep-end test to use the deep end.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "The pool is located inside a school building (Ann Arbor Open School).",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 12 must be accompanied by someone age 16 or older.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+    },
+    {
+     "text": "Children under 12 must pass a deep-end test before swimming in the deep end.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+    },
+    {
+     "text": "The wading (tot) pool is for children 7 and under, accompanied and actively supervised by a parent or guardian.",
+     "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Public swim is limited to posted public swim sessions.",
+      "source": "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+    ],
+    "season": [
+     "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+     ],
+     "lap_swim": [
+      "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+     ],
+     "lessons": [
+      "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+     ]
+    },
+    "address": [
+     "https://www.a2gov.org/parks-and-recreation/parks-and-places/mack-indoor-pool/"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-mi-dearborn-dunworth-pool",
+   "name": "Dunworth Pool (Levagood Park)",
+   "official_name": "Dunworth Pool (Levagood Park)",
+   "operator": "City of Dearborn Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "MI",
+   "region": "Michigan",
+   "city": "Dearborn",
+   "address": {
+    "street": "801 N Denwood St",
+    "locality": "Dearborn",
+    "region": "MI",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://dearborn.gov/pools",
+   "hours_fees_url": "https://dearborn.gov/pools",
+   "setting": "outdoor",
+   "season": "unknown",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Closed for the season now.",
+     "source": "https://dearborn.gov/pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "id",
+     "text": "Buying a seasonal swim tag requires photo ID and proof of residency for anyone 14 and over.",
+     "source": "https://dearborn.gov/pools"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lessons": [
+     {
+      "text": "Outdoor swim lessons also require a seasonal swim tag.",
+      "source": "https://dearborn.gov/swim-lessons-and-classes"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://dearborn.gov/pools"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://dearborn.gov/pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://dearborn.gov/swim-lessons-and-classes"
+     ]
+    },
+    "address": [
+     "https://dearborn.gov/pools"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-mi-dearborn-ford-community-performing-arts-center",
+   "name": "Ford Community & Performing Arts Center",
+   "official_name": "Ford Community & Performing Arts Center (Lap & Leisure Pools)",
+   "operator": "City of Dearborn Parks & Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "MI",
+   "region": "Michigan",
+   "city": "Dearborn",
+   "address": {
+    "street": "15801 Michigan Ave.",
+    "locality": "Dearborn",
+    "region": "MI",
+    "postal_code": "48126",
+    "precision": "street_number"
+   },
+   "official_url": "https://dearborn.gov/thecenter",
+   "hours_fees_url": "https://dearborn.gov/thecenter",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "season": "unknown",
+     "o": {
+      "open_swim": "unknown",
+      "lap_swim": "unknown",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "unknown",
+   "open_to_public": false,
+   "access_details": [
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children under 10 require supervision by a responsible adult at all times.",
+     "source": "https://dearborn.gov/sites/default/files/2024-06/Dearborn%20General_Pool_Rules.pdf"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Seasonal outdoor swim tags do not cover the indoor pools.",
+     "source": "https://dearborn.gov/pools"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children under 10 require supervision by a responsible adult at all times; the adult must accompany the child, including in the water.",
+     "source": "https://dearborn.gov/sites/default/files/2024-06/Dearborn%20General_Pool_Rules.pdf"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap lanes require swimmers to be 18 or older or hold a lap card.",
+      "source": "https://dearborn.gov/sites/default/files/2024-06/Dearborn%20General_Pool_Rules.pdf"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://dearborn.gov/pools",
+     "https://dearborn.gov/sites/default/files/2026-06/Dearborn%20Lap%20%26%20Leisure%20Pool%20Schedule%20June%202026.pdf"
+    ],
+    "season": [],
+    "access": {
+     "members": [
+      "https://dearborn.gov/thecenter"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://dearborn.gov/sites/default/files/2026-06/Dearborn%20Lap%20%26%20Leisure%20Pool%20Schedule%20June%202026.pdf"
+     ],
+     "lap_swim": [
+      "https://dearborn.gov/sites/default/files/2024-06/Dearborn%20General_Pool_Rules.pdf",
+      "https://dearborn.gov/sites/default/files/2026-06/Dearborn%20Lap%20%26%20Leisure%20Pool%20Schedule%20June%202026.pdf"
+     ],
+     "lessons": [
+      "https://dearborn.gov/swim-lessons-and-classes"
+     ]
+    },
+    "address": [
+     "https://dearborn.gov/thecenter"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-mi-troy-troy-community-center-indoor-pool",
+   "name": "Troy Community Center Indoor Pool",
+   "official_name": "Troy Community Center Indoor Pool",
+   "operator": "City of Troy Recreation Department",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "MI",
+   "region": "Michigan",
+   "city": "Troy",
+   "address": {
+    "street": "3179 Livernois",
+    "locality": "Troy",
+    "region": "MI",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://rec.troymi.gov/fitness___swim/fitness_center/indoor_pool.php",
+   "hours_fees_url": "https://rec.troymi.gov/about/hours.php",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "day_pass",
+    "members"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     },
+     "label": "leisure"
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "day_pass",
+     "conditions": []
+    },
+    {
+     "type": "members",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "hours",
+     "text": "Drop-in swimming is only during posted open, lap and kiddie swim times; the pool may be in use for registered programs.",
+     "source": "https://rec.troymi.gov/about/hours.php"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 6 and under must be within arm's length of someone 16 or older in the water.",
+     "source": "https://rec.troymi.gov/fitness___swim/fitness_center/indoor_pool.php"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "age",
+     "text": "Children 7 to 10 must have an adult in the pool area at all times.",
+     "source": "https://rec.troymi.gov/fitness___swim/fitness_center/indoor_pool.php"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Slides require a height of 42 inches or taller.",
+     "source": "https://rec.troymi.gov/fitness___swim/fitness_center/indoor_pool.php"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "Children 6 and under must be directly supervised in the water, within arm's length, by someone 16 or older.",
+     "source": "https://rec.troymi.gov/fitness___swim/fitness_center/indoor_pool.php"
+    },
+    {
+     "text": "Children 7 to 10 must have an adult in the pool area at all times.",
+     "source": "https://rec.troymi.gov/fitness___swim/fitness_center/indoor_pool.php"
+    },
+    {
+     "text": "Kiddie Swim (shallow area only) is for ages 6 and under.",
+     "source": "https://rec.troymi.gov/about/hours.php"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap lanes are for adults 18 and up unless a posted time says otherwise.",
+      "source": "https://rec.troymi.gov/about/hours.php"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://rec.troymi.gov/fitness___swim/fitness_center/indoor_pool.php",
+     "https://rec.troymi.gov/parks___facilities/troy_community_center/index.php"
+    ],
+    "season": [],
+    "access": {
+     "day_pass": [
+      "https://rec.troymi.gov/about/hours.php",
+      "https://rec.troymi.gov/fitness___swim/fitness_center/indoor_pool.php"
+     ],
+     "members": [
+      "https://rec.troymi.gov/about/hours.php",
+      "https://rec.troymi.gov/fitness___swim/fitness_center/indoor_pool.php"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://rec.troymi.gov/about/hours.php"
+     ],
+     "lap_swim": [
+      "https://rec.troymi.gov/about/hours.php"
+     ],
+     "lessons": [
+      "https://rec.troymi.gov/fitness___swim/fitness_center/indoor_pool.php"
+     ]
+    },
+    "address": [
+     "https://rec.troymi.gov/parks___facilities/troy_community_center/index.php"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}

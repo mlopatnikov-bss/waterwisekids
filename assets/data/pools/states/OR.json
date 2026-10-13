@@ -1,0 +1,672 @@
+{
+ "schema": "wwk-pools/1",
+ "generated": "2026-10-12",
+ "state": "OR",
+ "name": "Oregon",
+ "about": "WaterWiseKids Find a Pool: a starting list of family swimming pools in all 50 states and Washington, DC. Each record was checked on the operator's own website on the date shown. Unknown means the operator does not state it - not \"no\". Hours and fees change: follow hours_fees_url. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "fields": {
+  "setting": [
+   "indoor",
+   "outdoor",
+   "both",
+   "unknown"
+  ],
+  "season": [
+   "year_round",
+   "seasonal",
+   "unknown"
+  ],
+  "components": "one entry per physical pool at the venue: s = indoor|outdoor|unknown (pool not specified), e = entry eligibility (open|conditional|unknown|restricted; null = component only carries offerings), season, o = {offering: public|members|unknown}. Filters match a single component, never a combination of different pools or access arrangements.",
+  "public_access": {
+   "open": "public admission or non-member day pass, no material limit stated",
+   "unknown": "a pass or membership exists but no official source says non-members may use the pool - not verified public access",
+   "conditional": "public admission or non-member day pass with a stated limit (dates, hours, tickets, eligibility) - see access_details / conditions",
+   "restricted": "members, residents or guests of members only"
+  },
+  "conditions": "records added in WWK-POOLS-NATIONWIDE-025: limits a parent must know (dates, residency, tickets, escort, age, ID, swim test, capacity, closures, hours) with applies_to venue|indoor|outdoor; offering-specific ones are in offering_details",
+  "address_precision": [
+   "street_number",
+   "street",
+   "park"
+  ],
+  "postal_code": "null when the operator page does not print the ZIP with the street",
+  "access": [
+   "public_admission",
+   "day_pass",
+   "residents",
+   "members",
+   "hotel_guests",
+   "program_registration_only"
+  ],
+  "offerings": [
+   "yes",
+   "unknown"
+  ]
+ },
+ "venues": [
+  {
+   "id": "us-or-beaverton-conestoga-recreation-aquatic-center",
+   "name": "Conestoga Recreation & Aquatic Center",
+   "official_name": "Conestoga Recreation & Aquatic Center",
+   "operator": "Tualatin Hills Park & Recreation District",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "OR",
+   "region": "Oregon",
+   "city": "Beaverton",
+   "address": {
+    "street": "9985 SW 125th Avenue",
+    "locality": "Beaverton",
+    "region": "OR",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.tualatinhillsparks.org/173/Conestoga-Recreation-Aquatic-Center",
+   "hours_fees_url": "https://www.tualatinhillsparks.org/173/Conestoga-Recreation-Aquatic-Center",
+   "setting": "indoor",
+   "season": "unknown",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "open",
+     "season": "unknown",
+     "o": {
+      "open_swim": "public"
+     },
+     "label": "leisure"
+    },
+    {
+     "s": "indoor",
+     "e": "unknown",
+     "season": "unknown",
+     "o": {},
+     "label": "lap"
+    },
+    {
+     "s": "unknown",
+     "e": null,
+     "season": "unknown",
+     "o": {
+      "lessons": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Anyone may use THPRD programs; people living outside the park district pay a 25% premium or a quarterly assessment fee.",
+     "source": "https://www.thprd.org/activities/am-i-in-district"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "Closed on some holidays, with modified hours on others; check the posted holiday hours.",
+     "source": "https://www.tualatinhillsparks.org/173/Conestoga-Recreation-Aquatic-Center"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.tualatinhillsparks.org/173/Conestoga-Recreation-Aquatic-Center"
+    ],
+    "season": [],
+    "access": {
+     "public_admission": [
+      "https://www.thprd.org/activities/am-i-in-district",
+      "https://www.tualatinhillsparks.org/173/Conestoga-Recreation-Aquatic-Center"
+     ],
+     "day_pass": [
+      "https://www.thprd.org/activities/am-i-in-district",
+      "https://www.tualatinhillsparks.org/173/Conestoga-Recreation-Aquatic-Center"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.tualatinhillsparks.org/173/Conestoga-Recreation-Aquatic-Center"
+     ],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.thprd.org/activities/am-i-in-district",
+      "https://www.tualatinhillsparks.org/173/Conestoga-Recreation-Aquatic-Center"
+     ]
+    },
+    "address": [
+     "https://www.tualatinhillsparks.org/173/Conestoga-Recreation-Aquatic-Center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-or-portland-matt-dishman-indoor-pool",
+   "name": "Matt Dishman Indoor Pool",
+   "official_name": "Matt Dishman Indoor Pool",
+   "operator": "Portland Parks & Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "OR",
+   "region": "Oregon",
+   "city": "Portland",
+   "address": {
+    "street": "77 NE Knott Street",
+    "locality": "Portland",
+    "region": "OR",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.portland.gov/parks/matt-dishman-indoor-pool",
+   "hours_fees_url": "https://www.portland.gov/parks/pools",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission",
+    "residents"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "residents",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "During play swims, swimmers must pass a swim test and wear a wristband to use the deep end or lap pool; life jackets are not allowed there.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Admission is first-come, first-served and pool capacity is limited.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "The North Portland Pass is available only to North Portland residents.",
+     "source": "https://www.portland.gov/parks/matt-dishman-indoor-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "All children under 10 must be accompanied by an adult or responsible person over 16 in the facility at all times.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "text": "Infants, toddlers, weak swimmers and children under 48 inches must be supervised in the water, within arm's reach, by someone 16 or older.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "text": "Swimmers using a life jacket must have a guardian 16 or older in the same water within arm's reach.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "text": "Children who are not toilet trained must wear an approved swim diaper.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "text": "During Family Swim, children under 16 must be supervised by a caregiver in the water.",
+     "source": "https://www.portland.gov/parks/matt-dishman-indoor-pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "open_swim": [
+     {
+      "text": "Weekday family and open swims use the shallow bay only; the diving board and deep end open only during weekend open swims.",
+      "source": "https://www.portland.gov/parks/matt-dishman-indoor-pool"
+     },
+     {
+      "text": "There is no open or family swim on several fall dates; check the posted schedule.",
+      "source": "https://www.portland.gov/parks/matt-dishman-indoor-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.portland.gov/parks/matt-dishman-indoor-pool"
+    ],
+    "season": [
+     "https://www.portland.gov/parks/matt-dishman-indoor-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.portland.gov/parks/pools"
+     ],
+     "residents": [
+      "https://www.portland.gov/parks/pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.portland.gov/parks/matt-dishman-indoor-pool",
+      "https://www.portland.gov/parks/pools"
+     ],
+     "lap_swim": [
+      "https://www.portland.gov/parks/matt-dishman-indoor-pool"
+     ],
+     "lessons": [
+      "https://www.portland.gov/parks/matt-dishman-indoor-pool"
+     ]
+    },
+    "address": [
+     "https://www.portland.gov/parks/matt-dishman-indoor-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-or-portland-montavilla-outdoor-pool",
+   "name": "Montavilla Outdoor Pool",
+   "official_name": "Montavilla Outdoor Pool",
+   "operator": "Portland Parks & Recreation",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "OR",
+   "region": "Oregon",
+   "city": "Portland",
+   "address": {
+    "street": "8219 NE Glisan Street",
+    "locality": "Portland",
+    "region": "OR",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.portland.gov/parks/montavilla-outdoor-pool",
+   "hours_fees_url": "https://www.portland.gov/parks/pools",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "conditional",
+     "season": "seasonal",
+     "o": {
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "During play swims, swimmers must pass a swim test and wear a wristband to use the deep end or lap pool; life jackets are not allowed there.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Admission is first-come, first-served and pool capacity is limited.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Open only in summer (June to August); closed now and scheduled to reopen in June 2027.",
+     "source": "https://www.portland.gov/parks/montavilla-outdoor-pool"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Everyone on the pool deck must pay admission, even if not swimming.",
+     "source": "https://www.portland.gov/parks/montavilla-outdoor-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "All children under 10 must be accompanied by an adult or responsible person over 16 in the facility at all times.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "text": "Infants, toddlers, weak swimmers and children under 48 inches must be supervised in the water, within arm's reach, by someone 16 or older.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "text": "Swimmers using a life jacket must have a guardian 16 or older in the same water within arm's reach.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "text": "Children who are not toilet trained must wear an approved swim diaper.",
+     "source": "https://www.portland.gov/parks/pools"
+    }
+   ],
+   "offerings": {
+    "open_swim": "unknown",
+    "lap_swim": "unknown",
+    "lessons": "yes"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.portland.gov/parks/montavilla-outdoor-pool"
+    ],
+    "season": [
+     "https://www.portland.gov/parks/montavilla-outdoor-pool",
+     "https://www.portland.gov/parks/pools"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.portland.gov/parks/montavilla-outdoor-pool",
+      "https://www.portland.gov/parks/pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [],
+     "lap_swim": [],
+     "lessons": [
+      "https://www.portland.gov/parks/montavilla-outdoor-pool"
+     ]
+    },
+    "address": [
+     "https://www.portland.gov/parks/montavilla-outdoor-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-or-portland-mt-scott-indoor-pool",
+   "name": "Mt. Scott Indoor Pool",
+   "official_name": "Mt. Scott Indoor Pool",
+   "operator": "Portland Parks & Recreation",
+   "facility_type": "community_center",
+   "country": "US",
+   "state": "OR",
+   "region": "Oregon",
+   "city": "Portland",
+   "address": {
+    "street": "5530 SE 72nd Avenue",
+    "locality": "Portland",
+    "region": "OR",
+    "postal_code": null,
+    "precision": "street_number"
+   },
+   "official_url": "https://www.portland.gov/parks/mt-scott-indoor-pool",
+   "hours_fees_url": "https://www.portland.gov/parks/pools",
+   "setting": "indoor",
+   "season": "year_round",
+   "access": [
+    "public_admission"
+   ],
+   "components": [
+    {
+     "s": "indoor",
+     "e": "conditional",
+     "season": "year_round",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public",
+      "lessons": "unknown"
+     }
+    }
+   ],
+   "public_access": "conditional",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "swim_test",
+     "text": "During play swims, swimmers must pass a swim test and wear a wristband to use the deep end or lap pool; life jackets are not allowed there.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "capacity",
+     "text": "Admission is first-come, first-served and pool capacity is limited.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "closure",
+     "text": "The water slide is temporarily closed for repairs.",
+     "source": "https://www.portland.gov/parks/mt-scott-indoor-pool"
+    }
+   ],
+   "child_rules": [
+    {
+     "text": "All children under 10 must be accompanied by an adult or responsible person over 16 in the facility at all times.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "text": "Infants, toddlers, weak swimmers and children under 48 inches must be supervised in the water, within arm's reach, by someone 16 or older.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "text": "Swimmers using a life jacket must have a guardian 16 or older in the same water within arm's reach.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "text": "Children who are not toilet trained must wear an approved swim diaper.",
+     "source": "https://www.portland.gov/parks/pools"
+    },
+    {
+     "text": "During Family Swim, children under 16 must be supervised by a caregiver in the water.",
+     "source": "https://www.portland.gov/parks/mt-scott-indoor-pool"
+    }
+   ],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "yes"
+   },
+   "offering_details": {
+    "lap_swim": [
+     {
+      "text": "Lap lane numbers vary; at least one or two lanes are always set aside for lap swim.",
+      "source": "https://www.portland.gov/parks/mt-scott-indoor-pool"
+     }
+    ]
+   },
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.portland.gov/parks/mt-scott-indoor-pool"
+    ],
+    "season": [
+     "https://www.portland.gov/parks/mt-scott-indoor-pool"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.portland.gov/parks/pools"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.portland.gov/parks/mt-scott-indoor-pool",
+      "https://www.portland.gov/parks/pools"
+     ],
+     "lap_swim": [
+      "https://www.portland.gov/parks/mt-scott-indoor-pool"
+     ],
+     "lessons": [
+      "https://www.portland.gov/parks/mt-scott-indoor-pool"
+     ]
+    },
+    "address": [
+     "https://www.portland.gov/parks/mt-scott-indoor-pool"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  },
+  {
+   "id": "us-or-portland-raleigh-swim-center",
+   "name": "Raleigh Swim Center",
+   "official_name": "Raleigh Swim Center",
+   "operator": "Tualatin Hills Park & Recreation District",
+   "facility_type": "municipal",
+   "country": "US",
+   "state": "OR",
+   "region": "Oregon",
+   "city": "Portland",
+   "address": {
+    "street": "3500 SW 78th Avenue",
+    "locality": "Portland",
+    "region": "OR",
+    "postal_code": "97225",
+    "precision": "street_number"
+   },
+   "official_url": "https://www.tualatinhillsparks.org/789/Raleigh-Swim-Center",
+   "hours_fees_url": "https://www.tualatinhillsparks.org/789/Raleigh-Swim-Center",
+   "setting": "outdoor",
+   "season": "seasonal",
+   "access": [
+    "public_admission",
+    "day_pass"
+   ],
+   "components": [
+    {
+     "s": "outdoor",
+     "e": "open",
+     "season": "seasonal",
+     "o": {
+      "open_swim": "public",
+      "lap_swim": "public"
+     }
+    }
+   ],
+   "public_access": "open",
+   "open_to_public": true,
+   "access_details": [
+    {
+     "type": "public_admission",
+     "conditions": []
+    },
+    {
+     "type": "day_pass",
+     "conditions": []
+    }
+   ],
+   "conditions": [
+    {
+     "applies_to": "venue",
+     "kind": "residency",
+     "text": "Anyone may use THPRD programs; people living outside the park district pay a 25% premium or a quarterly assessment fee.",
+     "source": "https://www.thprd.org/activities/am-i-in-district"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "dates",
+     "text": "Open in summer only; closed for the season until summer 2027.",
+     "source": "https://www.tualatinhillsparks.org/789/Raleigh-Swim-Center"
+    },
+    {
+     "applies_to": "venue",
+     "kind": "other",
+     "text": "Maximum depth is 6 feet.",
+     "source": "https://www.tualatinhillsparks.org/789/Raleigh-Swim-Center"
+    }
+   ],
+   "child_rules": [],
+   "offerings": {
+    "open_swim": "yes",
+    "lap_swim": "yes",
+    "lessons": "unknown"
+   },
+   "offering_details": {},
+   "card_note": null,
+   "sources": {
+    "setting": [
+     "https://www.tualatinhillsparks.org/789/Raleigh-Swim-Center"
+    ],
+    "season": [
+     "https://www.tualatinhillsparks.org/789/Raleigh-Swim-Center"
+    ],
+    "access": {
+     "public_admission": [
+      "https://www.thprd.org/activities/am-i-in-district"
+     ],
+     "day_pass": [
+      "https://www.thprd.org/activities/am-i-in-district"
+     ]
+    },
+    "offerings": {
+     "open_swim": [
+      "https://www.tualatinhillsparks.org/789/Raleigh-Swim-Center"
+     ],
+     "lap_swim": [
+      "https://www.tualatinhillsparks.org/789/Raleigh-Swim-Center"
+     ],
+     "lessons": []
+    },
+    "address": [
+     "https://www.tualatinhillsparks.org/789/Raleigh-Swim-Center"
+    ]
+   },
+   "last_verified": "2026-10-12",
+   "verification": "official operator website",
+   "added_in": "WWK-POOLS-NATIONWIDE-025"
+  }
+ ]
+}
