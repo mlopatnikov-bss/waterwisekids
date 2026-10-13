@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A covered rain barrel, a leaf-filled bucket and a checklist clipboard in an autumn yard">
+  <defs><linearGradient id="fy-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f8fafc"/></linearGradient></defs>
+  <rect width="600" height="360" fill="url(#fy-bg)"/>
+  <rect x="0" y="280" width="600" height="80" fill="#bbf7d0"/>
+  <rect x="70" y="120" width="130" height="160" rx="14" fill="#0369a1" stroke="#0c4a6e" stroke-width="5"/>
+  <rect x="62" y="108" width="146" height="22" rx="8" fill="#7dd3fc" stroke="#0c4a6e" stroke-width="5"/>
+  <path d="M70 170h130M70 230h130" stroke="#0c4a6e" stroke-width="5"/>
+  <path d="M250 250l16 -70h70l16 70z" fill="#fb923c" stroke="#9a3412" stroke-width="5" stroke-linejoin="round"/>
+  <ellipse cx="301" cy="180" rx="35" ry="9" fill="#fef9c3" stroke="#9a3412" stroke-width="4"/>
+  <path d="M285 172q8 -12 18 -4q10 -10 16 2" fill="none" stroke="#b45309" stroke-width="5" stroke-linecap="round"/>
+  <rect x="400" y="60" width="150" height="200" rx="10" fill="#fff" stroke="#0c4a6e" stroke-width="4"/>
+  <rect x="450" y="48" width="50" height="22" rx="6" fill="#7dd3fc" stroke="#0c4a6e" stroke-width="4"/>
+  <rect x="420" y="100" width="20" height="20" rx="4" fill="#fff" stroke="#0c4a6e" stroke-width="4"/><path d="M424 110l6 6l10 -12" fill="none" stroke="#0369a1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="420" y="140" width="20" height="20" rx="4" fill="#fff" stroke="#0c4a6e" stroke-width="4"/><path d="M424 150l6 6l10 -12" fill="none" stroke="#0369a1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="420" y="180" width="20" height="20" rx="4" fill="#fff" stroke="#0c4a6e" stroke-width="4"/>
+  <path d="M455 110h70M455 150h70M455 190h70" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M120 40q20 10 10 30q-25 -5 -10 -30z" fill="#ea580c"/><path d="M520 300q20 10 10 30q-25 -5 -10 -30z" fill="#b45309"/>
+</svg>
