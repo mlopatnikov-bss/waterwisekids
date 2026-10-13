@@ -1,0 +1,3932 @@
+{
+ "schema": "wwk-pool-care-directory/1",
+ "generated": "2026-10-13",
+ "directory": "stores",
+ "about": "WaterWiseKids pool stores: retail stores where families can buy pool supplies. Each listing comes from the store's own website on the date shown. A store is not a pool service provider unless it is also listed in services.json. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "services_vocabulary": {
+  "retail": "Pool supplies and chemicals",
+  "water_testing": "Water testing",
+  "repairs": "In-store repairs"
+ },
+ "listings": [
+  {
+   "id": "al-birmingham-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - Birmingham, AL #102",
+   "state": "AL",
+   "state_name": "Alabama",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "1588 Montgomery Hwy",
+    "city": "Birmingham",
+    "state": "AL",
+    "zip": "35216-4524"
+   },
+   "city": "Birmingham",
+   "phone": "(205) 823-8722",
+   "website": "https://lesliespool.com/location/birmingham-alabama-birmingham-102.html",
+   "services": [
+    "repairs",
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/birmingham-alabama-birmingham-102.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/birmingham-alabama-birmingham-102.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/birmingham-alabama-birmingham-102.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/birmingham-alabama-birmingham-102.html"
+     ],
+     "repairs": [
+      "https://lesliespool.com/location/birmingham-alabama-birmingham-102.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "al-foley-alabama-poolworks",
+   "directory": "store",
+   "name": "Alabama Poolworks - Foley",
+   "state": "AL",
+   "state_name": "Alabama",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "22347 Miflin Road",
+    "city": "Foley",
+    "state": "AL",
+    "zip": "36535"
+   },
+   "city": "Foley",
+   "phone": "(251) 968-4242",
+   "website": "https://www.alabamapoolworks.com/contact-us/foley",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.alabamapoolworks.com/contact-us/foley"
+    ],
+    "phone": [
+     "https://www.alabamapoolworks.com/contact-us/foley"
+    ],
+    "services": {
+     "retail": [
+      "https://www.alabamapoolworks.com/products-and-services"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "az-tucson-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - Tucson (Store #19)",
+   "state": "AZ",
+   "state_name": "Arizona",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "4639 E Speedway Blvd",
+    "city": "Tucson",
+    "state": "AZ",
+    "zip": "85712-4633"
+   },
+   "city": "Tucson",
+   "phone": "(520) 318-0830",
+   "website": "https://lesliespool.com/location/tucson-arizona-tucson-19.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/tucson-arizona-tucson-19.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/tucson-arizona-tucson-19.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/tucson-arizona-tucson-19.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/tucson-arizona-tucson-19.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ar-north-little-rock-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - North Little Rock (Store #453)",
+   "state": "AR",
+   "state_name": "Arkansas",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "4227 E McCain Blvd",
+    "city": "North Little Rock",
+    "state": "AR",
+    "zip": "72117-2516"
+   },
+   "city": "North Little Rock",
+   "phone": "(501) 945-8091",
+   "website": "https://lesliespool.com/location/north-little-rock-arkansas-north-little-rock-453.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/north-little-rock-arkansas-north-little-rock-453.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/north-little-rock-arkansas-north-little-rock-453.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/north-little-rock-arkansas-north-little-rock-453.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/north-little-rock-arkansas-north-little-rock-453.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ca-bakersfield-top-dog-pool-supply",
+   "directory": "store",
+   "name": "Top Dog Pool Supply",
+   "state": "CA",
+   "state_name": "California",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "7440 District Blvd Suite B",
+    "city": "Bakersfield",
+    "state": "CA",
+    "zip": "93313"
+   },
+   "city": "Bakersfield",
+   "phone": "(661) 664-9000",
+   "website": "https://topdogpoolsupply.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://topdogpoolsupply.com/"
+    ],
+    "phone": [
+     "https://topdogpoolsupply.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://topdogpoolsupply.com/"
+     ],
+     "water_testing": [
+      "https://topdogpoolsupply.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ca-san-diego-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - Kearny Mesa #314",
+   "state": "CA",
+   "state_name": "California",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "5943 Balboa Ave Ste 200",
+    "city": "San Diego",
+    "state": "CA",
+    "zip": "92111-2711"
+   },
+   "city": "San Diego",
+   "phone": "(858) 492-9543",
+   "website": "https://lesliespool.com/location/san-diego-california-kearny-mesa-314.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/san-diego-california-kearny-mesa-314.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/san-diego-california-kearny-mesa-314.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/san-diego-california-kearny-mesa-314.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/san-diego-california-kearny-mesa-314.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ca-saratoga-the-pool-guys",
+   "directory": "store",
+   "name": "The Pool Guys",
+   "state": "CA",
+   "state_name": "California",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "12361 Saratoga Sunnyvale Rd",
+    "city": "Saratoga",
+    "state": "CA",
+    "zip": null
+   },
+   "city": "Saratoga",
+   "phone": "(408) 252-6280",
+   "website": "https://yourpoolguys.com/storefront-the-pool-guys/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://yourpoolguys.com/storefront-the-pool-guys/"
+    ],
+    "phone": [
+     "https://yourpoolguys.com/storefront-the-pool-guys/"
+    ],
+    "services": {
+     "retail": [
+      "https://yourpoolguys.com/storefront-the-pool-guys/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "co-colorado-springs-aquatic-paradise-pool-store",
+   "directory": "store",
+   "name": "Aquatic Paradise Pool Store",
+   "state": "CO",
+   "state_name": "Colorado",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "7215 E US Hwy 24, #155",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "zip": "80915"
+   },
+   "city": "Colorado Springs",
+   "phone": "(719) 415-8149",
+   "website": "https://aquaticparadisepools.com/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://aquaticparadisepools.com/"
+    ],
+    "phone": [
+     "https://aquaticparadisepools.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://aquaticparadisepools.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "co-englewood-the-pool-man-inc",
+   "directory": "store",
+   "name": "The Pool Man Inc",
+   "state": "CO",
+   "state_name": "Colorado",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "3106 W. Hampden Ave Unit A",
+    "city": "Englewood",
+    "state": "CO",
+    "zip": "80110"
+   },
+   "city": "Englewood",
+   "phone": "(303) 781-4409",
+   "website": "https://www.poolmanusa.co/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.poolmanusa.co/"
+    ],
+    "phone": [
+     "https://www.poolmanusa.co/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.poolmanusa.co/"
+     ],
+     "water_testing": [
+      "https://poolmanusa.co/water-testing"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ct-burlington-the-swimming-pool-store",
+   "directory": "store",
+   "name": "The Swimming Pool Store",
+   "state": "CT",
+   "state_name": "Connecticut",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "221 Spielman Hwy",
+    "city": "Burlington",
+    "state": "CT",
+    "zip": "06013"
+   },
+   "city": "Burlington",
+   "phone": "(860) 673-6118",
+   "website": "https://www.theswimmingpoolstore.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": "Seasonal store: its website lists winter closing dates. Check before you visit.",
+   "sources": {
+    "address": [
+     "https://www.theswimmingpoolstore.com/"
+    ],
+    "phone": [
+     "https://www.theswimmingpoolstore.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.theswimmingpoolstore.com/store/"
+     ],
+     "water_testing": [
+      "https://www.theswimmingpoolstore.com/store/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ct-glastonbury-leslie-s-glastonbury-ct-744",
+   "directory": "store",
+   "name": "Leslie's Glastonbury, CT #744",
+   "state": "CT",
+   "state_name": "Connecticut",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "2852 Main St",
+    "city": "Glastonbury",
+    "state": "CT",
+    "zip": "06033-1036"
+   },
+   "city": "Glastonbury",
+   "phone": "(860) 633-2836",
+   "website": "https://lesliespool.com/location/glastonbury-connecticut-glastonbury-744.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/glastonbury-connecticut-glastonbury-744.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/glastonbury-connecticut-glastonbury-744.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/glastonbury-connecticut-glastonbury-744.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/glastonbury-connecticut-glastonbury-744.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "de-bear-leslie-s-pool-supplies-store-1071",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies Store #1071 (Bear)",
+   "state": "DE",
+   "state_name": "Delaware",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "1142 Pulaski Hwy Unit 6B",
+    "city": "Bear",
+    "state": "DE",
+    "zip": "19701-1306"
+   },
+   "city": "Bear",
+   "phone": "(302) 836-6299",
+   "website": "https://lesliespool.com/location/bear-delaware-bear-1071.html",
+   "services": [
+    "repairs",
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/bear-delaware-bear-1071.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/bear-delaware-bear-1071.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/bear-delaware-bear-1071.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/bear-delaware-bear-1071.html"
+     ],
+     "repairs": [
+      "https://lesliespool.com/location/bear-delaware-bear-1071.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "de-milford-dover-pools",
+   "directory": "store",
+   "name": "Dover Pools (Milford)",
+   "state": "DE",
+   "state_name": "Delaware",
+   "operator_type": "independent",
+   "brand": "Dover Pools",
+   "location_type": "storefront",
+   "address": {
+    "street": "1055 N Walnut St",
+    "city": "Milford",
+    "state": "DE",
+    "zip": "19963"
+   },
+   "city": "Milford",
+   "phone": "(302) 839-3300",
+   "website": "https://doverpools.com/contact/milford/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://doverpools.com/contact/milford/"
+    ],
+    "phone": [
+     "https://doverpools.com/contact/milford/"
+    ],
+    "services": {
+     "retail": [
+      "https://doverpools.com/contact/milford/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "fl-jacksonville-pinch-a-penny-pool-patio-spa",
+   "directory": "store",
+   "name": "Pinch A Penny Pool Patio & Spa - Jacksonville #31",
+   "state": "FL",
+   "state_name": "Florida",
+   "operator_type": "franchise",
+   "brand": "Pinch A Penny",
+   "location_type": "storefront",
+   "address": {
+    "street": "33 South Arlington Road",
+    "city": "Jacksonville",
+    "state": "FL",
+    "zip": "32216"
+   },
+   "city": "Jacksonville",
+   "phone": "(904) 724-1786",
+   "website": "https://pinchapenny.com/stores/jacksonville-fl-31",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://pinchapenny.com/stores/jacksonville-fl-31"
+    ],
+    "phone": [
+     "https://pinchapenny.com/stores/jacksonville-fl-31"
+    ],
+    "services": {
+     "retail": [
+      "https://pinchapenny.com/stores/jacksonville-fl-31"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "fl-winter-park-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - Winter Park, FL #494",
+   "state": "FL",
+   "state_name": "Florida",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "2245 Aloma Ave",
+    "city": "Winter Park",
+    "state": "FL",
+    "zip": "32792-3303"
+   },
+   "city": "Winter Park",
+   "phone": "(407) 671-8127",
+   "website": "https://lesliespool.com/location/winter-park-florida-winter-park-494.html",
+   "services": [
+    "repairs",
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/winter-park-florida-winter-park-494.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/winter-park-florida-winter-park-494.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/winter-park-florida-winter-park-494.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/winter-park-florida-winter-park-494.html"
+     ],
+     "repairs": [
+      "https://lesliespool.com/location/winter-park-florida-winter-park-494.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ga-atlanta-leslie-s-pool-supplies-store-43",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies Store #43 - Atlanta",
+   "state": "GA",
+   "state_name": "Georgia",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "263 Hilderbrand Dr",
+    "city": "Atlanta",
+    "state": "GA",
+    "zip": "30328-3907"
+   },
+   "city": "Atlanta",
+   "phone": "(404) 257-1986",
+   "website": "https://lesliespool.com/location/atlanta-georgia-atlanta-43.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/atlanta-georgia-atlanta-43.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/atlanta-georgia-atlanta-43.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/atlanta-georgia-atlanta-43.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/atlanta-georgia-atlanta-43.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ga-brunswick-pinch-a-penny-pool-patio-spa-260",
+   "directory": "store",
+   "name": "Pinch A Penny Pool Patio Spa #260 - Brunswick",
+   "state": "GA",
+   "state_name": "Georgia",
+   "operator_type": "franchise",
+   "brand": "Pinch A Penny",
+   "location_type": "storefront",
+   "address": {
+    "street": "5639 Altama Avenue",
+    "city": "Brunswick",
+    "state": "GA",
+    "zip": "31525"
+   },
+   "city": "Brunswick",
+   "phone": "(912) 275-8136",
+   "website": "https://pinchapenny.com/stores/brunswick-ga-260",
+   "services": [
+    "repairs",
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://pinchapenny.com/stores/brunswick-ga-260"
+    ],
+    "phone": [
+     "https://pinchapenny.com/stores/brunswick-ga-260"
+    ],
+    "services": {
+     "retail": [
+      "https://pinchapenny.com/stores/brunswick-ga-260"
+     ],
+     "repairs": [
+      "https://pinchapenny.com/stores/brunswick-ga-260"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "id-boise-superior-pools-of-idaho",
+   "directory": "store",
+   "name": "Superior Pools of Idaho",
+   "state": "ID",
+   "state_name": "Idaho",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "11880 W President Dr Suite H",
+    "city": "Boise",
+    "state": "ID",
+    "zip": "83713"
+   },
+   "city": "Boise",
+   "phone": "(208) 971-6644",
+   "website": "https://www.superiorpoolsofidaho.com/pool-supplies",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.superiorpoolsofidaho.com/contact-us"
+    ],
+    "phone": [
+     "https://www.superiorpoolsofidaho.com/contact-us"
+    ],
+    "services": {
+     "retail": [
+      "https://www.superiorpoolsofidaho.com/pool-supplies"
+     ],
+     "water_testing": [
+      "https://www.superiorpoolsofidaho.com/pool-supplies"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "il-lombard-leslie-s-pool-supplies-store-389",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies Store #389 - Lombard",
+   "state": "IL",
+   "state_name": "Illinois",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "324 W Roosevelt Rd",
+    "city": "Lombard",
+    "state": "IL",
+    "zip": "60148-4220"
+   },
+   "city": "Lombard",
+   "phone": "(630) 953-1283",
+   "website": "https://lesliespool.com/location/lombard-illinois-lombard-389.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/lombard-illinois-lombard-389.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/lombard-illinois-lombard-389.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/lombard-illinois-lombard-389.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/lombard-illinois-lombard-389.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "in-fort-wayne-leslie-s-pool-supplies-store-165",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies Store #165 - Fort Wayne",
+   "state": "IN",
+   "state_name": "Indiana",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "257 E Coliseum Blvd",
+    "city": "Fort Wayne",
+    "state": "IN",
+    "zip": "46805-1002"
+   },
+   "city": "Fort Wayne",
+   "phone": "(260) 484-6666",
+   "website": "https://lesliespool.com/location/fort-wayne-indiana-fort-wayne-165.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/fort-wayne-indiana-fort-wayne-165.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/fort-wayne-indiana-fort-wayne-165.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/fort-wayne-indiana-fort-wayne-165.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/fort-wayne-indiana-fort-wayne-165.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ia-west-des-moines-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - West Des Moines (Store #467)",
+   "state": "IA",
+   "state_name": "Iowa",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "4100 University Ave Ste 112",
+    "city": "West Des Moines",
+    "state": "IA",
+    "zip": "50266-5958"
+   },
+   "city": "West Des Moines",
+   "phone": "(515) 222-1469",
+   "website": "https://lesliespool.com/location/west-des-moines-iowa-west-des-moines-467.html",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/west-des-moines-iowa-west-des-moines-467.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/west-des-moines-iowa-west-des-moines-467.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/west-des-moines-iowa-west-des-moines-467.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ks-overland-park-pool-patio",
+   "directory": "store",
+   "name": "Pool & Patio",
+   "state": "KS",
+   "state_name": "Kansas",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "11409 W. 89th St.",
+    "city": "Overland Park",
+    "state": "KS",
+    "zip": "66214"
+   },
+   "city": "Overland Park",
+   "phone": "913-888-2226",
+   "website": "https://poolandpatiokc.com",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://poolandpatiokc.com"
+    ],
+    "phone": [
+     "https://poolandpatiokc.com"
+    ],
+    "services": {
+     "retail": [
+      "https://poolandpatiokc.com"
+     ],
+     "water_testing": [
+      "https://poolandpatiokc.com"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ks-wichita-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - West Wichita #637",
+   "state": "KS",
+   "state_name": "Kansas",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "12111 W Maple St Ste 123",
+    "city": "Wichita",
+    "state": "KS",
+    "zip": "67235-8756"
+   },
+   "city": "Wichita",
+   "phone": "(316) 722-9800",
+   "website": "https://lesliespool.com/location/wichita-kansas-west-wichita-637.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/wichita-kansas-west-wichita-637.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/wichita-kansas-west-wichita-637.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/wichita-kansas-west-wichita-637.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/wichita-kansas-west-wichita-637.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ky-louisville-leslie-s-central-louisville",
+   "directory": "store",
+   "name": "Leslie's Central Louisville (Store #421)",
+   "state": "KY",
+   "state_name": "Kentucky",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "7130 Preston Hwy",
+    "city": "Louisville",
+    "state": "KY",
+    "zip": "40219-2722"
+   },
+   "city": "Louisville",
+   "phone": "(502) 962-7117",
+   "website": "https://lesliespool.com/location/louisville-kentucky-central-louisville-421.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/louisville-kentucky-central-louisville-421.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/louisville-kentucky-central-louisville-421.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/louisville-kentucky-central-louisville-421.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/louisville-kentucky-central-louisville-421.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "la-mandeville-pinch-a-penny-pool-patio-spa",
+   "directory": "store",
+   "name": "Pinch A Penny Pool Patio & Spa - Mandeville #254",
+   "state": "LA",
+   "state_name": "Louisiana",
+   "operator_type": "franchise",
+   "brand": "Pinch A Penny",
+   "location_type": "storefront",
+   "address": {
+    "street": "4350 Emerald Road, Suite B",
+    "city": "Mandeville",
+    "state": "LA",
+    "zip": "70471"
+   },
+   "city": "Mandeville",
+   "phone": "(985) 778-0645",
+   "website": "https://pinchapenny.com/stores/mandeville-la-254",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://pinchapenny.com/stores/mandeville-la-254"
+    ],
+    "phone": [
+     "https://pinchapenny.com/stores/mandeville-la-254"
+    ],
+    "services": {
+     "retail": [
+      "https://pinchapenny.com/stores/mandeville-la-254"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "la-shreveport-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - Shreveport (Store #105)",
+   "state": "LA",
+   "state_name": "Louisiana",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "1720 E 70th St",
+    "city": "Shreveport",
+    "state": "LA",
+    "zip": "71105-5212"
+   },
+   "city": "Shreveport",
+   "phone": "(318) 797-2619",
+   "website": "https://lesliespool.com/location/shreveport-louisiana-shreveport-105.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/shreveport-louisiana-shreveport-105.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/shreveport-louisiana-shreveport-105.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/shreveport-louisiana-shreveport-105.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/shreveport-louisiana-shreveport-105.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "me-lewiston-abc-pool-spa-center",
+   "directory": "store",
+   "name": "ABC Pool & Spa Center",
+   "state": "ME",
+   "state_name": "Maine",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "1975 Lisbon Road",
+    "city": "Lewiston",
+    "state": "ME",
+    "zip": "04240"
+   },
+   "city": "Lewiston",
+   "phone": "(207) 783-0858",
+   "website": "https://abcpool.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://abcpool.com/"
+    ],
+    "phone": [
+     "https://abcpool.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://abcpool.com/"
+     ],
+     "water_testing": [
+      "https://abcpool.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "me-scarborough-merit-pools-of-portland-inc",
+   "directory": "store",
+   "name": "Merit Pools of Portland, Inc.",
+   "state": "ME",
+   "state_name": "Maine",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "183 US Route 1",
+    "city": "Scarborough",
+    "state": "ME",
+    "zip": "04074"
+   },
+   "city": "Scarborough",
+   "phone": "(207) 883-5558",
+   "website": "https://www.poolsbymerit.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.poolsbymerit.com/"
+    ],
+    "phone": [
+     "https://www.poolsbymerit.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.poolsbymerit.com/"
+     ],
+     "water_testing": [
+      "https://www.poolsbymerit.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "md-frederick-pools-patios-porches",
+   "directory": "store",
+   "name": "Pools, Patios & Porches (Frederick Store)",
+   "state": "MD",
+   "state_name": "Maryland",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "2 Wormans Mill Ct.",
+    "city": "Frederick",
+    "state": "MD",
+    "zip": "21701"
+   },
+   "city": "Frederick",
+   "phone": "301-698-1200",
+   "website": "https://ppppool.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://ppppool.com/"
+    ],
+    "phone": [
+     "https://ppppool.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://ppppool.com/"
+     ],
+     "water_testing": [
+      "https://ppppool.com/water-testing/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "md-kensington-leslie-s-pool-supplies-store-108",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies Store #108 (Kensington)",
+   "state": "MD",
+   "state_name": "Maryland",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "5200 Nicholson Ln",
+    "city": "Kensington",
+    "state": "MD",
+    "zip": "20895-1045"
+   },
+   "city": "Kensington",
+   "phone": "(301) 881-7971",
+   "website": "https://lesliespool.com/location/kensington-maryland-kensington-108.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/kensington-maryland-kensington-108.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/kensington-maryland-kensington-108.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/kensington-maryland-kensington-108.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/kensington-maryland-kensington-108.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ma-chicopee-teddy-bear-pools-spas",
+   "directory": "store",
+   "name": "Teddy Bear Pools & Spas",
+   "state": "MA",
+   "state_name": "Massachusetts",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "41 East St",
+    "city": "Chicopee",
+    "state": "MA",
+    "zip": "01020"
+   },
+   "city": "Chicopee",
+   "phone": "(413) 594-2666",
+   "website": "https://www.teddybearpools.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.teddybearpools.com/"
+    ],
+    "phone": [
+     "https://www.teddybearpools.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://teddybearpools.com/the-lab-at-teddy-bear-pools/"
+     ],
+     "water_testing": [
+      "https://teddybearpools.com/the-lab-at-teddy-bear-pools/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ma-framingham-leslie-s-framingham-ma-724",
+   "directory": "store",
+   "name": "Leslie's Framingham, MA #724",
+   "state": "MA",
+   "state_name": "Massachusetts",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "760 Worcester Rd",
+    "city": "Framingham",
+    "state": "MA",
+    "zip": "01702-5203"
+   },
+   "city": "Framingham",
+   "phone": "(508) 628-3200",
+   "website": "https://lesliespool.com/location/framingham-massachusetts-framingham-724.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/framingham-massachusetts-framingham-724.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/framingham-massachusetts-framingham-724.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/framingham-massachusetts-framingham-724.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/framingham-massachusetts-framingham-724.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mi-lapeer-lapeer-pool-and-spa",
+   "directory": "store",
+   "name": "Lapeer Pool and Spa",
+   "state": "MI",
+   "state_name": "Michigan",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "960 Summit St",
+    "city": "Lapeer",
+    "state": "MI",
+    "zip": "48446"
+   },
+   "city": "Lapeer",
+   "phone": "(810) 667-9440",
+   "website": "https://lapeerpool.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.lapeerpool.com/"
+    ],
+    "phone": [
+     "https://www.lapeerpool.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.lapeerpool.com/"
+     ],
+     "water_testing": [
+      "https://www.lapeerpool.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mi-troy-leslie-s-pool-supplies-store-99",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies Store #99 - Troy",
+   "state": "MI",
+   "state_name": "Michigan",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "3662 Rochester Rd",
+    "city": "Troy",
+    "state": "MI",
+    "zip": "48083-5213"
+   },
+   "city": "Troy",
+   "phone": "(248) 680-1330",
+   "website": "https://lesliespool.com/location/troy-michigan-troy-99.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/troy-michigan-troy-99.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/troy-michigan-troy-99.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/troy-michigan-troy-99.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/troy-michigan-troy-99.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mn-blaine-the-pool-store-inc",
+   "directory": "store",
+   "name": "The Pool Store, Inc.",
+   "state": "MN",
+   "state_name": "Minnesota",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "10100 Central Ave NE",
+    "city": "Blaine",
+    "state": "MN",
+    "zip": "55434"
+   },
+   "city": "Blaine",
+   "phone": "(763) 786-9563",
+   "website": "https://www.poolstoreinc.com/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://poolstoreinc.com/contact/"
+    ],
+    "phone": [
+     "https://poolstoreinc.com/contact/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.poolstoreinc.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mn-burnsville-valley-pools-spas",
+   "directory": "store",
+   "name": "Valley Pools & Spas - Burnsville",
+   "state": "MN",
+   "state_name": "Minnesota",
+   "operator_type": "independent",
+   "brand": "Valley Pools & Spas",
+   "location_type": "storefront",
+   "address": {
+    "street": "301 Cliff Road E",
+    "city": "Burnsville",
+    "state": "MN",
+    "zip": "55337"
+   },
+   "city": "Burnsville",
+   "phone": "(952) 894-1480",
+   "website": "https://valleypools.com/blog/minnesota-pool-stores-builders/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://valleypools.com/blog/minnesota-pool-stores-builders/"
+    ],
+    "phone": [
+     "https://valleypools.com/blog/minnesota-pool-stores-builders/"
+    ],
+    "services": {
+     "retail": [
+      "https://valleypools.com/blog/minnesota-pool-stores-builders/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ms-hattiesburg-adcock-pool-and-spa",
+   "directory": "store",
+   "name": "Adcock Pool and Spa - Hattiesburg",
+   "state": "MS",
+   "state_name": "Mississippi",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "6192 Highway 98 West",
+    "city": "Hattiesburg",
+    "state": "MS",
+    "zip": "39402"
+   },
+   "city": "Hattiesburg",
+   "phone": "(601) 264-3504",
+   "website": "https://adcockpoolandspa.com/pool-builder-in-laurel-hattiesburg-custom-pools-hot-tubs-adcock-pool-spa/contact/hattiesburg/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://adcockpoolandspa.com/pool-builder-in-laurel-hattiesburg-custom-pools-hot-tubs-adcock-pool-spa/contact/hattiesburg/"
+    ],
+    "phone": [
+     "https://adcockpoolandspa.com/pool-builder-in-laurel-hattiesburg-custom-pools-hot-tubs-adcock-pool-spa/contact/hattiesburg/"
+    ],
+    "services": {
+     "retail": [
+      "https://adcockpoolandspa.com/pool-builder-in-laurel-hattiesburg-custom-pools-hot-tubs-adcock-pool-spa/pool-hot-tub-store/"
+     ],
+     "water_testing": [
+      "https://adcockpoolandspa.com/pool-builder-in-laurel-hattiesburg-custom-pools-hot-tubs-adcock-pool-spa/pool-hot-tub-store/water-care/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ms-jackson-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - Jackson, MS #454",
+   "state": "MS",
+   "state_name": "Mississippi",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "1039 E County Line Rd Ste 104",
+    "city": "Jackson",
+    "state": "MS",
+    "zip": "39211-1896"
+   },
+   "city": "Jackson",
+   "phone": "(601) 991-3228",
+   "website": "https://lesliespool.com/location/jackson-mississippi-jackson-454.html",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/jackson-mississippi-jackson-454.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/jackson-mississippi-jackson-454.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/jackson-mississippi-jackson-454.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mo-maryland-heights-r-s-pool-spa",
+   "directory": "store",
+   "name": "R&S Pool & Spa",
+   "state": "MO",
+   "state_name": "Missouri",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "12001 Dorsett Road",
+    "city": "Maryland Heights",
+    "state": "MO",
+    "zip": "63043"
+   },
+   "city": "Maryland Heights",
+   "phone": "(314) 207-4108",
+   "website": "https://rspool.com/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://rspool.com/contact/"
+    ],
+    "phone": [
+     "https://rspool.com/contact/"
+    ],
+    "services": {
+     "retail": [
+      "https://rspool.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mo-springfield-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - Springfield (Store #441)",
+   "state": "MO",
+   "state_name": "Missouri",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "1941 E Independence St",
+    "city": "Springfield",
+    "state": "MO",
+    "zip": "65804-3751"
+   },
+   "city": "Springfield",
+   "phone": "(417) 887-4532",
+   "website": "https://lesliespool.com/location/springfield-missouri-east-independence-street-441.html",
+   "services": [
+    "repairs",
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/springfield-missouri-east-independence-street-441.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/springfield-missouri-east-independence-street-441.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/springfield-missouri-east-independence-street-441.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/springfield-missouri-east-independence-street-441.html"
+     ],
+     "repairs": [
+      "https://lesliespool.com/location/springfield-missouri-east-independence-street-441.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mt-bozeman-bullfrog-spas-factory-store",
+   "directory": "store",
+   "name": "Bullfrog Spas Factory Store - Bozeman",
+   "state": "MT",
+   "state_name": "Montana",
+   "operator_type": "unknown",
+   "brand": "Bullfrog Spas",
+   "location_type": "storefront",
+   "address": {
+    "street": "1620 N 19th Ave",
+    "city": "Bozeman",
+    "state": "MT",
+    "zip": "59718"
+   },
+   "city": "Bozeman",
+   "phone": "(406) 219-4902",
+   "website": "https://www.bullfrogspas.com/dealers/factory-store-bozeman/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.bullfrogspas.com/dealers/factory-store-bozeman/"
+    ],
+    "phone": [
+     "https://www.bullfrogspas.com/dealers/factory-store-bozeman/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.bullfrogspas.com/dealers/factory-store-bozeman/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ne-lincoln-bonsall-pool-spa",
+   "directory": "store",
+   "name": "Bonsall Pool & Spa",
+   "state": "NE",
+   "state_name": "Nebraska",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "3201 Pioneers Blvd #30",
+    "city": "Lincoln",
+    "state": "NE",
+    "zip": "68502"
+   },
+   "city": "Lincoln",
+   "phone": "(402) 488-0148",
+   "website": "https://bonsallpool.com/retail-store/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://bonsallpool.com/retail-store/"
+    ],
+    "phone": [
+     "https://bonsallpool.com/retail-store/"
+    ],
+    "services": {
+     "retail": [
+      "https://bonsallpool.com/retail-store/"
+     ],
+     "water_testing": [
+      "https://bonsallpool.com/retail-store/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ne-omaha-continental-pool-spa",
+   "directory": "store",
+   "name": "Continental Pool & Spa (Omaha Showroom)",
+   "state": "NE",
+   "state_name": "Nebraska",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "2527 S 120th St",
+    "city": "Omaha",
+    "state": "NE",
+    "zip": "68144"
+   },
+   "city": "Omaha",
+   "phone": "(402) 333-9025",
+   "website": "https://continentalpoolandspa.net/omaha-hot-tub-dealer/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://continentalpoolandspa.net/service-center/pool-chemical-delivery/"
+    ],
+    "phone": [
+     "https://continentalpoolandspa.net/"
+    ],
+    "services": {
+     "retail": [
+      "https://continentalpoolandspa.net/service-center/pool-chemical-delivery/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nv-las-vegas-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - Las Vegas #25",
+   "state": "NV",
+   "state_name": "Nevada",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "5225 W Charleston Blvd",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89146-1438"
+   },
+   "city": "Las Vegas",
+   "phone": "(702) 878-0956",
+   "website": "https://lesliespool.com/location/las-vegas-nevada-las-vegas-25.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/las-vegas-nevada-las-vegas-25.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/las-vegas-nevada-las-vegas-25.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/las-vegas-nevada-las-vegas-25.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/las-vegas-nevada-las-vegas-25.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nv-reno-lee-joseph-inc-pool-spa-supplies",
+   "directory": "store",
+   "name": "Lee Joseph Inc. Pool & Spa Supplies",
+   "state": "NV",
+   "state_name": "Nevada",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "864 S Wells Ave",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89502"
+   },
+   "city": "Reno",
+   "phone": "(775) 786-5085",
+   "website": "https://www.leejosephpools.com/pool-supplies/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.leejosephpools.com/pool-supplies/"
+    ],
+    "phone": [
+     "https://www.leejosephpools.com/pool-supplies/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.leejosephpools.com/pool-supplies/"
+     ],
+     "water_testing": [
+      "https://www.leejosephpools.com/pool-supplies/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nh-kingston-family-pools-north",
+   "directory": "store",
+   "name": "Family Pools North",
+   "state": "NH",
+   "state_name": "New Hampshire",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "3 Newton Junction Road",
+    "city": "Kingston",
+    "state": "NH",
+    "zip": "03848"
+   },
+   "city": "Kingston",
+   "phone": "(603) 642-9909",
+   "website": "https://www.familypoolsnorth.com/",
+   "services": [
+    "repairs",
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.familypoolsnorth.com/"
+    ],
+    "phone": [
+     "https://www.familypoolsnorth.com/contact-us"
+    ],
+    "services": {
+     "retail": [
+      "https://www.familypoolsnorth.com/about-us"
+     ],
+     "water_testing": [
+      "https://www.familypoolsnorth.com/faqs"
+     ],
+     "repairs": [
+      "https://www.familypoolsnorth.com/other-services"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nh-manchester-leslie-s-pool-supplies-store-406",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies Store #406 (Manchester)",
+   "state": "NH",
+   "state_name": "New Hampshire",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "100 Cahill Ave",
+    "city": "Manchester",
+    "state": "NH",
+    "zip": "03103-4000"
+   },
+   "city": "Manchester",
+   "phone": "(603) 622-7482",
+   "website": "https://lesliespool.com/location/manchester-newhampshire-cahill-ave-406.html",
+   "services": [
+    "repairs",
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/manchester-newhampshire-cahill-ave-406.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/manchester-newhampshire-cahill-ave-406.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/manchester-newhampshire-cahill-ave-406.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/manchester-newhampshire-cahill-ave-406.html"
+     ],
+     "repairs": [
+      "https://lesliespool.com/location/manchester-newhampshire-cahill-ave-406.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nj-collingswood-leslie-s-pool-supplies-store-1063",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies Store #1063 - Westmont",
+   "state": "NJ",
+   "state_name": "New Jersey",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "658 W Cuthbert Blvd",
+    "city": "Collingswood",
+    "state": "NJ",
+    "zip": "08108-3642"
+   },
+   "city": "Collingswood",
+   "phone": "(856) 858-1210",
+   "website": "https://lesliespool.com/location/collingswood-new-jersey-westmont-1063.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/collingswood-new-jersey-westmont-1063.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/collingswood-new-jersey-westmont-1063.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/collingswood-new-jersey-westmont-1063.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/collingswood-new-jersey-westmont-1063.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nj-east-hanover-rix-pool-spa",
+   "directory": "store",
+   "name": "Rix Pool & Spa",
+   "state": "NJ",
+   "state_name": "New Jersey",
+   "operator_type": "unknown",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "138 Ridgedale Avenue",
+    "city": "East Hanover",
+    "state": "NJ",
+    "zip": "07936"
+   },
+   "city": "East Hanover",
+   "phone": "973-386-0404",
+   "website": "https://rixpoolandspa.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://rixpoolandspa.com/"
+    ],
+    "phone": [
+     "https://rixpoolandspa.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://rixpoolandspa.com/"
+     ],
+     "water_testing": [
+      "https://rixpoolandspa.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nj-montvale-crystal-clean-pools-inc",
+   "directory": "store",
+   "name": "Crystal Clean Pools, Inc.",
+   "state": "NJ",
+   "state_name": "New Jersey",
+   "operator_type": "unknown",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "8 Railroad Ave.",
+    "city": "Montvale",
+    "state": "NJ",
+    "zip": "07645"
+   },
+   "city": "Montvale",
+   "phone": "201-930-9300",
+   "website": "https://crystalcleanpools.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://crystalcleanpools.com/"
+    ],
+    "phone": [
+     "https://crystalcleanpools.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://crystalcleanpools.com/"
+     ],
+     "water_testing": [
+      "https://crystalcleanpools.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nm-albuquerque-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - Albuquerque (Store #36)",
+   "state": "NM",
+   "state_name": "New Mexico",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "2740 Wyoming Blvd NE Ste 5",
+    "city": "Albuquerque",
+    "state": "NM",
+    "zip": "87111-4573"
+   },
+   "city": "Albuquerque",
+   "phone": "(505) 293-0575",
+   "website": "https://lesliespool.com/location/albuquerque-newmexico-albuquerque-1-36.html",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/albuquerque-newmexico-albuquerque-1-36.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/albuquerque-newmexico-albuquerque-1-36.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/albuquerque-newmexico-albuquerque-1-36.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ny-kingston-swimking-pools-spas",
+   "directory": "store",
+   "name": "SwimKing Pools & Spas",
+   "state": "NY",
+   "state_name": "New York",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "805 E Chester St",
+    "city": "Kingston",
+    "state": "NY",
+    "zip": "12401"
+   },
+   "city": "Kingston",
+   "phone": "(845) 336-7946",
+   "website": "https://www.swimkingpools.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.swimkingpools.com/"
+    ],
+    "phone": [
+     "https://www.swimkingpools.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.swimkingpools.com/swimming-pools/retail-store/"
+     ],
+     "water_testing": [
+      "https://www.swimkingpools.com/services/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ny-latham-leslie-s-latham-ny-127",
+   "directory": "store",
+   "name": "Leslie's Latham, NY #127",
+   "state": "NY",
+   "state_name": "New York",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "579 Troy Schenectady Rd Ste 224",
+    "city": "Latham",
+    "state": "NY",
+    "zip": "12110-2823"
+   },
+   "city": "Latham",
+   "phone": "(518) 786-0897",
+   "website": "https://lesliespool.com/location/latham-newyork-latham-127.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/latham-newyork-latham-127.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/latham-newyork-latham-127.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/latham-newyork-latham-127.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/latham-newyork-latham-127.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nc-charlotte-leslie-s-pool-supplies-store-94",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies Store #94 - Charlotte",
+   "state": "NC",
+   "state_name": "North Carolina",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "4402 E Independence Blvd",
+    "city": "Charlotte",
+    "state": "NC",
+    "zip": "28205-7404"
+   },
+   "city": "Charlotte",
+   "phone": "(704) 532-5758",
+   "website": "https://lesliespool.com/location/charlotte-northcarolina-charlotte-94.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/charlotte-northcarolina-charlotte-94.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/charlotte-northcarolina-charlotte-94.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/charlotte-northcarolina-charlotte-94.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/charlotte-northcarolina-charlotte-94.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nc-raleigh-pinch-a-penny-pool-patio-spa-298",
+   "directory": "store",
+   "name": "Pinch A Penny Pool Patio Spa #298 - N. Raleigh",
+   "state": "NC",
+   "state_name": "North Carolina",
+   "operator_type": "franchise",
+   "brand": "Pinch A Penny",
+   "location_type": "storefront",
+   "address": {
+    "street": "7901 Falls of Neuse Road #139",
+    "city": "Raleigh",
+    "state": "NC",
+    "zip": "27615"
+   },
+   "city": "Raleigh",
+   "phone": "(919) 703-6694",
+   "website": "https://pinchapenny.com/stores/raleigh-nc-298",
+   "services": [
+    "repairs",
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://pinchapenny.com/stores/raleigh-nc-298"
+    ],
+    "phone": [
+     "https://pinchapenny.com/stores/raleigh-nc-298"
+    ],
+    "services": {
+     "retail": [
+      "https://pinchapenny.com/stores/raleigh-nc-298"
+     ],
+     "repairs": [
+      "https://pinchapenny.com/stores/raleigh-nc-298"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nd-fargo-ultimate-spas-pools",
+   "directory": "store",
+   "name": "Ultimate Spas & Pools (Fargo Showroom)",
+   "state": "ND",
+   "state_name": "North Dakota",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "492 36th St SW",
+    "city": "Fargo",
+    "state": "ND",
+    "zip": "58103"
+   },
+   "city": "Fargo",
+   "phone": "(701) 282-4040",
+   "website": "https://www.ultimate-spas.com/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.ultimate-spas.com/"
+    ],
+    "phone": [
+     "https://www.ultimate-spas.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.ultimate-spas.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "oh-columbus-leslie-s-columbus",
+   "directory": "store",
+   "name": "Leslie's Columbus (Store #641)",
+   "state": "OH",
+   "state_name": "Ohio",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "1101 Bethel Rd",
+    "city": "Columbus",
+    "state": "OH",
+    "zip": "43220-2609"
+   },
+   "city": "Columbus",
+   "phone": "(614) 459-8701",
+   "website": "https://lesliespool.com/location/columbus-ohio-columbus-641.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/columbus-ohio-columbus-641.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/columbus-ohio-columbus-641.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/columbus-ohio-columbus-641.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/columbus-ohio-columbus-641.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "oh-dayton-knickerbocker-pools-spas",
+   "directory": "store",
+   "name": "Knickerbocker Pools & Spas - Kettering",
+   "state": "OH",
+   "state_name": "Ohio",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "1900 E Whipp Rd",
+    "city": "Dayton",
+    "state": "OH",
+    "zip": "45440"
+   },
+   "city": "Dayton",
+   "phone": "937-434-7579",
+   "website": "https://knickerbockerpools.com/kettering-ohio/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://knickerbockerpools.com/kettering-ohio/"
+    ],
+    "phone": [
+     "https://knickerbockerpools.com/hours-and-locations/"
+    ],
+    "services": {
+     "retail": [
+      "https://knickerbockerpools.com/kettering-ohio/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ok-norman-spartan-pool-patio",
+   "directory": "store",
+   "name": "Spartan Pool & Patio",
+   "state": "OK",
+   "state_name": "Oklahoma",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "1400 24th Ave. SW",
+    "city": "Norman",
+    "state": "OK",
+    "zip": "73072"
+   },
+   "city": "Norman",
+   "phone": "(405) 364-1912",
+   "website": "https://www.spartanpoolandpatio.com/store",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.spartanpoolandpatio.com/store"
+    ],
+    "phone": [
+     "https://www.spartanpoolandpatio.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.spartanpoolandpatio.com/store"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ok-tulsa-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - Tulsa (Store #54)",
+   "state": "OK",
+   "state_name": "Oklahoma",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "3233 S Harvard Ave",
+    "city": "Tulsa",
+    "state": "OK",
+    "zip": "74135-4447"
+   },
+   "city": "Tulsa",
+   "phone": "(918) 743-0683",
+   "website": "https://lesliespool.com/location/tulsa-oklahoma-tulsa-54.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/tulsa-oklahoma-tulsa-54.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/tulsa-oklahoma-tulsa-54.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/tulsa-oklahoma-tulsa-54.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/tulsa-oklahoma-tulsa-54.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "or-gresham-the-pool-spa-house",
+   "directory": "store",
+   "name": "The Pool & Spa House - Gresham",
+   "state": "OR",
+   "state_name": "Oregon",
+   "operator_type": "independent",
+   "brand": "The Pool & Spa House",
+   "location_type": "storefront",
+   "address": {
+    "street": "21950 SE Stark St",
+    "city": "Gresham",
+    "state": "OR",
+    "zip": "97030"
+   },
+   "city": "Gresham",
+   "phone": "(503) 665-7761",
+   "website": "https://www.thepoolandspahouse.com/locations/Gresham",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.thepoolandspahouse.com/locations/Gresham"
+    ],
+    "phone": [
+     "https://www.thepoolandspahouse.com/locations/Gresham"
+    ],
+    "services": {
+     "retail": [
+      "https://www.thepoolandspahouse.com/shop"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "or-portland-apollo-pools-spas",
+   "directory": "store",
+   "name": "Apollo Pools & Spas",
+   "state": "OR",
+   "state_name": "Oregon",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "13370 NW Cornell Rd",
+    "city": "Portland",
+    "state": "OR",
+    "zip": "97229"
+   },
+   "city": "Portland",
+   "phone": "(503) 644-0556",
+   "website": "https://apollopools.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://apollopools.com/"
+    ],
+    "phone": [
+     "https://apollopools.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://apollopools.com/services/"
+     ],
+     "water_testing": [
+      "https://apollopools.com/pool-supply-store/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "pa-bethel-park-alpine-pools",
+   "directory": "store",
+   "name": "Alpine Pools - Bethel Park Store (Alpine Pools South Hills Inc.)",
+   "state": "PA",
+   "state_name": "Pennsylvania",
+   "operator_type": "unknown",
+   "brand": "Alpine Pools",
+   "location_type": "storefront",
+   "address": {
+    "street": "6070 Library Road (Rt. 88)",
+    "city": "Bethel Park",
+    "state": "PA",
+    "zip": "15102"
+   },
+   "city": "Bethel Park",
+   "phone": "412-854-2202",
+   "website": "https://alpinepools.com/bethel-park-store/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://alpinepools.com/bethel-park-store/"
+    ],
+    "phone": [
+     "https://alpinepools.com/bethel-park-store/"
+    ],
+    "services": {
+     "retail": [
+      "https://alpinepools.com/bethel-park-store/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "pa-feasterville-aqua-pool",
+   "directory": "store",
+   "name": "Aqua Pool - Feasterville store",
+   "state": "PA",
+   "state_name": "Pennsylvania",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "1753 Bridgetown Pike",
+    "city": "Feasterville",
+    "state": "PA",
+    "zip": "19053"
+   },
+   "city": "Feasterville",
+   "phone": "(215) 364-7665",
+   "website": "https://aquapoolpa.com/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://aquapoolpa.com/"
+    ],
+    "phone": [
+     "https://aquapoolpa.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://aquapoolpa.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "pa-harrisburg-leslie-s-pool-supplies-store-303",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies Store #303 - Harrisburg",
+   "state": "PA",
+   "state_name": "Pennsylvania",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "3864 Union Deposit Rd",
+    "city": "Harrisburg",
+    "state": "PA",
+    "zip": "17109-5919"
+   },
+   "city": "Harrisburg",
+   "phone": "(717) 540-8580",
+   "website": "https://lesliespool.com/location/harrisburg-pennsylvania-harrisburg-303.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/harrisburg-pennsylvania-harrisburg-303.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/harrisburg-pennsylvania-harrisburg-303.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/harrisburg-pennsylvania-harrisburg-303.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/harrisburg-pennsylvania-harrisburg-303.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ri-coventry-pool-patio-center",
+   "directory": "store",
+   "name": "Pool & Patio Center (Coventry Showroom)",
+   "state": "RI",
+   "state_name": "Rhode Island",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "475 Tiogue Ave.",
+    "city": "Coventry",
+    "state": "RI",
+    "zip": "02816"
+   },
+   "city": "Coventry",
+   "phone": "(401) 823-7290",
+   "website": "https://www.poolandpatiocenter.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.poolandpatiocenter.com/"
+    ],
+    "phone": [
+     "https://www.poolandpatiocenter.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://shop.poolandpatiocenter.com/"
+     ],
+     "water_testing": [
+      "https://poolandpatiocenter.com/pool-water-chemistry/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "sc-columbia-leslie-s-pool-supplies-store-366",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies Store #366 - Columbia",
+   "state": "SC",
+   "state_name": "South Carolina",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "7370 Two Notch Rd Unit A B",
+    "city": "Columbia",
+    "state": "SC",
+    "zip": "29223-7620"
+   },
+   "city": "Columbia",
+   "phone": "(803) 865-7338",
+   "website": "https://lesliespool.com/location/columbia-southcarolina-columbia-366.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/columbia-southcarolina-columbia-366.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/columbia-southcarolina-columbia-366.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/columbia-southcarolina-columbia-366.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/columbia-southcarolina-columbia-366.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "sc-florence-poolwerx-florence",
+   "directory": "store",
+   "name": "Poolwerx Florence",
+   "state": "SC",
+   "state_name": "South Carolina",
+   "operator_type": "franchise",
+   "brand": "Poolwerx",
+   "location_type": "storefront",
+   "address": {
+    "street": "2704 W. Palmetto St",
+    "city": "Florence",
+    "state": "SC",
+    "zip": "29501"
+   },
+   "city": "Florence",
+   "phone": null,
+   "website": "https://www.poolwerx.com/locations/south-carolina/poolwerx-florence/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.poolwerx.com/locations/south-carolina/poolwerx-florence/"
+    ],
+    "phone": [],
+    "services": {
+     "retail": [
+      "https://www.poolwerx.com/locations/south-carolina/poolwerx-florence/"
+     ],
+     "water_testing": [
+      "https://www.poolwerx.com/locations/south-carolina/poolwerx-florence/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "sd-sioux-falls-combined-pool-spa",
+   "directory": "store",
+   "name": "Combined Pool & Spa",
+   "state": "SD",
+   "state_name": "South Dakota",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "3520 S. Western Ave.",
+    "city": "Sioux Falls",
+    "state": "SD",
+    "zip": "57105"
+   },
+   "city": "Sioux Falls",
+   "phone": "605-334-6659",
+   "website": "https://www.combinedpoolandspa.com/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.combinedpoolandspa.com/"
+    ],
+    "phone": [
+     "https://www.combinedpoolandspa.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.combinedpoolandspa.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "tn-nashville-leslie-s-belle-meade",
+   "directory": "store",
+   "name": "Leslie's Belle Meade (Store #959)",
+   "state": "TN",
+   "state_name": "Tennessee",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "73 White Bridge Pike Ste 124",
+    "city": "Nashville",
+    "state": "TN",
+    "zip": "37205-1468"
+   },
+   "city": "Nashville",
+   "phone": "(615) 352-0402",
+   "website": "https://lesliespool.com/location/nashville-tennessee-belle-meade-959.html",
+   "services": [
+    "repairs",
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/nashville-tennessee-belle-meade-959.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/nashville-tennessee-belle-meade-959.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/nashville-tennessee-belle-meade-959.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/nashville-tennessee-belle-meade-959.html"
+     ],
+     "repairs": [
+      "https://lesliespool.com/location/nashville-tennessee-belle-meade-959.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "tx-dallas-poolwerx-coit-and-campbell",
+   "directory": "store",
+   "name": "Poolwerx Coit and Campbell",
+   "state": "TX",
+   "state_name": "Texas",
+   "operator_type": "franchise",
+   "brand": "Poolwerx",
+   "location_type": "storefront",
+   "address": {
+    "street": "7522 Campbell Rd, Suite 110",
+    "city": "Dallas",
+    "state": "TX",
+    "zip": "75248"
+   },
+   "city": "Dallas",
+   "phone": "(972) 250-4048",
+   "website": "https://www.poolwerx.com/locations/texas/poolwerx-coit-and-campbell/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.poolwerx.com/locations/texas/poolwerx-coit-and-campbell/"
+    ],
+    "phone": [
+     "https://www.poolwerx.com/locations/texas/poolwerx-coit-and-campbell/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.poolwerx.com/locations/texas/poolwerx-coit-and-campbell/"
+     ],
+     "water_testing": [
+      "https://www.poolwerx.com/locations/texas/poolwerx-coit-and-campbell/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "tx-katy-pinch-a-penny-pool-patio-spa",
+   "directory": "store",
+   "name": "Pinch A Penny Pool Patio & Spa - Katy #238 (South Katy, Gaston Rd)",
+   "state": "TX",
+   "state_name": "Texas",
+   "operator_type": "franchise",
+   "brand": "Pinch A Penny",
+   "location_type": "storefront",
+   "address": {
+    "street": "9722 Gaston Road, Suite #180",
+    "city": "Katy",
+    "state": "TX",
+    "zip": "77494"
+   },
+   "city": "Katy",
+   "phone": "(281) 665-8642",
+   "website": "https://pinchapenny.com/stores/katy-tx-238",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://pinchapenny.com/stores/katy-tx-238"
+    ],
+    "phone": [
+     "https://pinchapenny.com/stores/katy-tx-238"
+    ],
+    "services": {
+     "retail": [
+      "https://pinchapenny.com/stores/katy-tx-238"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "tx-san-antonio-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - San Antonio (Store #34)",
+   "state": "TX",
+   "state_name": "Texas",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "2418 Austin Hwy Ste A",
+    "city": "San Antonio",
+    "state": "TX",
+    "zip": "78218-1911"
+   },
+   "city": "San Antonio",
+   "phone": "(210) 657-5988",
+   "website": "https://lesliespool.com/location/san-antonio-texas-san-antonio-34.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/san-antonio-texas-san-antonio-34.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/san-antonio-texas-san-antonio-34.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/san-antonio-texas-san-antonio-34.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/san-antonio-texas-san-antonio-34.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ut-murray-leslie-s-pool-supplies",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies - Salt Lake City (Store #474)",
+   "state": "UT",
+   "state_name": "Utah",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "6322 S State St",
+    "city": "Murray",
+    "state": "UT",
+    "zip": "84107-7228"
+   },
+   "city": "Murray",
+   "phone": "(801) 261-1297",
+   "website": "https://lesliespool.com/location/salt-lake-city-utah-salt-lake-city-474.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/salt-lake-city-utah-salt-lake-city-474.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/salt-lake-city-utah-salt-lake-city-474.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/salt-lake-city-utah-salt-lake-city-474.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/salt-lake-city-utah-salt-lake-city-474.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ut-st-george-clearwater-pool-supply-maintenance",
+   "directory": "store",
+   "name": "Clearwater Pool Supply & Maintenance",
+   "state": "UT",
+   "state_name": "Utah",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "1276 George Washington Blvd",
+    "city": "St. George",
+    "state": "UT",
+    "zip": "84790"
+   },
+   "city": "St. George",
+   "phone": "(435) 216-8997",
+   "website": "https://clearwaterpools.com/pool-supply-store/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://clearwaterpools.com/pool-supply-store/"
+    ],
+    "phone": [
+     "https://clearwaterpools.com/pool-supply-store/"
+    ],
+    "services": {
+     "retail": [
+      "https://clearwaterpools.com/pool-supply-store/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "vt-mendon-allen-pools-spas",
+   "directory": "store",
+   "name": "Allen Pools & Spas (Mendon)",
+   "state": "VT",
+   "state_name": "Vermont",
+   "operator_type": "independent",
+   "brand": "Allen Pools & Spas",
+   "location_type": "storefront",
+   "address": {
+    "street": "1901 US Route 4 East",
+    "city": "Mendon",
+    "state": "VT",
+    "zip": "05701"
+   },
+   "city": "Mendon",
+   "phone": null,
+   "website": "https://allenpools-spas.com/locations/mendon/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://allenpools-spas.com/locations/mendon/"
+    ],
+    "phone": [],
+    "services": {
+     "retail": [
+      "https://allenpools-spas.com/locations/mendon/"
+     ],
+     "water_testing": [
+      "https://allenpools-spas.com/locations/mendon/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "vt-south-burlington-leisure-world-pools-and-spas",
+   "directory": "store",
+   "name": "Leisure World Pools and Spas",
+   "state": "VT",
+   "state_name": "Vermont",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "1245 Airport Parkway",
+    "city": "South Burlington",
+    "state": "VT",
+    "zip": "05403"
+   },
+   "city": "South Burlington",
+   "phone": "(802) 862-1552",
+   "website": "https://www.leisureworldpool.com/",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.leisureworldpool.com/"
+    ],
+    "phone": [
+     "https://www.leisureworldpool.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://leisureworldpoolandspa.myshopify.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "va-fredericksburg-the-pool-company",
+   "directory": "store",
+   "name": "The Pool Company",
+   "state": "VA",
+   "state_name": "Virginia",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "1281 Carl D. Silver Pkwy",
+    "city": "Fredericksburg",
+    "state": "VA",
+    "zip": "22401"
+   },
+   "city": "Fredericksburg",
+   "phone": "540-370-0665",
+   "website": "https://www.thepoolcompany.net/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.thepoolcompany.net/"
+    ],
+    "phone": [
+     "https://www.thepoolcompany.net/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.thepoolcompany.net/"
+     ],
+     "water_testing": [
+      "https://www.thepoolcompany.net/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "va-vienna-leslie-s-pool-supplies-store-156",
+   "directory": "store",
+   "name": "Leslie's Pool Supplies Store #156 (Vienna)",
+   "state": "VA",
+   "state_name": "Virginia",
+   "operator_type": "chain",
+   "brand": "Leslie's",
+   "location_type": "storefront",
+   "address": {
+    "street": "412 Maple Ave E Ste 1",
+    "city": "Vienna",
+    "state": "VA",
+    "zip": "22180-4721"
+   },
+   "city": "Vienna",
+   "phone": "(703) 938-4753",
+   "website": "https://lesliespool.com/location/vienna-virginia-vienna-156.html",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lesliespool.com/location/vienna-virginia-vienna-156.html"
+    ],
+    "phone": [
+     "https://lesliespool.com/location/vienna-virginia-vienna-156.html"
+    ],
+    "services": {
+     "retail": [
+      "https://lesliespool.com/location/vienna-virginia-vienna-156.html"
+     ],
+     "water_testing": [
+      "https://lesliespool.com/location/vienna-virginia-vienna-156.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "wa-seattle-aqua-quip",
+   "directory": "store",
+   "name": "Aqua Quip - Seattle",
+   "state": "WA",
+   "state_name": "Washington",
+   "operator_type": "chain",
+   "brand": "Aqua Quip",
+   "location_type": "storefront",
+   "address": {
+    "street": "3447 4th Ave S",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98134"
+   },
+   "city": "Seattle",
+   "phone": "(206) 624-4394",
+   "website": "https://www.aquaquip.com/location/seattle/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.aquaquip.com/location/seattle/"
+    ],
+    "phone": [
+     "https://www.aquaquip.com/location/seattle/"
+    ],
+    "services": {
+     "retail": [
+      "https://www.aquaquip.com/location/seattle/"
+     ],
+     "water_testing": [
+      "https://www.aquaquip.com/location/seattle/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "wa-vancouver-the-pool-spa-house",
+   "directory": "store",
+   "name": "The Pool & Spa House - Vancouver",
+   "state": "WA",
+   "state_name": "Washington",
+   "operator_type": "independent",
+   "brand": "The Pool & Spa House",
+   "location_type": "storefront",
+   "address": {
+    "street": "11818 SE Mill Plain Blvd Suite #102",
+    "city": "Vancouver",
+    "state": "WA",
+    "zip": "98684"
+   },
+   "city": "Vancouver",
+   "phone": "(360) 253-3769",
+   "website": "https://www.thepoolandspahouse.com/locations/Vancouver",
+   "services": [
+    "retail"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.thepoolandspahouse.com/locations/Vancouver"
+    ],
+    "phone": [
+     "https://www.thepoolandspahouse.com/locations/Vancouver"
+    ],
+    "services": {
+     "retail": [
+      "https://www.thepoolandspahouse.com/shop"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "wv-parkersburg-discount-pool-supply",
+   "directory": "store",
+   "name": "Discount Pool Supply (Parkersburg)",
+   "state": "WV",
+   "state_name": "West Virginia",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "3417 Murdoch Ave",
+    "city": "Parkersburg",
+    "state": "WV",
+    "zip": "26101"
+   },
+   "city": "Parkersburg",
+   "phone": "304.422.0791",
+   "website": "https://poolforme.com/parkersburg-pool-store-athens-hot-tubs/contact/parkersburg/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://poolforme.com/parkersburg-pool-store-athens-hot-tubs/contact/parkersburg/"
+    ],
+    "phone": [
+     "https://poolforme.com/parkersburg-pool-store-athens-hot-tubs/contact/parkersburg/"
+    ],
+    "services": {
+     "retail": [
+      "https://poolforme.com/parkersburg-pool-store-athens-hot-tubs/pool-supply-store/"
+     ],
+     "water_testing": [
+      "https://poolforme.com/parkersburg-pool-store-athens-hot-tubs/pool-supply-store/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "wv-south-charleston-lorrison-pools-spas",
+   "directory": "store",
+   "name": "Lorrison Pools & Spas (South Charleston)",
+   "state": "WV",
+   "state_name": "West Virginia",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "4020 MacCorkle Ave SW",
+    "city": "South Charleston",
+    "state": "WV",
+    "zip": "25309"
+   },
+   "city": "South Charleston",
+   "phone": "304-768-0200",
+   "website": "https://lorrisonpoolsandspas.com/contact/south-charleston/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lorrisonpoolsandspas.com/"
+    ],
+    "phone": [
+     "https://lorrisonpoolsandspas.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://lorrisonpoolsandspas.com/"
+     ],
+     "water_testing": [
+      "https://lorrisonpoolsandspas.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "wi-madison-farwell-pools-spas",
+   "directory": "store",
+   "name": "Farwell Pools & Spas",
+   "state": "WI",
+   "state_name": "Wisconsin",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "3818 County Road AB",
+    "city": "Madison",
+    "state": "WI",
+    "zip": null
+   },
+   "city": "Madison",
+   "phone": "(608) 222-1730",
+   "website": "https://www.farwellpools.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.farwellpools.com/contact-us.html"
+    ],
+    "phone": [
+     "https://www.farwellpools.com/contact-us.html"
+    ],
+    "services": {
+     "retail": [
+      "https://www.farwellpools.com/showroom.html"
+     ],
+     "water_testing": [
+      "https://www.farwellpools.com/services.html"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "wi-menomonee-falls-pool-park",
+   "directory": "store",
+   "name": "Pool Park",
+   "state": "WI",
+   "state_name": "Wisconsin",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "storefront",
+   "address": {
+    "street": "N88 W15192 Main Street",
+    "city": "Menomonee Falls",
+    "state": "WI",
+    "zip": "53051"
+   },
+   "city": "Menomonee Falls",
+   "phone": "(262) 255-3626",
+   "website": "https://poolpark.com/",
+   "services": [
+    "retail",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://poolpark.com/"
+    ],
+    "phone": [
+     "https://poolpark.com/"
+    ],
+    "services": {
+     "retail": [
+      "https://poolpark.com/"
+     ],
+     "water_testing": [
+      "https://poolpark.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  }
+ ]
+}

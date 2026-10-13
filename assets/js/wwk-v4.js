@@ -28,7 +28,7 @@
   if (window.__wwkV4) return;
   var state = window.__wwkV4 = { status: 'waiting', built: false, active: false, full: false, reason: '' };
   var doc = document, root = doc.documentElement;
-  var CSS_URL = '/assets/css/wwk-v4.css?v=025nav1';
+  var CSS_URL = '/assets/css/wwk-v4.css?v=026care1';
   var DATA_URL = '/assets/data/wwk-v4-data.json?v=20261010v4';
   var mq = window.matchMedia ? window.matchMedia('(max-width: 768px)') : null;
   function isPhone() { return mq ? mq.matches : window.innerWidth <= 768; }
@@ -247,6 +247,9 @@
     each(doc.querySelectorAll('header .nav-links > li > a'), function (a) { links.push({ href: a.getAttribute('href'), text: a.textContent.trim() }); });
     if (!links.length) links = [{ href: '/education/', text: 'Water Safety' }, { href: '/swim-lessons/', text: 'Find Lessons' }, { href: '/find-a-pool/', text: 'Find a Pool' }, { href: '/aquatic-jobs/', text: 'Aquatic Jobs' }, { href: '/about/', text: 'About' }, { href: '/contact/', text: 'Contact' }];
     var have = {}; links.forEach(function (l) { have[l.href] = 1; });
+    // WWK-RESIDENTIAL-POOL-CARE-026: Pool Care (guides + store/service directories) sits after Find a Pool in the menu
+    if (!have['/pool-care/']) { var fi = -1; links.forEach(function (l, i) { if (l.href === '/find-a-pool/') fi = i; });
+      links.splice(fi >= 0 ? fi + 1 : links.length, 0, { href: '/pool-care/', text: 'Pool Care' }); have['/pool-care/'] = 1; }
     [{ href: '/tools/', text: 'Free tools & printables' }, { href: '/cartoons/', text: 'Cartoons' }].forEach(function (l) { if (!have[l.href]) links.push(l); });
     // Current section (WWK-POOLS-NATIONWIDE-025): the row whose section path contains this page is marked, e.g. Find a Pool on /find-a-pool/ pages
     var inSection = function (h) { return !!h && h !== '/' && h.charAt(0) === '/' && h.charAt(h.length - 1) === '/' && path.indexOf(h) === 0; };

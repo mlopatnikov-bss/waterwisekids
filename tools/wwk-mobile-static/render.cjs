@@ -33,9 +33,9 @@ for(const file of selected){
   // Existing footer remains the no-JS More destination, without duplicating text or links.
   const foot=d.querySelector('footer');if(foot&&!d.getElementById('site-map'))foot.id='site-map';
   const legacyCss=d.createElement('link');legacyCss.rel='stylesheet';legacyCss.href='/assets/css/m-app.css?v=20261009p1';legacyCss.media='(max-width:768px)';d.head.append(legacyCss);
-  const csslink=d.createElement('link');csslink.rel='stylesheet';csslink.id='wwk-v4-css';csslink.href='/assets/css/wwk-v4.css?v=025nav1';d.head.append(csslink);
+  const csslink=d.createElement('link');csslink.rel='stylesheet';csslink.id='wwk-v4-css';csslink.href='/assets/css/wwk-v4.css?v=026care1';d.head.append(csslink);
   const nojs=d.createElement('noscript');nojs.textContent='__WWK_NOJS__';d.head.append(nojs);
-  const script=d.createElement('script');script.src='/assets/js/wwk-v4.js?v=025nav1';script.defer=true;d.head.append(script);
+  const script=d.createElement('script');script.src='/assets/js/wwk-v4.js?v=026care1';script.defer=true;d.head.append(script);
   // Editorial introduction stays accessible; the mobile task blocks and library take priority.
   const intro=d.querySelector('.hub-intro');if(intro){intro.classList.add('v4-editorial-mobile');intro.parentElement.setAttribute('data-v4-guide-order','');[...intro.parentElement.children].forEach((n,i)=>n.style.setProperty('--v4-original-order',i));intro.parentElement.append(intro);var details=d.createElement('details');details.open=true;details.setAttribute('data-v4-disclosure','');var sum=d.createElement('summary');sum.textContent='Water safety basics and frequently asked questions';details.append(sum);while(intro.firstChild)details.append(intro.firstChild);intro.append(details);}
   for(const sel of d.querySelectorAll('.v4-home-states select,.v4-lessons-tasks select')) {

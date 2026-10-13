@@ -1,0 +1,490 @@
+{
+ "schema": "wwk-pool-care-guides/1",
+ "generated": "2026-10-13",
+ "guides": [
+  {
+   "slug": "pool-care-routine",
+   "url": "/pool-care/pool-care-routine.html",
+   "title": "Your Home Pool Care Routine, Week by Week",
+   "description": "A calm weekly and monthly routine for family pools: what to test, clean and check, why it matters, and how it changes with your pool and equipment.",
+   "topic": "cleaning",
+   "season_tags": [
+    "year_round",
+    "closing",
+    "warm_climate"
+   ],
+   "applies_to": "In-ground and above-ground home pools with vinyl, fiberglass or plaster surfaces; chlorine and salt-chlorine systems; sand, cartridge and DE filters.",
+   "headings": [
+    "Why a routine matters",
+    "Every day: chlorine and pH",
+    "Your weekly checklist",
+    "Your monthly checklist",
+    "How your routine changes with your pool",
+    "Chemical and equipment safety",
+    "As the season winds down"
+   ],
+   "search_text": "Weekly and Monthly Home Pool Care Routine Your Home Pool Care Routine, Week by Week A calm weekly and monthly routine for family pools: what to test, clean and check, why it matters, and how it changes with your pool and equipment. In-ground and above-ground home pools with vinyl, fiberglass or plaster surfaces; chlorine and salt-chlorine systems; sand, cartridge and DE filters. Why a routine matters Every day: chlorine and pH Your weekly checklist Your monthly checklist How your routine changes with your pool Chemical and equipment safety As the season winds down How often should I test my pool? If the water looks clear, can I skip a test? Does a well-kept pool mean kids are safe?"
+  },
+  {
+   "slug": "testing-pool-water",
+   "url": "/pool-care/testing-pool-water.html",
+   "title": "How to Test Your Pool Water",
+   "description": "How often to test home pool water, what to test, strips vs drop kits vs digital testers, how to read results and how to store your kit.",
+   "topic": "water",
+   "season_tags": [
+    "year_round",
+    "opening",
+    "warm_climate"
+   ],
+   "applies_to": "Home in-ground and above-ground pools using chlorine or a salt chlorine generator; test strips, liquid drop kits and digital testers.",
+   "headings": [
+    "How often to test",
+    "What to test and why",
+    "Test strips, drop kits and digital testers",
+    "Step by step: a good sample and a clear reading",
+    "When results look odd",
+    "Storing your test kit and strips",
+    "When to get help"
+   ],
+   "search_text": "How to Test Your Pool Water How to Test Your Pool Water How often to test home pool water, what to test, strips vs drop kits vs digital testers, how to read results and how to store your kit. Home in-ground and above-ground pools using chlorine or a salt chlorine generator; test strips, liquid drop kits and digital testers. How often to test What to test and why Test strips, drop kits and digital testers Step by step: a good sample and a clear reading When results look odd Storing your test kit and strips When to get help Are test strips good enough? Why did my chlorine test read zero right after I shocked the pool? How long do test reagents last?"
+  },
+  {
+   "slug": "pool-water-balance",
+   "url": "/pool-care/pool-water-balance.html",
+   "title": "Pool Water Balance, Explained for Parents",
+   "description": "What pH, total alkalinity, calcium hardness and cyanuric acid do in a home pool, the ranges CDC and test-kit makers give, and how surfaces differ.",
+   "topic": "water",
+   "season_tags": [
+    "year_round",
+    "opening",
+    "warm_climate"
+   ],
+   "applies_to": "Home in-ground and above-ground pools with plaster, vinyl or fiberglass surfaces; chlorine and salt-chlorine systems.",
+   "headings": [
+    "What “balanced” means",
+    "pH",
+    "Total alkalinity",
+    "Calcium hardness",
+    "Cyanuric acid (stabilizer)",
+    "How your pool surface and equipment change the picture",
+    "Adjusting safely"
+   ],
+   "search_text": "Pool Water Balance: pH, Alkalinity, Hardness and Stabilizer Pool Water Balance, Explained for Parents What pH, total alkalinity, calcium hardness and cyanuric acid do in a home pool, the ranges CDC and test-kit makers give, and how surfaces differ. Home in-ground and above-ground pools with plaster, vinyl or fiberglass surfaces; chlorine and salt-chlorine systems. What “balanced” means pH Total alkalinity Calcium hardness Cyanuric acid (stabilizer) How your pool surface and equipment change the picture Adjusting safely My test kit says ideal pH is 7.4–7.6, but CDC says 7.0–7.8. Which is right? Do I need stabilizer? Why does my alkalinity read high when I use stabilized chlorine?"
+  },
+  {
+   "slug": "pool-chlorine-and-stabilizer",
+   "url": "/pool-care/pool-chlorine-and-stabilizer.html",
+   "title": "Pool Chlorine and Stabilizer, Explained for Families",
+   "description": "How chlorine keeps a home pool clean, free vs combined chlorine, the stabilizer trade-off, shocking by the label, and safe chemical storage.",
+   "topic": "water",
+   "season_tags": [
+    "year_round",
+    "opening",
+    "closing",
+    "warm_climate"
+   ],
+   "applies_to": "In-ground and above-ground home pools sanitized with chlorine, including tablet, granular, liquid and salt-generated chlorine. Indoor pools and hot tubs are noted where sources treat them differently.",
+   "headings": [
+    "What chlorine does in your pool",
+    "Common forms of chlorine",
+    "Free chlorine and combined chlorine",
+    "Stabilizer (cyanuric acid): the trade-off",
+    "Shocking (superchlorination): follow the label",
+    "Storing chemicals safely at home"
+   ],
+   "search_text": "Pool Chlorine and Stabilizer: A Plain Guide for Home Pools Pool Chlorine and Stabilizer, Explained for Families How chlorine keeps a home pool clean, free vs combined chlorine, the stabilizer trade-off, shocking by the label, and safe chemical storage. In-ground and above-ground home pools sanitized with chlorine, including tablet, granular, liquid and salt-generated chlorine. Indoor pools and hot tubs are noted where sources treat them differently. What chlorine does in your pool Common forms of chlorine Free chlorine and combined chlorine Stabilizer (cyanuric acid): the trade-off Shocking (superchlorination): follow the label Storing chemicals safely at home Does a strong chlorine smell mean there is too much chlorine? Can I switch tablet brands in my feeder? Do I need stabilizer?"
+  },
+  {
+   "slug": "salt-water-pools",
+   "url": "/pool-care/salt-water-pools.html",
+   "title": "Salt Water Pools: Still Chlorine, With Different Upkeep",
+   "description": "Salt pools are still chlorine pools. What manufacturer manuals say about salt levels, cell cleaning, cold weather and electrical safety.",
+   "topic": "equipment",
+   "season_tags": [
+    "year_round",
+    "opening",
+    "closing",
+    "freeze",
+    "warm_climate"
+   ],
+   "applies_to": "Home pools with a salt chlorine generator. Examples come from Hayward's AquaRite and Pentair's IntelliChlor manuals; other systems differ, so check your own manual.",
+   "headings": [
+    "How a salt chlorine generator works",
+    "Salt level: your manual sets the number",
+    "Stabilizer and pH still matter",
+    "Cell care: inspect, and follow the manual exactly",
+    "What differs from system to system",
+    "Electrical safety and when to call a professional"
+   ],
+   "search_text": "Salt Water Pools: How Salt Chlorine Generators Work and What They Need Salt Water Pools: Still Chlorine, With Different Upkeep Salt pools are still chlorine pools. What manufacturer manuals say about salt levels, cell cleaning, cold weather and electrical safety. Home pools with a salt chlorine generator. Examples come from Hayward's AquaRite and Pentair's IntelliChlor manuals; other systems differ, so check your own manual. How a salt chlorine generator works Salt level: your manual sets the number Stabilizer and pH still matter Cell care: inspect, and follow the manual exactly What differs from system to system Electrical safety and when to call a professional Is a salt water pool chlorine-free? Why does my salt reading differ from my test strip? Can I add salt to a newly plastered pool?"
+  },
+  {
+   "slug": "pool-surfaces-vinyl-fiberglass-plaster",
+   "url": "/pool-care/pool-surfaces-vinyl-fiberglass-plaster.html",
+   "title": "Vinyl, Fiberglass or Plaster: Caring for Your Pool's Surface",
+   "description": "How care differs for vinyl liners, fiberglass and plaster or aggregate pools: brushing, chemistry, staining, draining risks and when to call a pro.",
+   "topic": "cleaning",
+   "season_tags": [
+    "year_round",
+    "opening",
+    "closing"
+   ],
+   "applies_to": "In-ground and above-ground pools with vinyl liners, in-ground fiberglass pools, and plaster, concrete or aggregate finishes. Surface makers' instructions differ; your own manual and warranty come first.",
+   "headings": [
+    "Why surface type changes the routine",
+    "Vinyl liners",
+    "Fiberglass pools",
+    "Plaster and aggregate finishes: what one finish maker says",
+    "Stains: identify before you treat",
+    "When to call a professional"
+   ],
+   "search_text": "Caring for Vinyl, Fiberglass and Plaster Pool Surfaces Vinyl, Fiberglass or Plaster: Caring for Your Pool's Surface How care differs for vinyl liners, fiberglass and plaster or aggregate pools: brushing, chemistry, staining, draining risks and when to call a pro. In-ground and above-ground pools with vinyl liners, in-ground fiberglass pools, and plaster, concrete or aggregate finishes. Surface makers' instructions differ; your own manual and warranty come first. Why surface type changes the routine Vinyl liners Fiberglass pools Plaster and aggregate finishes: what one finish maker says Stains: identify before you treat When to call a professional Can I use the same brush on every pool? Why does my vinyl liner have pale spots? Can I drain my pool to clean it?"
+  },
+  {
+   "slug": "pool-pumps-and-circulation",
+   "url": "/pool-care/pool-pumps-and-circulation.html",
+   "title": "Pool Pumps and Circulation",
+   "description": "How a pool pump circulates water, single-speed vs variable-speed pumps, strainer baskets and priming, electrical safety, and when to call a pro.",
+   "topic": "equipment",
+   "season_tags": [
+    "year_round",
+    "closing",
+    "opening",
+    "freeze"
+   ],
+   "applies_to": "In-ground and above-ground home pools; permanently installed pumps and the filter pumps sold with storable above-ground pools; single-speed, two-speed and variable-speed pumps",
+   "headings": [
+    "What circulation does",
+    "Single-speed, two-speed and variable-speed pumps",
+    "Strainer basket and priming",
+    "Electrical safety around the pump",
+    "Pumps at closing time and in freezing weather",
+    "When to call a professional"
+   ],
+   "search_text": "Pool Pumps and Circulation: A Guide for Home Pool Owners Pool Pumps and Circulation How a pool pump circulates water, single-speed vs variable-speed pumps, strainer baskets and priming, electrical safety, and when to call a pro. In-ground and above-ground home pools; permanently installed pumps and the filter pumps sold with storable above-ground pools; single-speed, two-speed and variable-speed pumps What circulation does Single-speed, two-speed and variable-speed pumps Strainer basket and priming Electrical safety around the pump Pumps at closing time and in freezing weather When to call a professional Can I run my pool pump without water for a minute? Does a variable-speed pump use less energy? Why does my pump shut off on hot days?"
+  },
+  {
+   "slug": "pool-filters",
+   "url": "/pool-care/pool-filters.html",
+   "title": "Pool Filters: Sand, Cartridge and DE",
+   "description": "How sand, cartridge and DE pool filters work, how each is cleaned per maker manuals, how to read the pressure gauge, and filter tank safety.",
+   "topic": "equipment",
+   "season_tags": [
+    "year_round",
+    "closing",
+    "opening",
+    "freeze"
+   ],
+   "applies_to": "In-ground and above-ground home pools with sand, cartridge or diatomaceous earth (DE) filters",
+   "headings": [
+    "What the filter does",
+    "Reading the pressure gauge",
+    "Sand filters: backwash and rinse",
+    "Cartridge filters: remove and rinse",
+    "DE filters: backwash and recharge",
+    "Tank lids, clamps and air relief valves",
+    "When to call a professional"
+   ],
+   "search_text": "Pool Filters: Sand, Cartridge and DE Explained Pool Filters: Sand, Cartridge and DE How sand, cartridge and DE pool filters work, how each is cleaned per maker manuals, how to read the pressure gauge, and filter tank safety. In-ground and above-ground home pools with sand, cartridge or diatomaceous earth (DE) filters What the filter does Reading the pressure gauge Sand filters: backwash and rinse Cartridge filters: remove and rinse DE filters: backwash and recharge Tank lids, clamps and air relief valves When to call a professional Do cartridge filters need backwashing? What should I do with my filter for winter?"
+  },
+  {
+   "slug": "pool-equipment-guide",
+   "url": "/pool-care/pool-equipment-guide.html",
+   "title": "Home Pool Equipment Explained",
+   "description": "What home pool equipment does: pumps, filters, heaters, salt systems, cleaners, covers and drain covers, plus the jobs that need a licensed pro.",
+   "topic": "equipment",
+   "season_tags": [
+    "year_round",
+    "closing",
+    "opening",
+    "warm_climate",
+    "freeze"
+   ],
+   "applies_to": "In-ground and above-ground home pools; vinyl, fiberglass and plaster finishes; chlorine and salt systems; gas, heat pump and solar heating",
+   "headings": [
+    "The equipment at a glance",
+    "Pumps and filters",
+    "Heaters: gas, heat pump and solar",
+    "Chlorinators and salt systems",
+    "Automatic cleaners",
+    "Covers: safety covers vs solar covers",
+    "Drain covers and the Virginia Graeme Baker Act",
+    "Jobs for licensed or qualified professionals"
+   ],
+   "search_text": "Home Pool Equipment: A Plain-English Overview Home Pool Equipment Explained What home pool equipment does: pumps, filters, heaters, salt systems, cleaners, covers and drain covers, plus the jobs that need a licensed pro. In-ground and above-ground home pools; vinyl, fiberglass and plaster finishes; chlorine and salt systems; gas, heat pump and solar heating The equipment at a glance Pumps and filters Heaters: gas, heat pump and solar Chlorinators and salt systems Automatic cleaners Covers: safety covers vs solar covers Drain covers and the Virginia Graeme Baker Act Jobs for licensed or qualified professionals Is a solar cover a safety cover? Does the Virginia Graeme Baker Act cover my backyard pool? Can I repair a gas pool heater myself? Do I still need to test the water with a salt system?"
+  },
+  {
+   "slug": "cleaning-and-vacuuming",
+   "url": "/pool-care/cleaning-and-vacuuming.html",
+   "title": "Cleaning and Vacuuming Your Home Pool: Skimming, Brushing and Cleaners",
+   "description": "Skim, brush, vacuum and empty baskets safely, with manufacturer guidance for manual, suction, pressure and robotic pool cleaners.",
+   "topic": "cleaning",
+   "season_tags": [
+    "year_round"
+   ],
+   "applies_to": "In-ground and above-ground pools with vinyl, fiberglass or plaster surfaces; manual vacuums and suction-side, pressure-side and robotic cleaners. Your own equipment's manual always comes first.",
+   "headings": [
+    "Before you start: safety first",
+    "Skim the surface",
+    "Brush walls, floor and fixtures",
+    "Vacuum the floor",
+    "Robotic cleaners and electricity",
+    "Empty baskets and look after the filter",
+    "When to call a professional"
+   ],
+   "search_text": "How to Clean and Vacuum a Home Pool Cleaning and Vacuuming Your Home Pool: Skimming, Brushing and Cleaners Skim, brush, vacuum and empty baskets safely, with manufacturer guidance for manual, suction, pressure and robotic pool cleaners. In-ground and above-ground pools with vinyl, fiberglass or plaster surfaces; manual vacuums and suction-side, pressure-side and robotic cleaners. Your own equipment's manual always comes first. Before you start: safety first Skim the surface Brush walls, floor and fixtures Vacuum the floor Robotic cleaners and electricity Empty baskets and look after the filter When to call a professional Can my kids swim while the robot cleaner runs? How often should I skim and brush? Do I still need to brush and vacuum if I have an automatic cleaner?"
+  },
+  {
+   "slug": "cloudy-pool-water",
+   "url": "/pool-care/cloudy-pool-water.html",
+   "title": "Why Is My Pool Water Cloudy? Causes and How to Work Through Them",
+   "description": "Cloudy pool water usually points to filtration, sanitizer, pH or algae. How to test, check equipment and keep everyone out until it clears.",
+   "topic": "problems",
+   "season_tags": [
+    "year_round"
+   ],
+   "applies_to": "In-ground and above-ground home pools with sand, cartridge or DE filters, using chlorine (including salt systems). Follow your own test kit, product labels and equipment manuals.",
+   "headings": [
+    "Keep everyone out until you can see the drain",
+    "Common causes",
+    "Step 1: Test the water",
+    "Step 2: Correct sanitizer and pH, by the label",
+    "Step 3: Check circulation and filtration",
+    "When to call a professional"
+   ],
+   "search_text": "Cloudy Pool Water: Causes and What to Check Why Is My Pool Water Cloudy? Causes and How to Work Through Them Cloudy pool water usually points to filtration, sanitizer, pH or algae. How to test, check equipment and keep everyone out until it clears. In-ground and above-ground home pools with sand, cartridge or DE filters, using chlorine (including salt systems). Follow your own test kit, product labels and equipment manuals. Keep everyone out until you can see the drain Common causes Step 1: Test the water Step 2: Correct sanitizer and pH, by the label Step 3: Check circulation and filtration When to call a professional Is it safe to swim in cloudy pool water? Can high pH make water cloudy? Are test strips good enough?"
+  },
+  {
+   "slug": "pool-algae",
+   "url": "/pool-care/pool-algae.html",
+   "title": "Pool Algae: Recognizing It, Clearing It and Keeping It Away",
+   "description": "Recognize green, mustard and black algae, brush and treat by the label, use your filter, and keep algae from coming back in a home pool.",
+   "topic": "problems",
+   "season_tags": [
+    "year_round",
+    "warm_climate"
+   ],
+   "applies_to": "In-ground and above-ground home pools with vinyl, fiberglass or plaster surfaces, using chlorine (including salt systems). Follow your product labels and equipment manuals.",
+   "headings": [
+    "How to recognize algae",
+    "Why algae grows",
+    "Safety first",
+    "Clearing algae: the general sequence",
+    "What algaecide labels mean",
+    "Preventing algae",
+    "When to call a professional"
+   ],
+   "search_text": "Pool Algae: How to Spot It, Treat It and Prevent It Pool Algae: Recognizing It, Clearing It and Keeping It Away Recognize green, mustard and black algae, brush and treat by the label, use your filter, and keep algae from coming back in a home pool. In-ground and above-ground home pools with vinyl, fiberglass or plaster surfaces, using chlorine (including salt systems). Follow your product labels and equipment manuals. How to recognize algae Why algae grows Safety first Clearing algae: the general sequence What algaecide labels mean Preventing algae When to call a professional Is it safe to swim in a green pool? Do I have to use an algaecide? Which algae is hardest to remove?"
+  },
+  {
+   "slug": "closing-your-pool",
+   "url": "/pool-care/closing-your-pool.html",
+   "title": "How to Close Your Pool for Winter",
+   "description": "Close a home pool for winter or keep it running in a mild climate: manufacturer steps, safety covers vs debris covers, and when to call a pro.",
+   "topic": "seasonal",
+   "season_tags": [
+    "closing",
+    "freeze",
+    "warm_climate"
+   ],
+   "applies_to": "In-ground and above-ground home pools in freezing and mild-winter climates; pumps, filters, heaters, heat pumps and covers",
+   "headings": [
+    "Do you need to close your pool?",
+    "Before you start: chemicals and children",
+    "In-ground pools: protecting the equipment",
+    "Above-ground pools: check your model",
+    "Covers: safety cover or debris cover?",
+    "Keep every barrier working all winter",
+    "When to call a professional"
+   ],
+   "search_text": "Closing Your Pool for Winter: A Practical Guide for Families How to Close Your Pool for Winter Close a home pool for winter or keep it running in a mild climate: manufacturer steps, safety covers vs debris covers, and when to call a pro. In-ground and above-ground home pools in freezing and mild-winter climates; pumps, filters, heaters, heat pumps and covers Do you need to close your pool? Before you start: chemicals and children In-ground pools: protecting the equipment Above-ground pools: check your model Covers: safety cover or debris cover? Keep every barrier working all winter When to call a professional Can I just drain my in-ground pool for the winter? Is a winter cover enough to keep my kids safe?"
+  },
+  {
+   "slug": "opening-your-pool",
+   "url": "/pool-care/opening-your-pool.html",
+   "title": "How to Open Your Pool for the Season",
+   "description": "Open your home pool safely: clear water off the cover, reconnect equipment per your manuals, test to CDC targets, and re-check fences, alarms and drains.",
+   "topic": "seasonal",
+   "season_tags": [
+    "opening"
+   ],
+   "applies_to": "In-ground and above-ground home pools reopening after winter; pumps, filters, heaters, heat pumps, covers and safety barriers",
+   "headings": [
+    "Start with safety: the cover and the kids",
+    "Remove the cover",
+    "Reconnect and inspect the equipment",
+    "Refill and add chemicals carefully",
+    "Test and balance the water",
+    "Re-check every safety layer before the first swim",
+    "When to call a professional"
+   ],
+   "search_text": "Opening Your Pool in Spring: Safe Steps for Families How to Open Your Pool for the Season Open your home pool safely: clear water off the cover, reconnect equipment per your manuals, test to CDC targets, and re-check fences, alarms and drains. In-ground and above-ground home pools reopening after winter; pumps, filters, heaters, heat pumps, covers and safety barriers Start with safety: the cover and the kids Remove the cover Reconnect and inspect the equipment Refill and add chemicals carefully Test and balance the water Re-check every safety layer before the first swim When to call a professional Can I open my pool myself? What chlorine and pH should I aim for? Why get the water off the cover first?"
+  },
+  {
+   "slug": "freeze-protection",
+   "url": "/pool-care/freeze-protection.html",
+   "title": "Freeze Protection for Pool Equipment",
+   "description": "What pool freeze-protection features do and don't do, when to keep water moving or drain, what to do in a power outage, and when to call a pro.",
+   "topic": "equipment",
+   "season_tags": [
+    "freeze",
+    "closing",
+    "warm_climate"
+   ],
+   "applies_to": "Home pools with pumps, filters, heaters, heat pumps or automation in places that get freezing weather, from occasional cold snaps to long winters",
+   "headings": [
+    "Why freezing matters",
+    "Watch the forecast and make a plan",
+    "What built-in freeze protection does and doesn't do",
+    "Keep water moving, or drain? It depends",
+    "Above-ground pools",
+    "If the power goes out",
+    "If equipment may have frozen"
+   ],
+   "search_text": "Protecting Pool Equipment in Freezing Weather Freeze Protection for Pool Equipment What pool freeze-protection features do and don't do, when to keep water moving or drain, what to do in a power outage, and when to call a pro. Home pools with pumps, filters, heaters, heat pumps or automation in places that get freezing weather, from occasional cold snaps to long winters Why freezing matters Watch the forecast and make a plan What built-in freeze protection does and doesn't do Keep water moving, or drain? It depends Above-ground pools If the power goes out If equipment may have frozen Will freeze protection keep my equipment safe in any freeze? Should I wrap my pump in a tarp? Is it safe to switch the power back on after a storm?"
+  },
+  {
+   "slug": "year-round-pool-care-warm-climates",
+   "url": "/pool-care/year-round-pool-care-warm-climates.html",
+   "title": "Keeping Your Pool Running Year-Round in a Warm Climate",
+   "description": "Keep a pool running all year in a hot or mild climate: sun and chlorine, algae, chemical storage in heat, hurricane prep and lightning.",
+   "topic": "seasonal",
+   "season_tags": [
+    "year_round",
+    "warm_climate"
+   ],
+   "applies_to": "In-ground and above-ground pools in hot or mild climates that stay open all year; chlorine and salt-chlorine systems; pools with or without a heater. Check your own equipment manual for anything specific to your filter, pump, heater or chlorinator.",
+   "headings": [
+    "How sun and heat change your water",
+    "Algae and debris pressure",
+    "Store chemicals for the heat",
+    "Before a hurricane or severe storm",
+    "After the storm",
+    "Winter swimming in a mild climate",
+    "When to call a professional"
+   ],
+   "search_text": "Year-Round Pool Care in Warm Climates Keeping Your Pool Running Year-Round in a Warm Climate Keep a pool running all year in a hot or mild climate: sun and chlorine, algae, chemical storage in heat, hurricane prep and lightning. In-ground and above-ground pools in hot or mild climates that stay open all year; chlorine and salt-chlorine systems; pools with or without a heater. Check your own equipment manual for anything specific to your filter, pump, heater or chlorinator. How sun and heat change your water Algae and debris pressure Store chemicals for the heat Before a hurricane or severe storm After the storm Winter swimming in a mild climate When to call a professional Should I drain my pool before a hurricane? Why does my chlorine drop so fast in summer? Can I put patio furniture in the pool so it doesn't blow away? Can my heater protect the pool from a freeze?"
+  },
+  {
+   "slug": "above-ground-pool-care",
+   "url": "/pool-care/above-ground-pool-care.html",
+   "title": "Above-Ground Pool Care: Setup, Water, Ladders and Storage",
+   "description": "Care for frame, inflatable-ring and steel-wall above-ground pools: level ground, filter pumps, water testing, ladders, draining and storage.",
+   "topic": "equipment",
+   "season_tags": [
+    "year_round",
+    "closing",
+    "opening",
+    "warm_climate"
+   ],
+   "applies_to": "Above-ground and portable pools: metal-frame, inflatable-ring (fast-set), steel-wall and small inflatable pools, with cartridge or sand filter pumps and optional plug-in chlorinators. Examples come from Bestway's support pages; your own model's manual comes first.",
+   "headings": [
+    "Know what kind of pool you have",
+    "Start with level, solid ground",
+    "Filter pumps: match, maintain, unplug",
+    "Water care for a smaller pool",
+    "Ladders, climbing and barriers",
+    "Small inflatable pools",
+    "Draining and storing a seasonal pool",
+    "When to call for help"
+   ],
+   "search_text": "Above-Ground Pool Care for Families Above-Ground Pool Care: Setup, Water, Ladders and Storage Care for frame, inflatable-ring and steel-wall above-ground pools: level ground, filter pumps, water testing, ladders, draining and storage. Above-ground and portable pools: metal-frame, inflatable-ring (fast-set), steel-wall and small inflatable pools, with cartridge or sand filter pumps and optional plug-in chlorinators. Examples come from Bestway's support pages; your own model's manual comes first. Know what kind of pool you have Start with level, solid ground Filter pumps: match, maintain, unplug Water care for a smaller pool Ladders, climbing and barriers Small inflatable pools Draining and storing a seasonal pool When to call for help Do I really need to remove the ladder? Can I set my pool on sand or a deck? Can I run the filter and skip chemicals?"
+  },
+  {
+   "slug": "pool-water-conservation-and-leaks",
+   "url": "/pool-care/pool-water-conservation-and-leaks.html",
+   "title": "Pool Water Conservation and Leak Checks",
+   "description": "Cut pool water loss: covers and evaporation, backwash and filter choices, where drain water can go, the bucket test for leaks, and when to call a pro.",
+   "topic": "problems",
+   "season_tags": [
+    "year_round",
+    "warm_climate"
+   ],
+   "applies_to": "In-ground and above-ground pools with sand, cartridge or DE filters, with or without automatic fill valves. Local water rules vary, so check with your water utility or city.",
+   "headings": [
+    "Where pool water goes",
+    "Cut evaporation",
+    "Backwashing and filter choices",
+    "Where backwash and drain water can go",
+    "Check for leaks",
+    "Local water rules and help"
+   ],
+   "search_text": "Saving Pool Water and Checking for Leaks Pool Water Conservation and Leak Checks Cut pool water loss: covers and evaporation, backwash and filter choices, where drain water can go, the bucket test for leaks, and when to call a pro. In-ground and above-ground pools with sand, cartridge or DE filters, with or without automatic fill valves. Local water rules vary, so check with your water utility or city. Where pool water goes Cut evaporation Backwashing and filter choices Where backwash and drain water can go Check for leaks Local water rules and help How much evaporation does a cover stop? How do I know if my pool is leaking? Can I put backwash water on my lawn? Which filter uses the least water?"
+  },
+  {
+   "slug": "pool-troubleshooting-and-when-to-call-a-pro",
+   "url": "/pool-care/pool-troubleshooting-and-when-to-call-a-pro.html",
+   "title": "Pool Troubleshooting, and When to Call a Pro",
+   "description": "A calm symptom-to-cause guide for common home-pool problems: what owners can safely check, and the clear signs it is time to call a qualified pro.",
+   "topic": "problems",
+   "season_tags": [
+    "year_round",
+    "opening",
+    "closing"
+   ],
+   "applies_to": "In-ground and above-ground home pools with a pump, filter, heater or salt system. Checks differ by model, so your own equipment manual comes first.",
+   "headings": [
+    "Safe checks only",
+    "Pump won’t prime or loses prime",
+    "Low flow or high filter pressure",
+    "Heater won’t fire",
+    "Salt cell warning lights",
+    "Losing water",
+    "When a GFCI trips",
+    "Strong “chlorine” smell or stinging eyes",
+    "Stains",
+    "Stop and call a pro"
+   ],
+   "search_text": "Pool Troubleshooting: Common Problems and When to Call a Pro Pool Troubleshooting, and When to Call a Pro A calm symptom-to-cause guide for common home-pool problems: what owners can safely check, and the clear signs it is time to call a qualified pro. In-ground and above-ground home pools with a pump, filter, heater or salt system. Checks differ by model, so your own equipment manual comes first. Safe checks only Pump won’t prime or loses prime Low flow or high filter pressure Heater won’t fire Salt cell warning lights Losing water When a GFCI trips Strong “chlorine” smell or stinging eyes Stains Stop and call a pro Why does my pump get hot and shut off?"
+  },
+  {
+   "slug": "pool-chemical-safety-at-home",
+   "url": "/pool-care/pool-chemical-safety-at-home.html",
+   "title": "Pool Chemical Safety at Home",
+   "description": "Buying, carrying, using and disposing of pool chemicals safely at home, plus what to do after a spill, exposure or fire. The label comes first.",
+   "topic": "safety",
+   "season_tags": [
+    "year_round",
+    "opening",
+    "closing"
+   ],
+   "applies_to": "Any home pool, in-ground or above-ground, using chlorine products, acids, salt-cell cleaners or other pool chemicals.",
+   "headings": [
+    "Why the label comes first",
+    "Buying",
+    "Getting chemicals home",
+    "Storing",
+    "Using: never mix, and chemical into water",
+    "After a spill",
+    "If someone is exposed",
+    "If there is a fire",
+    "Disposing of leftovers and containers"
+   ],
+   "search_text": "Pool Chemical Safety at Home: Buy, Carry, Use and Dispose Pool Chemical Safety at Home Buying, carrying, using and disposing of pool chemicals safely at home, plus what to do after a spill, exposure or fire. The label comes first. Any home pool, in-ground or above-ground, using chlorine products, acids, salt-cell cleaners or other pool chemicals. Why the label comes first Buying Getting chemicals home Storing Using: never mix, and chemical into water After a spill If someone is exposed If there is a fire Disposing of leftovers and containers Can chlorine and acid share a shelf if they are on different levels? Can I use one scoop for everything? Do I really need goggles and gloves?"
+  },
+  {
+   "slug": "family-safety-while-maintaining-your-pool",
+   "url": "/pool-care/family-safety-while-maintaining-your-pool.html",
+   "title": "Keeping Kids Safe While You Maintain Your Pool",
+   "description": "Pool work opens gaps: gates open, covers half off, chemicals out. How to keep children safe during maintenance, and why upkeep never replaces barriers.",
+   "topic": "safety",
+   "season_tags": [
+    "year_round",
+    "opening",
+    "closing"
+   ],
+   "applies_to": "Families with children and any home pool, in-ground or above-ground, during routine care, opening, closing, draining and repairs.",
+   "headings": [
+    "Why maintenance time is risky time",
+    "Chemical work",
+    "Covers coming off and going on",
+    "Gates, ladders and climbable equipment",
+    "Cords and electricity",
+    "Draining, filling and low water",
+    "Equipment pads and pump rooms",
+    "Maintenance never replaces the layers"
+   ],
+   "search_text": "Keeping Kids Safe While You Maintain Your Pool Keeping Kids Safe While You Maintain Your Pool Pool work opens gaps: gates open, covers half off, chemicals out. How to keep children safe during maintenance, and why upkeep never replaces barriers. Families with children and any home pool, in-ground or above-ground, during routine care, opening, closing, draining and repairs. Why maintenance time is risky time Chemical work Covers coming off and going on Gates, ladders and climbable equipment Cords and electricity Draining, filling and low water Equipment pads and pump rooms Maintenance never replaces the layers Is a winter cover enough to keep my toddler safe? Can my kids help with pool chores?"
+  }
+ ]
+}

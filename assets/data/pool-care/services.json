@@ -1,0 +1,5391 @@
+{
+ "schema": "wwk-pool-care-directory/1",
+ "generated": "2026-10-13",
+ "directory": "services",
+ "about": "WaterWiseKids residential pool service companies: businesses whose own website says they maintain or repair home pools in the area shown. WaterWiseKids does not rate, rank or endorse them, and has not checked licenses, insurance or prices. Report a correction: waterwisekids.com@gmail.com or https://www.waterwisekids.com/contact/",
+ "services_vocabulary": {
+  "weekly_maintenance": "Routine cleaning and maintenance",
+  "repairs": "Repairs",
+  "opening_closing": "Opening and closing",
+  "equipment_install": "Equipment installation",
+  "leak_detection": "Leak detection",
+  "water_testing": "Water testing"
+ },
+ "listings": [
+  {
+   "id": "al-fairhope-alabama-poolworks",
+   "directory": "service",
+   "name": "Alabama Poolworks",
+   "state": "AL",
+   "state_name": "Alabama",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "19267 Greeno Road",
+    "city": "Fairhope",
+    "state": "AL",
+    "zip": "36532"
+   },
+   "city": "Fairhope",
+   "phone": "(251) 929-0809",
+   "website": "https://www.alabamapoolworks.com/contact-us/fairhope",
+   "services": [
+    "equipment_install",
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Fairhope",
+     "Point Clear",
+     "Montrose",
+     "Daphne",
+     "Spanish Fort",
+     "Bay Minette",
+     "Loxley",
+     "Robertsdale",
+     "Summerdale",
+     "Silverhill",
+     "Magnolia Springs",
+     "Foley",
+     "Elberta",
+     "Lillian",
+     "Gulf Shores",
+     "Orange Beach"
+    ],
+    "text": "Baldwin County, AL: Eastern Shore (Fairhope, Point Clear, Montrose, Daphne, Spanish Fort), Bay Minette, Loxley, Robertsdale, Summerdale, Silverhill, Magnolia Springs, Foley, Elberta, Lillian, Gulf Shores, Orange Beach."
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.alabamapoolworks.com/contact-us/fairhope"
+    ],
+    "phone": [
+     "https://www.alabamapoolworks.com/contact-us/fairhope"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.alabamapoolworks.com/contact-us/fairhope"
+     ],
+     "repairs": [
+      "https://www.alabamapoolworks.com/contact-us/fairhope"
+     ],
+     "opening_closing": [
+      "https://www.alabamapoolworks.com/contact-us/fairhope"
+     ],
+     "equipment_install": [
+      "https://www.alabamapoolworks.com/pool-services"
+     ],
+     "leak_detection": [
+      "https://www.alabamapoolworks.com/contact-us/fairhope"
+     ]
+    },
+    "service_area": [
+     "https://www.alabamapoolworks.com/pool-services"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "al-huntsville-pool-scouts-of-huntsville",
+   "directory": "service",
+   "name": "Pool Scouts of Huntsville",
+   "state": "AL",
+   "state_name": "Alabama",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Huntsville",
+   "phone": "(256) 863-3727",
+   "website": "https://poolscouts.com/Huntsville/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Huntsville",
+     "Madison",
+     "Decatur",
+     "Athens",
+     "Harvest",
+     "Hazel Green",
+     "Meridianville",
+     "New Market",
+     "Owens Cross Roads",
+     "Toney",
+     "Hartselle",
+     "Arab",
+     "Guntersville",
+     "Scottsboro",
+     "Fort Payne",
+     "Elkmont"
+    ],
+    "text": "Huntsville area including Madison, Decatur, Athens, Harvest, Hazel Green, Meridianville, New Market, Owens Cross Roads, Toney, Hartselle, Arab, Guntersville, Scottsboro, Fort Payne and Elkmont."
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://poolscouts.com/Huntsville/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/huntsville/pool-cleaning-service/"
+     ],
+     "repairs": [
+      "https://poolscouts.com/huntsville/pool-maintenance/"
+     ],
+     "opening_closing": [
+      "https://poolscouts.com/huntsville/pool-maintenance/"
+     ],
+     "equipment_install": [
+      "https://poolscouts.com/huntsville/specialty-pool-services/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/Huntsville/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "az-phoenix-shasta-pools",
+   "directory": "service",
+   "name": "Shasta Pools",
+   "state": "AZ",
+   "state_name": "Arizona",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Phoenix",
+   "phone": "(602) 532-3930",
+   "website": "https://shastapools.com/pool-care-service",
+   "services": [
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Phoenix",
+     "Scottsdale",
+     "Mesa",
+     "Gilbert",
+     "Chandler",
+     "Tempe",
+     "Glendale",
+     "Queen Creek"
+    ],
+    "text": "Phoenix Valley: Phoenix, Scottsdale, Mesa, Gilbert, Chandler and surrounding Arizona communities"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://shastapools.com/contact-us"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://shastapools.com/pool-care-service"
+     ],
+     "repairs": [
+      "https://shastapools.com/service-repair-maintenance"
+     ]
+    },
+    "service_area": [
+     "https://shastapools.com/areas-we-serve"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "az-scottsdale-pool-scouts-of-scottsdale",
+   "directory": "service",
+   "name": "Pool Scouts of Scottsdale",
+   "state": "AZ",
+   "state_name": "Arizona",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Scottsdale",
+   "phone": "(480) 885-0521",
+   "website": "https://poolscouts.com/scottsdale/",
+   "services": [
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Scottsdale",
+     "North Scottsdale",
+     "Fountain Hills",
+     "Paradise Valley",
+     "Phoenix",
+     "Cave Creek",
+     "Carefree",
+     "Tempe",
+     "East Valley"
+    ],
+    "text": "Scottsdale area including Fountain Hills, Paradise Valley, Phoenix, Cave Creek, Carefree, Tempe and the East Valley"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://poolscouts.com/scottsdale/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/scottsdale/pool-cleaning-service/"
+     ],
+     "repairs": [
+      "https://poolscouts.com/scottsdale/pool-maintenance-repair/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/scottsdale/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ar-alexander-lindsey-s",
+   "directory": "service",
+   "name": "Lindsey's",
+   "state": "AR",
+   "state_name": "Arkansas",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Alexander",
+   "phone": "(501) 600-2855",
+   "website": "https://www.poolsbylindsey.com/pool-services",
+   "services": [
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "water_testing",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Alexander",
+     "Bauxite",
+     "Benton",
+     "Bryant",
+     "Cabot",
+     "Conway",
+     "Jacksonville",
+     "Little Rock",
+     "Mabelvale",
+     "Malvern",
+     "Maumelle",
+     "North Little Rock",
+     "Shannon Hills",
+     "Sheridan",
+     "Sherwood"
+    ],
+    "text": "Benton/Bryant and Central Arkansas, including Little Rock, North Little Rock, Conway and nearby towns"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.poolsbylindsey.com/contact"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.poolsbylindsey.com/pool-services"
+     ],
+     "repairs": [
+      "https://www.poolsbylindsey.com/pool-services"
+     ],
+     "opening_closing": [
+      "https://www.poolsbylindsey.com/service-packages"
+     ],
+     "leak_detection": [
+      "https://www.poolsbylindsey.com/pool-and-spa-repairs"
+     ],
+     "water_testing": [
+      "https://www.poolsbylindsey.com/retail-pool-supplies"
+     ]
+    },
+    "service_area": [
+     "https://www.poolsbylindsey.com/pool-services",
+     "https://www.poolsbylindsey.com/service-area"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ar-hindsville-poolwerx-northwest-arkansas",
+   "directory": "service",
+   "name": "Poolwerx Northwest Arkansas",
+   "state": "AR",
+   "state_name": "Arkansas",
+   "operator_type": "franchise",
+   "brand": "Poolwerx",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Hindsville",
+   "phone": "(479) 406-8343",
+   "website": "https://www.poolwerx.com/locations/arkansas/poolwerx-northwest-arkansas/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Hindsville",
+     "Lowell",
+     "Wesley",
+     "Fayetteville",
+     "Summers"
+    ],
+    "text": "Mobile service in Northwest Arkansas ZIP codes (visible list: Hindsville, Lowell, Wesley, Fayetteville, Summers; more behind a 'View More' toggle)"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.poolwerx.com/locations/arkansas/poolwerx-northwest-arkansas/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.poolwerx.com/locations/arkansas/poolwerx-northwest-arkansas/"
+     ],
+     "repairs": [
+      "https://www.poolwerx.com/locations/arkansas/poolwerx-northwest-arkansas/"
+     ],
+     "opening_closing": [
+      "https://www.poolwerx.com/locations/arkansas/poolwerx-northwest-arkansas/"
+     ]
+    },
+    "service_area": [
+     "https://www.poolwerx.com/locations/arkansas/poolwerx-northwest-arkansas/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ca-sacramento-h2o-pool-care",
+   "directory": "service",
+   "name": "H2O Pool Care",
+   "state": "CA",
+   "state_name": "California",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Sacramento",
+   "phone": "(916) 335-3559",
+   "website": "https://www.h2opoolcare.com/",
+   "services": [
+    "equipment_install",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Sacramento",
+     "Roseville",
+     "Rocklin"
+    ],
+    "text": "Greater Sacramento area, Sacramento and Placer counties"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.h2opoolcare.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.h2opoolcare.com/"
+     ],
+     "repairs": [
+      "https://www.h2opoolcare.com/"
+     ],
+     "equipment_install": [
+      "https://www.h2opoolcare.com/"
+     ]
+    },
+    "service_area": [
+     "https://www.h2opoolcare.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ca-saratoga-the-pool-guys",
+   "directory": "service",
+   "name": "The Pool Guys",
+   "state": "CA",
+   "state_name": "California",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "12361 Saratoga Sunnyvale Rd",
+    "city": "Saratoga",
+    "state": "CA",
+    "zip": null
+   },
+   "city": "Saratoga",
+   "phone": "(408) 252-6280",
+   "website": "https://yourpoolguys.com/services-the-pool-guys/",
+   "services": [
+    "equipment_install",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Saratoga"
+    ],
+    "text": "Saratoga and surrounding communities"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://yourpoolguys.com/storefront-the-pool-guys/"
+    ],
+    "phone": [
+     "https://yourpoolguys.com/storefront-the-pool-guys/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://yourpoolguys.com/services-the-pool-guys/"
+     ],
+     "repairs": [
+      "https://yourpoolguys.com/services-the-pool-guys/"
+     ],
+     "equipment_install": [
+      "https://yourpoolguys.com/services-the-pool-guys/"
+     ]
+    },
+    "service_area": [
+     "https://yourpoolguys.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "co-colorado-springs-aquatic-paradise-pools-spas",
+   "directory": "service",
+   "name": "Aquatic Paradise Pools & Spas",
+   "state": "CO",
+   "state_name": "Colorado",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "7215 E US Hwy 24, #155",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "zip": "80915"
+   },
+   "city": "Colorado Springs",
+   "phone": "(719) 415-8149",
+   "website": "https://aquaticparadisepools.com/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Colorado Springs",
+     "Parker",
+     "Pueblo",
+     "Eastern Plains"
+    ],
+    "text": "Colorado Springs and the greater Front Range, north to Parker and south to Pueblo, including the Eastern Plains"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://aquaticparadisepools.com/"
+    ],
+    "phone": [
+     "https://aquaticparadisepools.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://aquaticparadisepools.com/"
+     ],
+     "repairs": [
+      "https://aquaticparadisepools.com/"
+     ],
+     "opening_closing": [
+      "https://aquaticparadisepools.com/"
+     ],
+     "equipment_install": [
+      "https://aquaticparadisepools.com/"
+     ]
+    },
+    "service_area": [
+     "https://aquaticparadisepools.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "co-parker-pisces-pools",
+   "directory": "service",
+   "name": "Pisces Pools",
+   "state": "CO",
+   "state_name": "Colorado",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Parker",
+   "phone": "(303) 656-9028",
+   "website": "https://www.piscespoolsco.com/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Parker",
+     "Centennial",
+     "Cherry Hills Village",
+     "Greenwood Village",
+     "Highlands Ranch",
+     "Castle Rock",
+     "Castle Pines",
+     "Franktown",
+     "Elizabeth"
+    ],
+    "text": "Southeast Metro Denver: Parker, Centennial, Cherry Hills Village, Greenwood Village, Highlands Ranch, Castle Rock, Castle Pines, Franktown and Elizabeth"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.piscespoolsco.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.piscespoolsco.com/piscespools-maintenance"
+     ],
+     "repairs": [
+      "https://www.piscespoolsco.com/piscespools-service-and-repair"
+     ],
+     "opening_closing": [
+      "https://www.piscespoolsco.com/piscespools-service-and-repair"
+     ]
+    },
+    "service_area": [
+     "https://www.piscespoolsco.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ct-burlington-the-swimming-pool-store",
+   "directory": "service",
+   "name": "The Swimming Pool Store",
+   "state": "CT",
+   "state_name": "Connecticut",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "221 Spielman Hwy",
+    "city": "Burlington",
+    "state": "CT",
+    "zip": "06013"
+   },
+   "city": "Burlington",
+   "phone": "(860) 673-6118",
+   "website": "https://www.theswimmingpoolstore.com/",
+   "services": [
+    "equipment_install",
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Avon",
+     "Berlin",
+     "Bloomfield",
+     "Bristol",
+     "Burlington",
+     "Canton",
+     "Farmington",
+     "Granby",
+     "New Britain",
+     "Plainville",
+     "Simsbury",
+     "West Hartford",
+     "Harwinton",
+     "Litchfield",
+     "New Hartford",
+     "Torrington",
+     "Watertown",
+     "Southington",
+     "Wolcott"
+    ],
+    "text": "Hartford County west of the Connecticut River, Litchfield County, and nearby New Haven County towns"
+   },
+   "note": "Its store closes for the winter season; check its website for off-season contact.",
+   "sources": {
+    "address": [
+     "https://www.theswimmingpoolstore.com/"
+    ],
+    "phone": [
+     "https://www.theswimmingpoolstore.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.theswimmingpoolstore.com/store/"
+     ],
+     "repairs": [
+      "https://www.theswimmingpoolstore.com/store/"
+     ],
+     "opening_closing": [
+      "https://www.theswimmingpoolstore.com/store/"
+     ],
+     "equipment_install": [
+      "https://www.theswimmingpoolstore.com/store/"
+     ],
+     "leak_detection": [
+      "https://www.theswimmingpoolstore.com/store/"
+     ]
+    },
+    "service_area": [
+     "https://www.theswimmingpoolstore.com/pool-service-area-connecticut/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ct-rocky-hill-pool-scouts-of-hartford",
+   "directory": "service",
+   "name": "Pool Scouts of Hartford",
+   "state": "CT",
+   "state_name": "Connecticut",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Rocky Hill",
+   "phone": "959-999-8991",
+   "website": "https://poolscouts.com/hartford/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Rocky Hill",
+     "Avon",
+     "West Hartford",
+     "Glastonbury",
+     "Newington",
+     "Hartford"
+    ],
+    "text": "Hartford-area towns listed on the franchise page (franchise based in Marlborough, CT)"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://poolscouts.com/hartford/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/hartford/pool-cleaning-service/"
+     ],
+     "repairs": [
+      "https://poolscouts.com/hartford/pool-maintenance/"
+     ],
+     "opening_closing": [
+      "https://poolscouts.com/hartford/pool-maintenance/"
+     ],
+     "equipment_install": [
+      "https://poolscouts.com/hartford/specialty-pool-services/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/hartford/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "de-bear-clear-choice-pool-care",
+   "directory": "service",
+   "name": "Clear Choice Pool Care",
+   "state": "DE",
+   "state_name": "Delaware",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Bear",
+   "phone": "(410) 305-7002",
+   "website": "https://www.clearchoicepoolcare.com/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Bear",
+     "Middletown",
+     "Newark"
+    ],
+    "text": "Based in Elkton, MD; Delaware coverage limited to Bear, Middletown and Newark"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.clearchoicepoolcare.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.clearchoicepoolcare.com/"
+     ],
+     "repairs": [
+      "https://www.clearchoicepoolcare.com/"
+     ],
+     "opening_closing": [
+      "https://www.clearchoicepoolcare.com/services"
+     ]
+    },
+    "service_area": [
+     "https://www.clearchoicepoolcare.com/about-us"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "de-wilmington-delaware-pool-service-llc",
+   "directory": "service",
+   "name": "Delaware Pool Service LLC",
+   "state": "DE",
+   "state_name": "Delaware",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Wilmington",
+   "phone": "(302) 455-7882",
+   "website": "https://www.delawarepoolservice.com/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Wilmington",
+     "New Castle County"
+    ],
+    "text": "Wilmington and surrounding New Castle County communities, plus select areas of southeastern Pennsylvania"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.delawarepoolservice.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.delawarepoolservice.com/"
+     ],
+     "repairs": [
+      "https://www.delawarepoolservice.com/"
+     ],
+     "opening_closing": [
+      "https://www.delawarepoolservice.com/"
+     ]
+    },
+    "service_area": [
+     "https://www.delawarepoolservice.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "dc-great-falls-great-falls-pools",
+   "directory": "service",
+   "name": "Great Falls Pools",
+   "state": "DC",
+   "state_name": "Washington, DC",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "752 Walker Rd B",
+    "city": "Great Falls",
+    "state": "VA",
+    "zip": "22066"
+   },
+   "city": "Great Falls",
+   "phone": "703.250.5585",
+   "website": "https://greatfallspools.com/services-new/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Washington DC",
+     "Arlington",
+     "McLean",
+     "Fairfax",
+     "Falls Church",
+     "Reston",
+     "Oakton",
+     "Potomac"
+    ],
+    "text": "Washington DC (incl. Northwest D.C.) plus Northern Virginia and Potomac, MD; office in Great Falls, VA"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://greatfallspools.com/services-new/"
+    ],
+    "phone": [
+     "https://greatfallspools.com/services-new/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://greatfallspools.com/services-new/"
+     ],
+     "repairs": [
+      "https://greatfallspools.com/services-new/"
+     ],
+     "opening_closing": [
+      "https://greatfallspools.com/services-new/"
+     ]
+    },
+    "service_area": [
+     "https://greatfallspools.com/services-new/",
+     "https://greatfallspools.com/top-rated-pool-company-in-washington-dc/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "dc-lorton-beltway-pools",
+   "directory": "service",
+   "name": "Beltway Pools",
+   "state": "DC",
+   "state_name": "Washington, DC",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "7964 Conell Ct, Suite H",
+    "city": "Lorton",
+    "state": "VA",
+    "zip": "22079"
+   },
+   "city": "Lorton",
+   "phone": "(703) 665-5333",
+   "website": "https://www.beltwaypools.com/pool-services/",
+   "services": [
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Washington DC",
+     "Northern Virginia",
+     "Montgomery County MD"
+    ],
+    "text": "Northern Virginia, Montgomery County MD and Washington DC (maintenance coverage); office in Lorton, VA"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.beltwaypools.com/pool-services/"
+    ],
+    "phone": [
+     "https://www.beltwaypools.com/pool-services/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.beltwaypools.com/pool-services/"
+     ],
+     "repairs": [
+      "https://www.beltwaypools.com/pool-services/"
+     ],
+     "opening_closing": [
+      "https://www.beltwaypools.com/pool-services/"
+     ],
+     "leak_detection": [
+      "https://www.beltwaypools.com/pool-services/"
+     ]
+    },
+    "service_area": [
+     "https://www.beltwaypools.com/pool-services/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "fl-jacksonville-pool-troopers",
+   "directory": "service",
+   "name": "Pool Troopers - Jacksonville",
+   "state": "FL",
+   "state_name": "Florida",
+   "operator_type": "chain",
+   "brand": "Pool Troopers",
+   "location_type": "office",
+   "address": {
+    "street": "6005 Powers Ave, Ste 101",
+    "city": "Jacksonville",
+    "state": "FL",
+    "zip": "32217"
+   },
+   "city": "Jacksonville",
+   "phone": "(904) 594-7619",
+   "website": "https://pooltroopers.com/locations/jacksonville-fl-pool-service/",
+   "services": [
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Jacksonville",
+     "Orange Park",
+     "Fruit Cove",
+     "Fleming Island",
+     "Amelia Island",
+     "Atlantic Beach",
+     "Ponte Vedra",
+     "Neptune Beach"
+    ],
+    "text": "Jacksonville and nearby communities including Orange Park, Fruit Cove, Fleming Island, Amelia Island and the Beaches (Atlantic Beach, Ponte Vedra, Neptune Beach)."
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://pooltroopers.com/locations/jacksonville-fl-pool-service/"
+    ],
+    "phone": [
+     "https://pooltroopers.com/locations/jacksonville-fl-pool-service/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://pooltroopers.com/locations/jacksonville-fl-pool-service/"
+     ],
+     "repairs": [
+      "https://pooltroopers.com/locations/jacksonville-fl-pool-service/"
+     ]
+    },
+    "service_area": [
+     "https://pooltroopers.com/locations/jacksonville-fl-pool-service/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "fl-pensacola-pool-scouts-of-pensacola",
+   "directory": "service",
+   "name": "Pool Scouts of Pensacola",
+   "state": "FL",
+   "state_name": "Florida",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Pensacola",
+   "phone": "(850) 637-8365",
+   "website": "https://poolscouts.com/pensacola/",
+   "services": [
+    "equipment_install",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Pensacola",
+     "Pensacola Beach",
+     "Gulf Breeze",
+     "Cantonment",
+     "Milton",
+     "Pace",
+     "Perdido Key"
+    ],
+    "text": "Pensacola area: Pensacola, Pensacola Beach, Gulf Breeze, Cantonment, Milton, Pace, Perdido Key and nearby communities."
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://poolscouts.com/pensacola/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/pensacola/pool-cleaning-service/"
+     ],
+     "repairs": [
+      "https://poolscouts.com/pensacola/pool-maintenance/"
+     ],
+     "equipment_install": [
+      "https://poolscouts.com/pensacola/specialty-pool-services/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/pensacola/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ga-evans-poolwerx-augusta",
+   "directory": "service",
+   "name": "Poolwerx Augusta",
+   "state": "GA",
+   "state_name": "Georgia",
+   "operator_type": "franchise",
+   "brand": "Poolwerx",
+   "location_type": "office",
+   "address": {
+    "street": "3118 William Few Parkway, #103",
+    "city": "Evans",
+    "state": "GA",
+    "zip": "30809"
+   },
+   "city": "Evans",
+   "phone": "(706) 957-3900",
+   "website": "https://www.poolwerx.com/locations/georgia/poolwerx-augusta/",
+   "services": [
+    "equipment_install",
+    "leak_detection",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Augusta",
+     "Evans",
+     "Appling",
+     "North Augusta, SC",
+     "Clarks Hill, SC"
+    ],
+    "text": "Augusta area, including North Augusta and Clarks Hill across the SC line (zip list partial behind 'View More')"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.poolwerx.com/locations/georgia/poolwerx-augusta/"
+    ],
+    "phone": [
+     "https://www.poolwerx.com/locations/georgia/poolwerx-augusta/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.poolwerx.com/locations/georgia/poolwerx-augusta/"
+     ],
+     "repairs": [
+      "https://www.poolwerx.com/locations/georgia/poolwerx-augusta/"
+     ],
+     "equipment_install": [
+      "https://www.poolwerx.com/locations/georgia/poolwerx-augusta/"
+     ],
+     "leak_detection": [
+      "https://www.poolwerx.com/locations/georgia/poolwerx-augusta/"
+     ]
+    },
+    "service_area": [
+     "https://www.poolwerx.com/locations/georgia/poolwerx-augusta/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ga-marietta-aquarama-pools-spas",
+   "directory": "service",
+   "name": "AquaRama Pools & Spas",
+   "state": "GA",
+   "state_name": "Georgia",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "565 Powder Springs Street",
+    "city": "Marietta",
+    "state": "GA",
+    "zip": "30064"
+   },
+   "city": "Marietta",
+   "phone": "770-422-6291",
+   "website": "https://aquaramapoolsandspas.com/",
+   "services": [
+    "equipment_install",
+    "leak_detection",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Marietta",
+     "North Atlanta"
+    ],
+    "text": "North / Metro Atlanta (Cobb County)"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://aquaramapoolsandspas.com/contact/"
+    ],
+    "phone": [
+     "https://aquaramapoolsandspas.com/contact/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://aquaramapoolsandspas.com/pool-services/cleaning-maintenance/"
+     ],
+     "repairs": [
+      "https://aquaramapoolsandspas.com/pool-services/pool-repairs/"
+     ],
+     "equipment_install": [
+      "https://aquaramapoolsandspas.com/pool-services/pool-repairs/"
+     ],
+     "leak_detection": [
+      "https://aquaramapoolsandspas.com/pool-services/pool-repairs/"
+     ]
+    },
+    "service_area": [
+     "https://aquaramapoolsandspas.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "hi-kauai-da-pool-guy-llc",
+   "directory": "service",
+   "name": "Da Pool Guy LLC",
+   "state": "HI",
+   "state_name": "Hawaii",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Kauai",
+   "phone": "(808) 652-5669",
+   "website": "https://dapoolguy.com/",
+   "services": [
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Kauai",
+     "Kapa'a"
+    ],
+    "text": "Kauai, including the Kapa'a area"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://dapoolguy.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://dapoolguy.com/pool-cleaning"
+     ],
+     "repairs": [
+      "https://dapoolguy.com/pool-maintenance"
+     ]
+    },
+    "service_area": [
+     "https://dapoolguy.com/areas-we-serve"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "hi-oahu-mokupuni-pool-service-repair",
+   "directory": "service",
+   "name": "Mokupuni Pool Service & Repair",
+   "state": "HI",
+   "state_name": "Hawaii",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Oahu",
+   "phone": "(808) 745-4442",
+   "website": "https://mokupunipoolservice.com/",
+   "services": [
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Oahu"
+    ],
+    "text": "Island of Oahu"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://mokupunipoolservice.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://mokupunipoolservice.com/"
+     ]
+    },
+    "service_area": [
+     "https://mokupunipoolservice.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "id-boise-pool-scouts-of-boise",
+   "directory": "service",
+   "name": "Pool Scouts of Boise",
+   "state": "ID",
+   "state_name": "Idaho",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Boise",
+   "phone": "(208) 556-4548",
+   "website": "https://poolscouts.com/boise/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Boise",
+     "Meridian",
+     "Eagle",
+     "Nampa",
+     "Treasure Valley"
+    ],
+    "text": "Boise and the Treasure Valley: Boise, Meridian, Eagle, Nampa"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://poolscouts.com/boise/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/boise/pool-cleaning/"
+     ],
+     "repairs": [
+      "https://poolscouts.com/boise/pool-maintenance/"
+     ],
+     "opening_closing": [
+      "https://poolscouts.com/boise/pool-maintenance/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/boise/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "id-boise-premier-pool-service-of-boise",
+   "directory": "service",
+   "name": "Premier Pool Service of Boise",
+   "state": "ID",
+   "state_name": "Idaho",
+   "operator_type": "franchise",
+   "brand": "Premier Pool Service",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Boise",
+   "phone": "(208) 510-5722",
+   "website": "https://premierpoolservice.com/pool-service/idaho/boise/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Boise"
+    ],
+    "text": "Boise area and surrounding communities"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://premierpoolservice.com/pool-service/idaho/boise/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://premierpoolservice.com/pool-service/idaho/boise/"
+     ],
+     "repairs": [
+      "https://premierpoolservice.com/pool-service/idaho/boise/"
+     ],
+     "opening_closing": [
+      "https://premierpoolservice.com/pool-service/idaho/boise/"
+     ]
+    },
+    "service_area": [
+     "https://premierpoolservice.com/pool-service/idaho/boise/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "id-boise-trublue-pool-spa-llc",
+   "directory": "service",
+   "name": "TruBlue Pool & Spa LLC",
+   "state": "ID",
+   "state_name": "Idaho",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Boise",
+   "phone": "208-891-2664",
+   "website": "https://perfectpoolsidaho.com/",
+   "services": [
+    "opening_closing",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Boise",
+     "Garden City",
+     "Meridian",
+     "Eagle",
+     "Nampa",
+     "Caldwell",
+     "Kuna",
+     "Star",
+     "Middleton"
+    ],
+    "text": "Treasure Valley, based in Star"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://perfectpoolsidaho.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://perfectpoolsidaho.com/"
+     ],
+     "opening_closing": [
+      "https://perfectpoolsidaho.com/"
+     ]
+    },
+    "service_area": [
+     "https://perfectpoolsidaho.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "il-barrington-aquaone-pools",
+   "directory": "service",
+   "name": "AquaOne Pools",
+   "state": "IL",
+   "state_name": "Illinois",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "128 West Liberty Street",
+    "city": "Barrington",
+    "state": "IL",
+    "zip": null
+   },
+   "city": "Barrington",
+   "phone": "(847) 304-1334",
+   "website": "https://aquaonepools.com/",
+   "services": [
+    "equipment_install",
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Barrington",
+     "Kildeer",
+     "Inverness",
+     "Long Grove"
+    ],
+    "text": "Chicago's Northwest Suburbs, including Barrington, Kildeer, Inverness and Long Grove"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.aquaonepools.com/"
+    ],
+    "phone": [
+     "https://www.aquaonepools.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.aquaonepools.com/"
+     ],
+     "repairs": [
+      "https://www.aquaonepools.com/"
+     ],
+     "opening_closing": [
+      "https://www.aquaonepools.com/"
+     ],
+     "equipment_install": [
+      "https://aquaonepools.com/services"
+     ],
+     "leak_detection": [
+      "https://aquaonepools.com/services"
+     ]
+    },
+    "service_area": [
+     "https://aquaonepools.com/services",
+     "https://www.aquaonepools.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "il-new-lenox-bontrager-pools",
+   "directory": "service",
+   "name": "Bontrager Pools - New Lenox",
+   "state": "IL",
+   "state_name": "Illinois",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "New Lenox",
+   "phone": "(708) 584-4441",
+   "website": "https://bontragerpools.com/pool-retail-store-illinois/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "New Lenox",
+     "Illinois"
+    ],
+    "text": "Illinois service from the New Lenox store; company states service across Indiana, Illinois and Michigan"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://bontragerpools.com/pool-retail-store-illinois/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.bontragerpools.com/"
+     ],
+     "repairs": [
+      "https://bontragerpools.com/pool-retail-store-illinois/"
+     ],
+     "opening_closing": [
+      "https://bontragerpools.com/services/pool-spa-opening-and-closing/"
+     ]
+    },
+    "service_area": [
+     "https://bontragerpools.com/pool-retail-store-illinois/",
+     "https://www.bontragerpools.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "in-greenwood-pools-of-fun",
+   "directory": "service",
+   "name": "Pools of Fun",
+   "state": "IN",
+   "state_name": "Indiana",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "2550 IN-135",
+    "city": "Greenwood",
+    "state": "IN",
+    "zip": "46143"
+   },
+   "city": "Greenwood",
+   "phone": null,
+   "website": "https://poolsoffun.com/services/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Central Indiana",
+     "Greenwood"
+    ],
+    "text": "Central Indiana (Indianapolis area); five showrooms in Brownsburg, Fishers, Greenwood, Noblesville and Plainfield"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://poolsoffun.com/locations/greenwood/"
+    ],
+    "phone": [],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolsoffun.com/services/weekly-pool-care-packages/"
+     ],
+     "repairs": [
+      "https://poolsoffun.com/services/equipment-repair/"
+     ],
+     "opening_closing": [
+      "https://poolsoffun.com/services/seasonal-services/pool-opening/"
+     ]
+    },
+    "service_area": [
+     "https://poolsoffun.com/services/equipment-repair/",
+     "https://www.poolsoffun.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "in-southern-indiana-pool-man",
+   "directory": "service",
+   "name": "Pool Man",
+   "state": "IN",
+   "state_name": "Indiana",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Southern Indiana",
+   "phone": "812-288-8889",
+   "website": "https://thepoolmaninc.com/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Southern Indiana",
+     "Louisville area"
+    ],
+    "text": "Southern Indiana and the Louisville area (Kentuckiana); retail store in Clarksville, IN"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://thepoolmaninc.com/contact/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://thepoolmaninc.com/services/"
+     ],
+     "repairs": [
+      "https://thepoolmaninc.com/services/"
+     ],
+     "opening_closing": [
+      "https://thepoolmaninc.com/services/"
+     ]
+    },
+    "service_area": [
+     "https://thepoolmaninc.com/about/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ia-des-moines-platinum-pools-iowa",
+   "directory": "service",
+   "name": "Platinum Pools Iowa",
+   "state": "IA",
+   "state_name": "Iowa",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Des Moines",
+   "phone": "515-954-9958",
+   "website": "https://platinumpoolsiowa.com/",
+   "services": [
+    "opening_closing",
+    "water_testing",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Des Moines",
+     "West Des Moines",
+     "Waukee",
+     "Urbandale",
+     "Clive",
+     "Johnston",
+     "Ankeny",
+     "Altoona",
+     "Norwalk",
+     "Grimes",
+     "Indianola",
+     "Ames",
+     "Pella",
+     "Newton",
+     "Marshalltown",
+     "Winterset"
+    ],
+    "text": "Des Moines metro and Central Iowa"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://platinumpoolsiowa.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://platinumpoolsiowa.com/bi-weekly-weekly-pool-service/"
+     ],
+     "opening_closing": [
+      "https://platinumpoolsiowa.com/seasonal-pool-opening-closing/"
+     ],
+     "water_testing": [
+      "https://platinumpoolsiowa.com/service-area/"
+     ]
+    },
+    "service_area": [
+     "https://platinumpoolsiowa.com/service-area/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ia-des-moines-premier-pool-service-of-des-moines",
+   "directory": "service",
+   "name": "Premier Pool Service of Des Moines",
+   "state": "IA",
+   "state_name": "Iowa",
+   "operator_type": "franchise",
+   "brand": "Premier Pool Service",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Des Moines",
+   "phone": "(515) 355-3733",
+   "website": "https://premierpoolservice.com/pool-service/iowa/des-moines/",
+   "services": [
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "water_testing",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Des Moines",
+     "Ankeny",
+     "West Des Moines",
+     "Ames",
+     "Urbandale",
+     "Altoona",
+     "Boone",
+     "Waukee",
+     "Indianola"
+    ],
+    "text": "Des Moines metro and Central Iowa"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://premierpoolservice.com/pool-service/iowa/des-moines/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://premierpoolservice.com/pool-service/iowa/des-moines/"
+     ],
+     "repairs": [
+      "https://premierpoolservice.com/pool-service/iowa/des-moines/"
+     ],
+     "opening_closing": [
+      "https://premierpoolservice.com/pool-service/iowa/des-moines/"
+     ],
+     "leak_detection": [
+      "https://premierpoolservice.com/pool-service/iowa/des-moines/"
+     ],
+     "water_testing": [
+      "https://premierpoolservice.com/pool-service/iowa/des-moines/"
+     ]
+    },
+    "service_area": [
+     "https://premierpoolservice.com/pool-service/iowa/des-moines/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ks-overland-park-pool-patio",
+   "directory": "service",
+   "name": "Pool & Patio",
+   "state": "KS",
+   "state_name": "Kansas",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "11409 W. 89th St.",
+    "city": "Overland Park",
+    "state": "KS",
+    "zip": "66214"
+   },
+   "city": "Overland Park",
+   "phone": "913-888-2226",
+   "website": "https://poolandpatiokc.com/maintenance/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Overland Park",
+     "Kansas City area"
+    ],
+    "text": "Greater Kansas City area"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://poolandpatiokc.com/maintenance/"
+    ],
+    "phone": [
+     "https://poolandpatiokc.com/maintenance/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolandpatiokc.com/maintenance/"
+     ],
+     "repairs": [
+      "https://poolandpatiokc.com"
+     ],
+     "opening_closing": [
+      "https://poolandpatiokc.com"
+     ]
+    },
+    "service_area": [
+     "https://poolandpatiokc.com"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ks-wichita-wichita-pools",
+   "directory": "service",
+   "name": "Wichita Pools",
+   "state": "KS",
+   "state_name": "Kansas",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Wichita",
+   "phone": "(316) 759-9249",
+   "website": "https://wichitapools.com",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Wichita"
+    ],
+    "text": "Within 25 miles of Wichita (Greater Wichita metro)"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://wichitapools.com/contact-us/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://wichitapools.com/services/repair/"
+     ],
+     "repairs": [
+      "https://wichitapools.com/services/repair/"
+     ],
+     "opening_closing": [
+      "https://wichitapools.com/closemypool/"
+     ]
+    },
+    "service_area": [
+     "https://wichitapools.com",
+     "https://wichitapools.com/closemypool/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ky-lexington-swim-pro-service-supply",
+   "directory": "service",
+   "name": "Swim Pro Service & Supply",
+   "state": "KY",
+   "state_name": "Kentucky",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "628 Kennedy Rd.",
+    "city": "Lexington",
+    "state": "KY",
+    "zip": "40511"
+   },
+   "city": "Lexington",
+   "phone": "(859) 255-7692",
+   "website": "https://www.swimproservice.com/",
+   "services": [
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "water_testing",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Lexington",
+     "Georgetown",
+     "Nicholasville",
+     "Richmond",
+     "Versailles",
+     "Frankfort",
+     "Winchester"
+    ],
+    "text": "Lexington/Fayette County and nearby Central Kentucky communities"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.swimproservice.com/contact/"
+    ],
+    "phone": [
+     "https://www.swimproservice.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.swimproservice.com/"
+     ],
+     "repairs": [
+      "https://www.swimproservice.com/"
+     ],
+     "opening_closing": [
+      "https://www.swimproservice.com/"
+     ],
+     "leak_detection": [
+      "https://www.swimproservice.com/"
+     ],
+     "water_testing": [
+      "https://www.swimproservice.com/"
+     ]
+    },
+    "service_area": [
+     "https://www.swimproservice.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "la-broussard-premier-pool-service-of-lafayette",
+   "directory": "service",
+   "name": "Premier Pool Service of Lafayette",
+   "state": "LA",
+   "state_name": "Louisiana",
+   "operator_type": "franchise",
+   "brand": "Premier Pool Service",
+   "location_type": "office",
+   "address": {
+    "street": "103 Rue du Pain",
+    "city": "Broussard",
+    "state": "LA",
+    "zip": "70518"
+   },
+   "city": "Broussard",
+   "phone": "(337) 216-1066",
+   "website": "https://premierpoolservice.com/pool-service/louisiana/lafayette/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Lafayette",
+     "Broussard",
+     "New Iberia",
+     "Youngsville",
+     "Scott"
+    ],
+    "text": "Lafayette area: Lafayette, Broussard, New Iberia, Youngsville, Scott"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://premierpoolservice.com/pool-service/louisiana/lafayette/"
+    ],
+    "phone": [
+     "https://premierpoolservice.com/pool-service/louisiana/lafayette/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://premierpoolservice.com/pool-service/louisiana/lafayette/"
+     ],
+     "repairs": [
+      "https://premierpoolservice.com/pool-service/louisiana/lafayette/"
+     ],
+     "opening_closing": [
+      "https://premierpoolservice.com/pool-service/louisiana/lafayette/"
+     ],
+     "equipment_install": [
+      "https://premierpoolservice.com/pool-service/louisiana/lafayette/"
+     ]
+    },
+    "service_area": [
+     "https://premierpoolservice.com/pool-service/louisiana/lafayette/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "me-falmouth-ledgewater-pools",
+   "directory": "service",
+   "name": "Ledgewater Pools",
+   "state": "ME",
+   "state_name": "Maine",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "223 Woodville Road",
+    "city": "Falmouth",
+    "state": "ME",
+    "zip": "04105"
+   },
+   "city": "Falmouth",
+   "phone": "(207) 797-7752",
+   "website": "https://ledgewaterpools.com/",
+   "services": [
+    "opening_closing",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Greater Portland",
+     "Southern Maine"
+    ],
+    "text": "Greater Portland and southern Maine"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://ledgewaterpools.com/"
+    ],
+    "phone": [
+     "https://ledgewaterpools.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://ledgewaterpools.com/services/cleaning/"
+     ],
+     "opening_closing": [
+      "https://ledgewaterpools.com/services/opening-closing/"
+     ]
+    },
+    "service_area": [
+     "https://ledgewaterpools.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "me-lewiston-abc-pool-spa-center",
+   "directory": "service",
+   "name": "ABC Pool & Spa Center",
+   "state": "ME",
+   "state_name": "Maine",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "1975 Lisbon Road",
+    "city": "Lewiston",
+    "state": "ME",
+    "zip": "04240"
+   },
+   "city": "Lewiston",
+   "phone": "(207) 783-0858",
+   "website": "https://abcpool.com/services/",
+   "services": [
+    "equipment_install",
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://abcpool.com/"
+    ],
+    "phone": [
+     "https://abcpool.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://abcpool.com/services/"
+     ],
+     "repairs": [
+      "https://abcpool.com/services/"
+     ],
+     "opening_closing": [
+      "https://abcpool.com/pool-opening/"
+     ],
+     "equipment_install": [
+      "https://abcpool.com/services/"
+     ],
+     "leak_detection": [
+      "https://abcpool.com/services/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "md-annapolis-pool-scouts-of-southern-md-and-annapolis",
+   "directory": "service",
+   "name": "Pool Scouts of Southern MD and Annapolis",
+   "state": "MD",
+   "state_name": "Maryland",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Annapolis",
+   "phone": "240-891-2700",
+   "website": "https://poolscouts.com/southernmd-annapolis/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Annapolis",
+     "Waldorf",
+     "La Plata",
+     "Upper Marlboro",
+     "Prince Frederick",
+     "Leonardtown",
+     "Lexington Park",
+     "Severna Park",
+     "Edgewater",
+     "Fort Washington",
+     "Clinton",
+     "White Plains"
+    ],
+    "text": "Southern Maryland and Annapolis area (towns listed on the franchise page, incl. Southern Anne Arundel County)"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://poolscouts.com/southernmd-annapolis/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/southernmd-annapolis/pool-cleaning-service/"
+     ],
+     "repairs": [
+      "https://poolscouts.com/southernmd-annapolis/pool-maintenance/"
+     ],
+     "opening_closing": [
+      "https://poolscouts.com/southernmd-annapolis/pool-maintenance/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/southernmd-annapolis/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "md-upper-marlboro-marlboro-pools",
+   "directory": "service",
+   "name": "Marlboro Pools",
+   "state": "MD",
+   "state_name": "Maryland",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "15114 Marlboro Pike",
+    "city": "Upper Marlboro",
+    "state": "MD",
+    "zip": "20772"
+   },
+   "city": "Upper Marlboro",
+   "phone": "301-627-4140",
+   "website": "https://marlboropools.com/",
+   "services": [
+    "equipment_install",
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "water_testing",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Prince George's County",
+     "Anne Arundel County",
+     "Charles County",
+     "Calvert County"
+    ],
+    "text": "Southern Maryland: Prince George's, Anne Arundel, Charles and Calvert counties; within 50 miles of the Upper Marlboro store"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://marlboropools.com/"
+    ],
+    "phone": [
+     "https://marlboropools.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.marlboropools.com/services"
+     ],
+     "repairs": [
+      "https://www.marlboropools.com/services"
+     ],
+     "opening_closing": [
+      "https://www.marlboropools.com/services"
+     ],
+     "equipment_install": [
+      "https://www.marlboropools.com/services"
+     ],
+     "leak_detection": [
+      "https://www.marlboropools.com/services"
+     ],
+     "water_testing": [
+      "https://www.marlboropools.com/services"
+     ]
+    },
+    "service_area": [
+     "https://marlboropools.com/",
+     "https://www.marlboropools.com/about"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ma-peabody-premier-pool-service-of-salem",
+   "directory": "service",
+   "name": "Premier Pool Service of Salem",
+   "state": "MA",
+   "state_name": "Massachusetts",
+   "operator_type": "franchise",
+   "brand": "Premier Pool Service",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Peabody",
+   "phone": "(978) 203-3636",
+   "website": "https://premierpoolservice.com/pool-service/massachusetts/salem/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Peabody",
+     "Salem",
+     "Beverly",
+     "Danvers",
+     "Gloucester"
+    ],
+    "text": "Salem and nearby North Shore communities"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://premierpoolservice.com/pool-service/massachusetts/salem/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://premierpoolservice.com/pool-service/massachusetts/salem/"
+     ],
+     "repairs": [
+      "https://premierpoolservice.com/pool-service/massachusetts/salem/"
+     ],
+     "opening_closing": [
+      "https://premierpoolservice.com/pool-service/massachusetts/salem/"
+     ]
+    },
+    "service_area": [
+     "https://premierpoolservice.com/pool-service/massachusetts/salem/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mi-lapeer-lapeer-pool-and-spa",
+   "directory": "service",
+   "name": "Lapeer Pool and Spa",
+   "state": "MI",
+   "state_name": "Michigan",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "960 Summit St",
+    "city": "Lapeer",
+    "state": "MI",
+    "zip": "48446"
+   },
+   "city": "Lapeer",
+   "phone": "(810) 667-9440",
+   "website": "https://lapeerpool.com/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Lapeer",
+     "Genesee",
+     "Northern Oakland County"
+    ],
+    "text": "Lapeer County, Genesee County and northern Oakland County, MI"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.lapeerpool.com/"
+    ],
+    "phone": [
+     "https://www.lapeerpool.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.lapeerpool.com/"
+     ],
+     "repairs": [
+      "https://www.lapeerpool.com/"
+     ],
+     "opening_closing": [
+      "https://www.lapeerpool.com/"
+     ]
+    },
+    "service_area": [
+     "https://www.lapeerpool.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mi-wayne-pool-scouts-of-detroit",
+   "directory": "service",
+   "name": "Pool Scouts of Detroit",
+   "state": "MI",
+   "state_name": "Michigan",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Wayne",
+   "phone": "313-752-0662",
+   "website": "https://poolscouts.com/detroit/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Wayne",
+     "Westland",
+     "Garden City",
+     "Dearborn Heights",
+     "Dearborn",
+     "Plymouth",
+     "Canton",
+     "Northville",
+     "Livonia",
+     "Farmington",
+     "Novi"
+    ],
+    "text": "Western Wayne County and nearby Oakland County suburbs of metro Detroit"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://poolscouts.com/detroit/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/detroit/pool-cleaning-service/"
+     ],
+     "repairs": [
+      "https://poolscouts.com/detroit/pool-maintenance/"
+     ],
+     "opening_closing": [
+      "https://poolscouts.com/detroit/pool-maintenance/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/detroit/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mn-st-louis-park-andy-brown-pool-service",
+   "directory": "service",
+   "name": "Andy Brown Pool Service",
+   "state": "MN",
+   "state_name": "Minnesota",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "6919 Wayzata Boulevard",
+    "city": "St. Louis Park",
+    "state": "MN",
+    "zip": "55426"
+   },
+   "city": "St. Louis Park",
+   "phone": "(952) 546-1611",
+   "website": "https://www.andybrownpoolservice.com/",
+   "services": [
+    "opening_closing",
+    "repairs"
+   ],
+   "service_area": {
+    "places": [
+     "Minneapolis West Metro Suburbs"
+    ],
+    "text": "Minneapolis West Metro suburbs"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.andybrownpoolservice.com/"
+    ],
+    "phone": [
+     "https://www.andybrownpoolservice.com/"
+    ],
+    "services": {
+     "repairs": [
+      "https://www.andybrownpoolservice.com/"
+     ],
+     "opening_closing": [
+      "https://www.andybrownpoolservice.com/"
+     ]
+    },
+    "service_area": [
+     "https://www.andybrownpoolservice.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mn-twin-cities-valley-pools-spas",
+   "directory": "service",
+   "name": "Valley Pools & Spas",
+   "state": "MN",
+   "state_name": "Minnesota",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Twin Cities",
+   "phone": "(952) 894-1480",
+   "website": "https://valleypools.com/services/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Twin Cities",
+     "Minneapolis",
+     "St. Paul"
+    ],
+    "text": "Twin Cities metro (plus northern MN and western WI per company pages)"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://valleypools.com/services/pool-closings/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://valleypools.com/services/"
+     ],
+     "repairs": [
+      "https://valleypools.com/services/"
+     ],
+     "opening_closing": [
+      "https://valleypools.com/services/"
+     ]
+    },
+    "service_area": [
+     "https://valleypools.com/service-areas/",
+     "https://valleypools.com/services/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ms-hattiesburg-adcock-pool-and-spa",
+   "directory": "service",
+   "name": "Adcock Pool and Spa",
+   "state": "MS",
+   "state_name": "Mississippi",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "6192 Highway 98 West",
+    "city": "Hattiesburg",
+    "state": "MS",
+    "zip": "39402"
+   },
+   "city": "Hattiesburg",
+   "phone": "(601) 264-3504",
+   "website": "https://adcockpoolandspa.com/pool-builder-in-laurel-hattiesburg-custom-pools-hot-tubs-adcock-pool-spa/service/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Hattiesburg",
+     "Laurel",
+     "Ellisville",
+     "Petal",
+     "Sumrall",
+     "Columbia",
+     "Wiggins"
+    ],
+    "text": "Based in Hattiesburg; serves Hattiesburg, Laurel, Ellisville, Petal, Sumrall, Columbia, Wiggins and the Pine Belt area."
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://adcockpoolandspa.com/pool-builder-in-laurel-hattiesburg-custom-pools-hot-tubs-adcock-pool-spa/contact/hattiesburg/"
+    ],
+    "phone": [
+     "https://adcockpoolandspa.com/pool-builder-in-laurel-hattiesburg-custom-pools-hot-tubs-adcock-pool-spa/contact/hattiesburg/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://adcockpoolandspa.com/pool-builder-in-laurel-hattiesburg-custom-pools-hot-tubs-adcock-pool-spa/service/"
+     ],
+     "repairs": [
+      "https://adcockpoolandspa.com/pool-builder-in-laurel-hattiesburg-custom-pools-hot-tubs-adcock-pool-spa/service/"
+     ],
+     "opening_closing": [
+      "https://adcockpoolandspa.com/pool-builder-in-laurel-hattiesburg-custom-pools-hot-tubs-adcock-pool-spa/service/"
+     ]
+    },
+    "service_area": [
+     "https://adcockpoolandspa.com/pool-builder-in-laurel-hattiesburg-custom-pools-hot-tubs-adcock-pool-spa/contact/hattiesburg/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ms-jackson-elite-pools-llc",
+   "directory": "service",
+   "name": "Elite Pools, LLC",
+   "state": "MS",
+   "state_name": "Mississippi",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Jackson",
+   "phone": "(601) 790-9966",
+   "website": "https://www.elitepoolsms.com/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Jackson",
+     "Madison",
+     "Ridgeland",
+     "Grenada"
+    ],
+    "text": "Greater Jackson and Greater Grenada: Jackson, Madison, Ridgeland, Grenada and surrounding areas."
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.elitepoolsms.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.elitepoolsms.com/grenada-pool-store-jackson-pool-service/maintenance/"
+     ],
+     "repairs": [
+      "https://www.elitepoolsms.com/grenada-pool-store-jackson-pool-service/pool-repairs/"
+     ],
+     "opening_closing": [
+      "https://www.elitepoolsms.com/grenada-pool-store-jackson-pool-service/other-services/"
+     ]
+    },
+    "service_area": [
+     "https://www.elitepoolsms.com/grenada-pool-store-jackson-pool-service/about/",
+     "https://www.elitepoolsms.com/grenada-pool-store-jackson-pool-service/pool-repairs/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mo-maryland-heights-florida-pool-spa",
+   "directory": "service",
+   "name": "Florida Pool & Spa",
+   "state": "MO",
+   "state_name": "Missouri",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "394 Fee Fee Rd.",
+    "city": "Maryland Heights",
+    "state": "MO",
+    "zip": "63043"
+   },
+   "city": "Maryland Heights",
+   "phone": "(636) 940-9313",
+   "website": "https://floridapoolandspa-stl.com/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "St. Louis County",
+     "St. Louis",
+     "St. Charles"
+    ],
+    "text": "St. Louis County, St. Louis City and St. Charles"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://floridapoolandspa-stl.com/"
+    ],
+    "phone": [
+     "https://floridapoolandspa-stl.com/about-us/florida-pool-spa-service-areas-in-st-louis/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://floridapoolandspa-stl.com/"
+     ],
+     "repairs": [
+      "https://floridapoolandspa-stl.com/"
+     ],
+     "opening_closing": [
+      "https://floridapoolandspa-stl.com/"
+     ],
+     "equipment_install": [
+      "https://floridapoolandspa-stl.com/"
+     ]
+    },
+    "service_area": [
+     "https://floridapoolandspa-stl.com/about-us/florida-pool-spa-service-areas-in-st-louis/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "mo-north-kansas-city-leisure-world-pool-hearth-inc",
+   "directory": "service",
+   "name": "Leisure World Pool & Hearth, Inc.",
+   "state": "MO",
+   "state_name": "Missouri",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "406 E 16th Ave",
+    "city": "North Kansas City",
+    "state": "MO",
+    "zip": "64116"
+   },
+   "city": "North Kansas City",
+   "phone": "(816) 221-1731",
+   "website": "https://www.leisureworldkc.com/",
+   "services": [
+    "opening_closing"
+   ],
+   "service_area": {
+    "places": [
+     "North Kansas City",
+     "Kansas City"
+    ],
+    "text": "North Kansas City and surrounding Kansas City area"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.leisureworldkc.com/"
+    ],
+    "phone": [
+     "https://www.leisureworldkc.com/"
+    ],
+    "services": {
+     "opening_closing": [
+      "https://www.leisureworldkc.com/pool-openings-closings"
+     ]
+    },
+    "service_area": [
+     "https://www.leisureworldkc.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ne-lincoln-performance-pool-spa",
+   "directory": "service",
+   "name": "Performance Pool & Spa (Performance Pools)",
+   "state": "NE",
+   "state_name": "Nebraska",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Lincoln",
+   "phone": "402-601-6906",
+   "website": "https://www.ppools.com",
+   "services": [
+    "opening_closing",
+    "repairs"
+   ],
+   "service_area": {
+    "places": [
+     "Lincoln"
+    ],
+    "text": "Lincoln, Nebraska and surrounding areas"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.ppools.com"
+    ],
+    "services": {
+     "repairs": [
+      "https://www.ppools.com/repairs-maintenance/"
+     ],
+     "opening_closing": [
+      "https://www.ppools.com/repairs-maintenance/"
+     ]
+    },
+    "service_area": [
+     "https://www.ppools.com"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ne-omaha-continental-pool-spa",
+   "directory": "service",
+   "name": "Continental Pool & Spa",
+   "state": "NE",
+   "state_name": "Nebraska",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "2527 S 120th Street",
+    "city": "Omaha",
+    "state": "NE",
+    "zip": "68144"
+   },
+   "city": "Omaha",
+   "phone": "(402) 333-9025",
+   "website": "https://continentalpoolandspa.net/service-center/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Omaha",
+     "Papillion",
+     "La Vista",
+     "Elkhorn",
+     "Gretna",
+     "Bennington",
+     "Bellevue"
+    ],
+    "text": "Omaha area, including Papillion, La Vista, Elkhorn, Gretna, Bennington and Bellevue"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://continentalpoolandspa.net/service-center/"
+    ],
+    "phone": [
+     "https://continentalpoolandspa.net/service-center/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://continentalpoolandspa.net/pool-cleaning-maintenance/"
+     ],
+     "repairs": [
+      "https://continentalpoolandspa.net/service-center/"
+     ],
+     "opening_closing": [
+      "https://continentalpoolandspa.net/service-center/"
+     ]
+    },
+    "service_area": [
+     "https://continentalpoolandspa.net/papillion-hot-tub-dealer/",
+     "https://continentalpoolandspa.net/service-center/pool-chemical-delivery/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nv-las-vegas-the-poolside-pros",
+   "directory": "service",
+   "name": "The Poolside Pros",
+   "state": "NV",
+   "state_name": "Nevada",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Las Vegas",
+   "phone": "(702) 400-0087",
+   "website": "https://thepoolsidepros.com/",
+   "services": [
+    "leak_detection",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Las Vegas",
+     "Henderson"
+    ],
+    "text": "Las Vegas and Henderson"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://thepoolsidepros.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://thepoolsidepros.com/"
+     ],
+     "repairs": [
+      "https://thepoolsidepros.com/"
+     ],
+     "leak_detection": [
+      "https://thepoolsidepros.com/"
+     ]
+    },
+    "service_area": [
+     "https://thepoolsidepros.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nv-reno-lee-joseph-inc-pools",
+   "directory": "service",
+   "name": "Lee Joseph Inc. Pools",
+   "state": "NV",
+   "state_name": "Nevada",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "864 S Wells Ave",
+    "city": "Reno",
+    "state": "NV",
+    "zip": "89502"
+   },
+   "city": "Reno",
+   "phone": "(775) 786-5085",
+   "website": "https://www.leejosephpools.com/pool-supplies/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Reno",
+     "Carson City",
+     "Lake Tahoe"
+    ],
+    "text": "Reno, Carson City, Lake Tahoe and surrounding areas"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.leejosephpools.com/pool-supplies/"
+    ],
+    "phone": [
+     "https://www.leejosephpools.com/pool-supplies/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.leejosephpools.com/pool-supplies/"
+     ],
+     "repairs": [
+      "https://www.leejosephpools.com/pool-supplies/"
+     ],
+     "opening_closing": [
+      "https://www.leejosephpools.com/pool-supplies/"
+     ]
+    },
+    "service_area": [
+     "https://www.leejosephpools.com/pool-supplies/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nh-dover-seacoast-pool-spa",
+   "directory": "service",
+   "name": "Seacoast Pool & Spa",
+   "state": "NH",
+   "state_name": "New Hampshire",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "15 Cricket Brook",
+    "city": "Dover",
+    "state": "NH",
+    "zip": "03820"
+   },
+   "city": "Dover",
+   "phone": "(207) 672-2905",
+   "website": "https://www.seacoastpoolandspa.com/",
+   "services": [
+    "repairs"
+   ],
+   "service_area": {
+    "places": [
+     "Portsmouth",
+     "Dover",
+     "Rochester",
+     "Hampton",
+     "Southern New Hampshire"
+    ],
+    "text": "Seacoast and southern New Hampshire"
+   },
+   "note": "Repairs listed here are vinyl liner replacement; its routine maintenance is for pools it installed.",
+   "sources": {
+    "address": [
+     "https://www.seacoastpoolandspa.com/"
+    ],
+    "phone": [
+     "https://www.seacoastpoolandspa.com/"
+    ],
+    "services": {
+     "repairs": [
+      "https://seacoastpoolandspa.com/services/pool-maintenance/"
+     ]
+    },
+    "service_area": [
+     "https://www.seacoastpoolandspa.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nh-kingston-family-pools-north",
+   "directory": "service",
+   "name": "Family Pools North",
+   "state": "NH",
+   "state_name": "New Hampshire",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "3 Newton Junction Road",
+    "city": "Kingston",
+    "state": "NH",
+    "zip": "03848"
+   },
+   "city": "Kingston",
+   "phone": "(603) 642-9909",
+   "website": "https://www.familypoolsnorth.com/",
+   "services": [
+    "equipment_install",
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Southern NH",
+     "Northern MA"
+    ],
+    "text": "Southern New Hampshire and northern Massachusetts; above ground pools only"
+   },
+   "note": "On-site service is for above-ground pools.",
+   "sources": {
+    "address": [
+     "https://www.familypoolsnorth.com/"
+    ],
+    "phone": [
+     "https://www.familypoolsnorth.com/contact-us"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.familypoolsnorth.com/pool-maintenance"
+     ],
+     "repairs": [
+      "https://www.familypoolsnorth.com/other-services"
+     ],
+     "opening_closing": [
+      "https://www.familypoolsnorth.com/faqs"
+     ],
+     "equipment_install": [
+      "https://www.familypoolsnorth.com/other-services"
+     ],
+     "leak_detection": [
+      "https://www.familypoolsnorth.com/"
+     ]
+    },
+    "service_area": [
+     "https://www.familypoolsnorth.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nj-mt-ephraim-swim",
+   "directory": "service",
+   "name": "Swim-Mor Pools and Spas",
+   "state": "NJ",
+   "state_name": "New Jersey",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "920 Lake Drive",
+    "city": "Mt. Ephraim",
+    "state": "NJ",
+    "zip": "08059"
+   },
+   "city": "Mt. Ephraim",
+   "phone": "(856) 456-3332",
+   "website": "https://swimmor.com/pool-service-department/maintenance-contract-program/",
+   "services": [
+    "opening_closing",
+    "repairs"
+   ],
+   "service_area": {
+    "places": [
+     "Camden County",
+     "Atlantic County",
+     "Monmouth County",
+     "Burlington County",
+     "Gloucester County",
+     "Ocean County",
+     "Mercer County"
+    ],
+    "text": "Offices in Camden, Atlantic and Monmouth counties; service-area page lists towns across South and Central NJ counties"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://swimmor.com/contact-us/"
+    ],
+    "phone": [
+     "https://swimmor.com/contact-us/"
+    ],
+    "services": {
+     "repairs": [
+      "https://swimmor.com/pool-renovations/equipment-renovation/"
+     ],
+     "opening_closing": [
+      "https://swimmor.com/pool-service-department/maintenance-contract-program/"
+     ]
+    },
+    "service_area": [
+     "https://swimmor.com/contact-us/",
+     "https://swimmor.com/service-areas/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nj-red-bank-pool-scouts-of-monmouth",
+   "directory": "service",
+   "name": "Pool Scouts of Monmouth",
+   "state": "NJ",
+   "state_name": "New Jersey",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Red Bank",
+   "phone": "(732) 387-7740",
+   "website": "https://poolscouts.com/monmouth/",
+   "services": [
+    "opening_closing",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Red Bank",
+     "Fair Haven",
+     "Tinton Falls",
+     "West Long Branch",
+     "Shrewsbury",
+     "Rumson",
+     "Oceanport",
+     "Monmouth Beach",
+     "Middletown",
+     "Little Silver",
+     "Holmdel",
+     "Long Branch",
+     "Eatontown"
+    ],
+    "text": "Monmouth County, NJ towns listed on the franchise page"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://poolscouts.com/monmouth/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/monmouth/pool-cleaning-service/"
+     ],
+     "opening_closing": [
+      "https://poolscouts.com/monmouth/pool-maintenance/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/monmouth/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nj-vernon-all-american-pool-service",
+   "directory": "service",
+   "name": "All American Pool Service",
+   "state": "NJ",
+   "state_name": "New Jersey",
+   "operator_type": "unknown",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "107 Maple Grange Rd",
+    "city": "Vernon",
+    "state": "NJ",
+    "zip": null
+   },
+   "city": "Vernon",
+   "phone": "973-764-7775",
+   "website": "https://www.allamericanpool-service.com/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Sussex County, NJ",
+     "Orange County, NY"
+    ],
+    "text": "Sussex County, NJ and Orange County, NY"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.allamericanpool-service.com/"
+    ],
+    "phone": [
+     "https://www.allamericanpool-service.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.allamericanpool-service.com/"
+     ],
+     "repairs": [
+      "https://www.allamericanpool-service.com/"
+     ],
+     "opening_closing": [
+      "https://www.allamericanpool-service.com/"
+     ],
+     "equipment_install": [
+      "https://www.allamericanpool-service.com/"
+     ]
+    },
+    "service_area": [
+     "https://www.allamericanpool-service.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nm-albuquerque-albuquerque-pools-spas",
+   "directory": "service",
+   "name": "Albuquerque Pools & Spas",
+   "state": "NM",
+   "state_name": "New Mexico",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "3819 Hawkins St NE",
+    "city": "Albuquerque",
+    "state": "NM",
+    "zip": "87109"
+   },
+   "city": "Albuquerque",
+   "phone": "(505) 296-8063",
+   "website": "https://albpools.com/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://albpools.com/contact-us/"
+    ],
+    "phone": [
+     "https://albpools.com/contact-us/"
+    ],
+    "services": {
+     "repairs": [
+      "https://albpools.com/our-services/"
+     ],
+     "opening_closing": [
+      "https://albpools.com/our-services/"
+     ],
+     "equipment_install": [
+      "https://albpools.com/our-services/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nm-albuquerque-perfection-pools-spas",
+   "directory": "service",
+   "name": "Perfection Pools & Spas",
+   "state": "NM",
+   "state_name": "New Mexico",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Albuquerque",
+   "phone": "(505) 877-2524",
+   "website": "https://www.perfectionpoolsabq.com/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Albuquerque",
+     "Rio Rancho"
+    ],
+    "text": "Albuquerque and Rio Rancho areas"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.perfectionpoolsabq.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.perfectionpoolsabq.com/pool-spa-maintenance.htm"
+     ],
+     "repairs": [
+      "https://www.perfectionpoolsabq.com/contact-perfecton-pools-spas.htm"
+     ],
+     "opening_closing": [
+      "https://www.perfectionpoolsabq.com/pool-spa-opening-closing.htm"
+     ],
+     "equipment_install": [
+      "https://www.perfectionpoolsabq.com/pool-spa-equipment.htm"
+     ]
+    },
+    "service_area": [
+     "https://www.perfectionpoolsabq.com/pool-spa-maintenance.htm"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ny-kingston-swimking-pools-spas",
+   "directory": "service",
+   "name": "SwimKing Pools & Spas",
+   "state": "NY",
+   "state_name": "New York",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "805 E Chester St",
+    "city": "Kingston",
+    "state": "NY",
+    "zip": "12401"
+   },
+   "city": "Kingston",
+   "phone": null,
+   "website": "https://www.swimkingpools.com/services/",
+   "services": [
+    "opening_closing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.swimkingpools.com/"
+    ],
+    "phone": [],
+    "services": {
+     "opening_closing": [
+      "https://www.swimkingpools.com/services/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ny-pawling-premier-pool-service-of-pawling",
+   "directory": "service",
+   "name": "Premier Pool Service of Pawling",
+   "state": "NY",
+   "state_name": "New York",
+   "operator_type": "franchise",
+   "brand": "Premier Pool Service",
+   "location_type": "office",
+   "address": {
+    "street": "11 Memorial Avenue",
+    "city": "Pawling",
+    "state": "NY",
+    "zip": "12564"
+   },
+   "city": "Pawling",
+   "phone": "(845) 272-5454",
+   "website": "https://premierpoolservice.com/pool-service/new-york/pawling/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Pawling",
+     "Holmes",
+     "Windale",
+     "Langerville",
+     "Poughquag",
+     "Glenham"
+    ],
+    "text": "Pawling and nearby Dutchess County communities"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://premierpoolservice.com/pool-service/new-york/pawling/"
+    ],
+    "phone": [
+     "https://premierpoolservice.com/pool-service/new-york/pawling/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://premierpoolservice.com/pool-service/new-york/pawling/"
+     ],
+     "repairs": [
+      "https://premierpoolservice.com/pool-service/new-york/pawling/"
+     ],
+     "opening_closing": [
+      "https://premierpoolservice.com/pool-service/new-york/pawling/"
+     ]
+    },
+    "service_area": [
+     "https://premierpoolservice.com/pool-service/new-york/pawling/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nc-huntersville-poolwerx-lake-norman",
+   "directory": "service",
+   "name": "Poolwerx Lake Norman",
+   "state": "NC",
+   "state_name": "North Carolina",
+   "operator_type": "franchise",
+   "brand": "Poolwerx",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Huntersville",
+   "phone": "(980) 776-4808",
+   "website": "https://www.poolwerx.com/locations/north-carolina/poolwerx-lake-norman/",
+   "services": [
+    "opening_closing",
+    "repairs"
+   ],
+   "service_area": {
+    "places": [
+     "Huntersville",
+     "Cornelius",
+     "Sherrills Ford",
+     "Mooresville"
+    ],
+    "text": "Lake Norman area (zip list on page is partial behind 'View More')"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.poolwerx.com/locations/north-carolina/poolwerx-lake-norman/"
+    ],
+    "services": {
+     "repairs": [
+      "https://www.poolwerx.com/locations/north-carolina/poolwerx-lake-norman/"
+     ],
+     "opening_closing": [
+      "https://www.poolwerx.com/locations/north-carolina/poolwerx-lake-norman/"
+     ]
+    },
+    "service_area": [
+     "https://www.poolwerx.com/locations/north-carolina/poolwerx-lake-norman/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nc-raleigh-poolwerx-raleigh",
+   "directory": "service",
+   "name": "Poolwerx Raleigh",
+   "state": "NC",
+   "state_name": "North Carolina",
+   "operator_type": "franchise",
+   "brand": "Poolwerx",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Raleigh",
+   "phone": "(984) 255-4482",
+   "website": "https://www.poolwerx.com/locations/north-carolina/poolwerx-raleigh/",
+   "services": [
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Raleigh",
+     "Cary",
+     "Knightdale",
+     "Rolesville",
+     "Wake Forest",
+     "Garner",
+     "Morrisville"
+    ],
+    "text": "Raleigh and nearby Wake County towns"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.poolwerx.com/locations/north-carolina/poolwerx-raleigh/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.poolwerx.com/locations/north-carolina/poolwerx-raleigh/"
+     ],
+     "repairs": [
+      "https://www.poolwerx.com/locations/north-carolina/poolwerx-raleigh/"
+     ]
+    },
+    "service_area": [
+     "https://www.poolwerx.com/locations/north-carolina/poolwerx-raleigh/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nd-fargo-olson-pools-spas",
+   "directory": "service",
+   "name": "Olson Pools & Spas",
+   "state": "ND",
+   "state_name": "North Dakota",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Fargo",
+   "phone": "(218) 483-3541",
+   "website": "https://www.olsonpoolsandspas.com/service-areas/fargo/",
+   "services": [
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Fargo",
+     "West Fargo",
+     "Cass County"
+    ],
+    "text": "Fargo, West Fargo and surrounding Cass County, ND (from Hawley, MN showroom)"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.olsonpoolsandspas.com/service-areas/fargo/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.olsonpoolsandspas.com/service-areas/fargo/"
+     ],
+     "repairs": [
+      "https://www.olsonpoolsandspas.com/service-areas/fargo/"
+     ]
+    },
+    "service_area": [
+     "https://www.olsonpoolsandspas.com/service-areas/fargo/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "nd-fargo-ultimate-spas-pools",
+   "directory": "service",
+   "name": "Ultimate Spas & Pools",
+   "state": "ND",
+   "state_name": "North Dakota",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "492 36th St SW",
+    "city": "Fargo",
+    "state": "ND",
+    "zip": "58103"
+   },
+   "city": "Fargo",
+   "phone": "(701) 282-4040",
+   "website": "https://www.ultimate-spas.com/services/",
+   "services": [
+    "opening_closing",
+    "repairs"
+   ],
+   "service_area": {
+    "places": [
+     "Fargo",
+     "West Fargo",
+     "Grand Forks",
+     "Jamestown",
+     "Moorhead, MN",
+     "Watertown, SD",
+     "Aberdeen, SD"
+    ],
+    "text": "Fargo, ND and surrounding areas within a 150-mile radius"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.ultimate-spas.com/services/"
+    ],
+    "phone": [
+     "https://www.ultimate-spas.com/services/"
+    ],
+    "services": {
+     "repairs": [
+      "https://www.ultimate-spas.com/liner-replacement/"
+     ],
+     "opening_closing": [
+      "https://www.ultimate-spas.com/"
+     ]
+    },
+    "service_area": [
+     "https://www.ultimate-spas.com/services/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "oh-cincinnati-cross-county-pool-service",
+   "directory": "service",
+   "name": "Cross County Pool Service",
+   "state": "OH",
+   "state_name": "Ohio",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "2848 Springdale Rd",
+    "city": "Cincinnati",
+    "state": "OH",
+    "zip": "45251-1717"
+   },
+   "city": "Cincinnati",
+   "phone": "(513) 741-7774",
+   "website": "https://crosscountypoolservice.com/",
+   "services": [
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Cincinnati"
+    ],
+    "text": "Greater Cincinnati area"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://crosscountypoolservice.com/"
+    ],
+    "phone": [
+     "https://crosscountypoolservice.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://crosscountypoolservice.com/"
+     ],
+     "repairs": [
+      "https://www.crosscountypoolservice.com/services"
+     ],
+     "opening_closing": [
+      "https://www.crosscountypoolservice.com/services"
+     ],
+     "leak_detection": [
+      "https://www.crosscountypoolservice.com/services"
+     ]
+    },
+    "service_area": [
+     "https://crosscountypoolservice.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "oh-columbus-pool-scouts-of-columbus",
+   "directory": "service",
+   "name": "Pool Scouts of Columbus",
+   "state": "OH",
+   "state_name": "Ohio",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Columbus",
+   "phone": "614-559-8627",
+   "website": "https://poolscouts.com/columbus/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Columbus",
+     "Dublin",
+     "Hilliard",
+     "Westerville",
+     "Worthington",
+     "Powell",
+     "Lewis Center",
+     "New Albany",
+     "Gahanna",
+     "Reynoldsburg",
+     "Pickerington",
+     "Canal Winchester",
+     "Grove City",
+     "Pataskala",
+     "Galena"
+    ],
+    "text": "Columbus and Franklin County suburbs"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://poolscouts.com/columbus/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/columbus/pool-cleaning-service/"
+     ],
+     "repairs": [
+      "https://poolscouts.com/columbus/pool-maintenance/"
+     ],
+     "opening_closing": [
+      "https://poolscouts.com/columbus/pool-maintenance/"
+     ],
+     "equipment_install": [
+      "https://poolscouts.com/columbus/specialty-pool-services/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/columbus/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ok-norman-spartan-pool-patio",
+   "directory": "service",
+   "name": "Spartan Pool & Patio",
+   "state": "OK",
+   "state_name": "Oklahoma",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "1400 24th Ave. SW",
+    "city": "Norman",
+    "state": "OK",
+    "zip": "73072"
+   },
+   "city": "Norman",
+   "phone": "(405) 364-1912",
+   "website": "https://www.spartanpoolandpatio.com/weekly-cleaning",
+   "services": [
+    "equipment_install",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Arcadia",
+     "Blanchard",
+     "Choctaw",
+     "Edmond",
+     "Goldsby",
+     "Midwest City",
+     "Mustang",
+     "Newcastle",
+     "Norman",
+     "Oklahoma City",
+     "Purcell",
+     "Yukon"
+    ],
+    "text": "Norman and the Oklahoma City metro"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.spartanpoolandpatio.com/store"
+    ],
+    "phone": [
+     "https://www.spartanpoolandpatio.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.spartanpoolandpatio.com/weekly-cleaning"
+     ],
+     "repairs": [
+      "https://www.spartanpoolandpatio.com/pool-equipment-repairs"
+     ],
+     "equipment_install": [
+      "https://www.spartanpoolandpatio.com/pool-equipment-repairs"
+     ]
+    },
+    "service_area": [
+     "https://www.spartanpoolandpatio.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ok-tulsa-poolwerx-tulsa",
+   "directory": "service",
+   "name": "Poolwerx Tulsa",
+   "state": "OK",
+   "state_name": "Oklahoma",
+   "operator_type": "franchise",
+   "brand": "Poolwerx",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Tulsa",
+   "phone": "(405) 593-9076",
+   "website": "https://www.poolwerx.com/locations/oklahoma/poolwerx-tulsa/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Tulsa"
+    ],
+    "text": "Mobile service in Tulsa ZIP codes (page lists 74106, 74119, 74105, 74110, 74127; more are behind a 'View More' toggle)"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.poolwerx.com/locations/oklahoma/poolwerx-tulsa/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.poolwerx.com/locations/oklahoma/poolwerx-tulsa/"
+     ],
+     "repairs": [
+      "https://www.poolwerx.com/locations/oklahoma/poolwerx-tulsa/"
+     ],
+     "opening_closing": [
+      "https://www.poolwerx.com/locations/oklahoma/poolwerx-tulsa/"
+     ]
+    },
+    "service_area": [
+     "https://www.poolwerx.com/locations/oklahoma/poolwerx-tulsa/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "or-portland-apollo-pools-spas",
+   "directory": "service",
+   "name": "Apollo Pools & Spas",
+   "state": "OR",
+   "state_name": "Oregon",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "13370 NW Cornell Rd",
+    "city": "Portland",
+    "state": "OR",
+    "zip": "97229"
+   },
+   "city": "Portland",
+   "phone": "(503) 644-0556",
+   "website": "https://apollopools.com/services/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Portland"
+    ],
+    "text": "Portland metropolitan area"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://apollopools.com/"
+    ],
+    "phone": [
+     "https://apollopools.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://apollopools.com/maintenance/"
+     ],
+     "repairs": [
+      "https://apollopools.com/services/"
+     ],
+     "opening_closing": [
+      "https://apollopools.com/services/"
+     ]
+    },
+    "service_area": [
+     "https://apollopools.com/services/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "or-portland-rose-city-pool-spa-llc",
+   "directory": "service",
+   "name": "Rose City Pool & Spa LLC",
+   "state": "OR",
+   "state_name": "Oregon",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Portland",
+   "phone": null,
+   "website": "https://rosecitypool.com/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Portland",
+     "Gresham",
+     "Happy Valley",
+     "Lake Oswego",
+     "Parkrose",
+     "Vancouver, WA"
+    ],
+    "text": "Portland metro (incl. Gresham, Happy Valley, Lake Oswego, Parkrose) and SW Washington"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [],
+    "services": {
+     "weekly_maintenance": [
+      "https://rosecitypool.com/"
+     ],
+     "repairs": [
+      "https://rosecitypool.com/"
+     ],
+     "opening_closing": [
+      "https://rosecitypool.com/"
+     ],
+     "equipment_install": [
+      "https://rosecitypool.com/"
+     ]
+    },
+    "service_area": [
+     "https://rosecitypool.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "pa-bethlehem-aqua-ducks",
+   "directory": "service",
+   "name": "Aqua Ducks",
+   "state": "PA",
+   "state_name": "Pennsylvania",
+   "operator_type": "unknown",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Bethlehem",
+   "phone": "610-393-7024",
+   "website": "https://myaquaducks.com/",
+   "services": [
+    "leak_detection",
+    "opening_closing"
+   ],
+   "service_area": {
+    "places": [
+     "Bethlehem",
+     "Lehigh County",
+     "Northampton County"
+    ],
+    "text": "Lehigh Valley: Lehigh and Northampton counties; based in Bethlehem"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://myaquaducks.com/"
+    ],
+    "services": {
+     "opening_closing": [
+      "https://myaquaducks.com/"
+     ],
+     "leak_detection": [
+      "https://myaquaducks.com/"
+     ]
+    },
+    "service_area": [
+     "https://myaquaducks.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "pa-bucks-county-we-service-pools-llc",
+   "directory": "service",
+   "name": "We Service Pools, LLC",
+   "state": "PA",
+   "state_name": "Pennsylvania",
+   "operator_type": "unknown",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Bucks County",
+   "phone": "(267) 629-2128",
+   "website": "https://weservicepoolspa.com/pages/service-bucks-county-pa",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Bucks County",
+     "Montgomery County",
+     "Doylestown",
+     "Newtown",
+     "Yardley",
+     "Levittown",
+     "Quakertown",
+     "Warminster",
+     "New Hope",
+     "Langhorne"
+    ],
+    "text": "Bucks County, PA (town list on page); homepage also names Montgomery County"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://weservicepoolspa.com/pages/service-bucks-county-pa"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://weservicepoolspa.com/pages/service-bucks-county-pa"
+     ],
+     "repairs": [
+      "https://weservicepoolspa.com/pages/service-bucks-county-pa"
+     ],
+     "opening_closing": [
+      "https://weservicepoolspa.com/pages/service-bucks-county-pa"
+     ],
+     "equipment_install": [
+      "https://weservicepoolspa.com/pages/service-bucks-county-pa"
+     ]
+    },
+    "service_area": [
+     "https://weservicepoolspa.com/",
+     "https://weservicepoolspa.com/pages/service-bucks-county-pa"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "pa-pittsburgh-puddle-pool-services",
+   "directory": "service",
+   "name": "Puddle Pool Services (Pittsburgh)",
+   "state": "PA",
+   "state_name": "Pennsylvania",
+   "operator_type": "franchise",
+   "brand": "Puddle Pool Services",
+   "location_type": "office",
+   "address": {
+    "street": "8878 Covenant Ave",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "zip": "15237"
+   },
+   "city": "Pittsburgh",
+   "phone": "412-903-9004",
+   "website": "https://puddlepools.com/pittsburgh-pool-cleaning/",
+   "services": [
+    "leak_detection",
+    "opening_closing",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Pittsburgh",
+     "Squirrel Hill",
+     "Shadyside",
+     "Mt. Lebanon",
+     "Sewickley",
+     "Fox Chapel"
+    ],
+    "text": "Pittsburgh and surrounding neighborhoods"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://puddlepools.com/pittsburgh-pool-cleaning/"
+    ],
+    "phone": [
+     "https://puddlepools.com/pittsburgh-pool-cleaning/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://puddlepools.com/pittsburgh-pool-cleaning/"
+     ],
+     "opening_closing": [
+      "https://puddlepools.com/pittsburgh-pool-cleaning/"
+     ],
+     "leak_detection": [
+      "https://puddlepools.com/pittsburgh-pool-cleaning/"
+     ]
+    },
+    "service_area": [
+     "https://puddlepools.com/pittsburgh-pool-cleaning/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ri-coventry-pool-patio-center",
+   "directory": "service",
+   "name": "Pool & Patio Center",
+   "state": "RI",
+   "state_name": "Rhode Island",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "475 Tiogue Ave.",
+    "city": "Coventry",
+    "state": "RI",
+    "zip": "02816"
+   },
+   "city": "Coventry",
+   "phone": "(401) 823-7290",
+   "website": "https://poolandpatiocenter.com/pool-openings/",
+   "services": [
+    "opening_closing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.poolandpatiocenter.com/"
+    ],
+    "phone": [
+     "https://www.poolandpatiocenter.com/"
+    ],
+    "services": {
+     "opening_closing": [
+      "https://poolandpatiocenter.com/pool-closings/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ri-north-smithfield-royalty-pool-service",
+   "directory": "service",
+   "name": "Royalty Pool Service",
+   "state": "RI",
+   "state_name": "Rhode Island",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "643 Great Rd",
+    "city": "North Smithfield",
+    "state": "RI",
+    "zip": "02896"
+   },
+   "city": "North Smithfield",
+   "phone": "401-516-1997",
+   "website": "https://www.royaltypoolservice.com/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "North Smithfield",
+     "Smithfield",
+     "Johnston",
+     "Warwick",
+     "Cranston",
+     "Coventry",
+     "East Greenwich",
+     "North Kingstown",
+     "Lincoln",
+     "Providence"
+    ],
+    "text": "Northern and central Rhode Island communities listed on the home page"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.royaltypoolservice.com/"
+    ],
+    "phone": [
+     "https://www.royaltypoolservice.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.royaltypoolservice.com/pool-repair-services/"
+     ],
+     "repairs": [
+      "https://www.royaltypoolservice.com/pool-repair-services/"
+     ],
+     "opening_closing": [
+      "https://www.royaltypoolservice.com/"
+     ],
+     "equipment_install": [
+      "https://www.royaltypoolservice.com/"
+     ]
+    },
+    "service_area": [
+     "https://www.royaltypoolservice.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "sc-charleston-sc-coastal-pools",
+   "directory": "service",
+   "name": "SC Coastal Pools",
+   "state": "SC",
+   "state_name": "South Carolina",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Charleston",
+   "phone": "(843) 806-7838",
+   "website": "https://sccoastalpools.com/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Charleston",
+     "Mount Pleasant",
+     "Summerville",
+     "Kiawah Island",
+     "Isle of Palms",
+     "Daniel Island",
+     "West Ashley",
+     "James Island",
+     "Johns Island"
+    ],
+    "text": "Charleston Lowcountry / tri-county area"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://sccoastalpools.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://sccoastalpools.com/"
+     ],
+     "repairs": [
+      "https://sccoastalpools.com/"
+     ],
+     "opening_closing": [
+      "https://sccoastalpools.com/"
+     ],
+     "equipment_install": [
+      "https://sccoastalpools.com/"
+     ]
+    },
+    "service_area": [
+     "https://sccoastalpools.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "sc-greenville-palmetto-pools-spas",
+   "directory": "service",
+   "name": "Palmetto Pools & Spas",
+   "state": "SC",
+   "state_name": "South Carolina",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Greenville",
+   "phone": "(864) 546-1257",
+   "website": "https://www.palmettopoolsandspas.com/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Greenville",
+     "Simpsonville",
+     "Mauldin",
+     "Fountain Inn",
+     "Greer",
+     "Taylors",
+     "Travelers Rest",
+     "Duncan",
+     "Moore"
+    ],
+    "text": "Greenville County / Upstate SC"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.palmettopoolsandspas.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.palmettopoolsandspas.com/"
+     ],
+     "repairs": [
+      "https://www.palmettopoolsandspas.com/"
+     ],
+     "opening_closing": [
+      "https://www.palmettopoolsandspas.com/"
+     ],
+     "equipment_install": [
+      "https://www.palmettopoolsandspas.com/"
+     ]
+    },
+    "service_area": [
+     "https://www.palmettopoolsandspas.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "sd-rapid-city-watertree",
+   "directory": "service",
+   "name": "Watertree (Pool and Spa Center at Watertree)",
+   "state": "SD",
+   "state_name": "South Dakota",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "2447 W Main St",
+    "city": "Rapid City",
+    "state": "SD",
+    "zip": "57702"
+   },
+   "city": "Rapid City",
+   "phone": null,
+   "website": "https://mywatertree.com/service/",
+   "services": [
+    "repairs",
+    "water_testing"
+   ],
+   "service_area": {
+    "places": [
+     "Rapid City",
+     "Black Hills"
+    ],
+    "text": "Black Hills (Rapid City and Spearfish showrooms)"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://mywatertree.com/service/"
+    ],
+    "phone": [],
+    "services": {
+     "repairs": [
+      "https://mywatertree.com/service/"
+     ],
+     "water_testing": [
+      "https://mywatertree.com/service/"
+     ]
+    },
+    "service_area": [
+     "https://mywatertree.com/service/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "sd-sioux-falls-united-prime-pool-and-spa",
+   "directory": "service",
+   "name": "United Prime Pool and Spa",
+   "state": "SD",
+   "state_name": "South Dakota",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Sioux Falls",
+   "phone": "(605) 937-8541",
+   "website": "https://unitedprimepool.com/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Sioux Falls",
+     "Tea",
+     "Harrisburg",
+     "Brandon",
+     "Dell Rapids",
+     "Baltic",
+     "Crooks",
+     "Hartford",
+     "Lennox",
+     "Canton",
+     "Brookings"
+    ],
+    "text": "Sioux Falls metro and surrounding communities"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://unitedprimepool.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://unitedprimepool.com/"
+     ],
+     "repairs": [
+      "https://unitedprimepool.com/"
+     ],
+     "opening_closing": [
+      "https://unitedprimepool.com/"
+     ]
+    },
+    "service_area": [
+     "https://unitedprimepool.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "tn-knoxville-ryan-pools",
+   "directory": "service",
+   "name": "Ryan Pools",
+   "state": "TN",
+   "state_name": "Tennessee",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Knoxville",
+   "phone": "(865) 765-0325",
+   "website": "https://www.ryanpools.com/",
+   "services": [
+    "equipment_install",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Knoxville",
+     "Farragut",
+     "Knox County"
+    ],
+    "text": "Knox County, including Knoxville and Farragut"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.ryanpools.com/contact-us.php"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.ryanpools.com/"
+     ],
+     "repairs": [
+      "https://www.ryanpools.com/"
+     ],
+     "equipment_install": [
+      "https://www.ryanpools.com/"
+     ]
+    },
+    "service_area": [
+     "https://www.ryanpools.com/contact-us.php"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "tn-nashville-pool-scouts-of-nashville",
+   "directory": "service",
+   "name": "Pool Scouts of Nashville",
+   "state": "TN",
+   "state_name": "Tennessee",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Nashville",
+   "phone": "615-558-4141",
+   "website": "https://poolscouts.com/nashville/",
+   "services": [
+    "equipment_install",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Nashville",
+     "Franklin",
+     "Brentwood",
+     "Murfreesboro",
+     "Mt. Juliet",
+     "Lebanon",
+     "Hendersonville",
+     "Gallatin",
+     "Spring Hill",
+     "Columbia",
+     "Bellevue",
+     "Belle Meade"
+    ],
+    "text": "Nashville metro and Middle Tennessee suburbs"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://poolscouts.com/nashville/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/nashville/pool-cleaning-service/"
+     ],
+     "repairs": [
+      "https://poolscouts.com/nashville/pool-maintenance/"
+     ],
+     "opening_closing": [
+      "https://poolscouts.com/nashville/pool-maintenance/"
+     ],
+     "equipment_install": [
+      "https://poolscouts.com/nashville/specialty-pool-services/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/nashville/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "tx-austin-pool-scouts-of-austin",
+   "directory": "service",
+   "name": "Pool Scouts of Austin",
+   "state": "TX",
+   "state_name": "Texas",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Austin",
+   "phone": "(512) 831-5595",
+   "website": "https://poolscouts.com/austin/",
+   "services": [
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Austin",
+     "Travis County",
+     "Hays County",
+     "Steiner Ranch",
+     "Lakeway",
+     "West Lake Hills",
+     "Rollingwood",
+     "Sunset Valley",
+     "Wells Branch",
+     "Anderson Mill",
+     "Oak Hill"
+    ],
+    "text": "Austin and nearby areas (Travis and Hays counties, Lakeway, West Lake Hills, Steiner Ranch, Sunset Valley, etc.)"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://poolscouts.com/austin/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/austin/pool-cleaning-service/"
+     ],
+     "repairs": [
+      "https://poolscouts.com/austin/pool-maintenance/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/austin/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "tx-edinburg-poolwerx-rgv",
+   "directory": "service",
+   "name": "Poolwerx RGV",
+   "state": "TX",
+   "state_name": "Texas",
+   "operator_type": "franchise",
+   "brand": "Poolwerx",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Edinburg",
+   "phone": "(956) 354-7747",
+   "website": "https://www.poolwerx.com/locations/texas/poolwerx-rgv/",
+   "services": [
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Edinburg",
+     "McAllen",
+     "Mission",
+     "Weslaco"
+    ],
+    "text": "Rio Grande Valley: Edinburg, McAllen, Mission, Weslaco (ZIP list; more behind a 'View More' toggle)"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://www.poolwerx.com/locations/texas/poolwerx-rgv/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.poolwerx.com/locations/texas/poolwerx-rgv/"
+     ],
+     "repairs": [
+      "https://www.poolwerx.com/locations/texas/poolwerx-rgv/"
+     ]
+    },
+    "service_area": [
+     "https://www.poolwerx.com/locations/texas/poolwerx-rgv/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ut-st-george-clearwater-pool-supply-maintenance",
+   "directory": "service",
+   "name": "Clearwater Pool Supply & Maintenance",
+   "state": "UT",
+   "state_name": "Utah",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "1276 George Washington Blvd",
+    "city": "St. George",
+    "state": "UT",
+    "zip": "84790"
+   },
+   "city": "St. George",
+   "phone": "(435) 216-8997",
+   "website": "https://clearwaterpools.com/services/residential-service/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "St. George",
+     "Washington",
+     "Ivins",
+     "Santa Clara",
+     "Hurricane",
+     "Copper Rock"
+    ],
+    "text": "St. George, Washington, Ivins, Santa Clara, Hurricane and Copper Rock"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://clearwaterpools.com/pool-service-st-george-hot-tubs/contact/areas-served/"
+    ],
+    "phone": [
+     "https://clearwaterpools.com/services/residential-service/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://clearwaterpools.com/services/residential-service/"
+     ],
+     "repairs": [
+      "https://clearwaterpools.com/services/residential-service/"
+     ],
+     "opening_closing": [
+      "https://clearwaterpools.com/services/residential-service/"
+     ]
+    },
+    "service_area": [
+     "https://clearwaterpools.com/pool-service-st-george-hot-tubs/contact/areas-served/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "ut-syracuse-pool-scouts-of-the-wasatch-front",
+   "directory": "service",
+   "name": "Pool Scouts of the Wasatch Front",
+   "state": "UT",
+   "state_name": "Utah",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Syracuse",
+   "phone": "(801) 335-6503",
+   "website": "https://poolscouts.com/wasatchfront/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Syracuse",
+     "Riverdale",
+     "Ogden",
+     "Clearfield",
+     "Layton",
+     "Kaysville",
+     "Farmington",
+     "Bountiful",
+     "Orem",
+     "Lindon",
+     "Vineyard",
+     "Pleasant Grove",
+     "American Fork",
+     "Highland",
+     "Alpine",
+     "Salt Lake City",
+     "Sandy",
+     "Draper",
+     "Lehi"
+    ],
+    "text": "Wasatch Front: Davis, Weber, Salt Lake and Utah County communities listed on its local page"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://poolscouts.com/wasatchfront/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/wasatchfront/pool-cleaning-service/"
+     ],
+     "repairs": [
+      "https://poolscouts.com/wasatchfront/pool-maintenance/"
+     ],
+     "opening_closing": [
+      "https://poolscouts.com/wasatchfront/pool-openings-closings/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/wasatchfront/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "vt-mendon-allen-pools-spas",
+   "directory": "service",
+   "name": "Allen Pools & Spas",
+   "state": "VT",
+   "state_name": "Vermont",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "1901 US Route 4 East",
+    "city": "Mendon",
+    "state": "VT",
+    "zip": "05701"
+   },
+   "city": "Mendon",
+   "phone": null,
+   "website": "https://allenpools-spas.com/pool-services/",
+   "services": [
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Rutland",
+     "Killington",
+     "Manchester",
+     "Stratton",
+     "Ludlow",
+     "Okemo",
+     "Fair Haven",
+     "Middlebury",
+     "Arlington",
+     "Rochester"
+    ],
+    "text": "Rutland/Killington region and southern Vermont (Mendon service dispatch)"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://allenpools-spas.com/locations/mendon/"
+    ],
+    "phone": [],
+    "services": {
+     "weekly_maintenance": [
+      "https://allenpools-spas.com/pool-services/weekly-pool-maintenance/"
+     ],
+     "repairs": [
+      "https://allenpools-spas.com/pool-services/"
+     ],
+     "opening_closing": [
+      "https://allenpools-spas.com/pool-services/pool-opening-closing/"
+     ],
+     "leak_detection": [
+      "https://allenpools-spas.com/pool-services/leak-detection/"
+     ]
+    },
+    "service_area": [
+     "https://allenpools-spas.com/locations/mendon/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "vt-south-burlington-leisure-world-pools-and-spas",
+   "directory": "service",
+   "name": "Leisure World Pools and Spas",
+   "state": "VT",
+   "state_name": "Vermont",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "1245 Airport Parkway",
+    "city": "South Burlington",
+    "state": "VT",
+    "zip": "05403"
+   },
+   "city": "South Burlington",
+   "phone": "(802) 862-1552",
+   "website": "https://www.leisureworldpool.com/",
+   "services": [
+    "opening_closing"
+   ],
+   "service_area": {
+    "places": [],
+    "text": null
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.leisureworldpool.com/"
+    ],
+    "phone": [
+     "https://www.leisureworldpool.com/"
+    ],
+    "services": {
+     "opening_closing": [
+      "https://www.leisureworldpool.com/"
+     ]
+    },
+    "service_area": []
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "va-richmond-pool-scouts-of-greater-richmond",
+   "directory": "service",
+   "name": "Pool Scouts of Greater Richmond",
+   "state": "VA",
+   "state_name": "Virginia",
+   "operator_type": "franchise",
+   "brand": "Pool Scouts",
+   "location_type": "service_area",
+   "address": null,
+   "city": "Richmond",
+   "phone": null,
+   "website": "https://poolscouts.com/richmond/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Richmond",
+     "Henrico",
+     "Chesterfield",
+     "Short Pump",
+     "Glen Allen",
+     "Midlothian",
+     "Powhatan",
+     "Goochland",
+     "Manakin-Sabot",
+     "Moseley"
+    ],
+    "text": "Greater Richmond: Richmond, Henrico, Chesterfield, Short Pump, Glen Allen, Midlothian, Powhatan, Goochland, Manakin-Sabot, Moseley"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [],
+    "services": {
+     "weekly_maintenance": [
+      "https://poolscouts.com/richmond/pool-cleaning-service/"
+     ],
+     "repairs": [
+      "https://poolscouts.com/richmond/pool-maintenance/"
+     ],
+     "opening_closing": [
+      "https://poolscouts.com/richmond/pool-maintenance/"
+     ]
+    },
+    "service_area": [
+     "https://poolscouts.com/richmond/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "va-springfield-millennium-pools-spas",
+   "directory": "service",
+   "name": "Millennium Pools & Spas (Springfield, VA)",
+   "state": "VA",
+   "state_name": "Virginia",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "5558 Port Royal Rd",
+    "city": "Springfield",
+    "state": "VA",
+    "zip": "22151"
+   },
+   "city": "Springfield",
+   "phone": "703-939-5062",
+   "website": "https://www.millenniumpool.com/",
+   "services": [
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Fairfax County",
+     "Loudoun County",
+     "Prince William County",
+     "Stafford County",
+     "Spotsylvania County",
+     "Chesterfield County",
+     "Hanover County"
+    ],
+    "text": "Northern and central Virginia counties (e.g., Fairfax, Loudoun, Prince William, Stafford, Spotsylvania, Chesterfield, Hanover), plus MD and DC"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.millenniumpool.com/"
+    ],
+    "phone": [
+     "https://www.millenniumpool.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.millenniumpool.com/residential-pool-services/maintenance-cleaning-packages/maintenance-packages/"
+     ],
+     "repairs": [
+      "https://www.millenniumpool.com/residential-pool-services/maintenance-cleaning-packages/pool-repair/"
+     ],
+     "opening_closing": [
+      "https://www.millenniumpool.com/"
+     ],
+     "leak_detection": [
+      "https://www.millenniumpool.com/residential-pool-services/maintenance-cleaning-packages/pool-repair/"
+     ]
+    },
+    "service_area": [
+     "https://www.millenniumpool.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "wa-bellevue-independently-dunn-llc",
+   "directory": "service",
+   "name": "Independently Dunn, LLC",
+   "state": "WA",
+   "state_name": "Washington",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Bellevue",
+   "phone": "(360) 389-7423",
+   "website": "https://independentlydunn.com/",
+   "services": [
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Bellevue",
+     "Kirkland",
+     "Redmond",
+     "Sammamish",
+     "Issaquah",
+     "Everett",
+     "Edmonds",
+     "Ellensburg",
+     "Cle Elum"
+    ],
+    "text": "King, Snohomish and Kittitas counties"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://independentlydunn.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://independentlydunn.com/"
+     ],
+     "repairs": [
+      "https://independentlydunn.com/"
+     ],
+     "opening_closing": [
+      "https://independentlydunn.com/"
+     ],
+     "leak_detection": [
+      "https://independentlydunn.com/"
+     ]
+    },
+    "service_area": [
+     "https://independentlydunn.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "wa-seattle-asa-pools-hot-tubs",
+   "directory": "service",
+   "name": "ASA Pools & Hot Tubs",
+   "state": "WA",
+   "state_name": "Washington",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "service_area",
+   "address": null,
+   "city": "Seattle",
+   "phone": "(206) 202-1454",
+   "website": "https://asapoolservice.com/",
+   "services": [
+    "equipment_install",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Seattle",
+     "Bellevue",
+     "Sammamish",
+     "Redmond",
+     "SeaTac",
+     "Woodinville",
+     "Edmonds",
+     "Kirkland",
+     "Renton",
+     "Shoreline",
+     "Lynnwood"
+    ],
+    "text": "Greater Seattle, including Eastside and north/south suburbs"
+   },
+   "note": null,
+   "sources": {
+    "address": [],
+    "phone": [
+     "https://asapoolservice.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://asapoolservice.com/"
+     ],
+     "repairs": [
+      "https://asapoolservice.com/"
+     ],
+     "equipment_install": [
+      "https://asapoolservice.com/"
+     ]
+    },
+    "service_area": [
+     "https://asapoolservice.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "wv-south-charleston-lorrison-pools-spas",
+   "directory": "service",
+   "name": "Lorrison Pools & Spas",
+   "state": "WV",
+   "state_name": "West Virginia",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "4020 MacCorkle Ave SW",
+    "city": "South Charleston",
+    "state": "WV",
+    "zip": "25309"
+   },
+   "city": "South Charleston",
+   "phone": "304-768-0200",
+   "website": "https://lorrisonpoolsandspas.com/south-charleston-pool-store-teays-valley-pool-builder/pool-service-repair/",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "South Charleston",
+     "Teays Valley",
+     "Charleston",
+     "Hillsdale"
+    ],
+    "text": "South Charleston, Teays Valley, Charleston and surrounding areas (Kanawha/Putnam area)"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://lorrisonpoolsandspas.com/"
+    ],
+    "phone": [
+     "https://lorrisonpoolsandspas.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://lorrisonpoolsandspas.com/pool-service-repair/"
+     ],
+     "repairs": [
+      "https://lorrisonpoolsandspas.com/pool-service-repair/"
+     ],
+     "opening_closing": [
+      "https://lorrisonpoolsandspas.com/pool-service-repair/"
+     ]
+    },
+    "service_area": [
+     "https://lorrisonpoolsandspas.com/contact/south-charleston/",
+     "https://lorrisonpoolsandspas.com/pool-service-repair/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "wi-brookfield-sonoran-pool-services",
+   "directory": "service",
+   "name": "Sonoran Pool Services",
+   "state": "WI",
+   "state_name": "Wisconsin",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "200 S Executive Dr Suite # 101",
+    "city": "Brookfield",
+    "state": "WI",
+    "zip": "53005"
+   },
+   "city": "Brookfield",
+   "phone": "(414) 858-7665",
+   "website": "https://sonoranpoolservicesmke.com/",
+   "services": [
+    "equipment_install",
+    "leak_detection",
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Milwaukee County",
+     "Waukesha County",
+     "Lake Country",
+     "Ozaukee County",
+     "Racine County"
+    ],
+    "text": "Greater Milwaukee: Milwaukee, Waukesha, Ozaukee and Racine counties and Lake Country"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://sonoranpoolservicesmke.com/"
+    ],
+    "phone": [
+     "https://sonoranpoolservicesmke.com/"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://sonoranpoolservicesmke.com/"
+     ],
+     "repairs": [
+      "https://sonoranpoolservicesmke.com/"
+     ],
+     "opening_closing": [
+      "https://sonoranpoolservicesmke.com/"
+     ],
+     "equipment_install": [
+      "https://sonoranpoolservicesmke.com/"
+     ],
+     "leak_detection": [
+      "https://sonoranpoolservicesmke.com/"
+     ]
+    },
+    "service_area": [
+     "https://sonoranpoolservicesmke.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  },
+  {
+   "id": "wi-madison-farwell-pools-spas",
+   "directory": "service",
+   "name": "Farwell Pools & Spas",
+   "state": "WI",
+   "state_name": "Wisconsin",
+   "operator_type": "independent",
+   "brand": null,
+   "location_type": "office",
+   "address": {
+    "street": "3818 County Road AB",
+    "city": "Madison",
+    "state": "WI",
+    "zip": null
+   },
+   "city": "Madison",
+   "phone": "(608) 222-1730",
+   "website": "https://www.farwellpools.com/services.html",
+   "services": [
+    "opening_closing",
+    "repairs",
+    "weekly_maintenance"
+   ],
+   "service_area": {
+    "places": [
+     "Dane County",
+     "Southern Wisconsin"
+    ],
+    "text": "Dane County / Southern Wisconsin"
+   },
+   "note": null,
+   "sources": {
+    "address": [
+     "https://www.farwellpools.com/contact-us.html"
+    ],
+    "phone": [
+     "https://www.farwellpools.com/contact-us.html"
+    ],
+    "services": {
+     "weekly_maintenance": [
+      "https://www.farwellpools.com/services.html"
+     ],
+     "repairs": [
+      "https://www.farwellpools.com/services.html"
+     ],
+     "opening_closing": [
+      "https://www.farwellpools.com/openings--closings.html"
+     ]
+    },
+    "service_area": [
+     "https://www.farwellpools.com/"
+    ]
+   },
+   "last_verified": "2026-10-13",
+   "verification": "business's own website"
+  }
+ ]
+}
