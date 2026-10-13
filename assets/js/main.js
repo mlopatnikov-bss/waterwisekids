@@ -672,3 +672,49 @@ document.addEventListener('click', function (e) {
     }).observe(box, { childList: true });
   });
 })();
+
+/* WWK-MEASUREMENT-030: click intent only; use the existing Google tag, never configure a second one. */
+(function () {
+  'use strict';
+  if (window.wwkOutcomesInstalled) return;
+  window.wwkOutcomesInstalled = true;
+  function slug(text) { return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 100); }
+  function classify(a) {
+    var url;
+    try { url = new URL(a.href, location.href); } catch (_) { return null; }
+    var path = location.pathname, kind = '', card = null, action = '';
+    var external = /^https?:$/.test(url.protocol) && url.hostname !== location.hostname;
+    var phone = url.protocol === 'tel:';
+    if (url.origin === location.origin && /^\/assets\/downloads\/educators\/[a-z0-9-]+\.pdf$/.test(url.pathname)) {
+      return { event: 'educator_pdf_download', action_type: 'pdf_open', asset_name: url.pathname.split('/').pop(), item_id: url.pathname.split('/').pop().replace(/\.pdf$/, ''), source_section: 'educators' };
+    }
+    card = a.closest('.pc-card');
+    if (card && a.closest('.pc-links') && (external || phone)) {
+      if (/^\/pool-care\/stores\/(?:index\.html)?$/.test(path)) kind = 'pool_store_click';
+      if (/^\/pool-care\/services\/(?:index\.html)?$/.test(path)) kind = 'pool_service_click';
+      if (kind) return { event: kind, action_type: phone ? 'phone' : 'website', item_id: card.id, source_section: kind === 'pool_store_click' ? 'pool_stores' : 'pool_services', destination_host: phone ? '' : url.hostname };
+    }
+    card = a.closest('.school-card, .school-listing, .featured-school');
+    if (card && (external || phone) && !a.closest('.reviews, .school-reviews, .school-pool-src') && (phone || a.matches('.visit-site-btn') || a.closest('.school-actions, .school-contact') || a.matches('.btn-primary, .btn, .btn-secondary') || a.matches('.hero-actions a.button'))) {
+      var name = card.querySelector('.school-name, h2, h3');
+      return { event: 'lesson_referral_click', action_type: phone ? 'phone' : 'website', item_id: card.id || (name ? slug(name.textContent) : 'unidentified-school'), source_section: 'swim_lessons', destination_host: phone ? '' : url.hostname };
+    }
+    return null;
+  }
+  document.addEventListener('click', function (e) {
+    if (e.button && e.button !== 0) return;
+    var target = e.target && (e.target.nodeType === 1 ? e.target : e.target.parentElement);
+    var a = target && target.closest('a[href]');
+    if (!a) return;
+    var data = classify(a); if (!data) return;
+    var name = data.event; delete data.event;
+    data.source_path = location.pathname;
+    data.tracking_version = 'outcomes030';
+    data.send_to = 'G-KP7R3NLS4F';
+    data.transport_type = 'beacon';
+    // Arguments commands are consumed by the Google tag already configured through GTM.
+    // No new cookies, consent overrides, URL queries, search terms, ZIPs, phone numbers or emails.
+    window.dataLayer = window.dataLayer || [];
+    (function () { window.dataLayer.push(arguments); })('event', name, data);
+  }, true);
+})();
