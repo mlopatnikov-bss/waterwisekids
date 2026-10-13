@@ -552,7 +552,8 @@ header {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-nav {
+/* Header chrome must not constrain in-page navigation to a fixed height. */
+header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1664,7 +1665,7 @@ table tbody tr:hover {
     min-height: 44px;
   }
 
-  nav {
+  header nav {
     flex-wrap: wrap;
     position: relative;
   }
