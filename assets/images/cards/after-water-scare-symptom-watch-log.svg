@@ -30,7 +30,7 @@
   <line x1="250" y1="110" x2="250" y2="80" stroke="#0c4a6e" stroke-width="4" stroke-linecap="round"/>
   <line x1="250" y1="110" x2="272" y2="118" stroke="#0c4a6e" stroke-width="4" stroke-linecap="round"/>
   <circle cx="250" cy="110" r="4" fill="#0c4a6e"/>
-  <text x="250" y="178" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0c4a6e">0 &#8594; 8 hours</text>
+  <text x="250" y="178" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0c4a6e">Follow care advice</text>
   <!-- log card -->
   <rect x="330" y="34" width="236" height="196" rx="12" fill="#ffffff" stroke="#0369a1" stroke-width="3"/>
   <rect x="330" y="34" width="236" height="38" rx="12" fill="#0369a1"/>
