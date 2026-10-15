@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="An adult and child holding hands and walking toward a pool door with a swim bag and towel">
+  <defs>
+    <linearGradient id="ad-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="ad-pool" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#ad-bg)"/>
+  <rect x="0" y="262" width="600" height="98" fill="#cbd5e1"/>
+  <g stroke="#f8fafc" stroke-width="6" stroke-dasharray="26 18"><path d="M0 330 H600"/></g>
+  <rect x="380" y="70" width="170" height="192" rx="10" fill="#ffffff" stroke="#0369a1" stroke-width="4"/>
+  <rect x="402" y="92" width="126" height="170" rx="6" fill="url(#ad-pool)"/>
+  <path d="M402 150 q16 -9 32 0 t32 0 t32 0 t30 0" fill="none" stroke="#e0f2fe" stroke-width="3" opacity="0.8"/>
+  <rect x="440" y="40" width="90" height="28" rx="8" fill="#0369a1"/>
+  <text x="485" y="60" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#ffffff">POOL</text>
+  <g fill="#0c4a6e"><circle cx="150" cy="120" r="22"/><rect x="128" y="146" width="44" height="86" rx="16"/><rect x="132" y="228" width="14" height="42" rx="5"/><rect x="154" y="228" width="14" height="42" rx="5"/></g>
+  <g fill="#f59e0b"><circle cx="250" cy="170" r="16"/><rect x="235" y="190" width="30" height="48" rx="11"/><rect x="238" y="234" width="10" height="36" rx="4"/><rect x="252" y="234" width="10" height="36" rx="4"/></g>
+  <path d="M172 170 L238 200" stroke="#0c4a6e" stroke-width="9" stroke-linecap="round"/>
+  <path d="M265 200 L290 206" stroke="#f59e0b" stroke-width="7" stroke-linecap="round"/>
+  <rect x="86" y="196" width="34" height="40" rx="8" fill="#ef4444"/><path d="M96 196 q7 -16 14 0" fill="none" stroke="#7f1d1d" stroke-width="4"/>
+  <path d="M300 232 l16 -10 l-4 18 z" fill="#16a34a"/>
+</svg>
