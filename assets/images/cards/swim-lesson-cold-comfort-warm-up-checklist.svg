@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A child wrapped in a warm towel beside a pool with a thermometer and a dry hat">
+  <defs>
+    <linearGradient id="cc-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="cc-pool" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#cc-bg)"/>
+  <rect x="0" y="262" width="600" height="98" fill="#cbd5e1"/>
+  <rect x="300" y="190" width="300" height="72" fill="url(#cc-pool)"/>
+  <path d="M300 220 q18 -9 36 0 t36 0 t36 0 t36 0 t36 0 t36 0 t36 0 t36 0" fill="none" stroke="#e0f2fe" stroke-width="3" opacity="0.8"/>
+  <g fill="#f59e0b"><circle cx="170" cy="150" r="30"/></g>
+  <path d="M130 135 q40 -42 80 0 l-8 10 q-32 -20 -64 0 z" fill="#ef4444"/>
+  <path d="M120 188 q50 -22 100 0 l14 100 h-128 z" fill="#38bdf8"/>
+  <path d="M120 188 q50 -22 100 0" fill="none" stroke="#0369a1" stroke-width="5"/>
+  <circle cx="158" cy="152" r="3.5" fill="#0c4a6e"/><circle cx="182" cy="152" r="3.5" fill="#0c4a6e"/>
+  <path d="M160 166 q10 8 20 0" fill="none" stroke="#0c4a6e" stroke-width="3" stroke-linecap="round"/>
+  <rect x="400" y="50" width="26" height="110" rx="13" fill="#ffffff" stroke="#0369a1" stroke-width="4"/>
+  <circle cx="413" cy="176" r="22" fill="#ef4444" stroke="#0369a1" stroke-width="4"/>
+  <rect x="408" y="90" width="10" height="82" rx="5" fill="#ef4444"/>
+  <g stroke="#0369a1" stroke-width="3"><path d="M432 70 h14"/><path d="M432 92 h14"/><path d="M432 114 h14"/><path d="M432 136 h14"/></g>
+  <rect x="470" y="230" width="62" height="30" rx="8" fill="#16a34a"/><rect x="480" y="215" width="42" height="16" rx="8" fill="#22c55e"/>
+</svg>
