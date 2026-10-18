@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A parent phone beside a pool with a shield and check mark">
+  <defs>
+    <linearGradient id="pv-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="pv-pool" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#pv-bg)"/>
+  <rect x="0" y="262" width="600" height="98" fill="#cbd5e1"/>
+  <rect x="0" y="190" width="600" height="72" fill="url(#pv-pool)"/>
+  <rect x="150" y="50" width="130" height="220" rx="22" fill="#0f172a"/>
+  <rect x="162" y="72" width="106" height="170" rx="8" fill="#e0f2fe"/>
+  <circle cx="215" cy="150" r="30" fill="#ffffff" stroke="#0369a1" stroke-width="5"/>
+  <circle cx="215" cy="150" r="12" fill="#0369a1"/>
+  <circle cx="215" cy="256" r="6" fill="#64748b"/>
+  <path d="M400 80 l70 24 v62 q0 42 -70 74 q-70 -32 -70 -74 v-62 z" fill="#16a34a"/>
+  <path d="M372 160 l20 20 l40 -44" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
