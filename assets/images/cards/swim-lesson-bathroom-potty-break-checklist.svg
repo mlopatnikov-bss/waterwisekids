@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A restroom door sign, a step stool and a swim bag beside a pool with a green check mark">
+  <defs>
+    <linearGradient id="bp-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="bp-pool" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#bp-bg)"/>
+  <rect x="0" y="262" width="600" height="98" fill="#cbd5e1"/>
+  <rect x="0" y="190" width="600" height="72" fill="url(#bp-pool)"/>
+  <rect x="150" y="70" width="110" height="190" rx="10" fill="#0c4a6e"/>
+  <rect x="164" y="84" width="82" height="70" rx="8" fill="#e0f2fe"/>
+  <circle cx="205" cy="104" r="8" fill="#0c4a6e"/>
+  <path d="M190 118 h30 l6 28 h-42z" fill="#0c4a6e"/>
+  <rect x="164" y="168" width="82" height="12" rx="6" fill="#0ea5e9"/>
+  <rect x="330" y="214" width="110" height="20" rx="6" fill="#facc15" stroke="#a16207" stroke-width="5"/>
+  <rect x="340" y="234" width="12" height="26" fill="#a16207"/>
+  <rect x="418" y="234" width="12" height="26" fill="#a16207"/>
+  <rect x="470" y="196" width="70" height="64" rx="14" fill="#0ea5e9"/>
+  <path d="M485 196 q20 -30 40 0" fill="none" stroke="#0c4a6e" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="500" cy="95" r="34" fill="#16a34a"/>
+  <path d="M484 95 l11 12 l22 -26" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
