@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A moon and stars over a packed swim bag, folded towel and laid-out clothes beside a green check mark">
+  <defs>
+    <linearGradient id="nb-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e3a5f"/><stop offset="1" stop-color="#0c4a6e"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#nb-bg)"/>
+  <circle cx="110" cy="84" r="38" fill="#fef9c3"/>
+  <circle cx="126" cy="74" r="34" fill="#1e3a5f"/>
+  <circle cx="240" cy="60" r="4" fill="#fef9c3"/><circle cx="310" cy="100" r="3" fill="#fef9c3"/><circle cx="400" cy="52" r="4" fill="#fef9c3"/><circle cx="470" cy="110" r="3" fill="#fef9c3"/>
+  <rect x="0" y="270" width="600" height="90" fill="#e2e8f0"/>
+  <rect x="120" y="190" width="150" height="100" rx="18" fill="#0ea5e9"/>
+  <path d="M150 190 q45 -50 90 0" fill="none" stroke="#f8fafc" stroke-width="9" stroke-linecap="round"/>
+  <rect x="140" y="222" width="110" height="14" rx="7" fill="#e0f2fe"/>
+  <rect x="300" y="236" width="120" height="22" rx="6" fill="#facc15"/>
+  <rect x="300" y="258" width="120" height="22" rx="6" fill="#f97316"/>
+  <rect x="300" y="214" width="120" height="22" rx="6" fill="#f8fafc"/>
+  <rect x="450" y="210" width="80" height="70" rx="10" fill="#fff" stroke="#0369a1" stroke-width="5"/>
+  <path d="M465 232 l18 -14 l18 14" fill="none" stroke="#0369a1" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="500" cy="140" r="34" fill="#16a34a"/>
+  <path d="M484 140 l11 12 l22 -26" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
