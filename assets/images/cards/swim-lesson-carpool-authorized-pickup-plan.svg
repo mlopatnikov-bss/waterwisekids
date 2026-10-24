@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A car with a child seat beside a pool towel, a clipboard list and a green check mark">
+  <defs>
+    <linearGradient id="cp-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#cp-bg)"/>
+  <rect x="0" y="270" width="600" height="90" fill="#0ea5e9"/>
+  <path d="M0 292 q37 -14 75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0" fill="none" stroke="#e0f2fe" stroke-width="5"/>
+  <path d="M60 230 q10 -50 60 -58 h100 q50 8 62 58z" fill="#f8fafc" stroke="#0369a1" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="40" y="226" width="260" height="44" rx="14" fill="#0369a1"/>
+  <circle cx="110" cy="272" r="22" fill="#1f2937"/><circle cx="110" cy="272" r="9" fill="#cbd5e1"/>
+  <circle cx="240" cy="272" r="22" fill="#1f2937"/><circle cx="240" cy="272" r="9" fill="#cbd5e1"/>
+  <rect x="140" y="188" width="30" height="34" rx="9" fill="#f97316"/><circle cx="155" cy="178" r="12" fill="#fcd34d"/>
+  <rect x="350" y="70" width="150" height="190" rx="14" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="396" y="56" width="58" height="24" rx="8" fill="#0369a1"/>
+  <circle cx="378" cy="112" r="8" fill="#16a34a"/><rect x="396" y="108" width="82" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="378" cy="150" r="8" fill="#16a34a"/><rect x="396" y="146" width="66" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="378" cy="188" r="8" fill="#16a34a"/><rect x="396" y="184" width="82" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="378" cy="226" r="8" fill="#16a34a"/><rect x="396" y="222" width="52" height="9" rx="4" fill="#94a3b8"/>
+  <rect x="470" y="236" width="100" height="22" rx="6" fill="#f97316"/><rect x="470" y="214" width="100" height="22" rx="6" fill="#f8fafc"/>
+  <circle cx="540" cy="70" r="30" fill="#16a34a"/>
+  <path d="M526 70 l9 10 l19 -22" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
