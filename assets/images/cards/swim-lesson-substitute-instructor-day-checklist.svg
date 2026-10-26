@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="Two whistle-wearing swim instructors with a handoff arrow between them, a clipboard list and a check mark">
+  <defs>
+    <linearGradient id="si-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#si-bg)"/>
+  <rect x="0" y="270" width="600" height="90" fill="#0ea5e9"/>
+  <path d="M0 292 q37 -14 75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0" fill="none" stroke="#e0f2fe" stroke-width="5"/>
+  <circle cx="110" cy="130" r="30" fill="#fcd34d"/><rect x="72" y="166" width="76" height="90" rx="16" fill="#0369a1"/>
+  <circle cx="270" cy="130" r="30" fill="#fcd34d"/><rect x="232" y="166" width="76" height="90" rx="16" fill="#f97316"/>
+  <path d="M150 120 q40 -50 80 0" fill="none" stroke="#16a34a" stroke-width="6" stroke-dasharray="10 8" stroke-linecap="round"/>
+  <path d="M222 112 l10 8 l-14 4" fill="none" stroke="#16a34a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="440" y="70" width="130" height="190" rx="14" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="478" y="56" width="54" height="24" rx="8" fill="#0369a1"/>
+  <circle cx="462" cy="112" r="8" fill="#16a34a"/><rect x="480" y="108" width="72" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="462" cy="150" r="8" fill="#16a34a"/><rect x="480" y="146" width="56" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="462" cy="188" r="8" fill="#16a34a"/><rect x="480" y="184" width="72" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="462" cy="226" r="8" fill="#16a34a"/><rect x="480" y="222" width="44" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="540" cy="40" r="26" fill="#16a34a"/>
+  <path d="M528 40 l8 9 l16 -19" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
