@@ -3623,3 +3623,13 @@ aside p a {
   .nav-links:has(> li:nth-child(11)) { flex-basis: 100%; }
 }
 /* WWK-EDUCATORS-027 NAV FIT END */
+
+/* 2026-10-27 visual QA: pool state cards (.pool-state-link with a nested <span>) were swept into
+   .wwk-navlist by the standalone-link-list tagger, whose inline-flex row layout put the state name and its
+   summary side by side. Restore the stacked card layout (find-a-pool index and state pages). */
+ul.wwk-navlist > li > a.pool-state-link {
+  display: block !important;
+  align-items: normal !important;
+  box-sizing: border-box;
+  height: 100%;
+}
