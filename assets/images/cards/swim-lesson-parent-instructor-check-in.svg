@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A parent and a swim instructor with speech bubbles beside a clipboard card with check marks, above pool water">
+  <defs>
+    <linearGradient id="ci-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#bae6fd"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#ci-bg)"/>
+  <rect x="0" y="285" width="600" height="75" fill="#0ea5e9"/>
+  <path d="M0 305 q37 -12 75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0" fill="none" stroke="#e0f2fe" stroke-width="5"/>
+  <circle cx="110" cy="150" r="32" fill="#fcd9b6" stroke="#0369a1" stroke-width="5"/>
+  <path d="M60 280 v-70 a50 50 0 0 1 100 0 v70z" fill="#0369a1"/>
+  <circle cx="290" cy="150" r="32" fill="#fcd9b6" stroke="#0369a1" stroke-width="5"/>
+  <path d="M240 280 v-70 a50 50 0 0 1 100 0 v70z" fill="#16a34a"/>
+  <rect x="80" y="40" width="110" height="56" rx="16" fill="#fff" stroke="#0369a1" stroke-width="5"/>
+  <path d="M110 96 l10 22 l16 -22z" fill="#fff" stroke="#0369a1" stroke-width="5" stroke-linejoin="round"/>
+  <text x="135" y="78" font-family="Arial,sans-serif" font-size="40" font-weight="700" text-anchor="middle" fill="#0369a1">?</text>
+  <rect x="215" y="40" width="130" height="56" rx="16" fill="#fff" stroke="#16a34a" stroke-width="5"/>
+  <path d="M300 96 l-10 22 l-16 -22z" fill="#fff" stroke="#16a34a" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M250 70 l12 12 l26 -26" fill="none" stroke="#16a34a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="410" y="70" width="150" height="200" rx="14" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="455" y="54" width="60" height="26" rx="8" fill="#0369a1"/>
+  <circle cx="440" cy="125" r="9" fill="#16a34a"/><rect x="458" y="120" width="82" height="10" rx="5" fill="#94a3b8"/>
+  <circle cx="440" cy="165" r="9" fill="#16a34a"/><rect x="458" y="160" width="64" height="10" rx="5" fill="#94a3b8"/>
+  <circle cx="440" cy="205" r="9" fill="#16a34a"/><rect x="458" y="200" width="82" height="10" rx="5" fill="#94a3b8"/>
+  <circle cx="440" cy="245" r="9" fill="#cbd5e1"/><rect x="458" y="240" width="52" height="10" rx="5" fill="#cbd5e1"/>
+</svg>
