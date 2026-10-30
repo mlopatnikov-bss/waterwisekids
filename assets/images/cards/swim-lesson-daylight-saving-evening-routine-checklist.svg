@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A crescent moon and a clock above a lit pool entrance with a parent holding a child's hand and a warm towel">
+  <defs>
+    <linearGradient id="dst-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e3a8a"/><stop offset="1" stop-color="#0369a1"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#dst-bg)"/>
+  <circle cx="90" cy="70" r="3" fill="#fff"/><circle cx="200" cy="40" r="2.5" fill="#fff"/><circle cx="330" cy="75" r="3" fill="#fff"/><circle cx="440" cy="35" r="2.5" fill="#fff"/><circle cx="540" cy="90" r="3" fill="#fff"/>
+  <path d="M110 120 a42 42 0 1 0 38 -66 a34 34 0 1 1 -38 66z" fill="#fde68a"/>
+  <circle cx="440" cy="110" r="52" fill="#fff" stroke="#fde68a" stroke-width="6"/>
+  <path d="M440 110 v-32 M440 110 l24 14" fill="none" stroke="#1e3a8a" stroke-width="7" stroke-linecap="round"/>
+  <path d="M520 70 a24 24 0 0 1 14 38" fill="none" stroke="#fde68a" stroke-width="5" stroke-linecap="round"/>
+  <rect x="240" y="150" width="170" height="130" rx="10" fill="#e0f2fe" stroke="#fde68a" stroke-width="5"/>
+  <rect x="300" y="195" width="50" height="85" fill="#0369a1"/>
+  <circle cx="325" cy="168" r="10" fill="#fde68a"/>
+  <path d="M255 150 l-15 130 M395 150 l15 130" stroke="#fde68a" stroke-width="3" opacity="0.5"/>
+  <circle cx="95" cy="205" r="22" fill="#fcd9b6" stroke="#e0f2fe" stroke-width="4"/>
+  <path d="M55 285 v-45 a40 40 0 0 1 80 0 v45z" fill="#16a34a"/>
+  <circle cx="170" cy="240" r="15" fill="#fcd9b6" stroke="#e0f2fe" stroke-width="4"/>
+  <path d="M148 285 v-22 a22 22 0 0 1 44 0 v22z" fill="#f97316"/>
+  <path d="M130 245 L158 252" stroke="#fcd9b6" stroke-width="7" stroke-linecap="round"/>
+  <rect x="0" y="285" width="600" height="75" fill="#0ea5e9"/>
+  <path d="M0 305 q37 -12 75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0" fill="none" stroke="#e0f2fe" stroke-width="5"/>
+</svg>
