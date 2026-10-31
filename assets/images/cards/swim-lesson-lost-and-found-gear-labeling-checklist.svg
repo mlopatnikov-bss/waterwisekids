@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A swim bag with a tag, goggles, a towel and a check-marked list on a pool bench">
+  <rect width="600" height="360" fill="#e0f2fe"/>
+  <rect x="0" y="270" width="600" height="90" fill="#0ea5e9"/>
+  <path d="M0 292 q37 -12 75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0" fill="none" stroke="#e0f2fe" stroke-width="5"/>
+  <rect x="60" y="235" width="300" height="18" rx="6" fill="#92400e"/>
+  <rect x="80" y="253" width="14" height="40" fill="#78350f"/><rect x="326" y="253" width="14" height="40" fill="#78350f"/>
+  <rect x="100" y="140" width="150" height="95" rx="16" fill="#f97316"/>
+  <path d="M130 140 a45 40 0 0 1 90 0" fill="none" stroke="#c2410c" stroke-width="10" stroke-linecap="round"/>
+  <rect x="120" y="170" width="110" height="10" rx="5" fill="#fed7aa"/>
+  <circle cx="175" cy="205" r="12" fill="#fff"/><text x="175" y="210" font-family="Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#c2410c">AB</text>
+  <path d="M236 160 q40 10 30 50" fill="none" stroke="#fde68a" stroke-width="4"/>
+  <rect x="252" y="205" width="36" height="24" rx="4" fill="#fde68a" stroke="#ca8a04" stroke-width="2"/>
+  <circle cx="270" cy="217" r="4" fill="#fff" stroke="#ca8a04" stroke-width="2"/>
+  <rect x="270" y="190" width="70" height="45" rx="8" fill="#16a34a"/>
+  <path d="M270 205 h70 M270 220 h70" stroke="#bbf7d0" stroke-width="4"/>
+  <circle cx="110" cy="115" r="16" fill="#0369a1" stroke="#fff" stroke-width="4"/><circle cx="150" cy="115" r="16" fill="#0369a1" stroke="#fff" stroke-width="4"/>
+  <path d="M126 115 h8" stroke="#fff" stroke-width="5"/>
+  <rect x="400" y="50" width="150" height="190" rx="12" fill="#fff" stroke="#0369a1" stroke-width="5"/>
+  <path d="M425 95 l8 8 14 -16 M425 140 l8 8 14 -16 M425 185 l8 8 14 -16" fill="none" stroke="#16a34a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M460 95 h65 M460 140 h65 M460 185 h65" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <rect x="445" y="38" width="60" height="22" rx="8" fill="#0369a1"/>
+</svg>
