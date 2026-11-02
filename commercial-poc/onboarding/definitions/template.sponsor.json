@@ -1,0 +1,157 @@
+{
+  "schema": "wwk.sponsor-definition",
+  "schema_version": 1,
+  "definition_key": "template-sponsor",
+  "prepared_on": "2026-01-01",
+  "site": {
+    "host": "www.waterwisekids.com",
+    "collector_url": "https://events.waterwisekids.com/v1/collect",
+    "component_version": "p2r2"
+  },
+  "destination_hosts": [
+    "TODO_official-domain.example"
+  ],
+  "markets": [
+    {
+      "market_key": "todo-market",
+      "state": "ZZ",
+      "label": "TODO_market label",
+      "place_names": [
+        "TODO_town name as written on the page"
+      ]
+    }
+  ],
+  "page_inventory": [
+    {
+      "page_path": "/TODO_existing-page.html",
+      "market_key": "todo-market",
+      "page_status": "existing"
+    }
+  ],
+  "tenants": [
+    {
+      "tenant_key": "todo-tenant",
+      "tenant_id": "ten_0000000000000000",
+      "display_name": "TODO_school display name",
+      "timezone": "America/New_York",
+      "school": {
+        "school_id": "sch_0000000000000000",
+        "display_name": "TODO_school display name",
+        "territory_url": "https://TODO_official-domain.example/territory/"
+      },
+      "locations": [
+        {
+          "location_key": "todo-location",
+          "location_id": "loc_0000000000000000",
+          "display_name": "TODO_venue name",
+          "market_key": "todo-market",
+          "official_url": "https://TODO_official-domain.example/territory/location/venue/",
+          "address_display": "TODO_address exactly as on the official page",
+          "facts": [
+            {
+              "fact_key": "address",
+              "value": "TODO_address exactly as on the official page",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/TODO_snapshot.json",
+              "source_url": "https://TODO_official-domain.example/territory/location/venue/",
+              "observed_on": "2026-01-01"
+            }
+          ]
+        }
+      ],
+      "destinations": [
+        {
+          "destination_id": "dst_0000000000000000",
+          "kind": "territory",
+          "location_key": null
+        },
+        {
+          "destination_id": "dst_0000000000000000",
+          "kind": "location",
+          "location_key": "todo-location"
+        }
+      ],
+      "campaign": {
+        "campaign_key": "sponsored-pilot-2026",
+        "campaign_id": "cmp_0000000000000000",
+        "kind": "sponsored_pilot",
+        "display_name": "Sponsored pilot",
+        "disclosure_label": "Sponsored pilot",
+        "disclosure_text": "No-fee pilot placement. WaterWiseKids may offer paid sponsored placements in the future. Sponsorship does not change directory order or editorial content.",
+        "starts_on": "2026-01-01",
+        "ends_on": "2026-01-31",
+        "price_cents": 0,
+        "currency": "USD"
+      },
+      "placements": [
+        {
+          "slot_key": "todo-slot",
+          "placement_id": "plc_0000000000000000",
+          "page_path": "/TODO_existing-page.html",
+          "market_key": "todo-market",
+          "variant": "featured_location",
+          "location_keys": [
+            "todo-location"
+          ],
+          "indent": 8,
+          "anchor": {
+            "type": "insert_after",
+            "text": "TODO_exact unique line in the page after which the card goes"
+          }
+        }
+      ]
+    }
+  ],
+  "portal": {
+    "users": [
+      {
+        "invite_ref": "todo-owner",
+        "display_label": "TODO_role label, never a person name or email",
+        "memberships": [
+          {
+            "tenant_key": "todo-tenant",
+            "role": "owner"
+          }
+        ]
+      }
+    ]
+  },
+  "approvals": [
+    {
+      "gate": "sponsor_terms",
+      "status": "pending",
+      "recorded_on": null,
+      "evidence_ref": null
+    },
+    {
+      "gate": "source_verification",
+      "status": "pending",
+      "recorded_on": null,
+      "evidence_ref": null
+    },
+    {
+      "gate": "editorial_review",
+      "status": "pending",
+      "recorded_on": null,
+      "evidence_ref": null
+    },
+    {
+      "gate": "preview_qa",
+      "status": "pending",
+      "recorded_on": null,
+      "evidence_ref": null
+    },
+    {
+      "gate": "portal_access",
+      "status": "pending",
+      "recorded_on": null,
+      "evidence_ref": null
+    },
+    {
+      "gate": "activation",
+      "status": "pending",
+      "recorded_on": null,
+      "evidence_ref": null
+    }
+  ]
+}

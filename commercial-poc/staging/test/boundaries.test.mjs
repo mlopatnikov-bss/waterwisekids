@@ -13,6 +13,10 @@ const sha = (path) => createHash('sha256').update(readFileSync(path)).digest('he
 function* acceptedPocFiles(dir = POC_ROOT) {
   for (const name of readdirSync(dir).sort()) {
     if (dir === POC_ROOT && name === 'staging') continue;
+    // onboarding/ is the post-pilot sponsor-onboarding productization module. It has its
+    // own package and tests (commercial-poc/onboarding/test) and must not alter any
+    // accepted Phase 1/2 file, so it is excluded here rather than added to the fixture.
+    if (dir === POC_ROOT && name === 'onboarding') continue;
     if (name === '.DS_Store' || name.startsWith('._') || name === '.data') continue;
     const path = join(dir, name);
     const stat = lstatSync(path);
