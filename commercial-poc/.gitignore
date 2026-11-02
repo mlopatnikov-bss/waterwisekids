@@ -1,0 +1,4 @@
+# Local POC database and scratch output (never commit)
+.data/
+*.sqlite
+*.sqlite-journal

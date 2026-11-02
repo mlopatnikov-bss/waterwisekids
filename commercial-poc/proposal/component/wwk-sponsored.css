@@ -1,0 +1,80 @@
+/* WaterWiseKids sponsored-card styles v1 (Phase 2 proposal).
+   Deliberately unlike directory listings (.school-card) and the existing .featured-school
+   block: neutral slate panel, no stars, no ratings, no badges other than the disclosure.
+   Every rule is scoped under .wwk-sponsored (two classes) so page-template rules such as
+   ".wwk-local-content h2" or mobile list styles cannot restyle the card. */
+.wwk-sponsored {
+  box-sizing: border-box;
+  margin: 28px 0;
+  padding: 16px 18px 14px;
+  border: 1px solid #94a3b8;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #1f2937;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  text-align: left;
+}
+.wwk-sponsored * { box-sizing: border-box; }
+.wwk-sponsored .wwk-sponsored__label {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 2px 9px;
+  border: 1px solid #475569;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.wwk-sponsored .wwk-sponsored__title {
+  margin: 0 0 4px;
+  padding: 0;
+  border: 0;
+  color: #0f172a;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.wwk-sponsored .wwk-sponsored__text { margin: 0 0 10px; color: #1f2937; }
+.wwk-sponsored .wwk-sponsored__links,
+.wwk-sponsored .wwk-sponsored__venues { margin: 0 0 10px; padding: 0; list-style: none; }
+.wwk-sponsored .wwk-sponsored__links { display: flex; flex-wrap: wrap; gap: 0 22px; }
+.wwk-sponsored .wwk-sponsored__venues { columns: 2 16rem; column-gap: 1.5rem; }
+.wwk-sponsored .wwk-sponsored__links li,
+.wwk-sponsored .wwk-sponsored__venues li { margin: 0; padding: 0; list-style: none; break-inside: avoid; }
+.wwk-sponsored .wwk-sponsored__links li::before,
+.wwk-sponsored .wwk-sponsored__venues li::before { content: none; }
+.wwk-sponsored .wwk-sponsored__links a,
+.wwk-sponsored .wwk-sponsored__venues a {
+  display: inline-block;
+  min-height: 44px;
+  padding: 10px 0;
+  color: #075985;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.wwk-sponsored .wwk-sponsored__venues a { min-height: 40px; padding: 8px 0; font-weight: 500; }
+.wwk-sponsored .wwk-sponsored__links a:hover,
+.wwk-sponsored .wwk-sponsored__venues a:hover { color: #0c4a6e; }
+.wwk-sponsored .wwk-sponsored__links a:focus-visible,
+.wwk-sponsored .wwk-sponsored__venues a:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; border-radius: 4px; }
+.wwk-sponsored .wwk-sponsored__host { margin-left: 0.3em; color: #475569; font-weight: 400; }
+.wwk-sponsored .wwk-sponsored__address { color: #475569; }
+.wwk-sponsored .wwk-sponsored__disclosure {
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px dashed #94a3b8;
+  color: #475569;
+  font-size: 0.85rem;
+}
+@media (max-width: 640px) {
+  .wwk-sponsored { margin: 20px 0; padding: 14px 14px 12px; }
+  .wwk-sponsored .wwk-sponsored__links { flex-direction: column; gap: 0; }
+  .wwk-sponsored .wwk-sponsored__venues { columns: 1; }
+}
+@media print { .wwk-sponsored { break-inside: avoid; } }

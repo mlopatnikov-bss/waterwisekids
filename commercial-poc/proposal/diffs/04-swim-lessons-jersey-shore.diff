@@ -1,0 +1,54 @@
+diff --git a/swim-lessons/jersey-shore.html b/swim-lessons/jersey-shore.html
+--- a/swim-lessons/jersey-shore.html
++++ b/swim-lessons/jersey-shore.html
+@@ -153,7 +153,7 @@
+ 
+         <section class="wwk-intro-box">
+             <p>The Jersey Shore is one of the most popular family vacation and residential destinations on the East Coast. Whether you're planning a summer beach trip or raising a family near the shore, access to quality swim instruction is essential for water safety and family enjoyment.</p>
+-            <p>British Swim School of Jersey Shore serves families throughout Monmouth County, Ocean County, and surrounding shore communities with professional, safety-first swim lessons for all ages. Convenient locations and year-round programming make it easy to find quality instruction regardless of the season.</p>
++            <p>This guide helps families in Monmouth County, Ocean County and nearby shore communities compare swim lesson options. Confirm each provider’s current teaching-pool address, class format, age range and availability directly before booking.</p>
+         </section>
+ 
+         <div class="tldr-box" style="background:#f0f7ff;border-left:4px solid #0077b6;padding:16px 20px;margin:20px 0;border-radius:8px;">
+@@ -185,23 +185,24 @@
+             </ul>
+         </section>
+ 
+-        <section class="featured-school">
+-            <span class="featured-badge">Featured School</span>
+-            <h2>British Swim School of Jersey Shore</h2>
+-            <div class="rating">
+-                <span class="stars">★★★★★</span>
+-                <span>4.8/5 (186 reviews)</span>
+-            </div>
+-            <p>British Swim School of Jersey Shore is a trusted leader in swim instruction throughout Monmouth and Ocean Counties. The school specializes in beginner-friendly instruction with proven curriculum and certified instructors who prioritize water safety above all else.</p>
+-            <ul>
+-                <li>Convenient locations throughout Monmouth and Ocean Counties</li>
+-                <li>Infants (6 months) through adult programs</li>
+-                <li>Year-round heated indoor pools</li>
+-                <li>Certified instructors with beach and open-water expertise</li>
+-                <li>Free consultation and trial lesson</li>
+-            </ul>
+-            <a href="/swim-schools.html" class="btn-primary">Find Swim Lessons Near You</a>
+-        </section>
++        <!-- WWK sponsored placement plc_3febe5cc1afd2bd6 (Sponsored pilot) -->
++        <link rel="stylesheet" href="/assets/css/wwk-sponsored.css?v=p2r2">
++        <aside class="wwk-sponsored" aria-labelledby="wwk-sp-plc_3febe5cc1afd2bd6-label wwk-sp-plc_3febe5cc1afd2bd6-title" data-wwk-sponsored-card="" data-wwk-tenant="ten_9d294d23e0e9841e" data-wwk-school="sch_5b7e6d81d52e8ed5" data-wwk-campaign="cmp_88f0a7279a2972e2" data-wwk-placement="plc_3febe5cc1afd2bd6" data-wwk-page-path="/swim-lessons/jersey-shore.html">
++          <p class="wwk-sponsored__label" id="wwk-sp-plc_3febe5cc1afd2bd6-label">Sponsored pilot</p>
++          <h2 class="wwk-sponsored__title" id="wwk-sp-plc_3febe5cc1afd2bd6-title">British Swim School of Jersey Shore</h2>
++          <p class="wwk-sponsored__text">Pool locations featured in this pilot (britishswimschool.com):</p>
++          <ul class="wwk-sponsored__venues">
++            <li><a href="https://britishswimschool.com/jersey-shore/location/la-fitness-brick/?utm_source=waterwisekids&amp;utm_medium=sponsored_pilot&amp;utm_campaign=cmp_88f0a7279a2972e2&amp;utm_content=plc_3febe5cc1afd2bd6" rel="sponsored noopener" data-wwk-destination="dst_419094b9f24e115c" data-wwk-location="loc_b5b7d777c4bea81a">LA Fitness - Brick</a> <span class="wwk-sponsored__address">1 Brick Plaza, Brick Township, NJ 08723</span></li>
++            <li><a href="https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/?utm_source=waterwisekids&amp;utm_medium=sponsored_pilot&amp;utm_campaign=cmp_88f0a7279a2972e2&amp;utm_content=plc_3febe5cc1afd2bd6" rel="sponsored noopener" data-wwk-destination="dst_e4879fb65a519630" data-wwk-location="loc_096d7703f7c65cd6">LA Fitness - Toms River</a> <span class="wwk-sponsored__address">1207 Hooper Ave, Toms River, NJ 08753</span></li>
++            <li><a href="https://britishswimschool.com/jersey-shore/location/la-fitness-howell/?utm_source=waterwisekids&amp;utm_medium=sponsored_pilot&amp;utm_campaign=cmp_88f0a7279a2972e2&amp;utm_content=plc_3febe5cc1afd2bd6" rel="sponsored noopener" data-wwk-destination="dst_cd581fee5ef6a610" data-wwk-location="loc_3c6664af3a15b390">LA Fitness - Howell</a> <span class="wwk-sponsored__address">90 Lanes Mill Road, Howell, NJ 07731</span></li>
++          </ul>
++          <p class="wwk-sponsored__text">Check current schedules, pricing and enrollment directly with the school.</p>
++          <ul class="wwk-sponsored__links">
++            <li><a href="https://britishswimschool.com/jersey-shore/?utm_source=waterwisekids&amp;utm_medium=sponsored_pilot&amp;utm_campaign=cmp_88f0a7279a2972e2&amp;utm_content=plc_3febe5cc1afd2bd6" rel="sponsored noopener" data-wwk-destination="dst_b6938518f71f3efe">British Swim School of Jersey Shore website<span class="wwk-sponsored__host"> (britishswimschool.com)</span></a></li>
++          </ul>
++          <p class="wwk-sponsored__disclosure">No-fee pilot placement. WaterWiseKids may offer paid sponsored placements in the future. Sponsorship does not change directory order or editorial content.</p>
++        </aside>
++        <script src="/assets/js/wwk-sponsored.js?v=p2r2" defer></script>
+ 
+         <section class="wwk-intro-box">
+             <h2>Nearby Communities</h2>

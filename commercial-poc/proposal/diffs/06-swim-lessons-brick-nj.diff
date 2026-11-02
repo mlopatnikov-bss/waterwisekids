@@ -1,0 +1,51 @@
+diff --git a/swim-lessons/brick-nj.html b/swim-lessons/brick-nj.html
+--- a/swim-lessons/brick-nj.html
++++ b/swim-lessons/brick-nj.html
+@@ -179,23 +179,19 @@
+             </ul>
+         </section>
+ 
+-        <section class="featured-school">
+-            <span class="featured-badge">Featured School</span>
+-            <h2>British Swim School of Jersey Shore</h2>
+-            <div class="rating">
+-                <span class="stars">★★★★★</span>
+-                <span>4.8/5 (186 reviews)</span>
+-            </div>
+-            <p>British Swim School serves Brick families with professional, safety-first instruction. The school specializes in beginner-friendly programs for all ages with proven curriculum and certified instructors.</p>
+-            <ul>
+-                <li>Convenient location for Brick families</li>
+-                <li>Ages 6 months through adults</li>
+-                <li>Year-round heated indoor pools</li>
+-                <li>Certified, experienced instructors</li>
+-                <li>Free consultation and trial lesson</li>
+-            </ul>
+-            <a href="/swim-schools.html" class="btn-primary">Find Swim Lessons Near You</a>
+-        </section>
++        <!-- WWK sponsored placement plc_9e245000c445f489 (Sponsored pilot) -->
++        <link rel="stylesheet" href="/assets/css/wwk-sponsored.css?v=p2r2">
++        <aside class="wwk-sponsored" aria-labelledby="wwk-sp-plc_9e245000c445f489-label wwk-sp-plc_9e245000c445f489-title" data-wwk-sponsored-card="" data-wwk-tenant="ten_9d294d23e0e9841e" data-wwk-school="sch_5b7e6d81d52e8ed5" data-wwk-campaign="cmp_88f0a7279a2972e2" data-wwk-placement="plc_9e245000c445f489" data-wwk-location="loc_b5b7d777c4bea81a" data-wwk-page-path="/swim-lessons/brick-nj.html">
++          <p class="wwk-sponsored__label" id="wwk-sp-plc_9e245000c445f489-label">Sponsored pilot</p>
++          <h2 class="wwk-sponsored__title" id="wwk-sp-plc_9e245000c445f489-title">British Swim School of Jersey Shore</h2>
++          <p class="wwk-sponsored__text">Pool location: LA Fitness - Brick, 1 Brick Plaza, Brick Township, NJ 08723. Check current schedules, pricing and enrollment directly with the school.</p>
++          <ul class="wwk-sponsored__links">
++            <li><a href="https://britishswimschool.com/jersey-shore/location/la-fitness-brick/?utm_source=waterwisekids&amp;utm_medium=sponsored_pilot&amp;utm_campaign=cmp_88f0a7279a2972e2&amp;utm_content=plc_9e245000c445f489" rel="sponsored noopener" data-wwk-destination="dst_419094b9f24e115c" data-wwk-location="loc_b5b7d777c4bea81a">LA Fitness - Brick location page<span class="wwk-sponsored__host"> (britishswimschool.com)</span></a></li>
++            <li><a href="https://britishswimschool.com/jersey-shore/?utm_source=waterwisekids&amp;utm_medium=sponsored_pilot&amp;utm_campaign=cmp_88f0a7279a2972e2&amp;utm_content=plc_9e245000c445f489" rel="sponsored noopener" data-wwk-destination="dst_b6938518f71f3efe">British Swim School of Jersey Shore website<span class="wwk-sponsored__host"> (britishswimschool.com)</span></a></li>
++          </ul>
++          <p class="wwk-sponsored__disclosure">No-fee pilot placement. WaterWiseKids may offer paid sponsored placements in the future. Sponsorship does not change directory order or editorial content.</p>
++        </aside>
++        <script src="/assets/js/wwk-sponsored.js?v=p2r2" defer></script>
+ 
+         <section class="wwk-intro-box">
+             <h2>Nearby Communities</h2>
+@@ -224,8 +220,8 @@
+ 
+         <section class="wwk-cta-banner">
+             <h2>Get Your Child Swimming Today</h2>
+-            <p>British Swim School welcomes Brick families. Schedule your free consultation and trial lesson.</p>
+-            <a href="/british-swim-school/jersey-shore.html" class="btn-primary" aria-label="Book your free trial with British Swim School">Book Your Free Trial</a>
++            <p>Compare swim schools near Brick and ask each one about current schedules, class sizes and enrollment.</p>
++            <a href="/swim-schools.html" class="btn-primary">Find Classes Near You</a>
+         </section>
+ <section class="wwk-related-resources" aria-labelledby="wwk-indexing-related"><h2 id="wwk-indexing-related">Explore other Jersey Shore locations</h2><ul><li><a href="/swim-lessons/asbury-park-nj.html">Explore swim lessons in Asbury Park, NJ</a></li></ul></section>
+     <section aria-labelledby="local-comparison"><h2 id="local-comparison">Before you choose a Brick-area class</h2><table><thead><tr><th>Your Brick-area comparison</th><th>Detail to record for each class</th></tr></thead><tbody><tr><td>Weekly travel</td><td>Actual teaching-pool address, route from home and changing time</td></tr><tr><td>Lesson continuity</td><td>Whether a regular instructor is assigned and how substitutions are communicated</td></tr><tr><td>Missed sessions</td><td>Makeup availability, expiry rules and cancellation terms</td></tr><tr><td>Comparing fees</td><td>Total cost for the same number and length of lessons, including required fees</td></tr></tbody></table><p>Compare two realistic weekly schedules, not only two advertised prices. Note whether the class time still works during school or other family commitments. Before re-enrolling, review the <a href="/education/swim-lesson-re-enrollment-decision-checklist.html">re-enrollment decision checklist</a> and discuss the learner’s next goal with the instructor.</p><p>Use the <a href="/swim-lessons/directory/new-jersey.html">New Jersey school directory</a> for a broader comparison, then check the <a href="/education/swim-lessons-cost.html">lesson-cost guide</a> and <a href="/education/free-trial-swim-lessons-guide.html">trial-lesson questions</a>.</p><p>Area-guide details reviewed October 14, 2026; provider offers and availability require direct confirmation.</p></section></main>

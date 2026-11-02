@@ -1,0 +1,93 @@
+{
+  "about": "Read-only observation of the official britishswimschool.com operator pages for the three pilot territories, recorded by Claude on 2026-11-02 via a web fetch. PLAN.md names the official operator pages as the authority for active status and destination URLs. This snapshot is evidence, not a decision: anything flagged below needs owner confirmation before a live placement exists.",
+  "observed_on": "2026-11-02",
+  "observed_by": "claude-phase1-r1",
+  "method": "web_fetch_read_only",
+  "territories": [
+    {
+      "territory_key": "northwest-philadelphia",
+      "territory_url": "https://britishswimschool.com/northwest-philadelphia/",
+      "school_name": "British Swim School of Northwest Philadelphia",
+      "locations": [
+        {
+          "venue": "LA Fitness - Andorra",
+          "address": "701 E Cathedral Rd, Philadelphia, PA 19128",
+          "location_url": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-andorra/",
+          "listed_on_territory_page": true,
+          "location_page_notes": ["Location page states: \"There are currently no classes available at this location.\""],
+          "no_classes_notice": true
+        },
+        {
+          "venue": "LA Fitness - Cheltenham",
+          "address": "2401 W Cheltenham Ave Ste M3, Philadelphia, PA 19150",
+          "location_url": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/",
+          "listed_on_territory_page": true,
+          "location_page_address": "2401 Cheltenham Avenue Ste M3, Cheltenham, PA 19150",
+          "location_page_notes": ["Territory page uses locality Philadelphia; location page uses locality Cheltenham.", "Alternate URL without /location/ (https://britishswimschool.com/northwest-philadelphia/la-fitness-cheltenham/) also loads a real location page."],
+          "alternate_urls_observed": ["https://britishswimschool.com/northwest-philadelphia/la-fitness-cheltenham/"],
+          "no_classes_notice": false
+        }
+      ]
+    },
+    {
+      "territory_key": "jersey-shore",
+      "territory_url": "https://britishswimschool.com/jersey-shore/",
+      "school_name": "British Swim School of Jersey Shore",
+      "locations": [
+        {
+          "venue": "LA Fitness - Brick",
+          "address": "1 Brick Plaza, Brick Township, NJ 08723",
+          "location_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-brick/",
+          "listed_on_territory_page": true,
+          "no_classes_notice": false
+        },
+        {
+          "venue": "Boys & Girls Club - Asbury Park",
+          "address": "1201 Monroe Ave, Asbury Park, NJ 07712",
+          "location_url": "https://britishswimschool.com/jersey-shore/location/boys-girls-club/",
+          "listed_on_territory_page": true,
+          "location_page_notes": ["Location page states: \"We're Sorry! There are currently no classes available at this location.\""],
+          "no_classes_notice": true
+        },
+        {
+          "venue": "LA Fitness - Toms River",
+          "address": "1207 Hooper Ave, Toms River, NJ 08753",
+          "location_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/",
+          "listed_on_territory_page": true,
+          "no_classes_notice": false
+        },
+        {
+          "venue": "LA Fitness - Howell",
+          "address": "90 Lanes Mill Road, Howell, NJ 07731",
+          "location_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/",
+          "listed_on_territory_page": true,
+          "location_page_notes": ["Territory and location pages render the ZIP as \"7731\" (leading zero dropped)."],
+          "no_classes_notice": false
+        }
+      ]
+    },
+    {
+      "territory_key": "manhattan",
+      "territory_url": "https://britishswimschool.com/manhattan/",
+      "school_name": "British Swim School of Manhattan",
+      "locations": [
+        { "venue": "Upper East Side - Dwight School", "address": "2116 1st Ave New York, NY 10029", "location_url": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/", "listed_on_territory_page": true, "no_classes_notice": false },
+        { "venue": "St. Bart's Church", "address": "325 Park Avenue New York, NY 10022", "location_url": "https://britishswimschool.com/manhattan/location/st-barts/", "listed_on_territory_page": true, "no_classes_notice": false },
+        {
+          "venue": "East Village",
+          "address": "720 E 11th Street New York, NY 10009",
+          "location_url": "https://britishswimschool.com/manhattan/location/east-village/",
+          "listed_on_territory_page": true,
+          "location_page_notes": ["Location page hero and its directions link show 720 E 11th Street; the enrollment and Location Details sections show 710 E 11th Street."],
+          "address_conflict": ["720 E 11th Street", "710 E 11th Street"],
+          "no_classes_notice": false
+        },
+        { "venue": "BMCC (Borough of Manhattan Community College)", "address": "77 Harrison Street New York, NY 10013", "location_url": "https://britishswimschool.com/manhattan/location/bmcc/", "listed_on_territory_page": true, "no_classes_notice": false },
+        { "venue": "John Jay College", "address": "524 West 59th St New York, NY 10019", "location_url": "https://britishswimschool.com/manhattan/location/john-jay-college/", "listed_on_territory_page": true, "no_classes_notice": false },
+        { "venue": "Liberty Terrace", "address": "380 Rector Pl New York, NY 10280", "location_url": "https://britishswimschool.com/manhattan/location/liberty-terrace/", "listed_on_territory_page": true, "no_classes_notice": false },
+        { "venue": "Wall Street", "address": "88 Fulton St New York, NY 10038", "location_url": "https://britishswimschool.com/manhattan/location/wall-street/", "listed_on_territory_page": true, "no_classes_notice": false },
+        { "venue": "The Continental", "address": "885 6th Ave (between 31st and 32nd Streets) New York, NY 10001", "location_url": "https://britishswimschool.com/manhattan/location/the-continental/", "listed_on_territory_page": true, "no_classes_notice": false }
+      ]
+    }
+  ]
+}

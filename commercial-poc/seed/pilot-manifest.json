@@ -1,0 +1,1252 @@
+{
+  "manifest_version": 1,
+  "generated_at": "2026-11-02T14:02:16.539Z",
+  "generator": "commercial-poc/scripts/build-manifest.mjs",
+  "fixture_notice": "Local POC fixture. Campaign dates, placements and users are fixtures; nothing here is live or approved.",
+  "sources": {
+    "repo_directory_data": "swim-lessons/directory/schools-data.js",
+    "repo_directory_geo": "swim-lessons/directory/schools-geo.json",
+    "repo_directory_geo_verified_on": "2026-10-06",
+    "repo_directory_geo_venues_verified_on": "2026-10-09",
+    "official_snapshot": "seed/sources/official-operator-snapshot-2026-11-02.json",
+    "official_snapshot_observed_on": "2026-11-02"
+  },
+  "allowed_site_hosts": [
+    "www.waterwisekids.com"
+  ],
+  "allowed_destination_hosts": [
+    "britishswimschool.com"
+  ],
+  "tenants": [
+    {
+      "tenant_id": "ten_b234a48144f47f06",
+      "tenant_key": "northwest-philadelphia",
+      "display_name": "British Swim School of Northwest Philadelphia",
+      "timezone": "America/New_York",
+      "pilot_status": "pilot_fixture",
+      "pilot_price_cents": 0
+    },
+    {
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "tenant_key": "jersey-shore",
+      "display_name": "British Swim School of Jersey Shore",
+      "timezone": "America/New_York",
+      "pilot_status": "pilot_fixture",
+      "pilot_price_cents": 0
+    },
+    {
+      "tenant_id": "ten_52bf92991a0305d0",
+      "tenant_key": "manhattan",
+      "display_name": "British Swim School of Manhattan",
+      "timezone": "America/New_York",
+      "pilot_status": "pilot_fixture",
+      "pilot_price_cents": 0
+    }
+  ],
+  "schools": [
+    {
+      "school_id": "sch_ca091723c9670adc",
+      "tenant_id": "ten_b234a48144f47f06",
+      "display_name": "British Swim School of Northwest Philadelphia",
+      "official_url": "https://britishswimschool.com/northwest-philadelphia/",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "url": "https://britishswimschool.com/northwest-philadelphia/"
+        },
+        {
+          "source": "repo_directory_data",
+          "row_name": "British Swim School at LA Fitness Cheltenham",
+          "website": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/"
+        }
+      ]
+    },
+    {
+      "school_id": "sch_5b7e6d81d52e8ed5",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "display_name": "British Swim School of Jersey Shore",
+      "official_url": "https://britishswimschool.com/jersey-shore/",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "url": "https://britishswimschool.com/jersey-shore/"
+        },
+        {
+          "source": "repo_directory_data",
+          "row_name": "British Swim School at LA Fitness Brick",
+          "website": "https://britishswimschool.com/jersey-shore/location/la-fitness-brick/"
+        },
+        {
+          "source": "repo_directory_data",
+          "row_name": "British Swim School at LA Fitness Toms River",
+          "website": "https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/"
+        },
+        {
+          "source": "repo_directory_data",
+          "row_name": "British Swim School at LA Fitness Howell",
+          "website": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/"
+        }
+      ]
+    },
+    {
+      "school_id": "sch_86917fa1e77abc43",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "display_name": "British Swim School of Manhattan",
+      "official_url": "https://britishswimschool.com/manhattan/",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "url": "https://britishswimschool.com/manhattan/"
+        },
+        {
+          "source": "repo_directory_data",
+          "row_name": "British Swim School of Manhattan",
+          "website": "https://britishswimschool.com/manhattan/"
+        }
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "location_id": "loc_5a20eb71c44bf675",
+      "tenant_id": "ten_b234a48144f47f06",
+      "school_id": "sch_ca091723c9670adc",
+      "display_name": "LA Fitness - Andorra",
+      "address_display": "701 E Cathedral Rd, Philadelphia, PA 19128",
+      "official_url": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-andorra/",
+      "status": "needs_owner_confirmation",
+      "status_reason": "Listed on the official territory page but absent from the WWK directory data. Official location page states there are currently no classes available.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "701 E Cathedral Rd, Philadelphia, PA 19128",
+          "url": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-andorra/",
+          "no_classes_notice": true
+        }
+      ]
+    },
+    {
+      "location_id": "loc_d3c46e7d6efc62f7",
+      "tenant_id": "ten_b234a48144f47f06",
+      "school_id": "sch_ca091723c9670adc",
+      "display_name": "LA Fitness - Cheltenham",
+      "address_display": "2401 W Cheltenham Ave Ste M3, Philadelphia, PA 19150",
+      "official_url": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/",
+      "status": "eligible_fixture",
+      "status_reason": "Listed on the official territory page and in WWK directory data; no conflicting notice observed. Fixture eligibility only; live status requires owner confirmation.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "2401 W Cheltenham Ave Ste M3, Philadelphia, PA 19150",
+          "url": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/",
+          "no_classes_notice": false
+        },
+        {
+          "source": "repo_directory_data",
+          "row_name": "British Swim School at LA Fitness Cheltenham",
+          "address": "2401 Cheltenham Avenue Ste M3, Cheltenham, PA 19150",
+          "website": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/"
+        },
+        {
+          "source": "repo_directory_geo.rows",
+          "row_name": "British Swim School at LA Fitness Cheltenham",
+          "address": "2401 W Cheltenham Ave Ste M3, Philadelphia, PA 19150",
+          "method": "official_address_point"
+        }
+      ]
+    },
+    {
+      "location_id": "loc_b5b7d777c4bea81a",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "school_id": "sch_5b7e6d81d52e8ed5",
+      "display_name": "LA Fitness - Brick",
+      "address_display": "1 Brick Plaza, Brick Township, NJ 08723",
+      "official_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-brick/",
+      "status": "eligible_fixture",
+      "status_reason": "Listed on the official territory page and in WWK directory data; no conflicting notice observed. Fixture eligibility only; live status requires owner confirmation.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "1 Brick Plaza, Brick Township, NJ 08723",
+          "url": "https://britishswimschool.com/jersey-shore/location/la-fitness-brick/",
+          "no_classes_notice": false
+        },
+        {
+          "source": "repo_directory_data",
+          "row_name": "British Swim School at LA Fitness Brick",
+          "address": "1 Brick Plaza, Brick Township, NJ 08723",
+          "website": "https://britishswimschool.com/jersey-shore/location/la-fitness-brick/"
+        },
+        {
+          "source": "repo_directory_geo.rows",
+          "row_name": "British Swim School at LA Fitness Brick",
+          "address": "1 Brick Plaza, Brick Township, NJ 08723",
+          "method": "official_address_point"
+        }
+      ]
+    },
+    {
+      "location_id": "loc_8ad551340f56b2a9",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "school_id": "sch_5b7e6d81d52e8ed5",
+      "display_name": "Boys & Girls Club - Asbury Park",
+      "address_display": "1201 Monroe Ave, Asbury Park, NJ 07712",
+      "official_url": "https://britishswimschool.com/jersey-shore/location/boys-girls-club/",
+      "status": "needs_owner_confirmation",
+      "status_reason": "Listed on the official territory page but absent from the WWK directory data. Official location page states there are currently no classes available.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "1201 Monroe Ave, Asbury Park, NJ 07712",
+          "url": "https://britishswimschool.com/jersey-shore/location/boys-girls-club/",
+          "no_classes_notice": true
+        }
+      ]
+    },
+    {
+      "location_id": "loc_096d7703f7c65cd6",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "school_id": "sch_5b7e6d81d52e8ed5",
+      "display_name": "LA Fitness - Toms River",
+      "address_display": "1207 Hooper Ave, Toms River, NJ 08753",
+      "official_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/",
+      "status": "eligible_fixture",
+      "status_reason": "Listed on the official territory page and in WWK directory data; no conflicting notice observed. Fixture eligibility only; live status requires owner confirmation.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "1207 Hooper Ave, Toms River, NJ 08753",
+          "url": "https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/",
+          "no_classes_notice": false
+        },
+        {
+          "source": "repo_directory_data",
+          "row_name": "British Swim School at LA Fitness Toms River",
+          "address": "1207 Hooper Ave, Toms River, NJ 08753",
+          "website": "https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/"
+        },
+        {
+          "source": "repo_directory_geo.rows",
+          "row_name": "British Swim School at LA Fitness Toms River",
+          "address": "1207 Hooper Ave, Toms River, NJ 08753",
+          "method": "census"
+        }
+      ]
+    },
+    {
+      "location_id": "loc_3c6664af3a15b390",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "school_id": "sch_5b7e6d81d52e8ed5",
+      "display_name": "LA Fitness - Howell",
+      "address_display": "90 Lanes Mill Road, Howell, NJ 07731",
+      "official_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/",
+      "status": "eligible_fixture",
+      "status_reason": "Listed on the official territory page and in WWK directory data; no conflicting notice observed. Fixture eligibility only; live status requires owner confirmation.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "90 Lanes Mill Road, Howell, NJ 07731",
+          "url": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/",
+          "no_classes_notice": false
+        },
+        {
+          "source": "repo_directory_data",
+          "row_name": "British Swim School at LA Fitness Howell",
+          "address": "90 Lanes Mill Road, Howell, NJ 07731",
+          "website": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/"
+        },
+        {
+          "source": "repo_directory_geo.rows",
+          "row_name": "British Swim School at LA Fitness Howell",
+          "address": "90 Lanes Mill Rd, Howell, NJ 07731",
+          "method": "census"
+        }
+      ]
+    },
+    {
+      "location_id": "loc_62b36f46fcdb5e47",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "school_id": "sch_86917fa1e77abc43",
+      "display_name": "Upper East Side - Dwight School",
+      "address_display": "2116 1st Ave New York, NY 10029",
+      "official_url": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/",
+      "status": "eligible_fixture",
+      "status_reason": "Listed on the official territory page and in WWK directory data; no conflicting notice observed. Fixture eligibility only; live status requires owner confirmation.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "2116 1st Ave New York, NY 10029",
+          "url": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/",
+          "no_classes_notice": false
+        },
+        {
+          "source": "repo_directory_data.poolAddresses",
+          "row_name": "British Swim School of Manhattan",
+          "venue": "Upper East Side - Dwight School",
+          "address": "2116 1st Ave New York, NY 10029"
+        },
+        {
+          "source": "repo_directory_geo.venues",
+          "venue": "Upper East Side – Dwight School",
+          "address": "2116 1st Ave New York, NY 10029",
+          "note": null
+        }
+      ]
+    },
+    {
+      "location_id": "loc_a0918a26c7b9cde7",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "school_id": "sch_86917fa1e77abc43",
+      "display_name": "St. Bart's Church",
+      "address_display": "325 Park Avenue New York, NY 10022",
+      "official_url": "https://britishswimschool.com/manhattan/location/st-barts/",
+      "status": "eligible_fixture",
+      "status_reason": "Listed on the official territory page and in WWK directory data; no conflicting notice observed. Fixture eligibility only; live status requires owner confirmation.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "325 Park Avenue New York, NY 10022",
+          "url": "https://britishswimschool.com/manhattan/location/st-barts/",
+          "no_classes_notice": false
+        },
+        {
+          "source": "repo_directory_data.poolAddresses",
+          "row_name": "British Swim School of Manhattan",
+          "venue": "St. Bart’s Church",
+          "address": "325 Park Avenue New York, NY 10022"
+        },
+        {
+          "source": "repo_directory_geo.venues",
+          "venue": "St. Bart’s Church",
+          "address": "325 Park Avenue New York, NY 10022",
+          "note": null
+        }
+      ]
+    },
+    {
+      "location_id": "loc_f5b267a33189a894",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "school_id": "sch_86917fa1e77abc43",
+      "display_name": "East Village",
+      "address_display": null,
+      "official_url": "https://britishswimschool.com/manhattan/location/east-village/",
+      "status": "needs_owner_confirmation",
+      "status_reason": "Listed on the official territory page but absent from the WWK directory data. Official location page shows conflicting street addresses: 720 E 11th Street vs 710 E 11th Street.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "720 E 11th Street New York, NY 10009",
+          "url": "https://britishswimschool.com/manhattan/location/east-village/",
+          "no_classes_notice": false
+        },
+        {
+          "source": "repo_directory_geo.venues",
+          "venue": "East Village",
+          "address": null,
+          "note": "Street address withheld: current operator page contains conflicting710/720 street numbers."
+        }
+      ]
+    },
+    {
+      "location_id": "loc_f512b73e99c5d550",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "school_id": "sch_86917fa1e77abc43",
+      "display_name": "BMCC (Borough of Manhattan Community College)",
+      "address_display": "77 Harrison Street New York, NY 10013",
+      "official_url": "https://britishswimschool.com/manhattan/location/bmcc/",
+      "status": "eligible_fixture",
+      "status_reason": "Listed on the official territory page and in WWK directory data; no conflicting notice observed. Fixture eligibility only; live status requires owner confirmation.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "77 Harrison Street New York, NY 10013",
+          "url": "https://britishswimschool.com/manhattan/location/bmcc/",
+          "no_classes_notice": false
+        },
+        {
+          "source": "repo_directory_data.poolAddresses",
+          "row_name": "British Swim School of Manhattan",
+          "venue": "BMCC (Borough of Manhattan Community College)",
+          "address": "77 Harrison Street New York, NY 10013"
+        },
+        {
+          "source": "repo_directory_geo.venues",
+          "venue": "BMCC (Borough of Manhattan Community College)",
+          "address": "77 Harrison Street New York, NY 10013",
+          "note": null
+        }
+      ]
+    },
+    {
+      "location_id": "loc_d73c8e16e071c820",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "school_id": "sch_86917fa1e77abc43",
+      "display_name": "John Jay College",
+      "address_display": "524 West 59th St New York, NY 10019",
+      "official_url": "https://britishswimschool.com/manhattan/location/john-jay-college/",
+      "status": "eligible_fixture",
+      "status_reason": "Listed on the official territory page and in WWK directory data; no conflicting notice observed. Fixture eligibility only; live status requires owner confirmation.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "524 West 59th St New York, NY 10019",
+          "url": "https://britishswimschool.com/manhattan/location/john-jay-college/",
+          "no_classes_notice": false
+        },
+        {
+          "source": "repo_directory_data.poolAddresses",
+          "row_name": "British Swim School of Manhattan",
+          "venue": "John Jay College",
+          "address": "524 West 59th St New York, NY 10019"
+        },
+        {
+          "source": "repo_directory_geo.venues",
+          "venue": "John Jay College",
+          "address": "524 West 59th St New York, NY 10019",
+          "note": null
+        }
+      ]
+    },
+    {
+      "location_id": "loc_0495184e2c71c89c",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "school_id": "sch_86917fa1e77abc43",
+      "display_name": "Liberty Terrace",
+      "address_display": "380 Rector Pl New York, NY 10280",
+      "official_url": "https://britishswimschool.com/manhattan/location/liberty-terrace/",
+      "status": "eligible_fixture",
+      "status_reason": "Listed on the official territory page and in WWK directory data; no conflicting notice observed. Fixture eligibility only; live status requires owner confirmation.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "380 Rector Pl New York, NY 10280",
+          "url": "https://britishswimschool.com/manhattan/location/liberty-terrace/",
+          "no_classes_notice": false
+        },
+        {
+          "source": "repo_directory_data.poolAddresses",
+          "row_name": "British Swim School of Manhattan",
+          "venue": "Liberty Terrace",
+          "address": "380 Rector Pl New York, NY 10280"
+        },
+        {
+          "source": "repo_directory_geo.venues",
+          "venue": "Liberty Terrace",
+          "address": "380 Rector Pl New York, NY 10280",
+          "note": null
+        }
+      ]
+    },
+    {
+      "location_id": "loc_0d1fa0c4a7ea58c8",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "school_id": "sch_86917fa1e77abc43",
+      "display_name": "Wall Street",
+      "address_display": "88 Fulton St New York, NY 10038",
+      "official_url": "https://britishswimschool.com/manhattan/location/wall-street/",
+      "status": "eligible_fixture",
+      "status_reason": "Listed on the official territory page and in WWK directory data; no conflicting notice observed. Fixture eligibility only; live status requires owner confirmation.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "88 Fulton St New York, NY 10038",
+          "url": "https://britishswimschool.com/manhattan/location/wall-street/",
+          "no_classes_notice": false
+        },
+        {
+          "source": "repo_directory_data.poolAddresses",
+          "row_name": "British Swim School of Manhattan",
+          "venue": "Wall Street",
+          "address": "88 Fulton St New York, NY 10038"
+        },
+        {
+          "source": "repo_directory_geo.venues",
+          "venue": "Wall Street",
+          "address": "88 Fulton St New York, NY 10038",
+          "note": null
+        }
+      ]
+    },
+    {
+      "location_id": "loc_f4f76e1ad2c26f8b",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "school_id": "sch_86917fa1e77abc43",
+      "display_name": "The Continental",
+      "address_display": "885 6th Ave (between 31st and 32nd Streets) New York, NY 10001",
+      "official_url": "https://britishswimschool.com/manhattan/location/the-continental/",
+      "status": "eligible_fixture",
+      "status_reason": "Listed on the official territory page and in WWK directory data; no conflicting notice observed. Fixture eligibility only; live status requires owner confirmation.",
+      "verified_on": "2026-11-02",
+      "sources": [
+        {
+          "source": "official_snapshot",
+          "observed_on": "2026-11-02",
+          "address": "885 6th Ave (between 31st and 32nd Streets) New York, NY 10001",
+          "url": "https://britishswimschool.com/manhattan/location/the-continental/",
+          "no_classes_notice": false
+        },
+        {
+          "source": "repo_directory_data.poolAddresses",
+          "row_name": "British Swim School of Manhattan",
+          "venue": "The Continental",
+          "address": "885 6th Ave (between 31st and 32nd Streets) New York, NY 10001"
+        },
+        {
+          "source": "repo_directory_geo.venues",
+          "venue": "The Continental",
+          "address": "885 6th Ave (between 31st and 32nd Streets) New York, NY 10001",
+          "note": null
+        }
+      ]
+    }
+  ],
+  "destinations": [
+    {
+      "destination_id": "dst_472a0f5600605280",
+      "tenant_id": "ten_b234a48144f47f06",
+      "location_id": null,
+      "display_name": "British Swim School of Northwest Philadelphia (official site)",
+      "url": "https://britishswimschool.com/northwest-philadelphia/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_14bd700cb26d66c4",
+      "tenant_id": "ten_b234a48144f47f06",
+      "location_id": "loc_d3c46e7d6efc62f7",
+      "display_name": "LA Fitness - Cheltenham (official location page)",
+      "url": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_b6938518f71f3efe",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "location_id": null,
+      "display_name": "British Swim School of Jersey Shore (official site)",
+      "url": "https://britishswimschool.com/jersey-shore/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_419094b9f24e115c",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "location_id": "loc_b5b7d777c4bea81a",
+      "display_name": "LA Fitness - Brick (official location page)",
+      "url": "https://britishswimschool.com/jersey-shore/location/la-fitness-brick/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_e4879fb65a519630",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "location_id": "loc_096d7703f7c65cd6",
+      "display_name": "LA Fitness - Toms River (official location page)",
+      "url": "https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_cd581fee5ef6a610",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "location_id": "loc_3c6664af3a15b390",
+      "display_name": "LA Fitness - Howell (official location page)",
+      "url": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_941c2435cc290c12",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "location_id": null,
+      "display_name": "British Swim School of Manhattan (official site)",
+      "url": "https://britishswimschool.com/manhattan/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_67fabacbc6c1fbfe",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "location_id": "loc_62b36f46fcdb5e47",
+      "display_name": "Upper East Side - Dwight School (official location page)",
+      "url": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_a40fad425d96a302",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "location_id": "loc_a0918a26c7b9cde7",
+      "display_name": "St. Bart's Church (official location page)",
+      "url": "https://britishswimschool.com/manhattan/location/st-barts/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_423b17cf02cb30ec",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "location_id": "loc_f512b73e99c5d550",
+      "display_name": "BMCC (Borough of Manhattan Community College) (official location page)",
+      "url": "https://britishswimschool.com/manhattan/location/bmcc/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_83a3e38021842bbf",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "location_id": "loc_d73c8e16e071c820",
+      "display_name": "John Jay College (official location page)",
+      "url": "https://britishswimschool.com/manhattan/location/john-jay-college/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_c6c6fe4768ac7459",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "location_id": "loc_0495184e2c71c89c",
+      "display_name": "Liberty Terrace (official location page)",
+      "url": "https://britishswimschool.com/manhattan/location/liberty-terrace/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_3a12b18e68f40fa6",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "location_id": "loc_0d1fa0c4a7ea58c8",
+      "display_name": "Wall Street (official location page)",
+      "url": "https://britishswimschool.com/manhattan/location/wall-street/",
+      "host": "britishswimschool.com"
+    },
+    {
+      "destination_id": "dst_1a3f93df110c6548",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "location_id": "loc_f4f76e1ad2c26f8b",
+      "display_name": "The Continental (official location page)",
+      "url": "https://britishswimschool.com/manhattan/location/the-continental/",
+      "host": "britishswimschool.com"
+    }
+  ],
+  "campaigns": [
+    {
+      "campaign_id": "cmp_e4ca517dbb784119",
+      "tenant_id": "ten_b234a48144f47f06",
+      "school_id": "sch_ca091723c9670adc",
+      "kind": "sponsored_pilot",
+      "display_name": "Sponsored pilot (fixture)",
+      "disclosure_label": "Sponsored pilot",
+      "price_cents": 0,
+      "starts_on": "2026-09-03",
+      "ends_on": "2026-11-30"
+    },
+    {
+      "campaign_id": "cmp_901b550d347a65b6",
+      "tenant_id": "ten_b234a48144f47f06",
+      "school_id": "sch_ca091723c9670adc",
+      "kind": "organic_baseline",
+      "display_name": "Ordinary directory listing (measurement only, not sold)",
+      "disclosure_label": null,
+      "price_cents": 0,
+      "starts_on": "2026-08-04",
+      "ends_on": "2026-11-30"
+    },
+    {
+      "campaign_id": "cmp_88f0a7279a2972e2",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "school_id": "sch_5b7e6d81d52e8ed5",
+      "kind": "sponsored_pilot",
+      "display_name": "Sponsored pilot (fixture)",
+      "disclosure_label": "Sponsored pilot",
+      "price_cents": 0,
+      "starts_on": "2026-09-03",
+      "ends_on": "2026-11-30"
+    },
+    {
+      "campaign_id": "cmp_7b8d64162ed3d711",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "school_id": "sch_5b7e6d81d52e8ed5",
+      "kind": "organic_baseline",
+      "display_name": "Ordinary directory listing (measurement only, not sold)",
+      "disclosure_label": null,
+      "price_cents": 0,
+      "starts_on": "2026-08-04",
+      "ends_on": "2026-11-30"
+    },
+    {
+      "campaign_id": "cmp_c7fea2983961d658",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "school_id": "sch_86917fa1e77abc43",
+      "kind": "sponsored_pilot",
+      "display_name": "Sponsored pilot (fixture)",
+      "disclosure_label": "Sponsored pilot",
+      "price_cents": 0,
+      "starts_on": "2026-09-03",
+      "ends_on": "2026-11-30"
+    },
+    {
+      "campaign_id": "cmp_9342d91e69c23f30",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "school_id": "sch_86917fa1e77abc43",
+      "kind": "organic_baseline",
+      "display_name": "Ordinary directory listing (measurement only, not sold)",
+      "disclosure_label": null,
+      "price_cents": 0,
+      "starts_on": "2026-08-04",
+      "ends_on": "2026-11-30"
+    }
+  ],
+  "placements": [
+    {
+      "placement_id": "plc_5093a0465c8f895c",
+      "tenant_id": "ten_b234a48144f47f06",
+      "campaign_id": "cmp_e4ca517dbb784119",
+      "kind": "sponsored_card",
+      "display_name": "Sponsored card: /swim-lessons/northwest-philadelphia.html",
+      "featured_location_id": null,
+      "link_rel": "sponsored noopener",
+      "inventory_status": "fixture_candidate",
+      "slot_key": "nwp-guide-northwest-philadelphia"
+    },
+    {
+      "placement_id": "plc_759c890d4a301219",
+      "tenant_id": "ten_b234a48144f47f06",
+      "campaign_id": "cmp_e4ca517dbb784119",
+      "kind": "sponsored_card",
+      "display_name": "Sponsored card: /swim-lessons/cheltenham-pa.html",
+      "featured_location_id": "loc_d3c46e7d6efc62f7",
+      "link_rel": "sponsored noopener",
+      "inventory_status": "fixture_candidate",
+      "slot_key": "nwp-guide-cheltenham"
+    },
+    {
+      "placement_id": "plc_5b088d912b123472",
+      "tenant_id": "ten_b234a48144f47f06",
+      "campaign_id": "cmp_e4ca517dbb784119",
+      "kind": "sponsored_card",
+      "display_name": "Sponsored card: /swim-lessons/philadelphia.html",
+      "featured_location_id": null,
+      "link_rel": "sponsored noopener",
+      "inventory_status": "fixture_candidate",
+      "slot_key": "nwp-guide-philadelphia"
+    },
+    {
+      "placement_id": "plc_b9c9377c3e32a761",
+      "tenant_id": "ten_b234a48144f47f06",
+      "campaign_id": "cmp_901b550d347a65b6",
+      "kind": "organic_listing",
+      "display_name": "Ordinary listing: British Swim School at LA Fitness Cheltenham",
+      "featured_location_id": "loc_d3c46e7d6efc62f7",
+      "link_rel": null,
+      "inventory_status": "fixture_candidate",
+      "slot_key": "organic:British Swim School at LA Fitness Cheltenham"
+    },
+    {
+      "placement_id": "plc_3febe5cc1afd2bd6",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "campaign_id": "cmp_88f0a7279a2972e2",
+      "kind": "sponsored_card",
+      "display_name": "Sponsored card: /swim-lessons/jersey-shore.html",
+      "featured_location_id": null,
+      "link_rel": "sponsored noopener",
+      "inventory_status": "fixture_candidate",
+      "slot_key": "js-guide-jersey-shore"
+    },
+    {
+      "placement_id": "plc_bb4b763cf97d56ee",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "campaign_id": "cmp_88f0a7279a2972e2",
+      "kind": "sponsored_card",
+      "display_name": "Sponsored card: /swim-lessons/howell-nj.html",
+      "featured_location_id": "loc_3c6664af3a15b390",
+      "link_rel": "sponsored noopener",
+      "inventory_status": "fixture_candidate",
+      "slot_key": "js-guide-howell"
+    },
+    {
+      "placement_id": "plc_9e245000c445f489",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "campaign_id": "cmp_88f0a7279a2972e2",
+      "kind": "sponsored_card",
+      "display_name": "Sponsored card: /swim-lessons/brick-nj.html",
+      "featured_location_id": "loc_b5b7d777c4bea81a",
+      "link_rel": "sponsored noopener",
+      "inventory_status": "fixture_candidate",
+      "slot_key": "js-guide-brick"
+    },
+    {
+      "placement_id": "plc_9460c066d80ab361",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "campaign_id": "cmp_88f0a7279a2972e2",
+      "kind": "sponsored_card",
+      "display_name": "Sponsored card: /swim-lessons-toms-river-nj.html",
+      "featured_location_id": "loc_096d7703f7c65cd6",
+      "link_rel": "sponsored noopener",
+      "inventory_status": "fixture_candidate",
+      "slot_key": "js-guide-toms-river"
+    },
+    {
+      "placement_id": "plc_4b7b1d1ff2537474",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "campaign_id": "cmp_7b8d64162ed3d711",
+      "kind": "organic_listing",
+      "display_name": "Ordinary listing: British Swim School at LA Fitness Brick",
+      "featured_location_id": "loc_b5b7d777c4bea81a",
+      "link_rel": null,
+      "inventory_status": "fixture_candidate",
+      "slot_key": "organic:British Swim School at LA Fitness Brick"
+    },
+    {
+      "placement_id": "plc_f5fa457aa17e66b2",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "campaign_id": "cmp_7b8d64162ed3d711",
+      "kind": "organic_listing",
+      "display_name": "Ordinary listing: British Swim School at LA Fitness Toms River",
+      "featured_location_id": "loc_096d7703f7c65cd6",
+      "link_rel": null,
+      "inventory_status": "fixture_candidate",
+      "slot_key": "organic:British Swim School at LA Fitness Toms River"
+    },
+    {
+      "placement_id": "plc_d6a6673732411e04",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "campaign_id": "cmp_7b8d64162ed3d711",
+      "kind": "organic_listing",
+      "display_name": "Ordinary listing: British Swim School at LA Fitness Howell",
+      "featured_location_id": "loc_3c6664af3a15b390",
+      "link_rel": null,
+      "inventory_status": "fixture_candidate",
+      "slot_key": "organic:British Swim School at LA Fitness Howell"
+    },
+    {
+      "placement_id": "plc_10e8497ef216c69d",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "campaign_id": "cmp_c7fea2983961d658",
+      "kind": "sponsored_card",
+      "display_name": "Sponsored card: /swim-lessons/directory/new-york.html",
+      "featured_location_id": null,
+      "link_rel": "sponsored noopener",
+      "inventory_status": "fixture_candidate",
+      "slot_key": "man-directory-new-york"
+    },
+    {
+      "placement_id": "plc_8cbbce6143c95ca2",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "campaign_id": "cmp_9342d91e69c23f30",
+      "kind": "organic_listing",
+      "display_name": "Ordinary listing: British Swim School of Manhattan",
+      "featured_location_id": null,
+      "link_rel": null,
+      "inventory_status": "fixture_candidate",
+      "slot_key": "organic:British Swim School of Manhattan"
+    }
+  ],
+  "placement_pages": [
+    {
+      "placement_id": "plc_5093a0465c8f895c",
+      "tenant_id": "ten_b234a48144f47f06",
+      "page_path": "/swim-lessons/northwest-philadelphia.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/northwest-philadelphia.html",
+      "source_file": "swim-lessons/northwest-philadelphia.html"
+    },
+    {
+      "placement_id": "plc_759c890d4a301219",
+      "tenant_id": "ten_b234a48144f47f06",
+      "page_path": "/swim-lessons/cheltenham-pa.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/cheltenham-pa.html",
+      "source_file": "swim-lessons/cheltenham-pa.html"
+    },
+    {
+      "placement_id": "plc_5b088d912b123472",
+      "tenant_id": "ten_b234a48144f47f06",
+      "page_path": "/swim-lessons/philadelphia.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/philadelphia.html",
+      "source_file": "swim-lessons/philadelphia.html"
+    },
+    {
+      "placement_id": "plc_b9c9377c3e32a761",
+      "tenant_id": "ten_b234a48144f47f06",
+      "page_path": "/swim-lessons/directory/pennsylvania.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/directory/pennsylvania.html",
+      "source_file": "swim-lessons/directory/pennsylvania.html"
+    },
+    {
+      "placement_id": "plc_3febe5cc1afd2bd6",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "page_path": "/swim-lessons/jersey-shore.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/jersey-shore.html",
+      "source_file": "swim-lessons/jersey-shore.html"
+    },
+    {
+      "placement_id": "plc_bb4b763cf97d56ee",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "page_path": "/swim-lessons/howell-nj.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/howell-nj.html",
+      "source_file": "swim-lessons/howell-nj.html"
+    },
+    {
+      "placement_id": "plc_9e245000c445f489",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "page_path": "/swim-lessons/brick-nj.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/brick-nj.html",
+      "source_file": "swim-lessons/brick-nj.html"
+    },
+    {
+      "placement_id": "plc_9460c066d80ab361",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "page_path": "/swim-lessons-toms-river-nj.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons-toms-river-nj.html",
+      "source_file": "swim-lessons-toms-river-nj.html"
+    },
+    {
+      "placement_id": "plc_4b7b1d1ff2537474",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "page_path": "/swim-lessons/directory/new-jersey.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/directory/new-jersey.html",
+      "source_file": "swim-lessons/directory/new-jersey.html"
+    },
+    {
+      "placement_id": "plc_f5fa457aa17e66b2",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "page_path": "/swim-lessons/directory/new-jersey.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/directory/new-jersey.html",
+      "source_file": "swim-lessons/directory/new-jersey.html"
+    },
+    {
+      "placement_id": "plc_d6a6673732411e04",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "page_path": "/swim-lessons/directory/new-jersey.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/directory/new-jersey.html",
+      "source_file": "swim-lessons/directory/new-jersey.html"
+    },
+    {
+      "placement_id": "plc_10e8497ef216c69d",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "page_path": "/swim-lessons/directory/new-york.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/directory/new-york.html",
+      "source_file": "swim-lessons/directory/new-york.html"
+    },
+    {
+      "placement_id": "plc_8cbbce6143c95ca2",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "page_path": "/swim-lessons/directory/new-york.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/directory/new-york.html",
+      "source_file": "swim-lessons/directory/new-york.html"
+    }
+  ],
+  "placement_destinations": [
+    {
+      "placement_id": "plc_5093a0465c8f895c",
+      "destination_id": "dst_472a0f5600605280",
+      "tenant_id": "ten_b234a48144f47f06"
+    },
+    {
+      "placement_id": "plc_5093a0465c8f895c",
+      "destination_id": "dst_14bd700cb26d66c4",
+      "tenant_id": "ten_b234a48144f47f06"
+    },
+    {
+      "placement_id": "plc_759c890d4a301219",
+      "destination_id": "dst_472a0f5600605280",
+      "tenant_id": "ten_b234a48144f47f06"
+    },
+    {
+      "placement_id": "plc_759c890d4a301219",
+      "destination_id": "dst_14bd700cb26d66c4",
+      "tenant_id": "ten_b234a48144f47f06"
+    },
+    {
+      "placement_id": "plc_5b088d912b123472",
+      "destination_id": "dst_472a0f5600605280",
+      "tenant_id": "ten_b234a48144f47f06"
+    },
+    {
+      "placement_id": "plc_5b088d912b123472",
+      "destination_id": "dst_14bd700cb26d66c4",
+      "tenant_id": "ten_b234a48144f47f06"
+    },
+    {
+      "placement_id": "plc_b9c9377c3e32a761",
+      "destination_id": "dst_14bd700cb26d66c4",
+      "tenant_id": "ten_b234a48144f47f06"
+    },
+    {
+      "placement_id": "plc_3febe5cc1afd2bd6",
+      "destination_id": "dst_b6938518f71f3efe",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_3febe5cc1afd2bd6",
+      "destination_id": "dst_419094b9f24e115c",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_3febe5cc1afd2bd6",
+      "destination_id": "dst_e4879fb65a519630",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_3febe5cc1afd2bd6",
+      "destination_id": "dst_cd581fee5ef6a610",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_bb4b763cf97d56ee",
+      "destination_id": "dst_b6938518f71f3efe",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_bb4b763cf97d56ee",
+      "destination_id": "dst_cd581fee5ef6a610",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_9e245000c445f489",
+      "destination_id": "dst_b6938518f71f3efe",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_9e245000c445f489",
+      "destination_id": "dst_419094b9f24e115c",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_9460c066d80ab361",
+      "destination_id": "dst_b6938518f71f3efe",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_9460c066d80ab361",
+      "destination_id": "dst_e4879fb65a519630",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_4b7b1d1ff2537474",
+      "destination_id": "dst_419094b9f24e115c",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_f5fa457aa17e66b2",
+      "destination_id": "dst_e4879fb65a519630",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_d6a6673732411e04",
+      "destination_id": "dst_cd581fee5ef6a610",
+      "tenant_id": "ten_9d294d23e0e9841e"
+    },
+    {
+      "placement_id": "plc_10e8497ef216c69d",
+      "destination_id": "dst_941c2435cc290c12",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_10e8497ef216c69d",
+      "destination_id": "dst_67fabacbc6c1fbfe",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_10e8497ef216c69d",
+      "destination_id": "dst_a40fad425d96a302",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_10e8497ef216c69d",
+      "destination_id": "dst_423b17cf02cb30ec",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_10e8497ef216c69d",
+      "destination_id": "dst_83a3e38021842bbf",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_10e8497ef216c69d",
+      "destination_id": "dst_c6c6fe4768ac7459",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_10e8497ef216c69d",
+      "destination_id": "dst_3a12b18e68f40fa6",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_10e8497ef216c69d",
+      "destination_id": "dst_1a3f93df110c6548",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_8cbbce6143c95ca2",
+      "destination_id": "dst_941c2435cc290c12",
+      "tenant_id": "ten_52bf92991a0305d0"
+    }
+  ],
+  "users": [
+    {
+      "user_id": "usr_09bc03e0887dde03",
+      "user_key": "demo-owner-nwp-js",
+      "display_label": "Demo user: pilot owner (NW Philadelphia + Jersey Shore)",
+      "is_demo": 1
+    },
+    {
+      "user_id": "usr_22dafabcc7589a3a",
+      "user_key": "demo-partner-manhattan",
+      "display_label": "Demo user: pilot partner (Manhattan)",
+      "is_demo": 1
+    },
+    {
+      "user_id": "usr_d9415e46339088a8",
+      "user_key": "demo-no-access",
+      "display_label": "Demo user: no tenant access",
+      "is_demo": 1
+    }
+  ],
+  "memberships": [
+    {
+      "tenant_id": "ten_b234a48144f47f06",
+      "user_id": "usr_09bc03e0887dde03",
+      "role": "owner"
+    },
+    {
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "user_id": "usr_09bc03e0887dde03",
+      "role": "owner"
+    },
+    {
+      "tenant_id": "ten_52bf92991a0305d0",
+      "user_id": "usr_22dafabcc7589a3a",
+      "role": "owner"
+    }
+  ],
+  "skipped_placements": [
+    {
+      "tenant_key": "northwest-philadelphia",
+      "slot_key": "nwp-guide-andorra",
+      "page_path": "/swim-lessons-andorra-philadelphia.html",
+      "reason": "Featured location https://britishswimschool.com/northwest-philadelphia/location/la-fitness-andorra/ is needs_owner_confirmation; placement not created."
+    },
+    {
+      "tenant_key": "jersey-shore",
+      "slot_key": "js-guide-asbury-park",
+      "page_path": "/swim-lessons/asbury-park-nj.html",
+      "reason": "Featured location https://britishswimschool.com/jersey-shore/location/boys-girls-club/ is needs_owner_confirmation; placement not created."
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "C01",
+      "resolution": "reported_not_resolved",
+      "severity": "warn",
+      "kind": "official_location_missing_from_wwk",
+      "tenant_key": "northwest-philadelphia",
+      "subject": "LA Fitness - Andorra",
+      "detail": "Official territory page lists LA Fitness - Andorra (https://britishswimschool.com/northwest-philadelphia/location/la-fitness-andorra/); no matching row or pool venue exists in swim-lessons/directory/schools-data.js.",
+      "effect": "Location held at needs_owner_confirmation; no placement or destination is created for it."
+    },
+    {
+      "id": "C02",
+      "resolution": "reported_not_resolved",
+      "severity": "warn",
+      "kind": "official_no_classes_notice",
+      "tenant_key": "northwest-philadelphia",
+      "subject": "LA Fitness - Andorra",
+      "detail": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-andorra/ states \"no classes available\" while still listed on the territory page. Active status cannot be inferred.",
+      "effect": "Location held at needs_owner_confirmation; owner must confirm whether it should be promoted."
+    },
+    {
+      "id": "C03",
+      "resolution": "reported_not_resolved",
+      "severity": "info",
+      "kind": "address_text_differs",
+      "tenant_key": "northwest-philadelphia",
+      "subject": "LA Fitness - Cheltenham",
+      "detail": "Sources render this address differently: official_snapshot: \"2401 W Cheltenham Ave Ste M3, Philadelphia, PA 19150\"; repo_directory_data: \"2401 Cheltenham Avenue Ste M3, Cheltenham, PA 19150\"; repo_directory_geo.rows: \"2401 W Cheltenham Ave Ste M3, Philadelphia, PA 19150\"; official_location_page: \"2401 Cheltenham Avenue Ste M3, Cheltenham, PA 19150\"",
+      "effect": "Same street number and ZIP; display uses the official snapshot text. No status change."
+    },
+    {
+      "id": "C04",
+      "resolution": "reported_not_resolved",
+      "severity": "info",
+      "kind": "wwk_link_variant",
+      "tenant_key": "northwest-philadelphia",
+      "subject": "https://britishswimschool.com/northwest-philadelphia/la-fitness-cheltenham/",
+      "detail": "4 WWK page(s) link https://britishswimschool.com/northwest-philadelphia/la-fitness-cheltenham/, an alternate path for LA Fitness - Cheltenham that also loads on the official site. Files: beginner-swim-lessons-cheltenham-pa.html, kids-swim-lessons-cheltenham-pa.html, kids-swim-lessons-cheltenham-township-pa.html, toddler-swim-lessons-cheltenham-pa.html.",
+      "effect": "Destinations in the manifest use only the official listed URL. Link cleanup is a Phase 2 proposal, not applied."
+    },
+    {
+      "id": "C05",
+      "resolution": "reported_not_resolved",
+      "severity": "warn",
+      "kind": "official_location_missing_from_wwk",
+      "tenant_key": "jersey-shore",
+      "subject": "Boys & Girls Club - Asbury Park",
+      "detail": "Official territory page lists Boys & Girls Club - Asbury Park (https://britishswimschool.com/jersey-shore/location/boys-girls-club/); no matching row or pool venue exists in swim-lessons/directory/schools-data.js.",
+      "effect": "Location held at needs_owner_confirmation; no placement or destination is created for it."
+    },
+    {
+      "id": "C06",
+      "resolution": "reported_not_resolved",
+      "severity": "warn",
+      "kind": "official_no_classes_notice",
+      "tenant_key": "jersey-shore",
+      "subject": "Boys & Girls Club - Asbury Park",
+      "detail": "https://britishswimschool.com/jersey-shore/location/boys-girls-club/ states \"no classes available\" while still listed on the territory page. Active status cannot be inferred.",
+      "effect": "Location held at needs_owner_confirmation; owner must confirm whether it should be promoted."
+    },
+    {
+      "id": "C07",
+      "resolution": "reported_not_resolved",
+      "severity": "info",
+      "kind": "official_zip_formatting",
+      "tenant_key": "jersey-shore",
+      "subject": "LA Fitness - Howell",
+      "detail": "Territory and location pages render the ZIP as \"7731\" (leading zero dropped).",
+      "effect": "Manifest uses the five-digit ZIP; no status change."
+    },
+    {
+      "id": "C08",
+      "resolution": "reported_not_resolved",
+      "severity": "warn",
+      "kind": "official_location_missing_from_wwk",
+      "tenant_key": "manhattan",
+      "subject": "East Village",
+      "detail": "Official territory page lists East Village (https://britishswimschool.com/manhattan/location/east-village/); no matching row or pool venue exists in swim-lessons/directory/schools-data.js.",
+      "effect": "Location held at needs_owner_confirmation; no placement or destination is created for it."
+    },
+    {
+      "id": "C09",
+      "resolution": "reported_not_resolved",
+      "severity": "warn",
+      "kind": "official_address_conflict",
+      "tenant_key": "manhattan",
+      "subject": "East Village",
+      "detail": "https://britishswimschool.com/manhattan/location/east-village/ shows 720 E 11th Street and 710 E 11th Street on the same page. WWK geo file already notes: \"Street address withheld: current operator page contains conflicting710/720 street numbers.\" The venue is also absent from the directory poolAddresses list.",
+      "effect": "Street address withheld from the manifest; location not featured or linked as a destination until confirmed."
+    },
+    {
+      "id": "C10",
+      "resolution": "reported_not_resolved",
+      "severity": "info",
+      "kind": "inventory_gap",
+      "tenant_key": "manhattan",
+      "subject": "Manhattan page inventory",
+      "detail": "WWK has no Manhattan-specific local guide page; the only Manhattan surface is the New York state directory (/swim-lessons/directory/new-york.html), which also carries the ordinary listing.",
+      "effect": "Fixture sponsored card and ordinary listing share that page. Phase 2 must propose inventory; creating new city pages is outside agent authority."
+    }
+  ]
+}

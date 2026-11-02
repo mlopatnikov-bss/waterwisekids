@@ -1,0 +1,4 @@
+# Local development only. Copy is NOT needed: scripts/local.mjs generates the real local file
+# inside the staging state directory (.data/dev.vars) with a random key on first use.
+# Never put a staging/production key here, and never commit a filled-in copy.
+IDENTITY_HMAC_KEY=REPLACE_WITH_openssl_rand_hex_32

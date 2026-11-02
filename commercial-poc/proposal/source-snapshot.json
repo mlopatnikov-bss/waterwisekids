@@ -1,0 +1,19 @@
+{
+  "about": "Read-only fingerprint of the public WWK source (everything outside commercial-poc/, .git, node_modules, .next, .DS_Store, ._*) at proposal build time. Tests recompute it to prove no public file changed.",
+  "file_count": 1657,
+  "aggregate_sha256": "34c93ab531b6c0782fd4ffa2fe525ebbcbfccf0bbc3a3a466a66ed867acbede1",
+  "target_pages": {
+    "swim-lessons/northwest-philadelphia.html": "910f73997fe23c60f1a50ed596af532c10eb8ade402b26c0fb734ab27f764c00",
+    "swim-lessons/cheltenham-pa.html": "2c9399af052faae98dab6f0bbda9d125fd57ce3b20f4982b7e498d9431d691c3",
+    "swim-lessons/philadelphia.html": "a72b5b678f3913c5a7a582d18bfad277a64dc940c87a677530ae22c446c2e027",
+    "swim-lessons/jersey-shore.html": "ee01a298bd83ca0739acbe0be83798348ed2292446aaac96169ac17883140992",
+    "swim-lessons/howell-nj.html": "6ac2395c31df7cd9f0fbc25736947dd045806a5dc14e8aedb6b70f6a69bd1b51",
+    "swim-lessons/brick-nj.html": "4fd7d4a7c906fa3bdff9ab63ab57ad4f11c6de90bfe8bc32daaf8faf1a515c90",
+    "swim-lessons-toms-river-nj.html": "35322587a7fe8ff7faec8cc79c06cea92713b8751d9475fe8228ad9da64bb377",
+    "swim-lessons/directory/new-york.html": "f5785f02de1c24db19442bd9a4e956ca683758654cd42ab5c9fdf310dcf9cccc"
+  },
+  "absent_asset_paths": [
+    "assets/css/wwk-sponsored.css",
+    "assets/js/wwk-sponsored.js"
+  ]
+}

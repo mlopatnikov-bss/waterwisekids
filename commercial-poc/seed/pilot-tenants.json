@@ -1,0 +1,60 @@
+{
+  "about": "Pilot tenant definitions for the Phase 1 local POC. Tenants, timezones and the candidate page list are configuration from PLAN.md; locations, addresses, URLs and status are NOT set here: scripts/build-manifest.mjs derives them from repository sources plus the official-operator snapshot and reports conflicts. Candidate pages are fixtures for local testing only; the exact WWK page inventory is a Phase 2 deliverable.",
+  "fixture_window": {
+    "baseline_starts_on": "2026-08-04",
+    "sponsored_starts_on": "2026-09-03",
+    "campaign_ends_on": "2026-11-30",
+    "note": "Fixture dates for synthetic data only. 30 baseline days + 60 sponsored days, matching the PLAN.md pilot-gate shape."
+  },
+  "official_snapshot": "seed/sources/official-operator-snapshot-2026-11-02.json",
+  "repo_sources": {
+    "directory_data": "swim-lessons/directory/schools-data.js",
+    "directory_geo": "swim-lessons/directory/schools-geo.json"
+  },
+  "allowed_site_hosts": ["www.waterwisekids.com"],
+  "allowed_destination_hosts": ["britishswimschool.com"],
+  "tenants": [
+    {
+      "tenant_key": "northwest-philadelphia",
+      "display_name": "British Swim School of Northwest Philadelphia",
+      "timezone": "America/New_York",
+      "directory_state": "PA",
+      "sponsored_cards": [
+        { "slot_key": "nwp-guide-northwest-philadelphia", "page_file": "swim-lessons/northwest-philadelphia.html", "featured_location_url": null },
+        { "slot_key": "nwp-guide-cheltenham", "page_file": "swim-lessons/cheltenham-pa.html", "featured_location_url": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/" },
+        { "slot_key": "nwp-guide-philadelphia", "page_file": "swim-lessons/philadelphia.html", "featured_location_url": null },
+        { "slot_key": "nwp-guide-andorra", "page_file": "swim-lessons-andorra-philadelphia.html", "featured_location_url": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-andorra/" }
+      ],
+      "organic_listing_page_file": "swim-lessons/directory/pennsylvania.html"
+    },
+    {
+      "tenant_key": "jersey-shore",
+      "display_name": "British Swim School of Jersey Shore",
+      "timezone": "America/New_York",
+      "directory_state": "NJ",
+      "sponsored_cards": [
+        { "slot_key": "js-guide-jersey-shore", "page_file": "swim-lessons/jersey-shore.html", "featured_location_url": null },
+        { "slot_key": "js-guide-howell", "page_file": "swim-lessons/howell-nj.html", "featured_location_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/" },
+        { "slot_key": "js-guide-brick", "page_file": "swim-lessons/brick-nj.html", "featured_location_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-brick/" },
+        { "slot_key": "js-guide-toms-river", "page_file": "swim-lessons-toms-river-nj.html", "featured_location_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/" },
+        { "slot_key": "js-guide-asbury-park", "page_file": "swim-lessons/asbury-park-nj.html", "featured_location_url": "https://britishswimschool.com/jersey-shore/location/boys-girls-club/" }
+      ],
+      "organic_listing_page_file": "swim-lessons/directory/new-jersey.html"
+    },
+    {
+      "tenant_key": "manhattan",
+      "display_name": "British Swim School of Manhattan",
+      "timezone": "America/New_York",
+      "directory_state": "NY",
+      "sponsored_cards": [
+        { "slot_key": "man-directory-new-york", "page_file": "swim-lessons/directory/new-york.html", "featured_location_url": null }
+      ],
+      "organic_listing_page_file": "swim-lessons/directory/new-york.html"
+    }
+  ],
+  "demo_users": [
+    { "user_key": "demo-owner-nwp-js", "display_label": "Demo user: pilot owner (NW Philadelphia + Jersey Shore)", "memberships": [ { "tenant_key": "northwest-philadelphia", "role": "owner" }, { "tenant_key": "jersey-shore", "role": "owner" } ] },
+    { "user_key": "demo-partner-manhattan", "display_label": "Demo user: pilot partner (Manhattan)", "memberships": [ { "tenant_key": "manhattan", "role": "owner" } ] },
+    { "user_key": "demo-no-access", "display_label": "Demo user: no tenant access", "memberships": [] }
+  ]
+}

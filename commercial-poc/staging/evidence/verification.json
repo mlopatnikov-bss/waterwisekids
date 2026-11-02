@@ -1,0 +1,319 @@
+{
+  "generated_at": "2026-11-02T17:20:03.905Z",
+  "node": "v22.22.2",
+  "wrangler": "4.151.1",
+  "steps": {
+    "static_checks": {
+      "cmd": "node scripts/static-checks.mjs",
+      "exit": 0,
+      "ms": 2249,
+      "result": {
+        "ok": true,
+        "files_scanned": 51,
+        "modules_checked": 37,
+        "findings": []
+      }
+    },
+    "tests": {
+      "cmd": "node --test --test-reporter=spec test/boundaries.test.mjs test/collector.test.mjs test/e2e-local.test.mjs test/isolation.test.mjs test/migration.test.mjs test/portal-access.test.mjs test/portal-output.test.mjs test/seed-reconcile.test.mjs",
+      "exit": 0,
+      "ms": 20569,
+      "tests": 52,
+      "pass": 52,
+      "fail": 0,
+      "skipped": 0
+    },
+    "setup": {
+      "cmd": "node scripts/local.mjs setup",
+      "exit": 0,
+      "ms": 286,
+      "result": {
+        "state_dir": "/Users/bss/DeveloperTools/Expansion/Worktrees/wwk-commercial-poc/commercial-poc/staging/.data/verify-40542",
+        "configs": [
+          "/Users/bss/DeveloperTools/Expansion/Worktrees/wwk-commercial-poc/commercial-poc/staging/.data/verify-40542/config/collector.local.json",
+          "/Users/bss/DeveloperTools/Expansion/Worktrees/wwk-commercial-poc/commercial-poc/staging/.data/verify-40542/config/portal.local.json"
+        ]
+      }
+    },
+    "migrate": {
+      "cmd": "node scripts/local.mjs migrate",
+      "exit": 0,
+      "ms": 5837,
+      "result": {
+        "migrate": [
+          "├─────────────────────────┼────────┤",
+          "│ 0001_initial.sql        │ ✅     │",
+          "├─────────────────────────┼────────┤",
+          "│ 0002_operator_roles.sql │ ✅     │",
+          "└─────────────────────────┴────────┘",
+          ""
+        ]
+      }
+    },
+    "seed": {
+      "cmd": "node scripts/local.mjs seed",
+      "exit": 0,
+      "ms": 9305,
+      "result": {
+        "seeded": {
+          "deliveries": 41669,
+          "requests": 1667,
+          "accepted": 40550,
+          "duplicates": 963,
+          "rejected": 156,
+          "reasons": {
+            "duplicate_event_id": 841,
+            "duplicate_semantic": 122,
+            "pii_value": 20,
+            "pii_field": 20,
+            "timestamp_in_future": 19,
+            "page_path_query_or_fragment": 20,
+            "unknown_placement": 20,
+            "cross_tenant_reference": 19,
+            "unknown_field": 19,
+            "host_not_allowed": 19
+          }
+        },
+        "sql_sha256": "a4013348ef517182093d1c1980f2c28d68defcff471a29ac6c227b5d9fb5e0d5",
+        "execute_ms": 4082
+      }
+    },
+    "reconcile": {
+      "cmd": "node scripts/local.mjs reconcile",
+      "exit": 0,
+      "ms": 3957,
+      "result": {
+        "ok": true,
+        "tables": {
+          "events": {
+            "local": {
+              "rows": 40550,
+              "sha256": "9c1fcfb2bfc11e88872863b199cd8a5979073ff141edab623260efa1d2754888"
+            },
+            "phase1": {
+              "rows": 40550,
+              "sha256": "9c1fcfb2bfc11e88872863b199cd8a5979073ff141edab623260efa1d2754888"
+            },
+            "equal": true
+          },
+          "ingest_outcomes": {
+            "local": {
+              "rows": 742,
+              "sha256": "7fe12e15de99acb6635c6c1e70ad27834dd71cf834457e4d2b9adda63a89c898"
+            },
+            "phase1": {
+              "rows": 742,
+              "sha256": "7fe12e15de99acb6635c6c1e70ad27834dd71cf834457e4d2b9adda63a89c898"
+            },
+            "equal": true
+          },
+          "daily_metrics": {
+            "local": {
+              "rows": 2566,
+              "sha256": "23457b3a75fe23edb8347c654d0b393d920bd9953971cfbc624c821c7fc32805"
+            },
+            "phase1": {
+              "rows": 2566,
+              "sha256": "23457b3a75fe23edb8347c654d0b393d920bd9953971cfbc624c821c7fc32805"
+            },
+            "equal": true
+          },
+          "conversion_imports": {
+            "local": {
+              "rows": 23,
+              "sha256": "d72ab2e7a7eaa507c131fc0514907fb8c0e1276b6678e6ee2db3ba3ddc7f0780"
+            },
+            "phase1": {
+              "rows": 23,
+              "sha256": "d72ab2e7a7eaa507c131fc0514907fb8c0e1276b6678e6ee2db3ba3ddc7f0780"
+            },
+            "equal": true
+          },
+          "conversion_records": {
+            "local": {
+              "rows": 53,
+              "sha256": "01d4b4c31d0f662e0a029b4a72bd1b95cbc5b93cd08832ce9e4d9038089a733f"
+            },
+            "phase1": {
+              "rows": 53,
+              "sha256": "01d4b4c31d0f662e0a029b4a72bd1b95cbc5b93cd08832ce9e4d9038089a733f"
+            },
+            "equal": true
+          },
+          "data_quality_runs": {
+            "local": {
+              "rows": 3,
+              "sha256": "dd74210a260086421b2264dda150e6fc2dc1a33421de74dc3a0c592634df4d1c"
+            },
+            "phase1": {
+              "rows": 3,
+              "sha256": "dd74210a260086421b2264dda150e6fc2dc1a33421de74dc3a0c592634df4d1c"
+            },
+            "equal": true
+          }
+        },
+        "tenants": {
+          "northwest-philadelphia": {
+            "tenant_id": "ten_b234a48144f47f06",
+            "generator_expected": {
+              "eligible_view": 8166,
+              "viewable_impression": 4623,
+              "sponsored_click": 153,
+              "outbound_click": 172
+            },
+            "events": {
+              "eligible_view": 8166,
+              "outbound_click": 172,
+              "sponsored_click": 153,
+              "viewable_impression": 4623
+            },
+            "daily_metrics": {
+              "eligible_view": 8166,
+              "outbound_click": 172,
+              "sponsored_click": 153,
+              "viewable_impression": 4623
+            },
+            "reconciliation_ok": true,
+            "equals_generator": true
+          },
+          "jersey-shore": {
+            "tenant_id": "ten_9d294d23e0e9841e",
+            "generator_expected": {
+              "eligible_view": 11906,
+              "viewable_impression": 6962,
+              "sponsored_click": 247,
+              "outbound_click": 265
+            },
+            "events": {
+              "eligible_view": 11906,
+              "outbound_click": 265,
+              "sponsored_click": 247,
+              "viewable_impression": 6962
+            },
+            "daily_metrics": {
+              "eligible_view": 11906,
+              "outbound_click": 265,
+              "sponsored_click": 247,
+              "viewable_impression": 6962
+            },
+            "reconciliation_ok": true,
+            "equals_generator": true
+          },
+          "manhattan": {
+            "tenant_id": "ten_52bf92991a0305d0",
+            "generator_expected": {
+              "eligible_view": 5122,
+              "viewable_impression": 2773,
+              "sponsored_click": 75,
+              "outbound_click": 86
+            },
+            "events": {
+              "eligible_view": 5122,
+              "outbound_click": 86,
+              "sponsored_click": 75,
+              "viewable_impression": 2773
+            },
+            "daily_metrics": {
+              "eligible_view": 5122,
+              "outbound_click": 86,
+              "sponsored_click": 75,
+              "viewable_impression": 2773
+            },
+            "reconciliation_ok": true,
+            "equals_generator": true
+          }
+        },
+        "provisioned_subjects": 4
+      }
+    },
+    "dry_run": {
+      "cmd": "node scripts/local.mjs dry-run",
+      "exit": 0,
+      "ms": 2173,
+      "result": {
+        "collector": {
+          "cmd": "wrangler deploy --dry-run --outdir <state>/dist/collector -c <state>/config/collector.deploy-shaped.json",
+          "summary": [
+            "Total Upload: 23.66 KiB / gzip: 6.99 KiB",
+            "env.DB (wwk-commercial-staging)                           D1 Database",
+            "env.COLLECTOR_ENV (\"staging\")                             Environment Variable",
+            "env.ALLOWED_ORIGIN (\"https://www.waterwisekids.com\")      Environment Variable",
+            "--dry-run: exiting now."
+          ]
+        },
+        "portal": {
+          "cmd": "wrangler deploy --dry-run --outdir <state>/dist/portal -c <state>/config/portal.deploy-shaped.json",
+          "summary": [
+            "Total Upload: 75.23 KiB / gzip: 21.74 KiB",
+            "env.DB (wwk-commercial-staging)                             D1 Database",
+            "env.PORTAL_ENV (\"staging\")                                  Environment Variable",
+            "env.ACCESS_AUD (\"REPLACE_WITH_ACCESS_APPLICATION_AUD\")      Environment Variable",
+            "--dry-run: exiting now."
+          ]
+        }
+      }
+    },
+    "workerd_e2e": {
+      "cmd": "node scripts/e2e-workerd.mjs",
+      "exit": 0,
+      "ms": 18223,
+      "result": {
+        "ok": true,
+        "runtime": "wrangler-local-workerd",
+        "seeded": {
+          "deliveries": 41669,
+          "requests": 1667,
+          "accepted": 40550,
+          "duplicates": 963,
+          "rejected": 156,
+          "reasons": {
+            "duplicate_event_id": 841,
+            "duplicate_semantic": 122,
+            "pii_value": 20,
+            "pii_field": 20,
+            "timestamp_in_future": 19,
+            "page_path_query_or_fragment": 20,
+            "unknown_placement": 20,
+            "cross_tenant_reference": 19,
+            "unknown_field": 19,
+            "host_not_allowed": 19
+          }
+        },
+        "client_events_accepted": 8,
+        "replay_events_accepted": 0,
+        "owner": {
+          "own": 200,
+          "cross": 404,
+          "csp": true,
+          "no_cookie": true,
+          "admin_switcher": false
+        },
+        "partner": {
+          "own": 200,
+          "cross": 404,
+          "csp": true,
+          "no_cookie": true,
+          "admin_switcher": false
+        },
+        "admin": {
+          "own": 200,
+          "cross": 200,
+          "csp": true,
+          "no_cookie": true,
+          "admin_switcher": true
+        },
+        "missing_access": 403,
+        "wrong_audience": 403
+      }
+    },
+    "teardown": {
+      "cmd": "node scripts/local.mjs teardown",
+      "exit": 0,
+      "ms": 63,
+      "result": {
+        "removed": "/Users/bss/DeveloperTools/Expansion/Worktrees/wwk-commercial-poc/commercial-poc/staging/.data/verify-40542"
+      }
+    }
+  },
+  "ok": true
+}
