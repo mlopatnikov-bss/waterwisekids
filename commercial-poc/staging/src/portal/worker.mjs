@@ -14,6 +14,7 @@ import { overviewPage, noAccessPage, notFoundPage, errorPage } from '../../../sr
 import { addDays, daysBetweenInclusive, isValidDate, localDate } from '../../../src/time.mjs';
 import { PORTAL_CSS } from './portal-css.generated.mjs';
 import { adaptPage } from './layout.mjs';
+import { applyPilotSections, pilotPlan } from './pilot-report.mjs';
 import { authSubjectFor, decodeHmacKey } from '../shared/identity.mjs';
 import { membershipsFor, scopeForUser } from '../shared/scope.mjs';
 import { runQuality } from '../shared/quality.mjs';
@@ -111,6 +112,16 @@ export async function handlePortal(request, env, ctx, { now = () => Date.now(), 
       scope.totals(from, to), scope.conversionTotals(from, to), scope.daily(from, to), scope.byPlacement(from, to), scope.byLocation(from, to),
       scope.byDestination(from, to), scope.conversions(from, to), scope.baselineComparison(), scope.campaigns(),
     ]);
+    if (env.PORTAL_ENV === 'pilot') {
+      // Live-pilot rules (staging/src/portal/pilot-report.mjs): no invented baseline, same-days comparison, one headline basis.
+      const byBasis = await scope.conversionsByBasis(from, to);
+      const plan = pilotPlan({ campaigns, from, to, comparison, byBasis });
+      // Location-paired placements only (featured sponsored card ↔ ordinary listing of the same location), same days only.
+      const pairedLocations = await scope.pairedLocations();
+      const overlapTotals = plan.overlap ? await scope.pairedComparisonTotals(plan.overlap.from, plan.overlap.to) : null;
+      const p = overviewPage({ session, memberships, tenant, from, to, asOf, extent, totals, conv: plan.headlineConv, daily, placements, locations, destinations, conversions, quality, comparison: plan.comparison, campaigns });
+      return page(request, { ...p, body: applyPilotSections(p.body, { plan, overlapTotals, pairedLocations, byBasis }) }, session, env);
+    }
     return page(request, overviewPage({ session, memberships, tenant, from, to, asOf, extent, totals, conv, daily, placements, locations, destinations, conversions, quality, comparison, campaigns }), session, env);
   } catch (err) {
     const ref = randomRef();

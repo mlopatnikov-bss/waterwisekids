@@ -1,0 +1,22 @@
+{
+  "schema": "wwk.aggregate-conversions",
+  "schema_version": 1,
+  "tenant_key": "jersey-shore",
+  "source_system": "jackrabbit",
+  "extraction": "manual_report",
+  "exported_on": "2026-11-16",
+  "granularity": "week",
+  "period": { "from": "2026-11-02", "to": "2026-11-15" },
+  "confidence": "medium",
+  "basis_definitions": {
+    "self_reported_wwk_mention": "EXAMPLE: registration source field equals WaterWiseKids",
+    "self_reported_any_source": "EXAMPLE: all new enrollments at the location, any source"
+  },
+  "rows": [
+    { "date": "2026-11-08", "location_ref": "EXAMPLE-HOW", "conversion_type": "enrollment", "attribution_basis": "self_reported_wwk_mention", "count": 0 },
+    { "date": "2026-11-08", "location_ref": "EXAMPLE-HOW", "conversion_type": "enrollment", "attribution_basis": "self_reported_any_source", "count": 3 },
+    { "date": "2026-11-15", "location_ref": "EXAMPLE-BRK", "conversion_type": "enrollment", "attribution_basis": "self_reported_wwk_mention", "count": 1 },
+    { "date": "2026-11-15", "location_ref": "EXAMPLE-BRK", "conversion_type": "enrollment", "attribution_basis": "self_reported_any_source", "count": 4 },
+    { "date": "2026-11-15", "location_ref": "EXAMPLE-TR", "conversion_type": "assessment_start", "attribution_basis": "self_reported_wwk_mention", "count": 2 }
+  ]
+}

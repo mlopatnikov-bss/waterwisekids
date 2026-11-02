@@ -8,6 +8,7 @@ import { APPROVAL_GATES } from './schema.mjs';
 import { expectedIds, validateDefinition, SITE_ORIGIN } from './validate.mjs';
 import { findCardBlock, placementDestinations, renderCardLines, LINK_REL } from './render.mjs';
 import { editorialText, sourceFileFor, wordCount } from './repo.mjs';
+import { buildControlArtifacts } from './controls.mjs';
 
 export const GENERATOR = 'commercial-poc/onboarding (packet v1)';
 export const ACTOR = 'sponsor-onboarding';
@@ -255,7 +256,7 @@ function deactivateSql(def, on) {
 /**
  * @returns { ok, errors, warnings, files: Record<path,string>, summary }
  */
-export function buildPacket(def, ctx, { deactivateOn = null } = {}) {
+export function buildPacket(def, ctx, { deactivateOn = null, controls = null } = {}) {
   const v = validateDefinition(def, ctx);
   if (!v.ok) return { ok: false, errors: v.errors, warnings: v.warnings, files: {}, summary: null };
   if (deactivateOn !== null && !/^\d{4}-\d{2}-\d{2}$/.test(deactivateOn)) return { ok: false, errors: [{ code: 'invalid_value', path: '--deactivate-on', detail: 'YYYY-MM-DD' }], warnings: v.warnings, files: {}, summary: null };
@@ -285,6 +286,15 @@ export function buildPacket(def, ctx, { deactivateOn = null } = {}) {
   files['content-worklist.md'] = worklistMd(def, findings);
   files['rollback.md'] = rollbackMd(def, plans, deactivateOn);
   if (deactivateOn) files['deactivate.sql'] = deactivateSql(def, deactivateOn);
+  // Ordinary-listing controls are opt-in (explicit --controls), so a packet without them is unchanged.
+  let controlSummary;
+  if (controls) {
+    const c = buildControlArtifacts(controls, def, ctx);
+    if (!c.ok) return { ok: false, errors: c.errors, warnings: [...v.warnings, ...c.warnings], files: {}, summary: null };
+    Object.assign(files, c.files);
+    const cp = JSON.parse(c.files['control/plan.json']);
+    controlSummary = { listings: cp.listings.length, files_patched: cp.files.filter((f) => f.action === 'patch').length, tag_ordinary_links: cp.tag_ordinary_links, pending_gates: cp.pending_gates, warnings: c.warnings };
+  }
 
   const fileHashes = Object.fromEntries(Object.keys(files).sort().map((k) => [k, sha(files[k])]));
   const approvals = APPROVAL_GATES.map((g) => ({ gate: g, status: gateStatus(def, g) }));
@@ -299,6 +309,7 @@ export function buildPacket(def, ctx, { deactivateOn = null } = {}) {
     patch_actions: actions,
     approvals, pending_gates: pending, activation_ready: pending.length === 0,
     content_flags: findings.filter((f) => !f.in_sitemap || !f.canonical_ok || f.noindex || f.inbound_link_count < 3 || f.duplicate_title_files.length || f.twin_pages.some((x) => x.self_canonical && x.in_sitemap)).map((f) => f.page_path),
+    ...(controlSummary ? { controls: controlSummary } : {}),
     warnings: v.warnings, files: fileHashes,
     packet_sha256: sha(Object.entries(fileHashes).map(([k, h]) => `${k} ${h}`).join('\n')),
   };

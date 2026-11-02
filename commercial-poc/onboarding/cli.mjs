@@ -8,6 +8,9 @@
 //   node onboarding/cli.mjs plan     <definition.json>                (dry-run; default)
 //   node onboarding/cli.mjs packet   <definition.json> [--out DIR] [--write]
 // Options: --as-of YYYY-MM-DD  --deactivate-on YYYY-MM-DD  --repo-root DIR  --registry-dir DIR  --no-manifest
+//          --controls <plan.controls.json>  (adds ordinary-listing control artifacts under control/)
+//   node onboarding/cli.mjs import-plan <definition.json> --export <totals.json> --map <location-map.json> [--write --out DIR]
+//          Aggregate conversion import dry-run. --write requires an --out OUTSIDE the repository.
 import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -15,10 +18,11 @@ import { checkShape } from './src/schema.mjs';
 import { createRepo, DEFAULT_REPO_ROOT, isInside, ONBOARDING_ROOT, POC_ROOT } from './src/repo.mjs';
 import { expectedIds, validateDefinition } from './src/validate.mjs';
 import { buildPacket } from './src/packet.mjs';
+import { importPreflight, importSql, importSummary, planImport } from './src/conversion-import.mjs';
 
 export const DEFAULT_OUT_ROOT = join(ONBOARDING_ROOT, 'out');
-const COMMANDS = new Set(['validate', 'ids', 'plan', 'packet']);
-const VALUE_FLAGS = new Set(['--out', '--as-of', '--deactivate-on', '--repo-root', '--registry-dir']);
+const COMMANDS = new Set(['validate', 'ids', 'plan', 'packet', 'import-plan']);
+const VALUE_FLAGS = new Set(['--out', '--as-of', '--deactivate-on', '--repo-root', '--registry-dir', '--controls', '--export', '--map']);
 const BOOL_FLAGS = new Set(['--write', '--no-manifest']);
 
 export class UsageError extends Error {}
@@ -35,7 +39,9 @@ export function parseArgs(argv) {
     throw new UsageError(`unknown option ${a}`);
   }
   for (const k of ['as-of', 'deactivate-on']) if (opts[k] && !/^\d{4}-\d{2}-\d{2}$/.test(opts[k])) throw new UsageError(`--${k} must be YYYY-MM-DD`);
-  if (opts.write && command !== 'packet') throw new UsageError('--write is only valid with packet');
+  if (opts.write && command !== 'packet' && command !== 'import-plan') throw new UsageError('--write is only valid with packet or import-plan');
+  if (command === 'import-plan' && (!opts.export || !opts.map)) throw new UsageError('import-plan needs --export and --map');
+  if (command === 'import-plan' && opts.write && !opts.out) throw new UsageError('import-plan --write needs an explicit --out outside the repository');
   return opts;
 }
 
@@ -90,12 +96,24 @@ export function run(argv, { stdout = (s) => process.stdout.write(s) } = {}) {
       stdout(`${JSON.stringify(expectedIds(def).map((x) => ({ path: x.path, expected: x.expected, given: x.given, matches: x.given === null || x.given === x.expected })), null, 2)}\n`);
       return 0;
     }
+    if (opts.command === 'import-plan') {
+      const plan = planImport(def, readJson(resolve(opts.export)), readJson(resolve(opts.map)));
+      if (!plan.ok) { stdout(`${JSON.stringify({ ok: false, errors: plan.errors, warnings: plan.warnings }, null, 2)}\n`); return 1; }
+      const summary = { ...importSummary(plan), warnings: plan.warnings };
+      if (!opts.write) { stdout(`${JSON.stringify({ ok: true, mode: 'dry-run', note: 'Nothing was written or applied.', summary }, null, 2)}\n`); return 0; }
+      const outDir = resolve(opts.out);
+      if (outDir === ctx.repo.root || isInside(ctx.repo.root, outDir)) throw new UsageError('import output holds real school totals and must be written outside the repository (commercial-poc/ is publicly served)');
+      const written = writePacket({ 'import/batch.json': `${JSON.stringify(plan.batch, null, 2)}\n`, 'import/d1-import.sql': importSql(plan), 'import/d1-import-preflight.sql': importPreflight(plan), 'import/summary.json': `${JSON.stringify(summary, null, 2)}\n` }, outDir);
+      stdout(`${JSON.stringify({ ok: true, mode: 'write', out_dir: outDir, written, summary }, null, 2)}\n`);
+      return 0;
+    }
     if (opts.command === 'validate') {
       const r = validateDefinition(def, ctx);
       stdout(`${JSON.stringify(r, null, 2)}\n`);
       return r.ok ? 0 : 1;
     }
-    const p = buildPacket(def, ctx, { deactivateOn: opts['deactivate-on'] || null });
+    const controls = opts.controls ? readJson(resolve(opts.controls)) : null;
+    const p = buildPacket(def, ctx, { deactivateOn: opts['deactivate-on'] || null, controls });
     if (!p.ok) { stdout(`${JSON.stringify({ ok: false, errors: p.errors, warnings: p.warnings }, null, 2)}\n`); return 1; }
     if (opts.command === 'packet' && opts.write) {
       const outDir = safeOutDir(opts.out || join(DEFAULT_OUT_ROOT, p.summary.definition_key), ctx.repo.root);

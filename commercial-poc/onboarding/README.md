@@ -12,6 +12,11 @@ Turns one reviewed **sponsor definition** into a deterministic **activation pack
 | `RUNBOOK.md` | One-day operator runbook with the six human gates |
 | `LAUNCH-CHECKLIST.md` | Traffic/conversion launch checks and the success-metrics contract (portal metric keys) |
 | `CONTENT-WORKLIST.md` | Evidence-based four-page worklist (Cheltenham, Howell, Brick, Toms River) |
+| `MEASUREMENT.md` | Fair ordinary-listing control, aggregate enrollment import contract, pilot portal reporting rules |
+| `definitions/bss-pilot-2026.controls.json` | Ordinary-listing control plan for the pilot (4 directory rows, pending gates) |
+| `assets/wwk-ordinary-listing.js` | Proposed new public client for ordinary listings (shipped only as a packet diff) |
+| `src/controls.mjs` · `src/conversion-import.mjs` | Control plan validation/artifacts · aggregate import contract and dry-run |
+| `examples/` | Synthetic location map and totals file (no real codes or counts) |
 | `package.json` | Self-contained scripts, no dependencies: `npm test`, `npm run onboard -- <command> definitions/<key>.sponsor.json` (run from this folder) |
 | `test/` | `npm test` |
 

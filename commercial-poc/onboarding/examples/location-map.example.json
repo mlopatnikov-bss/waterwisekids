@@ -1,0 +1,12 @@
+{
+  "schema": "wwk.location-map",
+  "schema_version": 1,
+  "definition_key": "bss-pilot-2026",
+  "source_system": "jackrabbit",
+  "entries": [
+    { "external_ref": "EXAMPLE-CHEL", "tenant_key": "northwest-philadelphia", "location_key": "la-fitness-cheltenham" },
+    { "external_ref": "EXAMPLE-HOW", "tenant_key": "jersey-shore", "location_key": "la-fitness-howell" },
+    { "external_ref": "EXAMPLE-BRK", "tenant_key": "jersey-shore", "location_key": "la-fitness-brick" },
+    { "external_ref": "EXAMPLE-TR", "tenant_key": "jersey-shore", "location_key": "la-fitness-toms-river" }
+  ]
+}

@@ -68,7 +68,7 @@ Reports always say which `attribution_basis` was used. Only `utm_matched_in_spon
 | Day 30 | Is there enough traffic to judge? | `eligible_view` per placement per day; if most placements see fewer than ~10 views/day, extend the window rather than draw conclusions (PLAN.md pilot gate) |
 | Day 60 | Value case | `sponsored_ctr` and `outbound_click_sponsored` compared with a documented baseline; reported leads/enrollments with their attribution basis; limitations stated |
 
-PLAN.md requires 30 baseline days + 60 sponsored days per market. **The live pilot loaded no organic-baseline campaign and no events before 2026-11-02**, so a pre/post baseline does not exist for it. The live pilot seed (`staging/scripts/build-pilot-seed.mjs`) also keeps only `sponsored_card` placements, so ordinary-listing clicks are not tracked either and the portal's "from your ordinary listing" figure will read 0. Until a reviewed decision adds a baseline (for example, tracking the ordinary directory listing as an `organic_listing` placement), the current pilot can report exposure and engagement but not lift. This is recorded as an open item, not a result.
+PLAN.md requires 30 baseline days + 60 sponsored days per market. **The live pilot loaded no organic-baseline campaign and no events before 2026-11-02, so no pre/post baseline exists, and none will be created.** The fair comparison available is the concurrent one: once the ordinary-listing control (`MEASUREMENT.md` §1) is approved and published, the pilot portal compares sponsored and ordinary placements over the same days with the same definitions. It never shows a lift percentage. Until the control is live, the portal says the ordinary listing is not measured and shows no comparison.
 
 ### What the contract forbids
 
