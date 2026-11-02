@@ -82,6 +82,7 @@
   var REFERRER = referrerCategory();
   var DEVICE = deviceClass();
   var SENT_BY_PLACEMENT = {};
+  var CONFIG_BY_LINK = {};
   function now() { return (w.performance && typeof w.performance.now === 'function') ? w.performance.now() : new w.Date().getTime(); }
 
   var queue = [];
@@ -122,6 +123,41 @@
     if (!SENT_BY_PLACEMENT[c.placement]) SENT_BY_PLACEMENT[c.placement] = {};
     c.sent = SENT_BY_PLACEMENT[c.placement];
     return c;
+  }
+  function linkKey(raw) {
+    try {
+      var u = new w.URL(raw);
+      if (u.protocol !== 'https:') return null;
+      return u.origin + u.pathname.replace(/\/+$/, '/') ;
+    } catch (e) { return null; }
+  }
+  function remember(c) {
+    try {
+      if (!c.el || typeof c.el.querySelector !== 'function') return;
+      var a = c.el.querySelector('a[data-wwk-destination]');
+      var key = a && linkKey(attr(a, 'href'));
+      var dest = a && attr(a, 'data-wwk-destination');
+      if (!key || !ID.dst.test(dest || '')) return;
+      c.destinationId = dest;
+      c.destinationLocation = attr(a, 'data-wwk-location') || c.location;
+      c.officialLinkKey = key;
+      CONFIG_BY_LINK[key] = { tenant: c.tenant, school: c.school, campaign: c.campaign, placement: c.placement,
+        location: c.location, pagePath: c.pagePath, destinationId: c.destinationId,
+        destinationLocation: c.destinationLocation, officialLinkKey: key };
+    } catch (e) { /* ignore */ }
+  }
+  function reboundListing(el) {
+    try {
+      if (!el || typeof el.querySelector !== 'function') return null;
+      var a = el.querySelector('a.visit-site-btn');
+      var key = a && linkKey(attr(a, 'href'));
+      var saved = key && CONFIG_BY_LINK[key];
+      if (!saved) return null;
+      if (!SENT_BY_PLACEMENT[saved.placement]) SENT_BY_PLACEMENT[saved.placement] = {};
+      var c = { el: el, sent: SENT_BY_PLACEMENT[saved.placement] };
+      for (var k in saved) if (Object.prototype.hasOwnProperty.call(saved, k)) c[k] = saved[k];
+      return c;
+    } catch (e) { return null; }
   }
   function eventFor(c, type, extra) {
     var e = { v: 1, event_id: uuid(), type: type, occurred_at: new w.Date().toISOString(), site_host: String(w.location.hostname),
@@ -178,10 +214,12 @@
       if (ev && ev.type === 'auxclick' && ev.button !== 1) return;
       var t = ev && ev.target;
       var a = t && typeof t.closest === 'function' ? t.closest('a[data-wwk-destination]') : null;
+      if (!a && c.destinationId && t && typeof t.closest === 'function') a = t.closest('a.visit-site-btn');
       if (!a || (typeof c.el.contains === 'function' && !c.el.contains(a))) return;
-      var dest = attr(a, 'data-wwk-destination');
+      if (c.officialLinkKey && linkKey(attr(a, 'href')) !== c.officialLinkKey) return;
+      var dest = attr(a, 'data-wwk-destination') || c.destinationId;
       if (!ID.dst.test(dest || '')) return;
-      var destLoc = attr(a, 'data-wwk-location');
+      var destLoc = attr(a, 'data-wwk-location') || c.destinationLocation;
       once(c, 'outbound_click:' + dest, function () {
         var extra = { destination_id: dest };
         if (destLoc && ID.loc.test(destLoc)) extra.location_id = destLoc;
@@ -191,23 +229,32 @@
     } catch (e) { /* swallowed */ }
   }
 
-  function init() {
+  function bind(el, c) {
+      if (!el || el.__wwkOrdinaryBound || !c) return;
+      try { el.__wwkOrdinaryBound = true; } catch (e) { /* ignore */ }
+      remember(c);
+      once(c, 'eligible_view', function () { return eventFor(c, 'eligible_view', withLocation(c)); }, false);
+      try {
+        c.el.addEventListener('click', function (ev) { onActivate(c, ev); });
+        c.el.addEventListener('auxclick', function (ev) { onActivate(c, ev); });
+      } catch (e) { /* ignore */ }
+      watchViewability(c);
+  }
+  function capture() {
     var nodes;
     try { nodes = doc.querySelectorAll('[data-wwk-ordinary-listing]'); } catch (e) { return; }
     for (var i = 0; i < nodes.length; i += 1) {
-      if (nodes[i].__wwkOrdinaryBound) continue;
       var c = readListing(nodes[i]);
       if (!c) continue;
-      try { nodes[i].__wwkOrdinaryBound = true; } catch (e) { /* ignore */ }
-      once(c, 'eligible_view', function () { return eventFor(c, 'eligible_view', withLocation(c)); }, false);
-      (function (x) {
-        try {
-          x.el.addEventListener('click', function (ev) { onActivate(x, ev); });
-          x.el.addEventListener('auxclick', function (ev) { onActivate(x, ev); });
-        } catch (e) { /* ignore */ }
-      })(c);
-      watchViewability(c);
+      remember(c);
     }
+  }
+  function init() {
+    var nodes; var i;
+    try { nodes = doc.querySelectorAll('[data-wwk-ordinary-listing]'); } catch (e) { nodes = []; }
+    for (i = 0; i < nodes.length; i += 1) bind(nodes[i], readListing(nodes[i]));
+    try { nodes = doc.querySelectorAll('.school-card'); } catch (e) { nodes = []; }
+    for (i = 0; i < nodes.length; i += 1) if (!nodes[i].__wwkOrdinaryBound) bind(nodes[i], reboundListing(nodes[i]));
   }
 
   try {
@@ -222,6 +269,10 @@
     }
   } catch (e) { /* ignore */ }
 
+  // Capture static row metadata before a directory renderer replaces its cards.
+  // The fixed official link is used only as an in-memory reconnect key and is
+  // never sent. This keeps filter/search re-renders measurable without cookies.
+  capture();
   // Deferred scripts run while readyState is often "interactive". Waiting for
   // DOMContentLoaded lets the directory renderer replace its static cards first.
   if (doc.readyState === 'complete') init();

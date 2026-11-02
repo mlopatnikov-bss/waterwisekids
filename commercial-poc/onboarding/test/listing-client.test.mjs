@@ -65,7 +65,9 @@ function env({ rowsHtml, collector = 'https://events.waterwisekids.com/v1/collec
 function patchedRows() {
   const a = buildControlArtifacts(JSON.parse(readFileSync(join(ONBOARDING_ROOT, 'definitions/bss-pilot-2026.controls.json'), 'utf8')), loadPilot(), realCtx());
   const d = a.files['control/patches/swim-lessons-directory-new-jersey.diff'];
-  return d.split('\n').filter((l) => l.startsWith('+<div class="school-card"')).map((l) => l.slice(1)).join('\n');
+  if (d) return d.split('\n').filter((l) => l.startsWith('+<div class="school-card"')).map((l) => l.slice(1)).join('\n');
+  return realCtx().repo.read('swim-lessons/directory/new-jersey.html').split('\n')
+    .filter((l) => l.startsWith('<div class="school-card"') && l.includes('data-wwk-ordinary-listing')).join('\n');
 }
 
 /** The collector's own registry, loaded from a pilot D1 after the generated control SQL. */

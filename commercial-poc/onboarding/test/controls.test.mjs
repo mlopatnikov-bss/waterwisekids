@@ -18,6 +18,19 @@ const fails = (plan, code, def = loadPilot()) => { const r = validateControlPlan
 const mut = (fn) => { const p = loadPlan(); fn(p, p.tenants.find((t) => t.tenant_key === 'jersey-shore')); return p; };
 let built = null;
 const artifacts = () => (built ??= buildControlArtifacts(loadPlan(), loadPilot(), realCtx()));
+let builtBaseline = null;
+const inactiveCtx = () => {
+  const base = realCtx();
+  const pages = new Set(['swim-lessons/directory/new-jersey.html', 'swim-lessons/directory/pennsylvania.html']);
+  return { ...base, repo: { ...base.repo, read(rel) {
+    if (rel === 'assets/js/wwk-ordinary-listing.js') return null;
+    const text = base.repo.read(rel);
+    if (text === null || !pages.has(rel)) return text;
+    return text.replace(/ data-wwk-[a-z-]+="[^"]*"/g, '')
+      .replace(/^<script src="\/assets\/js\/wwk-ordinary-listing\.js[^>]*><\/script>\n/m, '');
+  } } };
+};
+const baselineArtifacts = () => (builtBaseline ??= buildControlArtifacts(loadPlan(), loadPilot(), inactiveCtx()));
 
 test('pilot control plan validates and reuses the Phase 1 ordinary-listing placement IDs', () => {
   const r = validateControlPlan(loadPlan(), loadPilot(), realCtx());
@@ -50,11 +63,11 @@ test('strictness: unknown fields, IDs, rows, ownership', () => {
 });
 
 test('row patches add data-wwk-* only: same text, order and hrefs; rollback restores bytes', () => {
-  const a = artifacts();
+  const a = baselineArtifacts();
   assert.equal(a.ok, true, JSON.stringify(a.errors));
   const plan = JSON.parse(a.files['control/plan.json']);
   for (const f of plan.files) {
-    const before = realRepo().read(f.source_file);
+    const before = inactiveCtx().repo.read(f.source_file);
     const after = applyFilePatch(before, parseUnifiedDiff(a.files[f.patch])[0]);
     const strip = (h) => h.replace(/ data-wwk-[a-z-]+="[^"]*"/g, '').replace(/<script src="\/assets\/js\/wwk-ordinary-listing\.js[^>]*><\/script>\n/, '');
     assert.equal(strip(after), before, f.source_file);
@@ -72,7 +85,7 @@ test('row patches add data-wwk-* only: same text, order and hrefs; rollback rest
 
 test('tag_ordinary_links adds campaign-level UTM (referral) to the ordinary link only', () => {
   const p = loadPlan(); p.tag_ordinary_links = true;
-  const a = buildControlArtifacts(p, loadPilot(), realCtx());
+  const a = buildControlArtifacts(p, loadPilot(), inactiveCtx());
   const d = a.files['control/patches/swim-lessons-directory-new-jersey.diff'];
   assert.match(d, /la-fitness-howell\/\?utm_source=waterwisekids&amp;utm_medium=referral&amp;utm_campaign=cmp_91a15f49d66bdeef&amp;utm_content=plc_d6a6673732411e04/);
 });
@@ -107,7 +120,8 @@ test('packet: controls are opt-in; without them the packet is byte-identical', (
   const withC = buildPacket(loadPilot(), realCtx(), { controls: loadPlan() });
   assert.equal(withC.ok, true, JSON.stringify(withC.errors));
   for (const [k, v] of Object.entries(plain.files)) if (k !== 'summary.json') assert.equal(withC.files[k], v, k);
-  assert.equal(Object.keys(withC.files).filter((k) => k.startsWith('control/')).length, 8);
+  assert.equal(Object.keys(withC.files).filter((k) => k.startsWith('control/')).length, 3);
+  assert.ok(JSON.parse(withC.files['control/plan.json']).files.every((f) => f.action === 'unchanged'));
   assert.equal(withC.summary.controls.listings, 4);
   assert.deepEqual(buildPacket(loadPilot(), realCtx(), { controls: loadPlan() }).files, withC.files, 'deterministic');
   assert.equal(plain.summary.controls, undefined);
