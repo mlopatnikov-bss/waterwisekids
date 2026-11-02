@@ -89,6 +89,28 @@ test('protected pilot surfaces: the NY directory is byte-identical and live card
   assert.deepEqual(withCards, [...approved].sort());
 });
 
+test('PA/NJ pilot guides: substantial local editorial upgrades preserve every sponsored card byte', () => {
+  const guides = {
+    'swim-lessons/cheltenham-pa.html': 'b07d5a4d6a3b2cde8ce3ebf779bae2b71e6053d674451c144a33e02190aea3a4',
+    'swim-lessons/howell-nj.html': '05966e8d88881929d2323a5e213b93ee3a665e2e6d3373a1c8f3a238f9625618',
+    'swim-lessons/brick-nj.html': '1015a702ba78498164ac007d5285c70fbf3ac6bc91eba0f36ca3252ad7f4802b',
+    'swim-lessons-toms-river-nj.html': '8801177e52dd92c1ea573ac9bc8ff43e2b59d45e5e6eb3e07491a93ac8abd6a9',
+  };
+  for (const [file, cardHash] of Object.entries(guides)) {
+    const html = read(file);
+    const editorial = H.mainText(html);
+    assert.ok(H.wordCount(editorial) >= 1000, `${file}: substantial editorial content, sponsored card excluded`);
+    assert.match(H.visibleText(html), /Reviewed November 2, 2026\./, `${file}: visible review date`);
+    assert.match(html, /"dateModified": "2026-11-02"/, `${file}: machine-readable review date`);
+    assert.ok(H.links(H.withoutSponsored(html)).filter((l) => /^https:\/\//.test(l.href)).length >= 3, `${file}: visible editorial sources`);
+    assert.equal((html.match(/<main\b/g) || []).length, 1, `${file}: one main landmark`);
+    assert.equal((html.match(/<\/main>/g) || []).length, 1, `${file}: balanced main landmark`);
+    const cards = H.sponsoredBlocks(html);
+    assert.equal(cards.length, 1, `${file}: one approved card`);
+    assert.equal(sha(cards[0]), cardHash, `${file}: sponsored card bytes unchanged`);
+  }
+});
+
 test('Manhattan hub: editorial, verified, schema matches what is visible, one separately attributed card, held venue not named', () => {
   const html = read('swim-lessons/manhattan-ny.html');
   const text = H.visibleText(html); // excludes the sponsored card
