@@ -1,0 +1,73 @@
+diff --git a/swim-lessons/northwest-philadelphia.html b/swim-lessons/northwest-philadelphia.html
+--- a/swim-lessons/northwest-philadelphia.html
++++ b/swim-lessons/northwest-philadelphia.html
+@@ -8,7 +8,7 @@
+   <link rel="canonical" href="https://www.waterwisekids.com/swim-lessons/northwest-philadelphia.html">
+   <meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+   <meta property="og:title" content="Swim Lessons in Northwest Philadelphia | WaterWiseKids">
+-  <meta property="og:description" content="Find beginner-friendly kids swim lessons in Northwest Philadelphia. Safety-first programs for infants, toddlers, and children. Book lessons at British Swim School.">
++  <meta property="og:description" content="Find beginner-friendly kids swim lessons in Northwest Philadelphia. Safety-first programs for infants, toddlers, and children.">
+   <meta property="og:type" content="website">
+ <meta content="https://www.waterwisekids.com/swim-lessons/northwest-philadelphia.html" property="og:url">
+ <meta content="https://images.pexels.com/photos/12940787/pexels-photo-12940787.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=630&amp;fit=crop" property="og:image">
+@@ -46,7 +46,7 @@
+ <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What age should kids start swim lessons in Northwest Philadelphia?", "acceptedAnswer": {"@type": "Answer", "text": "The American Academy of Pediatrics recommends most children begin formal swim lessons after their first birthday. Infants from about 6 months can join parent-child water-familiarization classes that build comfort and basic safety skills before formal instruction begins."}}, {"@type": "Question", "name": "Do swim lessons actually reduce drowning risk?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The AAP cites research showing that formal swim lessons can reduce the risk of drowning by 88% for children ages 1–4. Because the CDC identifies drowning as the leading cause of unintentional death in that age group, early lessons are one of the most effective safety investments a family can make."}}, {"@type": "Question", "name": "How often should my child take swim lessons?", "acceptedAnswer": {"@type": "Answer", "text": "Weekly, year-round lessons produce the most consistent progress, especially with heated indoor pools that keep instruction going through every season. Children learning water-survival basics or overcoming fear often benefit from twice-weekly sessions until core skills are secure."}}]}</script>
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Swim Lessons in Northwest Philadelphia | WaterWiseKids">
+-<meta name="twitter:description" content="Find beginner-friendly kids swim lessons in Northwest Philadelphia. Safety-first programs for infants, toddlers, and children. Book lessons at British Swim School.">
++<meta name="twitter:description" content="Find beginner-friendly kids swim lessons in Northwest Philadelphia. Safety-first programs for infants, toddlers, and children.">
+ <meta name="twitter:image" content="https://images.pexels.com/photos/12940787/pexels-photo-12940787.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=630&amp;fit=crop">
+ <script type="application/ld+json">
+ {
+@@ -165,24 +165,22 @@
+             </div>
+         </section>
+ 
+-        <!-- Featured School -->
+-        <section class="featured-school">
+-            <span class="featured-badge">Featured School</span>
+-            <h2>British Swim School of Northwest Philadelphia</h2>
+-            <div class="rating">
+-                <span class="stars">★★★★★</span>
+-                <span>4.9/5 (218 reviews)</span>
+-            </div>
+-            <p>Located conveniently in Northwest Philadelphia, British Swim School serves families across the greater Philadelphia area with safety-focused instruction and proven results. Thousands of families have trusted the school to teach their children water safety and swimming skills.</p>
+-            <ul>
+-                <li>Heated indoor pools—year-round instruction, no seasons</li>
+-                <li>Small class sizes (4-6 students per certified instructor)</li>
+-                <li>Instructors certified by American Red Cross and Aquatics Council</li>
+-                <li>Flexible scheduling to fit your family's needs</li>
+-                <li>Free trial lesson and consultation with parents</li>
+-            </ul>
+-            <a href="/swim-schools.html" class="btn-primary">Find Swim Lessons Near You</a>
+-        </section>
++        <!-- WWK sponsored placement plc_5093a0465c8f895c (Sponsored pilot) -->
++        <link rel="stylesheet" href="/assets/css/wwk-sponsored.css?v=p2r2">
++        <aside class="wwk-sponsored" aria-labelledby="wwk-sp-plc_5093a0465c8f895c-label wwk-sp-plc_5093a0465c8f895c-title" data-wwk-sponsored-card="" data-wwk-tenant="ten_b234a48144f47f06" data-wwk-school="sch_ca091723c9670adc" data-wwk-campaign="cmp_e4ca517dbb784119" data-wwk-placement="plc_5093a0465c8f895c" data-wwk-page-path="/swim-lessons/northwest-philadelphia.html">
++          <p class="wwk-sponsored__label" id="wwk-sp-plc_5093a0465c8f895c-label">Sponsored pilot</p>
++          <h2 class="wwk-sponsored__title" id="wwk-sp-plc_5093a0465c8f895c-title">British Swim School of Northwest Philadelphia</h2>
++          <p class="wwk-sponsored__text">Pool locations featured in this pilot (britishswimschool.com):</p>
++          <ul class="wwk-sponsored__venues">
++            <li><a href="https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/?utm_source=waterwisekids&amp;utm_medium=sponsored_pilot&amp;utm_campaign=cmp_e4ca517dbb784119&amp;utm_content=plc_5093a0465c8f895c" rel="sponsored noopener" data-wwk-destination="dst_14bd700cb26d66c4" data-wwk-location="loc_d3c46e7d6efc62f7">LA Fitness - Cheltenham</a> <span class="wwk-sponsored__address">2401 W Cheltenham Ave Ste M3, Philadelphia, PA 19150</span></li>
++          </ul>
++          <p class="wwk-sponsored__text">Check current schedules, pricing and enrollment directly with the school.</p>
++          <ul class="wwk-sponsored__links">
++            <li><a href="https://britishswimschool.com/northwest-philadelphia/?utm_source=waterwisekids&amp;utm_medium=sponsored_pilot&amp;utm_campaign=cmp_e4ca517dbb784119&amp;utm_content=plc_5093a0465c8f895c" rel="sponsored noopener" data-wwk-destination="dst_472a0f5600605280">British Swim School of Northwest Philadelphia website<span class="wwk-sponsored__host"> (britishswimschool.com)</span></a></li>
++          </ul>
++          <p class="wwk-sponsored__disclosure">No-fee pilot placement. WaterWiseKids may offer paid sponsored placements in the future. Sponsorship does not change directory order or editorial content.</p>
++        </aside>
++        <script src="/assets/js/wwk-sponsored.js?v=p2r2" defer></script>
+ 
+         <section class="wwk-intro-box">
+             <h2>Nearby Communities</h2>
+@@ -214,8 +212,8 @@
+         <!-- Final CTA -->
+         <section class="wwk-cta-banner">
+             <h2>Start Your Child's Swim Journey Today</h2>
+-            <p>Thousands of Northwest Philadelphia families trust British Swim School for expert instruction and a safe learning environment. Schedule a free trial lesson and meet the certified instructors.</p>
+-            <a href="/british-swim-school/northwest-philadelphia.html" class="btn-primary" aria-label="Book your free trial with British Swim School">Book Your Free Trial</a>
++            <p>Compare swim schools near Northwest Philadelphia and ask each one about current schedules, class sizes and enrollment.</p>
++            <a href="/swim-schools.html" class="btn-primary">Find Classes Near You</a>
+         </section>
+     </main>
+ 

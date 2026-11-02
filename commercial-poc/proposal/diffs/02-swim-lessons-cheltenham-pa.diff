@@ -1,0 +1,132 @@
+diff --git a/swim-lessons/cheltenham-pa.html b/swim-lessons/cheltenham-pa.html
+--- a/swim-lessons/cheltenham-pa.html
++++ b/swim-lessons/cheltenham-pa.html
+@@ -54,7 +54,7 @@
+       "name": "Can Cheltenham kids take swim lessons nearby?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+-        "text": "Yes. British Swim School of Northwest Philadelphia is conveniently located and serves Cheltenham families. The location offers classes for infants through adults with flexible scheduling and year-round instruction."
++        "text": "Yes. Cheltenham families can compare the options on this page and on nearby WWK lesson pages. Confirm each school’s pool location, age range and schedule directly before enrolling."
+       }
+     },
+     {
+@@ -70,7 +70,7 @@
+       "name": "How much do swim lessons cost?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+-        "text": "Costs vary by program type and duration. Group lessons typically range from $120-$250 per month. Most schools, including British Swim School, offer free consultations to discuss pricing and find options that fit a family's budget."
++        "text": "Swim lesson prices depend on the program, the class size and how often your child swims, and schools change their rates during the year, so WaterWiseKids does not quote a local price range. Ask the school for its current monthly rate, registration fee and make-up policy before you enroll."
+       }
+     },
+     {
+@@ -78,7 +78,7 @@
+       "name": "Are lessons available year-round?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+-        "text": "Yes. British Swim School's heated indoor pools allow year-round instruction, providing consistent skill development without seasonal gaps."
++        "text": "It depends on the school. Some swim schools enroll all year and others run seasonal sessions, so ask each school which months it offers lessons and whether your child can start at any time."
+       }
+     },
+     {
+@@ -86,7 +86,7 @@
+       "name": "What makes a good swim school?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+-        "text": "Look for certified instructors, small class sizes, heated pools, flexible scheduling, and a safety-focused curriculum. Top-rated options in the area meet these criteria."
++        "text": "Look for certified instructors, small class sizes, heated pools, flexible scheduling, and a safety-focused curriculum."
+       }
+     }
+   ]
+@@ -165,8 +165,8 @@
+         <h1>Swim Lessons in Cheltenham, PA</h1>
+ 
+         <section class="wwk-intro-box">
+-            <p>Cheltenham Township families benefit from convenient access to quality swim instruction. British Swim School serves the Cheltenham area with beginner-friendly programs for all ages, from 6-month-old infants through school-age children and adults.</p>
++            <p>This area guide helps Cheltenham Township families compare nearby swim lesson options. Confirm each provider’s current teaching-pool address, class format, age range and availability directly before booking.</p>
+-            <p>The British Swim School Northwest Philadelphia location makes it easy for Cheltenham families to access professional, year-round swim lessons in heated pools. Small class sizes and certified instructors are designed so every child receives personalized attention and safety-focused instruction.</p>
++            <p>Check the route to the actual teaching pool from your part of Cheltenham Township, and ask each school about class sizes, instructor training and year-round scheduling.</p>
+         </section>
+ 
+         
+@@ -201,23 +201,19 @@
+             </ul>
+         </section>
+ 
+-        <section class="featured-school">
+-            <span class="featured-badge">Featured School</span>
+-            <h2>British Swim School of Northwest Philadelphia</h2>
+-            <div class="rating">
+-                <span class="stars">★★★★★</span>
+-                <span>4.9/5 (218 reviews)</span>
+-            </div>
+-            <p>British Swim School conveniently serves Cheltenham families with professional swim instruction. Small class sizes, certified instructors, and heated pools ensure every child develops water confidence and essential skills.</p>
+-            <ul>
+-                <li>Convenient location easily accessible from Cheltenham</li>
+-                <li>Infants (6 months) through adults</li>
+-                <li>Year-round heated pool classes</li>
+-                <li>Certified, experienced instructors</li>
+-                <li>Free consultation and trial lesson</li>
+-            </ul>
+-            <a href="/british-swim-school/northwest-philadelphia.html" class="btn-primary" aria-label="Learn more and book with British Swim School of Northwest Philadelphia">Learn More &amp; Book</a>
+-        </section>
++        <!-- WWK sponsored placement plc_759c890d4a301219 (Sponsored pilot) -->
++        <link rel="stylesheet" href="/assets/css/wwk-sponsored.css?v=p2r2">
++        <aside class="wwk-sponsored" aria-labelledby="wwk-sp-plc_759c890d4a301219-label wwk-sp-plc_759c890d4a301219-title" data-wwk-sponsored-card="" data-wwk-tenant="ten_b234a48144f47f06" data-wwk-school="sch_ca091723c9670adc" data-wwk-campaign="cmp_e4ca517dbb784119" data-wwk-placement="plc_759c890d4a301219" data-wwk-location="loc_d3c46e7d6efc62f7" data-wwk-page-path="/swim-lessons/cheltenham-pa.html">
++          <p class="wwk-sponsored__label" id="wwk-sp-plc_759c890d4a301219-label">Sponsored pilot</p>
++          <h2 class="wwk-sponsored__title" id="wwk-sp-plc_759c890d4a301219-title">British Swim School of Northwest Philadelphia</h2>
++          <p class="wwk-sponsored__text">Pool location: LA Fitness - Cheltenham, 2401 W Cheltenham Ave Ste M3, Philadelphia, PA 19150. Check current schedules, pricing and enrollment directly with the school.</p>
++          <ul class="wwk-sponsored__links">
++            <li><a href="https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/?utm_source=waterwisekids&amp;utm_medium=sponsored_pilot&amp;utm_campaign=cmp_e4ca517dbb784119&amp;utm_content=plc_759c890d4a301219" rel="sponsored noopener" data-wwk-destination="dst_14bd700cb26d66c4" data-wwk-location="loc_d3c46e7d6efc62f7">LA Fitness - Cheltenham location page<span class="wwk-sponsored__host"> (britishswimschool.com)</span></a></li>
++            <li><a href="https://britishswimschool.com/northwest-philadelphia/?utm_source=waterwisekids&amp;utm_medium=sponsored_pilot&amp;utm_campaign=cmp_e4ca517dbb784119&amp;utm_content=plc_759c890d4a301219" rel="sponsored noopener" data-wwk-destination="dst_472a0f5600605280">British Swim School of Northwest Philadelphia website<span class="wwk-sponsored__host"> (britishswimschool.com)</span></a></li>
++          </ul>
++          <p class="wwk-sponsored__disclosure">No-fee pilot placement. WaterWiseKids may offer paid sponsored placements in the future. Sponsorship does not change directory order or editorial content.</p>
++        </aside>
++        <script src="/assets/js/wwk-sponsored.js?v=p2r2" defer></script>
+ 
+         <section class="other-schools">
+             <h2>Other Options in the Area</h2>
+@@ -251,7 +247,7 @@
+             <div class="faq-item active">
+                 <h3>Can Cheltenham kids take swim lessons nearby?</h3>
+                 <div class="faq-answer">
+-                    <p>Yes. British Swim School of Northwest Philadelphia is conveniently located and serves Cheltenham families. The location offers classes for infants through adults with flexible scheduling and year-round instruction.</p>
++                    <p>Yes. Cheltenham families can compare the options on this page and on nearby WWK lesson pages. Confirm each school’s pool location, age range and schedule directly before enrolling.</p>
+                 </div>
+             </div>
+ 
+@@ -265,21 +261,21 @@
+             <div class="faq-item">
+                 <h3>How much do swim lessons cost?</h3>
+                 <div class="faq-answer">
+-                    <p>Costs vary by program type and duration. Group lessons typically range from $120-$250 per month. Most schools, including British Swim School, offer free consultations to discuss pricing and find options that fit a family's budget.</p>
++                    <p>Swim lesson prices depend on the program, the class size and how often your child swims, and schools change their rates during the year, so WaterWiseKids does not quote a local price range. Ask the school for its current monthly rate, registration fee and make-up policy before you enroll.</p>
+                 </div>
+             </div>
+ 
+             <div class="faq-item">
+                 <h3>Are lessons available year-round?</h3>
+                 <div class="faq-answer">
+-                    <p>Yes. British Swim School's heated indoor pools allow year-round instruction, providing consistent skill development without seasonal gaps.</p>
++                    <p>It depends on the school. Some swim schools enroll all year and others run seasonal sessions, so ask each school which months it offers lessons and whether your child can start at any time.</p>
+                 </div>
+             </div>
+ 
+             <div class="faq-item">
+                 <h3>What makes a good swim school?</h3>
+                 <div class="faq-answer">
+-                    <p>Look for certified instructors, small class sizes, heated pools, flexible scheduling, and a safety-focused curriculum. Top-rated options in the area meet these criteria.</p>
++                    <p>Look for certified instructors, small class sizes, heated pools, flexible scheduling, and a safety-focused curriculum.</p>
+                 </div>
+             </div>
+         </section>
+@@ -296,8 +292,8 @@
+ 
+         <section class="wwk-cta-banner">
+             <h2>Start Swimming Today</h2>
+-            <p>British Swim School of Northwest Philadelphia welcomes Cheltenham families. Schedule a free consultation and trial lesson.</p>
+-            <a href="/british-swim-school/northwest-philadelphia.html" class="btn-primary" aria-label="Book your free trial with British Swim School">Book Your Free Trial</a>
++            <p>Compare swim schools near Cheltenham Township and ask each one about current schedules, class sizes and enrollment.</p>
++            <a href="/swim-schools.html" class="btn-primary">Find Classes Near You</a>
+         </section>
+     </main>
+ 

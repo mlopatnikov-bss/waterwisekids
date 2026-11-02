@@ -1,0 +1,356 @@
+{
+  "generated_for_as_of": "2026-11-02T14:00:00.000Z",
+  "node": "v22.22.2",
+  "platform": "darwin-arm64",
+  "steps": {
+    "static_checks": {
+      "command": "node scripts/static-checks.mjs",
+      "exit_code": 0,
+      "result": {
+        "files_scanned": 81,
+        "mjs_syntax_checked": 54,
+        "findings": []
+      }
+    },
+    "manifest_check": {
+      "command": "node scripts/build-manifest.mjs --check",
+      "exit_code": 0,
+      "output": "pilot-manifest.json matches current sources."
+    },
+    "tests": {
+      "command": "node --test --test-reporter=spec test/collector.test.mjs test/conversions-quality.test.mjs test/events-privacy.test.mjs test/isolation.test.mjs test/manifest.test.mjs test/portal.test.mjs test/quality-integrity.test.mjs test/rollup-reconciliation.test.mjs test/seed-batching.test.mjs test/seed-cli.test.mjs",
+      "exit_code": 0,
+      "ms": 13730,
+      "tests": 111,
+      "pass": 111,
+      "fail": 0,
+      "skipped": 0,
+      "output_file": "evidence/test-output.txt"
+    }
+  },
+  "reconciliation": {
+    "ingest": {
+      "accepted": 40550,
+      "duplicates": 963,
+      "rejected": 156,
+      "deliveries": 41669,
+      "tx_batch_size": 5000,
+      "transactions": 9
+    },
+    "injected": {
+      "duplicates": {
+        "duplicate_event_id": 841,
+        "duplicate_semantic": 122
+      },
+      "rejected_by_reason": {
+        "pii_field": 20,
+        "pii_value": 20,
+        "page_path_query_or_fragment": 20,
+        "unknown_placement": 20,
+        "host_not_allowed": 19,
+        "timestamp_in_future": 19,
+        "cross_tenant_reference": 19,
+        "unknown_field": 19
+      }
+    },
+    "tenants": {
+      "northwest-philadelphia": {
+        "tenant_id": "ten_b234a48144f47f06",
+        "generator_expected": {
+          "eligible_view": 8166,
+          "viewable_impression": 4623,
+          "sponsored_click": 153,
+          "outbound_click": 172
+        },
+        "accepted_events": {
+          "eligible_view": 8166,
+          "outbound_click": 172,
+          "sponsored_click": 153,
+          "viewable_impression": 4623
+        },
+        "daily_metrics": {
+          "eligible_view": 8166,
+          "outbound_click": 172,
+          "sponsored_click": 153,
+          "viewable_impression": 4623
+        },
+        "portal_read_model": {
+          "eligible_view": 8166,
+          "viewable_impression": 4623,
+          "sponsored_click": 153,
+          "outbound_click": 172
+        },
+        "by_placement_kind": {
+          "sponsored_card": {
+            "eligible_view": 4570,
+            "outbound_click": 130,
+            "sponsored_click": 153,
+            "viewable_impression": 2796
+          },
+          "organic_listing": {
+            "eligible_view": 3596,
+            "outbound_click": 42,
+            "viewable_impression": 1827
+          }
+        },
+        "reported_conversions": {
+          "expected": {
+            "assessment_start": 48,
+            "enrollment": 19
+          },
+          "stored": {
+            "assessment_start": 48,
+            "enrollment": 19
+          }
+        },
+        "exact_match": true
+      },
+      "jersey-shore": {
+        "tenant_id": "ten_9d294d23e0e9841e",
+        "generator_expected": {
+          "eligible_view": 11906,
+          "viewable_impression": 6962,
+          "sponsored_click": 247,
+          "outbound_click": 265
+        },
+        "accepted_events": {
+          "eligible_view": 11906,
+          "outbound_click": 265,
+          "sponsored_click": 247,
+          "viewable_impression": 6962
+        },
+        "daily_metrics": {
+          "eligible_view": 11906,
+          "outbound_click": 265,
+          "sponsored_click": 247,
+          "viewable_impression": 6962
+        },
+        "portal_read_model": {
+          "eligible_view": 11906,
+          "viewable_impression": 6962,
+          "sponsored_click": 247,
+          "outbound_click": 265
+        },
+        "by_placement_kind": {
+          "sponsored_card": {
+            "eligible_view": 6901,
+            "outbound_click": 205,
+            "sponsored_click": 247,
+            "viewable_impression": 4384
+          },
+          "organic_listing": {
+            "eligible_view": 5005,
+            "outbound_click": 60,
+            "viewable_impression": 2578
+          }
+        },
+        "reported_conversions": {
+          "expected": {
+            "call": 28,
+            "qualified_lead": 24,
+            "enrollment": 8
+          },
+          "stored": {
+            "call": 28,
+            "enrollment": 8,
+            "qualified_lead": 24
+          }
+        },
+        "exact_match": true
+      },
+      "manhattan": {
+        "tenant_id": "ten_52bf92991a0305d0",
+        "generator_expected": {
+          "eligible_view": 5122,
+          "viewable_impression": 2773,
+          "sponsored_click": 75,
+          "outbound_click": 86
+        },
+        "accepted_events": {
+          "eligible_view": 5122,
+          "outbound_click": 86,
+          "sponsored_click": 75,
+          "viewable_impression": 2773
+        },
+        "daily_metrics": {
+          "eligible_view": 5122,
+          "outbound_click": 86,
+          "sponsored_click": 75,
+          "viewable_impression": 2773
+        },
+        "portal_read_model": {
+          "eligible_view": 5122,
+          "viewable_impression": 2773,
+          "sponsored_click": 75,
+          "outbound_click": 86
+        },
+        "by_placement_kind": {
+          "sponsored_card": {
+            "eligible_view": 2875,
+            "outbound_click": 66,
+            "sponsored_click": 75,
+            "viewable_impression": 1697
+          },
+          "organic_listing": {
+            "eligible_view": 2247,
+            "outbound_click": 20,
+            "viewable_impression": 1076
+          }
+        },
+        "reported_conversions": {
+          "expected": {},
+          "stored": {}
+        },
+        "exact_match": true
+      }
+    }
+  },
+  "health": {
+    "schema": "wwk-poc-health/v1",
+    "generated_for": "2026-11-02T14:00:00.000Z",
+    "range": {
+      "from": "2026-10-05",
+      "to": "2026-11-01"
+    },
+    "status": "critical",
+    "tenants": [
+      {
+        "tenant_id": "ten_9d294d23e0e9841e",
+        "status": "warn",
+        "checks": {
+          "freshness": {
+            "severity": "ok",
+            "value": 11
+          },
+          "completeness": {
+            "severity": "warn",
+            "value": 96.4
+          },
+          "funnel_integrity": {
+            "severity": "ok",
+            "value": 0
+          },
+          "ingest_rejections": {
+            "severity": "ok",
+            "value": 0.4
+          },
+          "ingest_duplicates": {
+            "severity": "ok",
+            "value": 2.2
+          },
+          "rollup_reconciliation": {
+            "severity": "ok",
+            "value": true
+          },
+          "conversion_imports": {
+            "severity": "ok",
+            "value": 1
+          },
+          "anomalies": {
+            "severity": "warn",
+            "value": 1
+          },
+          "pending_locations": {
+            "severity": "info",
+            "value": 1
+          }
+        }
+      },
+      {
+        "tenant_id": "ten_52bf92991a0305d0",
+        "status": "critical",
+        "checks": {
+          "freshness": {
+            "severity": "critical",
+            "value": 84.1
+          },
+          "completeness": {
+            "severity": "warn",
+            "value": 89.3
+          },
+          "funnel_integrity": {
+            "severity": "ok",
+            "value": 0
+          },
+          "ingest_rejections": {
+            "severity": "ok",
+            "value": 0.4
+          },
+          "ingest_duplicates": {
+            "severity": "ok",
+            "value": 2.8
+          },
+          "rollup_reconciliation": {
+            "severity": "ok",
+            "value": true
+          },
+          "conversion_imports": {
+            "severity": "info",
+            "value": null
+          },
+          "anomalies": {
+            "severity": "warn",
+            "value": 3
+          },
+          "pending_locations": {
+            "severity": "info",
+            "value": 1
+          }
+        }
+      },
+      {
+        "tenant_id": "ten_b234a48144f47f06",
+        "status": "info",
+        "checks": {
+          "freshness": {
+            "severity": "ok",
+            "value": 11.1
+          },
+          "completeness": {
+            "severity": "ok",
+            "value": 100
+          },
+          "funnel_integrity": {
+            "severity": "ok",
+            "value": 0
+          },
+          "ingest_rejections": {
+            "severity": "ok",
+            "value": 0.2
+          },
+          "ingest_duplicates": {
+            "severity": "ok",
+            "value": 2.4
+          },
+          "rollup_reconciliation": {
+            "severity": "ok",
+            "value": true
+          },
+          "conversion_imports": {
+            "severity": "ok",
+            "value": 1
+          },
+          "anomalies": {
+            "severity": "ok",
+            "value": 0
+          },
+          "pending_locations": {
+            "severity": "info",
+            "value": 1
+          }
+        }
+      }
+    ],
+    "thresholds": {
+      "freshness_warn_hours": 26,
+      "freshness_critical_hours": 72,
+      "completeness_warn_pct": 99.9,
+      "rejected_warn_pct": 5,
+      "duplicate_warn_pct": 10,
+      "conversion_stale_days": 14,
+      "anomaly_low_ratio": 0.4,
+      "anomaly_high_ratio": 2.5,
+      "anomaly_min_median": 10
+    }
+  }
+}

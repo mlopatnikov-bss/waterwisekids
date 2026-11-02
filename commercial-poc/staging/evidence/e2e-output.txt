@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "runtime": "wrangler-local-workerd",
+  "seeded": {
+    "deliveries": 41669,
+    "requests": 1667,
+    "accepted": 40550,
+    "duplicates": 963,
+    "rejected": 156,
+    "reasons": {
+      "duplicate_event_id": 841,
+      "duplicate_semantic": 122,
+      "pii_value": 20,
+      "pii_field": 20,
+      "timestamp_in_future": 19,
+      "page_path_query_or_fragment": 20,
+      "unknown_placement": 20,
+      "cross_tenant_reference": 19,
+      "unknown_field": 19,
+      "host_not_allowed": 19
+    }
+  },
+  "client_events_accepted": 8,
+  "replay_events_accepted": 0,
+  "owner": {
+    "own": 200,
+    "cross": 404,
+    "csp": true,
+    "no_cookie": true,
+    "admin_switcher": false
+  },
+  "partner": {
+    "own": 200,
+    "cross": 404,
+    "csp": true,
+    "no_cookie": true,
+    "admin_switcher": false
+  },
+  "admin": {
+    "own": 200,
+    "cross": 200,
+    "csp": true,
+    "no_cookie": true,
+    "admin_switcher": true
+  },
+  "missing_access": 403,
+  "wrong_audience": 403
+}

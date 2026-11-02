@@ -1,0 +1,26 @@
+{
+  "name": "wwk-commercial-staging",
+  "version": "0.3.0",
+  "private": true,
+  "description": "WWK Commercial POC Phase 3: two Cloudflare Workers (public collector, Access-protected portal) sharing one D1 database. Local staging only; nothing here deploys.",
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "test": "node --test --test-reporter=spec test/*.test.mjs",
+    "check": "node scripts/static-checks.mjs",
+    "assets": "node scripts/build-assets.mjs",
+    "pilot:seed": "node scripts/build-pilot-seed.mjs",
+    "local:setup": "node scripts/local.mjs setup",
+    "local:migrate": "node scripts/local.mjs migrate",
+    "local:seed": "node scripts/local.mjs seed",
+    "local:collector": "node scripts/local.mjs dev-collector",
+    "local:portal": "node scripts/local.mjs dev-portal",
+    "local:reconcile": "node scripts/local.mjs reconcile",
+    "local:e2e": "node scripts/e2e-workerd.mjs",
+    "local:teardown": "node scripts/local.mjs teardown",
+    "verify": "node scripts/verify-staging.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.151.1"
+  }
+}

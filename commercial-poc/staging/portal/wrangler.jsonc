@@ -1,0 +1,35 @@
+// wwk-commercial-portal-staging: PRIVATE tenant portal Worker, protected by Cloudflare Worker Access.
+// No Workers Static Assets (Access identity is not propagated through the static-assets router):
+// HTML and CSS are rendered from Worker code. Reviewed staging deployment configuration with
+// placeholders only: no account ID, no real D1 database ID, no Access audience, no routes or
+// custom domains. IDENTITY_HMAC_KEY is a Worker secret (wrangler secret put), never a var.
+// Local identities for development are added ONLY to the derived local copy (scripts/local.mjs).
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "wwk-commercial-portal-staging",
+  "main": "../src/portal/entry.mjs",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "send_metrics": false,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "wwk-commercial-staging",
+      "database_id": "00000000-0000-4000-8000-000000000000",
+      "migrations_dir": "../migrations"
+    }
+  ],
+  "vars": {
+    "PORTAL_ENV": "staging",
+    "ACCESS_AUD": "REPLACE_WITH_ACCESS_APPLICATION_AUD"
+  },
+  "secrets": { "required": ["IDENTITY_HMAC_KEY"] },
+  "observability": {
+    "enabled": true,
+    "redact_query_string": true,
+    "logs": { "enabled": true, "invocation_logs": false },
+    "traces": { "enabled": false }
+  }
+}

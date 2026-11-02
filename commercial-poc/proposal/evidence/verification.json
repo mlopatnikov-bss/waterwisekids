@@ -1,0 +1,44 @@
+{
+  "node": "v22.22.2",
+  "steps": {
+    "build_check": {
+      "cmd": "node proposal/scripts/build-proposal.mjs --check",
+      "exit": 0,
+      "output": "{   \"check\": \"ok\",   \"artefacts\": 12,"
+    },
+    "client_syntax": {
+      "cmd": "node --check proposal/component/wwk-sponsored.js",
+      "exit": 0
+    },
+    "tests": {
+      "cmd": "node --test --test-reporter=spec proposal/test/client-behavior.test.mjs proposal/test/client-privacy.test.mjs proposal/test/proposal-diffs.test.mjs proposal/test/proposal-inventory.test.mjs proposal/test/proposal-patched-pages.test.mjs",
+      "exit": 0,
+      "ms": 1013,
+      "tests": 54,
+      "pass": 54,
+      "fail": 0,
+      "skipped": 0
+    },
+    "static_checks": {
+      "cmd": "node scripts/static-checks.mjs",
+      "exit": 0,
+      "result": {
+        "files_scanned": 81,
+        "mjs_syntax_checked": 54,
+        "findings": []
+      }
+    }
+  },
+  "public_tree": {
+    "recorded": {
+      "file_count": 1657,
+      "aggregate_sha256": "34c93ab531b6c0782fd4ffa2fe525ebbcbfccf0bbc3a3a466a66ed867acbede1"
+    },
+    "now": {
+      "file_count": 1657,
+      "aggregate_sha256": "34c93ab531b6c0782fd4ffa2fe525ebbcbfccf0bbc3a3a466a66ed867acbede1"
+    },
+    "unchanged": true
+  },
+  "ok": true
+}

@@ -1,0 +1,9 @@
+# Staging-local state (local D1, generated seed, derived local configs, dev vars, logs). Teardown removes it.
+.data/
+.wrangler/
+node_modules/
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.env
+.env.*

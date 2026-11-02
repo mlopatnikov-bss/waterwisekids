@@ -1,0 +1,191 @@
+{
+  "as_of": "2026-11-02T14:00:00.000Z",
+  "screenshots": [
+    {
+      "file": "01-login-desktop.png",
+      "url_path": "/demo/login",
+      "viewport": "1280x900",
+      "http_status": null,
+      "horizontal_overflow_px": 0,
+      "console_errors": []
+    },
+    {
+      "file": "02-login-mobile.png",
+      "url_path": "/demo/login",
+      "viewport": "390x844",
+      "http_status": null,
+      "horizontal_overflow_px": 0,
+      "console_errors": []
+    },
+    {
+      "file": "03-nwp-overview-desktop.png",
+      "url_path": "/t/ten_b234a48144f47f06/",
+      "viewport": "1280x900",
+      "http_status": 200,
+      "horizontal_overflow_px": 0,
+      "console_errors": []
+    },
+    {
+      "file": "04-nwp-overview-mobile.png",
+      "url_path": "/t/ten_b234a48144f47f06/",
+      "viewport": "390x844",
+      "http_status": 200,
+      "horizontal_overflow_px": 0,
+      "console_errors": []
+    },
+    {
+      "file": "05-jersey-shore-warning-desktop.png",
+      "url_path": "/t/ten_9d294d23e0e9841e/",
+      "viewport": "1280x900",
+      "http_status": 200,
+      "horizontal_overflow_px": 0,
+      "console_errors": []
+    },
+    {
+      "file": "06-jersey-shore-warning-mobile.png",
+      "url_path": "/t/ten_9d294d23e0e9841e/",
+      "viewport": "390x844",
+      "http_status": 200,
+      "horizontal_overflow_px": 0,
+      "console_errors": []
+    },
+    {
+      "file": "07-manhattan-stale-desktop.png",
+      "url_path": "/t/ten_52bf92991a0305d0/",
+      "viewport": "1280x900",
+      "http_status": 200,
+      "horizontal_overflow_px": 0,
+      "console_errors": []
+    },
+    {
+      "file": "08-manhattan-stale-mobile.png",
+      "url_path": "/t/ten_52bf92991a0305d0/",
+      "viewport": "390x844",
+      "http_status": 200,
+      "horizontal_overflow_px": 0,
+      "console_errors": []
+    },
+    {
+      "file": "09-empty-range-desktop.png",
+      "url_path": "/t/ten_b234a48144f47f06/?from=2026-01-01&to=2026-01-31",
+      "viewport": "1280x900",
+      "http_status": 200,
+      "horizontal_overflow_px": 0,
+      "console_errors": []
+    },
+    {
+      "file": "10-cross-tenant-404-desktop.png",
+      "url_path": "/t/ten_52bf92991a0305d0/",
+      "viewport": "1280x900",
+      "http_status": 404,
+      "horizontal_overflow_px": 0,
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "file": "11-no-access-mobile.png",
+      "url_path": "/",
+      "viewport": "390x844",
+      "http_status": 200,
+      "horizontal_overflow_px": 0,
+      "console_errors": []
+    },
+    {
+      "file": "12-error-state-desktop.png",
+      "url_path": "/t/ten_52bf92991a0305d0/",
+      "viewport": "1280x900",
+      "http_status": 500,
+      "horizontal_overflow_px": 0,
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+        "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+      ]
+    }
+  ],
+  "keyboard": {
+    "first_16_tab_stops": [
+      {
+        "tag": "a",
+        "text": "Skip to main content",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "a",
+        "text": "WaterWiseKids\nSponsor portal",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "a",
+        "text": "British Swim School of Jersey Shore",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "a",
+        "text": "British Swim School of Northwest Philadelphia",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "button",
+        "text": "Sign out",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "input",
+        "text": "2026-10-05",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "input",
+        "text": "2026-10-05",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "input",
+        "text": "2026-10-05",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "input",
+        "text": "2026-10-05",
+        "outline": "none 3px"
+      },
+      {
+        "tag": "input",
+        "text": "2026-11-01",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "input",
+        "text": "2026-11-01",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "input",
+        "text": "2026-11-01",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "input",
+        "text": "2026-11-01",
+        "outline": "none 3px"
+      },
+      {
+        "tag": "button",
+        "text": "Apply",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "a",
+        "text": "Last 7 days",
+        "outline": "solid 3px"
+      },
+      {
+        "tag": "a",
+        "text": "Last 28 days",
+        "outline": "solid 3px"
+      }
+    ],
+    "skip_link_moves_focus_to": "main"
+  }
+}

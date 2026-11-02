@@ -1,0 +1,661 @@
+{
+  "base_is_loopback": true,
+  "screenshots": [
+    {
+      "file": "01-swim-lessons-northwest-philadelphia-desktop.png",
+      "page_path": "/swim-lessons/northwest-philadelphia.html",
+      "viewport": "1280x900",
+      "card_box": {
+        "x": 234,
+        "y": 1983.84375,
+        "width": 812,
+        "height": 347.453125
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "02-swim-lessons-cheltenham-pa-desktop.png",
+      "page_path": "/swim-lessons/cheltenham-pa.html",
+      "viewport": "1280x900",
+      "card_box": {
+        "x": 234,
+        "y": 1452.90625,
+        "width": 812,
+        "height": 307.140625
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "03-swim-lessons-philadelphia-desktop.png",
+      "page_path": "/swim-lessons/philadelphia.html",
+      "viewport": "1280x900",
+      "card_box": {
+        "x": 234,
+        "y": 1600.0625,
+        "width": 812,
+        "height": 347.453125
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "04-swim-lessons-jersey-shore-desktop.png",
+      "page_path": "/swim-lessons/jersey-shore.html",
+      "viewport": "1280x900",
+      "card_box": {
+        "x": 234,
+        "y": 1532.078125,
+        "width": 812,
+        "height": 412.078125
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "05-swim-lessons-howell-nj-desktop.png",
+      "page_path": "/swim-lessons/howell-nj.html",
+      "viewport": "1280x900",
+      "card_box": {
+        "x": 234,
+        "y": 1280.953125,
+        "width": 812,
+        "height": 307.140625
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "06-swim-lessons-brick-nj-desktop.png",
+      "page_path": "/swim-lessons/brick-nj.html",
+      "viewport": "1280x900",
+      "card_box": {
+        "x": 234,
+        "y": 1184.984375,
+        "width": 812,
+        "height": 307.140625
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "07-swim-lessons-toms-river-nj-desktop.png",
+      "page_path": "/swim-lessons-toms-river-nj.html",
+      "viewport": "1280x900",
+      "card_box": {
+        "x": 114,
+        "y": 1909.9375,
+        "width": 692,
+        "height": 310.078125
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "08-swim-lessons-directory-new-york-desktop.png",
+      "page_path": "/swim-lessons/directory/new-york.html",
+      "viewport": "1280x900",
+      "card_box": {
+        "x": 254,
+        "y": 3392.109375,
+        "width": 772,
+        "height": 447.015625
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 3,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "01-swim-lessons-northwest-philadelphia-mobile.png",
+      "page_path": "/swim-lessons/northwest-philadelphia.html",
+      "viewport": "390x844",
+      "card_box": {
+        "x": 20,
+        "y": 3199.0625,
+        "width": 350,
+        "height": 536.90625
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "02-swim-lessons-cheltenham-pa-mobile.png",
+      "page_path": "/swim-lessons/cheltenham-pa.html",
+      "viewport": "390x844",
+      "card_box": {
+        "x": 20,
+        "y": 2430.453125,
+        "width": 350,
+        "height": 595.40625
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "03-swim-lessons-philadelphia-mobile.png",
+      "page_path": "/swim-lessons/philadelphia.html",
+      "viewport": "390x844",
+      "card_box": {
+        "x": 20,
+        "y": 2850.3125,
+        "width": 350,
+        "height": 536.90625
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "04-swim-lessons-jersey-shore-mobile.png",
+      "page_path": "/swim-lessons/jersey-shore.html",
+      "viewport": "390x844",
+      "card_box": {
+        "x": 20,
+        "y": 2758.328125,
+        "width": 350,
+        "height": 593.609375
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "05-swim-lessons-howell-nj-mobile.png",
+      "page_path": "/swim-lessons/howell-nj.html",
+      "viewport": "390x844",
+      "card_box": {
+        "x": 20,
+        "y": 2006.5625,
+        "width": 350,
+        "height": 496.984375
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "06-swim-lessons-brick-nj-mobile.png",
+      "page_path": "/swim-lessons/brick-nj.html",
+      "viewport": "390x844",
+      "card_box": {
+        "x": 20,
+        "y": 1832.203125,
+        "width": 350,
+        "height": 472.671875
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "07-swim-lessons-toms-river-nj-mobile.png",
+      "page_path": "/swim-lessons-toms-river-nj.html",
+      "viewport": "390x844",
+      "card_box": {
+        "x": 20,
+        "y": 2471.59375,
+        "width": 350,
+        "height": 502.859375
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 0,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    },
+    {
+      "file": "08-swim-lessons-directory-new-york-mobile.png",
+      "page_path": "/swim-lessons/directory/new-york.html",
+      "viewport": "390x844",
+      "card_box": {
+        "x": 24,
+        "y": 6185,
+        "width": 342,
+        "height": 734.234375
+      },
+      "horizontal_overflow_px": 0,
+      "console_errors": [],
+      "card_style": {
+        "display": "block",
+        "visibility": "visible",
+        "background": "rgb(248, 250, 252)",
+        "border": "solid"
+      },
+      "dom": {
+        "sponsored_cards": 1,
+        "sponsored_labels": 1,
+        "featured_school_blocks": 0,
+        "bss_links_outside_card": 3,
+        "bss_links_outside_card_sponsored": 0,
+        "stars_outside_card_visible": 0
+      }
+    }
+  ],
+  "nojs": [
+    {
+      "file": "nojs-swim-lessons-howell-nj-desktop.png",
+      "page_path": "/swim-lessons/howell-nj.html",
+      "visible": true,
+      "label": "Sponsored pilot",
+      "links": [
+        {
+          "href": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_88f0a7279a2972e2&utm_content=plc_bb4b763cf97d56ee",
+          "rel": "sponsored noopener"
+        },
+        {
+          "href": "https://britishswimschool.com/jersey-shore/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_88f0a7279a2972e2&utm_content=plc_bb4b763cf97d56ee",
+          "rel": "sponsored noopener"
+        }
+      ],
+      "navigated_to": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_88f0a7279a2972e2&utm_content=plc_bb4b763cf97d56ee"
+    },
+    {
+      "file": "nojs-swim-lessons-directory-new-york-desktop.png",
+      "page_path": "/swim-lessons/directory/new-york.html",
+      "visible": true,
+      "label": "Sponsored pilot",
+      "links": [
+        {
+          "href": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+          "rel": "sponsored noopener"
+        },
+        {
+          "href": "https://britishswimschool.com/manhattan/location/st-barts/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+          "rel": "sponsored noopener"
+        },
+        {
+          "href": "https://britishswimschool.com/manhattan/location/bmcc/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+          "rel": "sponsored noopener"
+        },
+        {
+          "href": "https://britishswimschool.com/manhattan/location/john-jay-college/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+          "rel": "sponsored noopener"
+        },
+        {
+          "href": "https://britishswimschool.com/manhattan/location/liberty-terrace/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+          "rel": "sponsored noopener"
+        },
+        {
+          "href": "https://britishswimschool.com/manhattan/location/wall-street/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+          "rel": "sponsored noopener"
+        },
+        {
+          "href": "https://britishswimschool.com/manhattan/location/the-continental/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+          "rel": "sponsored noopener"
+        },
+        {
+          "href": "https://britishswimschool.com/manhattan/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+          "rel": "sponsored noopener"
+        }
+      ],
+      "navigated_to": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d"
+    }
+  ],
+  "keyboard": {
+    "page_path": "/swim-lessons/howell-nj.html",
+    "card_focus_stops": [
+      {
+        "inCard": true,
+        "tag": "A",
+        "text": "LA Fitness - Howell location page (britishswimschool.com)",
+        "href": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_88f0a7279a2972e2&utm_content=plc_bb4b763cf97d56ee",
+        "outline": "solid 3px rgb(245, 158, 11)"
+      },
+      {
+        "inCard": true,
+        "tag": "A",
+        "text": "British Swim School of Jersey Shore website (britishswimschool.com)",
+        "href": "https://britishswimschool.com/jersey-shore/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_88f0a7279a2972e2&utm_content=plc_bb4b763cf97d56ee",
+        "outline": "solid 3px rgb(245, 158, 11)"
+      }
+    ],
+    "enter_navigated_to": "https://britishswimschool.com/jersey-shore/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_88f0a7279a2972e2&utm_content=plc_bb4b763cf97d56ee",
+    "enter_to_navigation_ms": 37
+  },
+  "navigation": [
+    {
+      "collector": "healthy",
+      "expected_href": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+      "landed_on": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+      "exact_href": true,
+      "click_to_navigation_ms": 74,
+      "page_errors": []
+    },
+    {
+      "collector": "abort",
+      "expected_href": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+      "landed_on": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+      "exact_href": true,
+      "click_to_navigation_ms": 63,
+      "page_errors": []
+    },
+    {
+      "collector": "hang",
+      "expected_href": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+      "landed_on": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+      "exact_href": true,
+      "click_to_navigation_ms": 60,
+      "page_errors": []
+    },
+    {
+      "collector": "http500",
+      "expected_href": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+      "landed_on": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/?utm_source=waterwisekids&utm_medium=sponsored_pilot&utm_campaign=cmp_c7fea2983961d658&utm_content=plc_10e8497ef216c69d",
+      "exact_href": true,
+      "click_to_navigation_ms": 70,
+      "page_errors": []
+    }
+  ],
+  "events": {
+    "received": 7,
+    "all_valid": true,
+    "invalid": [],
+    "by_type": {
+      "eligible_view": 2,
+      "sponsored_click": 2,
+      "outbound_click": 2,
+      "viewable_impression": 1
+    },
+    "content_types": [
+      "text/plain;charset=UTF-8"
+    ],
+    "cookie_header_seen": false,
+    "keys_seen": [
+      "campaign_id",
+      "destination_id",
+      "device_class",
+      "event_id",
+      "location_id",
+      "occurred_at",
+      "page_path",
+      "page_view_id",
+      "placement_id",
+      "referrer_category",
+      "school_id",
+      "site_host",
+      "tenant_id",
+      "type",
+      "v",
+      "viewability"
+    ],
+    "sample": [
+      {
+        "v": 1,
+        "event_id": "46d7da76-9757-49a7-9e89-c377f1e72a5c",
+        "type": "eligible_view",
+        "occurred_at": "2026-11-02T15:10:08.643Z",
+        "site_host": "localhost",
+        "page_path": "/swim-lessons/howell-nj.html",
+        "tenant_id": "ten_9d294d23e0e9841e",
+        "school_id": "sch_5b7e6d81d52e8ed5",
+        "campaign_id": "cmp_88f0a7279a2972e2",
+        "placement_id": "plc_bb4b763cf97d56ee",
+        "page_view_id": "535c93ac-0574-4dc6-9497-dcacd41c3a60",
+        "referrer_category": "direct",
+        "device_class": "desktop",
+        "location_id": "loc_3c6664af3a15b390"
+      },
+      {
+        "v": 1,
+        "event_id": "5665eb9f-bc6e-483c-bbe3-938e438367cd",
+        "type": "sponsored_click",
+        "occurred_at": "2026-11-02T15:10:09.025Z",
+        "site_host": "localhost",
+        "page_path": "/swim-lessons/howell-nj.html",
+        "tenant_id": "ten_9d294d23e0e9841e",
+        "school_id": "sch_5b7e6d81d52e8ed5",
+        "campaign_id": "cmp_88f0a7279a2972e2",
+        "placement_id": "plc_bb4b763cf97d56ee",
+        "page_view_id": "535c93ac-0574-4dc6-9497-dcacd41c3a60",
+        "referrer_category": "direct",
+        "device_class": "desktop",
+        "location_id": "loc_3c6664af3a15b390"
+      },
+      {
+        "v": 1,
+        "event_id": "1a17ebb8-2e6c-4f57-83d5-3d080795b4bd",
+        "type": "outbound_click",
+        "occurred_at": "2026-11-02T15:10:09.025Z",
+        "site_host": "localhost",
+        "page_path": "/swim-lessons/howell-nj.html",
+        "tenant_id": "ten_9d294d23e0e9841e",
+        "school_id": "sch_5b7e6d81d52e8ed5",
+        "campaign_id": "cmp_88f0a7279a2972e2",
+        "placement_id": "plc_bb4b763cf97d56ee",
+        "page_view_id": "535c93ac-0574-4dc6-9497-dcacd41c3a60",
+        "referrer_category": "direct",
+        "device_class": "desktop",
+        "destination_id": "dst_b6938518f71f3efe"
+      },
+      {
+        "v": 1,
+        "event_id": "0513aef2-12a8-4119-9fae-d54b91f2ddff",
+        "type": "eligible_view",
+        "occurred_at": "2026-11-02T15:10:09.302Z",
+        "site_host": "localhost",
+        "page_path": "/swim-lessons/directory/new-york.html",
+        "tenant_id": "ten_52bf92991a0305d0",
+        "school_id": "sch_86917fa1e77abc43",
+        "campaign_id": "cmp_c7fea2983961d658",
+        "placement_id": "plc_10e8497ef216c69d",
+        "page_view_id": "ee4b5974-28c7-4d9d-b158-f6a0a1359f29",
+        "referrer_category": "direct",
+        "device_class": "desktop"
+      }
+    ]
+  },
+  "screenshot_phase_events": {
+    "received": 32,
+    "all_valid": true,
+    "invalid": [],
+    "by_type": {
+      "eligible_view": 16,
+      "viewable_impression": 16
+    },
+    "page_views": 16
+  },
+  "nojs_events_received": 0
+}

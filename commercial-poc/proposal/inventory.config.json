@@ -1,0 +1,591 @@
+{
+  "about": "Phase 2 proposal inputs (P2-R2): the eight sponsored pages named in CLAUDE-BRIEF-PHASE2.md, the manifest placement for each, and a per-page edit plan produced by a promotional-content audit. Every edit names the exact source text it expects; the build refuses to run if any expected text is missing, duplicated or changed. IDs, destinations, addresses and URLs are NOT set here; scripts/build-proposal.mjs takes them from seed/pilot-manifest.json and refuses anything held, unknown or cross-tenant.",
+  "proposal_version": "p2r2",
+  "asset_version": "p2r2",
+  "asset_paths": {
+    "css": "/assets/css/wwk-sponsored.css",
+    "js": "/assets/js/wwk-sponsored.js"
+  },
+  "asset_repo_files": {
+    "css": "assets/css/wwk-sponsored.css",
+    "js": "assets/js/wwk-sponsored.js"
+  },
+  "label": "Sponsored pilot",
+  "disclosure": "No-fee pilot placement. WaterWiseKids may offer paid sponsored placements in the future. Sponsorship does not change directory order or editorial content.",
+  "instruction": "Check current schedules, pricing and enrollment directly with the school.",
+  "utm": {
+    "utm_source": "waterwisekids",
+    "utm_medium": "sponsored_pilot",
+    "utm_campaign": "{campaign_id}",
+    "utm_content": "{placement_id}"
+  },
+  "pages": [
+    {
+      "page_path": "/swim-lessons/northwest-philadelphia.html",
+      "slot_key": "nwp-guide-northwest-philadelphia",
+      "heading_level": 2,
+      "edits": [
+        {
+          "id": "NWP-1",
+          "op": "replace_line",
+          "line": "  <meta property=\"og:description\" content=\"Find beginner-friendly kids swim lessons in Northwest Philadelphia. Safety-first programs for infants, toddlers, and children. Book lessons at British Swim School.\">",
+          "with_lines": [
+            "  <meta property=\"og:description\" content=\"Find beginner-friendly kids swim lessons in Northwest Philadelphia. Safety-first programs for infants, toddlers, and children.\">"
+          ],
+          "classification": "promotional",
+          "finding": "og:description ends with a British Swim School booking call (\"Book lessons at British Swim School.\").",
+          "action": "neutralized: sentence removed"
+        },
+        {
+          "id": "NWP-2",
+          "op": "replace_line",
+          "line": "<meta name=\"twitter:description\" content=\"Find beginner-friendly kids swim lessons in Northwest Philadelphia. Safety-first programs for infants, toddlers, and children. Book lessons at British Swim School.\">",
+          "with_lines": [
+            "<meta name=\"twitter:description\" content=\"Find beginner-friendly kids swim lessons in Northwest Philadelphia. Safety-first programs for infants, toddlers, and children.\">"
+          ],
+          "classification": "promotional",
+          "finding": "twitter:description ends with the same British Swim School booking call.",
+          "action": "neutralized: sentence removed"
+        },
+        {
+          "id": "NWP-3",
+          "op": "replace_block",
+          "from_line": "        <!-- Featured School -->",
+          "to_line": "        </section>",
+          "expect_lines": 18,
+          "with_card": true,
+          "classification": "promotional",
+          "finding": "Unlabeled \"Featured School\" block for British Swim School of Northwest Philadelphia: ★★★★★, \"4.9/5 (218 reviews)\", \"proven results\", \"Thousands of families have trusted\", \"Instructors certified by American Red Cross and Aquatics Council\", \"Free trial lesson and consultation with parents\". None of these is in the manifest sources or the official snapshot.",
+          "action": "replaced by the labeled sponsored-pilot card (same position)"
+        },
+        {
+          "id": "NWP-4",
+          "op": "replace_block",
+          "from_line": "            <p>Thousands of Northwest Philadelphia families trust British Swim School for expert instruction and a safe learning environment. Schedule a free trial lesson and meet the certified instructors.</p>",
+          "to_line": "            <a href=\"/british-swim-school/northwest-philadelphia.html\" class=\"btn-primary\" aria-label=\"Book your free trial with British Swim School\">Book Your Free Trial</a>",
+          "expect_lines": 2,
+          "with_lines": [
+            "            <p>Compare swim schools near Northwest Philadelphia and ask each one about current schedules, class sizes and enrollment.</p>",
+            "            <a href=\"/swim-schools.html\" class=\"btn-primary\">Find Classes Near You</a>"
+          ],
+          "classification": "promotional",
+          "finding": "Final CTA banner: \"Thousands of Northwest Philadelphia families trust British Swim School ... Schedule a free trial lesson and meet the certified instructors.\" plus \"Book Your Free Trial\" link to /british-swim-school/northwest-philadelphia.html.",
+          "action": "neutralized: generic comparison sentence and the site's existing \"Find Classes Near You\" link to /swim-schools.html; heading kept"
+        }
+      ],
+      "audit_kept": [
+        {
+          "id": "NWP-K1",
+          "line_contains": "<meta name=\"description\"",
+          "classification": "editorial",
+          "finding": "Meta description \"Compare schools and read reviews.\" names no school.",
+          "action": "kept"
+        },
+        {
+          "id": "NWP-K2",
+          "line_contains": "<h2>Start Your Child's Swim Journey Today</h2>",
+          "classification": "editorial",
+          "finding": "Generic CTA heading, no school named.",
+          "action": "kept"
+        },
+        {
+          "id": "NWP-K3",
+          "line_contains": "<h2>Nearby Communities</h2>",
+          "classification": "editorial_navigation",
+          "finding": "Internal links to WWK community guides.",
+          "action": "kept"
+        }
+      ]
+    },
+    {
+      "page_path": "/swim-lessons/cheltenham-pa.html",
+      "slot_key": "nwp-guide-cheltenham",
+      "heading_level": 2,
+      "edits": [
+        {
+          "id": "CHE-1",
+          "op": "replace_line",
+          "line": "            <p>Cheltenham Township families benefit from convenient access to quality swim instruction. British Swim School serves the Cheltenham area with beginner-friendly programs for all ages, from 6-month-old infants through school-age children and adults.</p>",
+          "with_lines": [
+            "            <p>This area guide helps Cheltenham Township families compare nearby swim lesson options. Confirm each provider’s current teaching-pool address, class format, age range and availability directly before booking.</p>"
+          ],
+          "classification": "promotional",
+          "finding": "Intro paragraph names British Swim School as the Cheltenham provider (\"British Swim School serves the Cheltenham area ...\") outside any label.",
+          "action": "neutralized: replaced with the comparison wording already used on the Brick guide"
+        },
+        {
+          "id": "CHE-2",
+          "op": "replace_line",
+          "line": "            <p>The British Swim School Northwest Philadelphia location makes it easy for Cheltenham families to access professional, year-round swim lessons in heated pools. Small class sizes and certified instructors are designed so every child receives personalized attention and safety-focused instruction.</p>",
+          "with_lines": [
+            "            <p>Check the route to the actual teaching pool from your part of Cheltenham Township, and ask each school about class sizes, instructor training and year-round scheduling.</p>"
+          ],
+          "classification": "promotional",
+          "finding": "Intro paragraph: \"The British Swim School Northwest Philadelphia location makes it easy ... Small class sizes and certified instructors are designed so every child receives personalized attention\" (unsourced outcome claim).",
+          "action": "neutralized: replaced with a generic comparison checklist"
+        },
+        {
+          "id": "CHE-3",
+          "op": "replace_block",
+          "from_line": "        <section class=\"featured-school\">",
+          "to_line": "        </section>",
+          "expect_lines": 17,
+          "with_card": true,
+          "classification": "promotional",
+          "finding": "Unlabeled \"Featured School\" block for British Swim School of Northwest Philadelphia: ★★★★★, \"4.9/5 (218 reviews)\", \"heated pools ensure every child develops water confidence\", \"Free consultation and trial lesson\", \"Learn More & Book\" link to /british-swim-school/northwest-philadelphia.html.",
+          "action": "replaced by the labeled sponsored-pilot card (same position)"
+        },
+        {
+          "id": "CHE-4",
+          "op": "replace_line",
+          "line": "        \"text\": \"Yes. British Swim School of Northwest Philadelphia is conveniently located and serves Cheltenham families. The location offers classes for infants through adults with flexible scheduling and year-round instruction.\"",
+          "with_lines": [
+            "        \"text\": \"Yes. Cheltenham families can compare the options on this page and on nearby WWK lesson pages. Confirm each school’s pool location, age range and schedule directly before enrolling.\""
+          ],
+          "classification": "promotional",
+          "finding": "FAQPage JSON-LD answer 1 names British Swim School as the nearby provider.",
+          "action": "neutralized; mirrors CHE-5 so structured data equals the visible FAQ"
+        },
+        {
+          "id": "CHE-5",
+          "op": "replace_line",
+          "line": "                    <p>Yes. British Swim School of Northwest Philadelphia is conveniently located and serves Cheltenham families. The location offers classes for infants through adults with flexible scheduling and year-round instruction.</p>",
+          "with_lines": [
+            "                    <p>Yes. Cheltenham families can compare the options on this page and on nearby WWK lesson pages. Confirm each school’s pool location, age range and schedule directly before enrolling.</p>"
+          ],
+          "classification": "promotional",
+          "finding": "Visible FAQ answer 1 names British Swim School as the nearby provider.",
+          "action": "neutralized"
+        },
+        {
+          "id": "CHE-6",
+          "op": "replace_line",
+          "line": "        \"text\": \"Costs vary by program type and duration. Group lessons typically range from $120-$250 per month. Most schools, including British Swim School, offer free consultations to discuss pricing and find options that fit a family's budget.\"",
+          "with_lines": [
+            "        \"text\": \"Swim lesson prices depend on the program, the class size and how often your child swims, and schools change their rates during the year, so WaterWiseKids does not quote a local price range. Ask the school for its current monthly rate, registration fee and make-up policy before you enroll.\""
+          ],
+          "classification": "promotional",
+          "finding": "FAQPage JSON-LD cost answer: unsourced \"$120-$250 per month\" range and \"including British Swim School, offer free consultations\".",
+          "action": "neutralized with the site's existing no-price-range wording (Toms River guide); mirrors CHE-7"
+        },
+        {
+          "id": "CHE-7",
+          "op": "replace_line",
+          "line": "                    <p>Costs vary by program type and duration. Group lessons typically range from $120-$250 per month. Most schools, including British Swim School, offer free consultations to discuss pricing and find options that fit a family's budget.</p>",
+          "with_lines": [
+            "                    <p>Swim lesson prices depend on the program, the class size and how often your child swims, and schools change their rates during the year, so WaterWiseKids does not quote a local price range. Ask the school for its current monthly rate, registration fee and make-up policy before you enroll.</p>"
+          ],
+          "classification": "promotional",
+          "finding": "Visible FAQ cost answer: same unsourced range and British Swim School free-consultation offer.",
+          "action": "neutralized with the site's existing no-price-range wording"
+        },
+        {
+          "id": "CHE-8",
+          "op": "replace_line",
+          "line": "        \"text\": \"Yes. British Swim School's heated indoor pools allow year-round instruction, providing consistent skill development without seasonal gaps.\"",
+          "with_lines": [
+            "        \"text\": \"It depends on the school. Some swim schools enroll all year and others run seasonal sessions, so ask each school which months it offers lessons and whether your child can start at any time.\""
+          ],
+          "classification": "promotional",
+          "finding": "FAQPage JSON-LD year-round answer credits \"British Swim School's heated indoor pools\".",
+          "action": "neutralized with the site's existing year-round wording; mirrors CHE-9"
+        },
+        {
+          "id": "CHE-9",
+          "op": "replace_line",
+          "line": "                    <p>Yes. British Swim School's heated indoor pools allow year-round instruction, providing consistent skill development without seasonal gaps.</p>",
+          "with_lines": [
+            "                    <p>It depends on the school. Some swim schools enroll all year and others run seasonal sessions, so ask each school which months it offers lessons and whether your child can start at any time.</p>"
+          ],
+          "classification": "promotional",
+          "finding": "Visible FAQ year-round answer credits British Swim School.",
+          "action": "neutralized with the site's existing year-round wording"
+        },
+        {
+          "id": "CHE-10",
+          "op": "replace_line",
+          "line": "        \"text\": \"Look for certified instructors, small class sizes, heated pools, flexible scheduling, and a safety-focused curriculum. Top-rated options in the area meet these criteria.\"",
+          "with_lines": [
+            "        \"text\": \"Look for certified instructors, small class sizes, heated pools, flexible scheduling, and a safety-focused curriculum.\""
+          ],
+          "classification": "promotional",
+          "finding": "FAQPage JSON-LD \"What makes a good swim school?\" ends \"Top-rated options in the area meet these criteria.\" (unsourced ranking claim pointing at the featured school).",
+          "action": "sentence removed; checklist kept; mirrors CHE-11"
+        },
+        {
+          "id": "CHE-11",
+          "op": "replace_line",
+          "line": "                    <p>Look for certified instructors, small class sizes, heated pools, flexible scheduling, and a safety-focused curriculum. Top-rated options in the area meet these criteria.</p>",
+          "with_lines": [
+            "                    <p>Look for certified instructors, small class sizes, heated pools, flexible scheduling, and a safety-focused curriculum.</p>"
+          ],
+          "classification": "promotional",
+          "finding": "Visible FAQ ends with the same unsourced \"Top-rated options\" claim.",
+          "action": "sentence removed; checklist kept"
+        },
+        {
+          "id": "CHE-12",
+          "op": "replace_block",
+          "from_line": "            <p>British Swim School of Northwest Philadelphia welcomes Cheltenham families. Schedule a free consultation and trial lesson.</p>",
+          "to_line": "            <a href=\"/british-swim-school/northwest-philadelphia.html\" class=\"btn-primary\" aria-label=\"Book your free trial with British Swim School\">Book Your Free Trial</a>",
+          "expect_lines": 2,
+          "with_lines": [
+            "            <p>Compare swim schools near Cheltenham Township and ask each one about current schedules, class sizes and enrollment.</p>",
+            "            <a href=\"/swim-schools.html\" class=\"btn-primary\">Find Classes Near You</a>"
+          ],
+          "classification": "promotional",
+          "finding": "Final CTA banner: \"British Swim School of Northwest Philadelphia welcomes Cheltenham families. Schedule a free consultation and trial lesson.\" plus \"Book Your Free Trial\" link to /british-swim-school/northwest-philadelphia.html.",
+          "action": "neutralized: generic comparison sentence and \"Find Classes Near You\" link; heading kept"
+        }
+      ],
+      "audit_kept": [
+        {
+          "id": "CHE-K1",
+          "line_contains": "<meta name=\"description\"",
+          "classification": "editorial",
+          "finding": "Meta/OG/Twitter descriptions \"Compare schools and book today.\" name no school.",
+          "action": "kept"
+        },
+        {
+          "id": "CHE-K2",
+          "line_contains": "<h2>Other Options in the Area</h2>",
+          "classification": "editorial",
+          "finding": "Generic community-pool and YMCA listings.",
+          "action": "kept"
+        },
+        {
+          "id": "CHE-K3",
+          "line_contains": "<h2>Start Swimming Today</h2>",
+          "classification": "editorial",
+          "finding": "Generic CTA heading.",
+          "action": "kept"
+        }
+      ]
+    },
+    {
+      "page_path": "/swim-lessons/philadelphia.html",
+      "slot_key": "nwp-guide-philadelphia",
+      "heading_level": 2,
+      "edits": [
+        {
+          "id": "PHL-1",
+          "op": "replace_block",
+          "from_line": "        <!-- Featured School -->",
+          "to_line": "        </section>",
+          "expect_lines": 18,
+          "with_card": true,
+          "classification": "promotional",
+          "finding": "Unlabeled \"Featured School\" block (\"Featured School: Northwest Philadelphia\"): ★★★★★, \"4.9/5 (218 reviews)\", \"This top-rated swim school\", \"Proven curriculum\", \"Learn More & Book a Lesson\" link to /british-swim-school/northwest-philadelphia.html.",
+          "action": "replaced by the labeled sponsored-pilot card (same position)"
+        }
+      ],
+      "audit_kept": [
+        {
+          "id": "PHL-K1",
+          "line_contains": "Philadelphia has several highly-rated swim schools",
+          "classification": "editorial",
+          "finding": "FAQ (visible and JSON-LD) tells parents to compare ratings and reviews in the directory; names no school.",
+          "action": "kept"
+        },
+        {
+          "id": "PHL-K2",
+          "line_contains": "<h2>Other Swim Schools in Philadelphia</h2>",
+          "classification": "editorial",
+          "finding": "Generic other-options listings, no BSS.",
+          "action": "kept"
+        },
+        {
+          "id": "PHL-K3",
+          "line_contains": "Philadelphia offers excellent swim instruction options.",
+          "classification": "editorial",
+          "finding": "Final CTA is already neutral (\"Find Classes Near You\" → /swim-schools.html).",
+          "action": "kept"
+        }
+      ]
+    },
+    {
+      "page_path": "/swim-lessons/jersey-shore.html",
+      "slot_key": "js-guide-jersey-shore",
+      "heading_level": 2,
+      "edits": [
+        {
+          "id": "JS-1",
+          "op": "replace_line",
+          "line": "            <p>British Swim School of Jersey Shore serves families throughout Monmouth County, Ocean County, and surrounding shore communities with professional, safety-first swim lessons for all ages. Convenient locations and year-round programming make it easy to find quality instruction regardless of the season.</p>",
+          "with_lines": [
+            "            <p>This guide helps families in Monmouth County, Ocean County and nearby shore communities compare swim lesson options. Confirm each provider’s current teaching-pool address, class format, age range and availability directly before booking.</p>"
+          ],
+          "classification": "promotional",
+          "finding": "Intro paragraph: \"British Swim School of Jersey Shore serves families throughout Monmouth County, Ocean County ... Convenient locations and year-round programming make it easy\".",
+          "action": "neutralized: comparison wording already used on the Brick guide"
+        },
+        {
+          "id": "JS-2",
+          "op": "replace_block",
+          "from_line": "        <section class=\"featured-school\">",
+          "to_line": "        </section>",
+          "expect_lines": 17,
+          "with_card": true,
+          "classification": "promotional",
+          "finding": "Unlabeled \"Featured School\" block for British Swim School of Jersey Shore: ★★★★★, \"4.8/5 (186 reviews)\", \"trusted leader\", \"proven curriculum\", \"Certified instructors with beach and open-water expertise\", \"Free consultation and trial lesson\".",
+          "action": "replaced by the labeled sponsored-pilot card (same position)"
+        }
+      ],
+      "audit_kept": [
+        {
+          "id": "JS-K1",
+          "line_contains": "The Jersey Shore is one of the most popular family vacation",
+          "classification": "editorial",
+          "finding": "Generic regional intro, no school named.",
+          "action": "kept"
+        },
+        {
+          "id": "JS-K2",
+          "line_contains": "The Jersey Shore offers excellent swim instruction options.",
+          "classification": "editorial",
+          "finding": "Final CTA is already neutral (\"Find Classes Near You\").",
+          "action": "kept"
+        }
+      ]
+    },
+    {
+      "page_path": "/swim-lessons/howell-nj.html",
+      "slot_key": "js-guide-howell",
+      "heading_level": 2,
+      "edits": [
+        {
+          "id": "HOW-1",
+          "op": "replace_block",
+          "from_line": "        <section class=\"featured-school\">",
+          "to_line": "        </section>",
+          "expect_lines": 17,
+          "with_card": true,
+          "classification": "promotional",
+          "finding": "Unlabeled \"Featured School\" block for British Swim School of Jersey Shore: ★★★★★, \"4.8/5 (186 reviews)\", \"proven curriculum\", \"Free consultation and trial lesson\".",
+          "action": "replaced by the labeled sponsored-pilot card (same position)"
+        },
+        {
+          "id": "HOW-2",
+          "op": "replace_block",
+          "from_line": "            <p>British Swim School welcomes Howell families. Schedule your free consultation and trial lesson.</p>",
+          "to_line": "            <a href=\"/british-swim-school/jersey-shore.html\" class=\"btn-primary\" aria-label=\"Book your free trial with British Swim School\">Book Your Free Trial</a>",
+          "expect_lines": 2,
+          "with_lines": [
+            "            <p>Compare swim schools near Howell and ask each one about current schedules, class sizes and enrollment.</p>",
+            "            <a href=\"/swim-schools.html\" class=\"btn-primary\">Find Classes Near You</a>"
+          ],
+          "classification": "promotional",
+          "finding": "Final CTA banner: \"British Swim School welcomes Howell families. Schedule your free consultation and trial lesson.\" plus \"Book Your Free Trial\" link to /british-swim-school/jersey-shore.html.",
+          "action": "neutralized: generic comparison sentence and \"Find Classes Near You\" link; heading kept"
+        }
+      ],
+      "audit_kept": [
+        {
+          "id": "HOW-K1",
+          "line_contains": "From 6-month-old infants to school-age children",
+          "classification": "editorial",
+          "finding": "Generic intro (\"expert, safety-first instruction is available in heated pools ... certified instructors\") names no school. Unsourced generic editorial wording; flagged for editorial review, not a sponsor claim.",
+          "action": "kept (flagged)"
+        },
+        {
+          "id": "HOW-K2",
+          "line_contains": "<h2>Nearby Communities</h2>",
+          "classification": "editorial_navigation",
+          "finding": "Internal links to WWK community guides.",
+          "action": "kept"
+        }
+      ]
+    },
+    {
+      "page_path": "/swim-lessons/brick-nj.html",
+      "slot_key": "js-guide-brick",
+      "heading_level": 2,
+      "edits": [
+        {
+          "id": "BRK-1",
+          "op": "replace_block",
+          "from_line": "        <section class=\"featured-school\">",
+          "to_line": "        </section>",
+          "expect_lines": 17,
+          "with_card": true,
+          "classification": "promotional",
+          "finding": "Unlabeled \"Featured School\" block for British Swim School of Jersey Shore: ★★★★★, \"4.8/5 (186 reviews)\", \"proven curriculum and certified instructors\", \"Free consultation and trial lesson\".",
+          "action": "replaced by the labeled sponsored-pilot card (same position)"
+        },
+        {
+          "id": "BRK-2",
+          "op": "replace_block",
+          "from_line": "            <p>British Swim School welcomes Brick families. Schedule your free consultation and trial lesson.</p>",
+          "to_line": "            <a href=\"/british-swim-school/jersey-shore.html\" class=\"btn-primary\" aria-label=\"Book your free trial with British Swim School\">Book Your Free Trial</a>",
+          "expect_lines": 2,
+          "with_lines": [
+            "            <p>Compare swim schools near Brick and ask each one about current schedules, class sizes and enrollment.</p>",
+            "            <a href=\"/swim-schools.html\" class=\"btn-primary\">Find Classes Near You</a>"
+          ],
+          "classification": "promotional",
+          "finding": "Final CTA banner: \"British Swim School welcomes Brick families. Schedule your free consultation and trial lesson.\" plus \"Book Your Free Trial\" link to /british-swim-school/jersey-shore.html.",
+          "action": "neutralized: generic comparison sentence and \"Find Classes Near You\" link; heading kept"
+        }
+      ],
+      "audit_kept": [
+        {
+          "id": "BRK-K1",
+          "line_contains": "Explore other Jersey Shore locations",
+          "classification": "editorial_navigation",
+          "finding": "Related-resources link to WWK's own Asbury Park city guide (/swim-lessons/asbury-park-nj.html). This is a WWK page, not the held BSS Asbury Park venue, and it is not promoted or tracked.",
+          "action": "kept"
+        },
+        {
+          "id": "BRK-K2",
+          "line_contains": "trial-lesson questions",
+          "classification": "editorial_navigation",
+          "finding": "Comparison table links to WWK education guides (lesson-cost guide, trial-lesson questions).",
+          "action": "kept"
+        }
+      ]
+    },
+    {
+      "page_path": "/swim-lessons-toms-river-nj.html",
+      "slot_key": "js-guide-toms-river",
+      "heading_level": 2,
+      "edits": [
+        {
+          "id": "TR-1",
+          "op": "replace_text",
+          "line_contains": "<section class=\"page-hero compact\">",
+          "find": " Families in the area can explore British Swim School of Jersey Shore through the school links on this page.",
+          "replace": "",
+          "classification": "promotional",
+          "finding": "Hero evidence box ends by pointing readers to British Swim School of Jersey Shore \"through the school links on this page\".",
+          "action": "sentence removed; cited AAP/CDC text kept"
+        },
+        {
+          "id": "TR-2",
+          "op": "replace_line",
+          "line": "<p>You can keep reading WaterWiseKids local pages or go straight to British Swim School of Jersey Shore.</p>",
+          "with_lines": [
+            "<p>You can keep reading WaterWiseKids local pages.</p>"
+          ],
+          "classification": "promotional",
+          "finding": "\"Next step\" box: \"... or go straight to British Swim School of Jersey Shore.\"",
+          "action": "neutralized: BSS clause removed"
+        },
+        {
+          "id": "TR-3",
+          "op": "replace_line",
+          "line": "<div class=\"hero-actions\"><a class=\"button\" href=\"/swim-lessons-jersey-shore.html\">Jersey Shore lesson pages</a><a class=\"button-secondary\" href=\"https://britishswimschool.com/jersey-shore/\" aria-label=\"Visit British Swim School of Jersey Shore\">Visit Jersey Shore</a></div>",
+          "with_lines": [
+            "<div class=\"hero-actions\"><a class=\"button\" href=\"/swim-lessons-jersey-shore.html\">Jersey Shore lesson pages</a></div>"
+          ],
+          "classification": "promotional",
+          "finding": "\"Next step\" box: unlabeled \"Visit Jersey Shore\" button to https://britishswimschool.com/jersey-shore/ (no rel=\"sponsored\", no UTMs).",
+          "action": "BSS link removed; internal \"Jersey Shore lesson pages\" link kept"
+        },
+        {
+          "id": "TR-4",
+          "op": "insert_card",
+          "before_line": "<a class=\"back-link\" href=\"/find-swim-lessons.html\">← Back</a>",
+          "classification": "sponsored",
+          "finding": "Card position: article column, after the \"Next step\" box, before the Back link and FAQ.",
+          "action": "labeled sponsored-pilot card inserted"
+        },
+        {
+          "id": "TR-5",
+          "op": "replace_text",
+          "line_contains": "<span class=\"kicker\">Nearby next step</span>",
+          "find": "can keep browsing local guides or visit the school website directly.",
+          "replace": "can keep browsing local guides or review questions to ask a swim school.",
+          "classification": "promotional",
+          "finding": "Sidebar \"Nearby next step\" text sends readers to \"the school website directly\" (the unlabeled BSS sidebar card).",
+          "action": "neutralized to match the card's existing \"Questions to ask a swim school\" link"
+        },
+        {
+          "id": "TR-6",
+          "op": "replace_text",
+          "line_contains": "<span class=\"kicker\">School website</span>",
+          "find": "<div class=\"sidebar-card\"><span class=\"kicker\">School website</span><h3>British Swim School of Jersey Shore</h3><p>Families in this region can explore lesson details, schedules, and locations through British Swim School of Jersey Shore.</p><div class=\"hero-actions\"><a class=\"button\" href=\"https://britishswimschool.com/jersey-shore/\" aria-label=\"Visit British Swim School of Jersey Shore\">Visit Jersey Shore</a><a class=\"button-secondary\" href=\"https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/\" aria-label=\"British Swim School Toms River location page\">Toms River location</a></div></div>",
+          "replace": "",
+          "classification": "promotional",
+          "finding": "Unlabeled \"School website\" sidebar card for British Swim School of Jersey Shore with \"Visit Jersey Shore\" and \"Toms River location\" links to britishswimschool.com (no rel=\"sponsored\", no UTMs).",
+          "action": "removed; the labeled card is the only sponsor surface"
+        }
+      ],
+      "audit_kept": [
+        {
+          "id": "TR-K1",
+          "line_contains": "<li><a href=\"/swim-lessons-brick-nj.html\">Swim Lessons in Brick, NJ</a></li>",
+          "classification": "editorial_navigation",
+          "finding": "Related WWK guides list.",
+          "action": "kept"
+        },
+        {
+          "id": "TR-K2",
+          "line_contains": "<span class=\"kicker\">Helpful reading</span>",
+          "classification": "editorial_navigation",
+          "finding": "Sidebar \"Helpful reading\" WWK education links.",
+          "action": "kept"
+        },
+        {
+          "id": "TR-K3",
+          "line_contains": "so WaterWiseKids does not quote a local price range",
+          "classification": "editorial",
+          "finding": "FAQ already refuses to quote local prices.",
+          "action": "kept"
+        }
+      ]
+    },
+    {
+      "page_path": "/swim-lessons/directory/new-york.html",
+      "slot_key": "man-directory-new-york",
+      "heading_level": 3,
+      "edits": [
+        {
+          "id": "NY-1",
+          "op": "insert_card",
+          "after_line": "    <p style=\"font-size:.95rem;color:#475569;margin:0 0 1rem;\">Listings are compiled from official school websites and are provided for comparison only. This directory is curated: it is not a complete list of every swim school in an area, in some areas we list only selected schools, and inclusion is not a ranking. Confirm current schedules and pricing directly with the school. For the national numbers behind our safety guidance, see the <a href=\"/statistics/\">child drowning statistics dashboard</a>. Run a swim school in New York? <a href=\"/for-swim-schools/\">Add or update your listing</a>.</p>",
+          "classification": "sponsored",
+          "finding": "Territory-level Manhattan card in section#cities after the \"inclusion is not a ranking\" disclaimer, outside #schoolsList.",
+          "action": "labeled sponsored-pilot card inserted"
+        }
+      ],
+      "audit_kept": [
+        {
+          "id": "NY-K1",
+          "line_contains": "\"@type\":\"ItemList\"",
+          "classification": "organic_directory",
+          "finding": "ItemList JSON-LD lists British Swim School of Brooklyn, Long Island and Manhattan in directory order with britishswimschool.com URLs.",
+          "action": "kept unchanged (organic listing)"
+        },
+        {
+          "id": "NY-K2",
+          "line_contains": "id=\"school-british-swim-school-of-manhattan-ny\"",
+          "classification": "organic_directory",
+          "finding": "Organic school-cards for British Swim School of Brooklyn, Long Island and Manhattan (\"Visit site\" links, rel=\"noopener\"). Brooklyn and Long Island are not pilot tenants.",
+          "action": "kept unchanged (organic listing and order)"
+        },
+        {
+          "id": "NY-K3",
+          "line_contains": "Listings cover national and regional programs including",
+          "classification": "organic_directory",
+          "finding": "Coverage summary and city list name British Swim School among other brands.",
+          "action": "kept unchanged"
+        },
+        {
+          "id": "NY-K4",
+          "line_contains": "What Are the Top-Rated Kids Swim Schools in Brooklyn and Manhattan, NY?",
+          "classification": "editorial",
+          "finding": "Editorial FAQ says there is no single top-rated school and star ratings are unverified; mentions the organic BSS listings.",
+          "action": "kept unchanged"
+        },
+        {
+          "id": "NY-K5",
+          "line_contains": "data-rating=\"5\" aria-label=\"5 stars\"",
+          "classification": "editorial",
+          "finding": "Site-wide visitor review form star buttons (UI controls, not a rating claim about any school).",
+          "action": "kept unchanged"
+        }
+      ]
+    }
+  ],
+  "neutral_cta_href": "/swim-schools.html"
+}

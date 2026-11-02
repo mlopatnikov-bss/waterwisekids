@@ -1,0 +1,32 @@
+// wwk-commercial-collector-staging: PUBLIC collector Worker (POST /v1/collect, GET /v1/health only).
+// Reviewed staging deployment configuration. Contains placeholders only: no account ID, no real
+// D1 database ID, no routes or custom domains, no secrets. See ../DEPLOYMENT-WORKSHEET.md for the
+// values supplied at action time. Local scripts derive a local-only copy; they never edit this file.
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "wwk-commercial-collector-staging",
+  "main": "../src/collector/entry.mjs",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "send_metrics": false,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "wwk-commercial-staging",
+      "database_id": "00000000-0000-4000-8000-000000000000",
+      "migrations_dir": "../migrations"
+    }
+  ],
+  "vars": {
+    "COLLECTOR_ENV": "staging",
+    "ALLOWED_ORIGIN": "https://www.waterwisekids.com"
+  },
+  "observability": {
+    "enabled": true,
+    "redact_query_string": true,
+    "logs": { "enabled": true, "invocation_logs": false },
+    "traces": { "enabled": false }
+  }
+}

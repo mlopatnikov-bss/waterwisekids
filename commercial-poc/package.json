@@ -1,0 +1,21 @@
+{
+  "name": "wwk-commercial-poc",
+  "version": "0.1.0",
+  "private": true,
+  "description": "WaterWiseKids sponsored-listing commercial pilot and reporting portal.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "manifest": "node scripts/build-manifest.mjs",
+    "seed": "node scripts/seed.mjs",
+    "serve": "node scripts/serve.mjs",
+    "health": "node scripts/health.mjs",
+    "test": "node --test --test-reporter=spec test/*.test.mjs",
+    "check": "node scripts/static-checks.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
