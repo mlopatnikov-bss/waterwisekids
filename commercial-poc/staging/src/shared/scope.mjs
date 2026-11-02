@@ -102,6 +102,40 @@ export class TenantScope {
     return Object.fromEntries(rows.map((r) => [r.conversion_type, Number(r.n)]));
   }
 
+  /** Reported conversions per attribution basis and type. Bases are separate measures and are never summed. Pilot reporting only. */
+  async conversionsByBasis(from, to) {
+    const rows = await this.#all(`SELECT attribution_basis, conversion_type, SUM(count) AS n FROM conversion_records
+      WHERE tenant_id = ? AND conversion_date BETWEEN ? AND ? GROUP BY attribution_basis, conversion_type ORDER BY attribution_basis, conversion_type`, from, to);
+    const out = {};
+    for (const r of rows) (out[r.attribution_basis] ??= {})[r.conversion_type] = Number(r.n);
+    return out;
+  }
+
+  /**
+   * Pilot-only fair comparison: totals per placement kind, restricted to LOCATION-PAIRED placements —
+   * a sponsored card and an ordinary listing of this tenant that feature the same location. Sponsored
+   * cards with no featured location (regional/territory pages) and unpaired listings are excluded.
+   */
+  async pairedComparisonTotals(from, to) {
+    const rows = await this.#all(`SELECT p.kind AS kind, dm.metric AS metric, SUM(dm.value) AS value
+      FROM daily_metrics dm JOIN placements p ON p.placement_id = dm.placement_id AND p.tenant_id = dm.tenant_id
+      WHERE dm.tenant_id = ? AND dm.metric_date BETWEEN ? AND ? AND p.kind IN ('sponsored_card', 'organic_listing') AND p.featured_location_id IN (
+        SELECT s.featured_location_id FROM placements s JOIN placements o ON o.tenant_id = s.tenant_id AND o.featured_location_id = s.featured_location_id
+        WHERE s.tenant_id = dm.tenant_id AND s.kind = 'sponsored_card' AND o.kind = 'organic_listing' AND s.featured_location_id IS NOT NULL)
+      GROUP BY p.kind, dm.metric`, from, to);
+    const out = { sponsored_card: {}, organic_listing: {} };
+    for (const r of rows) out[r.kind][r.metric] = Number(r.value);
+    return out;
+  }
+
+  /** Locations that have both a featured sponsored card and an ordinary-listing control (pilot comparison scope). */
+  pairedLocations() {
+    return this.#all(`SELECT DISTINCT l.location_id, l.display_name FROM locations l
+      JOIN placements s ON s.tenant_id = l.tenant_id AND s.featured_location_id = l.location_id AND s.kind = 'sponsored_card'
+      JOIN placements o ON o.tenant_id = l.tenant_id AND o.featured_location_id = l.location_id AND o.kind = 'organic_listing'
+      WHERE l.tenant_id = ? ORDER BY l.display_name`);
+  }
+
   lastConversionImport() {
     return this.#get('SELECT MAX(received_at) AS received_at, MAX(conversion_date) AS last_date FROM conversion_records r JOIN conversion_imports i ON i.import_id = r.import_id AND i.tenant_id = r.tenant_id WHERE r.tenant_id = ?');
   }

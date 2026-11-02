@@ -1,0 +1,78 @@
+{
+  "schema": "wwk.control-plan",
+  "schema_version": 1,
+  "definition_key": "bss-pilot-2026",
+  "prepared_on": "2026-11-02",
+  "client": {
+    "asset_version": "ol1"
+  },
+  "tag_ordinary_links": false,
+  "tenants": [
+    {
+      "tenant_key": "northwest-philadelphia",
+      "campaign": {
+        "campaign_key": "ordinary-listing-control-2026",
+        "campaign_id": "cmp_8f06c46a4a1e41f2",
+        "starts_on": "2026-11-02",
+        "ends_on": "2026-12-31"
+      },
+      "listings": [
+        {
+          "location_key": "la-fitness-cheltenham",
+          "placement_id": "plc_b9c9377c3e32a761",
+          "page_path": "/swim-lessons/directory/pennsylvania.html",
+          "row_id": "school-british-swim-school-at-la-fitness-cheltenham-pa"
+        }
+      ]
+    },
+    {
+      "tenant_key": "jersey-shore",
+      "campaign": {
+        "campaign_key": "ordinary-listing-control-2026",
+        "campaign_id": "cmp_91a15f49d66bdeef",
+        "starts_on": "2026-11-02",
+        "ends_on": "2026-12-31"
+      },
+      "listings": [
+        {
+          "location_key": "la-fitness-howell",
+          "placement_id": "plc_d6a6673732411e04",
+          "page_path": "/swim-lessons/directory/new-jersey.html",
+          "row_id": "school-british-swim-school-at-la-fitness-howell-nj"
+        },
+        {
+          "location_key": "la-fitness-brick",
+          "placement_id": "plc_4b7b1d1ff2537474",
+          "page_path": "/swim-lessons/directory/new-jersey.html",
+          "row_id": "school-british-swim-school-at-la-fitness-brick-nj"
+        },
+        {
+          "location_key": "la-fitness-toms-river",
+          "placement_id": "plc_f5fa457aa17e66b2",
+          "page_path": "/swim-lessons/directory/new-jersey.html",
+          "row_id": "school-british-swim-school-at-la-fitness-toms-river-nj"
+        }
+      ]
+    }
+  ],
+  "approvals": [
+    {
+      "gate": "editorial_review",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/onboarding/evidence/control-release-2026-11-02.md"
+    },
+    {
+      "gate": "preview_qa",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/onboarding/evidence/control-release-2026-11-02.md"
+    },
+    {
+      "gate": "activation",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/onboarding/evidence/control-release-2026-11-02.md"
+    }
+  ]
+}

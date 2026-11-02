@@ -74,6 +74,14 @@ Follow `portal-access-checklist.md` from the packet:
 3. Publish the page patches with the normal reviewed site publish process (PR → review → merge). This tool does not deploy.
 4. Within 15 minutes: load each page, confirm one `eligible_view` per page load arrives (portal "Data status" freshness), click one card link and confirm an `outbound_click`.
 
+### Same day, after activation — ordinary-listing control (optional for the first sponsor, recommended)
+
+Follow `MEASUREMENT.md` §1. Set `starts_on` in `definitions/<key>.controls.json` to the owner-approved start (never before the plan date or the sponsored start; the pilot uses 2026-11-02), run `packet … --controls definitions/<key>.controls.json --write`, preview the directory pages (rows must look identical), then **Gate `activation` (Approver)**: apply `control/d1-control-preflight.sql` (zero rows), `control/d1-control-upsert.sql`, and publish `control/patches/*.diff` through the normal reviewed process.
+
+### Weekly — school-reported totals (Operator + Sponsor)
+
+Follow `MEASUREMENT.md` §2. The sponsor (or Alfie) produces an aggregate totals file per tenant. Keep it and the location map **outside the repo**. Run `import-plan` (dry-run), read the per-basis totals back to the sponsor, then write with `--out <outside repo>`. Apply `d1-import-preflight.sql` (zero rows), then `d1-import.sql`. Re-running is safe.
+
 ### 15:30 — Monitor (Operator, rest of day + daily)
 
 - Day 0: portal Data status shows no `critical`; ingest rejections < 5 %; duplicates < 10 %.
