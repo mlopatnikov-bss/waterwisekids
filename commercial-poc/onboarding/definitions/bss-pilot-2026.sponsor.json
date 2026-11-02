@@ -1,0 +1,466 @@
+{
+  "schema": "wwk.sponsor-definition",
+  "schema_version": 1,
+  "definition_key": "bss-pilot-2026",
+  "prepared_on": "2026-11-02",
+  "site": {
+    "host": "www.waterwisekids.com",
+    "collector_url": "https://events.waterwisekids.com/v1/collect",
+    "component_version": "p2r2"
+  },
+  "destination_hosts": [
+    "britishswimschool.com"
+  ],
+  "markets": [
+    {
+      "market_key": "pa-northwest-philadelphia",
+      "state": "PA",
+      "label": "Northwest Philadelphia",
+      "place_names": [
+        "Northwest Philadelphia"
+      ]
+    },
+    {
+      "market_key": "pa-philadelphia",
+      "state": "PA",
+      "label": "Philadelphia",
+      "place_names": [
+        "Philadelphia"
+      ]
+    },
+    {
+      "market_key": "pa-cheltenham",
+      "state": "PA",
+      "label": "Cheltenham",
+      "place_names": [
+        "Cheltenham"
+      ]
+    },
+    {
+      "market_key": "nj-jersey-shore",
+      "state": "NJ",
+      "label": "Jersey Shore",
+      "place_names": [
+        "Jersey Shore"
+      ]
+    },
+    {
+      "market_key": "nj-howell",
+      "state": "NJ",
+      "label": "Howell",
+      "place_names": [
+        "Howell"
+      ]
+    },
+    {
+      "market_key": "nj-brick",
+      "state": "NJ",
+      "label": "Brick",
+      "place_names": [
+        "Brick"
+      ]
+    },
+    {
+      "market_key": "nj-toms-river",
+      "state": "NJ",
+      "label": "Toms River",
+      "place_names": [
+        "Toms River"
+      ]
+    }
+  ],
+  "page_inventory": [
+    {
+      "page_path": "/swim-lessons/northwest-philadelphia.html",
+      "market_key": "pa-northwest-philadelphia",
+      "page_status": "existing"
+    },
+    {
+      "page_path": "/swim-lessons/cheltenham-pa.html",
+      "market_key": "pa-cheltenham",
+      "page_status": "existing"
+    },
+    {
+      "page_path": "/swim-lessons/philadelphia.html",
+      "market_key": "pa-philadelphia",
+      "page_status": "existing"
+    },
+    {
+      "page_path": "/swim-lessons/jersey-shore.html",
+      "market_key": "nj-jersey-shore",
+      "page_status": "existing"
+    },
+    {
+      "page_path": "/swim-lessons/howell-nj.html",
+      "market_key": "nj-howell",
+      "page_status": "existing"
+    },
+    {
+      "page_path": "/swim-lessons/brick-nj.html",
+      "market_key": "nj-brick",
+      "page_status": "existing"
+    },
+    {
+      "page_path": "/swim-lessons-toms-river-nj.html",
+      "market_key": "nj-toms-river",
+      "page_status": "existing"
+    }
+  ],
+  "tenants": [
+    {
+      "tenant_key": "northwest-philadelphia",
+      "tenant_id": "ten_b234a48144f47f06",
+      "display_name": "British Swim School of Northwest Philadelphia",
+      "timezone": "America/New_York",
+      "school": {
+        "school_id": "sch_ca091723c9670adc",
+        "display_name": "British Swim School of Northwest Philadelphia",
+        "territory_url": "https://britishswimschool.com/northwest-philadelphia/"
+      },
+      "locations": [
+        {
+          "location_key": "la-fitness-cheltenham",
+          "location_id": "loc_d3c46e7d6efc62f7",
+          "display_name": "LA Fitness - Cheltenham",
+          "market_key": "pa-cheltenham",
+          "official_url": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/",
+          "address_display": "2401 W Cheltenham Ave Ste M3, Philadelphia, PA 19150",
+          "facts": [
+            {
+              "fact_key": "address",
+              "value": "2401 W Cheltenham Ave Ste M3, Philadelphia, PA 19150",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "location_page",
+              "value": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/northwest-philadelphia/location/la-fitness-cheltenham/",
+              "observed_on": "2026-11-02"
+            }
+          ]
+        }
+      ],
+      "destinations": [
+        {
+          "destination_id": "dst_472a0f5600605280",
+          "kind": "territory",
+          "location_key": null
+        },
+        {
+          "destination_id": "dst_14bd700cb26d66c4",
+          "kind": "location",
+          "location_key": "la-fitness-cheltenham"
+        }
+      ],
+      "campaign": {
+        "campaign_key": "sponsored-pilot-2026",
+        "campaign_id": "cmp_e4ca517dbb784119",
+        "kind": "sponsored_pilot",
+        "display_name": "Sponsored pilot",
+        "disclosure_label": "Sponsored pilot",
+        "disclosure_text": "No-fee pilot placement. WaterWiseKids may offer paid sponsored placements in the future. Sponsorship does not change directory order or editorial content.",
+        "starts_on": "2026-11-02",
+        "ends_on": "2026-12-31",
+        "price_cents": 0,
+        "currency": "USD"
+      },
+      "placements": [
+        {
+          "slot_key": "nwp-guide-northwest-philadelphia",
+          "placement_id": "plc_5093a0465c8f895c",
+          "page_path": "/swim-lessons/northwest-philadelphia.html",
+          "market_key": "pa-northwest-philadelphia",
+          "variant": "venue_list",
+          "location_keys": [
+            "la-fitness-cheltenham"
+          ],
+          "indent": 8,
+          "anchor": {
+            "type": "existing_marker",
+            "text": null
+          }
+        },
+        {
+          "slot_key": "nwp-guide-cheltenham",
+          "placement_id": "plc_759c890d4a301219",
+          "page_path": "/swim-lessons/cheltenham-pa.html",
+          "market_key": "pa-cheltenham",
+          "variant": "featured_location",
+          "location_keys": [
+            "la-fitness-cheltenham"
+          ],
+          "indent": 8,
+          "anchor": {
+            "type": "existing_marker",
+            "text": null
+          }
+        },
+        {
+          "slot_key": "nwp-guide-philadelphia",
+          "placement_id": "plc_5b088d912b123472",
+          "page_path": "/swim-lessons/philadelphia.html",
+          "market_key": "pa-philadelphia",
+          "variant": "venue_list",
+          "location_keys": [
+            "la-fitness-cheltenham"
+          ],
+          "indent": 8,
+          "anchor": {
+            "type": "existing_marker",
+            "text": null
+          }
+        }
+      ]
+    },
+    {
+      "tenant_key": "jersey-shore",
+      "tenant_id": "ten_9d294d23e0e9841e",
+      "display_name": "British Swim School of Jersey Shore",
+      "timezone": "America/New_York",
+      "school": {
+        "school_id": "sch_5b7e6d81d52e8ed5",
+        "display_name": "British Swim School of Jersey Shore",
+        "territory_url": "https://britishswimschool.com/jersey-shore/"
+      },
+      "locations": [
+        {
+          "location_key": "la-fitness-howell",
+          "location_id": "loc_3c6664af3a15b390",
+          "display_name": "LA Fitness - Howell",
+          "market_key": "nj-howell",
+          "official_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/",
+          "address_display": "90 Lanes Mill Road, Howell, NJ 07731",
+          "facts": [
+            {
+              "fact_key": "address",
+              "value": "90 Lanes Mill Road, Howell, NJ 07731",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "location_page",
+              "value": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/",
+              "observed_on": "2026-11-02"
+            }
+          ]
+        },
+        {
+          "location_key": "la-fitness-brick",
+          "location_id": "loc_b5b7d777c4bea81a",
+          "display_name": "LA Fitness - Brick",
+          "market_key": "nj-brick",
+          "official_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-brick/",
+          "address_display": "1 Brick Plaza, Brick Township, NJ 08723",
+          "facts": [
+            {
+              "fact_key": "address",
+              "value": "1 Brick Plaza, Brick Township, NJ 08723",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-brick/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "location_page",
+              "value": "https://britishswimschool.com/jersey-shore/location/la-fitness-brick/",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-brick/",
+              "observed_on": "2026-11-02"
+            }
+          ]
+        },
+        {
+          "location_key": "la-fitness-toms-river",
+          "location_id": "loc_096d7703f7c65cd6",
+          "display_name": "LA Fitness - Toms River",
+          "market_key": "nj-toms-river",
+          "official_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/",
+          "address_display": "1207 Hooper Ave, Toms River, NJ 08753",
+          "facts": [
+            {
+              "fact_key": "address",
+              "value": "1207 Hooper Ave, Toms River, NJ 08753",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "location_page",
+              "value": "https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/",
+              "observed_on": "2026-11-02"
+            }
+          ]
+        }
+      ],
+      "destinations": [
+        {
+          "destination_id": "dst_b6938518f71f3efe",
+          "kind": "territory",
+          "location_key": null
+        },
+        {
+          "destination_id": "dst_cd581fee5ef6a610",
+          "kind": "location",
+          "location_key": "la-fitness-howell"
+        },
+        {
+          "destination_id": "dst_419094b9f24e115c",
+          "kind": "location",
+          "location_key": "la-fitness-brick"
+        },
+        {
+          "destination_id": "dst_e4879fb65a519630",
+          "kind": "location",
+          "location_key": "la-fitness-toms-river"
+        }
+      ],
+      "campaign": {
+        "campaign_key": "sponsored-pilot-2026",
+        "campaign_id": "cmp_88f0a7279a2972e2",
+        "kind": "sponsored_pilot",
+        "display_name": "Sponsored pilot",
+        "disclosure_label": "Sponsored pilot",
+        "disclosure_text": "No-fee pilot placement. WaterWiseKids may offer paid sponsored placements in the future. Sponsorship does not change directory order or editorial content.",
+        "starts_on": "2026-11-02",
+        "ends_on": "2026-12-31",
+        "price_cents": 0,
+        "currency": "USD"
+      },
+      "placements": [
+        {
+          "slot_key": "js-guide-jersey-shore",
+          "placement_id": "plc_3febe5cc1afd2bd6",
+          "page_path": "/swim-lessons/jersey-shore.html",
+          "market_key": "nj-jersey-shore",
+          "variant": "venue_list",
+          "location_keys": [
+            "la-fitness-brick",
+            "la-fitness-toms-river",
+            "la-fitness-howell"
+          ],
+          "indent": 8,
+          "anchor": {
+            "type": "existing_marker",
+            "text": null
+          }
+        },
+        {
+          "slot_key": "js-guide-howell",
+          "placement_id": "plc_bb4b763cf97d56ee",
+          "page_path": "/swim-lessons/howell-nj.html",
+          "market_key": "nj-howell",
+          "variant": "featured_location",
+          "location_keys": [
+            "la-fitness-howell"
+          ],
+          "indent": 8,
+          "anchor": {
+            "type": "existing_marker",
+            "text": null
+          }
+        },
+        {
+          "slot_key": "js-guide-brick",
+          "placement_id": "plc_9e245000c445f489",
+          "page_path": "/swim-lessons/brick-nj.html",
+          "market_key": "nj-brick",
+          "variant": "featured_location",
+          "location_keys": [
+            "la-fitness-brick"
+          ],
+          "indent": 8,
+          "anchor": {
+            "type": "existing_marker",
+            "text": null
+          }
+        },
+        {
+          "slot_key": "js-guide-toms-river",
+          "placement_id": "plc_9460c066d80ab361",
+          "page_path": "/swim-lessons-toms-river-nj.html",
+          "market_key": "nj-toms-river",
+          "variant": "featured_location",
+          "location_keys": [
+            "la-fitness-toms-river"
+          ],
+          "indent": 0,
+          "anchor": {
+            "type": "existing_marker",
+            "text": null
+          }
+        }
+      ]
+    }
+  ],
+  "portal": {
+    "users": [
+      {
+        "invite_ref": "pilot-owner-nwp-js",
+        "display_label": "Pilot owner (NW Philadelphia + Jersey Shore)",
+        "memberships": [
+          {
+            "tenant_key": "northwest-philadelphia",
+            "role": "owner"
+          },
+          {
+            "tenant_key": "jersey-shore",
+            "role": "owner"
+          }
+        ]
+      }
+    ]
+  },
+  "approvals": [
+    {
+      "gate": "sponsor_terms",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/staging/evidence/pilot-release-2026-11-02.md"
+    },
+    {
+      "gate": "source_verification",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json"
+    },
+    {
+      "gate": "editorial_review",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/staging/evidence/pilot-release-2026-11-02.md"
+    },
+    {
+      "gate": "preview_qa",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/proposal/evidence/previews/preview-report.json"
+    },
+    {
+      "gate": "portal_access",
+      "status": "pending",
+      "recorded_on": null,
+      "evidence_ref": null
+    },
+    {
+      "gate": "activation",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/staging/evidence/pilot-release-2026-11-02.md"
+    }
+  ]
+}
