@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Builds a clean, real-pilot D1 seed: the approved pilot tenants (Northwest Philadelphia,
 // Jersey Shore and, from the Manhattan expansion, Manhattan), their eleven approved
-// locations and eight sponsored placements only. It deliberately creates no traffic,
+// locations and nine sponsored placements only (Manhattan: NY directory + Manhattan guide). It deliberately creates no traffic,
 // conversion, user or membership rows. Held locations (Andorra, Asbury Park, East
 // Village) are never included. Manhattan has no ordinary-listing control campaign.
 // The already-live D1 is extended with the Manhattan onboarding packet's d1-upsert.sql,

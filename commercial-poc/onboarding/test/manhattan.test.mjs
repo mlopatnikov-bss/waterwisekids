@@ -1,5 +1,6 @@
 // Manhattan expansion (bss-manhattan-pilot-2026): a separate no-fee sponsor account with the
-// seven venues verified on 2026-11-02, one sponsored card on the existing NY directory page,
+// seven venues verified on 2026-11-02, two independently attributed sponsored cards (the existing
+// NY directory page and the editorial Manhattan guide added by the 2026-11-02 territory SEO work),
 // no ordinary-listing control and no sponsor portal user.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -23,6 +24,9 @@ import { clone, loadManhattan, loadManifest, loadPilot, realRepo, sliceFor, tena
 const PAGE_FILE = 'swim-lessons/directory/new-york.html';
 const PRE_PATCH_SHA = 'f5785f02de1c24db19442bd9a4e956ca683758654cd42ab5c9fdf310dcf9cccc';
 const MAN = 'ten_52bf92991a0305d0'; const PLC = 'plc_10e8497ef216c69d'; const CMP = 'cmp_c7fea2983961d658';
+const GUIDE_FILE = 'swim-lessons/manhattan-ny.html'; const PLC_GUIDE = 'plc_e487fb00e271338e';
+// The guide page before its card was inserted (removing the card block must restore exactly these bytes).
+const GUIDE_PRE_CARD_SHA = 'a4006da0203569a756ec43b55bc3ff11139d1fb1f3fa1b97e61195a6aeb27162';
 const EAST_VILLAGE = /East Village|east-village|loc_f5b267a33189a894|710 E 11th|720 E 11th/;
 const ENTITY_TABLES = ['tenants', 'schools', 'locations', 'campaigns', 'destinations', 'placements', 'placement_pages', 'placement_destinations'];
 const sha = (s) => createHash('sha256').update(s).digest('hex');
@@ -52,7 +56,8 @@ test('definition: every venue, address and URL is the verified official-snapshot
   const directory = readFileSync(join(POC_ROOT, '..', 'swim-lessons/directory/schools-data.js'), 'utf8');
   for (const l of t.locations) assert.ok(directory.includes(l.address_display), `${l.display_name} address is also in WWK directory data`);
   assert.doesNotMatch(JSON.stringify(d), EAST_VILLAGE);
-  assert.deepEqual(t.placements.map((p) => [p.placement_id, p.page_path, p.variant, p.location_keys.length]), [[PLC, '/swim-lessons/directory/new-york.html', 'venue_list', 7]]);
+  assert.deepEqual(t.placements.map((p) => [p.placement_id, p.page_path, p.variant, p.location_keys.length]), [[PLC, '/swim-lessons/directory/new-york.html', 'venue_list', 7], [PLC_GUIDE, '/swim-lessons/manhattan-ny.html', 'venue_list', 7]]);
+  assert.equal(PLC_GUIDE, stableId('plc', `${t.school.territory_url}#man-guide-manhattan`), 'guide placement has its own stable ID; the statewide ID is not reused');
   assert.deepEqual([t.campaign.kind, t.campaign.price_cents, t.campaign.disclosure_label, t.campaign.campaign_id], ['sponsored_pilot', 0, 'Sponsored pilot', CMP]);
 });
 
@@ -63,6 +68,9 @@ test('definition: IDs are the stable Phase 1 IDs already in the manifest for Man
   assert.deepEqual(t.locations.map((l) => l.location_id).sort(), m.locations.filter((l) => l.tenant_id === MAN && l.status === 'eligible_fixture').map((l) => l.location_id).sort());
   assert.deepEqual(t.destinations.map((x) => x.destination_id).sort(), m.destinations.filter((x) => x.tenant_id === MAN).map((x) => x.destination_id).sort());
   assert.equal(m.placements.find((x) => x.slot_key === 'man-directory-new-york').placement_id, PLC);
+  assert.equal(m.placements.find((x) => x.slot_key === 'man-guide-manhattan').placement_id, PLC_GUIDE);
+  const cards = new Set(m.placements.filter((x) => x.tenant_id === MAN && x.kind === 'sponsored_card').map((x) => x.placement_id));
+  assert.deepEqual(m.placement_pages.filter((x) => cards.has(x.placement_id)).map((x) => [x.placement_id, x.page_path]), [[PLC, '/swim-lessons/directory/new-york.html'], [PLC_GUIDE, '/swim-lessons/manhattan-ny.html']]);
 });
 
 test('privacy: no sponsor person exists anywhere (no user, invite, membership or contact value)', () => {
@@ -124,8 +132,63 @@ test('public page: removing the card restores the previous page byte-for-byte (c
   const rows = (s) => [...s.matchAll(/<div class="school-card" id="([^"]+)"/g)].map((m) => m[1]);
   assert.deepEqual(rows(text), rows(restored));
   assert.equal(rows(text).length, 39);
-  // No other WWK page carries the Manhattan card or tenant.
-  for (const f of realRepo().listHtml()) if (f !== PAGE_FILE) assert.doesNotMatch(realRepo().read(f), /plc_10e8497ef216c69d|ten_52bf92991a0305d0/, f);
+  // Only the two approved pages carry the Manhattan tenant; each carries only its own placement.
+  assert.doesNotMatch(text, new RegExp(PLC_GUIDE), 'the directory never carries the guide placement');
+  for (const f of realRepo().listHtml()) if (f !== PAGE_FILE && f !== GUIDE_FILE) assert.doesNotMatch(realRepo().read(f), /plc_10e8497ef216c69d|plc_e487fb00e271338e|ten_52bf92991a0305d0/, f);
+});
+
+test('guide page: one labeled card after the editorial venue table, byte-identical to the renderer, eight tagged links attributed to the guide placement', () => {
+  const text = realRepo().read(GUIDE_FILE);
+  const lines = text.split('\n');
+  assert.equal((text.match(/data-wwk-sponsored-card/g) || []).length, 1);
+  assert.doesNotMatch(text, new RegExp(PLC), 'the statewide placement ID is not reused on the guide');
+  const b = findCardBlock(lines, PLC_GUIDE);
+  const card = lines.slice(b.start, b.end).join('\n');
+  assert.equal(`${card}\n`, packet().files['cards/man-guide-manhattan.html'], 'page card is byte-identical to the rendered card');
+  assert.match(card, /<p class="wwk-sponsored__label" id="wwk-sp-plc_e487fb00e271338e-label">Sponsored pilot<\/p>/);
+  assert.match(card, /data-wwk-placement="plc_e487fb00e271338e" data-wwk-page-path="\/swim-lessons\/manhattan-ny\.html"/);
+  const anchors = [...card.matchAll(/<a href="([^"]+)" rel="([^"]+)"/g)];
+  assert.equal(anchors.length, 8);
+  for (const [, href, rel] of anchors) {
+    assert.equal(rel, 'sponsored noopener');
+    const u = new URL(href.replace(/&amp;/g, '&'));
+    assert.equal(u.hostname, 'britishswimschool.com'); assert.ok(u.pathname.startsWith('/manhattan/'));
+    assert.deepEqual([...u.searchParams.entries()], [['utm_source', 'waterwisekids'], ['utm_medium', 'sponsored_pilot'], ['utm_campaign', CMP], ['utm_content', PLC_GUIDE]]);
+  }
+  assert.doesNotMatch(card, EAST_VILLAGE);
+  const at = text.indexOf('<!-- WWK sponsored placement plc_e487fb00e271338e');
+  assert.ok(at > text.indexOf('id="man-pools-h"') && at < text.indexOf('Where Else Can Manhattan Families Look?'), 'card follows the editorial venue section');
+  const p = packet();
+  const plan = JSON.parse(p.files['patch-plan.json']).find((x) => x.placement_id === PLC_GUIDE);
+  assert.equal(plan.action, 'unchanged');
+  const restored = applyFilePatch(text, parseUnifiedDiff(p.files['rollback/remove-man-guide-manhattan.diff'])[0]);
+  assert.equal(sha(restored), GUIDE_PRE_CARD_SHA, 'removing the card restores the editorial page byte-for-byte');
+});
+
+test('D1: on the live three-tenant database the upsert adds only the guide placement, its page and its eight destinations', async () => {
+  const p = packet();
+  const full = pilotManifest(loadManifest());
+  const drop = (rows) => rows.filter((x) => x.placement_id !== PLC_GUIDE);
+  const live = { ...full, placements: drop(full.placements), placement_pages: drop(full.placement_pages), placement_destinations: drop(full.placement_destinations) };
+  const rows = (db, t) => db.db.prepare(`SELECT * FROM ${t}`).all().map((r) => { const o = { ...r }; delete o.created_at; delete o.sources_json; return JSON.stringify(o); }).sort();
+  const snap = (db) => Object.fromEntries(ENTITY_TABLES.map((t) => [t, rows(db, t)]));
+  const db = migratedD1(migrationFiles());
+  await loadManifestD1(db, live, { at: '2026-11-02T05:00:00.000Z', actor: 'pilot-release' });
+  const before = snap(db);
+  db.db.exec(p.files['d1-upsert.sql']);
+  const after = snap(db);
+  db.db.exec(p.files['d1-upsert.sql']);
+  assert.deepEqual(snap(db), after, 'idempotent');
+  for (const t of ENTITY_TABLES) {
+    assert.deepEqual(before[t].filter((r) => !after[t].includes(r)), [], `${t}: no existing row removed or changed`);
+    const added = after[t].filter((r) => !before[t].includes(r));
+    assert.equal(added.length, { placements: 1, placement_pages: 1, placement_destinations: 8 }[t] || 0, t);
+    for (const r of added) assert.equal(JSON.parse(r).placement_id, PLC_GUIDE, t);
+  }
+  const target = migratedD1(migrationFiles());
+  await loadManifestD1(target, full, { at: '2026-11-02T05:00:00.000Z', actor: 'pilot-release' });
+  assert.deepEqual(snap(db), snap(target), 'equals the rebuilt nine-placement pilot seed');
+  for (const d of [db, target]) d.close();
 });
 
 test('D1: the Manhattan upsert turns the live two-tenant database into the three-tenant seed, idempotently', async () => {
@@ -187,6 +250,6 @@ test('determinism: rebuilding and reordering keys give an identical Manhattan pa
   assert.equal(a.summary.network_actions + a.summary.deploy_actions + a.summary.database_actions, 0);
   assert.deepEqual(a.summary.pending_gates, []);
   assert.equal(a.summary.activation_ready, true);
-  assert.deepEqual(a.summary.patch_actions, { unchanged: 1 });
+  assert.deepEqual(a.summary.patch_actions, { unchanged: 2 });
   for (const v of Object.values(a.files)) assert.doesNotMatch(v, /generated_at|Date\.now/);
 });

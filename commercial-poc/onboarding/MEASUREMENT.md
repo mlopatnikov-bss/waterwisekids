@@ -99,8 +99,9 @@ The Manhattan pilot (`definitions/bss-manhattan-pilot-2026.sponsor.json`) launch
   - it sits on the same page as the Manhattan sponsored card (`control_contaminated`);
   - each of the seven featured venues would need its own row (`missing_control`).
 
-  `test/manhattan.test.mjs` proves the refusal. The editorial row is not edited to make it fit, and there is no other WWK page with Manhattan editorial content.
-- **Not comparable anyway.** The card is a `venue_list` card with no single featured location, so §3 would exclude it from the location-paired comparison even if a control existed.
+  `test/manhattan.test.mjs` proves the refusal. The editorial row is not edited to make it fit.
+- **Second card (2026-11-02).** An owner-approved second card (`plc_e487fb00e271338e`) sits on the editorial Manhattan guide `/swim-lessons/manhattan-ny.html`. It has its own placement ID, page row and UTM `utm_content`, so the portal's placement table reports each card separately, and tenant totals are their sum. The guide has no ordinary listing either, so the limitation below applies to both cards. Because the guide is new, its card has no pre-launch history; report it from launch only.
+- **Not comparable anyway.** Each card is a `venue_list` card with no single featured location, so §3 would exclude it from the location-paired comparison even if a control existed.
 - **What the portal shows.** The Manhattan comparison section shows "Your ordinary directory listing is not measured yet" and no comparison figures. Sponsored-card visibility and clicks are reported on their own. No baseline, lift or ordinary-vs-sponsored claim may be made for Manhattan in any report.
 - **Conversions.** The BSS Messenger conversion feed (§2b) covers only the PA and NJ streams. Manhattan leads and enrollments show "Not reported" unless the Manhattan school later supplies aggregate totals through `import-plan` (§2). No Manhattan location map or export exists in the repository.
 - **Lifting the limitation later** would need a reviewed change: either a location-level ordinary listing on a page without the card, or a new, separately reported control type. Both require editorial and measurement-definition approval.

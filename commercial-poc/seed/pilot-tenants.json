@@ -47,7 +47,8 @@
       "timezone": "America/New_York",
       "directory_state": "NY",
       "sponsored_cards": [
-        { "slot_key": "man-directory-new-york", "page_file": "swim-lessons/directory/new-york.html", "featured_location_url": null }
+        { "slot_key": "man-directory-new-york", "page_file": "swim-lessons/directory/new-york.html", "featured_location_url": null },
+        { "slot_key": "man-guide-manhattan", "page_file": "swim-lessons/manhattan-ny.html", "featured_location_url": null }
       ],
       "organic_listing_page_file": "swim-lessons/directory/new-york.html"
     }

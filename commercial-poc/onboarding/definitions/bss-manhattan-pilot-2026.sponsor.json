@@ -26,6 +26,11 @@
       "page_path": "/swim-lessons/directory/new-york.html",
       "market_key": "ny-manhattan",
       "page_status": "existing"
+    },
+    {
+      "page_path": "/swim-lessons/manhattan-ny.html",
+      "market_key": "ny-manhattan",
+      "page_status": "existing"
     }
   ],
   "tenants": [
@@ -354,6 +359,27 @@
             "type": "existing_marker",
             "text": null
           }
+        },
+        {
+          "slot_key": "man-guide-manhattan",
+          "placement_id": "plc_e487fb00e271338e",
+          "page_path": "/swim-lessons/manhattan-ny.html",
+          "market_key": "ny-manhattan",
+          "variant": "venue_list",
+          "location_keys": [
+            "upper-east-side-dwight-school",
+            "st-barts",
+            "bmcc",
+            "john-jay-college",
+            "liberty-terrace",
+            "wall-street",
+            "the-continental"
+          ],
+          "indent": 8,
+          "anchor": {
+            "type": "existing_marker",
+            "text": null
+          }
         }
       ]
     }
@@ -366,7 +392,7 @@
       "gate": "sponsor_terms",
       "status": "recorded",
       "recorded_on": "2026-11-02",
-      "evidence_ref": "commercial-poc/staging/evidence/manhattan-pilot-2026-11-02.md"
+      "evidence_ref": "commercial-poc/staging/evidence/manhattan-guide-placement-2026-11-02.md"
     },
     {
       "gate": "source_verification",
@@ -378,13 +404,13 @@
       "gate": "editorial_review",
       "status": "recorded",
       "recorded_on": "2026-11-02",
-      "evidence_ref": "commercial-poc/staging/evidence/manhattan-pilot-2026-11-02.md"
+      "evidence_ref": "commercial-poc/staging/evidence/manhattan-guide-placement-2026-11-02.md"
     },
     {
       "gate": "preview_qa",
       "status": "recorded",
       "recorded_on": "2026-11-02",
-      "evidence_ref": "commercial-poc/proposal/evidence/previews/preview-report.json"
+      "evidence_ref": "commercial-poc/staging/evidence/manhattan-guide-placement-2026-11-02.md"
     },
     {
       "gate": "portal_access",
@@ -396,7 +422,7 @@
       "gate": "activation",
       "status": "recorded",
       "recorded_on": "2026-11-02",
-      "evidence_ref": "commercial-poc/staging/evidence/manhattan-pilot-2026-11-02.md"
+      "evidence_ref": "commercial-poc/staging/evidence/manhattan-guide-placement-2026-11-02.md"
     }
   ]
 }

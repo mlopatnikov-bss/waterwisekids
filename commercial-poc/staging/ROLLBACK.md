@@ -17,7 +17,8 @@ Destructive D1 deletion is not part of normal rollback. It requires a separate r
 Manhattan can be rolled back on its own, without touching the Northwest Philadelphia or Jersey Shore cards or rows.
 
 1. **Remove the card:** `git apply commercial-poc/onboarding/out/bss-manhattan-pilot-2026/rollback/remove-man-directory-new-york.diff` from the repository root, then publish through the normal reviewed process. This restores `/swim-lessons/directory/new-york.html` byte-for-byte to SHA-256 `f5785f02de1c24db19442bd9a4e956ca683758654cd42ab5c9fdf310dcf9cccc`, and `onboarding/test/manhattan.test.mjs` proves it.
-2. **Stop counting:** regenerate the packet with `--deactivate-on YYYY-MM-DD` and apply `deactivate.sql`. It ends only campaign `cmp_c7fea2983961d658` for tenant `ten_52bf92991a0305d0`.
+1b. **Remove only the Manhattan guide card** (`plc_e487fb00e271338e`): `git apply commercial-poc/onboarding/out/bss-manhattan-pilot-2026/rollback/remove-man-guide-manhattan.diff`, then publish. This restores `/swim-lessons/manhattan-ny.html` to its editorial bytes (SHA-256 `a4006da0203569a756ec43b55bc3ff11139d1fb1f3fa1b97e61195a6aeb27162`, proven in `onboarding/test/manhattan.test.mjs`). The statewide card is untouched. The guide placement's D1 rows stay; with the card removed, it simply receives no events.
+2. **Stop counting:** regenerate the packet with `--deactivate-on YYYY-MM-DD` and apply `deactivate.sql`. It ends only campaign `cmp_c7fea2983961d658` for tenant `ten_52bf92991a0305d0`, which means **both** Manhattan cards stop counting. To stop only one card, use step 1 or 1b.
 3. **Portal:** there is no Manhattan user or membership to revoke. The administrator keeps read access for final reporting.
 4. **Never delete** the Manhattan D1 rows during rollback; deletion needs a separate retention decision.
 

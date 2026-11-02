@@ -69,7 +69,8 @@ test('manifest: per-tenant placement shape', () => {
   const count = (key, kind) => m.placements.filter((p) => p.tenant_id === tenantByKey(m, key).tenant_id && p.kind === kind).length;
   assert.equal(count('northwest-philadelphia', 'sponsored_card'), 3);
   assert.equal(count('jersey-shore', 'sponsored_card'), 4);
-  assert.equal(count('manhattan', 'sponsored_card'), 1);
+  // NY directory card + Manhattan guide card (owner-approved 2026-11-02; separate placement IDs and pages).
+  assert.equal(count('manhattan', 'sponsored_card'), 2);
   assert.equal(count('northwest-philadelphia', 'organic_listing'), 1);
   assert.equal(count('jersey-shore', 'organic_listing'), 3);
   assert.equal(count('manhattan', 'organic_listing'), 1);

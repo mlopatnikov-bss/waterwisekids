@@ -11,7 +11,8 @@ test('pilot manifest contains only approved locations and sponsored placements (
     'Liberty Terrace', "St. Bart's Church", 'The Continental', 'Upper East Side - Dwight School', 'Wall Street']);
   assert.deepEqual(p.tenants.map((x) => x.display_name).sort(), ['British Swim School of Jersey Shore', 'British Swim School of Manhattan', 'British Swim School of Northwest Philadelphia']);
   assert.equal(p.campaigns.length, 3);
-  assert.equal(p.placements.length, 8);
+  // 4 NW Philadelphia + 3 Jersey Shore cards, plus 2 Manhattan cards (NY directory + Manhattan guide, 2026-11-02).
+  assert.equal(p.placements.length, 9);
   assert.ok(p.campaigns.every((x) => x.starts_on === PILOT_START && x.display_name === 'Sponsored pilot' && x.kind === 'sponsored_pilot' && x.price_cents === 0));
   assert.equal(p.users.length, 0);
   assert.equal(p.memberships.length, 0);

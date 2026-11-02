@@ -277,7 +277,15 @@ export function buildManifest({ repoRoot, pocRoot, config, snapshot, generatedAt
   }
 
   const man = out.tenants.find((x) => x.tenant_key === 'manhattan');
-  if (man) {
+  const manConfig = config.tenants.find((x) => x.tenant_key === 'manhattan');
+  const manGuide = manConfig && manConfig.sponsored_cards.find((c) => c.page_file !== manConfig.organic_listing_page_file);
+  if (man && manGuide) {
+    // The editorial Manhattan guide was added by the 2026-11-02 territory SEO work; the directory row still shares
+    // the NY directory page with the first card, so the measurement limitation (no ordinary-listing control) remains.
+    addConflict({ severity: 'info', kind: 'inventory_gap', tenant_key: 'manhattan', subject: 'Manhattan page inventory',
+      detail: `Manhattan has an editorial WWK local guide (/${manGuide.page_file}) and the New York state directory (/swim-lessons/directory/new-york.html); the directory also carries the ordinary listing.`,
+      effect: 'Each page has its own sponsored placement. The ordinary listing shares the directory page with a card, so Manhattan has no fair ordinary-listing control (onboarding MEASUREMENT.md).' });
+  } else if (man) {
     addConflict({ severity: 'info', kind: 'inventory_gap', tenant_key: 'manhattan', subject: 'Manhattan page inventory',
       detail: 'WWK has no Manhattan-specific local guide page; the only Manhattan surface is the New York state directory (/swim-lessons/directory/new-york.html), which also carries the ordinary listing.',
       effect: 'Fixture sponsored card and ordinary listing share that page. Phase 2 must propose inventory; creating new city pages is outside agent authority.' });

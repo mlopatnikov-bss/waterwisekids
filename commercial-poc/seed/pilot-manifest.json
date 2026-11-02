@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "generated_at": "2026-11-02T14:02:16.539Z",
+  "generated_at": "2026-11-02T21:47:53.514Z",
   "generator": "commercial-poc/scripts/build-manifest.mjs",
   "fixture_notice": "Local POC fixture. Campaign dates, placements and users are fixtures; nothing here is live or approved.",
   "sources": {
@@ -845,6 +845,17 @@
       "slot_key": "man-directory-new-york"
     },
     {
+      "placement_id": "plc_e487fb00e271338e",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "campaign_id": "cmp_c7fea2983961d658",
+      "kind": "sponsored_card",
+      "display_name": "Sponsored card: /swim-lessons/manhattan-ny.html",
+      "featured_location_id": null,
+      "link_rel": "sponsored noopener",
+      "inventory_status": "fixture_candidate",
+      "slot_key": "man-guide-manhattan"
+    },
+    {
       "placement_id": "plc_8cbbce6143c95ca2",
       "tenant_id": "ten_52bf92991a0305d0",
       "campaign_id": "cmp_9342d91e69c23f30",
@@ -940,6 +951,13 @@
       "page_path": "/swim-lessons/directory/new-york.html",
       "canonical_url": "https://www.waterwisekids.com/swim-lessons/directory/new-york.html",
       "source_file": "swim-lessons/directory/new-york.html"
+    },
+    {
+      "placement_id": "plc_e487fb00e271338e",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "page_path": "/swim-lessons/manhattan-ny.html",
+      "canonical_url": "https://www.waterwisekids.com/swim-lessons/manhattan-ny.html",
+      "source_file": "swim-lessons/manhattan-ny.html"
     },
     {
       "placement_id": "plc_8cbbce6143c95ca2",
@@ -1087,6 +1105,46 @@
     },
     {
       "placement_id": "plc_10e8497ef216c69d",
+      "destination_id": "dst_1a3f93df110c6548",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_e487fb00e271338e",
+      "destination_id": "dst_941c2435cc290c12",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_e487fb00e271338e",
+      "destination_id": "dst_67fabacbc6c1fbfe",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_e487fb00e271338e",
+      "destination_id": "dst_a40fad425d96a302",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_e487fb00e271338e",
+      "destination_id": "dst_423b17cf02cb30ec",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_e487fb00e271338e",
+      "destination_id": "dst_83a3e38021842bbf",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_e487fb00e271338e",
+      "destination_id": "dst_c6c6fe4768ac7459",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_e487fb00e271338e",
+      "destination_id": "dst_3a12b18e68f40fa6",
+      "tenant_id": "ten_52bf92991a0305d0"
+    },
+    {
+      "placement_id": "plc_e487fb00e271338e",
       "destination_id": "dst_1a3f93df110c6548",
       "tenant_id": "ten_52bf92991a0305d0"
     },
@@ -1245,8 +1303,8 @@
       "kind": "inventory_gap",
       "tenant_key": "manhattan",
       "subject": "Manhattan page inventory",
-      "detail": "WWK has no Manhattan-specific local guide page; the only Manhattan surface is the New York state directory (/swim-lessons/directory/new-york.html), which also carries the ordinary listing.",
-      "effect": "Fixture sponsored card and ordinary listing share that page. Phase 2 must propose inventory; creating new city pages is outside agent authority."
+      "detail": "Manhattan has an editorial WWK local guide (/swim-lessons/manhattan-ny.html) and the New York state directory (/swim-lessons/directory/new-york.html); the directory also carries the ordinary listing.",
+      "effect": "Each page has its own sponsored placement. The ordinary listing shares the directory page with a card, so Manhattan has no fair ordinary-listing control (onboarding MEASUREMENT.md)."
     }
   ]
 }

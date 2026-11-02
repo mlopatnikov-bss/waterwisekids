@@ -1,0 +1,267 @@
+{
+  "schema": "wwk.territory-seo-map",
+  "schema_version": 1,
+  "prepared_on": "2026-11-02",
+  "site_origin": "https://www.waterwisekids.com",
+  "hosting": {
+    "platform": "cloudflare_pages_static",
+    "redirects": "not_used",
+    "redirects_reason": "functions/_middleware.js matches every route and Cloudflare Pages does not apply _redirects to requests served by Functions; whether Functions are compiled for the live project is not verifiable from the repository. HTML rel=canonical, sitemap membership and internal links are the only consolidation signals guaranteed to ship.",
+    "consolidation_method": "rel_canonical"
+  },
+  "policy": {
+    "primary_min_inbound_internal_links": 4,
+    "intent_min_inbound_internal_links": 2,
+    "hub_min_editorial_words": 900,
+    "primary_min_editorial_words": 400,
+    "forbid_schema_types_on_territory_pages": [
+      "LocalBusiness",
+      "SportsActivityLocation",
+      "SwimmingPool",
+      "EducationalOrganization",
+      "Product",
+      "Offer",
+      "AggregateRating",
+      "Review"
+    ],
+    "verified_fact_sources": [
+      "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+      "swim-lessons/directory/schools-data.js"
+    ]
+  },
+  "territories": [
+    {
+      "territory_key": "cheltenham-pa",
+      "label": "Cheltenham, PA",
+      "place_names": [
+        "Cheltenham"
+      ],
+      "tenant_key": "northwest-philadelphia",
+      "intents": [
+        {
+          "intent": "swim lessons / kids swim lessons in town",
+          "primary": "/swim-lessons/cheltenham-pa.html",
+          "primary_basis": "Carries the live Sponsored pilot card (plc_759c890d4a301219); keeping it primary leaves pilot inventory unchanged (CONTENT-WORKLIST.md option A). Title already targets kids intent.",
+          "consolidate": [
+            {
+              "page": "/swim-lessons-cheltenham-pa.html",
+              "reason": "same-intent twin (general town guide)"
+            },
+            {
+              "page": "/kids-swim-lessons-cheltenham-pa.html",
+              "reason": "same intent as the primary (kids lessons in town); templated copy"
+            },
+            {
+              "page": "/kids-swim-lessons-cheltenham-township-pa.html",
+              "reason": "township-name duplicate of the kids page (5-word shingle Jaccard 0.52)"
+            }
+          ],
+          "note_label": "our main Cheltenham, PA swim lessons guide"
+        },
+        {
+          "intent": "toddler swim lessons in town",
+          "primary": "/toddler-swim-lessons-cheltenham-pa.html",
+          "consolidate": [],
+          "keep_reason": "distinct age intent (toddlers, parent-and-child)"
+        },
+        {
+          "intent": "beginner swim lessons in town",
+          "primary": "/beginner-swim-lessons-cheltenham-pa.html",
+          "consolidate": [],
+          "keep_reason": "distinct skill-stage intent"
+        }
+      ],
+      "required_inbound": [
+        "/swim-lessons/index.html",
+        "/swim-lessons/philadelphia.html",
+        "/toddler-swim-lessons-cheltenham-pa.html",
+        "/beginner-swim-lessons-cheltenham-pa.html"
+      ]
+    },
+    {
+      "territory_key": "howell-nj",
+      "label": "Howell, NJ",
+      "place_names": [
+        "Howell"
+      ],
+      "tenant_key": "jersey-shore",
+      "intents": [
+        {
+          "intent": "swim lessons / kids swim lessons in town",
+          "primary": "/swim-lessons/howell-nj.html",
+          "primary_basis": "Carries the live Sponsored pilot card (plc for LA Fitness - Howell); pilot inventory unchanged.",
+          "consolidate": [
+            {
+              "page": "/swim-lessons-howell-nj.html",
+              "reason": "same-intent twin (general town guide)"
+            },
+            {
+              "page": "/kids-swim-lessons-howell-nj.html",
+              "reason": "same intent as the primary; templated copy"
+            }
+          ],
+          "note_label": "our main Howell, NJ swim lessons guide"
+        },
+        {
+          "intent": "toddler swim lessons in town",
+          "primary": "/toddler-swim-lessons-howell-nj.html",
+          "consolidate": [],
+          "keep_reason": "distinct age intent"
+        },
+        {
+          "intent": "beginner swim lessons in town",
+          "primary": "/beginner-swim-lessons-howell-nj.html",
+          "consolidate": [],
+          "keep_reason": "distinct skill-stage intent"
+        }
+      ],
+      "required_inbound": [
+        "/swim-lessons/index.html",
+        "/swim-lessons/jersey-shore.html",
+        "/toddler-swim-lessons-howell-nj.html",
+        "/beginner-swim-lessons-howell-nj.html"
+      ]
+    },
+    {
+      "territory_key": "brick-nj",
+      "label": "Brick, NJ",
+      "place_names": [
+        "Brick"
+      ],
+      "tenant_key": "jersey-shore",
+      "intents": [
+        {
+          "intent": "swim lessons / kids swim lessons in town",
+          "primary": "/swim-lessons/brick-nj.html",
+          "primary_basis": "Carries the live Sponsored pilot card (LA Fitness - Brick); pilot inventory unchanged.",
+          "consolidate": [
+            {
+              "page": "/swim-lessons-brick-nj.html",
+              "reason": "same-intent twin (general town guide)"
+            },
+            {
+              "page": "/kids-swim-lessons-brick-nj.html",
+              "reason": "same intent as the primary; templated copy"
+            },
+            {
+              "page": "/kids-swim-lessons-brick-township-nj.html",
+              "reason": "township-name duplicate of the kids page (Jaccard 0.50)"
+            }
+          ],
+          "note_label": "our main Brick, NJ swim lessons guide"
+        },
+        {
+          "intent": "toddler swim lessons in town",
+          "primary": "/toddler-swim-lessons-brick-nj.html",
+          "consolidate": [
+            {
+              "page": "/toddler-swim-lessons-brick-township-nj.html",
+              "reason": "township-name duplicate (Jaccard 0.51)"
+            }
+          ],
+          "keep_reason": "distinct age intent",
+          "note_label": "our main Brick, NJ toddler swim lessons guide"
+        },
+        {
+          "intent": "beginner swim lessons in town",
+          "primary": "/beginner-swim-lessons-brick-nj.html",
+          "consolidate": [
+            {
+              "page": "/beginner-swim-lessons-brick-township-nj.html",
+              "reason": "township-name duplicate (Jaccard 0.56)"
+            }
+          ],
+          "keep_reason": "distinct skill-stage intent",
+          "note_label": "our main Brick, NJ beginner swim lessons guide"
+        },
+        {
+          "intent": "swim lessons for beach-going families in town",
+          "primary": "/kids-swim-lessons-brick-beaches.html",
+          "consolidate": [],
+          "keep_reason": "distinct beach-family intent (open-water awareness)"
+        }
+      ],
+      "required_inbound": [
+        "/swim-lessons/index.html",
+        "/swim-lessons/jersey-shore.html",
+        "/toddler-swim-lessons-brick-nj.html",
+        "/beginner-swim-lessons-brick-nj.html"
+      ]
+    },
+    {
+      "territory_key": "toms-river-nj",
+      "label": "Toms River, NJ",
+      "place_names": [
+        "Toms River"
+      ],
+      "tenant_key": "jersey-shore",
+      "intents": [
+        {
+          "intent": "swim lessons / kids swim lessons in town",
+          "primary": "/swim-lessons-toms-river-nj.html",
+          "primary_basis": "Carries the live Sponsored pilot card and is already the best-linked town page.",
+          "consolidate": [
+            {
+              "page": "/kids-swim-lessons-toms-river-nj.html",
+              "reason": "same intent as the primary; templated copy"
+            }
+          ],
+          "note_label": "our main Toms River, NJ swim lessons guide"
+        },
+        {
+          "intent": "toddler swim lessons in town",
+          "primary": "/toddler-swim-lessons-toms-river-nj.html",
+          "consolidate": [],
+          "keep_reason": "distinct age intent"
+        },
+        {
+          "intent": "beginner swim lessons in town",
+          "primary": "/beginner-swim-lessons-toms-river-nj.html",
+          "consolidate": [],
+          "keep_reason": "distinct skill-stage intent"
+        }
+      ],
+      "required_inbound": [
+        "/swim-lessons/index.html",
+        "/swim-lessons-jersey-shore.html",
+        "/toddler-swim-lessons-toms-river-nj.html",
+        "/beginner-swim-lessons-toms-river-nj.html"
+      ]
+    },
+    {
+      "territory_key": "manhattan-ny",
+      "label": "Manhattan, NY",
+      "place_names": [
+        "Manhattan"
+      ],
+      "tenant_key": "manhattan",
+      "intents": [
+        {
+          "intent": "swim lessons / kids swim lessons in Manhattan",
+          "primary": "/swim-lessons/manhattan-ny.html",
+          "primary_basis": "Editorial Manhattan local guide created 2026-11-02; carries its own labeled Sponsored pilot card (plc_e487fb00e271338e), separate from the NY directory card. The state directory remains the directory.",
+          "consolidate": [],
+          "hub": true,
+          "related_distinct": [
+            {
+              "page": "/swim-lessons/directory/new-york.html",
+              "reason": "statewide directory intent; byte-pinned by onboarding/test/manhattan.test.mjs; carries the only approved Manhattan card"
+            }
+          ],
+          "sponsored_card": "approved",
+          "sponsored_placement": {
+            "placement_id": "plc_e487fb00e271338e",
+            "slot_key": "man-guide-manhattan",
+            "definition": "commercial-poc/onboarding/definitions/bss-manhattan-pilot-2026.sponsor.json",
+            "approved_on": "2026-11-02"
+          }
+        }
+      ],
+      "required_inbound": [
+        "/swim-lessons/index.html",
+        "/find-swim-lessons.html",
+        "/find-a-pool/new-york.html"
+      ]
+    }
+  ]
+}

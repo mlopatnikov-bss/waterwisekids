@@ -61,12 +61,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.waterwisekids.com/beginner-swim-lessons-brick-township-nj.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.waterwisekids.com/beginner-swim-lessons-brielle-nj.html</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -709,31 +703,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.waterwisekids.com/kids-swim-lessons-brick-nj.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/kids-swim-lessons-brick-township-nj.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-brielle-nj.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/kids-swim-lessons-cheltenham-pa.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/kids-swim-lessons-cheltenham-township-pa.html</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -753,12 +723,6 @@
   <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-glenside-pa.html</loc>
     <lastmod>2026-10-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/kids-swim-lessons-howell-nj.html</loc>
-    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -841,12 +805,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.waterwisekids.com/kids-swim-lessons-toms-river-nj.html</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.waterwisekids.com/kids-swim-lessons-wyndmoor-pa.html</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -913,24 +871,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.waterwisekids.com/swim-lessons-brick-nj.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/swim-lessons-cheltenham-pa.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/swim-lessons-howell-nj.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.waterwisekids.com/swim-lessons-jersey-shore.html</loc>
     <lastmod>2026-08-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -986,13 +926,13 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/brick-nj.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/cheltenham-pa.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1328,7 +1268,7 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/swim-lessons/howell-nj.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1442,12 +1382,6 @@
   </url>
   <url>
     <loc>https://www.waterwisekids.com/toddler-swim-lessons-brick-nj.html</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.waterwisekids.com/toddler-swim-lessons-brick-township-nj.html</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4036,4 +3970,10 @@
   </url>
   <url><loc>https://www.waterwisekids.com/education/water-safety-worksheets.html</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.waterwisekids.com/education/floaties-year-old.html</loc><lastmod>2026-10-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://www.waterwisekids.com/swim-lessons/manhattan-ny.html</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

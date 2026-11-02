@@ -2,6 +2,8 @@
 
 Status: **proposal only; no city page, sitemap, canonical or link was changed.** Evidence: the onboarding packet for `bss-pilot-2026` (`content-worklist.json`, generated offline 2026-11-02) plus repository greps listed below. Every item needs Editor approval; items marked **blocked** need a fact that the repository does not hold.
 
+> **Update 2026-11-02 (territory SEO):** Finding 1 was resolved with option A: the card pages became the primaries, and the twins and same-intent pages now canonicalize to them. Findings 2 and 3 are done. The current state and evidence are in `seo/ROLLOUT-MEASUREMENT.md` and `seo/territory-map.json`.
+
 ## Finding 1 — the card sits on the less-linked twin page (Cheltenham, Howell, Brick)
 
 For three of the four towns the repository has two indexable pages for the same search, both self-canonical and both in `sitemap.xml`:

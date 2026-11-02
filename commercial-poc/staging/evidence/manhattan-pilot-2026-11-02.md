@@ -60,3 +60,7 @@ Manhattan launches **without a paired ordinary-listing control** (owner decision
 - `preview_qa`: recorded after desktop review of the generated page and mobile review of the byte-equivalent Manhattan card in `commercial-poc/proposal/evidence/previews/preview-report.json`; no overflow or console errors were reported.
 - `portal_access`: recorded for the existing WWK administrator role. The portal resolves administrator access dynamically across every present and future tenant; no sponsor-side user or membership is created.
 - `activation`: recorded from the owner's explicit 2026-11-02 approval to proceed with the Manhattan pilot.
+
+## Addendum (2026-11-02, later the same day): second Manhattan placement
+
+The owner later approved a second, independently attributed card (`plc_e487fb00e271338e`) on the new editorial guide `/swim-lessons/manhattan-ny.html`. The card described above is unchanged: same page bytes, same ID, same reporting. See `manhattan-guide-placement-2026-11-02.md`.
