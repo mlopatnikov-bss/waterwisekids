@@ -29,13 +29,13 @@ test('portal: KPI values equal the scoped rollup totals for the default 28-day r
     const { status, body } = await page(`/t/${T[key].tenant_id}/`, cookie);
     assert.equal(status, 200);
     const s = new TenantScope(db, T[key].tenant_id, 'test');
-    const tot = s.totals('2026-10-05', '2026-11-01');
+    const tot = s.totals('2026-10-06', '2026-11-02');
     const v = dataValues(body);
     assert.equal(Number(v.eligible_view), tot.sponsored_card.eligible_view);
     assert.equal(Number(v.viewable_impression), tot.sponsored_card.viewable_impression);
     assert.equal(Number(v.sponsored_click), tot.sponsored_card.sponsored_click);
     assert.equal(Number(v.outbound_click), tot.sponsored_card.outbound_click + tot.organic_listing.outbound_click);
-    assert.ok(body.includes('Showing Oct 5, 2026 – Nov 1, 2026'));
+    assert.ok(body.includes('Showing Oct 6, 2026 – Nov 2, 2026'));
   }
 });
 
