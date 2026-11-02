@@ -75,9 +75,9 @@ test('portal: empty state for a range with no data, and invalid ranges fall back
   assert.ok(empty.includes('No observed data in this date range'));
   const bad = await page(`/t/${T['northwest-philadelphia'].tenant_id}/?from=<script>&to=2026-99-99`);
   assert.equal(bad.status, 200);
-  assert.ok(bad.body.includes('Showing Oct 5, 2026 – Nov 1, 2026'));
+  assert.ok(bad.body.includes('Showing Oct 6, 2026 – Nov 2, 2026'));
   assert.equal(bad.body.includes('<script>'), false);
-  assert.deepEqual(resolveRange(new URLSearchParams('from=2026-01-01&to=2026-12-31'), { asOf: AS_OF, timezone: 'America/New_York' }), { from: '2026-07-05', to: '2026-11-01', adjusted: true });
+  assert.deepEqual(resolveRange(new URLSearchParams('from=2026-01-01&to=2026-12-31'), { asOf: AS_OF, timezone: 'America/New_York' }), { from: '2026-07-06', to: '2026-11-02', adjusted: true });
 });
 
 test('portal: error state hides internals and returns 500 with a reference', async () => {

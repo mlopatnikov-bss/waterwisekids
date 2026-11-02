@@ -44,7 +44,10 @@ function respond(request, status, body, type = 'text/html; charset=utf-8', extra
 const page = (request, p, session = null, env = null) => respond(request, p.status, adaptPage(p, { isAdmin: session?.isAdmin === true, mode: env?.PORTAL_ENV }).body);
 
 export function resolveRange(query, { asOf, timezone }) {
-  const end = addDays(localDate(Date.parse(asOf), timezone), -1);
+  // Include the current local day so a newly activated sponsor can see live
+  // activity immediately. Quality/completeness checks still judge only fully
+  // completed days, so a partial launch day is never flagged as missing.
+  const end = localDate(Date.parse(asOf), timezone);
   const def = { from: addDays(end, -(DEFAULT_RANGE_DAYS - 1)), to: end, adjusted: false };
   const f = query.get('from'); const t = query.get('to');
   if (f === null && t === null) return def;

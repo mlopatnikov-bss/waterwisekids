@@ -44,7 +44,9 @@ function readForm(req, limit = 1024) {
 }
 
 export function resolveRange(query, { asOf, timezone }) {
-  const end = addDays(localDate(Date.parse(asOf), timezone), -1);
+  // Include the current local day for launch-day visibility. Data-quality
+  // completeness remains based on completed days only.
+  const end = localDate(Date.parse(asOf), timezone);
   const def = { from: addDays(end, -(DEFAULT_RANGE_DAYS - 1)), to: end, adjusted: false };
   const f = query.get('from'); const t = query.get('to');
   if (f === null && t === null) return def;
