@@ -150,13 +150,17 @@ export function validateControlPlan(plan, def, ctx) {
       if (row.index < 0) { err('control_row_mismatch', `${lp}.row_id`, `row must occur exactly once (found ${row.hits.length})`); return; }
       const line = lines[row.index];
       const rowHtml = line.slice(line.indexOf(row.open)).split('<div class="school-card" ')[1] ?? '';
-      const anchors = [...`<div class="school-card" ${rowHtml}`.matchAll(/<a href="(https:\/\/[^"]+)"([^>]*)class="visit-site-btn"[^>]*>/g)];
+      const anchors = [...`<div class="school-card" ${rowHtml}`.matchAll(/<a\b[^>]*>/g)].map((m) => {
+        const href = /\bhref="(https:\/\/[^"]+)"/.exec(m[0])?.[1] ?? null;
+        const classes = /\bclass="([^"]*)"/.exec(m[0])?.[1]?.split(/\s+/) ?? [];
+        return { html: m[0], href, isVisit: classes.includes('visit-site-btn') };
+      }).filter((a) => a.href && a.isVisit);
       if (anchors.length !== 1) { err('control_row_mismatch', `${lp}.row_id`, `row needs exactly one official "Visit Website" link (found ${anchors.length})`); return; }
-      if (anchors[0][1] !== loc.official_url) err('control_row_mismatch', `${lp}.row_id`, `row links ${anchors[0][1]}, not the official location page ${loc.official_url}`);
+      if (anchors[0].href !== loc.official_url) err('control_row_mismatch', `${lp}.row_id`, `row links ${anchors[0].href}, not the official location page ${loc.official_url}`);
       const name = /<h3 class="school-name">([^<]+)<\/h3>/.exec(rowHtml)?.[1] ?? null;
       if (!name) err('control_row_mismatch', `${lp}.row_id`, 'row has no school name');
       const dest = t.destinations.find((d) => d.location_key === L.location_key);
-      resolved.push({ tenant: t, control: ct, listing: L, location: loc, destination_id: dest.destination_id, source_file: src.file, row_index: row.index, row_open: row.open, anchor: anchors[0][0], row_name: name });
+      resolved.push({ tenant: t, control: ct, listing: L, location: loc, destination_id: dest.destination_id, source_file: src.file, row_index: row.index, row_open: row.open, anchor: anchors[0].html, row_name: name });
     });
     for (const k of featured) if (!covered.has(k)) err('missing_control', `${tp}.listings`, `featured location ${k} has no ordinary-listing control`);
   });

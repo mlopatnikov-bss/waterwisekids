@@ -1,4 +1,4 @@
-/*! WaterWiseKids ordinary-listing measurement client v1 (proposed; not deployed).
+/*! WaterWiseKids ordinary-listing measurement client v1.
  *
  * Measures an ORDINARY directory listing with the same definitions as the sponsored
  * card, so the two can be compared fairly. It changes nothing on the page: no label,
@@ -81,6 +81,7 @@
   }
   var REFERRER = referrerCategory();
   var DEVICE = deviceClass();
+  var SENT_BY_PLACEMENT = {};
   function now() { return (w.performance && typeof w.performance.now === 'function') ? w.performance.now() : new w.Date().getTime(); }
 
   var queue = [];
@@ -118,6 +119,8 @@
     if (c.location !== null && c.location !== '' && !ID.loc.test(c.location)) return null;
     if (!c.location) c.location = null;
     if (!PAGE_PATH.test(c.pagePath || '') || c.pagePath.indexOf('..') !== -1) return null;
+    if (!SENT_BY_PLACEMENT[c.placement]) SENT_BY_PLACEMENT[c.placement] = {};
+    c.sent = SENT_BY_PLACEMENT[c.placement];
     return c;
   }
   function eventFor(c, type, extra) {
@@ -192,8 +195,10 @@
     var nodes;
     try { nodes = doc.querySelectorAll('[data-wwk-ordinary-listing]'); } catch (e) { return; }
     for (var i = 0; i < nodes.length; i += 1) {
+      if (nodes[i].__wwkOrdinaryBound) continue;
       var c = readListing(nodes[i]);
       if (!c) continue;
+      try { nodes[i].__wwkOrdinaryBound = true; } catch (e) { /* ignore */ }
       once(c, 'eligible_view', function () { return eventFor(c, 'eligible_view', withLocation(c)); }, false);
       (function (x) {
         try {
@@ -203,12 +208,22 @@
       })(c);
       watchViewability(c);
     }
-    try {
-      w.addEventListener('pagehide', flush);
-      doc.addEventListener('visibilitychange', function () { if (doc.visibilityState === 'hidden') flush(); });
-    } catch (e) { /* ignore */ }
   }
 
-  if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', init);
-  else init();
+  try {
+    w.addEventListener('pagehide', flush);
+    doc.addEventListener('visibilitychange', function () { if (doc.visibilityState === 'hidden') flush(); });
+    if (typeof w.MutationObserver === 'function') {
+      new w.MutationObserver(function (records) {
+        for (var i = 0; i < records.length; i += 1) {
+          if (records[i].addedNodes && records[i].addedNodes.length) { init(); return; }
+        }
+      }).observe(doc.documentElement, { childList: true, subtree: true });
+    }
+  } catch (e) { /* ignore */ }
+
+  // Deferred scripts run while readyState is often "interactive". Waiting for
+  // DOMContentLoaded lets the directory renderer replace its static cards first.
+  if (doc.readyState === 'complete') init();
+  else doc.addEventListener('DOMContentLoaded', init);
 })(typeof window !== 'undefined' ? window : undefined);
