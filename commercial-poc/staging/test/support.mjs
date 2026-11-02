@@ -92,7 +92,7 @@ export function phase1TableHashes(db, tables) {
 /** Fake ctx.access as Cloudflare Worker Access provides it. */
 export const accessCtx = (email, aud = TEST_AUD) => ({ access: { aud, getIdentity: async () => (email === null ? {} : { email }) }, waitUntil() {}, passThroughOnException() {} });
 export const portalEnv = (db, extra = {}) => ({ DB: db, IDENTITY_HMAC_KEY: TEST_HMAC_KEY, ACCESS_AUD: TEST_AUD, PORTAL_ENV: 'local', REPORT_AS_OF: AS_OF, ...extra });
-export const collectorEnv = (db, extra = {}) => ({ DB: db, ALLOWED_ORIGIN: 'https://www.waterwisekids.com', COLLECTOR_ENV: 'local', ...extra });
+export const collectorEnv = (db, extra = {}) => ({ DB: db, ALLOWED_ORIGIN: 'https://www.waterwisekids.com', COLLECTOR_ENV: 'local', COLLECT_RATE_LIMITER: { limit: async () => ({ success: true }) }, ...extra });
 
 /** A D1 stand-in that fails the test if anything touches it. */
 export function untouchableDb() {

@@ -23,7 +23,7 @@ test('routes: only /v1/collect and /v1/health exist; health is minimal and never
     assert.deepEqual(r.json, { error: 'not_found' });
   }
   const { db: un, touched } = untouchableDb();
-  const h = await handleCollector(new Request('https://c.invalid/v1/health'), { DB: un, ALLOWED_ORIGIN: ORIGIN, COLLECTOR_ENV: 'local' }, {});
+  const h = await handleCollector(new Request('https://c.invalid/v1/health'), { DB: un, ALLOWED_ORIGIN: ORIGIN, COLLECTOR_ENV: 'local', COLLECT_RATE_LIMITER: { limit: async () => ({ success: true }) } }, {});
   assert.equal(h.status, 200);
   assert.deepEqual(await h.json(), { ok: true, schema_version: 1 });
   assert.deepEqual(touched, [], 'health never reads D1 (no counts, no tenant data)');
@@ -76,8 +76,18 @@ test('limits: 25 events per request, 2 KB per event, 51,200-byte body (declared 
   assert.equal((await collect(db, validEvent(), { headers: { 'Content-Length': String(MAX_BODY_BYTES + 1) } })).status, 413);
   const big = new TextEncoder().encode(' '.repeat(MAX_BODY_BYTES + 10));
   const stream = new ReadableStream({ start(c) { c.enqueue(big.slice(0, 30000)); c.enqueue(big.slice(30000)); c.close(); } });
-  const res = await handleCollector(new Request('https://c.invalid/v1/collect', { method: 'POST', body: stream, duplex: 'half', headers: { Origin: ORIGIN, 'Content-Type': 'text/plain' } }), { DB: db, ALLOWED_ORIGIN: ORIGIN, COLLECTOR_ENV: 'local' }, {}, { now: () => NOW, log() {} });
+  const res = await handleCollector(new Request('https://c.invalid/v1/collect', { method: 'POST', body: stream, duplex: 'half', headers: { Origin: ORIGIN, 'Content-Type': 'text/plain' } }), { DB: db, ALLOWED_ORIGIN: ORIGIN, COLLECTOR_ENV: 'local', COLLECT_RATE_LIMITER: { limit: async () => ({ success: true }) } }, {}, { now: () => NOW, log() {} });
   assert.equal(res.status, 413, 'streamed body without Content-Length is capped');
+});
+
+test('rate limiter refuses write amplification before body parsing or D1 reads', async () => {
+  const db = await loadedDb();
+  const r = await collect(db, validEvent(), { env: { COLLECT_RATE_LIMITER: { limit: async ({ key }) => ({ success: key !== 'v1/collect' }) } } });
+  assert.equal(r.status, 429);
+  assert.deepEqual(r.json, { error: 'rate_limited' });
+  assert.equal(r.res.headers.get('retry-after'), '60');
+  assert.equal(await count(db, 'SELECT COUNT(*) AS n FROM events'), 0);
+  assert.deepEqual(r.logs, [{ worker: 'collector', status: 429, error: 'rate_limited' }]);
 });
 
 test('schema, ownership, allowlists, timing and viewability use the accepted Phase 1 validator', async () => {
@@ -187,14 +197,14 @@ test('storage failure: 503 with a generic code, nothing echoed, error name only 
   assert.doesNotMatch(JSON.stringify(r.logs), /disk full|example\.com/);
 });
 
-test('production refusal: missing D1, missing/wrong/wildcard origin or environment -> 503 before any read', async () => {
+test('production refusal: missing D1, rate limiter, exact origin or environment -> 503 before any read', async () => {
   const variants = [
-    {}, { ALLOWED_ORIGIN: undefined }, { ALLOWED_ORIGIN: '*' }, { ALLOWED_ORIGIN: 'https://evil.example.com' }, { ALLOWED_ORIGIN: 'https://www.waterwisekids.com/' },
+    {}, { COLLECT_RATE_LIMITER: undefined }, { ALLOWED_ORIGIN: undefined }, { ALLOWED_ORIGIN: '*' }, { ALLOWED_ORIGIN: 'https://evil.example.com' }, { ALLOWED_ORIGIN: 'https://www.waterwisekids.com/' },
     { COLLECTOR_ENV: undefined }, { COLLECTOR_ENV: 'production' },
   ];
   for (const v of variants) {
     const { db, touched } = untouchableDb();
-    const env = { DB: { prepare: db.prepare, batch: db.batch }, ALLOWED_ORIGIN: ORIGIN, COLLECTOR_ENV: 'local', ...v };
+    const env = { DB: { prepare: db.prepare, batch: db.batch }, ALLOWED_ORIGIN: ORIGIN, COLLECTOR_ENV: 'local', COLLECT_RATE_LIMITER: { limit: async () => ({ success: true }) }, ...v };
     if (Object.keys(v).length === 0) delete env.DB;
     const logs = [];
     const res = await handleCollector(new Request('https://c.invalid/v1/collect', { method: 'POST', body: JSON.stringify(validEvent()), headers: { Origin: ORIGIN, 'Content-Type': 'text/plain' } }), env, {}, { log: (l) => logs.push(l) });

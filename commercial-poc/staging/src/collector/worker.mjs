@@ -24,6 +24,7 @@ const BASE_HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache
 export function collectorConfigProblems(env) {
   const problems = [];
   if (!env || !isD1(env.DB)) problems.push('missing_d1_binding');
+  if (!env || !env.COLLECT_RATE_LIMITER || typeof env.COLLECT_RATE_LIMITER.limit !== 'function') problems.push('missing_rate_limit_binding');
   if (!env || env.ALLOWED_ORIGIN !== REQUIRED_ORIGIN) problems.push('allowed_origin_must_be_exactly_www_waterwisekids_com');
   if (!env || !['pilot', 'staging', 'local'].includes(env.COLLECTOR_ENV)) problems.push('collector_env_must_be_pilot_staging_or_local');
   return problems;
@@ -73,6 +74,19 @@ export async function handleCollector(request, env, ctx, { now = () => Date.now(
   if (ctype !== 'application/json' && ctype !== 'text/plain') return json(415, { error: 'unsupported_media_type' }, cors);
   const declared = request.headers.get('Content-Length');
   if (declared !== null && !(Number(declared) <= MAX_BODY_BYTES)) return json(413, { error: 'payload_too_large' }, cors);
+
+  // A single global key bounds D1 write amplification per Cloudflare location without
+  // reading or retaining an IP address, cookie, user agent or other visitor identifier.
+  try {
+    const limited = await env.COLLECT_RATE_LIMITER.limit({ key: 'v1/collect' });
+    if (!limited || limited.success !== true) {
+      log({ worker: 'collector', status: 429, error: 'rate_limited' });
+      return json(429, { error: 'rate_limited' }, { ...cors, 'Retry-After': '60' });
+    }
+  } catch (err) {
+    log({ worker: 'collector', status: 503, error: 'rate_limit_unavailable', error_name: err && err.name ? String(err.name).slice(0, 40) : 'Error' });
+    return json(503, { error: 'temporarily_unavailable' }, cors);
+  }
 
   const bytes = await readCapped(request, MAX_BODY_BYTES);
   if (bytes === null) return json(413, { error: 'payload_too_large' }, cors);
