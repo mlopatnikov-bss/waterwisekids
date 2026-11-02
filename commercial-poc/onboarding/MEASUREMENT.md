@@ -54,6 +54,32 @@ Not verified: whether Jackrabbit stores a registration-source ("how did you hear
 - `--write --out <dir outside the repo>` writes `import/batch.json`, `d1-import-preflight.sql`, `d1-import.sql` and `summary.json`.
 - The SQL matches the accepted D1 importer row-for-row. Replaying it is a no-op, the newest export wins per key, and an older export applied later never overwrites a newer one. Values are replaced, never summed.
 
+## 2b. Conversion feed from BSS Messenger instant events (`src/conversion-feed.mjs`)
+
+This feed avoids scraping Jackrabbit. BSS Messenger (`src/instant.js`) already records booking-page lead emails (`loc`, `pool`, `heard`, `utmSource`, `utmMedium`, …) and Jackrabbit web-registration emails (`emails`, `phones`, `pools`) in `data/growth/instant.json` and `data/growth/nj/instant.json`. Those files contain family-level PII. The adapter reads them only when they are passed explicitly, and only from outside the repo. It keeps emails and phones in memory as match keys and outputs only aggregate counts.
+
+```bash
+npm run onboard -- conversion-feed definitions/bss-pilot-2026.sponsor.json --events <pa instant.json> --events <nj instant.json> --map <location-map.local.json> --to 2026-11-15 --exported-on 2026-11-16
+```
+
+It is a dry-run by default and prints per-tenant totals, an import-compatibility check, and warning **counts** only. `--write --out <dir outside the repo>` writes `feed/<tenant>.aggregate-conversions.json` (for `import-plan`) plus `feed/summary.json`.
+
+Rules (assumptions are marked; each is the conservative choice):
+| Rule | Detail |
+|---|---|
+| UTM basis (authoritative) | lead `utmSource` = `waterwisekids` **and** `utmMedium` = `sponsored_pilot` (case-insensitive) → `utm_matched_in_sponsor_system`. It **wins** when present, even if the family also answered WaterWiseKids (that case adds only to the `lead_both_signals_utm_wins` warning count). `waterwisekids` with any other medium adds only to `lead_waterwisekids_other_medium`. |
+| Self-reported basis | **only when the exact UTM basis is absent**: lead "How did you hear about us?" = WaterWiseKids → `self_reported_wwk_mention`. |
+| One basis invariant | every lead and every enrollment carries **exactly one** basis, so a sum of rows across `attribution_basis` counts each family once. `conversion-feed.test.mjs` asserts this. |
+| Lead | one `qualified_lead` per attributed lead, at its location (code via the local map, else the friendly pool name matched to the definition). Leads at unmapped or closed pools get no row but can still attribute an enrollment. |
+| Enrollment | a web registration matches an attributed lead by normalized email or phone, with lead ≤ registration ≤ lead + 90 days. The **most recent** such lead wins and the enrollment inherits its single basis. The location comes from the registration. *Assumption:* counted once per (lead, location, local day), because repeated registration emails would otherwise inflate counts. A registration naming two pilot locations is skipped as ambiguous. |
+| Dedupe | by kind + messageId across both files. Events without a messageId or valid timestamp are skipped and counted. |
+| Zeros | every active location × bucket × type × basis gets a row, so a live 0 differs from missing data. |
+| Granularity | `week` (Monday–Sunday, dated Sunday; default) or `day`. Month cannot align with the 2026-11-02 start. A weekly export cannot end on 2026-12-31 (a Thursday); use `day` for the final partial week. |
+| Provenance | `source_system` = `jackrabbit`, `extraction` = `bss_messenger_instant` (an **additive** contract value; import semantics unchanged), `confidence` = `medium` (email/phone matching). |
+| Location codes | real pool codes go only in the operator-local map (`*.local.json` or outside the repo). The pilot map lists the four live codes for Cheltenham, Howell, Brick and Toms River. Committed examples use synthetic codes. |
+
+Limits: the instant files keep the last 300 events per region (`instant.js` `KEEP`). Run the feed at least weekly so older leads are not lost before their enrollment arrives. Registrations by families who never filled in the booking page are not attributed. There is no all-source total in this feed.
+
 ## 3. Pilot portal (`PORTAL_ENV = "pilot"` only; `staging/src/portal/pilot-report.mjs`)
 
 - **No invented baseline.** The before/during block appears only when an ordinary-listing campaign really started before the sponsored one and has data in that pre-period. In the live pilot it never does.
@@ -61,7 +87,7 @@ Not verified: whether Jackrabbit stores a registration-source ("how did you hear
   - Regional sponsored cards with no featured location (for example `/swim-lessons/jersey-shore.html`) are excluded from the comparison but still counted in the headline sponsored figures. The table names the paired locations.
   - Days are the selected range ∩ sponsored window ∩ control window.
   - Both sides show eligible views, viewable impressions, clicks to the official site, and clicks per viewable impression. No lift percentage is shown. The caveat says it is side by side, not a controlled test.
-- **One headline basis.** Headline leads and enrollments use UTM-matched totals if any exist, else family-reported WWK mention. "All sources" never reaches the headline. A new **Attribution basis** table lists each basis as a separate row and says rows are never added together.
+- **One headline basis** (`selectHeadlineBasis`). Only `qualified_lead` and `enrollment` decide; `assessment_start` and `call` never do. UTM-matched wins if its total is positive, else family-reported WWK mention if its total is positive. Otherwise, if either WWK-linked basis has explicit zero rows, UTM-matched, so active zero reporting shows 0 and not "Not reported". Otherwise there is no headline. "All sources" never reaches the headline. A new **Attribution basis** table lists each basis as a separate row and says rows are never added together.
 - Staging and local rendering are unchanged. `portal-output.test.mjs` still proves byte-for-byte parity with the accepted Phase 1 views.
 
 ## Open items for review

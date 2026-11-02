@@ -39,7 +39,7 @@ export const EXPORT_SPEC = obj({
   schema: s({ enum: [EXPORT_SCHEMA] }), schema_version: { t: 'int', min: 1, max: 1 },
   tenant_key: s({ re: KEY }),
   source_system: s({ enum: ['jackrabbit', 'other_booking_system', 'manual_count'] }),
-  extraction: s({ enum: ['alfie_automation', 'manual_report'] }),
+  extraction: s({ enum: ['alfie_automation', 'manual_report', 'bss_messenger_instant'] }), // bss_messenger_instant: additive (conversion-feed.mjs)
   exported_on: date(),
   granularity: s({ enum: ['day', 'week', 'month'] }),
   period: obj({ from: date(), to: date() }),
@@ -156,7 +156,7 @@ export function planImport(def, exportFile, map) {
   const batch = {
     import_id: importIdFor(tenant.tenant_id, exportFile),
     method: IMPORT_METHOD,
-    source_label: `${exportFile.source_system === 'jackrabbit' ? 'Jackrabbit' : 'School system'} ${g} totals (${exportFile.extraction === 'alfie_automation' ? 'Alfie' : 'manual'})`,
+    source_label: `${exportFile.source_system === 'jackrabbit' ? 'Jackrabbit' : 'School system'} ${g} totals (${{ alfie_automation: 'Alfie', manual_report: 'manual', bss_messenger_instant: 'BSS Messenger' }[exportFile.extraction]})`,
     confidence: exportFile.confidence,
     rows: [...exportFile.rows].sort((a, b) => (a.date + a.location_ref + a.conversion_type + a.attribution_basis < b.date + b.location_ref + b.conversion_type + b.attribution_basis ? -1 : 1))
       .map((r) => ({ conversion_date: r.date, conversion_type: r.conversion_type, location_id: refs.get(r.location_ref).location_id, attribution_basis: r.attribution_basis, count: r.count, estimated_value_cents: null })),

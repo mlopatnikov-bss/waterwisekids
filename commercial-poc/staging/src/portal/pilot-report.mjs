@@ -10,14 +10,39 @@
 //     LOCATION-PAIRED placements (a featured sponsored card and an ordinary listing for the
 //     same location; regional cards with no featured location are excluded), with the same
 //     metric definitions. No lift percentage is shown.
-//  3. Attribution basis: the headline leads/enrollments use exactly ONE WWK-linked basis
-//     (UTM-matched if any rows exist, else family-reported WWK mention). "All sources"
+//  3. Attribution basis: the headline leads/enrollments use exactly ONE WWK-linked basis,
+//     chosen by selectHeadlineBasis() from headline types only (explicit zero rows never hide
+//     a positive self-reported total behind a zero UTM headline). "All sources"
 //     totals are context only. Bases are never added together.
 import { html, fmtInt, fmtPct } from '../../../src/portal/html.mjs';
 import { badge } from '../../../src/portal/views.mjs';
 import { LayoutAdaptationError } from './layout.mjs';
 
 export const HEADLINE_BASES = Object.freeze(['utm_matched_in_sponsor_system', 'self_reported_wwk_mention']);
+// Only these two types decide the headline basis. assessment_start and call NEVER influence the choice
+// (assessment_start is still displayed inside "Reported leads" for whichever basis is chosen).
+export const PREFERENCE_TYPES = Object.freeze(['qualified_lead', 'enrollment']);
+// Types the headline KPIs display ("Reported leads" = qualified_lead + assessment_start; "Reported enrollments").
+const DISPLAY_TYPES = Object.freeze(['qualified_lead', 'assessment_start', 'enrollment']);
+
+/**
+ * Deterministic, honest headline basis with explicit zero rows. Totals and presence count
+ * ONLY qualified_lead + enrollment:
+ *  1. UTM-matched if its qualified_lead + enrollment total is positive;
+ *  2. else self-reported WWK mention if its qualified_lead + enrollment total is positive;
+ *  3. else, if either WWK-linked basis has qualified_lead/enrollment rows (explicit zeros),
+ *     UTM-matched, so active zero reporting shows 0 rather than "Not reported";
+ *  4. else null. All-source rows never qualify.
+ */
+export function selectHeadlineBasis(byBasis) {
+  const total = (b) => PREFERENCE_TYPES.reduce((n, t) => n + (Number(byBasis?.[b]?.[t]) || 0), 0);
+  const present = (b) => Boolean(byBasis?.[b] && PREFERENCE_TYPES.some((t) => byBasis[b][t] !== undefined));
+  const [utm, self] = HEADLINE_BASES;
+  if (total(utm) > 0) return utm;
+  if (total(self) > 0) return self;
+  if (present(utm) || present(self)) return utm;
+  return null;
+}
 export const BASIS_LABEL = Object.freeze({
   utm_matched_in_sponsor_system: 'Matched to a WWK campaign link in the school’s own system',
   self_reported_wwk_mention: 'Family said they found the school on WaterWiseKids',
@@ -37,8 +62,14 @@ export function pilotPlan({ campaigns, from, to, comparison, byBasis }) {
     const oFrom = max(from, sponsored.starts_on, control.starts_on); const oTo = min(to, sponsored.ends_on, control.ends_on);
     if (oFrom <= oTo) overlap = { from: oFrom, to: oTo };
   }
-  const headlineBasis = HEADLINE_BASES.find((b) => byBasis[b] && Object.keys(byBasis[b]).length) || null;
-  return { sponsored, control, overlap, comparison: genuineBaseline ? comparison : null, headlineBasis, headlineConv: headlineBasis ? { ...byBasis[headlineBasis] } : {} };
+  const headlineBasis = selectHeadlineBasis(byBasis);
+  // qualified_lead and enrollment are always numeric for the chosen basis, so the explicit-zero fallback
+  // (which may pick UTM when only self-reported zero rows exist) shows 0 rather than "Not reported".
+  const src = (headlineBasis && byBasis[headlineBasis]) || {};
+  const headlineConv = headlineBasis ? { ...src, ...Object.fromEntries(PREFERENCE_TYPES.map((t) => [t, Number(src[t]) || 0])) } : {};
+  // The zero note describes what the headline DISPLAYS (assessment starts are shown inside "Reported leads").
+  const headlineZero = headlineBasis !== null && DISPLAY_TYPES.every((t) => !headlineConv[t]);
+  return { sponsored, control, overlap, comparison: genuineBaseline ? comparison : null, headlineBasis, headlineConv, headlineZero };
 }
 
 function table({ caption, head, rows }) {
@@ -82,11 +113,14 @@ export function attributionSection({ plan, byBasis }) {
   <div class="card-head"><h2 id="ab-h">Attribution basis</h2>${badge('reported')}</div>
   ${bases.length ? table({ caption: 'Reported totals by how each was linked to WWK (each row is a separate measure)', head: ['Basis', ...TYPE_ORDER.map(([, l]) => l)], rows })
     : html`<div class="empty-state"><p>No school-reported totals for this range yet.</p></div>`}
-  <p class="caveat">Rows are never added together: the same family can appear in more than one row. “All sources” counts every new enrollment at your locations and is shown for context only. Reported figures come from your school’s own records and are not proof that a WWK visit caused an enrollment.</p>
+  <p class="caveat">The headline uses one basis: the campaign-link (UTM) match when it has any reported qualified leads or enrollments, otherwise the family-reported WWK mention when that has any; reported zeros show as 0. Assessment starts and calls do not decide the basis. Rows are never added together: the same family can appear in more than one row. “All sources” counts every new enrollment at your locations and is shown for context only. Reported figures come from your school’s own records and are not proof that a WWK visit caused an enrollment.</p>
 </section>`;
 }
 
 function headlineNote(plan) {
+  if (plan.headlineBasis && plan.headlineZero) {
+    return html`<p class="muted" data-pilot-headline-basis="${plan.headlineBasis}" data-pilot-headline-zero="true">The school reported zero WWK-linked leads and enrollments for this range, so the headline shows 0 (not “Not reported”). Bases are listed under Attribution basis.</p>`;
+  }
   return plan.headlineBasis
     ? html`<p class="muted" data-pilot-headline-basis="${plan.headlineBasis}">Headline leads and enrollments use one basis only: ${BASIS_LABEL[plan.headlineBasis]}. Other bases are listed under Attribution basis.</p>`
     : html`<p class="muted" data-pilot-headline-basis="none">No WWK-linked leads or enrollments have been reported for this range, so the headline shows “Not reported”. Any all-source totals are listed under Attribution basis.</p>`;

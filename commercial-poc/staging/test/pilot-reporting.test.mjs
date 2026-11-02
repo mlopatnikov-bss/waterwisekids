@@ -12,7 +12,7 @@ import { loadManifestD1, ADMIN_USER_ID } from '../scripts/lib/seed-pipeline.mjs'
 import { loadRegistry } from '../src/shared/registry.mjs';
 import { ingestDeliveries } from '../src/shared/ingest.mjs';
 import { handlePortal } from '../src/portal/worker.mjs';
-import { pilotPlan } from '../src/portal/pilot-report.mjs';
+import { pilotPlan, selectHeadlineBasis } from '../src/portal/pilot-report.mjs';
 import { TenantScope } from '../src/shared/scope.mjs';
 import { freshD1, loadManifest, POC_ROOT, IDENTITIES, independentSubject, TEST_HMAC_KEY, accessCtx, portalEnv } from './support.mjs';
 import { createRepo } from '../../onboarding/src/repo.mjs';
@@ -195,5 +195,104 @@ test('pilotPlan: a genuine pre-period baseline is kept, a same-day or later cont
     byBasis: { utm_matched_in_sponsor_system: { enrollment: 1 }, self_reported_wwk_mention: { enrollment: 3 }, self_reported_any_source: { enrollment: 9 } } });
   assert.deepEqual(p.overlap, { from: '2026-11-10', to: '2026-11-30' });
   assert.equal(p.headlineBasis, 'utm_matched_in_sponsor_system');
-  assert.deepEqual(p.headlineConv, { enrollment: 1 });
+  assert.deepEqual(p.headlineConv, { enrollment: 1, qualified_lead: 0 });
+});
+
+// ---- Headline basis selection with explicit zero rows (conversion-feed emits zeros for both bases) ----
+const UTM = 'utm_matched_in_sponsor_system'; const SELF = 'self_reported_wwk_mention'; const ALL = 'self_reported_any_source';
+const zeros = () => ({ qualified_lead: 0, enrollment: 0 });
+
+test('headline basis (1): UTM with a positive total wins even when self-reported is also positive', () => {
+  assert.equal(selectHeadlineBasis({ [UTM]: { qualified_lead: 1, enrollment: 0 }, [SELF]: { qualified_lead: 5, enrollment: 3 } }), UTM);
+  assert.equal(selectHeadlineBasis({ [UTM]: { enrollment: 1 }, [SELF]: { enrollment: 9 } }), UTM);
+});
+
+test('headline basis (2): UTM explicit zero + self-reported positive falls back to self-reported', () => {
+  assert.equal(selectHeadlineBasis({ [UTM]: zeros(), [SELF]: { qualified_lead: 0, enrollment: 2 } }), SELF);
+  const p = pilotPlan({ campaigns: [], from: '2026-11-02', to: '2026-11-15', comparison: null, byBasis: { [UTM]: zeros(), [SELF]: { qualified_lead: 1, enrollment: 2 }, [ALL]: { enrollment: 7 } } });
+  assert.equal(p.headlineBasis, SELF);
+  assert.deepEqual(p.headlineConv, { qualified_lead: 1, enrollment: 2 });
+  assert.equal(p.headlineZero, false);
+});
+
+test('headline basis (3): both WWK bases explicit zero chooses UTM and shows 0, not Not reported', () => {
+  for (const byBasis of [{ [UTM]: zeros(), [SELF]: zeros() }, { [SELF]: zeros() }, { [UTM]: zeros(), [ALL]: { enrollment: 4 } }]) {
+    assert.equal(selectHeadlineBasis(byBasis), UTM);
+    const p = pilotPlan({ campaigns: [], from: '2026-11-02', to: '2026-11-15', comparison: null, byBasis });
+    assert.deepEqual(p.headlineConv, { ...(byBasis[UTM] || {}), qualified_lead: 0, enrollment: 0 });
+    assert.equal(p.headlineZero, true);
+  }
+});
+
+test('headline basis (4) neither basis -> null; (5) all-source only -> null', () => {
+  assert.equal(selectHeadlineBasis({}), null);
+  assert.equal(selectHeadlineBasis(undefined), null);
+  assert.equal(selectHeadlineBasis({ [ALL]: { qualified_lead: 3, enrollment: 7 } }), null);
+  assert.deepEqual(pilotPlan({ campaigns: [], from: '2026-11-02', to: '2026-11-15', comparison: null, byBasis: { [ALL]: { enrollment: 7 } } }).headlineConv, {});
+});
+
+test('only qualified_lead and enrollment decide: assessment_start-only or call-only rows never change the basis', () => {
+  // Baselines without the extra rows, then the same with assessment_start / call added: selection is identical.
+  const cases = [
+    [{ [UTM]: zeros(), [SELF]: { qualified_lead: 0, enrollment: 1 } }, SELF],
+    [{ [UTM]: { qualified_lead: 1, enrollment: 0 }, [SELF]: zeros() }, UTM],
+    [{ [UTM]: zeros(), [SELF]: zeros() }, UTM],
+    [{}, null],
+  ];
+  for (const [base, expected] of cases) {
+    assert.equal(selectHeadlineBasis(base), expected);
+    for (const extra of [{ assessment_start: 9 }, { call: 9 }, { assessment_start: 9, call: 9 }]) for (const b of [UTM, SELF]) {
+      const withExtra = { ...base, [b]: { ...(base[b] || {}), ...extra } };
+      const got = selectHeadlineBasis(withExtra);
+      // A basis that gains only assessment_start/call rows is still "absent" for selection, except via existing rows.
+      assert.equal(got, expected, `${JSON.stringify(withExtra)}`);
+    }
+  }
+  // Explicit: positive assessment starts / calls under self-reported cannot beat a zero UTM headline.
+  assert.equal(selectHeadlineBasis({ [UTM]: zeros(), [SELF]: { ...zeros(), assessment_start: 5, call: 3 } }), UTM);
+  // Explicit: assessment_start-only or call-only rows make no basis present at all.
+  assert.equal(selectHeadlineBasis({ [SELF]: { assessment_start: 3 } }), null);
+  assert.equal(selectHeadlineBasis({ [UTM]: { call: 2 } }), null);
+  // Display still includes the chosen basis's assessment starts in "Reported leads".
+  const p = pilotPlan({ campaigns: [], from: '2026-11-02', to: '2026-11-15', comparison: null, byBasis: { [SELF]: { assessment_start: 2, enrollment: 1 } } });
+  assert.equal(p.headlineBasis, SELF);
+  assert.deepEqual(p.headlineConv, { assessment_start: 2, enrollment: 1, qualified_lead: 0 });
+  assert.equal(p.headlineZero, false);
+});
+
+/** A feed-style export: explicit zero rows for both bases, with optional positive cells. */
+function feedExport(cells) {
+  const ex = readJson('examples/aggregate-conversions.example.json');
+  ex.extraction = 'bss_messenger_instant';
+  ex.basis_definitions = { [UTM]: 'EXAMPLE: sponsored UTM on booking-page lead', [SELF]: 'EXAMPLE: heard WaterWiseKids, no sponsored UTM' };
+  ex.rows = [];
+  for (const date of ['2026-11-08', '2026-11-15']) for (const ref of ['EXAMPLE-HOW', 'EXAMPLE-BRK', 'EXAMPLE-TR']) for (const type of ['qualified_lead', 'enrollment']) for (const basis of [UTM, SELF]) {
+    ex.rows.push({ date, location_ref: ref, conversion_type: type, attribution_basis: basis, count: cells[`${date}|${ref}|${type}|${basis}`] || 0 });
+  }
+  return ex;
+}
+
+test('dashboard: UTM explicit zeros + self-reported positive headline is self-reported, not a hidden 0', async () => {
+  const db = await pilotDb();
+  await ingestTraffic(db);
+  const plan = planImport(DEF, feedExport({ [`2026-11-15|EXAMPLE-HOW|enrollment|${SELF}`]: 2, [`2026-11-08|EXAMPLE-BRK|qualified_lead|${SELF}`]: 3 }), readJson('examples/location-map.example.json'));
+  assert.equal(plan.ok, true, JSON.stringify(plan.errors));
+  db.db.exec(importSql(plan));
+  const { body } = await dashboard(db, JS);
+  assert.match(body, /data-pilot-headline-basis="self_reported_wwk_mention"/);
+  assert.match(body, /data-metric="reported_enrollments" data-value="2"/);
+  assert.match(body, /data-metric="reported_leads" data-value="3"/);
+});
+
+test('dashboard: both bases explicit zero shows 0 with the zero note, not Not reported', async () => {
+  const db = await pilotDb();
+  await ingestTraffic(db);
+  const plan = planImport(DEF, feedExport({}), readJson('examples/location-map.example.json'));
+  assert.equal(plan.ok, true, JSON.stringify(plan.errors));
+  db.db.exec(importSql(plan));
+  const { body } = await dashboard(db, JS);
+  assert.match(body, /data-pilot-headline-basis="utm_matched_in_sponsor_system" data-pilot-headline-zero="true"/);
+  assert.match(body, /data-metric="reported_enrollments" data-value="0"/);
+  assert.match(body, /data-metric="reported_leads" data-value="0"/);
+  assert.doesNotMatch(body, /data-metric="reported_enrollments" data-value="Not reported"/);
 });

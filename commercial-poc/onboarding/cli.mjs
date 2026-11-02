@@ -11,6 +11,10 @@
 //          --controls <plan.controls.json>  (adds ordinary-listing control artifacts under control/)
 //   node onboarding/cli.mjs import-plan <definition.json> --export <totals.json> --map <location-map.json> [--write --out DIR]
 //          Aggregate conversion import dry-run. --write requires an --out OUTSIDE the repository.
+//   node onboarding/cli.mjs conversion-feed <definition.json> --events <pa instant.json> --events <nj instant.json>
+//          --map <location-map.json> --to YYYY-MM-DD --exported-on YYYY-MM-DD [--from YYYY-MM-DD] [--granularity week|day] [--write --out DIR]
+//          BSS Messenger instant streams -> per-tenant aggregate exports, one mutually exclusive basis per lead/enrollment
+//          (sponsored UTM wins). Prints aggregates only; never PII.
 import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -19,10 +23,11 @@ import { createRepo, DEFAULT_REPO_ROOT, isInside, ONBOARDING_ROOT, POC_ROOT } fr
 import { expectedIds, validateDefinition } from './src/validate.mjs';
 import { buildPacket } from './src/packet.mjs';
 import { importPreflight, importSql, importSummary, planImport } from './src/conversion-import.mjs';
+import { buildConversionFeed } from './src/conversion-feed.mjs';
 
 export const DEFAULT_OUT_ROOT = join(ONBOARDING_ROOT, 'out');
-const COMMANDS = new Set(['validate', 'ids', 'plan', 'packet', 'import-plan']);
-const VALUE_FLAGS = new Set(['--out', '--as-of', '--deactivate-on', '--repo-root', '--registry-dir', '--controls', '--export', '--map']);
+const COMMANDS = new Set(['validate', 'ids', 'plan', 'packet', 'import-plan', 'conversion-feed']);
+const VALUE_FLAGS = new Set(['--out', '--as-of', '--deactivate-on', '--repo-root', '--registry-dir', '--controls', '--export', '--map', '--to', '--from', '--exported-on', '--granularity']);
 const BOOL_FLAGS = new Set(['--write', '--no-manifest']);
 
 export class UsageError extends Error {}
@@ -35,11 +40,18 @@ export function parseArgs(argv) {
   for (let i = 0; i < rest.length; i += 1) {
     const a = rest[i];
     if (BOOL_FLAGS.has(a)) { opts[a.slice(2)] = true; continue; }
+    if (a === '--events') { const v = rest[i + 1]; if (!v || v.startsWith('--')) throw new UsageError('--events needs a value'); (opts.events ||= []).push(v); i += 1; continue; }
     if (VALUE_FLAGS.has(a)) { const v = rest[i + 1]; if (!v || v.startsWith('--')) throw new UsageError(`${a} needs a value`); opts[a.slice(2)] = v; i += 1; continue; }
     throw new UsageError(`unknown option ${a}`);
   }
-  for (const k of ['as-of', 'deactivate-on']) if (opts[k] && !/^\d{4}-\d{2}-\d{2}$/.test(opts[k])) throw new UsageError(`--${k} must be YYYY-MM-DD`);
-  if (opts.write && command !== 'packet' && command !== 'import-plan') throw new UsageError('--write is only valid with packet or import-plan');
+  for (const k of ['as-of', 'deactivate-on', 'to', 'from', 'exported-on']) if (opts[k] && !/^\d{4}-\d{2}-\d{2}$/.test(opts[k])) throw new UsageError(`--${k} must be YYYY-MM-DD`);
+  if (opts.write && !['packet', 'import-plan', 'conversion-feed'].includes(command)) throw new UsageError('--write is only valid with packet, import-plan or conversion-feed');
+  if (opts.events && command !== 'conversion-feed') throw new UsageError('--events is only valid with conversion-feed');
+  if (command === 'conversion-feed') {
+    if (!opts.events || opts.events.length !== 2 || resolve(opts.events[0]) === resolve(opts.events[1])) throw new UsageError('conversion-feed needs exactly two distinct --events files (PA and NJ instant.json)');
+    if (!opts.map || !opts.to || !opts['exported-on']) throw new UsageError('conversion-feed needs --map, --to and --exported-on');
+    if (opts.write && !opts.out) throw new UsageError('conversion-feed --write needs an explicit --out outside the repository');
+  }
   if (command === 'import-plan' && (!opts.export || !opts.map)) throw new UsageError('import-plan needs --export and --map');
   if (command === 'import-plan' && opts.write && !opts.out) throw new UsageError('import-plan --write needs an explicit --out outside the repository');
   return opts;
@@ -105,6 +117,26 @@ export function run(argv, { stdout = (s) => process.stdout.write(s) } = {}) {
       if (outDir === ctx.repo.root || isInside(ctx.repo.root, outDir)) throw new UsageError('import output holds real school totals and must be written outside the repository (commercial-poc/ is publicly served)');
       const written = writePacket({ 'import/batch.json': `${JSON.stringify(plan.batch, null, 2)}\n`, 'import/d1-import.sql': importSql(plan), 'import/d1-import-preflight.sql': importPreflight(plan), 'import/summary.json': `${JSON.stringify(summary, null, 2)}\n` }, outDir);
       stdout(`${JSON.stringify({ ok: true, mode: 'write', out_dir: outDir, written, summary }, null, 2)}\n`);
+      return 0;
+    }
+    if (opts.command === 'conversion-feed') {
+      // Event files hold family-level PII: they must live outside the repo, are read only here, and
+      // nothing from them except aggregate counts is ever printed or written.
+      for (const f of [...opts.events, opts.map]) { const a = resolve(f); if (a === ctx.repo.root || isInside(ctx.repo.root, a)) throw new UsageError('event and map files must be outside the repository (commercial-poc/ is publicly served)'); }
+      const readQuiet = (f) => { try { return JSON.parse(readFileSync(resolve(f), 'utf8')); } catch { throw new UsageError('an input file is missing or is not valid JSON'); } };
+      const feed = buildConversionFeed(def, opts.events.map(readQuiet), readQuiet(opts.map), { from: opts.from || null, to: opts.to, exportedOn: opts['exported-on'], granularity: opts.granularity || 'week' });
+      if (!feed.ok) { stdout(`${JSON.stringify({ ok: false, errors: feed.errors, warning_counts: feed.warnings }, null, 2)}\n`); return 1; }
+      const map = readQuiet(opts.map);
+      const checks = {};
+      for (const [tk, ex] of Object.entries(feed.exports)) { const p = planImport(def, ex, map); checks[tk] = p.ok ? { import_compatible: true, import_id: p.batch.import_id, rows: p.batch.rows.length } : { import_compatible: false, errors: p.errors.map((e) => e.code) }; }
+      if (Object.values(checks).some((c) => !c.import_compatible)) { stdout(`${JSON.stringify({ ok: false, import_checks: checks, warning_counts: feed.warnings }, null, 2)}\n`); return 1; }
+      const summary = { schema: 'wwk.conversion-feed-summary', totals_by_tenant: feed.totals, import_checks: checks, warning_counts: feed.warnings, note: 'Aggregate counts only. Each lead and enrollment has exactly one basis (sponsored UTM wins over self-report), so bases never overlap.', network_actions: 0, database_actions: 0 };
+      if (!opts.write) { stdout(`${JSON.stringify({ ok: true, mode: 'dry-run', note: 'Nothing was written.', summary }, null, 2)}\n`); return 0; }
+      const outDir = resolve(opts.out);
+      if (outDir === ctx.repo.root || isInside(ctx.repo.root, outDir)) throw new UsageError('feed output holds real school totals and must be written outside the repository (commercial-poc/ is publicly served)');
+      const files = { 'feed/summary.json': `${JSON.stringify(summary, null, 2)}\n` };
+      for (const [tk, ex] of Object.entries(feed.exports)) files[`feed/${tk}.aggregate-conversions.json`] = `${JSON.stringify(ex, null, 2)}\n`;
+      stdout(`${JSON.stringify({ ok: true, mode: 'write', out_dir: outDir, written: writePacket(files, outDir), summary }, null, 2)}\n`);
       return 0;
     }
     if (opts.command === 'validate') {

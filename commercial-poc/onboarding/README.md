@@ -17,6 +17,7 @@ Turns one reviewed **sponsor definition** into a deterministic **activation pack
 | `assets/wwk-ordinary-listing.js` | Proposed new public client for ordinary listings (shipped only as a packet diff) |
 | `src/controls.mjs` · `src/conversion-import.mjs` | Control plan validation/artifacts · aggregate import contract and dry-run |
 | `examples/` | Synthetic location map and totals file (no real codes or counts) |
+| `src/conversion-feed.mjs` | BSS Messenger instant events → per-tenant aggregate exports (`conversion-feed` command). Exactly one basis per lead/enrollment (sponsored UTM wins over self-report); aggregates only, never PII |
 | `package.json` | Self-contained scripts, no dependencies: `npm test`, `npm run onboard -- <command> definitions/<key>.sponsor.json` (run from this folder) |
 | `test/` | `npm test` |
 
