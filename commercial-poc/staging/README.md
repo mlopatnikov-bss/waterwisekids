@@ -1,6 +1,6 @@
 # WWK Commercial POC — live pilot
 
-Status: **live Mike-only pilot deployed and smoke-tested on November 2, 2026.**
+Status: **live pilot (Northwest Philadelphia and Jersey Shore) deployed and smoke-tested on November 2, 2026. The Manhattan expansion is implemented in this worktree and awaits activation review** (`evidence/manhattan-pilot-2026-11-02.md`).
 
 This package turns the Phase 1 proof into two Cloudflare Worker-shaped services sharing one D1 database:
 
@@ -15,6 +15,7 @@ The pilot uses isolated Cloudflare Workers and D1 for collection and reporting. 
 - Private portal: `https://sponsors.waterwisekids.com` behind Cloudflare Access.
 - Administrator: an opaque identity mapping for the approved administrator can switch among all current and future sponsor tenants.
 - Pilot tenants: British Swim School of Northwest Philadelphia and British Swim School of Jersey Shore.
+- Manhattan expansion (pending activation): British Swim School of Manhattan as a separate no-fee sponsor account. It has seven verified venues and one sponsored card on `/swim-lessons/directory/new-york.html`; East Village is held. There is no sponsor portal user: the administrator role exposes the tenant automatically. There is no ordinary-listing control (see `../onboarding/MEASUREMENT.md` §4). Activation applies the onboarding packet's `d1-upsert.sql` to the live D1. The live D1 is never re-seeded.
 - Pilot locations: LA Fitness Cheltenham, Howell, Brick, and Toms River.
 - Start date: November 2, 2026; pilot value is $0.
 - No family names, contact information, IP addresses, cookies, referrers, full URLs, or device fingerprints are collected by the WWK event collector.

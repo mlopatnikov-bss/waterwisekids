@@ -1,6 +1,9 @@
 // Deterministic sponsored-card HTML. The markup is byte-compatible with the cards that
-// are live on the seven pilot pages (tests compare against the real files), and with
+// are live on the pilot pages (tests compare against the real files), and with
 // the client component in assets/js/wwk-sponsored.js (data-wwk-* attributes).
+import { MAX_PLACEMENT_LOCATIONS } from './schema.mjs';
+
+export { MAX_PLACEMENT_LOCATIONS };
 export const UTM_SOURCE = 'waterwisekids';
 export const UTM_MEDIUM = { sponsored_pilot: 'sponsored_pilot' };
 export const LINK_REL = 'sponsored noopener';
@@ -35,6 +38,7 @@ export function placementDestinations(tenant, placement) {
 /** Card block as an array of lines (comment, stylesheet, aside, script). */
 export function renderCardLines(def, tenant, placement) {
   const c = tenant.campaign; const p = placement; const id = p.placement_id;
+  if (!Array.isArray(p.location_keys) || p.location_keys.length < 1 || p.location_keys.length > MAX_PLACEMENT_LOCATIONS) throw new Error(`a card lists 1 to ${MAX_PLACEMENT_LOCATIONS} locations (got ${p.location_keys?.length})`);
   const pad = ' '.repeat(p.indent); const in1 = `${pad}  `; const in2 = `${pad}    `;
   const dests = placementDestinations(tenant, p);
   const terr = dests[dests.length - 1];

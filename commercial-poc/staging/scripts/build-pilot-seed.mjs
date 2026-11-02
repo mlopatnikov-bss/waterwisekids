@@ -1,6 +1,11 @@
 #!/usr/bin/env node
-// Builds a clean, real-pilot D1 seed: Mike's four approved locations and seven
-// sponsored placements only. It deliberately creates no traffic or conversion rows.
+// Builds a clean, real-pilot D1 seed: the approved pilot tenants (Northwest Philadelphia,
+// Jersey Shore and, from the Manhattan expansion, Manhattan), their eleven approved
+// locations and eight sponsored placements only. It deliberately creates no traffic,
+// conversion, user or membership rows. Held locations (Andorra, Asbury Park, East
+// Village) are never included. Manhattan has no ordinary-listing control campaign.
+// The already-live D1 is extended with the Manhattan onboarding packet's d1-upsert.sql,
+// never by re-seeding; onboarding tests prove both paths give the same rows.
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { join, resolve } from 'node:path';
@@ -15,8 +20,20 @@ import { tableSummary } from './build-seed.mjs';
 export const PILOT_START = '2026-11-02';
 export const PILOT_END = '2026-12-31';
 export const PILOT_AT = '2026-11-02T05:00:00.000Z';
-const TENANTS = new Set(['ten_b234a48144f47f06', 'ten_9d294d23e0e9841e']);
-const LOCATIONS = new Set(['loc_d3c46e7d6efc62f7', 'loc_3c6664af3a15b390', 'loc_b5b7d777c4bea81a', 'loc_096d7703f7c65cd6']);
+export const MANHATTAN_TENANT_ID = 'ten_52bf92991a0305d0';
+// Manhattan: the seven venues verified in the 2026-11-02 official snapshot and WWK directory data.
+export const MANHATTAN_LOCATION_IDS = Object.freeze([
+  'loc_62b36f46fcdb5e47', // Upper East Side - Dwight School
+  'loc_a0918a26c7b9cde7', // St. Bart's Church
+  'loc_f512b73e99c5d550', // BMCC (Borough of Manhattan Community College)
+  'loc_d73c8e16e071c820', // John Jay College
+  'loc_0495184e2c71c89c', // Liberty Terrace
+  'loc_0d1fa0c4a7ea58c8', // Wall Street
+  'loc_f4f76e1ad2c26f8b', // The Continental
+]);
+export const PILOT_TENANT_IDS = Object.freeze(['ten_b234a48144f47f06', 'ten_9d294d23e0e9841e', MANHATTAN_TENANT_ID]);
+const TENANTS = new Set(PILOT_TENANT_IDS);
+const LOCATIONS = new Set(['loc_d3c46e7d6efc62f7', 'loc_3c6664af3a15b390', 'loc_b5b7d777c4bea81a', 'loc_096d7703f7c65cd6', ...MANHATTAN_LOCATION_IDS]);
 
 export function pilotManifest(base) {
   const campaigns = base.campaigns.filter((x) => TENANTS.has(x.tenant_id) && x.kind === 'sponsored_pilot')
@@ -32,7 +49,7 @@ export function pilotManifest(base) {
     generated_at: PILOT_AT,
     generator: 'commercial-poc/staging/scripts/build-pilot-seed.mjs',
     fixture_notice: undefined,
-    pilot_notice: 'Approved no-fee live pilot for Mike; metrics begin 2026-11-02.',
+    pilot_notice: 'Approved no-fee live pilot (Northwest Philadelphia, Jersey Shore, Manhattan); metrics begin 2026-11-02.',
     tenants: base.tenants.filter((x) => TENANTS.has(x.tenant_id)),
     schools,
     locations: base.locations.filter((x) => LOCATIONS.has(x.location_id)).map((x) => ({

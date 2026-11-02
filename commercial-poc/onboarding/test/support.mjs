@@ -6,6 +6,13 @@ import { createRepo, ONBOARDING_ROOT, POC_ROOT } from '../src/repo.mjs';
 export const PILOT_PATH = join(ONBOARDING_ROOT, 'definitions/bss-pilot-2026.sponsor.json');
 export const TEMPLATE_PATH = join(ONBOARDING_ROOT, 'definitions/template.sponsor.json');
 export const loadPilot = () => JSON.parse(readFileSync(PILOT_PATH, 'utf8'));
+export const MANHATTAN_PATH = join(ONBOARDING_ROOT, 'definitions/bss-manhattan-pilot-2026.sponsor.json');
+export const loadManhattan = () => JSON.parse(readFileSync(MANHATTAN_PATH, 'utf8'));
+/** Tenant IDs declared by a definition. */
+export const tenantIdsOf = (def) => new Set(def.tenants.map((t) => t.tenant_id));
+const SLICED = ['tenants', 'schools', 'locations', 'campaigns', 'placements', 'placement_pages', 'destinations', 'placement_destinations'];
+/** The rows of a manifest that belong to the given tenants (every sliced table carries tenant_id). */
+export const sliceFor = (m, tids) => ({ ...m, ...Object.fromEntries(SLICED.map((k) => [k, m[k].filter((r) => tids.has(r.tenant_id))])) });
 export const loadManifest = () => JSON.parse(readFileSync(join(POC_ROOT, 'seed/pilot-manifest.json'), 'utf8'));
 export const clone = (x) => JSON.parse(JSON.stringify(x));
 

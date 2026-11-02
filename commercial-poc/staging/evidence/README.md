@@ -6,3 +6,4 @@
 
 The verifier contains no remote Cloudflare operation and removes only its marker-guarded local state directory. Accepted Phase 1/2 files and public WWK source are fingerprint-tested as unchanged.
 
+- `manhattan-pilot-2026-11-02.md`: Manhattan expansion approval scope, verified venues, held location, placement, the no-control limitation and pending gates (gate evidence for `bss-manhattan-pilot-2026`).

@@ -1,0 +1,402 @@
+{
+  "schema": "wwk.sponsor-definition",
+  "schema_version": 1,
+  "definition_key": "bss-manhattan-pilot-2026",
+  "prepared_on": "2026-11-02",
+  "site": {
+    "host": "www.waterwisekids.com",
+    "collector_url": "https://events.waterwisekids.com/v1/collect",
+    "component_version": "p2r2"
+  },
+  "destination_hosts": [
+    "britishswimschool.com"
+  ],
+  "markets": [
+    {
+      "market_key": "ny-manhattan",
+      "state": "NY",
+      "label": "Manhattan",
+      "place_names": [
+        "Manhattan"
+      ]
+    }
+  ],
+  "page_inventory": [
+    {
+      "page_path": "/swim-lessons/directory/new-york.html",
+      "market_key": "ny-manhattan",
+      "page_status": "existing"
+    }
+  ],
+  "tenants": [
+    {
+      "tenant_key": "manhattan",
+      "tenant_id": "ten_52bf92991a0305d0",
+      "display_name": "British Swim School of Manhattan",
+      "timezone": "America/New_York",
+      "school": {
+        "school_id": "sch_86917fa1e77abc43",
+        "display_name": "British Swim School of Manhattan",
+        "territory_url": "https://britishswimschool.com/manhattan/"
+      },
+      "locations": [
+        {
+          "location_key": "upper-east-side-dwight-school",
+          "location_id": "loc_62b36f46fcdb5e47",
+          "display_name": "Upper East Side - Dwight School",
+          "market_key": "ny-manhattan",
+          "official_url": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/",
+          "address_display": "2116 1st Ave New York, NY 10029",
+          "facts": [
+            {
+              "fact_key": "address",
+              "value": "2116 1st Ave New York, NY 10029",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "address",
+              "value": "2116 1st Ave New York, NY 10029",
+              "source": "repo_directory_data",
+              "source_ref": "swim-lessons/directory/schools-data.js",
+              "source_url": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "location_page",
+              "value": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/upper-east-side-dwight-school/",
+              "observed_on": "2026-11-02"
+            }
+          ]
+        },
+        {
+          "location_key": "st-barts",
+          "location_id": "loc_a0918a26c7b9cde7",
+          "display_name": "St. Bart's Church",
+          "market_key": "ny-manhattan",
+          "official_url": "https://britishswimschool.com/manhattan/location/st-barts/",
+          "address_display": "325 Park Avenue New York, NY 10022",
+          "facts": [
+            {
+              "fact_key": "address",
+              "value": "325 Park Avenue New York, NY 10022",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/st-barts/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "address",
+              "value": "325 Park Avenue New York, NY 10022",
+              "source": "repo_directory_data",
+              "source_ref": "swim-lessons/directory/schools-data.js",
+              "source_url": "https://britishswimschool.com/manhattan/location/st-barts/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "location_page",
+              "value": "https://britishswimschool.com/manhattan/location/st-barts/",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/st-barts/",
+              "observed_on": "2026-11-02"
+            }
+          ]
+        },
+        {
+          "location_key": "bmcc",
+          "location_id": "loc_f512b73e99c5d550",
+          "display_name": "BMCC (Borough of Manhattan Community College)",
+          "market_key": "ny-manhattan",
+          "official_url": "https://britishswimschool.com/manhattan/location/bmcc/",
+          "address_display": "77 Harrison Street New York, NY 10013",
+          "facts": [
+            {
+              "fact_key": "address",
+              "value": "77 Harrison Street New York, NY 10013",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/bmcc/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "address",
+              "value": "77 Harrison Street New York, NY 10013",
+              "source": "repo_directory_data",
+              "source_ref": "swim-lessons/directory/schools-data.js",
+              "source_url": "https://britishswimschool.com/manhattan/location/bmcc/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "location_page",
+              "value": "https://britishswimschool.com/manhattan/location/bmcc/",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/bmcc/",
+              "observed_on": "2026-11-02"
+            }
+          ]
+        },
+        {
+          "location_key": "john-jay-college",
+          "location_id": "loc_d73c8e16e071c820",
+          "display_name": "John Jay College",
+          "market_key": "ny-manhattan",
+          "official_url": "https://britishswimschool.com/manhattan/location/john-jay-college/",
+          "address_display": "524 West 59th St New York, NY 10019",
+          "facts": [
+            {
+              "fact_key": "address",
+              "value": "524 West 59th St New York, NY 10019",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/john-jay-college/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "address",
+              "value": "524 West 59th St New York, NY 10019",
+              "source": "repo_directory_data",
+              "source_ref": "swim-lessons/directory/schools-data.js",
+              "source_url": "https://britishswimschool.com/manhattan/location/john-jay-college/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "location_page",
+              "value": "https://britishswimschool.com/manhattan/location/john-jay-college/",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/john-jay-college/",
+              "observed_on": "2026-11-02"
+            }
+          ]
+        },
+        {
+          "location_key": "liberty-terrace",
+          "location_id": "loc_0495184e2c71c89c",
+          "display_name": "Liberty Terrace",
+          "market_key": "ny-manhattan",
+          "official_url": "https://britishswimschool.com/manhattan/location/liberty-terrace/",
+          "address_display": "380 Rector Pl New York, NY 10280",
+          "facts": [
+            {
+              "fact_key": "address",
+              "value": "380 Rector Pl New York, NY 10280",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/liberty-terrace/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "address",
+              "value": "380 Rector Pl New York, NY 10280",
+              "source": "repo_directory_data",
+              "source_ref": "swim-lessons/directory/schools-data.js",
+              "source_url": "https://britishswimschool.com/manhattan/location/liberty-terrace/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "location_page",
+              "value": "https://britishswimschool.com/manhattan/location/liberty-terrace/",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/liberty-terrace/",
+              "observed_on": "2026-11-02"
+            }
+          ]
+        },
+        {
+          "location_key": "wall-street",
+          "location_id": "loc_0d1fa0c4a7ea58c8",
+          "display_name": "Wall Street",
+          "market_key": "ny-manhattan",
+          "official_url": "https://britishswimschool.com/manhattan/location/wall-street/",
+          "address_display": "88 Fulton St New York, NY 10038",
+          "facts": [
+            {
+              "fact_key": "address",
+              "value": "88 Fulton St New York, NY 10038",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/wall-street/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "address",
+              "value": "88 Fulton St New York, NY 10038",
+              "source": "repo_directory_data",
+              "source_ref": "swim-lessons/directory/schools-data.js",
+              "source_url": "https://britishswimschool.com/manhattan/location/wall-street/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "location_page",
+              "value": "https://britishswimschool.com/manhattan/location/wall-street/",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/wall-street/",
+              "observed_on": "2026-11-02"
+            }
+          ]
+        },
+        {
+          "location_key": "the-continental",
+          "location_id": "loc_f4f76e1ad2c26f8b",
+          "display_name": "The Continental",
+          "market_key": "ny-manhattan",
+          "official_url": "https://britishswimschool.com/manhattan/location/the-continental/",
+          "address_display": "885 6th Ave (between 31st and 32nd Streets) New York, NY 10001",
+          "facts": [
+            {
+              "fact_key": "address",
+              "value": "885 6th Ave (between 31st and 32nd Streets) New York, NY 10001",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/the-continental/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "address",
+              "value": "885 6th Ave (between 31st and 32nd Streets) New York, NY 10001",
+              "source": "repo_directory_data",
+              "source_ref": "swim-lessons/directory/schools-data.js",
+              "source_url": "https://britishswimschool.com/manhattan/location/the-continental/",
+              "observed_on": "2026-11-02"
+            },
+            {
+              "fact_key": "location_page",
+              "value": "https://britishswimschool.com/manhattan/location/the-continental/",
+              "source": "official_snapshot",
+              "source_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json",
+              "source_url": "https://britishswimschool.com/manhattan/location/the-continental/",
+              "observed_on": "2026-11-02"
+            }
+          ]
+        }
+      ],
+      "destinations": [
+        {
+          "destination_id": "dst_941c2435cc290c12",
+          "kind": "territory",
+          "location_key": null
+        },
+        {
+          "destination_id": "dst_67fabacbc6c1fbfe",
+          "kind": "location",
+          "location_key": "upper-east-side-dwight-school"
+        },
+        {
+          "destination_id": "dst_a40fad425d96a302",
+          "kind": "location",
+          "location_key": "st-barts"
+        },
+        {
+          "destination_id": "dst_423b17cf02cb30ec",
+          "kind": "location",
+          "location_key": "bmcc"
+        },
+        {
+          "destination_id": "dst_83a3e38021842bbf",
+          "kind": "location",
+          "location_key": "john-jay-college"
+        },
+        {
+          "destination_id": "dst_c6c6fe4768ac7459",
+          "kind": "location",
+          "location_key": "liberty-terrace"
+        },
+        {
+          "destination_id": "dst_3a12b18e68f40fa6",
+          "kind": "location",
+          "location_key": "wall-street"
+        },
+        {
+          "destination_id": "dst_1a3f93df110c6548",
+          "kind": "location",
+          "location_key": "the-continental"
+        }
+      ],
+      "campaign": {
+        "campaign_key": "sponsored-pilot-2026",
+        "campaign_id": "cmp_c7fea2983961d658",
+        "kind": "sponsored_pilot",
+        "display_name": "Sponsored pilot",
+        "disclosure_label": "Sponsored pilot",
+        "disclosure_text": "No-fee pilot placement. WaterWiseKids may offer paid sponsored placements in the future. Sponsorship does not change directory order or editorial content.",
+        "starts_on": "2026-11-02",
+        "ends_on": "2026-12-31",
+        "price_cents": 0,
+        "currency": "USD"
+      },
+      "placements": [
+        {
+          "slot_key": "man-directory-new-york",
+          "placement_id": "plc_10e8497ef216c69d",
+          "page_path": "/swim-lessons/directory/new-york.html",
+          "market_key": "ny-manhattan",
+          "variant": "venue_list",
+          "location_keys": [
+            "upper-east-side-dwight-school",
+            "st-barts",
+            "bmcc",
+            "john-jay-college",
+            "liberty-terrace",
+            "wall-street",
+            "the-continental"
+          ],
+          "indent": 4,
+          "anchor": {
+            "type": "existing_marker",
+            "text": null
+          }
+        }
+      ]
+    }
+  ],
+  "portal": {
+    "users": []
+  },
+  "approvals": [
+    {
+      "gate": "sponsor_terms",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/staging/evidence/manhattan-pilot-2026-11-02.md"
+    },
+    {
+      "gate": "source_verification",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/seed/sources/official-operator-snapshot-2026-11-02.json"
+    },
+    {
+      "gate": "editorial_review",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/staging/evidence/manhattan-pilot-2026-11-02.md"
+    },
+    {
+      "gate": "preview_qa",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/proposal/evidence/previews/preview-report.json"
+    },
+    {
+      "gate": "portal_access",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/staging/evidence/manhattan-pilot-2026-11-02.md"
+    },
+    {
+      "gate": "activation",
+      "status": "recorded",
+      "recorded_on": "2026-11-02",
+      "evidence_ref": "commercial-poc/staging/evidence/manhattan-pilot-2026-11-02.md"
+    }
+  ]
+}

@@ -75,13 +75,17 @@ const anchor = obj({
   text: nullable(str({ min: 12, max: 400, re: /^[^\n\r]*$/ })),
 });
 
+// A venue_list card lists at most seven pools (raised from six for the Manhattan pilot,
+// whose official territory page lists seven eligible venues). render.mjs enforces the same cap.
+export const MAX_PLACEMENT_LOCATIONS = 7;
+
 const placement = obj({
   slot_key: key(),
   placement_id: id('plc'),
   page_path: str({ min: 2, max: 200 }),
   market_key: key(),
   variant: oneOf('featured_location', 'venue_list'),
-  location_keys: arr(key(), { min: 1, max: 6 }),
+  location_keys: arr(key(), { min: 1, max: MAX_PLACEMENT_LOCATIONS }),
   indent: int({ min: 0, max: 16 }),
   anchor,
 });

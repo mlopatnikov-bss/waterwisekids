@@ -12,10 +12,14 @@ import { buildPacket, canonical, definitionSha } from '../src/packet.mjs';
 import { findCardBlock } from '../src/render.mjs';
 import { ONBOARDING_ROOT } from '../src/repo.mjs';
 import { run, safeOutDir, writePacket, DEFAULT_OUT_ROOT } from '../cli.mjs';
-import { clone, loadManifest, loadPilot, PILOT_PATH, realCtx, realRepo, stubCtx, stubDef, stubFiles } from './support.mjs';
+import { clone, loadManifest, loadPilot, PILOT_PATH, realCtx, realRepo, sliceFor, stubCtx, stubDef, stubFiles, tenantIdsOf } from './support.mjs';
 
 const ENTITY_TABLES = ['tenants', 'schools', 'locations', 'campaigns', 'destinations', 'placements', 'placement_pages', 'placement_destinations'];
 const live = pilotManifest(loadManifest());
+// The live seed now holds every approved pilot definition (bss-pilot-2026 + bss-manhattan-pilot-2026).
+// Each definition is compared with its own tenants' slice of that seed.
+const livePilot = sliceFor(live, tenantIdsOf(loadPilot()));
+const onlyTenants = (d, tids) => Object.fromEntries(Object.entries(d).map(([t, rows]) => [t, rows.filter((r) => tids.has(JSON.parse(r).tenant_id))]));
 let pilotPacket = null;
 const packet = () => (pilotPacket ??= buildPacket(loadPilot(), realCtx()));
 
@@ -30,6 +34,7 @@ test('pilot packet builds with every live placement unchanged', () => {
 
 test('preservation: every active ID, page and destination pair from the live pilot manifest', () => {
   const d = loadPilot();
+  const live = livePilot;
   const ids = (rows, k) => rows.map((r) => r[k]).sort();
   assert.deepEqual(d.tenants.map((t) => t.tenant_id).sort(), ids(live.tenants, 'tenant_id'));
   assert.deepEqual(d.tenants.map((t) => t.school.school_id).sort(), ids(live.schools, 'school_id'));
@@ -79,7 +84,7 @@ test('D1 upsert is a no-op on the live pilot database and idempotent from empty'
   assert.equal(once.audit_log.length, 1);
   // Same rows as live except insert-only provenance columns.
   const strip = (d) => Object.fromEntries(Object.entries(d).map(([t, rows]) => [t, rows.map((r) => { const o = JSON.parse(r); delete o.created_at; delete o.sources_json; return JSON.stringify(o); }).sort()]));
-  assert.deepEqual(strip(dump(fresh)), strip(before));
+  assert.deepEqual(strip(dump(fresh)), strip(onlyTenants(before, tenantIdsOf(loadPilot()))));
   fresh.db.exec(packet().files['portal-memberships.sql']);
   fresh.db.exec(packet().files['portal-memberships.sql']);
   const users = fresh.db.prepare('SELECT * FROM users').all();

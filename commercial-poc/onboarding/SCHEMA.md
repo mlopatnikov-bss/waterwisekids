@@ -52,7 +52,7 @@ Gates (in order): `sponsor_terms`, `source_verification`, `editorial_review`, `p
 
 ### Placement (`placements[]`)
 
-`slot_key`, `placement_id = stableId('plc', territory_url + '#' + slot_key)`, `page_path` (`/lowercase/path.html`; not under `commercial-poc/`, `assets/`, `functions/`, `docs/`, `tools/`; no `..`), `market_key` (must match the inventory row), `variant` (`featured_location`: exactly one location in the same market; `venue_list`: 1–6 locations), `location_keys` (this tenant's only — another tenant's is `ownership_conflict`), `indent` (spaces, to match the page), `anchor` (`type` = `existing_marker` with `text` null, or `insert_after` with the exact unique line `text`).
+`slot_key`, `placement_id = stableId('plc', territory_url + '#' + slot_key)`, `page_path` (`/lowercase/path.html`; not under `commercial-poc/`, `assets/`, `functions/`, `docs/`, `tools/`; no `..`), `market_key` (must match the inventory row), `variant` (`featured_location`: exactly one location in the same market; `venue_list`: 1–7 locations; the cap is `MAX_PLACEMENT_LOCATIONS` in `src/schema.mjs`, also enforced by `render.mjs`), `location_keys` (this tenant's only — another tenant's is `ownership_conflict`), `indent` (spaces, to match the page), `anchor` (`type` = `existing_marker` with `text` null, or `insert_after` with the exact unique line `text`).
 
 Page rules, read from the repo: file exists; ≥ 400 editorial words **excluding any sponsored card** (`thin_content`); mentions a market place name (`irrelevant_page`); carries no other sponsored placement (`ownership_conflict`); canonical equals the page URL (warning otherwise).
 

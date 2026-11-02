@@ -90,6 +90,21 @@ Limits: the instant files keep the last 300 events per region (`instant.js` `KEE
 - **One headline basis** (`selectHeadlineBasis`). Only `qualified_lead` and `enrollment` decide; `assessment_start` and `call` never do. UTM-matched wins if its total is positive, else family-reported WWK mention if its total is positive. Otherwise, if either WWK-linked basis has explicit zero rows, UTM-matched, so active zero reporting shows 0 and not "Not reported". Otherwise there is no headline. "All sources" never reaches the headline. A new **Attribution basis** table lists each basis as a separate row and says rows are never added together.
 - Staging and local rendering are unchanged. `portal-output.test.mjs` still proves byte-for-byte parity with the accepted Phase 1 views.
 
+## 4. Manhattan expansion: no ordinary-listing control (known limitation)
+
+The Manhattan pilot (`definitions/bss-manhattan-pilot-2026.sponsor.json`) launches **without** an ordinary-listing control. This was the owner's decision on 2026-11-02, and it is a limitation, not a measurement.
+
+- **Why no control exists.** The only Manhattan ordinary listing is the territory-level directory row `school-british-swim-school-of-manhattan-ny` on `/swim-lessons/directory/new-york.html`. The control rules in §1 refuse it for three reasons:
+  - its single "Visit Website" link is the territory page, not a location page (`control_row_mismatch`);
+  - it sits on the same page as the Manhattan sponsored card (`control_contaminated`);
+  - each of the seven featured venues would need its own row (`missing_control`).
+
+  `test/manhattan.test.mjs` proves the refusal. The editorial row is not edited to make it fit, and there is no other WWK page with Manhattan editorial content.
+- **Not comparable anyway.** The card is a `venue_list` card with no single featured location, so §3 would exclude it from the location-paired comparison even if a control existed.
+- **What the portal shows.** The Manhattan comparison section shows "Your ordinary directory listing is not measured yet" and no comparison figures. Sponsored-card visibility and clicks are reported on their own. No baseline, lift or ordinary-vs-sponsored claim may be made for Manhattan in any report.
+- **Conversions.** The BSS Messenger conversion feed (§2b) covers only the PA and NJ streams. Manhattan leads and enrollments show "Not reported" unless the Manhattan school later supplies aggregate totals through `import-plan` (§2). No Manhattan location map or export exists in the repository.
+- **Lifting the limitation later** would need a reviewed change: either a location-level ordinary listing on a page without the card, or a new, separately reported control type. Both require editorial and measurement-definition approval.
+
 ## Open items for review
 
 1. Do Jackrabbit reports expose a registration-source value per new enrollment, and is "WaterWiseKids" one of its options? Until confirmed, only `self_reported_any_source` totals are certain.

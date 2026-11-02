@@ -11,3 +11,14 @@ Rollback is service-by-service and preserves evidence.
 
 Destructive D1 deletion is not part of normal rollback. It requires a separate retention decision and explicit action-time approval.
 
+
+## Manhattan expansion (bss-manhattan-pilot-2026)
+
+Manhattan can be rolled back on its own, without touching the Northwest Philadelphia or Jersey Shore cards or rows.
+
+1. **Remove the card:** `git apply commercial-poc/onboarding/out/bss-manhattan-pilot-2026/rollback/remove-man-directory-new-york.diff` from the repository root, then publish through the normal reviewed process. This restores `/swim-lessons/directory/new-york.html` byte-for-byte to SHA-256 `f5785f02de1c24db19442bd9a4e956ca683758654cd42ab5c9fdf310dcf9cccc`, and `onboarding/test/manhattan.test.mjs` proves it.
+2. **Stop counting:** regenerate the packet with `--deactivate-on YYYY-MM-DD` and apply `deactivate.sql`. It ends only campaign `cmp_c7fea2983961d658` for tenant `ten_52bf92991a0305d0`.
+3. **Portal:** there is no Manhattan user or membership to revoke. The administrator keeps read access for final reporting.
+4. **Never delete** the Manhattan D1 rows during rollback; deletion needs a separate retention decision.
+
+Regenerate the packet with `npm run onboard -- packet definitions/bss-manhattan-pilot-2026.sponsor.json --write` from `commercial-poc/onboarding/`. It writes to the git-ignored `out/` folder.
