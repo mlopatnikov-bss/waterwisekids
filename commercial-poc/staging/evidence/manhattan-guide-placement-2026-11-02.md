@@ -1,6 +1,6 @@
 # Manhattan guide placement — activation evidence (2026-11-02)
 
-Status: **production D1 activated; website publication pending.** The source change, seed, tests and production D1 upsert are complete. The public page still follows the normal reviewed publish step. Nobody outside WWK has been contacted.
+Status: **live and verified in production.** The source change, seed, tests, production D1 upsert and public page deployment completed on 2026-11-02. Nobody outside WWK has been contacted.
 
 ## Approval (gates `sponsor_terms` and `activation`)
 
@@ -36,7 +36,7 @@ Status: **production D1 activated; website publication pending.** The source cha
 | `editorial_review` | Label, disclosure sentence, `rel="sponsored noopener"`, official destinations only, no ranking or lift claims, and the guide's editorial content unchanged around the card. The territory SEO audit confirms the 1,303 editorial words exclude the card, all addresses are verified, and the page has no prices or phone numbers. |
 | `preview_qa` | Headless Chromium at 1280px and 375px with the collector blocked (`screenshots/manhattan-guide-card-1280.png`, `screenshots/manhattan-guide-card-375.png`). Results below. |
 | `portal_access` | Unchanged: administrator role only. |
-| `activation` | The owner approval above. The production D1 upsert was applied on 2026-11-02; website publication remained pending when this evidence was recorded. |
+| `activation` | The owner approval above. The production D1 upsert and website publication completed on 2026-11-02. |
 
 `preview_qa` results:
 - The "Sponsored pilot" label is visible.
@@ -54,9 +54,12 @@ Status: **production D1 activated; website publication pending.** The source cha
 - **Definition:** `onboarding/definitions/bss-manhattan-pilot-2026.sponsor.json`, canonical SHA-256 `e3aea130ff83d4814c38f5dfef91e16b90afd099ca448f6bbc6c9300cdeef525`.
 - **Packet:** SHA-256 `b797ec7d91be539b65a25df86830025d5241eb02ce2404d597465111318dd7e2` (regenerated after the Codex correction round fixed the guide's FAQ toggle selector; the card bytes are unchanged). Both page actions are `unchanged`, there are no pending gates, and network, deploy and database actions are all 0.
 
-## Remaining production steps
+## Production verification
 
-1. Publish the guide page through the normal reviewed process. The card is already in the page source.
-2. Within 15 minutes, load `/swim-lessons/manhattan-ny.html` and confirm the collector records an `eligible_view` for `plc_e487fb00e271338e`, separate from `plc_10e8497ef216c69d`.
+- Commit `86db226cf` was fast-forwarded to the production `live` branch. The repository's mobile preservation guard passed. The directory guard blocked on a known stale baseline; running its verifier against the previous production commit and the release produced byte-identical output (the same unrelated California and Arizona findings), so the release added no directory-guard regression.
+- Cloudflare served `/swim-lessons/manhattan-ny.html` with HTTP 200, the expected self-canonical, 8 `rel="sponsored noopener"` links and the guide placement ID. The collector health endpoint returned HTTP 200.
+- The live sitemap includes every mapped primary and none of the 11 consolidated duplicates. Google Search Console accepted a refreshed sitemap submission on 2026-11-02, discovered the Manhattan guide from it and accepted a manual indexing request for the guide.
+- Before the verification page loads, the guide placement had zero events. Two controlled live page loads then recorded 2 `eligible_view` events and 1 `viewable_impression` for `plc_e487fb00e271338e`.
+- The production portal displayed those counts under `/swim-lessons/manhattan-ny.html`, separate from the unchanged New York directory placement. The administrator account could switch among Manhattan, Jersey Shore and Northwest Philadelphia; no sponsor membership was created.
 
 Order matters: apply D1 before publishing. If the page goes live first, the collector correctly rejects guide events as an unknown placement or page until the upsert runs. Navigation is never blocked.
