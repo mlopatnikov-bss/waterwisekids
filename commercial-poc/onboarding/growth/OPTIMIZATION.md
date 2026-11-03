@@ -13,6 +13,8 @@ This cadence applies to Pennsylvania, New Jersey and Manhattan. It separates tra
 
 Use Search Console page and query data for the territory pages and support guides. Record impressions, clicks, click-through rate and average position against the prior comparable period. Search Console data can lag, so label incomplete periods instead of treating them as zero.
 
+Use `keyword-map.json` as the query-to-page contract. Review both the primary locality intent and the decision-intent terms. A term in the map is a hypothesis until Search Console records impressions; do not claim search volume that has not been measured. Update the map when complete-period query evidence shows a better parent phrase or a different page is winning the intent.
+
 Review the GA4 events `sponsor_cta_current_classes` and `sponsor_cta_check_availability` plus the matching `utm_term` values `cta_current_classes` and `cta_check_availability`. The event names make the split reportable without a custom GA4 dimension. Compare outbound clicks and qualified downstream leads when available. Do not select a winner until each variant has at least 100 eligible sponsored-card clicks or the test has run for four complete weeks. If neither threshold is met, continue the test and report it as directional only.
 
 Make at most one material editorial or CTA change per territory in a weekly cycle. Keep the sponsor card labeled, do not reorder ordinary directory results, and preserve the existing campaign and placement identifiers. Re-run `npm run growth:audit` plus the complete onboarding and staging test suites after every change.
@@ -30,4 +32,4 @@ The pilot is working when the relevant territory pages gain qualified search imp
 
 ## Activation handoff
 
-For a new paying school, complete the normal sponsor onboarding packet, add its territory to `territory-program.json`, build one substantial local support guide, add it to the finder and internal-link network, pass the audit and tests, publish, submit for indexing, and enroll the account in this cadence. The process reuses the same templates while keeping tenant IDs, destinations and portal access isolated.
+For a new paying school, complete the normal sponsor onboarding packet, research and add its primary and decision-intent clusters to `keyword-map.json`, add its territory to `territory-program.json`, build one substantial local support guide, add it to the finder and internal-link network, pass the audit and tests, publish, submit for indexing, and enroll the account in this cadence. The process reuses the same templates while keeping tenant IDs, destinations and portal access isolated.

@@ -1,0 +1,153 @@
+{
+  "schema": "wwk.territory-keyword-map",
+  "schema_version": 1,
+  "researched_on": "2026-11-03",
+  "method": "Search Console query/page evidence, current local-result sampling, competitor page patterns and parent decision intent. Priorities are directional; no search-volume figures are invented.",
+  "territories": [
+    {
+      "key": "pennsylvania",
+      "primary_intent": [
+        "swim lessons Philadelphia",
+        "kids swim lessons Philadelphia",
+        "swim lessons Northwest Philadelphia",
+        "swim lessons Cheltenham PA"
+      ],
+      "decision_intent": [
+        "toddler swim lessons Philadelphia",
+        "parent and child swim lessons Philadelphia",
+        "private swim lessons Philadelphia",
+        "group swim lessons Philadelphia",
+        "indoor year-round swim lessons Philadelphia"
+      ],
+      "page_checks": [
+        {
+          "page": "/swim-lessons/philadelphia.html",
+          "concepts": [
+            { "label": "core locality", "any": ["swim lessons in philadelphia"] },
+            { "label": "children", "any": ["kids swim lessons", "children"] },
+            { "label": "toddler", "any": ["toddler swim lessons"] },
+            { "label": "parent-child", "any": ["parent and child", "parent-and-child"] },
+            { "label": "private", "any": ["private swim lessons"] },
+            { "label": "group", "any": ["group swim lessons", "group lessons"] },
+            { "label": "indoor", "any": ["indoor swim lessons"] },
+            { "label": "year-round", "any": ["year-round", "year round"] }
+          ]
+        },
+        {
+          "page": "/swim-lessons/cheltenham-pa.html",
+          "concepts": [
+            { "label": "core locality", "any": ["swim lessons in cheltenham"] },
+            { "label": "kids", "any": ["cheltenham kids", "kids swim lessons"] },
+            { "label": "beginner", "any": ["beginner"] }
+          ]
+        },
+        {
+          "page": "/swim-lessons/northwest-philadelphia.html",
+          "concepts": [
+            { "label": "core locality", "any": ["swim lessons in northwest philadelphia"] },
+            { "label": "infant", "any": ["infant"] },
+            { "label": "toddler", "any": ["toddler"] },
+            { "label": "school-age", "any": ["school-age", "school age"] }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "new-jersey",
+      "primary_intent": [
+        "swim lessons Jersey Shore",
+        "swim lessons Howell NJ",
+        "swim lessons Brick NJ",
+        "swim lessons Toms River NJ",
+        "swim lessons Monmouth County",
+        "swim lessons Ocean County"
+      ],
+      "decision_intent": [
+        "baby swim lessons Jersey Shore",
+        "toddler swim lessons Jersey Shore",
+        "parent and child swim lessons Jersey Shore",
+        "private swim lessons Jersey Shore",
+        "group swim lessons Jersey Shore",
+        "indoor year-round swim lessons Jersey Shore"
+      ],
+      "page_checks": [
+        {
+          "page": "/swim-lessons/jersey-shore.html",
+          "concepts": [
+            { "label": "core locality", "any": ["swim lessons at the jersey shore"] },
+            { "label": "Monmouth County", "any": ["monmouth county"] },
+            { "label": "Ocean County", "any": ["ocean county"] },
+            { "label": "baby", "any": ["baby", "babies"] },
+            { "label": "toddler", "any": ["toddler swim"] },
+            { "label": "parent-child", "any": ["parent and child", "parent-and-child"] },
+            { "label": "private", "any": ["private swim lessons"] },
+            { "label": "group", "any": ["group swim lessons", "group lessons"] },
+            { "label": "indoor", "any": ["indoor swim lessons", "indoor year round swim lessons", "indoors"] },
+            { "label": "year-round", "any": ["year-round", "year round"] }
+          ]
+        },
+        {
+          "page": "/swim-lessons/howell-nj.html",
+          "concepts": [
+            { "label": "core locality", "any": ["swim lessons in howell"] },
+            { "label": "kids", "any": ["kids swim lessons"] }
+          ]
+        },
+        {
+          "page": "/swim-lessons/brick-nj.html",
+          "concepts": [
+            { "label": "core locality", "any": ["swim lessons in brick"] },
+            { "label": "kids", "any": ["kids swim lessons"] }
+          ]
+        },
+        {
+          "page": "/swim-lessons-toms-river-nj.html",
+          "concepts": [
+            { "label": "core locality", "any": ["swim lessons in toms river"] },
+            { "label": "kids", "any": ["kids", "children"] }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "manhattan",
+      "primary_intent": [
+        "kids swim lessons Manhattan",
+        "swim lessons Manhattan NYC",
+        "swim lessons Upper East Side",
+        "swim lessons Midtown Manhattan",
+        "swim lessons Upper West Side",
+        "swim lessons Tribeca",
+        "swim lessons Battery Park City",
+        "swim lessons Financial District"
+      ],
+      "decision_intent": [
+        "baby swim classes Manhattan",
+        "toddler swim lessons Manhattan",
+        "parent and child swim lessons Manhattan",
+        "private swim lessons Manhattan",
+        "group swim lessons Manhattan",
+        "swim lessons cost Manhattan"
+      ],
+      "page_checks": [
+        {
+          "page": "/swim-lessons/manhattan-ny.html",
+          "concepts": [
+            { "label": "core locality", "any": ["swim lessons in manhattan"] },
+            { "label": "baby", "any": ["babies", "baby swim"] },
+            { "label": "toddler", "any": ["toddlers", "toddler swim"] },
+            { "label": "parent-child", "any": ["parent and child", "parent-and-child"] },
+            { "label": "private", "any": ["private swim lessons"] },
+            { "label": "group", "any": ["group swim lessons", "group lessons"] },
+            { "label": "Upper East Side", "any": ["upper east side"] },
+            { "label": "Midtown", "any": ["midtown"] },
+            { "label": "Upper West Side", "any": ["upper west side"] },
+            { "label": "Tribeca", "any": ["tribeca"] },
+            { "label": "Battery Park City", "any": ["battery park city"] },
+            { "label": "Financial District", "any": ["financial district"] }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3,6 +3,7 @@
   "schema_version": 1,
   "reviewed_on": "2026-11-03",
   "finder": "/find-swim-lessons.html",
+  "keyword_map": "/commercial-poc/onboarding/growth/keyword-map.json",
   "territories": [
     {
       "key": "pennsylvania",
