@@ -26,7 +26,7 @@ const PRE_PATCH_SHA = 'f5785f02de1c24db19442bd9a4e956ca683758654cd42ab5c9fdf310d
 const MAN = 'ten_52bf92991a0305d0'; const PLC = 'plc_10e8497ef216c69d'; const CMP = 'cmp_c7fea2983961d658';
 const GUIDE_FILE = 'swim-lessons/manhattan-ny.html'; const PLC_GUIDE = 'plc_e487fb00e271338e';
 // The reviewed editorial guide without its card (includes the Nov. 3 local-checklist link).
-const GUIDE_PRE_CARD_SHA = '336d30dd27ddcf1b63bb5fd862405cc7269cd9d25766fb3d28b39515994006c8';
+const GUIDE_PRE_CARD_SHA = '73f1c720a562775bc6f591841ac0468b53618cedd9c538e29aaefa094dfe1b67';
 const EAST_VILLAGE = /East Village|east-village|loc_f5b267a33189a894|710 E 11th|720 E 11th/;
 const ENTITY_TABLES = ['tenants', 'schools', 'locations', 'campaigns', 'destinations', 'placements', 'placement_pages', 'placement_destinations'];
 const sha = (s) => createHash('sha256').update(s).digest('hex');

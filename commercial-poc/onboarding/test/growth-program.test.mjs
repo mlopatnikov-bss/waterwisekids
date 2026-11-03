@@ -19,12 +19,12 @@ test('parent finder is privacy-preserving and has accessible result handling',()
   assert.match(html,/does not ask for a ZIP code, store personal information or rank schools/i);
 });
 test('CTA experiment is anonymous, balanced and installed on all pilot guide cards',()=>{
-  const js=readFileSync(resolve(root,'assets/js/wwk-sponsored-cta-test.js'),'utf8');
+  const js=readFileSync(resolve(root,'assets/js/wwk-sponsored-cta-test-v2.js'),'utf8');
   const executable=js.replace(/\/\*[\s\S]*?\*\//g,'').replace(/\/\/.*$/gm,'');
   assert.doesNotMatch(executable,/localStorage|sessionStorage|document\.cookie|geolocation|email|phone/i);
   assert.match(js,/current_classes/);assert.match(js,/check_availability/);assert.match(js,/utm_term/);
   assert.match(js,/sponsor_cta_'\+v\.key/);assert.match(js,/placement_id/);assert.match(js,/destination_id/);
   const pages=['swim-lessons/cheltenham-pa.html','swim-lessons/howell-nj.html','swim-lessons/brick-nj.html','swim-lessons-toms-river-nj.html','swim-lessons/manhattan-ny.html','swim-lessons/northwest-philadelphia.html','swim-lessons/philadelphia.html','swim-lessons/jersey-shore.html'];
-  for(const file of pages)assert.match(readFileSync(resolve(root,file),'utf8'),/wwk-sponsored-cta-test\.js\?v=2/,file);
+  for(const file of pages)assert.match(readFileSync(resolve(root,file),'utf8'),/wwk-sponsored-cta-test-v2\.js/,file);
   assert.doesNotMatch(readFileSync(resolve(root,'swim-lessons/directory/new-york.html'),'utf8'),/wwk-sponsored-cta-test/,'pinned directory stays unchanged');
 });
