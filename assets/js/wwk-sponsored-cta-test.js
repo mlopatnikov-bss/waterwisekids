@@ -8,7 +8,7 @@
   function send(card,a,v){
     try{
       w.dataLayer=w.dataLayer||[];
-      (function(){w.dataLayer.push(arguments);})('event','sponsor_cta_experiment_click',{experiment_id:'sponsor_cta_v1',variant:v.key,placement_id:card.getAttribute('data-wwk-placement'),destination_id:a.getAttribute('data-wwk-destination'),source_path:w.location.pathname,send_to:'G-KP7R3NLS4F',transport_type:'beacon'});
+      (function(){w.dataLayer.push(arguments);})('event','sponsor_cta_'+v.key,{experiment_id:'sponsor_cta_v1',variant:v.key,placement_id:card.getAttribute('data-wwk-placement'),destination_id:a.getAttribute('data-wwk-destination'),source_path:w.location.pathname,send_to:'G-KP7R3NLS4F',transport_type:'beacon'});
     }catch(e){}
   }
   function apply(card){

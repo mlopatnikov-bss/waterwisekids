@@ -13,7 +13,7 @@ This cadence applies to Pennsylvania, New Jersey and Manhattan. It separates tra
 
 Use Search Console page and query data for the territory pages and support guides. Record impressions, clicks, click-through rate and average position against the prior comparable period. Search Console data can lag, so label incomplete periods instead of treating them as zero.
 
-Review the `sponsor_cta_experiment_click` event and `utm_term` values `cta_current_classes` and `cta_check_availability`. Compare outbound clicks and qualified downstream leads when available. Do not select a winner until each variant has at least 100 eligible sponsored-card clicks or the test has run for four complete weeks. If neither threshold is met, continue the test and report it as directional only.
+Review the GA4 events `sponsor_cta_current_classes` and `sponsor_cta_check_availability` plus the matching `utm_term` values `cta_current_classes` and `cta_check_availability`. The event names make the split reportable without a custom GA4 dimension. Compare outbound clicks and qualified downstream leads when available. Do not select a winner until each variant has at least 100 eligible sponsored-card clicks or the test has run for four complete weeks. If neither threshold is met, continue the test and report it as directional only.
 
 Make at most one material editorial or CTA change per territory in a weekly cycle. Keep the sponsor card labeled, do not reorder ordinary directory results, and preserve the existing campaign and placement identifiers. Re-run `npm run growth:audit` plus the complete onboarding and staging test suites after every change.
 
