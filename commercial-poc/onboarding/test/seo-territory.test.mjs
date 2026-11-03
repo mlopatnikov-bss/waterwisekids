@@ -101,7 +101,7 @@ test('PA/NJ pilot guides: substantial local editorial upgrades preserve every sp
     const editorial = H.mainText(html);
     assert.ok(H.wordCount(editorial) >= 1000, `${file}: substantial editorial content, sponsored card excluded`);
     assert.match(H.visibleText(html), /Reviewed November 2, 2026\./, `${file}: visible review date`);
-    assert.match(html, /"dateModified": "2026-11-02"/, `${file}: machine-readable review date`);
+    assert.match(html, /"dateModified": "2026-11-03"/, `${file}: machine-readable update date`);
     assert.ok(H.links(H.withoutSponsored(html)).filter((l) => /^https:\/\//.test(l.href)).length >= 3, `${file}: visible editorial sources`);
     assert.equal((html.match(/<main\b/g) || []).length, 1, `${file}: one main landmark`);
     assert.equal((html.match(/<\/main>/g) || []).length, 1, `${file}: balanced main landmark`);

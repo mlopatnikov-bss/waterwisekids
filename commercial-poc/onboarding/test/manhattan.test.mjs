@@ -25,8 +25,8 @@ const PAGE_FILE = 'swim-lessons/directory/new-york.html';
 const PRE_PATCH_SHA = 'f5785f02de1c24db19442bd9a4e956ca683758654cd42ab5c9fdf310dcf9cccc';
 const MAN = 'ten_52bf92991a0305d0'; const PLC = 'plc_10e8497ef216c69d'; const CMP = 'cmp_c7fea2983961d658';
 const GUIDE_FILE = 'swim-lessons/manhattan-ny.html'; const PLC_GUIDE = 'plc_e487fb00e271338e';
-// The guide page before its card was inserted (removing the card block must restore exactly these bytes).
-const GUIDE_PRE_CARD_SHA = 'a4006da0203569a756ec43b55bc3ff11139d1fb1f3fa1b97e61195a6aeb27162';
+// The reviewed editorial guide without its card (includes the Nov. 3 local-checklist link).
+const GUIDE_PRE_CARD_SHA = '836cc0b3fed0447565fcdc74fc3e6ac756119d1032140ef7d4343bf71cdfdeb0';
 const EAST_VILLAGE = /East Village|east-village|loc_f5b267a33189a894|710 E 11th|720 E 11th/;
 const ENTITY_TABLES = ['tenants', 'schools', 'locations', 'campaigns', 'destinations', 'placements', 'placement_pages', 'placement_destinations'];
 const sha = (s) => createHash('sha256').update(s).digest('hex');

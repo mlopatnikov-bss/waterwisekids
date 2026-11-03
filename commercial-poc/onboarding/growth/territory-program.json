@@ -1,0 +1,39 @@
+{
+  "schema": "wwk.territory-growth-program",
+  "schema_version": 1,
+  "reviewed_on": "2026-11-03",
+  "finder": "/find-swim-lessons.html",
+  "territories": [
+    {
+      "key": "pennsylvania",
+      "label": "Philadelphia and nearby Pennsylvania suburbs",
+      "support_guide": "/education/philadelphia-suburbs-swim-lesson-checklist.html",
+      "directory": "/swim-lessons/directory/pennsylvania.html",
+      "primary_pages": ["/swim-lessons/cheltenham-pa.html", "/swim-lessons/philadelphia.html", "/swim-lessons/northwest-philadelphia.html"]
+    },
+    {
+      "key": "new-jersey",
+      "label": "Jersey Shore and central New Jersey",
+      "support_guide": "/education/jersey-shore-swim-lesson-checklist.html",
+      "directory": "/swim-lessons/directory/new-jersey.html",
+      "primary_pages": ["/swim-lessons/howell-nj.html", "/swim-lessons/brick-nj.html", "/swim-lessons-toms-river-nj.html", "/swim-lessons/jersey-shore.html"]
+    },
+    {
+      "key": "manhattan",
+      "label": "Manhattan",
+      "support_guide": "/education/manhattan-swim-lesson-checklist.html",
+      "directory": "/swim-lessons/directory/new-york.html",
+      "directory_support_link": false,
+      "primary_pages": ["/swim-lessons/manhattan-ny.html"]
+    }
+  ],
+  "activation_requirements": [
+    "approved sponsor definition and labeled placement",
+    "one self-canonical primary territory page",
+    "one editorial support guide with official sources",
+    "state directory and lesson finder links",
+    "sponsored event collection and protected portal access",
+    "Search Console baseline and indexing request",
+    "daily health monitor and weekly optimization review"
+  ]
+}
