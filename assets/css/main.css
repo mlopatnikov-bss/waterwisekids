@@ -3633,3 +3633,11 @@ ul.wwk-navlist > li > a.pool-state-link {
   box-sizing: border-box;
   height: 100%;
 }
+
+/* Support WWK main menu: give eleven links an intentional second row. */
+@media (min-width: 769px) {
+  header nav { height: auto; min-height: 96px; flex-wrap: wrap; gap: 0; padding-top: 9px; padding-bottom: 7px; }
+  header nav .nav-logo { flex-basis: 100%; justify-content: center; }
+  header nav .nav-links { flex-basis: 100%; justify-content: center; flex-wrap: wrap; gap: 2px; }
+  header nav .nav-links > li > a { padding: 7px 8px; font-size: .84rem; }
+}
