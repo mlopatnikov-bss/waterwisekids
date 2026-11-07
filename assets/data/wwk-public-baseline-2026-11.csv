@@ -1,0 +1,5 @@
+metric,value,unit,as_of,method,source_path,limitation
+education_article_html_files,641,files,2026-11-07,"Count education/*.html, excluding education/index.html",education/,"File count does not measure quality, readership, or behavior change"
+swim_lesson_directory_geographies,51,state_and_DC_pages,2026-11-07,"Count swim-lessons/directory/*.html, excluding index.html",swim-lessons/directory/,A geography page does not guarantee complete or current provider coverage
+published_audience_reach,not_reported,people,2026-11-07,No verified public analytics series available,N/A,No claim about unique families reached
+measured_safety_outcomes,not_measured,outcomes,2026-11-07,No outcome study available,N/A,No causal claim about drowning prevention
