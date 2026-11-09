@@ -44,9 +44,9 @@
         {
           "venue": "Boys & Girls Club - Asbury Park",
           "address": "1201 Monroe Ave, Asbury Park, NJ 07712",
-          "location_url": "https://britishswimschool.com/jersey-shore/location/boys-girls-club/",
+          "location_url": null,
           "listed_on_territory_page": true,
-          "location_page_notes": ["Location page states: \"We're Sorry! There are currently no classes available at this location.\""],
+          "location_page_notes": ["Exact venue URL withheld under directory policy. Location page states: \"We're Sorry! There are currently no classes available at this location.\""],
           "no_classes_notice": true
         },
         {

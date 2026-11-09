@@ -37,7 +37,7 @@
         { "slot_key": "js-guide-howell", "page_file": "swim-lessons/howell-nj.html", "featured_location_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-howell/" },
         { "slot_key": "js-guide-brick", "page_file": "swim-lessons/brick-nj.html", "featured_location_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-brick/" },
         { "slot_key": "js-guide-toms-river", "page_file": "swim-lessons-toms-river-nj.html", "featured_location_url": "https://britishswimschool.com/jersey-shore/location/la-fitness-toms-river/" },
-        { "slot_key": "js-guide-asbury-park", "page_file": "swim-lessons/asbury-park-nj.html", "featured_location_url": "https://britishswimschool.com/jersey-shore/location/boys-girls-club/" }
+        { "slot_key": "js-guide-asbury-park", "page_file": "swim-lessons/asbury-park-nj.html", "featured_location_url": null }
       ],
       "organic_listing_page_file": "swim-lessons/directory/new-jersey.html"
     },

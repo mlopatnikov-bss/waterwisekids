@@ -200,7 +200,7 @@
       "school_id": "sch_5b7e6d81d52e8ed5",
       "display_name": "Boys & Girls Club - Asbury Park",
       "address_display": "1201 Monroe Ave, Asbury Park, NJ 07712",
-      "official_url": "https://britishswimschool.com/jersey-shore/location/boys-girls-club/",
+      "official_url": null,
       "status": "needs_owner_confirmation",
       "status_reason": "Listed on the official territory page but absent from the WWK directory data. Official location page states there are currently no classes available.",
       "verified_on": "2026-11-02",
@@ -209,7 +209,7 @@
           "source": "official_snapshot",
           "observed_on": "2026-11-02",
           "address": "1201 Monroe Ave, Asbury Park, NJ 07712",
-          "url": "https://britishswimschool.com/jersey-shore/location/boys-girls-club/",
+          "url": null,
           "no_classes_notice": true
         }
       ]
@@ -1202,7 +1202,7 @@
       "tenant_key": "jersey-shore",
       "slot_key": "js-guide-asbury-park",
       "page_path": "/swim-lessons/asbury-park-nj.html",
-      "reason": "Featured location https://britishswimschool.com/jersey-shore/location/boys-girls-club/ is needs_owner_confirmation; placement not created."
+      "reason": "Featured location URL withheld under directory policy; location is needs_owner_confirmation and placement was not created."
     }
   ],
   "conflicts": [
@@ -1253,7 +1253,7 @@
       "kind": "official_location_missing_from_wwk",
       "tenant_key": "jersey-shore",
       "subject": "Boys & Girls Club - Asbury Park",
-      "detail": "Official territory page lists Boys & Girls Club - Asbury Park (https://britishswimschool.com/jersey-shore/location/boys-girls-club/); no matching row or pool venue exists in swim-lessons/directory/schools-data.js.",
+      "detail": "The official territory page lists Boys & Girls Club - Asbury Park; the exact held-location URL is withheld under directory policy, and no matching row or pool venue exists in swim-lessons/directory/schools-data.js.",
       "effect": "Location held at needs_owner_confirmation; no placement or destination is created for it."
     },
     {
@@ -1263,7 +1263,7 @@
       "kind": "official_no_classes_notice",
       "tenant_key": "jersey-shore",
       "subject": "Boys & Girls Club - Asbury Park",
-      "detail": "https://britishswimschool.com/jersey-shore/location/boys-girls-club/ states \"no classes available\" while still listed on the territory page. Active status cannot be inferred.",
+      "detail": "The held official location page states \"no classes available\" while the venue remains listed on the territory page. The exact URL is withheld under directory policy, and active status cannot be inferred.",
       "effect": "Location held at needs_owner_confirmation; owner must confirm whether it should be promoted."
     },
     {

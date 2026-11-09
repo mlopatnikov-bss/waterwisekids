@@ -22,7 +22,7 @@ Examples observed in Search Console include `parent and child swimming lessons p
 
 Exact town phrases are the clearest commercial intent. Search Console already surfaced `swim lessons brick nj`, `swim lessons toms river nj`, `howell swim lessons` and `swim lessons monmouth county nj`. Current local results emphasize infant/toddler or parent-child classes, group/private choice, year-round indoor pools, price, ratios, make-ups and current availability. The existing Jersey Shore hub now covers those decision terms and routes families to the exact town pages.
 
-Current-result sources sampled included [NJ Swim Brick](https://njswim.com/locations/new-jersey/brick/), [Aqua-Tots Toms River](https://www.aqua-tots.com/toms-river/), [Toms River Fitness swim school](https://www.trfitness.net/swim-school/) and [Howell youth swim lessons](https://howell.ss12.sharpschool.com/community/highlander_aquatics_and_fitness_center/youth_swim_lessons).
+Current-result sources sampled included [NJ Swim Brick](https://njswim.com/locations/new-jersey/brick/), Aqua-Tots Toms River (exact held-location URL withheld under directory policy), [Toms River Fitness swim school](https://www.trfitness.net/swim-school/) and [Howell youth swim lessons](https://howell.ss12.sharpschool.com/community/highlander_aquatics_and_fitness_center/youth_swim_lessons).
 
 ### Manhattan
 
