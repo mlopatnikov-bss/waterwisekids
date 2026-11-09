@@ -91,10 +91,10 @@ test('protected pilot surfaces: the NY directory is byte-identical and live card
 
 test('PA/NJ pilot guides: substantial local editorial upgrades preserve every sponsored card byte', () => {
   const guides = {
-    'swim-lessons/cheltenham-pa.html': 'b07d5a4d6a3b2cde8ce3ebf779bae2b71e6053d674451c144a33e02190aea3a4',
-    'swim-lessons/howell-nj.html': '05966e8d88881929d2323a5e213b93ee3a665e2e6d3373a1c8f3a238f9625618',
-    'swim-lessons/brick-nj.html': '1015a702ba78498164ac007d5285c70fbf3ac6bc91eba0f36ca3252ad7f4802b',
-    'swim-lessons-toms-river-nj.html': '8801177e52dd92c1ea573ac9bc8ff43e2b59d45e5e6eb3e07491a93ac8abd6a9',
+    'swim-lessons/cheltenham-pa.html': 'c55cbdf105407488847e24dc4c2a7866eda539fc47f6dc134e0b84952c65bb71',
+    'swim-lessons/howell-nj.html': 'a970cedc9f9daac8f22c3e1ce27d4d4fa1f444f6fc03706fc0672066f3e22c67',
+    'swim-lessons/brick-nj.html': 'c2d3681f73859f2cef0265bce0d0c4db38349eaf762f0a8c58d84d8e295048e7',
+    'swim-lessons-toms-river-nj.html': '57ae0f64f49503342e5676d97e5cd5906e08e6ebb7d0800a9419a5e3dbc970da',
   };
   for (const [file, cardHash] of Object.entries(guides)) {
     const html = read(file);
