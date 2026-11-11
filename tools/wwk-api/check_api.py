@@ -44,8 +44,12 @@ def main() -> int:
     config = json.loads((REMOTE / "wrangler.jsonc").read_text(encoding="utf-8"))
     if config.get("workers_dev") is not False or config.get("preview_urls") is not False:
         errors.append("remote MCP candidate must not expose an unreviewed workers.dev or preview URL")
-    if config.get("vars", {}).get("RUNTIME_ENV") != "candidate":
-        errors.append("remote MCP configuration must remain in candidate mode before release")
+    routes = config.get("routes", [])
+    expected_route = {"pattern": "mcp.waterwisekids.com", "custom_domain": True}
+    if routes != [expected_route]:
+        errors.append("remote MCP must use only the reviewed mcp.waterwisekids.com custom domain")
+    if config.get("vars", {}).get("RUNTIME_ENV") != "production":
+        errors.append("remote MCP release configuration is not in production mode")
     if not any(item.get("name") == "MCP_RATE_LIMITER" for item in config.get("ratelimits", [])):
         errors.append("remote MCP candidate is missing its rate-limit binding")
     remote_core = (REMOTE / "src/core.mjs").read_text(encoding="utf-8")

@@ -6,13 +6,23 @@
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": false,
   "preview_urls": false,
+  "send_metrics": false,
+  "routes": [
+    {
+      "pattern": "mcp.waterwisekids.com",
+      "custom_domain": true
+    }
+  ],
   "observability": {
-    "enabled": true
+    "enabled": true,
+    "redact_query_string": true,
+    "logs": { "enabled": true, "invocation_logs": false },
+    "traces": { "enabled": false }
   },
   "vars": {
     "DATA_ORIGIN": "https://www.waterwisekids.com",
     "PUBLIC_HOSTNAME": "mcp.waterwisekids.com",
-    "RUNTIME_ENV": "candidate"
+    "RUNTIME_ENV": "production"
   },
   "ratelimits": [
     {
