@@ -129,7 +129,7 @@ def render() -> str:
   <h2>Federal child life-jacket baseline</h2>
   <p>{html.escape(baseline["plain_language"])}</p>
   <p><a href="{html.escape(baseline["source_url"])}" target="_blank" rel="noopener">{html.escape(baseline["source_title"])}</a>, checked {html.escape(baseline["source_checked_on"])}.</p>
-  <h2>How to verify a rule for your address</h2>
+  <h2 id="local-code">How to verify a rule for your address</h2>
   <ol class="atlas-steps">
     <li>Ask the city, township, or county building department which adopted code and local amendments apply to the exact address.</li>
     <li>Request the pool-barrier section and permit checklist in writing before purchasing or altering a fence, gate, cover, or alarm.</li>
