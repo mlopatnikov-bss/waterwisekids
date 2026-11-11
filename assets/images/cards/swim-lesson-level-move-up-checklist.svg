@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A swimmer badge rising up three level bars with an upward arrow, beside a clipboard checklist">
+  <defs>
+    <linearGradient id="mu-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#7dd3fc"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#mu-bg)"/>
+  <rect x="0" y="280" width="600" height="80" fill="#0ea5e9"/>
+  <path d="M0 300 q37 -14 75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0" fill="none" stroke="#e0f2fe" stroke-width="5"/>
+  <rect x="60" y="220" width="90" height="60" rx="8" fill="#bae6fd" stroke="#0369a1" stroke-width="6"/>
+  <rect x="160" y="175" width="90" height="105" rx="8" fill="#7dd3fc" stroke="#0369a1" stroke-width="6"/>
+  <rect x="260" y="130" width="90" height="150" rx="8" fill="#38bdf8" stroke="#0369a1" stroke-width="6"/>
+  <text x="105" y="262" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#0c4a6e" text-anchor="middle">1</text>
+  <text x="205" y="240" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#0c4a6e" text-anchor="middle">2</text>
+  <text x="305" y="215" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+  <circle cx="305" cy="92" r="26" fill="#fcd34d" stroke="#f97316" stroke-width="6"/>
+  <path d="M296 92 l6 7 l12 -14" fill="none" stroke="#9a3412" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M110 190 q60 -90 160 -100" fill="none" stroke="#16a34a" stroke-width="5" stroke-dasharray="10 8" stroke-linecap="round"/>
+  <path d="M258 78 l16 12 l-18 10" fill="none" stroke="#16a34a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="420" y="70" width="140" height="196" rx="14" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="462" y="56" width="56" height="24" rx="8" fill="#0369a1"/>
+  <circle cx="444" cy="114" r="8" fill="#16a34a"/><rect x="462" y="110" width="76" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="444" cy="152" r="8" fill="#16a34a"/><rect x="462" y="148" width="60" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="444" cy="190" r="8" fill="#16a34a"/><rect x="462" y="186" width="76" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="444" cy="228" r="8" fill="#f97316"/><rect x="462" y="224" width="48" height="9" rx="4" fill="#94a3b8"/>
+</svg>
