@@ -12,7 +12,9 @@ It is a **deployment candidate, not a claim that a public endpoint is live**. Do
 - The law tool returns an explicit unpublished status outside the reviewed pilot jurisdictions and preserves the not-legal-advice disclaimer.
 - Directory results preserve their incompleteness and distance limitations.
 - Production requests fail closed if the rate-limit binding is absent.
-- Host, browser-origin, request-size, and per-client rate limits are enforced.
+- Host, browser-origin, and request-size limits are enforced. Rate control has
+  two layers: an immediate 30-request/10-second per-instance burst guard and
+  Cloudflare's approximate 120-request/60-second per-location binding.
 
 ## Local validation
 

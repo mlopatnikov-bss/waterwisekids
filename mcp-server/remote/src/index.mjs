@@ -7,6 +7,10 @@ import { createHttpJsonLoader, createTools } from "./core.mjs";
 const SERVER_NAME = "waterwisekids-open-data";
 const SERVER_VERSION = "0.2.0";
 const MAX_BODY_BYTES = 64 * 1024;
+const BURST_LIMIT = 30;
+const BURST_WINDOW_MS = 10_000;
+const MAX_BURST_KEYS = 2_048;
+const burstBuckets = new Map();
 
 function toolResult(value) {
   return {
@@ -124,6 +128,20 @@ async function withinRateLimit(request, env) {
     return env.RUNTIME_ENV === "local" || requestHostname(request) === "localhost";
   }
   const key = request.headers.get("cf-connecting-ip") ?? "missing-client-ip";
+  const now = Date.now();
+  let bucket = burstBuckets.get(key);
+  if (!bucket || now >= bucket.resetAt) {
+    if (!bucket && burstBuckets.size >= MAX_BURST_KEYS) {
+      for (const [candidateKey, candidate] of burstBuckets) {
+        if (now >= candidate.resetAt) burstBuckets.delete(candidateKey);
+      }
+      if (burstBuckets.size >= MAX_BURST_KEYS) return false;
+    }
+    bucket = { count: 0, resetAt: now + BURST_WINDOW_MS };
+    burstBuckets.set(key, bucket);
+  }
+  if (bucket.count >= BURST_LIMIT) return false;
+  bucket.count += 1;
   const result = await env.MCP_RATE_LIMITER.limit({ key });
   return result.success;
 }

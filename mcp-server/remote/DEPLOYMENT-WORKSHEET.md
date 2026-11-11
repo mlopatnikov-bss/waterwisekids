@@ -16,5 +16,6 @@
 - [ ] Level translation requires receiving-school assessment
 - [ ] Invalid Host and browser Origin fail
 - [ ] 65 KiB request fails with HTTP 413
-- [ ] Rate-limit overflow fails with HTTP 429
+- [ ] A 31-request burst from one client produces HTTP 429 (Cloudflare's
+      separate 120/minute binding is approximate by platform design)
 - [ ] Public API catalog updated only after all checks above pass
