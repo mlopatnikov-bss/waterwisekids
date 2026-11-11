@@ -7,6 +7,7 @@ This release check protects the public claims most likely to damage family trust
 - the WaterWiseKids/British Swim School ownership disclosure
 - directory, city, jurisdiction, and chain counts derived from `schools-data.js`
 - exact guide totals, which remain prohibited until they have a release-time generator
+- price-index normalization, official-source freshness, and publication gates
 
 Run from the repository root:
 

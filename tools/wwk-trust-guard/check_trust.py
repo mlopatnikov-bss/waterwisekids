@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -145,6 +146,18 @@ def check(root: Path) -> list[str]:
     if re.search(r"View All\s+\d+\s+Guides", homepage):
         errors.append("homepage publishes an exact guide count without a release-time generator")
 
+    price_guard = root / "tools/wwk-price-index/check_price_index.py"
+    if price_guard.exists():
+        result = subprocess.run(
+            [sys.executable, str(price_guard)],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"price-index guard failed: {detail}")
+
     return errors
 
 
@@ -159,7 +172,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, and directory counts are consistent.")
+    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, and price-index gates are consistent.")
     return 0
 
 
