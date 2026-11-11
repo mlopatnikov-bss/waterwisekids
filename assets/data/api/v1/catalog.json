@@ -1,0 +1,57 @@
+{
+  "api_version": "v1",
+  "status": "public_read_only_beta",
+  "updated_on": "2026-11-11",
+  "base_url": "https://www.waterwisekids.com/assets/data/",
+  "license_note": "WWK-created datasets are CC BY 4.0 unless a dataset says otherwise. Provider and government source material retains its original status.",
+  "endpoints": [
+    {
+      "id": "schools",
+      "url": "/assets/data/api/v1/schools.json",
+      "format": "application/json",
+      "records": 799,
+      "limitation": "starting directory, not a complete provider census"
+    },
+    {
+      "id": "price_observations",
+      "url": "/assets/data/price-index/pilot-observations.json",
+      "format": "application/json",
+      "limitation": "pilot observations only; no national or state benchmark is publishable"
+    },
+    {
+      "id": "level_crosswalk",
+      "url": "/assets/data/level-crosswalk/v0.1.json",
+      "format": "application/json",
+      "limitation": "approximate descriptive overlap, not placement equivalency"
+    },
+    {
+      "id": "law_atlas",
+      "url": "/assets/data/law-atlas/v0.1.json",
+      "format": "application/json",
+      "limitation": "three-jurisdiction verified pilot; not legal advice"
+    },
+    {
+      "id": "access_diagnostic",
+      "url": "/assets/data/swim-access/pilot-counties.json",
+      "format": "application/json",
+      "limitation": "coverage diagnostic; not an access score or ranking"
+    },
+    {
+      "id": "transparency_standard",
+      "url": "/assets/data/transparency-standard/v0.1.json",
+      "format": "application/json",
+      "limitation": "disclosure standard; not safety certification or endorsement"
+    }
+  ],
+  "mcp": {
+    "source_path": "/mcp-server/wwk_server.py",
+    "transport": "stdio reference implementation",
+    "hosted_status": "not_publicly_hosted",
+    "tools": [
+      "find_swim_schools",
+      "get_price_benchmark",
+      "translate_level",
+      "get_state_laws"
+    ]
+  }
+}
