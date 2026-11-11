@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "retrieved_at": "2026-11-11T21:47:25+00:00",
+  "batch_as_of": "2026-11-11",
+  "purpose": "Change-detection fingerprints only; third-party legal source text is not republished.",
+  "entries": [
+    {
+      "url": "https://nj.gov/oag/njsp/marine-services/pdf/20240202_NJAC_13_82_Boating_Regulations.pdf",
+      "http_status": 200,
+      "content_length_bytes": 574335,
+      "sha256": "0dcaf4bf61664d381a6500341de604c4d9b0e8ef454ec806d2b770aa71a6dd44"
+    },
+    {
+      "url": "https://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.50.html",
+      "http_status": 200,
+      "content_length_bytes": 19698,
+      "sha256": "9121947efa2645335283fa95eca33e624f5e6bcd6ac6f2ad1167b5e8d14b7638"
+    },
+    {
+      "url": "https://www.nj.gov/njsp/marine-services/equipment-checklist.shtml",
+      "http_status": 200,
+      "content_length_bytes": 50786,
+      "sha256": "2f7c7910d830abbf0d4a533d93ceb5a790be58dccb50cbcb20c621549aca44a3"
+    },
+    {
+      "url": "https://www.pa.gov/agencies/fishandboat/boating/basics/equipment/life-jackets",
+      "http_status": 200,
+      "content_length_bytes": 300355,
+      "sha256": "2346c742321660ae83108b5a0876db93cd4651966581d55feeccd26eb8375aa9"
+    },
+    {
+      "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/fishandboat/documents/boating/regulations/boatinghandbook.pdf",
+      "http_status": 200,
+      "content_length_bytes": 4009209,
+      "sha256": "d2a6a706e9204ab5a5fda1381b3ce93252f211729bc25cb600a8e2913b447f79"
+    }
+  ]
+}

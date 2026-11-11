@@ -10,6 +10,7 @@ This release check protects the public claims most likely to damage family trust
 - price-index normalization, official-source freshness, and publication gates
 - internal price-candidate source coverage, normalization readiness, and no-promotion status
 - 51-jurisdiction law-research coverage and claim-free unpublished tasks
+- pilot-state life-jacket source coverage, freshness, and independent-review gating
 - public editorial, medical-review, corrections, ownership, and author disclosures
 
 Run from the repository root:

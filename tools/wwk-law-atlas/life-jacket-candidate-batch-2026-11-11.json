@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "pilot-state-life-jacket-2026-11-11",
+  "publication_status": "internal_research_only",
+  "as_of": "2026-11-11",
+  "expires_on": "2027-02-09",
+  "independent_second_review": {
+    "status": "not_started",
+    "reviewer": null,
+    "reviewed_on": null
+  },
+  "promotion_rules": [
+    "No draft summary enters the public atlas until a different reviewer compares it with every cited source.",
+    "The reviewer must confirm the source is current, identify exceptions, and verify the age, vessel, water, and underway scope.",
+    "If a controlling source changes or the batch expires, the candidate returns to research."
+  ],
+  "candidates": [
+    {
+      "candidate_id": "fl-child-life-jacket-20261111",
+      "jurisdiction_code": "FL",
+      "jurisdiction_name": "Florida",
+      "module_id": "child_life_jacket",
+      "promotion_status": "ready_for_independent_second_review",
+      "draft_plain_language": "On Florida waters, a person may not operate a vessel less than 26 feet long while it is underway unless every child under 6 on board is wearing a U.S. Coast Guard-approved personal flotation device used according to its approval label. For this rule, underway excludes a vessel that is anchored, moored, made fast to shore, or aground.",
+      "scope": {
+        "child_age": "under 6",
+        "vessel_scope": "vessels less than 26 feet",
+        "water_scope": "waters of Florida",
+        "operating_condition": "while underway",
+        "explicit_exception_or_definition": "underway excludes anchored, moored, made fast to shore, or aground"
+      },
+      "source_checked_on": "2026-11-11",
+      "sources": [
+        {
+          "url": "https://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.50.html",
+          "source_type": "official_government_statute",
+          "role": "controlling_text",
+          "anchor_note": "2026 Florida Statutes §327.50(1)(b), including the statutory definition of underway."
+        }
+      ]
+    },
+    {
+      "candidate_id": "nj-child-life-jacket-20261111",
+      "jurisdiction_code": "NJ",
+      "jurisdiction_name": "New Jersey",
+      "module_id": "child_life_jacket",
+      "promotion_status": "ready_for_independent_second_review",
+      "draft_plain_language": "On New Jersey waters, a vessel operator must ensure every child age 12 or younger on board wears a properly fitted U.S. Coast Guard-approved personal flotation device whenever the vessel is underway. The New Jersey State Police equipment page states that the rule does not apply when every child under 13 is inside an enclosed cabin.",
+      "scope": {
+        "child_age": "12 or younger",
+        "vessel_scope": "vessels",
+        "water_scope": "waters of New Jersey",
+        "operating_condition": "while underway",
+        "explicit_exception_or_definition": "enclosed-cabin exception stated by New Jersey State Police"
+      },
+      "source_checked_on": "2026-11-11",
+      "sources": [
+        {
+          "url": "https://www.nj.gov/njsp/marine-services/equipment-checklist.shtml",
+          "source_type": "official_government_agency",
+          "role": "current_agency_summary_and_exception",
+          "anchor_note": "New Jersey State Police equipment checklist, Personal Flotation Devices section."
+        },
+        {
+          "url": "https://nj.gov/oag/njsp/marine-services/pdf/20240202_NJAC_13_82_Boating_Regulations.pdf",
+          "source_type": "official_government_regulation",
+          "role": "regulatory_text",
+          "anchor_note": "N.J.A.C. 13:82-1.4(b); second reviewer must confirm the compilation remains current before publication."
+        }
+      ]
+    },
+    {
+      "candidate_id": "pa-child-life-jacket-20261111",
+      "jurisdiction_code": "PA",
+      "jurisdiction_name": "Pennsylvania",
+      "module_id": "child_life_jacket",
+      "promotion_status": "ready_for_independent_second_review",
+      "draft_plain_language": "On Pennsylvania waters, children age 12 or younger must wear a U.S. Coast Guard-approved life jacket while underway in any boat 20 feet or less long and in all canoes, kayaks, and paddleboards. Separate Pennsylvania rules also require broader life-jacket wear for specified craft during the November 1 through April 30 cold-water period.",
+      "scope": {
+        "child_age": "12 or younger",
+        "vessel_scope": "boats 20 feet or less and all canoes, kayaks, and paddleboards",
+        "water_scope": "Pennsylvania waters",
+        "operating_condition": "while underway",
+        "explicit_exception_or_definition": "separate seasonal and location-specific wear rules also apply"
+      },
+      "source_checked_on": "2026-11-11",
+      "sources": [
+        {
+          "url": "https://www.pa.gov/agencies/fishandboat/boating/basics/equipment/life-jackets",
+          "source_type": "official_government_agency",
+          "role": "current_agency_rule_summary",
+          "anchor_note": "Pennsylvania Fish and Boat Commission Life Jackets page, child and cold-water wear sections."
+        },
+        {
+          "url": "https://www.pa.gov/content/dam/copapwp-pagov/en/fishandboat/documents/boating/regulations/boatinghandbook.pdf",
+          "source_type": "official_government_handbook",
+          "role": "official_regulatory_handbook",
+          "anchor_note": "Pennsylvania Boating Handbook, Who Must Wear a Life Jacket section."
+        }
+      ]
+    }
+  ]
+}

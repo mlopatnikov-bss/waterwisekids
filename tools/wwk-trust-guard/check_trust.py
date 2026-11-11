@@ -200,6 +200,18 @@ def check(root: Path) -> list[str]:
             detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
             errors.append(f"law research queue guard failed: {detail}")
 
+    life_jacket_candidate_guard = root / "tools/wwk-law-atlas/check_life_jacket_candidates.py"
+    if life_jacket_candidate_guard.exists():
+        result = subprocess.run(
+            [sys.executable, str(life_jacket_candidate_guard)],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"life-jacket candidate guard failed: {detail}")
+
     governance_builder = root / "tools/wwk-governance/build_governance_pages.py"
     if governance_builder.exists():
         result = subprocess.run(
@@ -408,7 +420,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index and candidate-batch gates, crosswalk guardrails, law-atlas sources and research queue, access-pilot caveats, school-transparency boundaries, API/MCP limitations, local-page consolidation, AI-visibility measurement, Spanish review gating, and wait-time privacy gates are consistent.")
+    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index and candidate-batch gates, crosswalk guardrails, law-atlas sources, research queue, and life-jacket candidates, access-pilot caveats, school-transparency boundaries, API/MCP limitations, local-page consolidation, AI-visibility measurement, Spanish review gating, and wait-time privacy gates are consistent.")
     return 0
 
 
