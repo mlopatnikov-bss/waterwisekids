@@ -13,8 +13,11 @@ export function loadManifest(db, manifest, { actor = 'seed', at = new Date().toI
       manifest.memberships, (m) => [m.tenant_id, m.user_id, m.role]);
     ins('INSERT OR REPLACE INTO schools (school_id, tenant_id, display_name, official_url, sources_json) VALUES (?,?,?,?,?)',
       manifest.schools, (s) => [s.school_id, s.tenant_id, s.display_name, s.official_url, JSON.stringify(s.sources)]);
+    // A held location can intentionally have its URL suppressed. Preserve the
+    // row for operator data-quality review, representing the absent URL as an
+    // empty string without creating a destination or placement for it.
     ins('INSERT OR REPLACE INTO locations (location_id, tenant_id, school_id, display_name, address_display, official_url, status, status_reason, verified_on, sources_json) VALUES (?,?,?,?,?,?,?,?,?,?)',
-      manifest.locations, (l) => [l.location_id, l.tenant_id, l.school_id, l.display_name, l.address_display, l.official_url, l.status, l.status_reason, l.verified_on, JSON.stringify(l.sources)]);
+      manifest.locations, (l) => [l.location_id, l.tenant_id, l.school_id, l.display_name, l.address_display, l.official_url ?? '', l.status, l.status_reason, l.verified_on, JSON.stringify(l.sources)]);
     ins('INSERT OR REPLACE INTO campaigns (campaign_id, tenant_id, school_id, kind, display_name, disclosure_label, price_cents, starts_on, ends_on) VALUES (?,?,?,?,?,?,?,?,?)',
       manifest.campaigns, (c) => [c.campaign_id, c.tenant_id, c.school_id, c.kind, c.display_name, c.disclosure_label, c.price_cents, c.starts_on, c.ends_on]);
     ins('INSERT OR REPLACE INTO destinations (destination_id, tenant_id, location_id, display_name, url, host) VALUES (?,?,?,?,?,?)',

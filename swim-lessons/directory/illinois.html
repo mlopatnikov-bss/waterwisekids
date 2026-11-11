@@ -598,20 +598,20 @@
   <section class="page-hero" style="--v4-original-order: 3;">
     <div class="hero-content">
       <h1>Swim Lessons in Illinois</h1>
-      <p class="hero-sub">Find verified swimming programs and lessons across Illinois. Search, compare, and read reviews from other parents.</p>
+      <p class="hero-sub">Find verified swimming programs and lessons across Illinois. Search and compare program details.</p>
     </div>
   </section>
 
 
   <div class="tldr-box" style="max-width: 820px; margin: 20px auto; background: rgb(240, 247, 255); padding: 16px 20px; border-radius: 8px; color: rgb(51, 65, 85); line-height: 1.65; border-left: 4px solid rgb(0, 119, 182); --v4-original-order: 4;">
-    <strong>Quick Answer:</strong> To find swim lessons in Illinois, use the directory below to search verified swim schools by city and read parent reviews. The American Academy of Pediatrics recommends most children start formal swim lessons by <a href="https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Swim-Lessons.aspx" target="_blank" rel="noopener">age 4, and as early as age 1</a>. This matters because Illinois families rely on park-district and YMCA pools year-round, and Lake Michigan records the most drownings of any Great Lake — and formal lessons are associated with an <strong>88% reduction in drowning risk</strong> for children ages 1–4, the age group for which the <a href="https://www.cdc.gov/drowning/data-research/facts/" target="_blank" rel="noopener">CDC</a> reports drowning is a leading cause of death.
+    <strong>Quick Answer:</strong> To find swim lessons in Illinois, use the directory below to search verified swim schools by city and compare program details. The American Academy of Pediatrics' 2026 policy recommends beginning swim classes after a child's first birthday, with readiness varying by child. This matters because Illinois families rely on park-district and YMCA pools year-round, and Lake Michigan records the most drownings of any Great Lake — and formal lessons are associated with an <strong>88% reduction in drowning risk</strong> for children ages 1–4, the age group for which the <a href="https://www.cdc.gov/drowning/data-research/facts/" target="_blank" rel="noopener">CDC</a> reports drowning is a leading cause of death.
   </div>
   <!-- State Intro -->
   <section class="section" style="padding-bottom: 0px; --v4-original-order: 5;">
     <div style="max-width: 820px; margin: 0 auto; color: #334155; font-size: 1.02rem; line-height: 1.65;">
       <p style="margin-bottom: 14px;"><strong style="color:#0c4a6e;">Illinois is a Lake Michigan state first and foremost.</strong> From Chicago's lakefront to the beaches of the North Shore, millions of Illinois families spend summers on one of the most dangerous stretches of open water in the country. Lake Michigan records more drownings than any other Great Lake, and its cold water - capable of triggering cold-water shock even in July - combines with longshore and structural currents near piers and breakwaters to catch strong swimmers off guard. Nationally, drowning is a leading cause of unintentional injury death among young children (our <a href="/statistics/" style="color:#0369a1;">drowning statistics</a> page tracks the current CDC data), so pool skills are a starting point, not a finish line, for Illinois kids.</p>
       <p style="margin-bottom: 14px;">A couple of Illinois-specific notes. The outdoor swimming season is short, so families who stay with <strong>year-round indoor lessons</strong> keep their skills sharp for beach season instead of relearning each spring, and the Chicago Park District's public pools and beaches make lessons and supervised swimming widely accessible across the city. On the home front, Illinois sets residential pool-barrier requirements largely through local building codes rather than one statewide fence law, so check your municipality - our guide to <a href="/education/swimming-pool-fence-laws-by-state.html" style="color:#0369a1;">pool fence laws by state</a> and the broader <a href="/education/five-layers-protection-drowning-prevention.html" style="color:#0369a1;">five layers of protection</a> explain how to build a complete barrier plan.</p>
-      <p style="margin-bottom: 0;">New to lessons? Our <a href="/beginner-swim-lessons/" style="color:#0369a1;">beginner swim lessons guide</a> walks through what a first class looks like and how to pick the right program. Then search the verified swim schools in the Illinois directory below, compare programs, and read reviews from other parents.</p>
+      <p style="margin-bottom: 0;">New to lessons? Our <a href="/beginner-swim-lessons/" style="color:#0369a1;">beginner swim lessons guide</a> walks through what a first class looks like and how to pick the right program. Then search the verified swim schools in the Illinois directory below, compare program details.</p>
     </div>
   </section>
 
@@ -752,13 +752,13 @@
     </div>
   </section>
 
-  <!-- Review Modal -->
+  <!-- Private Note Modal -->
   <div class="review-modal" id="reviewModal" style="--v4-original-order: 8;">
     <div class="review-form">
-      <h3>Leave a Review</h3>
+      <h3>Add a Private Note</h3>
       <form onsubmit="submitReview(event)">
         <div class="form-group">
-          <label id="ratingLabel">Rating</label>
+          <label id="ratingLabel">Your private rating</label>
           <div class="star-rating" id="starRating" role="group" aria-labelledby="ratingLabel">
             <button type="button" data-rating="1" aria-label="1 star">★</button>
             <button type="button" data-rating="2" aria-label="2 stars">★</button>
@@ -768,12 +768,12 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="reviewText">Your Review</label>
-          <textarea id="reviewText" placeholder="Share your experience with this swim school..." required=""></textarea>
+          <label for="reviewText">Your Private Note</label>
+          <textarea id="reviewText" placeholder="Add a note for your own comparison..." required=""></textarea>
         </div>
         <div class="form-actions">
           <button type="button" class="cancel" onclick="closeReviewModal()">Cancel</button>
-          <button type="submit" class="submit">Submit Review</button>
+          <button type="submit" class="submit">Save Private Note</button>
         </div>
       </form>
     </div>
@@ -932,17 +932,17 @@
         'adult': 'Adults'
       };
 
-      // Show user-generated reviews from localStorage
+      // Show the user's private, browser-local notes
       const allReviews = JSON.parse(localStorage.getItem('swimSchoolReviews') || '{}');
       const storedReviews = allReviews[school.id] || [];
       let ratingHTML = '';
       if (storedReviews.length > 0) {
         const avgRating = storedReviews.reduce((sum, r) => sum + r.rating, 0) / storedReviews.length;
         const userStars = '★'.repeat(Math.round(avgRating)) + '☆'.repeat(5 - Math.round(avgRating));
-        ratingHTML = `<div class="school-rating"><span class="star">${userStars}</span><span>${avgRating.toFixed(1)} (${storedReviews.length} review${storedReviews.length !== 1 ? 's' : ''})</span></div>`;
+        ratingHTML = `<div class="school-rating"><span class="star">${userStars}</span><span>Your private rating: ${avgRating.toFixed(1)} (${storedReviews.length} private note${storedReviews.length !== 1 ? 's' : ''})</span></div>`;
       }
 
-      // Reviews are held in this browser's localStorage and are never transmitted
+      // Private notes are held in this browser's localStorage and are never transmitted
       // anywhere, so the only person who can ever read them is the person who wrote
       // them. Rendering the text back is the whole point of asking for it -- it was
       // previously required, stored, and then never displayed.
@@ -993,7 +993,7 @@
           ${reviewsHTML}
 
           <div class="school-actions">
-            <button class="review-btn" onclick="openReviewModal('${school.id}', '${school.name.replace(/'/g, "\\'")}')">Leave a Review</button>
+            <button class="review-btn" onclick="openReviewModal('${school.id}', '${school.name.replace(/'/g, "\\'")}')">Add Private Note</button>
           </div>
         </div>
       `;
@@ -1002,7 +1002,7 @@
     function openReviewModal(schoolId, schoolName) {
       currentSchoolId = schoolId;
       document.getElementById('reviewModal').classList.add('active');
-      document.querySelector('.review-form h3').textContent = `Review: ${schoolName}`;
+      document.querySelector('.review-form h3').textContent = `Private note: ${schoolName}`;
       currentRating = 0;
       document.getElementById('reviewText').value = '';
       updateStarDisplay();
@@ -1040,7 +1040,7 @@
 
       const text = document.getElementById('reviewText').value.trim();
       if (!text) {
-        alert('Please write a review');
+        alert('Please add a private note');
         return;
       }
 
@@ -1057,7 +1057,7 @@
       });
 
       localStorage.setItem('swimSchoolReviews', JSON.stringify(reviews));
-      alert('Thank you for your review!');
+      alert('Private note saved in this browser.');
       closeReviewModal();
       renderStateSchools();
     }

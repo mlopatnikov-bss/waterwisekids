@@ -495,7 +495,7 @@
       "name": "How do I find swim lessons near me in New Hampshire?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use the search box above to browse verified swim schools by city or name across New Hampshire, read parent reviews, and compare programs. Our beginner swim-lessons hub can also help you choose a first program."
+        "text": "Use the search box above to browse verified swim schools by city or name across New Hampshire, compare program details. Our beginner swim-lessons hub can also help you choose a first program."
       }
     },
     {
@@ -613,7 +613,7 @@
   <section class="page-hero" style="--v4-original-order: 3;">
     <div class="hero-content">
       <h1>Swim Lessons in New Hampshire</h1>
-      <p class="hero-sub">Find verified swimming programs and lessons across New Hampshire. Search, compare, and read reviews from other parents.</p>
+      <p class="hero-sub">Find verified swimming programs and lessons across New Hampshire. Search and compare program details.</p>
     </div>
   <div class="back-links"><a href="/swim-lessons/directory/">← Browse All States</a> &nbsp; <a href="/swim-lessons/">← Back to Find Lessons</a></div>
 </section>
@@ -668,20 +668,20 @@
         <h3 style="font-size:1.05rem;margin:1.25rem 0 .35rem;">When should New Hampshire children start swim lessons?</h3>
         <p style="margin:0 0 .5rem;">The American Academy of Pediatrics supports swim lessons for many children beginning around age 1, and formal lessons are associated with lower drowning risk in young children. Given how much time New Hampshire families spend on the lakes and the Seacoast, building water competency early is especially valuable.</p>
         <h3 style="font-size:1.05rem;margin:1.25rem 0 .35rem;">How do I find swim lessons near me in New Hampshire?</h3>
-        <p style="margin:0 0 .5rem;">Use the search box above to browse verified swim schools by city or name across New Hampshire, read parent reviews, and compare programs. Our beginner swim-lessons hub can also help you choose a first program.</p>
+        <p style="margin:0 0 .5rem;">Use the search box above to browse verified swim schools by city or name across New Hampshire, compare program details. Our beginner swim-lessons hub can also help you choose a first program.</p>
         <h3 style="font-size:1.05rem;margin:1.25rem 0 .35rem;">How much do swim lessons cost in New Hampshire?</h3>
         <p style="margin:0 0 .5rem;line-height:1.7;">Group swim lessons in the United States typically run about $15 to $30 per 30-minute class, and most swim schools sell monthly memberships or multi-week sessions rather than single lessons; private one-on-one instruction usually costs more. Rates vary widely by city, pool type and instructor certification, and many New Hampshire schools also charge a one-time registration fee. Because prices change often, confirm the current rate directly with each school listed above before enrolling.</p>
         <h3 style="font-size:1.05rem;margin:1.25rem 0 .35rem;">How do I choose the best swim school in New Hampshire?</h3>
         <p style="margin:0 0 .5rem;line-height:1.7;">Compare what you can actually verify rather than star ratings alone: instructor certification (for example Red Cross, YMCA, Starfish Swimming or ASCA credentials), the instructor-to-student ratio, whether the water is kept at a warm learn-to-swim temperature, whether the pool is indoor and year-round, how make-up lessons and cancellations are handled, and whether the curriculum teaches water-competency skills such as floating, treading and safe exit rather than stroke technique alone. Watch a class in progress and see how closely instructors supervise before you commit. For a deeper walkthrough of each check, see our guide on <a href="/education/choosing-a-swim-school.html">how to choose a swim school</a>.</p>
   </section>
 
-  <!-- Review Modal -->
+  <!-- Private Note Modal -->
   <div class="review-modal" id="reviewModal" style="--v4-original-order: 8;">
     <div class="review-form">
-      <h3>Leave a Review</h3>
+      <h3>Add a Private Note</h3>
       <form onsubmit="submitReview(event)">
         <div class="form-group">
-          <label id="ratingLabel">Rating</label>
+          <label id="ratingLabel">Your private rating</label>
           <div class="star-rating" id="starRating" role="group" aria-labelledby="ratingLabel">
             <button type="button" data-rating="1" aria-label="1 star">★</button>
             <button type="button" data-rating="2" aria-label="2 stars">★</button>
@@ -691,12 +691,12 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="reviewText">Your Review</label>
-          <textarea id="reviewText" placeholder="Share your experience with this swim school..." required=""></textarea>
+          <label for="reviewText">Your Private Note</label>
+          <textarea id="reviewText" placeholder="Add a note for your own comparison..." required=""></textarea>
         </div>
         <div class="form-actions">
           <button type="button" class="cancel" onclick="closeReviewModal()">Cancel</button>
-          <button type="submit" class="submit">Submit Review</button>
+          <button type="submit" class="submit">Save Private Note</button>
         </div>
       </form>
     </div>
@@ -855,17 +855,17 @@
         'adult': 'Adults'
       };
 
-      // Show user-generated reviews from localStorage
+      // Show the user's private, browser-local notes
       const allReviews = JSON.parse(localStorage.getItem('swimSchoolReviews') || '{}');
       const storedReviews = allReviews[school.id] || [];
       let ratingHTML = '';
       if (storedReviews.length > 0) {
         const avgRating = storedReviews.reduce((sum, r) => sum + r.rating, 0) / storedReviews.length;
         const userStars = '★'.repeat(Math.round(avgRating)) + '☆'.repeat(5 - Math.round(avgRating));
-        ratingHTML = `<div class="school-rating"><span class="star">${userStars}</span><span>${avgRating.toFixed(1)} (${storedReviews.length} review${storedReviews.length !== 1 ? 's' : ''})</span></div>`;
+        ratingHTML = `<div class="school-rating"><span class="star">${userStars}</span><span>Your private rating: ${avgRating.toFixed(1)} (${storedReviews.length} private note${storedReviews.length !== 1 ? 's' : ''})</span></div>`;
       }
 
-      // Reviews are held in this browser's localStorage and are never transmitted
+      // Private notes are held in this browser's localStorage and are never transmitted
       // anywhere, so the only person who can ever read them is the person who wrote
       // them. Rendering the text back is the whole point of asking for it -- it was
       // previously required, stored, and then never displayed.
@@ -916,7 +916,7 @@
           ${reviewsHTML}
 
           <div class="school-actions">
-            <button class="review-btn" onclick="openReviewModal('${school.id}', '${school.name.replace(/'/g, "\\'")}')">Leave a Review</button>
+            <button class="review-btn" onclick="openReviewModal('${school.id}', '${school.name.replace(/'/g, "\\'")}')">Add Private Note</button>
           </div>
         </div>
       `;
@@ -925,7 +925,7 @@
     function openReviewModal(schoolId, schoolName) {
       currentSchoolId = schoolId;
       document.getElementById('reviewModal').classList.add('active');
-      document.querySelector('.review-form h3').textContent = `Review: ${schoolName}`;
+      document.querySelector('.review-form h3').textContent = `Private note: ${schoolName}`;
       currentRating = 0;
       document.getElementById('reviewText').value = '';
       updateStarDisplay();
@@ -963,7 +963,7 @@
 
       const text = document.getElementById('reviewText').value.trim();
       if (!text) {
-        alert('Please write a review');
+        alert('Please add a private note');
         return;
       }
 
@@ -980,7 +980,7 @@
       });
 
       localStorage.setItem('swimSchoolReviews', JSON.stringify(reviews));
-      alert('Thank you for your review!');
+      alert('Private note saved in this browser.');
       closeReviewModal();
       renderStateSchools();
     }

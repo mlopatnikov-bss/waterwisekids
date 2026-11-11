@@ -598,7 +598,7 @@
   <section class="page-hero" style="--v4-original-order: 3;">
     <div class="hero-content">
       <h1>Swim Lessons in Idaho</h1>
-      <p class="hero-sub">Find verified swimming programs and lessons across Idaho. Search, compare, and read reviews from other parents.</p>
+      <p class="hero-sub">Find verified swimming programs and lessons across Idaho. Search and compare program details.</p>
     </div>
   <div class="back-links"><a href="/swim-lessons/directory/">← Browse All States</a> &nbsp; <a href="/swim-lessons/">← Back to Find Lessons</a></div>
 </section>
@@ -609,7 +609,7 @@
       <p style="margin-bottom: 14px;"><strong style="color:#0c4a6e;">Idaho is landlocked, but it is far from short on water.</strong> Big, deep lakes like Lake Coeur d'Alene, Lake Pend Oreille, and Payette Lake draw families all summer, and fast, cold rivers such as the Snake and the Boise run right through the state's towns. Much of that water is fed by mountain snowmelt, so it stays cold enough for cold-water shock even on hot days, and river currents can be far stronger than they look. Nationally, drowning is a leading cause of unintentional injury death among young children (our <a href="/statistics/" style="color:#0369a1;">drowning statistics</a> page tracks the current CDC data), so formal lessons are a foundation, not a finish line, for Idaho kids.</p>
       <p style="margin-bottom: 14px;">Two Idaho-specific notes for parents. The outdoor season is short and the water is cold, so families who stay with <strong>year-round indoor lessons</strong> - available across the Boise metro and larger towns - keep skills sharp for lake and river season instead of relearning each spring. On the home front, Idaho regulates residential pool barriers largely through local building codes rather than a single statewide fence law, so check your city or county; our guide to <a href="/education/swimming-pool-fence-laws-by-state.html" style="color:#0369a1;">pool fence laws by state</a> and the broader <a href="/education/five-layers-protection-drowning-prevention.html" style="color:#0369a1;">five layers of protection</a> explain how to build a complete barrier plan around any backyard pool.</p>
                 <p>Because so much of Idaho swimming happens in cold, deep, open water — reservoirs, alpine lakes, and fast spring rivers — water-competency skills matter as much as pool comfort. Cold water saps strength and coordination quickly, so the U.S. Coast Guard urges a properly fitted life jacket for every child on or near a boat or open shoreline, and the CDC counts formal swim lessons among the layers that measurably lower a child's drowning risk. Treat lessons as one part of a layered plan — close supervision, barriers around home water, life jackets in open water, and swim skill together — rather than any single safeguard on its own.</p>
-          <p style="margin-bottom: 0;">New to lessons? Our <a href="/beginner-swim-lessons/" style="color:#0369a1;">beginner swim lessons guide</a> walks through what a first class looks like and how to choose the right program. Then search the verified swim schools in the Idaho directory below, compare programs, and read reviews from other parents.</p>
+          <p style="margin-bottom: 0;">New to lessons? Our <a href="/beginner-swim-lessons/" style="color:#0369a1;">beginner swim lessons guide</a> walks through what a first class looks like and how to choose the right program. Then search the verified swim schools in the Idaho directory below, compare program details.</p>
     </div>
   </section>
 
@@ -678,13 +678,13 @@
         <p style="margin:0 0 .5rem;">Idaho sets residential pool-barrier requirements largely through local building codes rather than one statewide fence law, so requirements can vary by city or county - check your local building department. Regardless of local code, safety experts recommend a four-sided isolation fence at least four feet high with a self-closing, self-latching gate as one layer of a complete drowning-prevention plan.</p>
   </section>
 
-  <!-- Review Modal -->
+  <!-- Private Note Modal -->
   <div class="review-modal" id="reviewModal" style="--v4-original-order: 9;">
     <div class="review-form">
-      <h3>Leave a Review</h3>
+      <h3>Add a Private Note</h3>
       <form onsubmit="submitReview(event)">
         <div class="form-group">
-          <label id="ratingLabel">Rating</label>
+          <label id="ratingLabel">Your private rating</label>
           <div class="star-rating" id="starRating" role="group" aria-labelledby="ratingLabel">
             <button type="button" data-rating="1" aria-label="1 star">★</button>
             <button type="button" data-rating="2" aria-label="2 stars">★</button>
@@ -694,12 +694,12 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="reviewText">Your Review</label>
-          <textarea id="reviewText" placeholder="Share your experience with this swim school..." required=""></textarea>
+          <label for="reviewText">Your Private Note</label>
+          <textarea id="reviewText" placeholder="Add a note for your own comparison..." required=""></textarea>
         </div>
         <div class="form-actions">
           <button type="button" class="cancel" onclick="closeReviewModal()">Cancel</button>
-          <button type="submit" class="submit">Submit Review</button>
+          <button type="submit" class="submit">Save Private Note</button>
         </div>
       </form>
     </div>
@@ -858,17 +858,17 @@
         'adult': 'Adults'
       };
 
-      // Show user-generated reviews from localStorage
+      // Show the user's private, browser-local notes
       const allReviews = JSON.parse(localStorage.getItem('swimSchoolReviews') || '{}');
       const storedReviews = allReviews[school.id] || [];
       let ratingHTML = '';
       if (storedReviews.length > 0) {
         const avgRating = storedReviews.reduce((sum, r) => sum + r.rating, 0) / storedReviews.length;
         const userStars = '★'.repeat(Math.round(avgRating)) + '☆'.repeat(5 - Math.round(avgRating));
-        ratingHTML = `<div class="school-rating"><span class="star">${userStars}</span><span>${avgRating.toFixed(1)} (${storedReviews.length} review${storedReviews.length !== 1 ? 's' : ''})</span></div>`;
+        ratingHTML = `<div class="school-rating"><span class="star">${userStars}</span><span>Your private rating: ${avgRating.toFixed(1)} (${storedReviews.length} private note${storedReviews.length !== 1 ? 's' : ''})</span></div>`;
       }
 
-      // Reviews are held in this browser's localStorage and are never transmitted
+      // Private notes are held in this browser's localStorage and are never transmitted
       // anywhere, so the only person who can ever read them is the person who wrote
       // them. Rendering the text back is the whole point of asking for it -- it was
       // previously required, stored, and then never displayed.
@@ -919,7 +919,7 @@
           ${reviewsHTML}
 
           <div class="school-actions">
-            <button class="review-btn" onclick="openReviewModal('${school.id}', '${school.name.replace(/'/g, "\\'")}')">Leave a Review</button>
+            <button class="review-btn" onclick="openReviewModal('${school.id}', '${school.name.replace(/'/g, "\\'")}')">Add Private Note</button>
           </div>
         </div>
       `;
@@ -928,7 +928,7 @@
     function openReviewModal(schoolId, schoolName) {
       currentSchoolId = schoolId;
       document.getElementById('reviewModal').classList.add('active');
-      document.querySelector('.review-form h3').textContent = `Review: ${schoolName}`;
+      document.querySelector('.review-form h3').textContent = `Private note: ${schoolName}`;
       currentRating = 0;
       document.getElementById('reviewText').value = '';
       updateStarDisplay();
@@ -966,7 +966,7 @@
 
       const text = document.getElementById('reviewText').value.trim();
       if (!text) {
-        alert('Please write a review');
+        alert('Please add a private note');
         return;
       }
 
@@ -983,7 +983,7 @@
       });
 
       localStorage.setItem('swimSchoolReviews', JSON.stringify(reviews));
-      alert('Thank you for your review!');
+      alert('Private note saved in this browser.');
       closeReviewModal();
       renderStateSchools();
     }

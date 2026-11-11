@@ -598,13 +598,13 @@
   <section class="page-hero" style="--v4-original-order: 3;">
     <div class="hero-content">
       <h1>Swim Lessons in Texas</h1>
-      <p class="hero-sub">Find verified swimming programs and lessons across Texas. Search, compare, and read reviews from other parents.</p>
+      <p class="hero-sub">Find verified swimming programs and lessons across Texas. Search and compare program details.</p>
     </div>
   </section>
 
   <!-- TL;DR Quick Answer -->
   <div class="tldr-box" style="max-width: 820px; margin: 20px auto; background: rgb(240, 247, 255); padding: 16px 20px; border-radius: 8px; color: rgb(51, 65, 85); line-height: 1.65; border-left: 4px solid rgb(0, 119, 182); --v4-original-order: 4;">
-    <strong>Quick Answer:</strong> To find swim lessons in Texas, use the directory below to search verified swim schools by city and read parent reviews. The American Academy of Pediatrics recommends most children start formal lessons by <a href="https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Swim-Lessons.aspx" target="_blank" rel="noopener">age 4, and as early as age 1</a>. This matters especially in Texas, which regularly records more child drowning deaths than any other state — and formal lessons are associated with an <strong>88% reduction in drowning risk</strong> for children ages 1–4, the age group for which the <a href="https://www.cdc.gov/drowning/data-research/facts/" target="_blank" rel="noopener">CDC</a> reports drowning is a leading cause of death.
+    <strong>Quick Answer:</strong> To find swim lessons in Texas, use the directory below to search verified swim schools by city and compare program details. The American Academy of Pediatrics' 2026 policy recommends beginning swim classes after a child's first birthday, with readiness varying by child. This matters especially in Texas, which regularly records more child drowning deaths than any other state — and formal lessons are associated with an <strong>88% reduction in drowning risk</strong> for children ages 1–4, the age group for which the <a href="https://www.cdc.gov/drowning/data-research/facts/" target="_blank" rel="noopener">CDC</a> reports drowning is a leading cause of death.
   </div>
 
   <!-- State Intro -->
@@ -612,7 +612,7 @@
     <div style="max-width: 820px; margin: 0 auto; color: #334155; font-size: 1.02rem; line-height: 1.65;">
       <p style="margin-bottom: 14px;"><strong style="color:#0c4a6e;">In Texas, backyard pools and a long warm season put children around water for much of the year — which makes swim skills essential.</strong> From Houston and Dallas to Austin, San Antonio, and the Gulf coast, Texas kids swim spring through fall outdoors and year-round indoors. That exposure carries real risk: Texas regularly records more child drowning deaths than any other state, and nationally <a href="/statistics/" style="color:#0369a1;">drowning is a leading cause of death for children ages 1–4</a>. Formal lessons — associated with an 88% reduction in drowning risk for young children — are one of the best investments a Texas family can make.</p>
       <p style="margin-bottom: 14px;">Two Texas-specific things to know. First, <a href="/education/swimming-pool-fence-laws-by-state.html" style="color:#0369a1;">Texas Health &amp; Safety Code Chapter 757</a> requires an enclosure around residential pools deeper than 18 inches — generally a 48-inch barrier with self-closing, self-latching gates — and many cities layer on stricter local codes. Because most residential-pool drownings happen when a child reaches water unsupervised, pair barriers with the <a href="/education/five-layers-protection-drowning-prevention.html" style="color:#0369a1;">five layers of protection</a>. Second, the Gulf coast adds open-water hazards that pools don't: <a href="/education/rip-current-safety.html" style="color:#0369a1;">rip currents</a>, sudden drop-offs, and no lifeguard on many stretches — constant supervision and life jackets matter every time.</p>
-      <p style="margin-bottom: 0;">Use the directory below to search verified swim schools across Texas, compare programs, and read reviews from other parents. Not sure where to start? Our <a href="/beginner-swim-lessons/" style="color:#0369a1;">beginner swim lessons guide</a> walks you through what first classes look like at any age.</p>
+      <p style="margin-bottom: 0;">Use the directory below to search verified swim schools across Texas, compare program details. Not sure where to start? Our <a href="/beginner-swim-lessons/" style="color:#0369a1;">beginner swim lessons guide</a> walks you through what first classes look like at any age.</p>
     </div>
   </section>
 
@@ -801,13 +801,13 @@
         <p style="margin:0 0 .5rem;">Outdoor swim season in Texas runs long, roughly spring through fall, and indoor swim schools in major metros operate year-round. Because water access lasts most of the year, water-safety skills are needed almost every month, not just during summer. Booking early is wise since popular programs fill quickly ahead of summer.</p>
   </section>
 
-  <!-- Review Modal -->
+  <!-- Private Note Modal -->
   <div class="review-modal" id="reviewModal" style="--v4-original-order: 9;">
     <div class="review-form">
-      <h3>Leave a Review</h3>
+      <h3>Add a Private Note</h3>
       <form onsubmit="submitReview(event)">
         <div class="form-group">
-          <label id="ratingLabel">Rating</label>
+          <label id="ratingLabel">Your private rating</label>
           <div class="star-rating" id="starRating" role="group" aria-labelledby="ratingLabel">
             <button type="button" data-rating="1" aria-label="1 star">★</button>
             <button type="button" data-rating="2" aria-label="2 stars">★</button>
@@ -817,12 +817,12 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="reviewText">Your Review</label>
-          <textarea id="reviewText" placeholder="Share your experience with this swim school..." required=""></textarea>
+          <label for="reviewText">Your Private Note</label>
+          <textarea id="reviewText" placeholder="Add a note for your own comparison..." required=""></textarea>
         </div>
         <div class="form-actions">
           <button type="button" class="cancel" onclick="closeReviewModal()">Cancel</button>
-          <button type="submit" class="submit">Submit Review</button>
+          <button type="submit" class="submit">Save Private Note</button>
         </div>
       </form>
     </div>
@@ -981,17 +981,17 @@
         'adult': 'Adults'
       };
 
-      // Show user-generated reviews from localStorage
+      // Show the user's private, browser-local notes
       const allReviews = JSON.parse(localStorage.getItem('swimSchoolReviews') || '{}');
       const storedReviews = allReviews[school.id] || [];
       let ratingHTML = '';
       if (storedReviews.length > 0) {
         const avgRating = storedReviews.reduce((sum, r) => sum + r.rating, 0) / storedReviews.length;
         const userStars = '★'.repeat(Math.round(avgRating)) + '☆'.repeat(5 - Math.round(avgRating));
-        ratingHTML = `<div class="school-rating"><span class="star">${userStars}</span><span>${avgRating.toFixed(1)} (${storedReviews.length} review${storedReviews.length !== 1 ? 's' : ''})</span></div>`;
+        ratingHTML = `<div class="school-rating"><span class="star">${userStars}</span><span>Your private rating: ${avgRating.toFixed(1)} (${storedReviews.length} private note${storedReviews.length !== 1 ? 's' : ''})</span></div>`;
       }
 
-      // Reviews are held in this browser's localStorage and are never transmitted
+      // Private notes are held in this browser's localStorage and are never transmitted
       // anywhere, so the only person who can ever read them is the person who wrote
       // them. Rendering the text back is the whole point of asking for it -- it was
       // previously required, stored, and then never displayed.
@@ -1042,7 +1042,7 @@
           ${reviewsHTML}
 
           <div class="school-actions">
-            <button class="review-btn" onclick="openReviewModal('${school.id}', '${school.name.replace(/'/g, "\\'")}')">Leave a Review</button>
+            <button class="review-btn" onclick="openReviewModal('${school.id}', '${school.name.replace(/'/g, "\\'")}')">Add Private Note</button>
           </div>
         </div>
       `;
@@ -1051,7 +1051,7 @@
     function openReviewModal(schoolId, schoolName) {
       currentSchoolId = schoolId;
       document.getElementById('reviewModal').classList.add('active');
-      document.querySelector('.review-form h3').textContent = `Review: ${schoolName}`;
+      document.querySelector('.review-form h3').textContent = `Private note: ${schoolName}`;
       currentRating = 0;
       document.getElementById('reviewText').value = '';
       updateStarDisplay();
@@ -1089,7 +1089,7 @@
 
       const text = document.getElementById('reviewText').value.trim();
       if (!text) {
-        alert('Please write a review');
+        alert('Please add a private note');
         return;
       }
 
@@ -1106,7 +1106,7 @@
       });
 
       localStorage.setItem('swimSchoolReviews', JSON.stringify(reviews));
-      alert('Thank you for your review!');
+      alert('Private note saved in this browser.');
       closeReviewModal();
       renderStateSchools();
     }

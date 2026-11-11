@@ -40,6 +40,9 @@ test('manifest: locations with conflicting or no-class notices are held and neve
   const m = loadManifest();
   const held = m.locations.filter((l) => l.status !== 'eligible_fixture').map((l) => l.display_name).sort();
   assert.deepEqual(held, ['Boys & Girls Club - Asbury Park', 'East Village', 'LA Fitness - Andorra']);
+  const withheld = m.locations.find((l) => l.display_name === 'Boys & Girls Club - Asbury Park');
+  assert.equal(withheld.location_id, 'loc_8ad551340f56b2a9');
+  assert.equal(withheld.official_url, null);
   const heldIds = new Set(m.locations.filter((l) => l.status !== 'eligible_fixture').map((l) => l.location_id));
   for (const p of m.placements) assert.ok(!heldIds.has(p.featured_location_id));
   for (const d of m.destinations) assert.ok(!heldIds.has(d.location_id));

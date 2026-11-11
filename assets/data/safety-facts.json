@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "last_verified": "2026-11-11",
+  "review_cycle_days": 90,
+  "editorial_rule": "Medical and drowning-prevention claims must preserve the scope and uncertainty in the cited primary source. Do not turn an association into a guarantee.",
+  "facts": {
+    "swim_lesson_start_age": {
+      "canonical_wording": "The American Academy of Pediatrics recommends beginning swim classes after a child's first birthday, with readiness based on the individual child and family water exposure.",
+      "source_title": "Prevention of Drowning: Policy Statement",
+      "source_url": "https://publications.aap.org/pediatrics/article/doi/10.1542/peds.2026-077410/207630/Prevention-of-Drowning-Policy-Statement",
+      "source_date": "2026-06-15",
+      "must_include": [
+        "Lessons never replace attentive supervision and other layers of protection.",
+        "Readiness varies by child."
+      ],
+      "must_not_claim": [
+        "The AAP recommends waiting until age 4.",
+        "The AAP recommends lessons only for children age 4 or older."
+      ]
+    },
+    "infants_under_one": {
+      "canonical_wording": "The AAP says there is no evidence that infant swim lessons reduce drowning incidence for children under age 1.",
+      "source_title": "Prevention of Drowning: Policy Statement",
+      "source_url": "https://publications.aap.org/pediatrics/article/doi/10.1542/peds.2026-077410/207630/Prevention-of-Drowning-Policy-Statement",
+      "source_date": "2026-06-15",
+      "must_include": [
+        "Parent-child water familiarization must not be presented as drowning protection.",
+        "Infants require hands-on supervision around water."
+      ]
+    },
+    "lesson_risk_association": {
+      "canonical_wording": "A case-control study found an association between formal swimming lessons and an 88% lower drowning risk among children ages 1 to 4; the study does not prove that lessons alone prevent drowning.",
+      "source_title": "Association Between Swimming Lessons and Drowning in Childhood: A Case-Control Study",
+      "source_url": "https://jamanetwork.com/journals/jamapediatrics/fullarticle/381058",
+      "source_date": "2009-03-01",
+      "must_include": [
+        "Observational association, not a guarantee or proof of causation.",
+        "Lessons are one layer of protection."
+      ]
+    }
+  },
+  "blocked_phrases": [
+    "85% of pediatricians recommend swim lessons",
+    "The AAP recommends swim lessons for children 4+ years old",
+    "The AAP recommends that children 4 years and older should have access to formal swim lessons",
+    "formal swim lessons for drowning prevention are not typically beneficial before age 4"
+  ]
+}

@@ -82,7 +82,9 @@ test('real repo: no redirect file was introduced and robots.txt still allows cra
 });
 
 test('protected pilot surfaces: the NY directory is byte-identical and live cards are only on their approved pages', () => {
-  assert.equal(sha(read('swim-lessons/directory/new-york.html')), 'cfe4515bb42aac5af13c69ca35b48a82cd2155a0dde9f5e2910536e9abdbd3a3');
+  // Baseline reviewed 2026-11-11 after the AAP starting-age correction. The
+  // separately asserted sponsored card bytes and approved-page set are unchanged.
+  assert.equal(sha(read('swim-lessons/directory/new-york.html')), '7effa75ec0c0fd571ba95f2494e0bc757fbc7f5e89d93e587d58709e01be3674');
   const approved = new Set([...loadPilot().tenants.flatMap((t) => t.placements.map((p) => p.page_path)), ...loadManhattan().tenants.flatMap((t) => t.placements.map((p) => p.page_path))]);
   const site = real().site;
   const withCards = [...site.pages.values()].filter((p) => H.sponsoredBlocks(p.html).length).map((p) => p.path).sort();

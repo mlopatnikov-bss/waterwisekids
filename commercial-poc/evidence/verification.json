@@ -7,8 +7,8 @@
       "command": "node scripts/static-checks.mjs",
       "exit_code": 0,
       "result": {
-        "files_scanned": 81,
-        "mjs_syntax_checked": 54,
+        "files_scanned": 199,
+        "mjs_syntax_checked": 123,
         "findings": []
       }
     },
@@ -20,7 +20,7 @@
     "tests": {
       "command": "node --test --test-reporter=spec test/collector.test.mjs test/conversions-quality.test.mjs test/events-privacy.test.mjs test/isolation.test.mjs test/manifest.test.mjs test/portal.test.mjs test/quality-integrity.test.mjs test/rollup-reconciliation.test.mjs test/seed-batching.test.mjs test/seed-cli.test.mjs",
       "exit_code": 0,
-      "ms": 13730,
+      "ms": 6727,
       "tests": 111,
       "pass": 111,
       "fail": 0,

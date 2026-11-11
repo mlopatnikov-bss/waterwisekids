@@ -19,7 +19,7 @@ Accuracy fixes on primaries (visible text and FAQ schema changed together):
 - Restated the 88% figure as the 2009 study's association, which the researchers called imprecise.
 - Howell: replaced unverified claims about local schools ("certified instructors", "heated pools", "from 6-month-old infants") with neutral guidance and a questions-to-ask checklist.
 
-Totals: 44 public files (43 modified, 1 added), 64 internal links repointed, 19 redundant list items removed, 11 sitemap URLs removed and 1 added. Live sponsored cards, tracking, portal and reporting code are untouched. `swim-lessons/directory/new-york.html` is byte-identical.
+Totals: 44 public files (43 modified, 1 added), 64 internal links repointed, 19 redundant list items removed, 11 sitemap URLs removed and 1 added. Live sponsored cards, tracking, portal and reporting code are untouched. The New York directory's sponsored card remains byte-identical; unrelated editorial safety copy may change under its own reviewed release.
 
 ## 2. Pre-release go/no-go (Search Console, read-only)
 

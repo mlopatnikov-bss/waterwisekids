@@ -131,14 +131,15 @@ export function buildManifest({ repoRoot, pocRoot, config, snapshot, generatedAt
 
     const locById = new Map();
     for (const loc of official.locations) {
-      const locUrl = normalizeUrl(loc.location_url);
-      const locationId = stableId('loc', locUrl);
+      const locUrl = loc.location_url ? normalizeUrl(loc.location_url) : null;
+      const locationId = locUrl ? stableId('loc', locUrl) : loc.location_id;
+      if (!locationId) throw new Error(`location ${loc.venue} has neither a URL nor an opaque location_id`);
       // Match the official location to WWK directory sources.
-      const dirRow = rows.find((r) => normalizeUrl(r.website) === locUrl);
+      const dirRow = rows.find((r) => locUrl && normalizeUrl(r.website) === locUrl);
       const dirVenue = rows.flatMap((r) => (r.poolAddresses || []).map((p) => ({ ...p, row: r.name })))
         .find((p) => p.venue.toLowerCase().replace(/[’']/g, "'").replace(/[–-]/g, '-') === loc.venue.toLowerCase().replace(/[’']/g, "'").replace(/[–-]/g, '-'));
       const geoRow = dirRow ? geoRows.find((g) => g.name === dirRow.name) : null;
-      const geoVenue = geoVenues.find((v) => normalizeUrl(v.url) === locUrl);
+      const geoVenue = geoVenues.find((v) => locUrl && normalizeUrl(v.url) === locUrl);
       const inWwk = Boolean(dirRow || dirVenue);
       const reasons = [];
       let status = 'eligible_fixture';
@@ -153,14 +154,18 @@ export function buildManifest({ repoRoot, pocRoot, config, snapshot, generatedAt
         status = 'needs_owner_confirmation';
         reasons.push('Listed on the official territory page but absent from the WWK directory data.');
         addConflict({ severity: 'warn', kind: 'official_location_missing_from_wwk', tenant_key: t.tenant_key, subject: loc.venue,
-          detail: `Official territory page lists ${loc.venue} (${loc.location_url}); no matching row or pool venue exists in ${config.repo_sources.directory_data}.`,
+          detail: locUrl
+            ? `Official territory page lists ${loc.venue} (${loc.location_url}); no matching row or pool venue exists in ${config.repo_sources.directory_data}.`
+            : `The official territory page lists ${loc.venue}; the exact held-location URL is withheld under directory policy, and no matching row or pool venue exists in ${config.repo_sources.directory_data}.`,
           effect: 'Location held at needs_owner_confirmation; no placement or destination is created for it.' });
       }
       if (loc.no_classes_notice) {
         status = 'needs_owner_confirmation';
         reasons.push('Official location page states there are currently no classes available.');
         addConflict({ severity: 'warn', kind: 'official_no_classes_notice', tenant_key: t.tenant_key, subject: loc.venue,
-          detail: `${loc.location_url} states "no classes available" while still listed on the territory page. Active status cannot be inferred.`,
+          detail: locUrl
+            ? `${loc.location_url} states "no classes available" while still listed on the territory page. Active status cannot be inferred.`
+            : 'The held official location page states "no classes available" while the venue remains listed on the territory page. The exact URL is withheld under directory policy, and active status cannot be inferred.',
           effect: 'Location held at needs_owner_confirmation; owner must confirm whether it should be promoted.' });
       }
       if (loc.address_conflict) {
@@ -198,7 +203,7 @@ export function buildManifest({ repoRoot, pocRoot, config, snapshot, generatedAt
         official_url: loc.location_url, status, status_reason: reasons.length ? reasons.join(' ') : 'Listed on the official territory page and in WWK directory data; no conflicting notice observed. Fixture eligibility only; live status requires owner confirmation.',
         verified_on: snapshot.observed_on, sources };
       out.locations.push(record);
-      locById.set(locUrl, record);
+      if (locUrl) locById.set(locUrl, record);
       if (status === 'eligible_fixture') {
         out.destinations.push({ destination_id: stableId('dst', locUrl), tenant_id: tenantId, location_id: locationId, display_name: `${loc.venue} (official location page)`, url: loc.location_url, host: new URL(loc.location_url).hostname });
       }
@@ -216,7 +221,7 @@ export function buildManifest({ repoRoot, pocRoot, config, snapshot, generatedAt
     // Link variants used across WWK pages.
     if (scanLinks) {
       const links = scanTerritoryLinks(repoRoot, t.tenant_key);
-      const known = new Set([territoryUrl, ...official.locations.map((l) => normalizeUrl(l.location_url))]);
+      const known = new Set([territoryUrl, ...official.locations.filter((l) => l.location_url).map((l) => normalizeUrl(l.location_url))]);
       for (const [url, files] of links) {
         let n;
         try { n = normalizeUrl(url); } catch { continue; }
@@ -241,14 +246,20 @@ export function buildManifest({ repoRoot, pocRoot, config, snapshot, generatedAt
 
     for (const card of t.sponsored_cards) {
       const page = readCanonical(repoRoot, card.page_file);
-      const featured = card.featured_location_url ? locById.get(normalizeUrl(card.featured_location_url)) : null;
+      const featured = card.featured_location_url
+        ? locById.get(normalizeUrl(card.featured_location_url))
+        : card.featured_location_id
+          ? out.locations.find((l) => l.tenant_id === tenantId && l.location_id === card.featured_location_id)
+          : null;
       if (!page || !page.page_path) {
         out.skipped_placements.push({ tenant_key: t.tenant_key, slot_key: card.slot_key, reason: `Page ${card.page_file} not found or has no canonical URL.` });
         continue;
       }
-      if (card.featured_location_url && (!featured || featured.status !== 'eligible_fixture')) {
+      if ((card.featured_location_url || card.featured_location_id) && (!featured || featured.status !== 'eligible_fixture')) {
         out.skipped_placements.push({ tenant_key: t.tenant_key, slot_key: card.slot_key, page_path: page.page_path,
-          reason: `Featured location ${card.featured_location_url} is ${featured ? featured.status : 'unknown'}; placement not created.` });
+          reason: card.featured_location_url
+            ? `Featured location ${card.featured_location_url} is ${featured ? featured.status : 'unknown'}; placement not created.`
+            : `Featured location URL withheld under directory policy; location is ${featured ? featured.status : 'unknown'} and placement was not created.` });
         continue;
       }
       const placementId = stableId('plc', `${territoryUrl}#${card.slot_key}`);

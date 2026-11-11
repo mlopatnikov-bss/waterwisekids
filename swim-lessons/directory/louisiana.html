@@ -597,7 +597,7 @@
   <section class="page-hero" style="--v4-original-order: 3;">
     <div class="hero-content">
       <h1>Swim Lessons in Louisiana</h1>
-      <p class="hero-sub">Find verified swimming programs and lessons across Louisiana. Search, compare, and read reviews from other parents.</p>
+      <p class="hero-sub">Find verified swimming programs and lessons across Louisiana. Search and compare program details.</p>
     </div>
   <div class="back-links"><a href="/swim-lessons/directory/">← Browse All States</a> &nbsp; <a href="/swim-lessons/">← Back to Find Lessons</a></div>
 </section>
@@ -607,7 +607,7 @@
     <div style="max-width: 820px; margin: 0 auto; color: #334155; font-size: 1.02rem; line-height: 1.65;">
       <p style="margin-bottom: 14px;"><strong style="color:#0c4a6e;">Louisiana is defined by water - bayous, lakes, rivers, and the Gulf of Mexico.</strong> With warm weather much of the year, Louisiana families spend long seasons in and around the water, from backyard pools to the coast. That constant exposure raises the stakes: Louisiana consistently ranks among the states with higher drowning death rates in CDC data, and nationally drowning is a leading cause of unintentional injury death among young children (our <a href="/statistics/" style="color:#0369a1;">drowning statistics</a> page tracks the current figures). Formal swim lessons are one of the most effective protections, but they are a foundation, not a finish line.</p>
       <p style="margin-bottom: 14px;">A couple of Louisiana-specific notes. The long warm season means kids can lose focus on formal skills once casual summer swimming starts, so families who keep <strong>consistent year-round lessons</strong> tend to build stronger, lasting water competence. On the home front, Louisiana regulates residential pool barriers largely through local building codes rather than one statewide fence law, so check your parish or municipality; our guide to <a href="/education/swimming-pool-fence-laws-by-state.html" style="color:#0369a1;">pool fence laws by state</a> and the broader <a href="/education/five-layers-protection-drowning-prevention.html" style="color:#0369a1;">five layers of protection</a> explain how to layer fencing, alarms, and supervision into a complete plan.</p>
-      <p style="margin-bottom: 0;">New to lessons? Our <a href="/beginner-swim-lessons/" style="color:#0369a1;">beginner swim lessons guide</a> explains what a first class looks like and how to pick the right program. Then search the verified swim schools in the Louisiana directory below, compare programs, and read reviews from other parents.</p>
+      <p style="margin-bottom: 0;">New to lessons? Our <a href="/beginner-swim-lessons/" style="color:#0369a1;">beginner swim lessons guide</a> explains what a first class looks like and how to pick the right program. Then search the verified swim schools in the Louisiana directory below, compare program details.</p>
     </div>
   </section>
 
@@ -669,13 +669,13 @@
         <p style="margin:0 0 .5rem;">Louisiana sets residential pool-barrier requirements largely through local building codes rather than one statewide fence law, so requirements can vary by parish or city - check your local permit office. Safety experts recommend a four-sided isolation fence at least four feet high with a self-closing, self-latching gate as one essential layer of a complete drowning-prevention plan.</p>
   </section>
 
-  <!-- Review Modal -->
+  <!-- Private Note Modal -->
   <div class="review-modal" id="reviewModal" style="--v4-original-order: 9;">
     <div class="review-form">
-      <h3>Leave a Review</h3>
+      <h3>Add a Private Note</h3>
       <form onsubmit="submitReview(event)">
         <div class="form-group">
-          <label id="ratingLabel">Rating</label>
+          <label id="ratingLabel">Your private rating</label>
           <div class="star-rating" id="starRating" role="group" aria-labelledby="ratingLabel">
             <button type="button" data-rating="1" aria-label="1 star">★</button>
             <button type="button" data-rating="2" aria-label="2 stars">★</button>
@@ -685,12 +685,12 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="reviewText">Your Review</label>
-          <textarea id="reviewText" placeholder="Share your experience with this swim school..." required=""></textarea>
+          <label for="reviewText">Your Private Note</label>
+          <textarea id="reviewText" placeholder="Add a note for your own comparison..." required=""></textarea>
         </div>
         <div class="form-actions">
           <button type="button" class="cancel" onclick="closeReviewModal()">Cancel</button>
-          <button type="submit" class="submit">Submit Review</button>
+          <button type="submit" class="submit">Save Private Note</button>
         </div>
       </form>
     </div>
@@ -849,17 +849,17 @@
         'adult': 'Adults'
       };
 
-      // Show user-generated reviews from localStorage
+      // Show the user's private, browser-local notes
       const allReviews = JSON.parse(localStorage.getItem('swimSchoolReviews') || '{}');
       const storedReviews = allReviews[school.id] || [];
       let ratingHTML = '';
       if (storedReviews.length > 0) {
         const avgRating = storedReviews.reduce((sum, r) => sum + r.rating, 0) / storedReviews.length;
         const userStars = '★'.repeat(Math.round(avgRating)) + '☆'.repeat(5 - Math.round(avgRating));
-        ratingHTML = `<div class="school-rating"><span class="star">${userStars}</span><span>${avgRating.toFixed(1)} (${storedReviews.length} review${storedReviews.length !== 1 ? 's' : ''})</span></div>`;
+        ratingHTML = `<div class="school-rating"><span class="star">${userStars}</span><span>Your private rating: ${avgRating.toFixed(1)} (${storedReviews.length} private note${storedReviews.length !== 1 ? 's' : ''})</span></div>`;
       }
 
-      // Reviews are held in this browser's localStorage and are never transmitted
+      // Private notes are held in this browser's localStorage and are never transmitted
       // anywhere, so the only person who can ever read them is the person who wrote
       // them. Rendering the text back is the whole point of asking for it -- it was
       // previously required, stored, and then never displayed.
@@ -910,7 +910,7 @@
           ${reviewsHTML}
 
           <div class="school-actions">
-            <button class="review-btn" onclick="openReviewModal('${school.id}', '${school.name.replace(/'/g, "\\'")}')">Leave a Review</button>
+            <button class="review-btn" onclick="openReviewModal('${school.id}', '${school.name.replace(/'/g, "\\'")}')">Add Private Note</button>
           </div>
         </div>
       `;
@@ -919,7 +919,7 @@
     function openReviewModal(schoolId, schoolName) {
       currentSchoolId = schoolId;
       document.getElementById('reviewModal').classList.add('active');
-      document.querySelector('.review-form h3').textContent = `Review: ${schoolName}`;
+      document.querySelector('.review-form h3').textContent = `Private note: ${schoolName}`;
       currentRating = 0;
       document.getElementById('reviewText').value = '';
       updateStarDisplay();
@@ -957,7 +957,7 @@
 
       const text = document.getElementById('reviewText').value.trim();
       if (!text) {
-        alert('Please write a review');
+        alert('Please add a private note');
         return;
       }
 
@@ -974,7 +974,7 @@
       });
 
       localStorage.setItem('swimSchoolReviews', JSON.stringify(reviews));
-      alert('Thank you for your review!');
+      alert('Private note saved in this browser.');
       closeReviewModal();
       renderStateSchools();
     }

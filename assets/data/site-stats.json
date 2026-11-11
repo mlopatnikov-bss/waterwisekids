@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-11",
+  "directory": {
+    "schools": 799,
+    "cities": 573,
+    "jurisdictions": 51,
+    "source": "/swim-lessons/directory/schools-data.js",
+    "chain_counts": {
+      "Goldfish Swim School": 213,
+      "Aqua-Tots": 140,
+      "SafeSplash": 147,
+      "British Swim School": 64
+    }
+  },
+  "publication_policy": "Exact directory counts may be published only when they match schools-data.js. Guide totals should remain non-exact until a guide-count generator is part of the release process."
+}

@@ -22,7 +22,9 @@ import { POC_ROOT } from '../src/repo.mjs';
 import { clone, loadManhattan, loadManifest, loadPilot, realRepo, sliceFor, tenantIdsOf } from './support.mjs';
 
 const PAGE_FILE = 'swim-lessons/directory/new-york.html';
-const PRE_PATCH_SHA = 'f5785f02de1c24db19442bd9a4e956ca683758654cd42ab5c9fdf310dcf9cccc';
+// Reviewed 2026-11-11 after the AAP starting-age sentence was corrected; the
+// sponsored card and organic directory rows remain byte-identical.
+const PRE_PATCH_SHA = 'e8ed747c83d83b2d75d1df34e838b3af6a30678b9540ac9647d806db02d81f2a';
 const MAN = 'ten_52bf92991a0305d0'; const PLC = 'plc_10e8497ef216c69d'; const CMP = 'cmp_c7fea2983961d658';
 const GUIDE_FILE = 'swim-lessons/manhattan-ny.html'; const PLC_GUIDE = 'plc_e487fb00e271338e';
 // The reviewed editorial guide without its card; update only with an approved editorial change.
