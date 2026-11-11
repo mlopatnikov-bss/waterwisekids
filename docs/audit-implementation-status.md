@@ -67,8 +67,10 @@ been collected.
   active list and one enabled rule for the local consolidation package. The
   list contains 146 exact apex/`www` records for 73 legacy paths, preserves query
   strings, and returned HTTP 301 in production checks on 2026-11-11.
-- Cloudflare Email Routing is not onboarded. The site must not publish a domain
-  address until a destination is verified and mail flow is tested.
+- Cloudflare Email Routing is not onboarded, and the domain already publishes
+  active Mailgun MX and SPF records. Enabling Cloudflare routing would risk an MX
+  conflict. The safe completion path is to verify or add an exact Mailgun inbound
+  route and test both directions before publishing a domain address.
 - The MCP custom domain, TLS, health endpoint, protocol initialization, tool list,
   all four tool guardrails, invalid-origin/host rejection, body limit, and burst
   limit were externally verified on 2026-11-11.
@@ -86,7 +88,9 @@ been collected.
   notability by self-reference.
 - YouTube/Reddit/community posts and journalist outreach require owner-approved
   representational publishing and real accounts.
-- A domain email requires Cloudflare Email Routing onboarding and delivery test.
+- A domain email requires access to the existing Mailgun account, an inspected
+  exact inbound route, and a two-direction delivery/authentication test. The DNS
+  migration path is deliberately blocked while Mailgun is active.
 
 ## Operating principle
 

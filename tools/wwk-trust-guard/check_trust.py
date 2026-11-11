@@ -188,6 +188,7 @@ def check(root: Path) -> list[str]:
         for retired in (
             "Cloudflare Bulk Redirects is available (0 of 5 lists in use)",
             "No publicly hosted MCP transport is claimed",
+            "A domain email requires Cloudflare Email Routing onboarding",
         ):
             if retired in implementation_status:
                 errors.append(f"audit implementation ledger retains retired state: {retired}")
@@ -196,6 +197,7 @@ def check(root: Path) -> list[str]:
             "public Streamable\n  HTTP MCP endpoint",
             "Midwest Price Index evidence batch",
             "National Law Atlas research queue",
+            "active Mailgun MX and SPF records",
         ):
             if required not in implementation_status:
                 errors.append(f"audit implementation ledger is missing current evidence: {required}")
