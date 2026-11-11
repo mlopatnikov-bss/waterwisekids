@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A November calendar page with a pool icon and a swim bag beside a harvest pumpkin and a check-marked list">
+  <rect width="600" height="360" fill="#e0f2fe"/>
+  <rect x="60" y="40" width="270" height="230" rx="14" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="60" y="40" width="270" height="52" rx="12" fill="#0369a1"/>
+  <circle cx="110" cy="38" r="8" fill="#fff"/><circle cx="280" cy="38" r="8" fill="#fff"/>
+  <g fill="#cbd5e1"><rect x="82" y="112" width="30" height="24" rx="4"/><rect x="122" y="112" width="30" height="24" rx="4"/><rect x="162" y="112" width="30" height="24" rx="4"/><rect x="202" y="112" width="30" height="24" rx="4"/><rect x="242" y="112" width="30" height="24" rx="4"/>
+  <rect x="82" y="150" width="30" height="24" rx="4"/><rect x="122" y="150" width="30" height="24" rx="4"/><rect x="162" y="150" width="30" height="24" rx="4"/><rect x="242" y="150" width="30" height="24" rx="4"/>
+  <rect x="82" y="188" width="30" height="24" rx="4"/><rect x="122" y="188" width="30" height="24" rx="4"/><rect x="202" y="188" width="30" height="24" rx="4"/><rect x="242" y="188" width="30" height="24" rx="4"/></g>
+  <rect x="202" y="150" width="30" height="24" rx="4" fill="#f97316"/>
+  <rect x="162" y="188" width="30" height="24" rx="4" fill="#0ea5e9"/>
+  <path d="M70 236 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#0ea5e9" stroke-width="5"/>
+  <ellipse cx="460" cy="120" rx="52" ry="44" fill="#f97316"/><rect x="452" y="68" width="16" height="22" rx="5" fill="#16a34a"/>
+  <path d="M460 78 v84 M432 84 q-14 36 0 72 M488 84 q14 36 0 72" fill="none" stroke="#c2410c" stroke-width="4"/>
+  <rect x="430" y="190" width="62" height="84" rx="8" fill="#fff" stroke="#0369a1" stroke-width="5"/>
+  <path d="M444 214 l6 6 10 -12 M444 244 l6 6 10 -12" fill="none" stroke="#16a34a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M468 214 h14 M468 244 h14" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <rect x="510" y="206" width="56" height="64" rx="14" fill="#16a34a"/><path d="M526 206 q12 -26 24 0" fill="none" stroke="#166534" stroke-width="6"/>
+  <rect x="0" y="300" width="600" height="60" fill="#0ea5e9"/>
+  <path d="M0 322 q37 -12 75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0" fill="none" stroke="#e0f2fe" stroke-width="5"/>
+</svg>

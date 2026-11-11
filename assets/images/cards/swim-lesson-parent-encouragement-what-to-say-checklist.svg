@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A parent giving a thumbs up from the pool edge with a speech bubble containing a star while a child in goggles smiles in the water">
+  <rect width="600" height="360" fill="#e0f2fe"/>
+  <rect x="0" y="210" width="600" height="150" fill="#0ea5e9"/>
+  <path d="M0 232 q37 -12 75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0" fill="none" stroke="#e0f2fe" stroke-width="5"/>
+  <path d="M0 290 q37 -12 75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0 t75 0" fill="none" stroke="#bae6fd" stroke-width="4"/>
+  <rect x="0" y="196" width="600" height="18" fill="#cbd5e1"/>
+  <circle cx="130" cy="86" r="30" fill="#fdba74"/>
+  <rect x="94" y="120" width="72" height="80" rx="24" fill="#16a34a"/>
+  <path d="M164 140 l40 -22" stroke="#16a34a" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="210" cy="114" r="9" fill="#fdba74"/>
+  <rect x="226" y="24" width="150" height="76" rx="22" fill="#fff" stroke="#0369a1" stroke-width="5"/>
+  <path d="M236 98 l-18 22 l40 -20 z" fill="#fff" stroke="#0369a1" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M301 38 l8 17 18 3 -13 13 3 18 -16 -9 -16 9 3 -18 -13 -13 18 -3 z" fill="#fcd34d" stroke="#f59e0b" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="450" cy="248" r="30" fill="#fcd34d"/>
+  <rect x="418" y="238" width="64" height="16" rx="8" fill="#0369a1"/>
+  <circle cx="436" cy="246" r="9" fill="#bae6fd" stroke="#fff" stroke-width="3"/><circle cx="464" cy="246" r="9" fill="#bae6fd" stroke="#fff" stroke-width="3"/>
+  <path d="M438 264 q12 10 24 0" fill="none" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M520 262 l22 -24 M536 238 l12 8" stroke="#fcd34d" stroke-width="7" stroke-linecap="round"/>
+</svg>
