@@ -14,6 +14,7 @@ This release check protects the public claims most likely to damage family trust
 - exact-revision independent-review packets for price and law candidate batches
 - `llms.txt` navigation routes, ownership disclosure, and pilot limitations
 - public editorial, medical-review, corrections, ownership, and author disclosures
+- named, linked editorial accountability on legacy organizational bylines
 
 Run from the repository root:
 

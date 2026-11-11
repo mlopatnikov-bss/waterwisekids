@@ -29,7 +29,7 @@ For each item choose `approved`, `changes_requested`, or `outside_scope`. Approv
 ### Pediatrician guide
 
 - Path: `education/pediatricians-guide-swim-lessons.html`
-- SHA-256: `bccf9591b01ce58bd266d03e41d2ad6d25449ffb3c138474569d73373b3a852b`
+- SHA-256: `fedad08c41231fa82da78eb43dc2a61c9396434f2bbb02626fd0565dad47ac94`
 - Review focus: AAP alignment, developmental readiness, and unsupported prevalence claims.
 - Decision: ____________________
 - Required corrections/source notes: ____________________
@@ -37,7 +37,7 @@ For each item choose `approved`, `changes_requested`, or `outside_scope`. Approv
 ### CPR basics
 
 - Path: `education/cpr-basics-parents.html`
-- SHA-256: `a4a95da586545f60d186115a8de91951225150cf2053360f4b2971f60cd8de8a`
+- SHA-256: `43f40537014d4ce0ce63b82a451c41b81c12893b4c8116479ff7b4ff24d41740`
 - Review focus: Emergency sequence, CPR scope, and training disclaimers.
 - Decision: ____________________
 - Required corrections/source notes: ____________________
@@ -45,7 +45,7 @@ For each item choose `approved`, `changes_requested`, or `outside_scope`. Approv
 ### Drowning emergency
 
 - Path: `education/what-to-do-drowning-emergency.html`
-- SHA-256: `d1a81a60ee53abb01a160e14852438690a7334a897ca29401cec9bcfdb521594`
+- SHA-256: `169e19a0b0fe1272590f10dde86e5f3a1a58c6cd92b38959a54093e1a8b6120b`
 - Review focus: Rescue sequence, emergency activation, and post-event care.
 - Decision: ____________________
 - Required corrections/source notes: ____________________
@@ -53,7 +53,7 @@ For each item choose `approved`, `changes_requested`, or `outside_scope`. Approv
 ### Parent CPR and water rescue
 
 - Path: `education/parent-cpr-water-rescue-basics.html`
-- SHA-256: `dd7ff203c094bb3403a85941e2a330aad50ab1ff5bd802c0cdbf539132247e0a`
+- SHA-256: `d16cccf294828bd53e8276865c175e8185616f5fe7ef36e298825ac5fe744c67`
 - Review focus: Rescue boundaries and current CPR guidance.
 - Decision: ____________________
 - Required corrections/source notes: ____________________
@@ -61,7 +61,7 @@ For each item choose `approved`, `changes_requested`, or `outside_scope`. Approv
 ### Infant survival evidence
 
 - Path: `education/infant-survival-swim-evidence.html`
-- SHA-256: `9b202ff49f626cc692d0e7dfcca704d3c914915be49923ef1c3a6619c16acee7`
+- SHA-256: `1c7356ef85dca3a84c15dfaef73fa5794d1d8991947cbf77b7d7e22f90038826`
 - Review focus: Evidence quality, benefit/risk wording, and infant-lesson limits.
 - Decision: ____________________
 - Required corrections/source notes: ____________________
@@ -69,7 +69,7 @@ For each item choose `approved`, `changes_requested`, or `outside_scope`. Approv
 ### Survival-first comparison
 
 - Path: `education/kick-first-vs-survival-first-swim-lessons.html`
-- SHA-256: `048340c1daab839c7a6b952ce84628027970eb782d76398ba503b567f1ab3d8d`
+- SHA-256: `f96dd929d0e3ae2098d3959ed58dec50ab6197f0e286d55ea67930c0a40e3a3c`
 - Review focus: Balanced comparison and absence of unsupported superiority claims.
 - Decision: ____________________
 - Required corrections/source notes: ____________________
@@ -77,7 +77,7 @@ For each item choose `approved`, `changes_requested`, or `outside_scope`. Approv
 ### Dry/secondary drowning terminology
 
 - Path: `education/secondary-drowning-dry-drowning.html`
-- SHA-256: `14e466fcd68378127fee4f480714a280a68ed45516d3e653f5ff48c0e4680ee1`
+- SHA-256: `f666ed865371d74d20bd68fd242b045ae47a8886aa1caf6081dbe6fbfeb52b02`
 - Review focus: Terminology, symptom escalation, and diagnostic boundaries.
 - Decision: ____________________
 - Required corrections/source notes: ____________________

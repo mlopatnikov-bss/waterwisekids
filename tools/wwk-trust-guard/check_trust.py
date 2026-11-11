@@ -275,6 +275,18 @@ def check(root: Path) -> list[str]:
             detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
             errors.append(f"independent-review packet guard failed: {detail}")
 
+    authorship_guard = root / "tools/wwk-authorship/add_responsible_editor.py"
+    if authorship_guard.exists():
+        result = subprocess.run(
+            [sys.executable, str(authorship_guard), "--check"],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"named-editor guard failed: {detail}")
+
     governance_builder = root / "tools/wwk-governance/build_governance_pages.py"
     if governance_builder.exists():
         result = subprocess.run(
