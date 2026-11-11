@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Point-in-time change-detection fingerprints; third-party source content is not republished.",
+  "retrieved_at": "2026-11-11T13:25:20+00:00",
+  "dataset_as_of": "2026-11-11",
+  "entries": [
+    {
+      "url": "https://bigblueswimschool.com/locations/georgia/atlanta-north-druid-hills/",
+      "http_status": 200,
+      "content_length_bytes": 265184,
+      "sha256": "5f323a7c6c269e2393605a602df48d3ff5d24c161fa65fc0f496c31de056d7b6"
+    },
+    {
+      "url": "https://bigblueswimschool.com/locations/georgia/johns-creek/",
+      "http_status": 200,
+      "content_length_bytes": 260094,
+      "sha256": "8e666b5d4e26657a860833d119e76d0c12bcf51b165660faf3f55a57b2778cec"
+    },
+    {
+      "url": "https://emlerswimschool.com/locations/texas/saint-street/",
+      "http_status": 200,
+      "content_length_bytes": 1367619,
+      "sha256": "37b55161b6629ee695f345e2e8c9e9f276c9fd26bf3a59efe72671dad02fd03c"
+    },
+    {
+      "url": "https://goldfishswimschool.com/acworth/pricing/",
+      "http_status": 200,
+      "content_length_bytes": 498238,
+      "sha256": "abfaa0de60ebfc772dae3b59ced8cb8053af0c7253cba26498c2599a5a5cbb03"
+    },
+    {
+      "url": "https://www.phoenix.gov/content/dam/phoenix/parkssite/documents/aquatics/2026/Deer%20Valley%20Pool.pdf",
+      "http_status": 200,
+      "content_length_bytes": 618777,
+      "sha256": "5453a54489a13356347fe0e8450fbb09616164960270636b4fc0e48ff1bd9b23"
+    },
+    {
+      "url": "https://www.phoenix.gov/content/dam/phoenix/parkssite/documents/pks_parks_board/04.23.2026%20Parks%20and%20Recreation%20Board%20Packet.pdf",
+      "http_status": 200,
+      "content_length_bytes": 1119759,
+      "sha256": "be73eefec2916212cc5ab0359c41d8a1836692e318ccf64d5565542a4833ee8a"
+    },
+    {
+      "url": "https://www.raleighswimschool.org/group-lessons",
+      "http_status": 200,
+      "content_length_bytes": 947791,
+      "sha256": "bb3fc24741048cefbf0a313a35b3853e973b22015e5659a1feddc33041fa41fe"
+    },
+    {
+      "url": "https://www.raleighswimschool.org/pricing",
+      "http_status": 200,
+      "content_length_bytes": 990040,
+      "sha256": "28c158179a30da4b9ab1977859feb897ea4942d1bed33ff4391a81c5b77738e8"
+    },
+    {
+      "url": "https://www.safesplash.com/locations/concord-afton-ridge-nc/pricing-and-promotions",
+      "http_status": 200,
+      "content_length_bytes": 166043,
+      "sha256": "ce8f0f8bf300b7d286d5e891220cab2d5d91417b36fd7084c8a8d541b926ddc3"
+    },
+    {
+      "url": "https://www.swimschoolaustin.com/prices",
+      "http_status": 200,
+      "content_length_bytes": 194243,
+      "sha256": "f303811a113839632c7b55a055ef9a1c350db10633536cc0331d04f66fbdce10"
+    },
+    {
+      "url": "https://www.ymcasf.org/program/group-swim-lesson/",
+      "http_status": 200,
+      "content_length_bytes": 186301,
+      "sha256": "d98fdb354272510fe82bc7f84efc540edc01333f407bb239275c88969aaa035d"
+    },
+    {
+      "url": "https://ymcanyc.org/locations/long-island-city-ymca/programs-classes/swimming/swim-lessons/private-swim-lessons",
+      "http_status": 200,
+      "content_length_bytes": 84760,
+      "sha256": "59721561a7e75c7710af9b00df7927ff6385d5041be20db870a1f5d71d7a09c6"
+    }
+  ]
+}

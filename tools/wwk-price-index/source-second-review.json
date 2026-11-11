@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "reviewed_on": "2026-11-11",
+  "reviewer": "Claude Fable 5.2",
+  "review_scope": "Independent read-only text fetch of every official source URL; no reliance on the dataset summary as evidence.",
+  "limitation": "Facts shown only in images or script-loaded widgets may not have been visible to the reviewer.",
+  "result": "pass_after_corrections",
+  "entries": [
+    {
+      "provider": "Goldfish Swim School - Acworth",
+      "covered_urls": [
+        "https://goldfishswimschool.com/acworth/pricing/"
+      ],
+      "status": "pass",
+      "finding": "Verified $31 group price, 30 minutes, 4:1 non-baby ratio, and $25 annual membership per swimmer."
+    },
+    {
+      "provider": "SafeSplash - Concord Afton Ridge",
+      "covered_urls": [
+        "https://www.safesplash.com/locations/concord-afton-ridge-nc/pricing-and-promotions"
+      ],
+      "status": "pass",
+      "finding": "Verified listed group, private, semi-private, ratio, and annual service-fee facts; duration is not stated."
+    },
+    {
+      "provider": "Emler Swim School - Houston Saint Street",
+      "covered_urls": [
+        "https://emlerswimschool.com/locations/texas/saint-street/"
+      ],
+      "status": "pass_after_correction",
+      "finding": "Prices verified. Dataset corrected to describe level-dependent 30/60-minute group durations and the source's anniversary-fee wording instead of calling it an annual fee."
+    },
+    {
+      "provider": "Big Blue Swim School - Johns Creek",
+      "covered_urls": [
+        "https://bigblueswimschool.com/locations/georgia/johns-creek/"
+      ],
+      "status": "pass",
+      "finding": "Verified $35 Flex price, annual membership, and level-dependent 30/45-minute duration."
+    },
+    {
+      "provider": "Big Blue Swim School - Atlanta North Druid Hills",
+      "covered_urls": [
+        "https://bigblueswimschool.com/locations/georgia/atlanta-north-druid-hills/"
+      ],
+      "status": "pass_after_correction",
+      "finding": "Verified $37 Flex price and annual membership; dataset now carries the provider's warning that pricing varies by level."
+    },
+    {
+      "provider": "Swim School of Austin",
+      "covered_urls": [
+        "https://www.swimschoolaustin.com/prices"
+      ],
+      "status": "pass_after_correction",
+      "finding": "Verified prices, durations, ratio, and registration fee. Dataset corrected 'weekday' to base four-lesson month with a weekend surcharge."
+    },
+    {
+      "provider": "Raleigh Swim School",
+      "covered_urls": [
+        "https://www.raleighswimschool.org/pricing",
+        "https://www.raleighswimschool.org/group-lessons"
+      ],
+      "status": "pass_after_correction",
+      "finding": "Verified prices, durations, and ratios; required fee is now labeled $30 per new student capped at $50 per family rather than an annual fee."
+    },
+    {
+      "provider": "City of Phoenix - Deer Valley Pool",
+      "covered_urls": [
+        "https://www.phoenix.gov/content/dam/phoenix/parkssite/documents/aquatics/2026/Deer%20Valley%20Pool.pdf",
+        "https://www.phoenix.gov/content/dam/phoenix/parkssite/documents/pks_parks_board/04.23.2026%20Parks%20and%20Recreation%20Board%20Packet.pdf"
+      ],
+      "status": "pass_after_correction",
+      "finding": "Verified $15, eight 30-minute classes, and $1.88 rounded value. Dataset no longer labels the ordinary rate subsidized and now marks the season as ended July 23, 2026."
+    },
+    {
+      "provider": "YMCA of San Francisco",
+      "covered_urls": [
+        "https://www.ymcasf.org/program/group-swim-lesson/"
+      ],
+      "status": "pass",
+      "finding": "Verified $216 community price for six lessons and that duration is not stated."
+    },
+    {
+      "provider": "Long Island City YMCA",
+      "covered_urls": [
+        "https://ymcanyc.org/locations/long-island-city-ymca/programs-classes/swimming/swim-lessons/private-swim-lessons"
+      ],
+      "status": "pass_after_correction",
+      "finding": "Verified $385 community six-pack and 30-minute duration; dataset now records the temporary waitlist closure through February 1, 2027."
+    }
+  ]
+}

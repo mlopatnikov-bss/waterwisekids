@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the public cost page from the verified Price Index pilot dataset."""
+"""Build the public cost page from the verified price pilot dataset."""
 
 from __future__ import annotations
 
@@ -17,10 +17,10 @@ PAGE = ROOT / "education/swim-lessons-cost.html"
 START = "<!-- WWK_PRICE_INDEX_MAIN_START -->"
 END = "<!-- WWK_PRICE_INDEX_MAIN_END -->"
 
-TITLE = "What Do Swim Lessons Cost? Verified Prices &amp; Index Method"
+TITLE = "Verified Swim Lesson Prices: Pilot Dataset &amp; Method"
 DESCRIPTION = (
-    "Verified swim-lesson price observations and WaterWiseKids' transparent "
-    "method for building a U.S. price index without claiming a premature national average."
+    "A clearly labeled pilot dataset of verified swim-lesson prices and WaterWiseKids' "
+    "transparent method for testing a future U.S. price index. Not a national average."
 )
 
 
@@ -38,8 +38,15 @@ def group_table(rows: list[dict]) -> str:
     groups = [row for row in rows if row["class_format"] == "group"]
     body = []
     for row in groups:
-        duration = f'{row["duration_minutes"]} min' if row["duration_minutes"] else "Not stated"
-        fee = money(row["annual_fee_usd"])
+        duration = (
+            f'{row["duration_minutes"]} min'
+            if row["duration_minutes"]
+            else row.get("duration_note", "Not stated")
+        )
+        per_30 = money(row["normalized_per_30_minutes_usd"])
+        fee = money(row["mandatory_fee_usd"])
+        if row.get("mandatory_fee_label"):
+            fee += f'<br><small>{html.escape(row["mandatory_fee_label"])}</small>'
         qualifier = row["price_qualifier"].replace("_", " ")
         if row["subsidized"]:
             qualifier += "; subsidized"
@@ -50,19 +57,21 @@ def group_table(rows: list[dict]) -> str:
             f'{html.escape(row["state"])}</small></td>'
             f'<td>{html.escape(row["provider_type"].replace("_", " ").title())}</td>'
             f'<td>{money(row["normalized_per_lesson_usd"])}</td>'
+            f'<td>{per_30}</td>'
             f'<td>{duration}</td>'
             f'<td>{fee}</td>'
             f'<td>{html.escape(qualifier)}</td>'
             "</tr>"
         )
     return (
-        '<table style="width:100%;min-width:760px;border-collapse:collapse;font-size:.92rem;">'
+        '<table style="width:100%;min-width:860px;border-collapse:collapse;font-size:.92rem;">'
         '<thead><tr style="background:#e0f2fe;text-align:left;">'
         '<th style="padding:10px;border:1px solid #cbd5e1;">Provider and location</th>'
         '<th style="padding:10px;border:1px solid #cbd5e1;">Type</th>'
-        '<th style="padding:10px;border:1px solid #cbd5e1;">Per lesson</th>'
+        '<th style="padding:10px;border:1px solid #cbd5e1;">Observed per lesson<br><small>not an average</small></th>'
+        '<th style="padding:10px;border:1px solid #cbd5e1;">Per 30 min</th>'
         '<th style="padding:10px;border:1px solid #cbd5e1;">Duration</th>'
-        '<th style="padding:10px;border:1px solid #cbd5e1;">Annual fee</th>'
+        '<th style="padding:10px;border:1px solid #cbd5e1;">Required fee</th>'
         '<th style="padding:10px;border:1px solid #cbd5e1;">Qualifier</th>'
         '</tr></thead><tbody>'
         + "".join(body).replace("<td>", '<td style="padding:10px;border:1px solid #cbd5e1;vertical-align:top;">')
@@ -75,7 +84,7 @@ def structured_data(data: dict) -> tuple[str, str]:
     article = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "What Do Swim Lessons Cost? Verified Prices and Our Index Method",
+        "headline": "Verified Swim Lesson Prices: A Pilot Dataset and Method",
         "description": html.unescape(DESCRIPTION),
         "datePublished": "2026-04-06",
         "dateModified": data["as_of"],
@@ -91,15 +100,23 @@ def structured_data(data: dict) -> tuple[str, str]:
             },
         },
         "image": "https://www.waterwisekids.com/assets/images/waterwisekids-og.png",
-        "isBasedOn": "/assets/data/price-index/pilot-observations.json",
+        "isBasedOn": "https://www.waterwisekids.com/assets/data/price-index/pilot-observations.json",
     }
     dataset = {
         "@context": "https://schema.org",
         "@type": "Dataset",
         "name": data["dataset_name"],
-        "description": "Official location-level swim-lesson prices collected for a non-representative methodology pilot.",
+        "description": "A purposive, non-representative convenience sample of official location-level swim-lesson prices collected to test a future index method. No national average is reported.",
         "url": page_url,
         "dateModified": data["as_of"],
+        "temporalCoverage": data["as_of"],
+        "spatialCoverage": [
+            {"@type": "State", "name": state}
+            for state in sorted({row["state"] for row in data["observations"]})
+        ],
+        "version": f"pilot-{data['as_of']}",
+        "measurementTechnique": "Official-source purposive convenience sample; package price divided by published lesson count; product formats, membership, commitments, subsidies, and fees kept separate.",
+        "publishingPrinciples": f"{page_url}#methodology",
         "license": data["license"],
         "isAccessibleForFree": True,
         "creator": {"@type": "Organization", "name": "WaterWiseKids"},
@@ -156,6 +173,7 @@ def render() -> str:
     document = re.sub(r'<meta property="og:description" content=".*?">', f'<meta property="og:description" content="{DESCRIPTION}">', document, count=1, flags=re.S)
     document = re.sub(r'<meta name="twitter:title" content=".*?">', f'<meta name="twitter:title" content="{TITLE}">', document, count=1, flags=re.S)
     document = re.sub(r'<meta name="twitter:description" content=".*?">', f'<meta name="twitter:description" content="{DESCRIPTION}">', document, count=1, flags=re.S)
+    document = re.sub(r'<meta property="og:image:alt" content=".*?">', '<meta property="og:image:alt" content="WaterWiseKids verified swim lesson price pilot dataset and methodology">', document, count=1, flags=re.S)
     article_json, dataset_json = structured_data(data)
     document = replace_jsonld(document, article_json, dataset_json)
 
@@ -179,13 +197,13 @@ def render() -> str:
           </ul>
         </div>
         <div class="sidebar-box" style="background:#fff7ed;border-color:#fdba74;">
-          <h3 class="sidebar-title" style="color:#9a3412;">Pilot, not an average</h3>
+          <h3 class="sidebar-title" style="color:#9a3412;">Pilot dataset, not an average</h3>
           <p style="font-size:.9rem;color:#7c2d12;line-height:1.5;">The national headline remains withheld until the sample clears the published coverage and freshness gates.</p>
           <a href="/assets/data/price-index/pilot-observations.json" style="display:inline-flex;min-height:44px;align-items:center;color:#9a3412;font-weight:700;">Download pilot JSON →</a>
         </div>
         <div class="sidebar-box cta-box">
           <h3 class="sidebar-title cta-title">Find Programs Near You</h3>
-          <p class="cta-desc">Compare current prices directly with local programs.</p>
+          <p class="cta-desc">Compare published prices directly with local programs.</p>
           <a href="/swim-lessons/" class="cta-button">Find Swim Lessons</a>
         </div>
       </aside>'''

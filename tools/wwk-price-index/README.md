@@ -1,7 +1,7 @@
-# WaterWiseKids Swim Lesson Price Index
+# WaterWiseKids verified swim lesson price pilot
 
 This directory contains the repeatable build and validation tools for the public
-Price Index pilot.
+price pilot dataset.
 
 The pilot has two jobs:
 
@@ -28,14 +28,17 @@ programs remain labeled and are never presented as a typical commercial price.
 
 The machine-readable gates live in
 `assets/data/price-index/pilot-observations.json`. A national headline requires at
-least 200 unique locations, 40 states, all four Census regions, at least 25
-locations in every provider-type stratum, no single chain above 15% of locations,
-100% official sources, and 90-day freshness. State and metro estimates have their
-own minimum coverage and concentration gates.
+least 200 unique locations, 40 states, at least 25 locations in every Census
+region, minimum unique-location counts for the product format being described,
+at least 25 locations in every provider-type stratum, no single chain above 15%
+of locations, 100% official sources, and 90-day freshness. State and metro
+estimates have their own minimum coverage and concentration gates.
 
 Clearing those gates permits publication; it does not turn a convenience sample
 into a probability sample. The methodology must still label the result as an
 observed-sample statistic unless a defensible sampling and weighting design exists.
+The pilot itself expires after 90 days: the public page shows a stale warning and
+the release guard fails until retained rows are reverified or withdrawn.
 
 ## Commands
 

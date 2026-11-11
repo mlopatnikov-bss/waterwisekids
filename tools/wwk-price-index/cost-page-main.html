@@ -5,8 +5,13 @@
       <div class="article-meta-item">Methodology updated November 11, 2026</div>
       <div class="article-meta-item">WaterWiseKids Editorial Team</div>
     </div>
-    <h1>What Do Swim Lessons Cost? Verified Prices and Our Index Method</h1>
-    <p class="article-excerpt">There is not yet a defensible national swim-lesson average from WaterWiseKids. We are building one from official, location-level prices and will not publish a headline until the sample clears the coverage and freshness rules below.</p>
+    <h1>Verified Swim Lesson Prices: A Pilot Dataset and Method</h1>
+    <p class="article-excerpt">There is not yet a defensible national swim-lesson average from WaterWiseKids. We are testing a collection method with official, location-level prices and will not publish a market statistic until a defined product segment clears the coverage and freshness rules below.</p>
+  </div>
+
+  <div id="pilot-stale-warning" class="callout" hidden style="background:#fef2f2;border-left-color:#dc2626;">
+    <div class="callout-title" style="color:#991b1b;">Stale pilot — do not rely on these prices</div>
+    <div class="callout-text">The 90-day verification window ended February 9, 2027. The observations remain available for methodology review, but they must be rechecked before current price comparisons resume.</div>
   </div>
 
   <div class="callout" style="background:#fff7ed;border-left-color:#ea580c;">
@@ -19,18 +24,21 @@
   </div>
 
   <h2 id="verified-observations">Verified pilot observations</h2>
-  <p>These are examples from official provider and government sources—not endorsements, rankings, market averages, or a representative sample. “Per lesson” is the listed price divided by the published lesson count. Fees stay separate.</p>
+  <p>These are examples from official provider and government sources—not endorsements, rankings, market averages, or a representative sample. Every number below is an individual observed product price, not a range or pooled statistic. “Per lesson” is the listed price divided by the published lesson count. “Per 30 min” appears only when the source states duration. Fees stay separate.</p>
   <div style="overflow-x:auto;margin:1rem 0 1.5rem;">
     {{PILOT_GROUP_TABLE}}
   </div>
   <p style="font-size:.9rem;color:#475569;">The full machine-readable pilot also keeps private and semi-private products separate. <a href="/assets/data/price-index/pilot-observations.json">Download the pilot JSON</a>.</p>
 
-  <h2 id="methodology">Price Index methodology</h2>
+  <h2 id="methodology">Pilot dataset methodology</h2>
   <h3>What counts as one observation</h3>
-  <p>One row represents one product configuration at one location on one date. Weekday and weekend schedules, member and community rates, and group, semi-private, and private lessons remain separate. A package is normalized only when its lesson count is published. We record mandatory annual fees separately instead of hiding them in a per-lesson number.</p>
+  <p>One row represents one product configuration at one location on one date. Base and weekend schedules, member and community rates, and group, semi-private, and private lessons remain separate. A package is normalized only when its lesson count is published. We record mandatory fees separately instead of hiding them in a per-lesson number.</p>
 
   <h3>Sources we accept</h3>
-  <p>We accept current official provider pages, official price sheets, and government recreation documents. We exclude directory estimates, search snippets, third-party blogs, social comments, and prices inferred from unrelated locations. “Starting at” remains labeled. If a source does not state duration or ratio, the field remains blank rather than being guessed.</p>
+  <p>We accept current official provider pages, official price sheets, and government recreation documents. We exclude directory estimates, search snippets, third-party blogs, social comments, and prices inferred from unrelated locations. This official-source rule also excludes providers that do not publish prices, which may bias the sample. “Starting at” remains labeled. If a source does not state duration or ratio, the field remains blank rather than being guessed.</p>
+
+  <h3>How this pilot sample was chosen</h3>
+  <p>The ten locations are a purposive convenience sample selected to test provider-type, schedule, fee, subsidy, package, and duration fields. They were not randomly selected. None is in New Jersey or Pennsylvania, none is owned by the WaterWiseKids owner, and no British Swim School price is included. Chain locations can share pricing, so future statistics will count unique locations and report provider strata separately rather than treating every row as independent.</p>
 
   <h3>Products we will not blend</h3>
   <ul>
@@ -41,8 +49,8 @@
     <li>30-minute lessons and longer lessons unless duration is known and the comparison is explicitly duration-adjusted.</li>
   </ul>
 
-  <h3>When WaterWiseKids may publish a headline</h3>
-  <p>A national result requires at least 200 unique locations across at least 40 states and all four U.S. Census regions. It also requires at least 25 locations in each provider group—chains, independents, municipal programs, and nonprofits/YMCAs—no single chain may exceed 15% of the location sample, every source must be official, and at least 90% of sources must have been checked within 90 days.</p>
+  <h3>When WaterWiseKids may publish a future index result</h3>
+  <p>A national result requires at least 200 unique locations across at least 40 states, at least 25 locations in every U.S. Census region, and a separate minimum for the product being described: 150 group, 75 private, 50 semi-private, or 50 parent-child locations. It also requires at least 25 locations in each provider group—chains, independents, municipal programs, and nonprofits/YMCAs—no single chain may exceed 15% of the location sample, every source must be official, and at least 90% of sources must have been checked within 90 days.</p>
   <p>A state result requires at least 15 locations and three provider types, with no provider above 35%. A metro result requires at least 12 locations and three provider types, with the same concentration limit. Clearing a gate does not make a convenience sample statistically representative; published releases will describe the sampling limits and show subgroup results.</p>
 
   <h2 id="comparison">A fair way to compare two programs</h2>
@@ -56,11 +64,12 @@
   </ol>
 
   <h2 id="data-quality">Data quality and corrections</h2>
-  <p>Every published row includes the source URL, observation date, normalization rule, and qualifiers. The automated checker recomputes each normalized price, rejects duplicate IDs and unofficial source types, checks source freshness, and prevents a national headline while any publication gate is unmet.</p>
-  <p>Prices can change without notice. Verify the current price directly with the program before enrolling. If a row is wrong or out of date, email <a href="mailto:waterwisekids.com@gmail.com?subject=Price%20Index%20correction">waterwisekids.com@gmail.com</a> with the location and official source.</p>
+  <p>Every published row includes the source URL, verification date, normalization rule, and qualifiers. “Verified on” means we checked the published source on that date; it does not mean the provider updated the page then. The automated checker recomputes each normalized price, rejects duplicate IDs and unofficial source types, checks segment and regional coverage, and prevents a national headline while any publication gate is unmet. Arithmetic validation does not replace a second source read, so release evidence also records a separate verification pass.</p>
+  <p>This pilot's current-price window ends February 9, 2027. After that date the page displays a stale warning and the release guard fails until every retained row is rechecked or withdrawn.</p>
+  <p>Prices can change without notice. Verify the current price directly with the program before enrolling. If a row is wrong or out of date, email <a href="mailto:waterwisekids.com@gmail.com?subject=Price%20pilot%20correction">waterwisekids.com@gmail.com</a> with the location and official source.</p>
 
   <h2 id="license">License and ownership disclosure</h2>
-  <p>WaterWiseKids' compiled factual observation data is published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>; linked source pages retain their own copyrights. Please cite “WaterWiseKids Swim Lesson Price Index,” the release date, and this methodology page.</p>
+  <p>WaterWiseKids' selection and arrangement of the compiled factual observation data is published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>. The license does not cover provider text, logos, or linked source pages. Please cite “WaterWiseKids Verified Swim Lesson Price Pilot Dataset,” the release date, and this methodology page.</p>
   <p><strong>Disclosure:</strong> WaterWiseKids is published by Venture Tech Lab, LLC. Its owner also operates British Swim School franchises serving the Jersey Shore and Northwest Philadelphia. Those locations are not included in this pilot. Any future inclusion must follow the same source, freshness, and weighting rules as every other provider.</p>
 
   <h2 id="faq">Frequently asked questions</h2>
@@ -72,5 +81,12 @@
   <p>Divide tuition by the number of included lessons, keep required fees separate, and note whether the billing cycle contains four lessons or varies with the calendar. Then compare only products with similar class formats, durations, and commitments.</p>
   <h3>Are the listed programs recommended by WaterWiseKids?</h3>
   <p>No. Inclusion means only that an official, public price could be verified under the pilot rules. It is not a safety certification, quality score, or endorsement.</p>
+  <script>
+    (function () {
+      var expires = new Date('2027-02-10T00:00:00-05:00');
+      var warning = document.getElementById('pilot-stale-warning');
+      if (warning && new Date() >= expires) warning.hidden = false;
+    }());
+  </script>
 </main>
 
