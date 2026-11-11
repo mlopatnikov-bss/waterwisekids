@@ -40,10 +40,28 @@ observed-sample statistic unless a defensible sampling and weighting design exis
 The pilot itself expires after 90 days: the public page shows a stale warning and
 the release guard fails until retained rows are reverified or withdrawn.
 
+## Internal collection queue
+
+`collection-queue.json` is a reproducible 200-task research backlog, not a public
+dataset and not evidence that any provider charges a particular price. It assigns
+50 tasks to each Census region and 50 to each provider-type target. The existing
+directory cannot fill the municipal or nonprofit/YMCA strata, so the queue records
+those gaps as explicit provider-discovery tasks with no invented provider name or
+URL. A directory website is only a research starting point; it does not become a
+price source until a reviewer finds a current official provider or government page.
+
+The queue deliberately keeps `pricing_source_url` empty, every source status at
+`not_reviewed`, and every task at `queued`. Promoting a completed task into the
+pilot dataset still requires normalization, an official-source fingerprint, and a
+second review. Owner-associated BSS locations are flagged and excluded from the
+first release unless independently reviewed and explicitly disclosed.
+
 ## Commands
 
 ```bash
 python3 tools/wwk-price-index/check_price_index.py
+python3 tools/wwk-price-index/build_collection_queue.py --check
+python3 tools/wwk-price-index/check_collection_queue.py
 python3 tools/wwk-price-index/build_cost_page.py --check
 python3 tools/wwk-price-index/build_cost_page.py
 ```
@@ -54,7 +72,7 @@ that correctly withholds its headline exits zero and prints the unmet gates.
 
 ## Ownership and conflicts
 
-WaterWiseKids is published by Venture Tech Lab, LLC, whose owner also operates
+WaterWiseKids is published by VTL Holding LLC, whose owner also operates
 British Swim School franchises serving the Jersey Shore and Northwest Philadelphia.
 Those locations receive no special inclusion, weighting, or display treatment. If
 their prices enter a future release, they must pass the same source and freshness

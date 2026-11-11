@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "waterwisekids-open-data-mcp",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-11-11",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "DATA_ORIGIN": "https://www.waterwisekids.com",
+    "PUBLIC_HOSTNAME": "mcp.waterwisekids.com",
+    "RUNTIME_ENV": "candidate"
+  },
+  "ratelimits": [
+    {
+      "name": "MCP_RATE_LIMITER",
+      "namespace_id": "72002",
+      "simple": {
+        "limit": 120,
+        "period": 60
+      }
+    }
+  ]
+}

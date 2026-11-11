@@ -164,6 +164,18 @@ def check(root: Path) -> list[str]:
             detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
             errors.append(f"price-index guard failed: {detail}")
 
+    collection_queue_guard = root / "tools/wwk-price-index/check_collection_queue.py"
+    if collection_queue_guard.exists():
+        result = subprocess.run(
+            [sys.executable, str(collection_queue_guard)],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"price collection queue guard failed: {detail}")
+
     governance_builder = root / "tools/wwk-governance/build_governance_pages.py"
     if governance_builder.exists():
         result = subprocess.run(

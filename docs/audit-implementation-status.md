@@ -16,6 +16,9 @@ been collected.
   what official sources support; individual eligibility is not promised.
 - Price Index pilot: methodology, open files, 17 observations, and minimum-data
   gates that prevent a misleading national average.
+- Price Index expansion queue: a reproducible 200-task internal backlog balanced
+  across four Census regions and four provider types. Directory gaps remain
+  explicit discovery work; no queued item is represented as verified price data.
 - Six-system Swim Level Crosswalk with approximate skill bands and correction
   workflow.
 - Law Atlas pilot limited to verified FL/NJ/PA evidence; unverified states are
@@ -24,8 +27,9 @@ been collected.
   score and publication thresholds for future county pages.
 - Swim School Transparency Standard and claim flow: disclosure-only, never a
   safety certification or paid ranking signal.
-- Read-only JSON API and local MCP reference implementation with explicit
-  limits; no claim of a hosted public MCP endpoint.
+- Read-only JSON API, local MCP reference implementation, and a tested Cloudflare
+  Streamable HTTP deployment candidate with host, origin, body-size, and rate
+  limits. No claim of a hosted public endpoint is made before remote verification.
 - NJ/PA local consolidation: six maintained hubs, 73 noindex transition pages,
   sitemap cleanup, and a deterministic Cloudflare Bulk Redirect package.
 - A frozen 100-prompt AI-visibility panel with evidence columns and Spanish and
@@ -58,6 +62,8 @@ been collected.
 - “Medically reviewed by” requires an accepted, credential-verified independent
   reviewer. A recruitment brief is ready.
 - A national Price Index requires enough current, representative observations.
+- The public MCP hostname still requires production deployment and an external
+  handshake/tool-call verification before it can be added to the API catalog.
 - A 50-state Law Atlas requires statute-level human verification and dates.
 - National county Access Atlas pages require real provider, Census, price, and
   scholarship joins that meet the stated thresholds.

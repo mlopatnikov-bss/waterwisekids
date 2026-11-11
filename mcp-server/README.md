@@ -16,3 +16,7 @@ python3 mcp-server/wwk_server.py --call get_state_laws --arguments '{"state":"NJ
 ```
 
 Or configure an MCP client to launch `python3` with the absolute path to `mcp-server/wwk_server.py` over stdio.
+
+`mcp-server/remote/` contains the separate Cloudflare Streamable HTTP deployment
+candidate. It is intentionally documented as not live until its release worksheet
+is completed against the production account and custom hostname.

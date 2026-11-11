@@ -235,6 +235,8 @@ def validate() -> tuple[list[str], list[str]]:
         errors.append("cost page is missing the prominent pilot status")
     if "there is not yet a defensible national swim-lesson average" not in page:
         errors.append("cost page is missing the no-average statement")
+    if "vtl holding llc" not in page or "venture tech lab, llc" in page:
+        errors.append("cost page ownership disclosure does not match the sitewide legal name")
     banned = ["group swim lessons typically cost", "private lessons average", "quick cost summary"]
     for phrase in banned:
         if phrase in page:
