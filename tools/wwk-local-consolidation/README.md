@@ -16,10 +16,13 @@ Redirect format. Each path is emitted for the apex and `www` hosts (146 exact
 records), preserves query strings, and does not enable broad subdomain or
 subpath matching.
 
-Deployment requires two Cloudflare account-level objects:
+Production now has the two Cloudflare account-level objects:
 
 1. a Bulk Redirect List imported from `cloudflare-bulk-redirects.csv`;
 2. a Bulk Redirect Rule that enables that list.
 
-Do not remove the transition pages until the edge redirects have been verified
-in production. The manifest remains the canonical change record.
+The list and rule were verified active on 2026-11-11. Production checks against
+both apex and `www` legacy URLs returned HTTP 301, preserved query strings, and
+landed on the manifest targets. Keep the transition pages as a recoverable origin
+fallback unless a later release deliberately removes them; the manifest remains
+the canonical change record.

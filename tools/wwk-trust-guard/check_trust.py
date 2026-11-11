@@ -170,6 +170,36 @@ def check(root: Path) -> list[str]:
             if required not in llms_text:
                 errors.append(f"llms.txt is missing required limitation or route: {required}")
 
+    newsroom_path = root / "newsroom/index.html"
+    if newsroom_path.exists():
+        newsroom_text = newsroom_path.read_text(encoding="utf-8")
+        if "No publicly hosted MCP transport is claimed" in newsroom_text:
+            errors.append("newsroom retains the retired local-only MCP claim")
+        for required in (
+            "https://mcp.waterwisekids.com/mcp",
+            "preserve each source dataset’s publication gates and limitations",
+        ):
+            if required not in newsroom_text:
+                errors.append(f"newsroom is missing the public MCP release boundary: {required}")
+
+    implementation_status_path = root / "docs/audit-implementation-status.md"
+    if implementation_status_path.exists():
+        implementation_status = implementation_status_path.read_text(encoding="utf-8")
+        for retired in (
+            "Cloudflare Bulk Redirects is available (0 of 5 lists in use)",
+            "No publicly hosted MCP transport is claimed",
+        ):
+            if retired in implementation_status:
+                errors.append(f"audit implementation ledger retains retired state: {retired}")
+        for required in (
+            "active Cloudflare Bulk Redirects providing true 301s",
+            "public Streamable\n  HTTP MCP endpoint",
+            "Midwest Price Index evidence batch",
+            "National Law Atlas research queue",
+        ):
+            if required not in implementation_status:
+                errors.append(f"audit implementation ledger is missing current evidence: {required}")
+
     price_guard = root / "tools/wwk-price-index/check_price_index.py"
     if price_guard.exists():
         result = subprocess.run(

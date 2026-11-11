@@ -19,10 +19,16 @@ been collected.
 - Price Index expansion queue: a reproducible 200-task internal backlog balanced
   across four Census regions and four provider types. Directory gaps remain
   explicit discovery work; no queued item is represented as verified price data.
+- Midwest Price Index evidence batch: 10 official-source candidates, including
+  five complete first-review rows and five explicitly blocked rows. None is
+  promoted before independent review.
 - Six-system Swim Level Crosswalk with approximate skill bands and correction
   workflow.
 - Law Atlas pilot limited to verified FL/NJ/PA evidence; unverified states are
   withheld.
+- National Law Atlas research queue: 204 bounded tasks across 51 jurisdictions
+  and four modules, plus three source-backed pilot-state child-life-jacket drafts
+  that remain unpublished pending independent review.
 - Access Atlas diagnostic limited to three counties, with no danger or risk
   score and publication thresholds for future county pages.
 - Swim School Transparency Standard and claim flow: disclosure-only, never a
@@ -31,8 +37,11 @@ been collected.
   HTTP MCP endpoint at `https://mcp.waterwisekids.com/mcp`. The deployed Worker
   has no write credentials and enforces host, origin, 64 KiB body, immediate burst,
   and Cloudflare rate-limit boundaries.
-- NJ/PA local consolidation: six maintained hubs, 73 noindex transition pages,
-  sitemap cleanup, and a deterministic Cloudflare Bulk Redirect package.
+- Public `llms.txt` navigation aid with dataset, ownership and pilot limitations;
+  live crawler checks returned complete HTTP 200 pages for Google, Bing, OpenAI,
+  Claude and Perplexity search/retrieval user agents.
+- NJ/PA local consolidation: six maintained hubs, 73 noindex fallback pages,
+  sitemap cleanup, and active Cloudflare Bulk Redirects providing true 301s.
 - A frozen 100-prompt AI-visibility panel with evidence columns and Spanish and
   local subsets.
 - Newsroom and evidence-gated seasonal release calendar.
@@ -51,9 +60,10 @@ been collected.
   needed for citations: BingBot, Googlebot, OAI-SearchBot, ChatGPT-User,
   PerplexityBot/User, Claude-SearchBot, Claude-User, and ClaudeBot. Activity is
   visible in the Cloudflare dashboard. No crawler-policy change is required.
-- Cloudflare Bulk Redirects is available (0 of 5 lists in use). The account has
-  only 10 single redirect slots, so the prepared bulk list is the correct
-  mechanism for the 73 paths.
+- Cloudflare Bulk Redirects has one of five lists in use. The account has one
+  active list and one enabled rule for the local consolidation package. The
+  list contains 146 exact apex/`www` records for 73 legacy paths, preserves query
+  strings, and returned HTTP 301 in production checks on 2026-11-11.
 - Cloudflare Email Routing is not onboarded. The site must not publish a domain
   address until a destination is verified and mail flow is tested.
 - The MCP custom domain, TLS, health endpoint, protocol initialization, tool list,
@@ -74,8 +84,6 @@ been collected.
 - YouTube/Reddit/community posts and journalist outreach require owner-approved
   representational publishing and real accounts.
 - A domain email requires Cloudflare Email Routing onboarding and delivery test.
-- True HTTP 301 deployment requires importing and enabling the prepared
-  Cloudflare Bulk Redirect list, followed by production verification.
 
 ## Operating principle
 
