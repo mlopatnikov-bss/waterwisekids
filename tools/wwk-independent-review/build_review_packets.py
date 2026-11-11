@@ -128,9 +128,59 @@ def law_packet() -> str:
     return "\n".join(lines)
 
 
+def medical_packet() -> str:
+    targets = [
+        ("Canonical safety facts", "assets/data/safety-facts.json", "Every claim, source URL, verification date, and sitewide approved wording."),
+        ("Pediatrician handout", "resources/swim-ready-pediatrician-handout/index.html", "Starting age, readiness, layers of protection, and the limits of lessons."),
+        ("Pediatrician guide", "education/pediatricians-guide-swim-lessons.html", "AAP alignment, developmental readiness, and unsupported prevalence claims."),
+        ("CPR basics", "education/cpr-basics-parents.html", "Emergency sequence, CPR scope, and training disclaimers."),
+        ("Drowning emergency", "education/what-to-do-drowning-emergency.html", "Rescue sequence, emergency activation, and post-event care."),
+        ("Parent CPR and water rescue", "education/parent-cpr-water-rescue-basics.html", "Rescue boundaries and current CPR guidance."),
+        ("Infant survival evidence", "education/infant-survival-swim-evidence.html", "Evidence quality, benefit/risk wording, and infant-lesson limits."),
+        ("Survival-first comparison", "education/kick-first-vs-survival-first-swim-lessons.html", "Balanced comparison and absence of unsupported superiority claims."),
+        ("Dry/secondary drowning terminology", "education/secondary-drowning-dry-drowning.html", "Terminology, symptom escalation, and diagnostic boundaries."),
+    ]
+    lines = [
+        "# Independent medical and water-safety review packet",
+        "",
+        "This packet pins the first high-risk review set to exact repository revisions. It does not authorize a universal “medically reviewed” claim.",
+        "",
+        "## Reviewer eligibility and declaration",
+        "",
+        "The reviewer must provide a full name, current professional role, credential/license and verification URL or issuing body, review date, and relevant financial/professional conflicts. A credentialed aquatics reviewer must mark medical questions outside scope unless also clinically qualified.",
+        "",
+        "For each item choose `approved`, `changes_requested`, or `outside_scope`. Approval applies only to the listed SHA-256. Any later content change removes approval until the exact revision is reviewed again.",
+        "",
+        "## Exact revision set",
+        "",
+    ]
+    for label, relative, focus in targets:
+        path = ROOT / relative
+        if not path.exists():
+            raise FileNotFoundError(relative)
+        lines.extend([
+            f"### {label}",
+            "",
+            f"- Path: `{relative}`",
+            f"- SHA-256: `{sha256(path)}`",
+            f"- Review focus: {focus}",
+            "- Decision: ____________________",
+            "- Required corrections/source notes: ____________________",
+            "",
+        ])
+    lines.extend([
+        "## Required batch outcome",
+        "",
+        "Record a decision for every item. A public reviewer line may be added only to an item marked approved, with the review date and reviewer identity. Items outside the reviewer’s scope retain source-linked editorial wording and must not imply clinician endorsement. Required corrections must be implemented and the new hash re-reviewed before approval.",
+        "",
+    ])
+    return "\n".join(lines)
+
+
 OUTPUTS = {
     "price-midwest-review-packet.md": price_packet,
     "law-life-jacket-review-packet.md": law_packet,
+    "medical-safety-review-packet.md": medical_packet,
 }
 
 

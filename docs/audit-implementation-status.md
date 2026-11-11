@@ -14,6 +14,10 @@ been collected.
   review policy, corrections log, and safer entity schema.
 - Funding guide correction: IRS, Arizona, and Florida claims are narrowed to
   what official sources support; individual eligibility is not promised.
+- Directory-data recheck: the Newton pool fields render values rather than source
+  domains, `/about/` returns the full HTTP 200 page, and the unusual Acworth 775
+  phone was retained because the current official provider page publishes that
+  same number in its telephone link and JSON-LD.
 - Price Index pilot: methodology, open files, 17 observations, and minimum-data
   gates that prevent a misleading national average.
 - Price Index expansion queue: a reproducible 200-task internal backlog balanced
@@ -79,7 +83,8 @@ been collected.
 
 - Public Spanish pages and hreflang require a named native-speaking reviewer.
 - “Medically reviewed by” requires an accepted, credential-verified independent
-  reviewer. A recruitment brief is ready.
+  reviewer. A recruitment brief and exact-revision packet for nine high-risk
+  sources are ready; no reviewer claim is published before signed decisions.
 - A national Price Index requires enough current, representative observations.
 - A 50-state Law Atlas requires statute-level human verification and dates.
 - National county Access Atlas pages require real provider, Census, price, and

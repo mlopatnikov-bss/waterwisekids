@@ -27,6 +27,10 @@ and disclose any other relevant commercial relationships.
   review date and source notes.
 - Re-review after material source updates and at least annually.
 
+The exact first review set and its current SHA-256 values are generated at
+`tools/wwk-independent-review/medical-safety-review-packet.md`. A reviewer must
+use that packet so approval cannot silently carry forward after a page changes.
+
 ## Publication rule
 
 WWK may name a reviewer or display a “reviewed by” line only after the person

@@ -198,6 +198,7 @@ def check(root: Path) -> list[str]:
             "Midwest Price Index evidence batch",
             "National Law Atlas research queue",
             "active Mailgun MX and SPF records",
+            "the unusual Acworth 775",
         ):
             if required not in implementation_status:
                 errors.append(f"audit implementation ledger is missing current evidence: {required}")
