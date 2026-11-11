@@ -260,6 +260,18 @@ def check(root: Path) -> list[str]:
             detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
             errors.append(f"life-jacket candidate guard failed: {detail}")
 
+    independent_review_builder = root / "tools/wwk-independent-review/build_review_packets.py"
+    if independent_review_builder.exists():
+        result = subprocess.run(
+            [sys.executable, str(independent_review_builder), "--check"],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"independent-review packet guard failed: {detail}")
+
     governance_builder = root / "tools/wwk-governance/build_governance_pages.py"
     if governance_builder.exists():
         result = subprocess.run(

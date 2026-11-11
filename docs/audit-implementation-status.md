@@ -21,14 +21,17 @@ been collected.
   explicit discovery work; no queued item is represented as verified price data.
 - Midwest Price Index evidence batch: 10 official-source candidates, including
   five complete first-review rows and five explicitly blocked rows. None is
-  promoted before independent review.
+  promoted before independent review. A generated second-review packet pins the
+  exact batch and source fingerprints and requires a decision on every field.
 - Six-system Swim Level Crosswalk with approximate skill bands and correction
   workflow.
 - Law Atlas pilot limited to verified FL/NJ/PA evidence; unverified states are
   withheld.
 - National Law Atlas research queue: 204 bounded tasks across 51 jurisdictions
   and four modules, plus three source-backed pilot-state child-life-jacket drafts
-  that remain unpublished pending independent review.
+  that remain unpublished pending independent review. A generated legal-review
+  packet pins the exact revision and enumerates scope, exception, and currency
+  checks for each jurisdiction.
 - Access Atlas diagnostic limited to three counties, with no danger or risk
   score and publication thresholds for future county pages.
 - Swim School Transparency Standard and claim flow: disclosure-only, never a
