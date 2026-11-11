@@ -1,0 +1,32 @@
+# WaterWiseKids
+
+> WaterWiseKids is a free U.S. water-safety education and swim-lesson data resource published by VTL Holding LLC.
+
+## Start here
+
+- Homepage: https://www.waterwisekids.com/
+- About and ownership: https://www.waterwisekids.com/about/
+- Editorial policy: https://www.waterwisekids.com/editorial-policy/
+- Medical review policy: https://www.waterwisekids.com/medical-review-policy/
+- Corrections log: https://www.waterwisekids.com/corrections/
+- Ownership and advertising disclosure: https://www.waterwisekids.com/ownership-disclosure/
+
+## Structured resources
+
+- Public data and API catalog: https://www.waterwisekids.com/api/
+- Read-only MCP endpoint: https://mcp.waterwisekids.com/mcp
+- Swim-school directory: https://www.waterwisekids.com/swim-lessons/
+- Verified swim-lesson price pilot: https://www.waterwisekids.com/education/swim-lessons-cost.html
+- Swim level crosswalk beta: https://www.waterwisekids.com/tools/swim-level-crosswalk/
+- Water-safety law atlas pilot: https://www.waterwisekids.com/education/swimming-pool-fence-laws-by-state.html
+- Swim access diagnostic pilot: https://www.waterwisekids.com/swim-access-atlas/
+- Swim School Transparency Standard beta: https://www.waterwisekids.com/transparency-standard/
+
+## Important limitations
+
+- Medical and safety content is educational and does not replace individual advice from a qualified professional.
+- The law atlas is plain-English research, not legal advice; local codes and current agency rules must be confirmed.
+- The price dataset is a methods pilot and does not yet support a national average.
+- Cross-chain level matches are approximate and never replace an assessment by the receiving swim school.
+- WaterWiseKids and British Swim School businesses serving the Jersey Shore and Northwest Philadelphia share common ownership. The directory and datasets do not give those businesses preferential ranking or weighting.
+- `llms.txt` is a navigation aid only. Canonical pages and linked source data remain authoritative.

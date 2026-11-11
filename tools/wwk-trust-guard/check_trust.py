@@ -152,6 +152,24 @@ def check(root: Path) -> list[str]:
         if claim.casefold() in homepage.casefold():
             errors.append(f"homepage retains an unverified team credential claim: {claim}")
 
+    llms_path = root / "llms.txt"
+    if not llms_path.exists():
+        errors.append("llms.txt navigation aid is missing")
+    else:
+        llms_text = llms_path.read_text(encoding="utf-8")
+        for required in (
+            "https://www.waterwisekids.com/ownership-disclosure/",
+            "https://www.waterwisekids.com/api/",
+            "https://mcp.waterwisekids.com/mcp",
+            "https://www.waterwisekids.com/transparency-standard/",
+            "does not yet support a national average",
+            "plain-English research, not legal advice",
+            "share common ownership",
+            "navigation aid only",
+        ):
+            if required not in llms_text:
+                errors.append(f"llms.txt is missing required limitation or route: {required}")
+
     price_guard = root / "tools/wwk-price-index/check_price_index.py"
     if price_guard.exists():
         result = subprocess.run(
@@ -420,7 +438,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index and candidate-batch gates, crosswalk guardrails, law-atlas sources, research queue, and life-jacket candidates, access-pilot caveats, school-transparency boundaries, API/MCP limitations, local-page consolidation, AI-visibility measurement, Spanish review gating, and wait-time privacy gates are consistent.")
+    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, llms navigation limits, price-index and candidate-batch gates, crosswalk guardrails, law-atlas sources, research queue, and life-jacket candidates, access-pilot caveats, school-transparency boundaries, API/MCP limitations, local-page consolidation, AI-visibility measurement, Spanish review gating, and wait-time privacy gates are consistent.")
     return 0
 
 

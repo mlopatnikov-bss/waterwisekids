@@ -11,6 +11,7 @@ This release check protects the public claims most likely to damage family trust
 - internal price-candidate source coverage, normalization readiness, and no-promotion status
 - 51-jurisdiction law-research coverage and claim-free unpublished tasks
 - pilot-state life-jacket source coverage, freshness, and independent-review gating
+- `llms.txt` navigation routes, ownership disclosure, and pilot limitations
 - public editorial, medical-review, corrections, ownership, and author disclosures
 
 Run from the repository root:
