@@ -194,6 +194,18 @@ def check(root: Path) -> list[str]:
             detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
             errors.append(f"water-safety law-atlas guard failed: {detail}")
 
+    access_guard = root / "tools/wwk-access-atlas/check_access_pilot.py"
+    if access_guard.exists():
+        result = subprocess.run(
+            [sys.executable, str(access_guard)],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"swim-access diagnostic guard failed: {detail}")
+
     governance_requirements = {
         "editorial-policy/index.html": "AI tools may help organize research",
         "medical-review-policy/index.html": "does not currently claim that every medical",
@@ -233,7 +245,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index gates, crosswalk guardrails, and law-atlas sources are consistent.")
+    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index gates, crosswalk guardrails, law-atlas sources, and access-pilot caveats are consistent.")
     return 0
 
 
