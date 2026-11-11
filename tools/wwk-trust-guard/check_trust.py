@@ -145,6 +145,12 @@ def check(root: Path) -> list[str]:
         errors.append("homepage school count does not match site-stats.json")
     if re.search(r"View All\s+\d+\s+Guides", homepage):
         errors.append("homepage publishes an exact guide count without a release-time generator")
+    for claim in (
+        "Founded by a team of certified swim instructors",
+        "created by certified swim instructors",
+    ):
+        if claim.casefold() in homepage.casefold():
+            errors.append(f"homepage retains an unverified team credential claim: {claim}")
 
     price_guard = root / "tools/wwk-price-index/check_price_index.py"
     if price_guard.exists():
@@ -242,6 +248,54 @@ def check(root: Path) -> list[str]:
             detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
             errors.append(f"local-page consolidation guard failed: {detail}")
 
+    cloudflare_redirect_guard = root / "tools/wwk-local-consolidation/build_cloudflare_redirects.py"
+    if cloudflare_redirect_guard.exists():
+        result = subprocess.run(
+            [sys.executable, str(cloudflare_redirect_guard), "--check"],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"Cloudflare bulk redirect package failed: {detail}")
+
+    ai_visibility_guard = root / "tools/wwk-ai-visibility/check_panel.py"
+    if ai_visibility_guard.exists():
+        result = subprocess.run(
+            [sys.executable, str(ai_visibility_guard)],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"AI visibility panel guard failed: {detail}")
+
+    spanish_guard = root / "tools/wwk-spanish/check_translation_queue.py"
+    if spanish_guard.exists():
+        result = subprocess.run(
+            [sys.executable, str(spanish_guard)],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"Spanish publication gate failed: {detail}")
+
+    wait_time_guard = root / "tools/wwk-wait-times/check_wait_times.py"
+    if wait_time_guard.exists():
+        result = subprocess.run(
+            [sys.executable, str(wait_time_guard)],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"wait-time pilot guard failed: {detail}")
+
     governance_requirements = {
         "editorial-policy/index.html": "AI tools may help organize research",
         "medical-review-policy/index.html": "does not currently claim that every medical",
@@ -264,8 +318,45 @@ def check(root: Path) -> list[str]:
     ):
         if f'href="{href}"' not in about:
             errors.append(f"about/index.html: missing governance link {href}")
-    if "team is made up of certified swim instructors" in about.casefold():
-        errors.append("about/index.html: retains an unverified team credential claim")
+    for claim in (
+        "team is made up of certified swim instructors",
+        "team of certified swim instructors",
+        "built by certified swim instructors",
+    ):
+        if claim in about.casefold():
+            errors.append(f"about/index.html: retains an unverified team credential claim: {claim}")
+
+    funding_page = (root / "education/swim-lessons-esa-529-fsa.html").read_text(encoding="utf-8")
+    for banned in (
+        "explicitly allows swim lessons and aquatics programs",
+        "Nevada's Education Savings Account",
+        "FSA and HSA funds can pay for swim-related expenses only",
+        "The LMN must be renewed annually in most cases",
+        "Medicaid and CHIP may cover aquatic therapy",
+    ):
+        if banned.casefold() in funding_page.casefold():
+            errors.append(f"funding guide retains unsupported eligibility claim: {banned}")
+    for required in (
+        "IRS FAQ Q11",
+        "not automatic approval",
+        "Arizona’s Department of Education says it makes the final determination",
+        "WWK cannot determine individual tax eligibility",
+    ):
+        if required not in funding_page:
+            errors.append(f"funding guide missing required guardrail: {required}")
+
+    handout = (root / "resources/swim-ready-pediatrician-handout/index.html").read_text(encoding="utf-8")
+    for required in (
+        "after a child's first birthday",
+        "no evidence that infant swim lessons reduce drowning incidence",
+        "lessons are only one layer of protection",
+        "does not replace individual medical advice",
+        "owner also operates British Swim School businesses",
+    ):
+        if required not in handout:
+            errors.append(f"pediatrician handout missing safety/disclosure text: {required}")
+    if "age 4" in handout.casefold() or "85% of pediatricians" in handout.casefold():
+        errors.append("pediatrician handout contains retired age or survey language")
 
     return errors
 
@@ -281,7 +372,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index gates, crosswalk guardrails, law-atlas sources, access-pilot caveats, school-transparency boundaries, API/MCP limitations, and local-page consolidation are consistent.")
+    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index gates, crosswalk guardrails, law-atlas sources, access-pilot caveats, school-transparency boundaries, API/MCP limitations, local-page consolidation, AI-visibility measurement, Spanish review gating, and wait-time privacy gates are consistent.")
     return 0
 
 

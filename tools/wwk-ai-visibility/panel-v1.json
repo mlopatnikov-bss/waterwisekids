@@ -1,0 +1,622 @@
+{
+  "schema_version": "1.0",
+  "frozen_on": "2026-11-11",
+  "purpose": "Weekly directional measurement of WWK citation and mention share; not a ranking claim.",
+  "platforms": [
+    "chatgpt-search",
+    "google-ai-mode",
+    "perplexity",
+    "gemini",
+    "copilot",
+    "claude-search"
+  ],
+  "collection_rules": [
+    "Use a clean session and the same U.S. location/language settings each week.",
+    "Record the complete cited URL and distinguish a linked citation from an unlinked mention.",
+    "Do not count WWK when it appears only in the user's prompt or browsing history.",
+    "Capture the run timestamp and preserve answer evidence subject to the platform's terms.",
+    "Do not change prompt wording after the panel is frozen; add a versioned panel instead."
+  ],
+  "prompts": [
+    {
+      "prompt_id": "WWK-001",
+      "category": "age_readiness",
+      "locale": "en-US",
+      "prompt": "What is the best age to start swim lessons?"
+    },
+    {
+      "prompt_id": "WWK-002",
+      "category": "age_readiness",
+      "locale": "en-US",
+      "prompt": "Are swim lessons recommended for a 1-year-old?"
+    },
+    {
+      "prompt_id": "WWK-003",
+      "category": "age_readiness",
+      "locale": "en-US",
+      "prompt": "Are infant swim lessons proven to prevent drowning?"
+    },
+    {
+      "prompt_id": "WWK-004",
+      "category": "age_readiness",
+      "locale": "en-US",
+      "prompt": "How do I know if my toddler is ready for swim lessons?"
+    },
+    {
+      "prompt_id": "WWK-005",
+      "category": "age_readiness",
+      "locale": "en-US",
+      "prompt": "Should a parent be in the pool for toddler swim lessons?"
+    },
+    {
+      "prompt_id": "WWK-006",
+      "category": "age_readiness",
+      "locale": "en-US",
+      "prompt": "What should a nervous child learn in a first swim lesson?"
+    },
+    {
+      "prompt_id": "WWK-007",
+      "category": "age_readiness",
+      "locale": "en-US",
+      "prompt": "How often should a beginner child take swim lessons?"
+    },
+    {
+      "prompt_id": "WWK-008",
+      "category": "age_readiness",
+      "locale": "en-US",
+      "prompt": "What should parents ask before enrolling in swim lessons?"
+    },
+    {
+      "prompt_id": "WWK-009",
+      "category": "age_readiness",
+      "locale": "en-US",
+      "prompt": "Do swim lessons make a child drown-proof?"
+    },
+    {
+      "prompt_id": "WWK-010",
+      "category": "age_readiness",
+      "locale": "en-US",
+      "prompt": "What are the layers of protection against child drowning?"
+    },
+    {
+      "prompt_id": "WWK-011",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "How much do group swim lessons cost in United States?"
+    },
+    {
+      "prompt_id": "WWK-012",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "How much do group swim lessons cost in New Jersey?"
+    },
+    {
+      "prompt_id": "WWK-013",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "How much do group swim lessons cost in Pennsylvania?"
+    },
+    {
+      "prompt_id": "WWK-014",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "How much do group swim lessons cost in California?"
+    },
+    {
+      "prompt_id": "WWK-015",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "How much do group swim lessons cost in Florida?"
+    },
+    {
+      "prompt_id": "WWK-016",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "How much do group swim lessons cost in Texas?"
+    },
+    {
+      "prompt_id": "WWK-017",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "How much do group swim lessons cost in Illinois?"
+    },
+    {
+      "prompt_id": "WWK-018",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "How much do group swim lessons cost in New York?"
+    },
+    {
+      "prompt_id": "WWK-019",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "How much do group swim lessons cost in Georgia?"
+    },
+    {
+      "prompt_id": "WWK-020",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "How much do group swim lessons cost in Arizona?"
+    },
+    {
+      "prompt_id": "WWK-021",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "What is a fair monthly price for kids swim lessons in Philadelphia?"
+    },
+    {
+      "prompt_id": "WWK-022",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "What is a fair monthly price for kids swim lessons in Jersey Shore NJ?"
+    },
+    {
+      "prompt_id": "WWK-023",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "What is a fair monthly price for kids swim lessons in Chicago?"
+    },
+    {
+      "prompt_id": "WWK-024",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "What is a fair monthly price for kids swim lessons in Los Angeles?"
+    },
+    {
+      "prompt_id": "WWK-025",
+      "category": "cost",
+      "locale": "en-US",
+      "prompt": "What is a fair monthly price for kids swim lessons in Miami?"
+    },
+    {
+      "prompt_id": "WWK-026",
+      "category": "comparison",
+      "locale": "en-US",
+      "prompt": "Compare Goldfish vs Aqua-Tots swim lessons for a beginner child."
+    },
+    {
+      "prompt_id": "WWK-027",
+      "category": "level_crosswalk",
+      "locale": "en-US",
+      "prompt": "How do Goldfish swim levels compare with Aqua-Tots levels?"
+    },
+    {
+      "prompt_id": "WWK-028",
+      "category": "comparison",
+      "locale": "en-US",
+      "prompt": "Compare Goldfish vs British Swim School swim lessons for a beginner child."
+    },
+    {
+      "prompt_id": "WWK-029",
+      "category": "level_crosswalk",
+      "locale": "en-US",
+      "prompt": "How do Goldfish swim levels compare with British Swim School levels?"
+    },
+    {
+      "prompt_id": "WWK-030",
+      "category": "comparison",
+      "locale": "en-US",
+      "prompt": "Compare Goldfish vs SafeSplash swim lessons for a beginner child."
+    },
+    {
+      "prompt_id": "WWK-031",
+      "category": "level_crosswalk",
+      "locale": "en-US",
+      "prompt": "How do Goldfish swim levels compare with SafeSplash levels?"
+    },
+    {
+      "prompt_id": "WWK-032",
+      "category": "comparison",
+      "locale": "en-US",
+      "prompt": "Compare Goldfish vs YMCA swim lessons for a beginner child."
+    },
+    {
+      "prompt_id": "WWK-033",
+      "category": "level_crosswalk",
+      "locale": "en-US",
+      "prompt": "How do Goldfish swim levels compare with YMCA levels?"
+    },
+    {
+      "prompt_id": "WWK-034",
+      "category": "comparison",
+      "locale": "en-US",
+      "prompt": "Compare Aqua-Tots vs British Swim School swim lessons for a beginner child."
+    },
+    {
+      "prompt_id": "WWK-035",
+      "category": "level_crosswalk",
+      "locale": "en-US",
+      "prompt": "How do Aqua-Tots swim levels compare with British Swim School levels?"
+    },
+    {
+      "prompt_id": "WWK-036",
+      "category": "comparison",
+      "locale": "en-US",
+      "prompt": "Compare Aqua-Tots vs SafeSplash swim lessons for a beginner child."
+    },
+    {
+      "prompt_id": "WWK-037",
+      "category": "level_crosswalk",
+      "locale": "en-US",
+      "prompt": "How do Aqua-Tots swim levels compare with SafeSplash levels?"
+    },
+    {
+      "prompt_id": "WWK-038",
+      "category": "comparison",
+      "locale": "en-US",
+      "prompt": "Compare Aqua-Tots vs YMCA swim lessons for a beginner child."
+    },
+    {
+      "prompt_id": "WWK-039",
+      "category": "level_crosswalk",
+      "locale": "en-US",
+      "prompt": "How do Aqua-Tots swim levels compare with YMCA levels?"
+    },
+    {
+      "prompt_id": "WWK-040",
+      "category": "comparison",
+      "locale": "en-US",
+      "prompt": "Compare British Swim School vs SafeSplash swim lessons for a beginner child."
+    },
+    {
+      "prompt_id": "WWK-041",
+      "category": "level_crosswalk",
+      "locale": "en-US",
+      "prompt": "How do British Swim School swim levels compare with SafeSplash levels?"
+    },
+    {
+      "prompt_id": "WWK-042",
+      "category": "comparison",
+      "locale": "en-US",
+      "prompt": "Compare British Swim School vs YMCA swim lessons for a beginner child."
+    },
+    {
+      "prompt_id": "WWK-043",
+      "category": "level_crosswalk",
+      "locale": "en-US",
+      "prompt": "How do British Swim School swim levels compare with YMCA levels?"
+    },
+    {
+      "prompt_id": "WWK-044",
+      "category": "comparison",
+      "locale": "en-US",
+      "prompt": "Compare SafeSplash vs YMCA swim lessons for a beginner child."
+    },
+    {
+      "prompt_id": "WWK-045",
+      "category": "level_crosswalk",
+      "locale": "en-US",
+      "prompt": "How do SafeSplash swim levels compare with YMCA levels?"
+    },
+    {
+      "prompt_id": "WWK-046",
+      "category": "survival_vs_traditional",
+      "locale": "en-US",
+      "prompt": "What is the difference between survival swim and traditional swim lessons?"
+    },
+    {
+      "prompt_id": "WWK-047",
+      "category": "survival_vs_traditional",
+      "locale": "en-US",
+      "prompt": "Is ISR supported by the American Academy of Pediatrics?"
+    },
+    {
+      "prompt_id": "WWK-048",
+      "category": "survival_vs_traditional",
+      "locale": "en-US",
+      "prompt": "What evidence exists for survival swim lessons?"
+    },
+    {
+      "prompt_id": "WWK-049",
+      "category": "survival_vs_traditional",
+      "locale": "en-US",
+      "prompt": "Can survival swim lessons replace pool fencing?"
+    },
+    {
+      "prompt_id": "WWK-050",
+      "category": "survival_vs_traditional",
+      "locale": "en-US",
+      "prompt": "Are forced submersions safe in swim lessons?"
+    },
+    {
+      "prompt_id": "WWK-051",
+      "category": "survival_vs_traditional",
+      "locale": "en-US",
+      "prompt": "How should an instructor respond when a toddler cries in class?"
+    },
+    {
+      "prompt_id": "WWK-052",
+      "category": "survival_vs_traditional",
+      "locale": "en-US",
+      "prompt": "What does a balanced survival-swim comparison include?"
+    },
+    {
+      "prompt_id": "WWK-053",
+      "category": "survival_vs_traditional",
+      "locale": "en-US",
+      "prompt": "What skills should a beginner learn before freestyle?"
+    },
+    {
+      "prompt_id": "WWK-054",
+      "category": "survival_vs_traditional",
+      "locale": "en-US",
+      "prompt": "Are back-float survival skills enough to prevent drowning?"
+    },
+    {
+      "prompt_id": "WWK-055",
+      "category": "survival_vs_traditional",
+      "locale": "en-US",
+      "prompt": "How can parents evaluate safety claims made by a swim school?"
+    },
+    {
+      "prompt_id": "WWK-056",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in NJ?"
+    },
+    {
+      "prompt_id": "WWK-057",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in PA?"
+    },
+    {
+      "prompt_id": "WWK-058",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in FL?"
+    },
+    {
+      "prompt_id": "WWK-059",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in CA?"
+    },
+    {
+      "prompt_id": "WWK-060",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in TX?"
+    },
+    {
+      "prompt_id": "WWK-061",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in NY?"
+    },
+    {
+      "prompt_id": "WWK-062",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in IL?"
+    },
+    {
+      "prompt_id": "WWK-063",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in GA?"
+    },
+    {
+      "prompt_id": "WWK-064",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in AZ?"
+    },
+    {
+      "prompt_id": "WWK-065",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in WA?"
+    },
+    {
+      "prompt_id": "WWK-066",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in MA?"
+    },
+    {
+      "prompt_id": "WWK-067",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in CO?"
+    },
+    {
+      "prompt_id": "WWK-068",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in OH?"
+    },
+    {
+      "prompt_id": "WWK-069",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in MI?"
+    },
+    {
+      "prompt_id": "WWK-070",
+      "category": "state_law",
+      "locale": "en-US",
+      "prompt": "What are the residential pool barrier and child life-jacket laws in NC?"
+    },
+    {
+      "prompt_id": "WWK-071",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Brick NJ, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-072",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Howell NJ, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-073",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Toms River NJ, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-074",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Asbury Park NJ, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-075",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Neptune NJ, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-076",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Cheltenham PA, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-077",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Andorra Philadelphia, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-078",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Roxborough Philadelphia, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-079",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Philadelphia PA, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-080",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Monmouth County NJ, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-081",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Ocean County NJ, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-082",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Manhattan NY, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-083",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Los Angeles CA, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-084",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Miami FL, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-085",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Houston TX, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-086",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Chicago IL, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-087",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Atlanta GA, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-088",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Phoenix AZ, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-089",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Seattle WA, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-090",
+      "category": "local",
+      "locale": "en-US",
+      "prompt": "Where can I find kids swim lessons near Boston MA, and what should I compare?"
+    },
+    {
+      "prompt_id": "WWK-091",
+      "category": "spanish",
+      "locale": "es-US",
+      "prompt": "¿Cuál es la mejor edad para comenzar clases de natación?"
+    },
+    {
+      "prompt_id": "WWK-092",
+      "category": "spanish",
+      "locale": "es-US",
+      "prompt": "¿Las clases de natación para bebés previenen el ahogamiento?"
+    },
+    {
+      "prompt_id": "WWK-093",
+      "category": "spanish",
+      "locale": "es-US",
+      "prompt": "¿Cuánto cuestan las clases de natación para niños en Estados Unidos?"
+    },
+    {
+      "prompt_id": "WWK-094",
+      "category": "spanish",
+      "locale": "es-US",
+      "prompt": "¿Cómo elegir una escuela de natación para mi hijo?"
+    },
+    {
+      "prompt_id": "WWK-095",
+      "category": "spanish",
+      "locale": "es-US",
+      "prompt": "¿Qué diferencia hay entre natación de supervivencia y clases tradicionales?"
+    },
+    {
+      "prompt_id": "WWK-096",
+      "category": "spanish",
+      "locale": "es-US",
+      "prompt": "¿Qué debo preguntar antes de inscribir a mi hijo en clases de natación?"
+    },
+    {
+      "prompt_id": "WWK-097",
+      "category": "spanish",
+      "locale": "es-US",
+      "prompt": "¿Las clases de natación hacen que un niño sea inmune al ahogamiento?"
+    },
+    {
+      "prompt_id": "WWK-098",
+      "category": "spanish",
+      "locale": "es-US",
+      "prompt": "¿Dónde encontrar clases de natación económicas para niños?"
+    },
+    {
+      "prompt_id": "WWK-099",
+      "category": "spanish",
+      "locale": "es-US",
+      "prompt": "¿Cómo comparar los niveles de Goldfish y Aqua-Tots?"
+    },
+    {
+      "prompt_id": "WWK-100",
+      "category": "spanish",
+      "locale": "es-US",
+      "prompt": "¿Qué reglas de seguridad debo seguir en una piscina con niños?"
+    }
+  ]
+}

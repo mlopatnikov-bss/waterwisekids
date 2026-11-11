@@ -71,6 +71,35 @@ PAGES = {
 <h2>Questions</h2><p>If a relationship or paid placement is not clear, please <a href="/contact/">contact us</a> so we can review and correct the page.</p>
 """,
     },
+    "newsroom": {
+        "title": "WaterWiseKids Newsroom & Data Releases",
+        "name": "Newsroom and Data Releases",
+        "description": "Current WaterWiseKids datasets, release status, methodology links, and the evidence-gated annual data-journalism calendar.",
+        "subtitle": "Verified releases, withheld claims, and the calendar behind our public data",
+        "body": """
+<div class="last-updated"><strong>Status checked:</strong> November 11, 2026. Dates below are editorial targets, not promises that a result will be publishable.</div>
+<h2>Current public releases</h2>
+<ul>
+<li><strong>Swim Lesson Price Pilot:</strong> 17 official-source observations across 10 locations and six states. No national, state, or metro average is publishable because the precommitted coverage gates are not met. <a href="/education/swim-lessons-cost.html">Data and methodology</a>.</li>
+<li><strong>Swim Level Crosswalk beta:</strong> broad descriptive skill bands for six systems and 38 provider-published levels. It is not a placement tool; the receiving school must assess the swimmer. <a href="/tools/swim-level-crosswalk/">Use the crosswalk</a>.</li>
+<li><strong>Water-Safety Law Atlas pilot:</strong> verified modules for Florida, New Jersey and Pennsylvania. Unverified jurisdictions remain unpublished. <a href="/education/swimming-pool-fence-laws-by-state.html">Law Atlas and sources</a>.</li>
+<li><strong>Swim Access Atlas foundation:</strong> a three-county data-coverage diagnostic, not an access score, risk rank or “swim desert” label. <a href="/swim-access-atlas/">Methods and missing-data view</a>.</li>
+<li><strong>Open data and MCP reference:</strong> versioned JSON datasets and a read-only local MCP reference server. No publicly hosted MCP transport is claimed. <a href="/api/">API documentation</a>.</li>
+</ul>
+<h2>Evidence-gated release calendar</h2>
+<table><thead><tr><th>Target window</th><th>Planned release</th><th>Release gate</th></tr></thead><tbody>
+<tr><td>March</td><td>Annual Price Index</td><td>Publish a statistic only if the defined segment clears location, provider-type, concentration, freshness and second-review rules.</td></tr>
+<tr><td>May</td><td>Water-safety law update</td><td>Publish only jurisdictions checked against current government or statutory sources with a review date and change log.</td></tr>
+<tr><td>Memorial Day–July 4</td><td>Swim Access Atlas</td><td>No county page until it clears the minimum provider/data threshold; never turn missing directory data into a community danger claim.</td></tr>
+<tr><td>July 25</td><td>State of Drowning Prevention update</td><td>Use current public-health sources, suppression rules and a named review owner.</td></tr>
+<tr><td>September</td><td>Level Crosswalk update</td><td>Recheck provider descriptions, retain version history and require receiving-school assessment.</td></tr>
+</tbody></table>
+<h2>For journalists and researchers</h2>
+<p>Every numerical release should link to its dataset, license, methodology, release date, source list and known limitations. A pilot or withheld result must not be described as a national benchmark. To request a source packet, correction, interview or advance methodology review, use the <a href="/contact/">WaterWiseKids contact page</a> and identify the dataset and deadline.</p>
+<h2>Embargoes and corrections</h2>
+<p>WaterWiseKids may share a completed release under a written embargo, but it will not preview an unverified headline. Material errors are corrected in place and recorded in the public <a href="/corrections/">Corrections Log</a>. Ownership and British Swim School affiliations are disclosed under the <a href="/ownership-disclosure/">Ownership and Advertising Disclosure</a>.</p>
+""",
+    },
     "authors/michael-plotnikov": {
         "title": "Michael Plotnikov | WaterWiseKids Publisher",
         "name": "Michael Plotnikov",

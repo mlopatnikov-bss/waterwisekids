@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "status": "collection_open_no_statistics",
+  "created_on": "2026-11-11",
+  "license": "CC BY 4.0 applies only to WWK's selection and arrangement of published aggregate data, not provider text or private submissions.",
+  "publication_gates": {
+    "minimum_current_observations_per_market": 30,
+    "maximum_observation_age_days": 45,
+    "minimum_provider_types": 3,
+    "maximum_single_provider_share": 0.30,
+    "second_review_required": true,
+    "minimum_display_cell": 5
+  },
+  "privacy_rules": [
+    "Do not collect or publish a child's name, age, schedule, health information or enrollment record.",
+    "Do not publish a submitter's email, message screenshot or account identifier.",
+    "Parent reports are leads until corroborated by a current provider source or direct provider confirmation.",
+    "Publish market aggregates only; never rank a named school by wait time from unverified reports."
+  ],
+  "observations": []
+}
