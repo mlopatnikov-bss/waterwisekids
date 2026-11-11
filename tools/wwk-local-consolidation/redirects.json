@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0",
+  "generated_on": "2026-11-11",
+  "origin": "GitHub Pages behind Cloudflare",
+  "repository_fallback": "noindex canonical transition document with immediate client redirect",
+  "edge_requirement": "Mirror every mapping as a Cloudflare static 301 redirect.",
+  "hubs": {
+    "andorra": "/swim-lessons-andorra-philadelphia.html",
+    "asbury": "/swim-lessons/asbury-park-nj.html",
+    "brick": "/swim-lessons/brick-nj.html",
+    "cheltenham": "/swim-lessons/cheltenham-pa.html",
+    "howell": "/swim-lessons/howell-nj.html",
+    "toms-river": "/swim-lessons-toms-river-nj.html"
+  },
+  "redirects": [
+    {
+      "source": "/beginner-swim-lessons-abington-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-ambler-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-andorra-philadelphia.html",
+      "target": "/swim-lessons-andorra-philadelphia.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-asbury-park-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-belmar-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-brick-nj.html",
+      "target": "/swim-lessons/brick-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-brick-township-nj.html",
+      "target": "/swim-lessons/brick-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-brielle-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-cheltenham-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-elkins-park-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-flourtown-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-glenside-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-howell-nj.html",
+      "target": "/swim-lessons/howell-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-jenkintown-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-mount-airy-philadelphia.html",
+      "target": "/swim-lessons-andorra-philadelphia.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-northwest-philadelphia.html",
+      "target": "/swim-lessons-andorra-philadelphia.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-oakhurst-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-ocean-grove-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-sea-girt-beaches.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-sea-girt-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-spring-house-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-toms-river-nj.html",
+      "target": "/swim-lessons-toms-river-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/beginner-swim-lessons-wyndmoor-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-abington-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-ambler-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-andorra-philadelphia.html",
+      "target": "/swim-lessons-andorra-philadelphia.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-asbury-park-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-belmar-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-brick-beaches.html",
+      "target": "/swim-lessons/brick-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-brick-nj.html",
+      "target": "/swim-lessons/brick-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-brick-township-nj.html",
+      "target": "/swim-lessons/brick-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-brielle-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-cheltenham-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-cheltenham-township-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-elkins-park-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-flourtown-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-glenside-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-howell-nj.html",
+      "target": "/swim-lessons/howell-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-jenkintown-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-mount-airy-philadelphia.html",
+      "target": "/swim-lessons-andorra-philadelphia.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-northwest-philadelphia.html",
+      "target": "/swim-lessons-andorra-philadelphia.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-oakhurst-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-ocean-grove-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-sea-girt-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-spring-house-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-toms-river-nj.html",
+      "target": "/swim-lessons-toms-river-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/kids-swim-lessons-wyndmoor-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/swim-lessons-asbury-park-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/swim-lessons-brick-nj.html",
+      "target": "/swim-lessons/brick-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/swim-lessons-cheltenham-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/swim-lessons-howell-nj.html",
+      "target": "/swim-lessons/howell-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-abington-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-ambler-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-andorra-philadelphia.html",
+      "target": "/swim-lessons-andorra-philadelphia.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-asbury-park-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-belmar-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-brick-nj.html",
+      "target": "/swim-lessons/brick-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-brick-township-nj.html",
+      "target": "/swim-lessons/brick-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-brielle-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-cheltenham-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-elkins-park-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-flourtown-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-glenside-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-howell-nj.html",
+      "target": "/swim-lessons/howell-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-jenkintown-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-mount-airy-philadelphia.html",
+      "target": "/swim-lessons-andorra-philadelphia.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-northwest-philadelphia.html",
+      "target": "/swim-lessons-andorra-philadelphia.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-oakhurst-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-ocean-grove-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-sea-girt-nj.html",
+      "target": "/swim-lessons/asbury-park-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-spring-house-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-toms-river-nj.html",
+      "target": "/swim-lessons-toms-river-nj.html",
+      "status": 301
+    },
+    {
+      "source": "/toddler-swim-lessons-wyndmoor-pa.html",
+      "target": "/swim-lessons/cheltenham-pa.html",
+      "status": 301
+    }
+  ]
+}

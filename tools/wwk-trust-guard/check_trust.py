@@ -230,6 +230,18 @@ def check(root: Path) -> list[str]:
             detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
             errors.append(f"open-data API/MCP guard failed: {detail}")
 
+    local_guard = root / "tools/wwk-local-consolidation/check_local_consolidation.py"
+    if local_guard.exists():
+        result = subprocess.run(
+            [sys.executable, str(local_guard)],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"local-page consolidation guard failed: {detail}")
+
     governance_requirements = {
         "editorial-policy/index.html": "AI tools may help organize research",
         "medical-review-policy/index.html": "does not currently claim that every medical",
@@ -269,7 +281,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index gates, crosswalk guardrails, law-atlas sources, access-pilot caveats, school-transparency boundaries, and API/MCP limitations are consistent.")
+    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index gates, crosswalk guardrails, law-atlas sources, access-pilot caveats, school-transparency boundaries, API/MCP limitations, and local-page consolidation are consistent.")
     return 0
 
 
