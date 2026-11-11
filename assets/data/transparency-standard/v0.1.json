@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.1.0",
+  "title": "WaterWiseKids Swim School Transparency Standard",
+  "status": "public_beta",
+  "published_on": "2026-11-11",
+  "last_updated": "2026-11-11",
+  "license": "CC-BY-4.0",
+  "standard_url": "https://www.waterwisekids.com/transparency-standard/",
+  "claim_url": "https://www.waterwisekids.com/for-swim-schools/claim/",
+  "badge_label": "WWK Data Disclosure — Complete",
+  "badge_meaning": "The school disclosed the required fields, linked evidence or provided a dated attestation, and passed a completeness review. It is not a safety certification, quality rating, endorsement, accreditation, or inspection.",
+  "sort_policy": "Payment never changes badge eligibility or the default order of standard directory results. A paid placement must remain separately labeled.",
+  "review_cycle_days": 90,
+  "evidence_classes": [
+    {
+      "id": "official_public_source",
+      "label": "Official public source",
+      "description": "A current page or document controlled by the school, facility, credential issuer, or government agency."
+    },
+    {
+      "id": "school_attestation",
+      "label": "Dated school attestation",
+      "description": "A named authorized representative attests to a field that is not publicly documented. The listing labels it school-submitted."
+    },
+    {
+      "id": "not_stated",
+      "label": "Not stated",
+      "description": "The field is not disclosed. It is never converted to no, none, or noncompliant."
+    }
+  ],
+  "required_fields": [
+    {"id": "legal_operator_name", "label": "Legal or operating name", "evidence": ["official_public_source", "school_attestation"]},
+    {"id": "physical_location", "label": "Physical teaching location", "evidence": ["official_public_source"]},
+    {"id": "official_contact", "label": "Official website and contact path", "evidence": ["official_public_source"]},
+    {"id": "program_ages", "label": "Age ranges and programs offered", "evidence": ["official_public_source", "school_attestation"]},
+    {"id": "instructor_credentials", "label": "Credential or training bodies the school says it uses", "evidence": ["official_public_source", "school_attestation", "not_stated"]},
+    {"id": "maximum_class_ratio", "label": "Maximum instructor-to-student ratio by level or program", "evidence": ["official_public_source", "school_attestation", "not_stated"]},
+    {"id": "background_check_policy", "label": "Background-check policy and scope", "evidence": ["official_public_source", "school_attestation", "not_stated"]},
+    {"id": "water_environment", "label": "Pool setting, season, and stated water temperature or not stated", "evidence": ["official_public_source", "school_attestation", "not_stated"]},
+    {"id": "pricing", "label": "Current pricing, required fees, lesson duration, and checked date", "evidence": ["official_public_source", "school_attestation", "not_stated"]},
+    {"id": "makeup_cancellation", "label": "Make-up, cancellation, and withdrawal policy", "evidence": ["official_public_source", "school_attestation", "not_stated"]},
+    {"id": "adaptive_access", "label": "Adaptive programming and accessibility information", "evidence": ["official_public_source", "school_attestation", "not_stated"]},
+    {"id": "scholarship_aid", "label": "Scholarship or financial-aid availability", "evidence": ["official_public_source", "school_attestation", "not_stated"]},
+    {"id": "ownership_conflicts", "label": "Ownership, sponsorship, or other material relationship with WWK", "evidence": ["official_public_source", "school_attestation", "not_stated"]}
+  ],
+  "badge_rules": {
+    "all_required_fields_present": true,
+    "unknowns_must_be_labeled_not_stated": true,
+    "authorized_representative_required": true,
+    "evidence_or_attestation_per_field": true,
+    "manual_conflict_check_required": true,
+    "expires_after_days": 90,
+    "revocation_reasons": [
+      "required field becomes stale",
+      "material claim cannot be supported",
+      "school refuses a documented correction",
+      "ownership or sponsorship conflict is omitted",
+      "badge is displayed as a safety certification or endorsement"
+    ]
+  }
+}
