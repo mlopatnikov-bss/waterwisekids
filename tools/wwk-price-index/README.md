@@ -56,12 +56,23 @@ pilot dataset still requires normalization, an official-source fingerprint, and 
 second review. Owner-associated BSS locations are flagged and excluded from the
 first release unless independently reviewed and explicitly disclosed.
 
+## Internal evidence batches
+
+`midwest-candidate-batch-2026-11-11.json` is the first official-source collection
+batch produced from the queue. It is deliberately separate from the public pilot.
+Five rows have complete first-review fields and are ready for an independent
+second review; the other rows preserve source conflicts or missing normalization
+fields as explicit blockers. Nothing in a candidate batch may be promoted
+automatically, and a price appearing there is not a published WWK benchmark.
+
 ## Commands
 
 ```bash
 python3 tools/wwk-price-index/check_price_index.py
 python3 tools/wwk-price-index/build_collection_queue.py --check
 python3 tools/wwk-price-index/check_collection_queue.py
+python3 tools/wwk-price-index/capture_midwest_candidate_fingerprints.py
+python3 tools/wwk-price-index/check_midwest_candidate_batch.py
 python3 tools/wwk-price-index/build_cost_page.py --check
 python3 tools/wwk-price-index/build_cost_page.py
 ```

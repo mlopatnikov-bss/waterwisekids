@@ -176,6 +176,18 @@ def check(root: Path) -> list[str]:
             detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
             errors.append(f"price collection queue guard failed: {detail}")
 
+    candidate_batch_guard = root / "tools/wwk-price-index/check_midwest_candidate_batch.py"
+    if candidate_batch_guard.exists():
+        result = subprocess.run(
+            [sys.executable, str(candidate_batch_guard)],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"price candidate batch guard failed: {detail}")
+
     governance_builder = root / "tools/wwk-governance/build_governance_pages.py"
     if governance_builder.exists():
         result = subprocess.run(
@@ -384,7 +396,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index gates, crosswalk guardrails, law-atlas sources, access-pilot caveats, school-transparency boundaries, API/MCP limitations, local-page consolidation, AI-visibility measurement, Spanish review gating, and wait-time privacy gates are consistent.")
+    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index and candidate-batch gates, crosswalk guardrails, law-atlas sources, access-pilot caveats, school-transparency boundaries, API/MCP limitations, local-page consolidation, AI-visibility measurement, Spanish review gating, and wait-time privacy gates are consistent.")
     return 0
 
 

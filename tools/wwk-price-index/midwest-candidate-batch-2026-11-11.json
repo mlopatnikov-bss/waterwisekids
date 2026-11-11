@@ -1,0 +1,518 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "midwest-candidate-batch-2026-11-11",
+  "publication_status": "internal_research_only",
+  "as_of": "2026-11-11",
+  "purpose": "First official-source Midwest research batch. Candidates remain outside the public pilot until an independent second reviewer clears every field and source conflict.",
+  "promotion_policy": {
+    "required_status": "ready_for_independent_second_review",
+    "independent_second_review_required": true,
+    "source_fingerprint_required": true,
+    "automatic_promotion_allowed": false
+  },
+  "independent_second_review": {
+    "status": "not_started",
+    "reviewer": null,
+    "reviewed_on": null
+  },
+  "candidates": [
+    {
+      "candidate_id": "goldfish-plainfield-il-group-20261111",
+      "promotion_status": "ready_for_independent_second_review",
+      "blocking_reasons": [],
+      "owner_associated": false,
+      "observation": {
+        "provider_name": "Goldfish Swim School",
+        "location_name": "Plainfield",
+        "provider_type": "chain",
+        "chain": "Goldfish Swim School",
+        "city": "Plainfield",
+        "state": "IL",
+        "census_region": "Midwest",
+        "class_format": "group",
+        "age_scope": "children",
+        "duration_minutes": 30,
+        "ratio_max": 4,
+        "listed_price_usd": 33.0,
+        "lesson_count": 1,
+        "normalized_per_lesson_usd": 33.0,
+        "normalized_per_30_minutes_usd": 33.0,
+        "normalization": "direct_per_lesson",
+        "membership_status": "not_required",
+        "commitment_months": 0,
+        "mandatory_fee_usd": 35.0,
+        "mandatory_fee_label": "annual membership per swimmer",
+        "mandatory_fee_frequency": "annual",
+        "subsidized": false,
+        "price_qualifier": "published_rate",
+        "source_checked_on": "2026-11-11",
+        "source_note": "Official location pricing page lists $33 per 30-minute group lesson, a 4:1 ratio except 6:1 baby classes, and a $35 annual membership fee."
+      },
+      "source_evidence": [
+        {
+          "url": "https://goldfishswimschool.com/plainfield/pricing/",
+          "source_type": "official_provider",
+          "supports": [
+            "location",
+            "price",
+            "duration",
+            "ratio",
+            "mandatory_fee"
+          ],
+          "anchor_note": "Pricing page: Group Lessons $33/lesson; ages 4 months-12 years; ratio 4:1 (6:1 baby); 30 minutes; $35 annual membership."
+        }
+      ]
+    },
+    {
+      "candidate_id": "goldfish-glen-ellyn-il-group-20261111",
+      "promotion_status": "ready_for_independent_second_review",
+      "blocking_reasons": [],
+      "owner_associated": false,
+      "observation": {
+        "provider_name": "Goldfish Swim School",
+        "location_name": "Glen Ellyn",
+        "provider_type": "chain",
+        "chain": "Goldfish Swim School",
+        "city": "Glen Ellyn",
+        "state": "IL",
+        "census_region": "Midwest",
+        "class_format": "group",
+        "age_scope": "children",
+        "duration_minutes": 30,
+        "ratio_max": 4,
+        "listed_price_usd": 35.0,
+        "lesson_count": 1,
+        "normalized_per_lesson_usd": 35.0,
+        "normalized_per_30_minutes_usd": 35.0,
+        "normalization": "direct_per_lesson",
+        "membership_status": "not_required",
+        "commitment_months": 0,
+        "mandatory_fee_usd": 35.0,
+        "mandatory_fee_label": "annual membership per swimmer",
+        "mandatory_fee_frequency": "annual",
+        "subsidized": false,
+        "price_qualifier": "published_rate",
+        "source_checked_on": "2026-11-11",
+        "source_note": "Official location pricing page lists $35 per 30-minute group lesson, a 4:1 ratio except 6:1 baby classes, and a $35 annual membership fee."
+      },
+      "source_evidence": [
+        {
+          "url": "https://goldfishswimschool.com/glen-ellyn/pricing/",
+          "source_type": "official_provider",
+          "supports": [
+            "location",
+            "price",
+            "duration",
+            "ratio",
+            "mandatory_fee"
+          ],
+          "anchor_note": "Pricing page: Group Lessons $35/lesson; ages 4 months-12 years; ratio 4:1 (6:1 baby); 30 minutes; $35 annual membership."
+        }
+      ]
+    },
+    {
+      "candidate_id": "goldfish-glen-ellyn-il-semi-private-20261111",
+      "promotion_status": "ready_for_independent_second_review",
+      "blocking_reasons": [],
+      "owner_associated": false,
+      "observation": {
+        "provider_name": "Goldfish Swim School",
+        "location_name": "Glen Ellyn",
+        "provider_type": "chain",
+        "chain": "Goldfish Swim School",
+        "city": "Glen Ellyn",
+        "state": "IL",
+        "census_region": "Midwest",
+        "class_format": "semi_private",
+        "age_scope": "children",
+        "duration_minutes": 30,
+        "ratio_max": 2,
+        "listed_price_usd": 64.0,
+        "lesson_count": 1,
+        "normalized_per_lesson_usd": 64.0,
+        "normalized_per_30_minutes_usd": 64.0,
+        "normalization": "direct_per_lesson",
+        "membership_status": "not_required",
+        "commitment_months": 0,
+        "mandatory_fee_usd": 35.0,
+        "mandatory_fee_label": "annual membership per swimmer",
+        "mandatory_fee_frequency": "annual",
+        "subsidized": false,
+        "price_qualifier": "published_rate",
+        "source_checked_on": "2026-11-11",
+        "source_note": "Official location pricing page lists $64 per 30-minute semi-private lesson, a 2:1 ratio, and a $35 annual membership fee."
+      },
+      "source_evidence": [
+        {
+          "url": "https://goldfishswimschool.com/glen-ellyn/pricing/",
+          "source_type": "official_provider",
+          "supports": [
+            "location",
+            "price",
+            "duration",
+            "ratio",
+            "mandatory_fee"
+          ],
+          "anchor_note": "Pricing page: Semi Private $64/lesson; ages 3-12; ratio 2:1; 30 minutes; $35 annual membership."
+        }
+      ]
+    },
+    {
+      "candidate_id": "goldfish-glen-ellyn-il-private-20261111",
+      "promotion_status": "ready_for_independent_second_review",
+      "blocking_reasons": [],
+      "owner_associated": false,
+      "observation": {
+        "provider_name": "Goldfish Swim School",
+        "location_name": "Glen Ellyn",
+        "provider_type": "chain",
+        "chain": "Goldfish Swim School",
+        "city": "Glen Ellyn",
+        "state": "IL",
+        "census_region": "Midwest",
+        "class_format": "private",
+        "age_scope": "children",
+        "duration_minutes": 30,
+        "ratio_max": 1,
+        "listed_price_usd": 96.0,
+        "lesson_count": 1,
+        "normalized_per_lesson_usd": 96.0,
+        "normalized_per_30_minutes_usd": 96.0,
+        "normalization": "direct_per_lesson",
+        "membership_status": "not_required",
+        "commitment_months": 0,
+        "mandatory_fee_usd": 35.0,
+        "mandatory_fee_label": "annual membership per swimmer",
+        "mandatory_fee_frequency": "annual",
+        "subsidized": false,
+        "price_qualifier": "published_rate",
+        "source_checked_on": "2026-11-11",
+        "source_note": "Official location pricing page lists $96 per 30-minute private lesson, a 1:1 ratio, and a $35 annual membership fee."
+      },
+      "source_evidence": [
+        {
+          "url": "https://goldfishswimschool.com/glen-ellyn/pricing/",
+          "source_type": "official_provider",
+          "supports": [
+            "location",
+            "price",
+            "duration",
+            "ratio",
+            "mandatory_fee"
+          ],
+          "anchor_note": "Pricing page: Private Lessons $96/lesson; ages 3-12; ratio 1:1; 30 minutes; $35 annual membership."
+        }
+      ]
+    },
+    {
+      "candidate_id": "emler-westwood-ks-group-20261111",
+      "promotion_status": "ready_for_independent_second_review",
+      "blocking_reasons": [],
+      "owner_associated": false,
+      "observation": {
+        "provider_name": "Emler Swim School",
+        "location_name": "Westwood",
+        "provider_type": "chain",
+        "chain": "Emler Swim School",
+        "city": "Kansas City",
+        "state": "KS",
+        "census_region": "Midwest",
+        "class_format": "group",
+        "age_scope": "children",
+        "duration_minutes": 30,
+        "ratio_max": 4,
+        "listed_price_usd": 32.0,
+        "lesson_count": 1,
+        "normalized_per_lesson_usd": 32.0,
+        "normalized_per_30_minutes_usd": 32.0,
+        "normalization": "direct_per_lesson",
+        "membership_status": "not_required",
+        "commitment_months": 0,
+        "mandatory_fee_usd": 35.0,
+        "mandatory_fee_label": "anniversary fee due at enrollment; recurrence not stated",
+        "mandatory_fee_frequency": "not_stated",
+        "subsidized": false,
+        "price_qualifier": "starting_at",
+        "source_checked_on": "2026-11-11",
+        "source_note": "Official location page lists weekday group lessons starting at $32 per class and a $35 anniversary fee. Preschool and kids levels are 30 minutes with a 4:1 ratio; toddler and advanced levels differ."
+      },
+      "source_evidence": [
+        {
+          "url": "https://emlerswimschool.com/locations/kansas/westwood/",
+          "source_type": "official_provider",
+          "supports": [
+            "location",
+            "starting_price",
+            "duration",
+            "ratio",
+            "mandatory_fee",
+            "billing_terms"
+          ],
+          "anchor_note": "Location page: group lessons starting at $32/class; $35 anniversary fee; preschool and kids classes list 30 minutes and 4:1."
+        }
+      ]
+    },
+    {
+      "candidate_id": "cincinnati-mt-auburn-oh-group-20261111",
+      "promotion_status": "blocked_source_conflict",
+      "blocking_reasons": [
+        "The 2026 citywide fee schedule describes $40 sessions as 10-12 classes, while the Mt. Auburn Spring 2026 schedule appears to show eight weekly Tuesday classes for the same $40 fee. A second reviewer must resolve which lesson count applies before normalization."
+      ],
+      "owner_associated": false,
+      "observation": {
+        "provider_name": "Cincinnati Recreation Commission",
+        "location_name": "Mt. Auburn Warm Water Indoor Pool",
+        "provider_type": "municipal",
+        "chain": null,
+        "city": "Cincinnati",
+        "state": "OH",
+        "census_region": "Midwest",
+        "class_format": "group",
+        "age_scope": "children",
+        "duration_minutes": 30,
+        "ratio_max": null,
+        "listed_price_usd": 40.0,
+        "lesson_count": null,
+        "normalized_per_lesson_usd": null,
+        "normalized_per_30_minutes_usd": null,
+        "normalization": "blocked_pending_lesson_count",
+        "membership_status": "required",
+        "commitment_months": 0,
+        "mandatory_fee_usd": 30.0,
+        "mandatory_fee_label": "annual junior pool membership",
+        "mandatory_fee_frequency": "annual",
+        "subsidized": true,
+        "price_qualifier": "published_session_rate",
+        "source_checked_on": "2026-11-11",
+        "source_note": "Both official 2026 sources list a $40 group-session fee and required membership, but they do not agree clearly enough on the session lesson count for normalization."
+      },
+      "source_evidence": [
+        {
+          "url": "https://www.cincinnati-oh.gov/crc/about/fees-and-charges1/",
+          "source_type": "official_government",
+          "supports": [
+            "price",
+            "general_lesson_count_range",
+            "duration_range",
+            "membership_fee"
+          ],
+          "anchor_note": "2026 Fees and Charges: group lessons $40/session, scheduled 10-12 classes for 30-40 minutes; junior membership $30."
+        },
+        {
+          "url": "https://www.cincinnati-oh.gov/sites/crc/assets/Aquatics/Mt.-Auburn-Spring-26-Schedule-and-Program-Info.pdf",
+          "source_type": "official_government",
+          "supports": [
+            "location",
+            "price",
+            "schedule",
+            "duration",
+            "membership_required"
+          ],
+          "anchor_note": "Mt. Auburn Spring 2026: $40 group fee plus membership; Tuesday lesson times are 30 minutes and run March 3-April 21."
+        }
+      ]
+    },
+    {
+      "candidate_id": "columbus-aquatics-center-oh-group-20261111",
+      "promotion_status": "blocked_source_conflict",
+      "blocking_reasons": [
+        "The current lesson page labels $53 as a resident price and $63.30 as a non-resident price, while the current facility FAQ says there is no longer a resident discount. Provider clarification or a corrected official page is required."
+      ],
+      "owner_associated": false,
+      "observation": {
+        "provider_name": "Columbus Recreation and Parks Department",
+        "location_name": "Columbus Aquatics Center",
+        "provider_type": "municipal",
+        "chain": null,
+        "city": "Columbus",
+        "state": "OH",
+        "census_region": "Midwest",
+        "class_format": "group",
+        "age_scope": "all_ages",
+        "duration_minutes": 30,
+        "ratio_max": null,
+        "listed_price_usd": null,
+        "lesson_count": 8,
+        "normalized_per_lesson_usd": null,
+        "normalized_per_30_minutes_usd": null,
+        "normalization": "blocked_pending_price_resolution",
+        "membership_status": "not_required",
+        "commitment_months": 0,
+        "mandatory_fee_usd": 0.0,
+        "mandatory_fee_label": null,
+        "mandatory_fee_frequency": "none",
+        "subsidized": true,
+        "price_qualifier": "conflicting_official_prices",
+        "source_checked_on": "2026-11-11",
+        "source_note": "Official pages agree on 30-minute classes and generally eight-week sessions but conflict on whether resident and non-resident pricing still differs."
+      },
+      "source_evidence": [
+        {
+          "url": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/swimminglessons/",
+          "source_type": "official_government",
+          "supports": [
+            "location",
+            "reported_prices",
+            "duration",
+            "scholarship_availability"
+          ],
+          "anchor_note": "Lesson page: all classes 30 minutes; $53 per resident session; $63.30 non-resident; PLAY Scholarships available."
+        },
+        {
+          "url": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/faq/",
+          "source_type": "official_government",
+          "supports": [
+            "session_length",
+            "pricing_conflict",
+            "membership_not_required"
+          ],
+          "anchor_note": "FAQ: sessions except Fall II are eight weeks; says there is no longer a resident discount; classes are paid separately from optional passes."
+        }
+      ]
+    },
+    {
+      "candidate_id": "indy-island-in-preschool-group-20261111",
+      "promotion_status": "blocked_missing_normalization_fields",
+      "blocking_reasons": [
+        "The official facility page gives the $34 preschool price but does not state the number of lessons or class duration."
+      ],
+      "owner_associated": false,
+      "observation": {
+        "provider_name": "Indy Parks and Recreation",
+        "location_name": "Indy Island Aquatic Center",
+        "provider_type": "municipal",
+        "chain": null,
+        "city": "Indianapolis",
+        "state": "IN",
+        "census_region": "Midwest",
+        "class_format": "group",
+        "age_scope": "preschool_ages_3_to_5",
+        "duration_minutes": null,
+        "ratio_max": null,
+        "listed_price_usd": 34.0,
+        "lesson_count": null,
+        "normalized_per_lesson_usd": null,
+        "normalized_per_30_minutes_usd": null,
+        "normalization": "blocked_missing_lesson_count_and_duration",
+        "membership_status": "not_stated",
+        "commitment_months": 0,
+        "mandatory_fee_usd": null,
+        "mandatory_fee_label": null,
+        "mandatory_fee_frequency": "not_stated",
+        "subsidized": true,
+        "price_qualifier": "published_session_rate",
+        "source_checked_on": "2026-11-11",
+        "source_note": "Official facility page lists preschool swim lessons for ages 3-5 at $34 but omits duration and lesson count."
+      },
+      "source_evidence": [
+        {
+          "url": "https://parks.indy.gov/parks/raymond-park-2/",
+          "source_type": "official_government",
+          "supports": [
+            "location",
+            "age_scope",
+            "reported_price"
+          ],
+          "anchor_note": "Indy Island facility page: preschool ages 3-5, $34; youth ages 5-15, $49."
+        }
+      ]
+    },
+    {
+      "candidate_id": "minneapolis-parks-mn-resident-group-20261111",
+      "promotion_status": "blocked_missing_normalization_fields",
+      "blocking_reasons": [
+        "The adopted 2026 budget gives a $55 resident fee but not a specific location, lesson count, duration, age band, or class format."
+      ],
+      "owner_associated": false,
+      "observation": {
+        "provider_name": "Minneapolis Park and Recreation Board",
+        "location_name": "Systemwide fee; specific location unresolved",
+        "provider_type": "municipal",
+        "chain": null,
+        "city": "Minneapolis",
+        "state": "MN",
+        "census_region": "Midwest",
+        "class_format": null,
+        "age_scope": "not_stated",
+        "duration_minutes": null,
+        "ratio_max": null,
+        "listed_price_usd": 55.0,
+        "lesson_count": null,
+        "normalized_per_lesson_usd": null,
+        "normalized_per_30_minutes_usd": null,
+        "normalization": "blocked_missing_product_configuration",
+        "membership_status": "resident_rate",
+        "commitment_months": 0,
+        "mandatory_fee_usd": null,
+        "mandatory_fee_label": null,
+        "mandatory_fee_frequency": "not_stated",
+        "subsidized": true,
+        "price_qualifier": "adopted_2026_fee",
+        "source_checked_on": "2026-11-11",
+        "source_note": "The official adopted budget lists a $55 resident swim-lesson fee and $65 non-resident fee but lacks a product-level schedule needed for normalization."
+      },
+      "source_evidence": [
+        {
+          "url": "https://www.minneapolisparks.org/wp-content/uploads/2026/02/2026-Adopted-Budget-for-Website.pdf",
+          "source_type": "official_government",
+          "supports": [
+            "reported_price",
+            "resident_status",
+            "calendar_year"
+          ],
+          "anchor_note": "2026 adopted budget Aquatics Fees: Swim Lessons resident $55; non-resident $65."
+        }
+      ]
+    },
+    {
+      "candidate_id": "ymca-indian-boundary-il-group-20261111",
+      "promotion_status": "blocked_missing_normalization_fields",
+      "blocking_reasons": [
+        "The official schedule gives monthly rates and 30- or 40-minute class durations, but rolling weekly enrollment means the number of lessons billed in a month is not fixed on the source."
+      ],
+      "owner_associated": false,
+      "observation": {
+        "provider_name": "YMCA of Metropolitan Chicago",
+        "location_name": "Indian Boundary YMCA",
+        "provider_type": "nonprofit_ymca",
+        "chain": "YMCA",
+        "city": "Downers Grove",
+        "state": "IL",
+        "census_region": "Midwest",
+        "class_format": "group",
+        "age_scope": "all_ages",
+        "duration_minutes": 40,
+        "duration_note": "Parent-and-child classes are 30 minutes; most other listed group classes are 40 minutes.",
+        "ratio_max": null,
+        "listed_price_usd": 70.0,
+        "lesson_count": null,
+        "normalized_per_lesson_usd": null,
+        "normalized_per_30_minutes_usd": null,
+        "normalization": "blocked_variable_monthly_lesson_count",
+        "membership_status": "member_rate",
+        "commitment_months": 1,
+        "mandatory_fee_usd": null,
+        "mandatory_fee_label": null,
+        "mandatory_fee_frequency": "not_stated",
+        "subsidized": true,
+        "price_qualifier": "monthly_member_rate",
+        "source_checked_on": "2026-11-11",
+        "source_note": "Official October-November 2026 schedule lists $70/month for members and $120/month for non-members on a rolling weekly model; lesson count per billing month is not fixed."
+      },
+      "source_evidence": [
+        {
+          "url": "https://www.ymcachicago.org/getmedia/a23892d9-29ff-4cb4-a5d9-a6c8b0367316/11-2025-indian-boundary-ymca-aquatics-schedule.pdf",
+          "source_type": "official_provider",
+          "supports": [
+            "location",
+            "reported_monthly_price",
+            "duration",
+            "rolling_enrollment",
+            "cancellation_terms"
+          ],
+          "anchor_note": "2026 schedule: most classes 40 minutes; member $70/month, non-member $120/month; rolling start; cancellation form due by the 15th."
+        }
+      ]
+    }
+  ]
+}

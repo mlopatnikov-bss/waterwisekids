@@ -8,6 +8,7 @@ This release check protects the public claims most likely to damage family trust
 - directory, city, jurisdiction, and chain counts derived from `schools-data.js`
 - exact guide totals, which remain prohibited until they have a release-time generator
 - price-index normalization, official-source freshness, and publication gates
+- internal price-candidate source coverage, normalization readiness, and no-promotion status
 - public editorial, medical-review, corrections, ownership, and author disclosures
 
 Run from the repository root:

@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Point-in-time change detection for internal candidates; source content is not republished.",
+  "retrieved_at": "2026-11-11T21:27:05+00:00",
+  "batch_as_of": "2026-11-11",
+  "entries": [
+    {
+      "url": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/faq/",
+      "http_status": 200,
+      "content_length_bytes": 82625,
+      "sha256": "116ce143e757e534a712574b27434d08e5c3fe93f327616d30d7c3af8e125438"
+    },
+    {
+      "url": "https://columbusrecparks.com/facilities/aquatics/columbus-aquatics-center/swimminglessons/",
+      "http_status": 200,
+      "content_length_bytes": 79785,
+      "sha256": "da15402fb0f96cc8206409a5b79145baeb9d576f6734c699a8c180db4aa484f1"
+    },
+    {
+      "url": "https://emlerswimschool.com/locations/kansas/westwood/",
+      "http_status": 200,
+      "content_length_bytes": 1075942,
+      "sha256": "b4c2a8a7e1d5a9e1d446673e8dd420241b3d54eb49635340d4e3ab26c27db739"
+    },
+    {
+      "url": "https://goldfishswimschool.com/glen-ellyn/pricing/",
+      "http_status": 200,
+      "content_length_bytes": 395665,
+      "sha256": "c9d4ca092d64a3499d5de4597fd3fb3f5fdfb9913892b80572dcc962fa3a473d"
+    },
+    {
+      "url": "https://goldfishswimschool.com/plainfield/pricing/",
+      "http_status": 200,
+      "content_length_bytes": 376891,
+      "sha256": "c751ddbbb1cb7bd32eb2317fc6e0203661591d8ed0960a7fe67cf94f72794f5d"
+    },
+    {
+      "url": "https://parks.indy.gov/parks/raymond-park-2/",
+      "http_status": 200,
+      "content_length_bytes": 112451,
+      "sha256": "d497649e856ba2da13f210436aa18336e304018fdcca65c3814a01dfd6c430a8"
+    },
+    {
+      "url": "https://www.cincinnati-oh.gov/crc/about/fees-and-charges1/",
+      "http_status": 200,
+      "content_length_bytes": 187647,
+      "sha256": "905d966fd1b1de85ef6770361c731ea7f9e29f048a6b812bcae7c6dde6e53139"
+    },
+    {
+      "url": "https://www.cincinnati-oh.gov/sites/crc/assets/Aquatics/Mt.-Auburn-Spring-26-Schedule-and-Program-Info.pdf",
+      "http_status": 200,
+      "content_length_bytes": 131578,
+      "sha256": "abffb32db18940e35f59e83594f4bea51d2e13ad823abb106098700968cdf518"
+    },
+    {
+      "url": "https://www.minneapolisparks.org/wp-content/uploads/2026/02/2026-Adopted-Budget-for-Website.pdf",
+      "http_status": 200,
+      "content_length_bytes": 7560326,
+      "sha256": "28ddcb6209b952d70350b0fa3c38ca680f47c28785d2ec9531f1ac675a54866d"
+    },
+    {
+      "url": "https://www.ymcachicago.org/getmedia/a23892d9-29ff-4cb4-a5d9-a6c8b0367316/11-2025-indian-boundary-ymca-aquatics-schedule.pdf",
+      "http_status": 200,
+      "content_length_bytes": 128195,
+      "sha256": "cfa1cf513b31f7e7c5e5e86c53c0d1cb65673fbf2b75884a3d20bd56aed92d5f"
+    }
+  ]
+}
