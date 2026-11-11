@@ -11,7 +11,8 @@ been collected.
 
 - Trust reset: AAP 2026 starting-age guidance, unverifiable ratings removal,
   ownership disclosure, named owner/author profile, editorial policy, medical
-  review policy, corrections log, and safer entity schema.
+  review policy, corrections log, and Organization schema linked to real entity
+  profiles rather than self-referential `sameAs` values.
 - Funding guide correction: IRS, Arizona, and Florida claims are narrowed to
   what official sources support; individual eligibility is not promised.
 - Directory-data recheck: the Newton pool fields render values rather than source

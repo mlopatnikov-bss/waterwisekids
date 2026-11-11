@@ -47,6 +47,17 @@ def main() -> int:
     for blocked in ("We're certified swim instructors", "799 verified swim schools", "which schools are top rated"):
         if blocked in partner_page:
             errors.append(f"partner page retains unsupported trust claim: {blocked}")
+    if '"sameAs": [\n      "https://www.waterwisekids.com"' in partner_page:
+        errors.append("partner-page Organization schema points sameAs back to the site itself")
+    for required_profile in (
+        "https://www.youtube.com/@WaterWiseKids",
+        "https://www.instagram.com/waterwisekids_/",
+        "https://www.linkedin.com/company/waterwisekids/",
+    ):
+        if required_profile not in partner_page:
+            errors.append(f"partner-page Organization schema missing entity profile: {required_profile}")
+    if "connecting families with quality swim schools" in partner_page:
+        errors.append("partner-page Organization schema implies an unsupported quality endorsement")
     for required in ("/transparency-standard/", "/for-swim-schools/claim/", "source-checked school locations"):
         if required not in partner_page:
             errors.append(f"partner page missing transparency path: {required}")
