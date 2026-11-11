@@ -1,0 +1,149 @@
+{
+  "schema_version": "0.1.0",
+  "title": "WaterWiseKids Swim Level Crosswalk",
+  "status": "public_beta",
+  "license": "CC-BY-4.0",
+  "published_on": "2026-11-11",
+  "last_verified": "2026-11-11",
+  "next_review_by": "2027-02-09",
+  "methodology_url": "https://www.waterwisekids.com/tools/swim-level-crosswalk/#methodology",
+  "disclaimer": "Approximate skill alignment only. This crosswalk is not a placement decision, equivalency certification, safety credential, or endorsement. A receiving swim school must assess the swimmer.",
+  "ownership_disclosure": "WaterWiseKids and British Swim School businesses serving the Jersey Shore and Northwest Philadelphia share common ownership. British Swim School receives no preferential placement or scoring in this crosswalk.",
+  "bands": [
+    {
+      "id": "B1",
+      "name": "Caregiver-supported introduction",
+      "summary": "A caregiver participates while the swimmer builds comfort, water routines, and early safety awareness."
+    },
+    {
+      "id": "B2",
+      "name": "Water acclimation",
+      "summary": "The swimmer works toward comfort, safe entry and exit, submersion, and supported front and back skills."
+    },
+    {
+      "id": "B3",
+      "name": "Foundational independence",
+      "summary": "The swimmer begins independent floating, recovery, propulsion, breathing, and basic self-rescue sequences."
+    },
+    {
+      "id": "B4",
+      "name": "Independent swimming and water competency",
+      "summary": "The swimmer combines independent movement, breathing, recovery, and water-safety skills with growing control."
+    },
+    {
+      "id": "B5",
+      "name": "Stroke development",
+      "summary": "The swimmer develops coordinated strokes, body position, breathing, and longer-distance control."
+    },
+    {
+      "id": "B6",
+      "name": "Stroke refinement and endurance",
+      "summary": "The swimmer refines multiple strokes for efficiency and builds stamina over greater distances."
+    },
+    {
+      "id": "B7",
+      "name": "Advanced proficiency or pre-team",
+      "summary": "The swimmer works on advanced technique, turns, sustained performance, or preparation for team swimming."
+    }
+  ],
+  "systems": [
+    {
+      "id": "aqua-tots",
+      "name": "Aqua-Tots",
+      "source_url": "https://www.aqua-tots.com/swim-levels/",
+      "source_title": "Aqua-Tots Swim Journey",
+      "source_checked_on": "2026-11-11",
+      "source_note": "Current national level page; local placement and offerings may vary.",
+      "levels": [
+        {"id": "at-1", "name": "Level 1 Tadpoles", "age_track": "4–12 months; Parent & Tot", "band_min": "B1", "band_max": "B1", "confidence": "medium", "source_summary": "First introduction with caregiver participation and adaptation to the water."},
+        {"id": "at-2", "name": "Level 2 Minnows", "age_track": "13–30 months; Parent & Tot", "band_min": "B1", "band_max": "B1", "confidence": "medium", "source_summary": "Caregiver-supported exploration, safe boundaries, breath control, assisted rollover and return to the wall."},
+        {"id": "at-3", "name": "Level 3 Leapfrogs", "age_track": "2.5 years and older", "band_min": "B2", "band_max": "B2", "confidence": "medium", "source_summary": "First class without a caregiver; focuses on comfort and confidence."},
+        {"id": "at-4", "name": "Level 4 Seahorses", "age_track": "Ability based", "band_min": "B3", "band_max": "B3", "confidence": "medium", "source_summary": "Controlled movement, breath control, and coordinated swim strokes."},
+        {"id": "at-5", "name": "Level 5 Starfish", "age_track": "Ability based", "band_min": "B4", "band_max": "B4", "confidence": "medium", "source_summary": "Skills associated with becoming an independent swimmer."},
+        {"id": "at-6", "name": "Level 6 Seals", "age_track": "Ability based", "band_min": "B5", "band_max": "B5", "confidence": "medium", "source_summary": "Proper techniques for efficient, easier swimming."},
+        {"id": "at-7", "name": "Level 7 Sharks", "age_track": "Advanced swimmers", "band_min": "B6", "band_max": "B6", "confidence": "medium", "source_summary": "Fine-tunes strokes with an emphasis on efficient technique."},
+        {"id": "at-8", "name": "Level 8 Stingrays", "age_track": "Advanced swimmers", "band_min": "B7", "band_max": "B7", "confidence": "medium", "source_summary": "All taught strokes with proficiency plus flip or open-wall turns."}
+      ]
+    },
+    {
+      "id": "british-swim-school",
+      "name": "British Swim School",
+      "source_url": "https://britishswimschool.com/greater-philadelphia-south-jersey/find-a-lesson/",
+      "source_title": "British Swim School lesson assessment",
+      "source_checked_on": "2026-11-11",
+      "source_note": "Current local assessment page lists the national progression; local placement and offerings may vary.",
+      "levels": [
+        {"id": "bss-tadpole", "name": "Tadpole", "age_track": "Under 3; caregiver supported", "band_min": "B1", "band_max": "B1", "confidence": "medium", "source_summary": "Water acclimation with caregiver support."},
+        {"id": "bss-swimboree", "name": "Swimboree", "age_track": "Under 3; caregiver supported", "band_min": "B1", "band_max": "B1", "confidence": "medium", "source_summary": "Beginner water survival with caregiver assistance."},
+        {"id": "bss-seahorse", "name": "Seahorse", "age_track": "Under 3", "band_min": "B2", "band_max": "B3", "confidence": "low", "source_summary": "Advanced water survival with growing independence."},
+        {"id": "bss-starfish", "name": "Starfish", "age_track": "Age 3 and older", "band_min": "B2", "band_max": "B2", "confidence": "medium", "source_summary": "Water acclimation."},
+        {"id": "bss-minnow", "name": "Minnow", "age_track": "Age 3 and older", "band_min": "B3", "band_max": "B3", "confidence": "medium", "source_summary": "Beginner water survival."},
+        {"id": "bss-turtle-1", "name": "Turtle 1", "age_track": "Age 3 and older", "band_min": "B4", "band_max": "B4", "confidence": "medium", "source_summary": "Advanced water survival with introductory stroke work."},
+        {"id": "bss-turtle-2", "name": "Turtle 2", "age_track": "Stroke development", "band_min": "B5", "band_max": "B5", "confidence": "medium", "source_summary": "Stroke foundations."},
+        {"id": "bss-shark-1", "name": "Shark 1", "age_track": "Stroke development", "band_min": "B6", "band_max": "B6", "confidence": "medium", "source_summary": "Technique refinement."},
+        {"id": "bss-shark-2", "name": "Shark 2", "age_track": "Stroke development", "band_min": "B7", "band_max": "B7", "confidence": "medium", "source_summary": "Endurance building."}
+      ]
+    },
+    {
+      "id": "goldfish",
+      "name": "Goldfish Swim School",
+      "source_url": "https://goldfishswimschool.com/blog/your-golden-guide-to-skill-levels/",
+      "source_title": "Goldfish guide to skill levels",
+      "source_checked_on": "2026-11-11",
+      "source_note": "The current guide describes broad level families rather than every numbered local level; matches are intentionally ranges.",
+      "levels": [
+        {"id": "goldfish-junior", "name": "Junior", "age_track": "Ages 3–4; beginner–intermediate", "band_min": "B2", "band_max": "B4", "confidence": "low", "source_summary": "Builds independence from assisted work toward independent glides and kicks."},
+        {"id": "goldfish-glider", "name": "Glider", "age_track": "Ages 5–12; beginner–intermediate", "band_min": "B3", "band_max": "B5", "confidence": "low", "source_summary": "Moves beyond basics to body position, side breathing, and endurance."},
+        {"id": "goldfish-pro", "name": "Pro", "age_track": "Ages 4–12; intermediate–advanced", "band_min": "B5", "band_max": "B7", "confidence": "low", "source_summary": "Advanced work for swimmers comfortable with a variety of skills."}
+      ]
+    },
+    {
+      "id": "safesplash",
+      "name": "SafeSplash",
+      "source_url": "https://www.safesplash.com/blog/swim-lesson-levels-explained",
+      "source_title": "SafeSplash lesson levels explained",
+      "source_checked_on": "2026-11-11",
+      "source_note": "Current national 4 C's framework; exact class placement depends on age, skills, goals, and location.",
+      "levels": [
+        {"id": "ss-infant-toddler", "name": "Infant and toddler classes", "age_track": "Caregiver-supported track", "band_min": "B1", "band_max": "B1", "confidence": "medium", "source_summary": "Water familiarity, positive routines, breath control, and supported front and back skills."},
+        {"id": "ss-beginner-1", "name": "Beginner 1", "age_track": "Beginner", "band_min": "B2", "band_max": "B2", "confidence": "medium", "source_summary": "Comfortable stage: familiarity, breath control, and supported front and back skills."},
+        {"id": "ss-beginner-2-4", "name": "Beginner 2–4", "age_track": "Beginner progression", "band_min": "B3", "band_max": "B4", "confidence": "low", "source_summary": "Increasingly independent self-rescue skills, floating, rollovers, and safer entries and exits."},
+        {"id": "ss-intermediate", "name": "Intermediate levels", "age_track": "Intermediate", "band_min": "B5", "band_max": "B6", "confidence": "low", "source_summary": "Stroke mechanics and endurance over longer distances."},
+        {"id": "ss-advanced", "name": "Advanced levels", "age_track": "Advanced", "band_min": "B6", "band_max": "B7", "confidence": "low", "source_summary": "Technique refinement, stamina, and personal performance goals."}
+      ]
+    },
+    {
+      "id": "red-cross",
+      "name": "American Red Cross",
+      "source_url": "https://www.redcross.org/take-a-class/swimming/swim-lessons/kids-swim-lessons",
+      "source_title": "Red Cross swim lessons for children",
+      "source_checked_on": "2026-11-11",
+      "source_note": "Age tracks are separate progressions; a band match does not make Preschool and Learn-to-Swim levels interchangeable.",
+      "levels": [
+        {"id": "arc-parent-child", "name": "Parent & Child Aquatics", "age_track": "Up to age 3", "band_min": "B1", "band_max": "B1", "confidence": "medium", "source_summary": "Caregiver participation supports comfort and preparation for later classes."},
+        {"id": "arc-preschool-1", "name": "Preschool Aquatics 1", "age_track": "About ages 4–5", "band_min": "B2", "band_max": "B2", "confidence": "medium", "source_summary": "Orientation and basic aquatic skills."},
+        {"id": "arc-preschool-2", "name": "Preschool Aquatics 2", "age_track": "About ages 4–5", "band_min": "B3", "band_max": "B3", "confidence": "medium", "source_summary": "Greater comfort and independence."},
+        {"id": "arc-preschool-3", "name": "Preschool Aquatics 3", "age_track": "About ages 4–5", "band_min": "B4", "band_max": "B4", "confidence": "medium", "source_summary": "Basic swimming propulsive skills."},
+        {"id": "arc-lts-1", "name": "Learn-to-Swim Level 1", "age_track": "Ages 6–12", "band_min": "B2", "band_max": "B2", "confidence": "medium", "source_summary": "Introduction to water skills and comfort."},
+        {"id": "arc-lts-2", "name": "Learn-to-Swim Level 2", "age_track": "Ages 6–12", "band_min": "B3", "band_max": "B3", "confidence": "medium", "source_summary": "Fundamental aquatic skills and basic front and back propulsion."},
+        {"id": "arc-lts-3", "name": "Learn-to-Swim Level 3", "age_track": "Ages 6–12", "band_min": "B4", "band_max": "B4", "confidence": "medium", "source_summary": "Stroke development and progress toward water competency."},
+        {"id": "arc-lts-4", "name": "Learn-to-Swim Level 4", "age_track": "Ages 6–12", "band_min": "B5", "band_max": "B5", "confidence": "medium", "source_summary": "Stroke improvement and additional aquatic skills."},
+        {"id": "arc-lts-5", "name": "Learn-to-Swim Level 5", "age_track": "Ages 6–12", "band_min": "B6", "band_max": "B6", "confidence": "medium", "source_summary": "Stroke refinement and efficiency."},
+        {"id": "arc-lts-6", "name": "Learn-to-Swim Level 6", "age_track": "Ages 6–12", "band_min": "B7", "band_max": "B7", "confidence": "medium", "source_summary": "Swimming and skill proficiency over greater distances with advanced-course options."}
+      ]
+    },
+    {
+      "id": "ymca",
+      "name": "YMCA",
+      "source_url": "https://www.ymca.org/what-we-do/healthy-living/water-safety",
+      "source_title": "YMCA water safety and swim lessons",
+      "source_checked_on": "2026-11-11",
+      "source_note": "The national page defines three broad categories; local Y stage names and placement rules vary.",
+      "levels": [
+        {"id": "ymca-starters", "name": "Swim Starters", "age_track": "Ages 6 months–3 years; caregiver supported", "band_min": "B1", "band_max": "B1", "confidence": "medium", "source_summary": "Readiness, confidence, supervision, prevention, and emergency planning."},
+        {"id": "ymca-basics", "name": "Swim Basics", "age_track": "All ages", "band_min": "B2", "band_max": "B4", "confidence": "low", "source_summary": "Comfort, safe habits, underwater exploration, and swimming to safety after a fall."},
+        {"id": "ymca-strokes", "name": "Swim Strokes", "age_track": "School-age, teens, and adults", "band_min": "B5", "band_max": "B7", "confidence": "low", "source_summary": "Stroke introduction and refinement after fundamentals are mastered."}
+      ]
+    }
+  ]
+}
