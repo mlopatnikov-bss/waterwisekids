@@ -203,6 +203,22 @@ def check(root: Path) -> list[str]:
             if required not in implementation_status:
                 errors.append(f"audit implementation ledger is missing current evidence: {required}")
 
+    youtube_pack_path = root / "docs/mention-share-engine/youtube-production-pack.md"
+    if youtube_pack_path.exists():
+        youtube_pack = youtube_pack_path.read_text(encoding="utf-8")
+        youtube_pack_normalized = re.sub(r"\s+", " ", youtube_pack.casefold())
+        for required in (
+            "same owner operates",
+            "Swim School businesses",
+            "Lessons never make a child drown-proof",
+            "No national, state or metro average is publishable",
+            "The receiving school must assess the swimmer",
+            "Plain-English research, not legal advice",
+            "not inspection, certification",
+        ):
+            if required.casefold() not in youtube_pack_normalized:
+                errors.append(f"YouTube production pack is missing trust boundary: {required}")
+
     price_guard = root / "tools/wwk-price-index/check_price_index.py"
     if price_guard.exists():
         result = subprocess.run(

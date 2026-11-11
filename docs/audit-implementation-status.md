@@ -56,7 +56,8 @@ been collected.
   local subsets.
 - Newsroom and evidence-gated seasonal release calendar.
 - Mention-share operating guide for YouTube, Reddit, and community collection,
-  including ownership disclosure and anti-astroturfing rules.
+  including ownership disclosure and anti-astroturfing rules, plus a six-episode
+  recording-ready YouTube production pack with source and limitation cards.
 - Spanish publication queue for 40 pages with a named-native-reviewer and exact-
   revision approval gate.
 - AAP-aligned printable pediatrician handout and QR code.
