@@ -5,7 +5,8 @@
 - Health endpoint: `https://mcp.waterwisekids.com/health`
 - Server version: `0.2.0`
 - Deployed Cloudflare version: `bcface73-0130-445e-8b8e-f1bf7969d55c`
-- Source commit: `80763616a`
+- Deployed source commit before integration rebase: `80763616a`
+- Byte-equivalent integrated Worker commit: `0c9d27329`
 
 ## Verified externally
 
