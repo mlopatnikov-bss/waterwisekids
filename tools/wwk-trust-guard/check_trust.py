@@ -158,6 +158,43 @@ def check(root: Path) -> list[str]:
             detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
             errors.append(f"price-index guard failed: {detail}")
 
+    governance_builder = root / "tools/wwk-governance/build_governance_pages.py"
+    if governance_builder.exists():
+        result = subprocess.run(
+            [sys.executable, str(governance_builder), "--check"],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"governance-page guard failed: {detail}")
+
+    governance_requirements = {
+        "editorial-policy/index.html": "AI tools may help organize research",
+        "medical-review-policy/index.html": "does not currently claim that every medical",
+        "corrections/index.html": "swim-lesson starting age",
+        "ownership-disclosure/index.html": "VTL Holding LLC",
+        "authors/michael-plotnikov/index.html": "does not present Michael as a physician",
+    }
+    for relative, required in governance_requirements.items():
+        path = root / relative
+        if not path.exists() or required not in path.read_text(encoding="utf-8"):
+            errors.append(f"{relative}: missing required governance disclosure")
+
+    about = (root / "about/index.html").read_text(encoding="utf-8")
+    for href in (
+        "/editorial-policy/",
+        "/medical-review-policy/",
+        "/corrections/",
+        "/ownership-disclosure/",
+        "/authors/michael-plotnikov/",
+    ):
+        if f'href="{href}"' not in about:
+            errors.append(f"about/index.html: missing governance link {href}")
+    if "team is made up of certified swim instructors" in about.casefold():
+        errors.append("about/index.html: retains an unverified team credential claim")
+
     return errors
 
 
