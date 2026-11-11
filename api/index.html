@@ -11,13 +11,13 @@
   <link rel="apple-touch-icon" href="/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WaterWiseKids Open Data API & MCP Reference</title>
-  <meta name="description" content="Read-only JSON datasets for swim schools, price observations, level mappings, law research and access diagnostics, plus a local MCP reference server.">
+  <meta name="description" content="Read-only JSON datasets and a public MCP server for swim-school discovery, price observations, level mappings and source-linked water-safety law research.">
   <link rel="canonical" href="https://www.waterwisekids.com/api/">
   <meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.waterwisekids.com/api/">
   <meta property="og:title" content="WaterWiseKids Open Data API & MCP Reference">
-  <meta property="og:description" content="Read-only JSON datasets for swim schools, price observations, level mappings, law research and access diagnostics, plus a local MCP reference server.">
+  <meta property="og:description" content="Read-only JSON datasets and a public MCP server for swim-school discovery, price observations, level mappings and source-linked water-safety law research.">
   <meta property="og:site_name" content="WaterWiseKids">
   <meta property="og:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png">
   <meta property="og:image:alt" content="Terms of Service — WaterWiseKids water safety guide">
@@ -25,7 +25,7 @@
   <meta property="og:image:height" content="630">
 <meta content="summary_large_image" name="twitter:card">
 <meta name="twitter:title" content="WaterWiseKids Open Data API & MCP Reference">
-<meta name="twitter:description" content="Read-only JSON datasets for swim schools, price observations, level mappings, law research and access diagnostics, plus a local MCP reference server.">
+<meta name="twitter:description" content="Read-only JSON datasets and a public MCP server for swim-school discovery, price observations, level mappings and source-linked water-safety law research.">
 <meta name="twitter:image" content="https://www.waterwisekids.com/assets/images/waterwisekids-og.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/main.css?v=20261013navflow2">
@@ -158,15 +158,16 @@
   </header>
 
   <!-- Page Header -->
-  <div class="page-header" style="--v4-original-order: 2;"><div class="page-header-content"><h1>WaterWiseKids Open Data</h1><p>Read-only JSON beta and a local MCP reference server</p></div></div>
+  <div class="page-header" style="--v4-original-order: 2;"><div class="page-header-content"><h1>WaterWiseKids Open Data</h1><p>Read-only JSON datasets and public MCP tools</p></div></div>
 
   <!-- Content -->
   <main class="content" style="--v4-original-order: 3;">
 <div class="api-alert"><strong>Beta means constrained claims.</strong> These files expose source-linked records, not hidden confidence. Price data returns observations rather than a benchmark; level matches are not placement; law summaries are not legal advice; access diagnostics are not rankings.</div>
 <p>The API is static, cacheable JSON with stable versioned paths. It requires no key and performs no write operation. Use the <a href="/assets/data/api/v1/catalog.json">machine-readable catalog</a> to discover datasets and their limitations.</p>
 <h2>JSON endpoints</h2><section class="endpoint"><h3>Schools</h3><code>https://www.waterwisekids.com/assets/data/api/v1/schools.json</code><p><small>starting directory, not a complete provider census</small></p></section><section class="endpoint"><h3>Price Observations</h3><code>https://www.waterwisekids.com/assets/data/price-index/pilot-observations.json</code><p><small>pilot observations only; no national or state benchmark is publishable</small></p></section><section class="endpoint"><h3>Level Crosswalk</h3><code>https://www.waterwisekids.com/assets/data/level-crosswalk/v0.1.json</code><p><small>approximate descriptive overlap, not placement equivalency</small></p></section><section class="endpoint"><h3>Law Atlas</h3><code>https://www.waterwisekids.com/assets/data/law-atlas/v0.1.json</code><p><small>three-jurisdiction verified pilot; not legal advice</small></p></section><section class="endpoint"><h3>Access Diagnostic</h3><code>https://www.waterwisekids.com/assets/data/swim-access/pilot-counties.json</code><p><small>coverage diagnostic; not an access score or ranking</small></p></section><section class="endpoint"><h3>Transparency Standard</h3><code>https://www.waterwisekids.com/assets/data/transparency-standard/v0.1.json</code><p><small>disclosure standard; not safety certification or endorsement</small></p></section>
-<h2>MCP reference server</h2>
-<p>The repository includes a dependency-free, read-only stdio MCP server. It is a reference implementation for local use and deployment testing; WWK does <strong>not</strong> yet claim a publicly hosted MCP transport.</p>
+<h2>Public MCP server</h2>
+<p>Connect an MCP Streamable HTTP client to <code>https://mcp.waterwisekids.com/mcp</code>. The public beta requires no key and exposes only the four read-only tools below. It has no database or write credentials. Its health endpoint is <a href="https://mcp.waterwisekids.com/health">mcp.waterwisekids.com/health</a>.</p>
+<p><small>Transport limits: requests are capped at 64 KiB; invalid hosts and browser origins fail closed; and layered burst/rate controls protect the public service. Dataset caveats remain part of every tool response.</small></p>
 <table class="tool-table"><thead><tr><th>Tool</th><th>Behavior and guardrail</th></tr></thead><tbody>
 <tr><td><code>find_swim_schools</code></td><td>Returns source-checked directory locations by ZIP-centroid distance and disclosed filters. Results are not a complete market census.</td></tr>
 <tr><td><code>get_price_benchmark</code></td><td>Returns “not publishable” while price sampling gates fail; it may return underlying state observations without calling them a benchmark.</td></tr>

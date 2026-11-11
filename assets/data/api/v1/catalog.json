@@ -44,9 +44,13 @@
     }
   ],
   "mcp": {
-    "source_path": "/mcp-server/wwk_server.py",
-    "transport": "stdio reference implementation",
-    "hosted_status": "not_publicly_hosted",
+    "endpoint": "https://mcp.waterwisekids.com/mcp",
+    "health": "https://mcp.waterwisekids.com/health",
+    "transport": "MCP Streamable HTTP",
+    "hosted_status": "public_read_only",
+    "server_version": "0.2.0",
+    "local_reference_source_path": "/mcp-server/wwk_server.py",
+    "limitation": "public beta; read-only; tools preserve dataset publication gates and disclaimers",
     "tools": [
       "find_swim_schools",
       "get_price_benchmark",

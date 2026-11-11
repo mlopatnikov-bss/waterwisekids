@@ -71,9 +71,13 @@ def build_catalog(school_count: int) -> dict:
             {"id": "transparency_standard", "url": "/assets/data/transparency-standard/v0.1.json", "format": "application/json", "limitation": "disclosure standard; not safety certification or endorsement"}
         ],
         "mcp": {
-            "source_path": "/mcp-server/wwk_server.py",
-            "transport": "stdio reference implementation",
-            "hosted_status": "not_publicly_hosted",
+            "endpoint": "https://mcp.waterwisekids.com/mcp",
+            "health": "https://mcp.waterwisekids.com/health",
+            "transport": "MCP Streamable HTTP",
+            "hosted_status": "public_read_only",
+            "server_version": "0.2.0",
+            "local_reference_source_path": "/mcp-server/wwk_server.py",
+            "limitation": "public beta; read-only; tools preserve dataset publication gates and disclaimers",
             "tools": ["find_swim_schools", "get_price_benchmark", "translate_level", "get_state_laws"]
         }
     }
@@ -83,7 +87,7 @@ def build_page(catalog: dict) -> str:
     document = TEMPLATE.read_text(encoding="utf-8")
     url = "https://www.waterwisekids.com/api/"
     title = "WaterWiseKids Open Data API & MCP Reference"
-    description = "Read-only JSON datasets for swim schools, price observations, level mappings, law research and access diagnostics, plus a local MCP reference server."
+    description = "Read-only JSON datasets and a public MCP server for swim-school discovery, price observations, level mappings and source-linked water-safety law research."
     for pattern, replacement in [
         (r"<title>.*?</title>", f"<title>{title}</title>"),
         (r'<meta name="description" content=".*?">', f'<meta name="description" content="{description}">'),
@@ -104,7 +108,7 @@ def build_page(catalog: dict) -> str:
     @media(max-width:700px){.content{padding:2rem 1rem}.tool-table{font-size:.84rem}}
     """
     document = document.replace("\n</style>", css + "\n</style>", 1)
-    header = '''<div class="page-header" style="--v4-original-order: 2;"><div class="page-header-content"><h1>WaterWiseKids Open Data</h1><p>Read-only JSON beta and a local MCP reference server</p></div></div>'''
+    header = '''<div class="page-header" style="--v4-original-order: 2;"><div class="page-header-content"><h1>WaterWiseKids Open Data</h1><p>Read-only JSON datasets and public MCP tools</p></div></div>'''
     document, count = re.subn(r'<div class="page-header".*?</div>\s*</div>', header, document, count=1, flags=re.S)
     if count != 1:
         raise RuntimeError("failed to replace header")
@@ -116,8 +120,9 @@ def build_page(catalog: dict) -> str:
 <div class="api-alert"><strong>Beta means constrained claims.</strong> These files expose source-linked records, not hidden confidence. Price data returns observations rather than a benchmark; level matches are not placement; law summaries are not legal advice; access diagnostics are not rankings.</div>
 <p>The API is static, cacheable JSON with stable versioned paths. It requires no key and performs no write operation. Use the <a href="/assets/data/api/v1/catalog.json">machine-readable catalog</a> to discover datasets and their limitations.</p>
 <h2>JSON endpoints</h2>{endpoint_html}
-<h2>MCP reference server</h2>
-<p>The repository includes a dependency-free, read-only stdio MCP server. It is a reference implementation for local use and deployment testing; WWK does <strong>not</strong> yet claim a publicly hosted MCP transport.</p>
+<h2>Public MCP server</h2>
+<p>Connect an MCP Streamable HTTP client to <code>https://mcp.waterwisekids.com/mcp</code>. The public beta requires no key and exposes only the four read-only tools below. It has no database or write credentials. Its health endpoint is <a href="https://mcp.waterwisekids.com/health">mcp.waterwisekids.com/health</a>.</p>
+<p><small>Transport limits: requests are capped at 64 KiB; invalid hosts and browser origins fail closed; and layered burst/rate controls protect the public service. Dataset caveats remain part of every tool response.</small></p>
 <table class="tool-table"><thead><tr><th>Tool</th><th>Behavior and guardrail</th></tr></thead><tbody>
 <tr><td><code>find_swim_schools</code></td><td>Returns source-checked directory locations by ZIP-centroid distance and disclosed filters. Results are not a complete market census.</td></tr>
 <tr><td><code>get_price_benchmark</code></td><td>Returns “not publishable” while price sampling gates fail; it may return underlying state observations without calling them a benchmark.</td></tr>

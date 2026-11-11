@@ -31,13 +31,13 @@ test("oversized MCP requests are rejected before parsing", async () => {
   assert.equal(response.status, 413);
 });
 
-test("candidate host fails closed without a rate-limit binding", async () => {
+test("production host fails closed without a rate-limit binding", async () => {
   const request = new Request("https://mcp.waterwisekids.com/mcp", {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: "{}",
   });
-  const response = await handleRequest(request, { ...localEnv, RUNTIME_ENV: "candidate" }, {});
+  const response = await handleRequest(request, { ...localEnv, RUNTIME_ENV: "production" }, {});
   assert.equal(response.status, 429);
 });
 

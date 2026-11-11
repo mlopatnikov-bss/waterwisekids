@@ -27,9 +27,10 @@ been collected.
   score and publication thresholds for future county pages.
 - Swim School Transparency Standard and claim flow: disclosure-only, never a
   safety certification or paid ranking signal.
-- Read-only JSON API, local MCP reference implementation, and a tested Cloudflare
-  Streamable HTTP deployment candidate with host, origin, body-size, and rate
-  limits. No claim of a hosted public endpoint is made before remote verification.
+- Read-only JSON API, local MCP reference implementation, and public Streamable
+  HTTP MCP endpoint at `https://mcp.waterwisekids.com/mcp`. The deployed Worker
+  has no write credentials and enforces host, origin, 64 KiB body, immediate burst,
+  and Cloudflare rate-limit boundaries.
 - NJ/PA local consolidation: six maintained hubs, 73 noindex transition pages,
   sitemap cleanup, and a deterministic Cloudflare Bulk Redirect package.
 - A frozen 100-prompt AI-visibility panel with evidence columns and Spanish and
@@ -55,6 +56,9 @@ been collected.
   mechanism for the 73 paths.
 - Cloudflare Email Routing is not onboarded. The site must not publish a domain
   address until a destination is verified and mail flow is tested.
+- The MCP custom domain, TLS, health endpoint, protocol initialization, tool list,
+  all four tool guardrails, invalid-origin/host rejection, body limit, and burst
+  limit were externally verified on 2026-11-11.
 
 ## Deliberately gated—not fabricated
 
@@ -62,8 +66,6 @@ been collected.
 - “Medically reviewed by” requires an accepted, credential-verified independent
   reviewer. A recruitment brief is ready.
 - A national Price Index requires enough current, representative observations.
-- The public MCP hostname still requires production deployment and an external
-  handshake/tool-call verification before it can be added to the API catalog.
 - A 50-state Law Atlas requires statute-level human verification and dates.
 - National county Access Atlas pages require real provider, Census, price, and
   scholarship joins that meet the stated thresholds.

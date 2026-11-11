@@ -30,8 +30,10 @@ def main() -> int:
     schools = json.loads((ROOT / "assets/data/api/v1/schools.json").read_text(encoding="utf-8"))
     if schools.get("count") != 799 or len(schools.get("records", [])) != 799:
         errors.append("public schools API count drifted from the directory")
-    if catalog.get("mcp", {}).get("hosted_status") != "not_publicly_hosted":
-        errors.append("catalog must not claim a hosted MCP endpoint")
+    if catalog.get("mcp", {}).get("hosted_status") != "public_read_only":
+        errors.append("catalog must identify the verified public MCP as read-only")
+    if catalog.get("mcp", {}).get("endpoint") != "https://mcp.waterwisekids.com/mcp":
+        errors.append("catalog public MCP endpoint is missing or incorrect")
     package = json.loads((REMOTE / "package.json").read_text(encoding="utf-8"))
     expected_pins = {
         "agents": "0.33.0",
@@ -43,7 +45,7 @@ def main() -> int:
             errors.append(f"remote MCP dependency is not pinned: {dependency}={version}")
     config = json.loads((REMOTE / "wrangler.jsonc").read_text(encoding="utf-8"))
     if config.get("workers_dev") is not False or config.get("preview_urls") is not False:
-        errors.append("remote MCP candidate must not expose an unreviewed workers.dev or preview URL")
+        errors.append("remote MCP production service must not expose workers.dev or preview URLs")
     routes = config.get("routes", [])
     expected_route = {"pattern": "mcp.waterwisekids.com", "custom_domain": True}
     if routes != [expected_route]:
@@ -51,7 +53,7 @@ def main() -> int:
     if config.get("vars", {}).get("RUNTIME_ENV") != "production":
         errors.append("remote MCP release configuration is not in production mode")
     if not any(item.get("name") == "MCP_RATE_LIMITER" for item in config.get("ratelimits", [])):
-        errors.append("remote MCP candidate is missing its rate-limit binding")
+        errors.append("remote MCP production service is missing its rate-limit binding")
     remote_core = (REMOTE / "src/core.mjs").read_text(encoding="utf-8")
     remote_worker = (REMOTE / "src/index.mjs").read_text(encoding="utf-8")
     for phrase in (
@@ -79,7 +81,7 @@ def main() -> int:
     if finder.get("status") != "ok" or "not a complete" not in finder.get("limitation", ""):
         errors.append("MCP finder omitted directory completeness limitation")
     page = (ROOT / "api/index.html").read_text(encoding="utf-8")
-    for phrase in ("publicly hosted MCP transport", "no national or state benchmark is publishable", "not a complete market census"):
+    for phrase in ("MCP Streamable HTTP client", "no national or state benchmark is publishable", "not a complete market census"):
         if phrase not in page:
             errors.append(f"API documentation missing limitation: {phrase}")
     if errors:
@@ -87,7 +89,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print("WWK API/MCP passed: 799 public records; local reference and hosted candidate preserve publication guardrails.")
+    print("WWK API/MCP passed: 799 public records; local reference and public transport preserve publication guardrails.")
     return 0
 
 

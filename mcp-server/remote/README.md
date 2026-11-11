@@ -1,8 +1,8 @@
-# WaterWiseKids remote MCP candidate
+# WaterWiseKids public remote MCP
 
-This package is a hosted-ready, read-only Cloudflare Worker for the four WWK open-data tools. It uses the MCP Streamable HTTP transport at `/mcp` and reads the already-public JSON datasets from `https://www.waterwisekids.com`.
+This package is the production, read-only Cloudflare Worker for the four WWK open-data tools. It uses the MCP Streamable HTTP transport at `https://mcp.waterwisekids.com/mcp` and reads the already-public JSON datasets from `https://www.waterwisekids.com`.
 
-It is a **deployment candidate, not a claim that a public endpoint is live**. Do not add a public MCP URL to the site or API catalog until the custom hostname, remote handshake, tool calls, limits, and observability have all been verified.
+The endpoint and its security boundaries were externally verified on 2026-11-11. See `evidence/remote-release-2026-11-11.md` for the release record.
 
 ## Safety boundaries
 
@@ -23,16 +23,15 @@ Run installs and builds through the Mac's external-development wrapper:
 ```sh
 /Users/bss/DeveloperTools/bin/dev-external --cwd /absolute/path/to/worktree -- npm install --prefix mcp-server/remote
 /Users/bss/DeveloperTools/bin/dev-external --cwd /absolute/path/to/worktree -- npm --prefix mcp-server/remote run check
-/Users/bss/DeveloperTools/bin/dev-external --cwd /absolute/path/to/worktree -- npm --prefix mcp-server/remote run deploy:candidate
+/Users/bss/DeveloperTools/bin/dev-external --cwd /absolute/path/to/worktree -- npm --prefix mcp-server/remote run bundle:release
 ```
 
 The dry run proves the Worker bundles. It does not deploy or modify DNS.
 
 ## Release sequence
 
-1. Add `mcp.waterwisekids.com` as a Worker custom domain in the WWK Cloudflare account.
-2. Deploy the reviewed commit with `PUBLIC_HOSTNAME=mcp.waterwisekids.com`, `DATA_ORIGIN=https://www.waterwisekids.com`, and the rate-limit binding intact.
-3. Verify `/health`, initialize, `tools/list`, and all four tools from an external MCP client.
-4. Confirm that an invalid host, invalid browser origin, oversized body, and rate-limit overflow fail closed.
-5. Review Worker logs for accidental sensitive data; this service should log errors, not tool arguments or returned records.
-6. Only then publish the endpoint in the WWK API catalog and public documentation.
+For each update: test and bundle the exact reviewed commit, deploy with the custom
+domain and both rate-control layers intact, repeat the external protocol and
+boundary checks, record the Cloudflare version ID, and then update the release
+evidence. The Worker logs errors only; tool arguments and returned records are not
+written to an application database.
