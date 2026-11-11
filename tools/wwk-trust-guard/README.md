@@ -9,6 +9,7 @@ This release check protects the public claims most likely to damage family trust
 - exact guide totals, which remain prohibited until they have a release-time generator
 - price-index normalization, official-source freshness, and publication gates
 - internal price-candidate source coverage, normalization readiness, and no-promotion status
+- 51-jurisdiction law-research coverage and claim-free unpublished tasks
 - public editorial, medical-review, corrections, ownership, and author disclosures
 
 Run from the repository root:
