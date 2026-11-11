@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 
-EXCLUDED_PARTS = {".git", ".next", "node_modules", "commercial-poc"}
+EXCLUDED_PARTS = {".git", ".next", ".deploy", "node_modules", "commercial-poc"}
 REVIEW_BLOCKED = (
     "verified parent ratings",
     "collects parent ratings",

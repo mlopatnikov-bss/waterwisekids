@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
-EXCLUDED = {".git", ".next", "node_modules", "commercial-poc"}
+EXCLUDED = {".git", ".next", ".deploy", "node_modules", "commercial-poc"}
 PROFILE = "/authors/michael-plotnikov/"
 OLD = {
     '<div class="article-meta-item">WaterWiseKids Editorial Team</div>': (
