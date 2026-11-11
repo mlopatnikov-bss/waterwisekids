@@ -182,6 +182,18 @@ def check(root: Path) -> list[str]:
             detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
             errors.append(f"swim-level crosswalk guard failed: {detail}")
 
+    law_atlas_guard = root / "tools/wwk-law-atlas/check_law_atlas.py"
+    if law_atlas_guard.exists():
+        result = subprocess.run(
+            [sys.executable, str(law_atlas_guard)],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip().replace("\n", " | ")
+            errors.append(f"water-safety law-atlas guard failed: {detail}")
+
     governance_requirements = {
         "editorial-policy/index.html": "AI tools may help organize research",
         "medical-review-policy/index.html": "does not currently claim that every medical",
@@ -221,7 +233,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index gates, and crosswalk guardrails are consistent.")
+    print("WWK trust guard passed: safety claims, review policy, ownership disclosure, directory counts, price-index gates, crosswalk guardrails, and law-atlas sources are consistent.")
     return 0
 
 

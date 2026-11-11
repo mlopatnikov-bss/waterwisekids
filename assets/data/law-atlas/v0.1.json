@@ -1,0 +1,92 @@
+{
+  "schema_version": "0.1.0",
+  "title": "WaterWiseKids Water-Safety Law Atlas",
+  "status": "verified_pilot",
+  "license": "CC-BY-4.0",
+  "published_on": "2026-11-11",
+  "last_verified": "2026-11-11",
+  "next_review_by": "2027-02-09",
+  "coverage": {
+    "verified_jurisdictions": 3,
+    "total_jurisdictions": 51,
+    "note": "Only Florida, New Jersey, and Pennsylvania are published in this pilot. The remaining states and District of Columbia stay unpublished until their controlling government sources receive a second review."
+  },
+  "disclaimer": "Plain-English research, not legal advice. Building codes and boating rules can change and local amendments may control. Confirm the rule for an address or trip with the enforcing agency before relying on this atlas.",
+  "federal_baseline": {
+    "topic": "Child life-jacket wear on vessels",
+    "plain_language": "When a vessel is underway, federal law generally requires children under 13 to wear an appropriate U.S. Coast Guard-approved life jacket unless below deck or inside an enclosed cabin. A different state child-wear rule applies on waters under that state's jurisdiction.",
+    "source_url": "https://www.uscgboating.org/content/frequently-asked-questions.php?lv=true",
+    "source_title": "U.S. Coast Guard Boating Safety FAQ",
+    "source_checked_on": "2026-11-11"
+  },
+  "jurisdictions": [
+    {
+      "code": "FL",
+      "name": "Florida",
+      "verification_status": "verified",
+      "modules": {
+        "residential_pool_barrier": {
+          "status": "verified",
+          "plain_language": "Florida's Residential Swimming Pool Safety Act requires a residential pool barrier at least 4 feet high on the outside. It must prevent a young child from crawling under, squeezing through, or climbing over; access gates must open away from the pool, self-close, and self-latch. Above-ground pool structures or access controls may serve as barriers only when the statute's conditions are met.",
+          "local_note": "The statute sets statewide requirements, but a local building department may apply additional construction-code details. Confirm the permit and inspection rules for the property address.",
+          "source_url": "https://www.flsenate.gov/Laws/Statutes/2026/515.29",
+          "source_title": "2026 Florida Statutes § 515.29",
+          "source_checked_on": "2026-11-11"
+        },
+        "child_life_jacket": {
+          "status": "federal_baseline_only",
+          "plain_language": "State-specific rule not yet published. Use the federal under-13 baseline as a floor and confirm Florida boating rules before departure.",
+          "source_url": "https://www.uscgboating.org/content/frequently-asked-questions.php?lv=true",
+          "source_title": "U.S. Coast Guard Boating Safety FAQ",
+          "source_checked_on": "2026-11-11"
+        }
+      }
+    },
+    {
+      "code": "NJ",
+      "name": "New Jersey",
+      "verification_status": "verified",
+      "modules": {
+        "residential_pool_barrier": {
+          "status": "verified_framework",
+          "plain_language": "New Jersey regulates residential pool barriers through its Uniform Construction Code. The Department of Community Affairs lists the 2024 New Jersey editions of the International Residential Code and referenced International Swimming Pool and Spa Code as current from August 17, 2026.",
+          "local_note": "The official state page identifies the adopted code framework but does not reproduce every barrier dimension. Obtain the applicable section and any local requirements from the municipal construction official before building or altering a barrier.",
+          "source_url": "https://nj.gov/dca/codes/codreg/current.shtml",
+          "source_title": "New Jersey DCA — Current Construction Codes",
+          "source_checked_on": "2026-11-11"
+        },
+        "child_life_jacket": {
+          "status": "federal_baseline_only",
+          "plain_language": "State-specific rule not yet published. Use the federal under-13 baseline as a floor and confirm New Jersey boating rules before departure.",
+          "source_url": "https://www.uscgboating.org/content/frequently-asked-questions.php?lv=true",
+          "source_title": "U.S. Coast Guard Boating Safety FAQ",
+          "source_checked_on": "2026-11-11"
+        }
+      }
+    },
+    {
+      "code": "PA",
+      "name": "Pennsylvania",
+      "verification_status": "verified",
+      "modules": {
+        "residential_pool_barrier": {
+          "status": "verified_framework",
+          "plain_language": "Pennsylvania's Uniform Construction Code regulates swimming-pool construction statewide. The Commonwealth says swimming-pool and hot-tub installation requires a permit, and more than 90% of municipalities administer and enforce the UCC locally.",
+          "local_note": "Ask the municipality or its certified third-party agency which adopted code sections and local amendments apply to the address. In opt-out municipalities, use the Commonwealth's listed enforcement process.",
+          "source_url": "https://www.pa.gov/services/dli/apply-for-a-uniform-construction-code-building-permit",
+          "source_title": "Pennsylvania — Apply for a UCC Building Permit",
+          "source_checked_on": "2026-11-11",
+          "secondary_source_url": "https://www.pa.gov/agencies/dli/programs-services/labor-management-relations/bureau-of-occupational-and-industrial-safety/uniform-construction-code-home",
+          "secondary_source_title": "Pennsylvania DLI — Uniform Construction Code"
+        },
+        "child_life_jacket": {
+          "status": "federal_baseline_only",
+          "plain_language": "State-specific rule not yet published. Use the federal under-13 baseline as a floor and confirm Pennsylvania boating rules before departure.",
+          "source_url": "https://www.uscgboating.org/content/frequently-asked-questions.php?lv=true",
+          "source_title": "U.S. Coast Guard Boating Safety FAQ",
+          "source_checked_on": "2026-11-11"
+        }
+      }
+    }
+  ]
+}
