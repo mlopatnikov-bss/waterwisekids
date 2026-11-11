@@ -88,7 +88,8 @@ been collected.
 - Public Spanish pages and hreflang require a named native-speaking reviewer.
 - “Medically reviewed by” requires an accepted, credential-verified independent
   reviewer. A recruitment brief and exact-revision packet for nine high-risk
-  sources are ready; no reviewer claim is published before signed decisions.
+  sources are ready, along with an official-profile-based outreach shortlist; no
+  reviewer claim is published before acceptance and exact-revision decisions.
 - A national Price Index requires enough current, representative observations.
 - A 50-state Law Atlas requires statute-level human verification and dates.
 - National county Access Atlas pages require real provider, Census, price, and

@@ -48,3 +48,9 @@ seeking a paid independent reviewer for a defined set of medical and safety
 pages. The role is review and correction—not endorsement of any swim school.
 Would you be open to discussing scope, credentials, conflicts, turnaround time,
 and compensation?
+
+The dated candidate shortlist at
+`docs/reviewer-recruitment/candidate-shortlist-2026-11-11.md` prioritizes current
+AAP policy authors and a regional injury-prevention specialist using official
+institutional profiles. It is research only; no candidate is represented as
+available or affiliated with WWK.
