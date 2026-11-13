@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A big sibling in goggles beside a baby stroller at a pool, with a clipboard checklist">
+  <defs>
+    <linearGradient id="nbs-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#bae6fd"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#nbs-bg)"/>
+  <rect x="0" y="250" width="600" height="110" fill="#0ea5e9"/>
+  <path d="M0 262 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#e0f2fe" stroke-width="5"/>
+  <rect x="0" y="236" width="600" height="16" fill="#f8fafc"/>
+  <circle cx="120" cy="120" r="34" fill="#fcd34d" stroke="#0369a1" stroke-width="5"/>
+  <rect x="96" y="108" width="48" height="16" rx="8" fill="#0369a1"/>
+  <circle cx="108" cy="116" r="6" fill="#e0f2fe"/><circle cx="132" cy="116" r="6" fill="#e0f2fe"/>
+  <rect x="94" y="156" width="52" height="70" rx="16" fill="#f97316"/>
+  <rect x="200" y="150" width="120" height="56" rx="20" fill="#fff" stroke="#0369a1" stroke-width="5"/>
+  <path d="M200 178 q30 -60 90 -28" fill="#fda4af" stroke="#0369a1" stroke-width="5"/>
+  <circle cx="226" cy="222" r="12" fill="#334155"/><circle cx="296" cy="222" r="12" fill="#334155"/>
+  <path d="M320 160 l26 -30" stroke="#0369a1" stroke-width="6" stroke-linecap="round"/>
+  <rect x="420" y="40" width="140" height="196" rx="14" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="462" y="26" width="56" height="24" rx="8" fill="#0369a1"/>
+  <circle cx="444" cy="84" r="8" fill="#16a34a"/><rect x="462" y="80" width="76" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="444" cy="122" r="8" fill="#16a34a"/><rect x="462" y="118" width="60" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="444" cy="160" r="8" fill="#16a34a"/><rect x="462" y="156" width="76" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="444" cy="198" r="8" fill="#f97316"/><rect x="462" y="194" width="48" height="9" rx="4" fill="#94a3b8"/>
+</svg>
