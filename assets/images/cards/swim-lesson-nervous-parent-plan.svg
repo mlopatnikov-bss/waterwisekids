@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A calm parent on a bench at the pool edge watching a child in goggles, with a ring buoy and a clipboard checklist">
+  <defs>
+    <linearGradient id="nvp-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#bae6fd"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#nvp-bg)"/>
+  <rect x="0" y="250" width="600" height="110" fill="#0ea5e9"/>
+  <path d="M0 262 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#e0f2fe" stroke-width="5"/>
+  <rect x="0" y="236" width="600" height="16" fill="#f8fafc"/>
+  <rect x="40" y="196" width="150" height="14" rx="6" fill="#0369a1"/>
+  <rect x="52" y="208" width="10" height="28" fill="#0369a1"/><rect x="168" y="208" width="10" height="28" fill="#0369a1"/>
+  <circle cx="110" cy="112" r="30" fill="#fcd34d" stroke="#0369a1" stroke-width="5"/>
+  <path d="M98 124 q12 10 24 0" fill="none" stroke="#0369a1" stroke-width="4" stroke-linecap="round"/>
+  <rect x="84" y="146" width="52" height="54" rx="16" fill="#14b8a6"/>
+  <path d="M136 162 l28 -14" stroke="#14b8a6" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="290" cy="276" r="24" fill="#fcd34d" stroke="#0369a1" stroke-width="5"/>
+  <rect x="270" y="266" width="40" height="13" rx="6" fill="#0369a1"/>
+  <circle cx="280" cy="272" r="5" fill="#e0f2fe"/><circle cx="300" cy="272" r="5" fill="#e0f2fe"/>
+  <circle cx="230" cy="214" r="18" fill="none" stroke="#f97316" stroke-width="10"/>
+  <rect x="420" y="40" width="140" height="196" rx="14" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="462" y="26" width="56" height="24" rx="8" fill="#0369a1"/>
+  <circle cx="444" cy="84" r="8" fill="#16a34a"/><rect x="462" y="80" width="76" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="444" cy="122" r="8" fill="#16a34a"/><rect x="462" y="118" width="60" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="444" cy="160" r="8" fill="#16a34a"/><rect x="462" y="156" width="76" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="444" cy="198" r="8" fill="#f97316"/><rect x="462" y="194" width="48" height="9" rx="4" fill="#94a3b8"/>
+</svg>
