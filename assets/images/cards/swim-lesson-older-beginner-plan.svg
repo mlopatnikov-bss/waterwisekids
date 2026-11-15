@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A school-age child in goggles holding a kickboard in the pool, with a growth chart of stars and a check-marked clipboard">
+  <defs>
+    <linearGradient id="obp-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#bae6fd"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#obp-bg)"/>
+  <rect x="0" y="220" width="600" height="140" fill="#0ea5e9"/>
+  <path d="M0 232 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#e0f2fe" stroke-width="5"/>
+  <rect x="0" y="206" width="600" height="16" fill="#f8fafc"/>
+  <rect x="40" y="60" width="18" height="146" rx="6" fill="#fff" stroke="#0369a1" stroke-width="4"/>
+  <path d="M58 90 h10 M58 120 h10 M58 150 h10 M58 180 h10" stroke="#0369a1" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90 178 l5 10 11 1 -8 7 3 11 -11 -6 -11 6 3 -11 -8 -7 11 -1z" fill="#fcd34d" stroke="#0369a1" stroke-width="2"/>
+  <path d="M120 140 l5 10 11 1 -8 7 3 11 -11 -6 -11 6 3 -11 -8 -7 11 -1z" fill="#fcd34d" stroke="#0369a1" stroke-width="2"/>
+  <path d="M150 102 l5 10 11 1 -8 7 3 11 -11 -6 -11 6 3 -11 -8 -7 11 -1z" fill="#fcd34d" stroke="#0369a1" stroke-width="2"/>
+  <circle cx="270" cy="214" r="30" fill="#fcd34d" stroke="#0369a1" stroke-width="5"/>
+  <rect x="244" y="202" width="52" height="15" rx="7" fill="#0369a1"/>
+  <circle cx="257" cy="209" r="6" fill="#e0f2fe"/><circle cx="283" cy="209" r="6" fill="#e0f2fe"/>
+  <path d="M258 228 q12 9 24 0" fill="none" stroke="#0369a1" stroke-width="4" stroke-linecap="round"/>
+  <rect x="200" y="258" width="140" height="34" rx="12" fill="#f97316"/>
+  <rect x="226" y="248" width="14" height="22" rx="6" fill="#fcd34d"/><rect x="300" y="248" width="14" height="22" rx="6" fill="#fcd34d"/>
+  <rect x="420" y="30" width="140" height="196" rx="14" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="462" y="16" width="56" height="24" rx="8" fill="#0369a1"/>
+  <circle cx="444" cy="74" r="8" fill="#16a34a"/><rect x="462" y="70" width="76" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="444" cy="112" r="8" fill="#16a34a"/><rect x="462" y="108" width="60" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="444" cy="150" r="8" fill="#16a34a"/><rect x="462" y="146" width="76" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="444" cy="188" r="8" fill="#f97316"/><rect x="462" y="184" width="48" height="9" rx="4" fill="#94a3b8"/>
+</svg>
