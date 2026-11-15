@@ -3665,3 +3665,11 @@ ul.wwk-navlist > li > a.pool-state-link {
   box-sizing: border-box;
   height: 100%;
 }
+
+/* 2026-11-15 visual QA: list markers hanging in the gutter. Plain lists directly inside pool-care
+   articles (.pc-article), the pool-care numbered sources list (ol.pc-sources) and the "related resources"
+   link lists (.wwk-related-resources, 16 education/educator/local pages) had 0 left padding, so bullets and
+   numbers sat outside the text column (at the screen edge on phones). Indent them like article lists. */
+.pc-article > ul:not([class]), .pc-article > ol:not([class]) { padding-left: 1.4em; }
+.pc-article ol.pc-sources { padding-left: 1.6em; }
+.wwk-related-resources > ul, .wwk-related-resources > ol { padding-left: 1.4em; }
