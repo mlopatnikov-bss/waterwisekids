@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A cruise ship on the ocean with a small pool on deck, a ring buoy and a check-marked clipboard">
+  <defs>
+    <linearGradient id="csc-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#bae6fd"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#csc-bg)"/>
+  <circle cx="80" cy="70" r="30" fill="#fcd34d"/>
+  <rect x="0" y="250" width="600" height="110" fill="#0ea5e9"/>
+  <path d="M0 262 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#e0f2fe" stroke-width="5"/>
+  <path d="M40 200 h330 l-30 58 h-270 z" fill="#fff" stroke="#0369a1" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M70 230 h250" stroke="#0369a1" stroke-width="4"/>
+  <circle cx="100" cy="216" r="6" fill="#0369a1"/><circle cx="140" cy="216" r="6" fill="#0369a1"/><circle cx="180" cy="216" r="6" fill="#0369a1"/><circle cx="220" cy="216" r="6" fill="#0369a1"/><circle cx="260" cy="216" r="6" fill="#0369a1"/><circle cx="300" cy="216" r="6" fill="#0369a1"/>
+  <rect x="90" y="160" width="220" height="40" rx="6" fill="#fff" stroke="#0369a1" stroke-width="5"/>
+  <rect x="120" y="172" width="70" height="16" rx="4" fill="#38bdf8"/>
+  <path d="M90 160 v-8 M110 160 v-8 M130 160 v-8 M150 160 v-8 M170 160 v-8 M190 160 v-8 M210 160 v-8 M230 160 v-8 M250 160 v-8 M270 160 v-8 M290 160 v-8 M310 160 v-8 M86 152 h228" stroke="#0369a1" stroke-width="3" stroke-linecap="round"/>
+  <rect x="230" y="110" width="40" height="50" rx="6" fill="#f97316" stroke="#0369a1" stroke-width="4"/>
+  <circle cx="372" cy="292" r="26" fill="none" stroke="#f97316" stroke-width="12"/>
+  <circle cx="372" cy="292" r="26" fill="none" stroke="#fff" stroke-width="12" stroke-dasharray="14 27"/>
+  <rect x="430" y="40" width="140" height="196" rx="14" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="472" y="26" width="56" height="24" rx="8" fill="#0369a1"/>
+  <circle cx="454" cy="84" r="8" fill="#16a34a"/><rect x="472" y="80" width="76" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="454" cy="122" r="8" fill="#16a34a"/><rect x="472" y="118" width="60" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="454" cy="160" r="8" fill="#16a34a"/><rect x="472" y="156" width="76" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="454" cy="198" r="8" fill="#f97316"/><rect x="472" y="194" width="48" height="9" rx="4" fill="#94a3b8"/>
+</svg>
