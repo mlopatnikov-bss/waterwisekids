@@ -3673,3 +3673,14 @@ ul.wwk-navlist > li > a.pool-state-link {
 .pc-article > ul:not([class]), .pc-article > ol:not([class]) { padding-left: 1.4em; }
 .pc-article ol.pc-sources { padding-left: 1.6em; }
 .wwk-related-resources > ul, .wwk-related-resources > ol { padding-left: 1.4em; }
+
+/* 2026-11-16 visual QA: more list markers hanging in the gutter (same `* { padding: 0 }` reset cause).
+   Plain lists directly in local-page boxes (.wwk-highlight-box/.wwk-intro-box/.wwk-warning-box), teen/local
+   articles, root guide articles (.article), stroke-guide TL;DR boxes, the /education/ hub details panels and
+   adult-lessons sections; JS-tagged link lists (.wwk-navlist) in local clusters, local articles and article cards;
+   the hub-page ol.hub-steps and the transparency-standard ol.field-list (two-digit numbers were cut off at the
+   screen edge on phones). Zero-specificity margin so any page-level list indent still wins (no double indent). */
+:where(.wwk-highlight-box, .wwk-intro-box, .wwk-warning-box, .tldr-box, .wwk-local-content, .wwk-local-content article, .article, .hub-intro details, .section > section) > :where(ul:not([class]), ol:not([class])),
+:where(.wwk-local-cluster, .wwk-local-content article, .article .card) > :where(ul.wwk-navlist),
+:where(ol.hub-steps) { margin-left: 1.4em; }
+:where(ol.field-list) { margin-left: 1.9em; }
