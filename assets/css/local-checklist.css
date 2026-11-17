@@ -1,0 +1,10 @@
+/* Local parent checklists (Manhattan, Philadelphia suburbs, Jersey Shore).
+   Moved out of page-inline <style> by QA 2026-11-17 (no inline nav/footer CSS on pages).
+   Rules unchanged from the 2026-11-16 mobile fix (5c380c7b1): on phones the compact header nav
+   wraps left-aligned with 44px tap targets and sidebar list links get 5px vertical padding.
+   Desktop (>=769px) and print unaffected. */
+@media screen and (max-width:768px){
+  header nav[aria-label="Primary"]{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:0 10px;height:auto;min-height:0}
+  header nav[aria-label="Primary"] a{display:inline-flex;align-items:center;min-height:44px;padding:0}
+  .wwk-guide-card li a{display:inline-block;padding:5px 0}
+}
