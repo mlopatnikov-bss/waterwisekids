@@ -3684,3 +3684,18 @@ ul.wwk-navlist > li > a.pool-state-link {
 :where(.wwk-local-cluster, .wwk-local-content article, .article .card) > :where(ul.wwk-navlist),
 :where(ol.hub-steps) { margin-left: 1.4em; }
 :where(ol.field-list) { margin-left: 1.9em; }
+
+/* Visual QA 2026-11-17: directory program-filter chips (.v4-program-filters, injected by wwk-v4.js on
+   state directory pages). On desktop they had no styles at all and rendered as grey browser-default
+   buttons in Arial, touching the notice box below. On phones the selected chip set white text but the
+   base chip colour (!important) won, leaving dark text on the blue fill (2.99:1). */
+@media (min-width: 769px) {
+  .v4-program-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+  .v4-program-filters .v4-chip { display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; margin: 0; border: 1px solid #c7d6e2; border-radius: 999px; background: #fff; color: #13304a; font-family: inherit; font-size: 14px; font-weight: 600; line-height: 1; cursor: pointer; white-space: nowrap; }
+  .v4-program-filters .v4-chip:hover { border-color: #0369a1; color: #0369a1; }
+  .v4-program-filters .v4-chip[aria-pressed="true"] { background: #0369a1; border-color: #0369a1; color: #fff; }
+  .v4-program-filters .v4-chip:focus-visible { outline: 3px solid #0369a1; outline-offset: 2px; }
+}
+@media (max-width: 768px) {
+  html[data-v4-static] .v4-program-filters .v4-chip[aria-pressed="true"] { color: #fff !important; border-color: #0369a1; }
+}
