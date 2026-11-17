@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A new house with moving boxes, a fenced pool with a latched gate and a check-marked clipboard">
+  <defs>
+    <linearGradient id="mnh-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#bae6fd"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#mnh-bg)"/>
+  <circle cx="70" cy="62" r="28" fill="#fcd34d"/>
+  <rect x="0" y="270" width="600" height="90" fill="#86efac"/>
+  <path d="M60 150 l110 -80 l110 80" fill="#fff" stroke="#0369a1" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="80" y="150" width="180" height="120" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="150" y="200" width="40" height="70" rx="4" fill="#38bdf8" stroke="#0369a1" stroke-width="4"/>
+  <rect x="100" y="172" width="34" height="30" rx="3" fill="#e0f2fe" stroke="#0369a1" stroke-width="4"/>
+  <rect x="206" y="172" width="34" height="30" rx="3" fill="#e0f2fe" stroke="#0369a1" stroke-width="4"/>
+  <rect x="40" y="236" width="44" height="36" fill="#d6a76a" stroke="#92400e" stroke-width="4"/>
+  <rect x="50" y="206" width="34" height="30" fill="#e7bf86" stroke="#92400e" stroke-width="4"/>
+  <path d="M40 254 h44 M50 221 h34" stroke="#92400e" stroke-width="3"/>
+  <rect x="290" y="236" width="120" height="34" rx="8" fill="#0ea5e9" stroke="#0369a1" stroke-width="4"/>
+  <path d="M280 200 v72 M300 200 v72 M320 200 v72 M380 200 v72 M400 200 v72 M420 200 v72 M276 206 h50 M374 206 h50" stroke="#0369a1" stroke-width="4" stroke-linecap="round"/>
+  <rect x="330" y="206" width="40" height="66" fill="none" stroke="#f97316" stroke-width="4"/>
+  <circle cx="362" cy="214" r="5" fill="#f97316"/>
+  <rect x="445" y="40" width="130" height="190" rx="14" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="482" y="26" width="56" height="24" rx="8" fill="#0369a1"/>
+  <circle cx="468" cy="84" r="8" fill="#16a34a"/><rect x="486" y="80" width="70" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="468" cy="122" r="8" fill="#16a34a"/><rect x="486" y="118" width="56" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="468" cy="160" r="8" fill="#16a34a"/><rect x="486" y="156" width="70" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="468" cy="198" r="8" fill="#f97316"/><rect x="486" y="194" width="46" height="9" rx="4" fill="#94a3b8"/>
+</svg>
