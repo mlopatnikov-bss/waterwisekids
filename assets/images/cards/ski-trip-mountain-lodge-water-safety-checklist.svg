@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="Snowy mountains above a lodge hot tub with rising steam, a snowflake and a check-marked clipboard">
+  <defs>
+    <linearGradient id="stl-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#stl-bg)"/>
+  <path d="M0 230 L110 90 L190 190 L260 110 L380 240 Z" fill="#94a3b8"/>
+  <path d="M110 90 L140 128 L124 122 L110 136 L96 120 L84 124 Z M260 110 L292 146 L274 140 L260 154 L246 140 L232 144 Z" fill="#fff"/>
+  <rect x="0" y="230" width="430" height="130" fill="#fff"/>
+  <ellipse cx="210" cy="290" rx="150" ry="40" fill="#38bdf8" stroke="#0369a1" stroke-width="6"/>
+  <ellipse cx="210" cy="284" rx="118" ry="24" fill="#7dd3fc"/>
+  <path d="M160 250 q-12 -18 0 -36 q12 -18 0 -36 M210 246 q-12 -18 0 -36 q12 -18 0 -36 M260 250 q-12 -18 0 -36 q12 -18 0 -36" stroke="#cbd5e1" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <g stroke="#0369a1" stroke-width="5" stroke-linecap="round" transform="translate(370 70)">
+    <path d="M0 -30 V30 M-26 -15 L26 15 M-26 15 L26 -15"/>
+  </g>
+  <rect x="445" y="80" width="130" height="190" rx="14" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="482" y="66" width="56" height="24" rx="8" fill="#0369a1"/>
+  <circle cx="468" cy="124" r="8" fill="#16a34a"/><rect x="486" y="120" width="70" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="468" cy="162" r="8" fill="#16a34a"/><rect x="486" y="158" width="56" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="468" cy="200" r="8" fill="#16a34a"/><rect x="486" y="196" width="70" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="468" cy="238" r="8" fill="#f97316"/><rect x="486" y="234" width="46" height="9" rx="4" fill="#94a3b8"/>
+</svg>
