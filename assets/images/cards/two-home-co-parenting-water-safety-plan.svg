@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="Two houses connected by a dotted path with a pool between them and a check-marked clipboard">
+  <defs>
+    <linearGradient id="thp-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#thp-bg)"/>
+  <rect x="0" y="300" width="600" height="60" fill="#dcfce7"/>
+  <path d="M30 170 L110 110 L190 170 Z" fill="#bae6fd" stroke="#0369a1" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="45" y="170" width="130" height="130" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="95" y="235" width="32" height="65" rx="4" fill="#f97316"/>
+  <rect x="60" y="190" width="28" height="28" rx="3" fill="#fde68a" stroke="#0369a1" stroke-width="3"/>
+  <rect x="135" y="190" width="28" height="28" rx="3" fill="#fde68a" stroke="#0369a1" stroke-width="3"/>
+  <path d="M230 170 L310 110 L390 170 Z" fill="#fbcfe8" stroke="#0369a1" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="245" y="170" width="130" height="130" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="295" y="235" width="32" height="65" rx="4" fill="#16a34a"/>
+  <rect x="260" y="190" width="28" height="28" rx="3" fill="#fde68a" stroke="#0369a1" stroke-width="3"/>
+  <rect x="335" y="190" width="28" height="28" rx="3" fill="#fde68a" stroke="#0369a1" stroke-width="3"/>
+  <path d="M111 306 C 160 340, 260 340, 311 306" fill="none" stroke="#64748b" stroke-width="5" stroke-dasharray="10 9" stroke-linecap="round"/>
+  <ellipse cx="211" cy="80" rx="62" ry="22" fill="#38bdf8" stroke="#0369a1" stroke-width="5"/>
+  <path d="M166 80 q11 -8 22 0 t22 0 t22 0 t22 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M211 40 c-10 14 -16 22 -16 30 a16 16 0 0 0 32 0 c0 -8 -6 -16 -16 -30 z" fill="#0ea5e9" stroke="#0369a1" stroke-width="3" transform="translate(0,-14) scale(1)"/>
+  <rect x="445" y="80" width="130" height="190" rx="14" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <rect x="482" y="66" width="56" height="24" rx="8" fill="#0369a1"/>
+  <circle cx="468" cy="124" r="8" fill="#16a34a"/><rect x="486" y="120" width="70" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="468" cy="162" r="8" fill="#16a34a"/><rect x="486" y="158" width="56" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="468" cy="200" r="8" fill="#16a34a"/><rect x="486" y="196" width="70" height="9" rx="4" fill="#94a3b8"/>
+  <circle cx="468" cy="238" r="8" fill="#f97316"/><rect x="486" y="234" width="46" height="9" rx="4" fill="#94a3b8"/>
+</svg>
