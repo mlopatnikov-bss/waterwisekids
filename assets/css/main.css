@@ -3685,6 +3685,12 @@ ul.wwk-navlist > li > a.pool-state-link {
 :where(ol.hub-steps) { margin-left: 1.4em; }
 :where(ol.field-list) { margin-left: 1.9em; }
 
+/* Visual QA 2026-11-22: sidebar card lists (.sidebar-widget) on the four legacy guide pages (floaties-year-old,
+   pool-floaties-dangers, kayak-canoe-safety-kids, swimming-after-eating-myth). Same `* { padding: 0 }` reset cause:
+   the "Related Guides" link list (JS-tagged .wwk-navlist) and the plain fact list in each card had 0 indent, so the
+   outside disc markers sat on the card's left border. Zero-specificity, like the rules above. */
+:where(.sidebar-widget) > :where(ul:not([class]), ul.wwk-navlist) { margin-left: 1.4em; }
+
 /* Visual QA 2026-11-17: directory program-filter chips (.v4-program-filters, injected by wwk-v4.js on
    state directory pages). On desktop they had no styles at all and rendered as grey browser-default
    buttons in Arial, touching the notice box below. On phones the selected chip set white text but the
