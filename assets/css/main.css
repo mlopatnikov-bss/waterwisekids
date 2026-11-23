@@ -3705,3 +3705,12 @@ ul.wwk-navlist > li > a.pool-state-link {
 @media (max-width: 768px) {
   html[data-v4-static] .v4-program-filters .v4-chip[aria-pressed="true"] { color: #fff !important; border-color: #0369a1; }
 }
+
+/* Visual QA 2026-11-23: two more hanging-marker spots from the `* { padding: 0 }` reset.
+   (1) .sidebar-box TOC / resource lists on the swimmers-hub stroke guides (freestyle, backstroke, breaststroke)
+   and education/swim-lessons-cost.html: disc markers sat in the card's 24px padding, left of the "Table of
+   Contents"/"In This Guide" heading. Lists with an inline list-style (marker-free) are excluded.
+   (2) Directory school cards: the "Verified pool addresses" <details> list put its bullets in the card gutter,
+   left of the City/Phone text column. Zero-specificity, like the rules above. */
+:where(.sidebar-box) > :where(ul:not([style*="list-style"])),
+:where(.school-card details) > :where(ul:not([class])) { margin-left: 1.4em; }
