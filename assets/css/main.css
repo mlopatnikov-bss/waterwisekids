@@ -2720,6 +2720,13 @@ body > section.related-articles {
   margin-left: auto;
   margin-right: auto;
 }
+/* Visual QA 2026-11-24: the top-level "Keep Reading" card had no bottom
+   margin, so its rounded bottom edge butted straight onto the full-width
+   .wwk-follow band (0px gap at 390 and 1354). Add breathing room so the
+   card reads as a finished card above the band. */
+body > section.related-articles {
+  margin-bottom: 48px;
+}
 
 /* — Sidebar widget + article meta — */
 .sidebar-widget {
