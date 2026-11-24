@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A pair of eyeglasses in an open case beside prescription swim goggles and a pool">
+  <defs>
+    <linearGradient id="sgv-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#sgv-bg)"/>
+  <rect x="30" y="250" width="540" height="80" rx="16" fill="#38bdf8" stroke="#0369a1" stroke-width="6"/>
+  <path d="M50 280 q16 -10 32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <rect x="60" y="120" width="230" height="100" rx="40" fill="#fde68a" stroke="#92400e" stroke-width="5"/>
+  <circle cx="125" cy="168" r="34" fill="#fff" stroke="#0f172a" stroke-width="7"/>
+  <circle cx="225" cy="168" r="34" fill="#fff" stroke="#0f172a" stroke-width="7"/>
+  <path d="M159 164 q16 -12 32 0" fill="none" stroke="#0f172a" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="400" cy="160" rx="48" ry="34" fill="#bae6fd" stroke="#0369a1" stroke-width="7"/>
+  <ellipse cx="504" cy="160" rx="48" ry="34" fill="#bae6fd" stroke="#0369a1" stroke-width="7"/>
+  <path d="M448 160 h8" stroke="#0369a1" stroke-width="8" stroke-linecap="round"/>
+  <path d="M352 160 q-26 40 0 70 M552 160 q26 40 0 70" fill="none" stroke="#f97316" stroke-width="8" stroke-linecap="round"/>
+  <path d="M384 146 q10 -10 22 -4 M488 146 q10 -10 22 -4" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="300" cy="70" r="30" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <path d="M286 70 l10 10 l18 -20" fill="none" stroke="#16a34a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
