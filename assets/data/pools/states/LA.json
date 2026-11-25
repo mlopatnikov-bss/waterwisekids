@@ -315,8 +315,8 @@
     "postal_code": null,
     "precision": "street_number"
    },
-   "official_url": "http://myspar.org/309/Southern-Hills",
-   "hours_fees_url": "http://myspar.org/383/Aquatics",
+   "official_url": "https://myspar.org/309/Southern-Hills",
+   "hours_fees_url": "https://myspar.org/383/Aquatics",
    "setting": "unknown",
    "season": "seasonal",
    "access": [
@@ -345,13 +345,13 @@
      "applies_to": "venue",
      "kind": "dates",
      "text": "Summer-only pool, open from about the end of June and on weekends through Labor Day.",
-     "source": "http://myspar.org/383/Aquatics"
+     "source": "https://myspar.org/383/Aquatics"
     },
     {
      "applies_to": "venue",
      "kind": "hours",
      "text": "City pools are closed on Mondays.",
-     "source": "http://myspar.org/383/Aquatics"
+     "source": "https://myspar.org/383/Aquatics"
     }
    ],
    "child_rules": [],
@@ -365,22 +365,22 @@
    "sources": {
     "setting": [],
     "season": [
-     "http://myspar.org/383/Aquatics"
+     "https://myspar.org/383/Aquatics"
     ],
     "access": {
      "public_admission": [
-      "http://myspar.org/383/Aquatics"
+      "https://myspar.org/383/Aquatics"
      ]
     },
     "offerings": {
      "open_swim": [
-      "http://myspar.org/383/Aquatics"
+      "https://myspar.org/383/Aquatics"
      ],
      "lap_swim": [],
      "lessons": []
     },
     "address": [
-     "http://myspar.org/309/Southern-Hills"
+     "https://myspar.org/309/Southern-Hills"
     ]
    },
    "last_verified": "2026-10-12",
