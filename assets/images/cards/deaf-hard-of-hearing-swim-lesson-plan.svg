@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="A hearing aid resting in an open dry case beside a raised hand signal and a pool">
+  <defs>
+    <linearGradient id="dhh-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#dhh-bg)"/>
+  <rect x="30" y="250" width="540" height="80" rx="16" fill="#38bdf8" stroke="#0369a1" stroke-width="6"/>
+  <path d="M50 280 q16 -10 32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <rect x="60" y="120" width="230" height="100" rx="30" fill="#fde68a" stroke="#92400e" stroke-width="5"/>
+  <path d="M150 140 q40 -6 46 30 q4 30 -26 40 q-14 4 -14 -10" fill="#f1f5f9" stroke="#0f172a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 210 q-30 6 -40 -14" fill="none" stroke="#0f172a" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="176" cy="168" r="6" fill="#0369a1"/>
+  <path d="M410 230 v-60 q0 -10 10 -10 q10 0 10 10 v-50 q0 -10 10 -10 q10 0 10 10 v-10 q0 -10 10 -10 q10 0 10 10 v14 q0 -10 10 -10 q10 0 10 10 v70 q0 30 -30 36 h-20 q-22 0 -30 -20 l-20 -40 q-4 -10 6 -14 q8 -2 14 6 z" fill="#fed7aa" stroke="#9a3412" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M370 110 q-14 -14 0 -28 M352 124 q-28 -28 0 -56" fill="none" stroke="#f97316" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="300" cy="70" r="30" fill="#fff" stroke="#0369a1" stroke-width="6"/>
+  <path d="M286 70 l10 10 l18 -20" fill="none" stroke="#16a34a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
