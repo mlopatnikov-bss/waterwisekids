@@ -27,6 +27,7 @@ def render() -> str:
         (r'<meta property="og:url" content=".*?">', f'<meta property="og:url" content="{url}">'),
         (r'<meta property="og:title" content=".*?">', f'<meta property="og:title" content="{title}">'),
         (r'<meta property="og:description" content=".*?">', f'<meta property="og:description" content="{description}">'),
+        (r'<meta property="og:image:alt" content=".*?">', '<meta property="og:image:alt" content="WaterWiseKids">'),
         (r'<meta name="twitter:title" content=".*?">', f'<meta name="twitter:title" content="{title}">'),
         (r'<meta name="twitter:description" content=".*?">', f'<meta name="twitter:description" content="{description}">'),
     ]
