@@ -48,6 +48,11 @@ def group_table(rows: list[dict]) -> str:
         if row.get("mandatory_fee_label"):
             fee += f'<br><small>{html.escape(row["mandatory_fee_label"])}</small>'
         qualifier = row["price_qualifier"].replace("_", " ")
+        availability = row.get("availability_status") or ""
+        if availability.startswith("past_season_ended_"):
+            qualifier = f'Past season ended {availability.removeprefix("past_season_ended_")}'
+        elif availability:
+            qualifier += f'. {availability.replace("_", " ").capitalize()}'
         if row["subsidized"]:
             qualifier += "; subsidized"
         body.append(
@@ -163,7 +168,23 @@ def render() -> str:
     fragment = fragment.replace("{{OBSERVATION_COUNT}}", str(len(rows)))
     fragment = fragment.replace("{{LOCATION_COUNT}}", str(len(locations)))
     fragment = fragment.replace("{{STATE_COUNT}}", str(len(states)))
-    fragment = fragment.replace("{{PILOT_GROUP_TABLE}}", group_table(rows))
+    past_season_rows = [
+        row for row in rows
+        if row["class_format"] == "group"
+        and (row.get("availability_status") or "").startswith("past_season_")
+    ]
+    regular_rows = [row for row in rows if row not in past_season_rows]
+    fragment = fragment.replace("{{PILOT_GROUP_TABLE}}", group_table(regular_rows))
+    historical = ""
+    if past_season_rows:
+        historical = (
+            '<h3>Past-season prices</h3>'
+            '<p>These sessions have ended. The original prices are shown for historical reference.</p>'
+            '<div style="overflow-x:auto;margin:1rem 0 1.5rem;">'
+            + group_table(past_season_rows)
+            + "</div>"
+        )
+    fragment = fragment.replace("{{PILOT_PAST_SEASON_TABLE}}", historical)
     marked = f"{START}\n{fragment.rstrip()}\n{END}"
 
     document = PAGE.read_text()

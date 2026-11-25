@@ -6,12 +6,47 @@ from __future__ import annotations
 import argparse
 import json
 import re
+from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 TEMPLATE = ROOT / "terms/index.html"
 DATA = ROOT / "assets/data/level-crosswalk/v0.1.json"
 OUTPUT = ROOT / "tools/swim-level-crosswalk/index.html"
+
+
+def render_skill_reference(dataset: dict) -> str:
+    """Make the source mappings readable without selecting options or running JavaScript."""
+    band_items = "\n".join(
+        f'<li><strong>{escape(band["id"])} · {escape(band["name"])}</strong> '
+        f'{escape(band["summary"])}</li>'
+        for band in dataset["bands"]
+    )
+    system_references = []
+    for system in dataset["systems"]:
+        level_items = []
+        for level in system["levels"]:
+            first_band = level["band_min"]
+            last_band = level["band_max"]
+            band_range = first_band if first_band == last_band else f"{first_band}–{last_band}"
+            level_items.append(
+                f'<li><strong>{escape(level["name"])}</strong> '
+                f'· {escape(band_range)} · {escape(level["confidence"])} confidence. '
+                f'Age track: {escape(level["age_track"])}.</li>'
+            )
+        levels = "\n".join(level_items)
+        system_references.append(
+            f'<details><summary>{escape(system["name"])}</summary>\n<ul>{levels}</ul></details>'
+        )
+    references = "\n".join(system_references)
+    return f'''
+  <section id="skill-reference" class="skill-reference" aria-labelledby="skill-reference-title">
+    <h2 id="skill-reference-title">Swim lesson skill bands by program</h2>
+    <p>Use the seven bands to read each program’s listings below. Shared bands describe overlapping skills. The receiving school determines placement.</p>
+    <ol>{band_items}</ol>
+    <p>Open a program to see the mapped levels and age tracks. The pilot covers selected levels, so some programs may offer additional classes. Sources checked <time datetime="{escape(dataset["last_verified"])}">{escape(dataset["last_verified"])}</time>.</p>
+    {references}
+  </section>'''
 
 
 def render() -> str:
@@ -91,6 +126,9 @@ def render() -> str:
     .source-list li{margin-bottom:.75rem}
     .data-links{display:flex;flex-wrap:wrap;gap:.65rem;margin:1rem 0}
     .data-links a{display:inline-block;border:1px solid #0284c7;border-radius:999px;padding:.55rem .8rem;font-weight:700;text-decoration:none}
+    .skill-reference ol,.skill-reference ul{padding-inline-start:1.4rem}
+    .skill-reference details{border:1px solid #cbd5e1;border-radius:8px;margin:.55rem 0;padding:0 .85rem}
+    .skill-reference summary{cursor:pointer;min-height:44px;padding:.6rem 0;font-weight:700;color:#075985}
     @media(max-width:700px){.crosswalk-grid{grid-template-columns:1fr}.content{padding:2rem 1rem}.crosswalk-card{padding:1rem}}
     """
     document = document.replace("\n</style>", extra_css + "\n</style>", 1)
@@ -122,6 +160,7 @@ def render() -> str:
     </div>
     <div id="crosswalk-output" aria-live="polite"></div>
   </div>
+{render_skill_reference(dataset)}
   <h2 id="methodology">Methodology and guardrails</h2>
   <ul>
     <li>Only current official provider or curriculum-owner pages are used.</li>
