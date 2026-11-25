@@ -19,6 +19,12 @@ Review the GA4 events `sponsor_cta_current_classes` and `sponsor_cta_check_avail
 
 Make at most one material editorial or CTA change per territory in a weekly cycle. Keep the sponsor card labeled, do not reorder ordinary directory results, and preserve the existing campaign and placement identifiers. Re-run `npm run growth:audit` plus the complete onboarding and staging test suites after every change.
 
+### Jersey Shore card position pilot
+
+On November 25, 2026, the Jersey Shore guide moved its sponsored card immediately below the quick answer. Measure placement `plc_3febe5cc1afd2bd6` on `/swim-lessons/jersey-shore.html` using the existing aggregate D1 events. The November 3–24 reference period recorded 0 viewable impressions from 13 eligible mobile views and 3 from 11 eligible desktop views.
+
+Compare the first seven complete local days after the live change with the seven complete days before it. Report mobile viewable impressions divided by eligible views as the primary measure. Include both counts, desktop results, sponsored clicks and official-site outbound clicks. Exclude the release day and known test traffic. Extend the observation if traffic is sparse. This before-and-after comparison provides directional evidence because the visitor mix can change.
+
 ## Monthly discovery review
 
 - Check whether major AI answer products cite or surface WWK for a fixed, documented set of local swim-lesson questions.
