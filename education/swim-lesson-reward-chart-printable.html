@@ -82,7 +82,24 @@
     .info-line { font-size: 0.9rem; color: #334155; border-bottom: 1.2px dotted #94a3b8; padding: 10px 2px 4px; }
     .info-line strong { color: #0c4a6e; }
     .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin-top: 6px; }
-    @media (max-width: 560px) { .reward-grid, .info-grid { grid-template-columns: 1fr; } }
+    @media screen and (max-width: 560px) { .reward-grid, .info-grid { grid-template-columns: 1fr; } }
+    @page { margin: 0.35in; }
+    @media print {
+      html.wwk-v4 body { padding-bottom: 0 !important; }
+      html .v4-tabbar, html .v4-appbar-search { display: none !important; }
+      .checklist-card { zoom: 0.88; }
+      .cl-header { margin-bottom: 12px; padding-bottom: 8px; }
+      .cl-section { margin-bottom: 12px; }
+      .cl-section-title { margin-bottom: 6px; padding-bottom: 3px; }
+      .reward-grid { gap: 6px 12px; }
+      .reward-cell { padding: 3px 8px; }
+      .reward-circle { width: 28px; height: 28px; }
+      .star-box { height: 36px; width: 34px; }
+      .cl-item { padding: 1px 0; font-size: 0.82rem; }
+      .cl-emergency { margin-top: 10px; padding: 8px 12px; break-inside: avoid; }
+      .info-line { padding-top: 4px; }
+      .cl-footer { display: none; }
+    }
   </style>
 <link rel="stylesheet" href="/assets/css/m-app.css?v=20261009p1" media="(max-width:768px)"><link rel="stylesheet" id="wwk-v4-css" href="/assets/css/wwk-v4.css?v=026care1"><noscript><style>.v4-program-filters{display:none!important}@media(max-width:768px){footer .footer-links{display:flex!important;flex-wrap:wrap;justify-content:center;gap:0 4px;margin:0 0 12px}footer .footer-links a{display:inline-block;min-height:44px;line-height:44px;padding:0 8px}}</style></noscript><script src="/assets/js/wwk-v4.js?v=026care1" defer=""></script></head>
 <body>
@@ -137,24 +154,24 @@
 
       <div class="cl-header">
         <h1>My Swim Lesson Reward Chart</h1>
-        <p class="cl-subtitle">Every brave try in the water is worth celebrating. Add a sticker or color a circle each time you earn a skill — and watch yourself become a stronger, more confident swimmer.</p>
+        <p class="cl-subtitle">Every brave try in the water is worth celebrating. Add a sticker or color a circle each time you show up and try — at your own pace, with your teacher or grown-up close by.</p>
         <p class="cl-brand">WaterWiseKids.com — Free water safety education for families</p>
       </div>
 
       <!-- SECTION 1: SKILL BADGES -->
       <div class="cl-section">
-        <h2 class="cl-section-title">🌟 Skills I’m Earning (sticker or color a circle for each one)</h2>
+        <h2 class="cl-section-title">🌟 Brave Tries I’m Celebrating (sticker or color a circle for each one)</h2>
         <div class="reward-grid">
-          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I got in the water</strong> all by myself</span></div>
-          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I blew big bubbles</strong> in the water</span></div>
-          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I put my face in</strong> and it was okay</span></div>
-          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I kicked my legs</strong> strong and straight</span></div>
-          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I floated on my back</strong> like a starfish</span></div>
-          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I went underwater</strong> and came back up</span></div>
+          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I waited for my grown-up</strong> or teacher before getting in</span></div>
+          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I blew bubbles</strong> my own way</span></div>
+          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I got my face wet</strong> when I felt ready</span></div>
+          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I kicked my legs</strong> and made a splash</span></div>
+          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I floated on my back</strong> with my teacher’s help</span></div>
+          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I held the wall</strong> and kicked</span></div>
           <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I used my arms</strong> to pull through the water</span></div>
           <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I reached the wall</strong> and grabbed on</span></div>
-          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I rolled over to breathe</strong> — swim, float, swim</span></div>
-          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I jumped in</strong> and turned back to the wall</span></div>
+          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I practiced rolling onto my back</strong> with my teacher</span></div>
+          <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I practiced with my teacher</strong> close by</span></div>
           <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I listened to my teacher</strong> the whole lesson</span></div>
           <div class="reward-cell"><div class="reward-circle"></div><span class="reward-label"><strong>I tried something new</strong> even though it felt hard</span></div>
         </div>
@@ -163,7 +180,6 @@
       <!-- SECTION 2: ATTENDANCE STARS -->
       <div class="cl-section">
         <h2 class="cl-section-title">🏊 Lessons I Showed Up For (fill a star for every lesson)</h2>
-        <p style="font-size:0.85rem;color:#475569;margin:2px 0 0;">Showing up is the real superpower — swimmers get better by coming back, not by being perfect. Fill a star after each class.</p>
         <div class="star-row">
           <div class="star-box"><span class="star">★</span><span class="num">1</span></div>
           <div class="star-box"><span class="star">★</span><span class="num">2</span></div>
@@ -184,11 +200,12 @@
       <div class="cl-section">
         <h2 class="cl-section-title">👩‍👧 For Grown-Ups: How to Use This Chart</h2>
         <ul class="cl-items">
-          <li class="cl-item"><div class="cl-checkbox"></div><span><strong>Reward effort, not just results.</strong> "You put your face in — that’s brave!" builds a swimmer faster than "Did you win?"</span></li>
+          <li class="cl-item"><div class="cl-checkbox"></div><span><strong>Reward effort, not just results.</strong> Try “I noticed you tried something new today.”</span></li>
           <li class="cl-item"><div class="cl-checkbox"></div><span><strong>Let your child place the sticker.</strong> Owning the win makes the next lesson something to look forward to.</span></li>
-          <li class="cl-item"><div class="cl-checkbox"></div><span><strong>Celebrate showing up on the tough days.</strong> Consistency — not intensity — is what turns a nervous beginner into a confident, water-safe swimmer.</span></li>
+          <li class="cl-item"><div class="cl-checkbox"></div><span><strong>Celebrate showing up on the tough days.</strong> Consistency — not intensity — is what builds skills and confidence.</span></li>
           <li class="cl-item"><div class="cl-checkbox"></div><span><strong>Keep the reward small and non-food.</strong> Extra pool play, choosing the bedtime story, or a trip to the library keeps motivation healthy.</span></li>
           <li class="cl-item"><div class="cl-checkbox"></div><span><strong>Ask the instructor "what’s next?"</strong> so the chart always has a fresh skill to aim for.</span></li>
+          <li class="cl-item"><div class="cl-checkbox"></div><span><strong>Stay within arm’s reach.</strong> Young children and weak swimmers need close adult supervision, including after swim lessons.</span></li>
         </ul>
       </div>
 
@@ -244,7 +261,7 @@
   <div class="screen-cta" style="--v4-original-order: 5;">
     <div class="screen-cta-card">
       <h2>The Best Reward of All: Knowing How to Swim</h2>
-      <p>Every sticker on this chart adds up to the one skill that protects a child for life. Formal swim lessons reduce drowning risk by up to 88% for children ages 1–4. Find a quality, safety-first program near you.</p>
+      <p>Every sticker celebrates a child who keeps showing up. Swim lessons are one layer of protection, alongside close adult supervision. Find a quality, safety-first program near you.</p>
       <a href="/swim-lessons/" data-cta="swim-lesson-reward-chart-printable-find-lessons">Find Swim Lessons Near You</a>
     </div>
   </div>
