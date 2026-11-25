@@ -441,3 +441,11 @@ main {
         grid-template-columns: 1fr;
       }
     }
+
+/* 2026-11-25 visual QA: the placement-disclosure block reuses .packages, so its
+   bottom padding + margin stacked with the next section's top padding and left a
+   160px (mobile) / 224px (desktop) blank gap above "Advertising Packages". */
+.packages.packages-disclosure {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
