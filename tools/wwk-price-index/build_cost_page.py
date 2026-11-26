@@ -106,6 +106,7 @@ def structured_data(data: dict) -> tuple[str, str]:
         },
         "image": "https://www.waterwisekids.com/assets/images/waterwisekids-og.png",
         "isBasedOn": "https://www.waterwisekids.com/assets/data/price-index/pilot-observations.json",
+        "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".tldr-box", "h1"]},
     }
     dataset = {
         "@context": "https://schema.org",
