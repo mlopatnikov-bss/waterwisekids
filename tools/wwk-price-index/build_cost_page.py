@@ -20,7 +20,7 @@ END = "<!-- WWK_PRICE_INDEX_MAIN_END -->"
 TITLE = "Verified Swim Lesson Prices: Pilot Dataset &amp; Method"
 DESCRIPTION = (
     "A clearly labeled pilot dataset of verified swim-lesson prices and WaterWiseKids' "
-    "transparent method for testing a future U.S. price index. Not a national average."
+    "method for testing a future U.S. price index. Not a national average."
 )
 
 
