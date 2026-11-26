@@ -17,6 +17,13 @@ PAGE = ROOT / "education/swim-lessons-cost.html"
 START = "<!-- WWK_PRICE_INDEX_MAIN_START -->"
 END = "<!-- WWK_PRICE_INDEX_MAIN_END -->"
 
+PROVIDER_TYPE_LABELS = {
+    "chain": "Chain",
+    "independent": "Independent",
+    "municipal": "Municipal",
+    "nonprofit_ymca": "Nonprofit / YMCA",
+}
+
 TITLE = "Verified Swim Lesson Prices: Pilot Dataset &amp; Method"
 DESCRIPTION = (
     "A clearly labeled pilot dataset of verified swim-lesson prices and WaterWiseKids' "
@@ -60,7 +67,7 @@ def group_table(rows: list[dict]) -> str:
             f'<td><a href="{html.escape(row["source_url"], quote=True)}" rel="nofollow">'
             f'{html.escape(row["provider_name"])}</a><br><small>{html.escape(row["location_name"])}, '
             f'{html.escape(row["state"])}</small></td>'
-            f'<td>{html.escape(row["provider_type"].replace("_", " ").title())}</td>'
+            f'<td>{html.escape(PROVIDER_TYPE_LABELS.get(row["provider_type"], row["provider_type"].replace("_", " ").title()))}</td>'
             f'<td>{money(row["normalized_per_lesson_usd"])}</td>'
             f'<td>{per_30}</td>'
             f'<td>{duration}</td>'
