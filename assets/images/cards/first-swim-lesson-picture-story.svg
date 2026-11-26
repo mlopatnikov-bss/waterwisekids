@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" role="img" aria-label="An open picture book showing a child at the edge of a pool next to a smiling sun and a waving teacher">
+  <defs>
+    <linearGradient id="fslps-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/></linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#fslps-bg)"/>
+  <path d="M300 300 Q200 270 80 290 V80 Q200 60 300 90 Z" fill="#ffffff" stroke="#0369a1" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M300 300 Q400 270 520 290 V80 Q400 60 300 90 Z" fill="#ffffff" stroke="#0369a1" stroke-width="6" stroke-linejoin="round"/>
+  <line x1="300" y1="90" x2="300" y2="300" stroke="#0369a1" stroke-width="5"/>
+  <rect x="110" y="190" width="160" height="70" rx="10" fill="#38bdf8" stroke="#0369a1" stroke-width="4"/>
+  <path d="M120 212 q12 -8 24 0 t24 0 t24 0 t24 0 t24 0 t24 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="160" cy="150" r="16" fill="#fed7aa" stroke="#9a3412" stroke-width="4"/>
+  <path d="M160 166 v26 M146 178 h28 M160 192 l-10 16 M160 192 l10 16" stroke="#9a3412" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <circle cx="230" cy="120" r="18" fill="#fde68a" stroke="#d97706" stroke-width="4"/>
+  <path d="M335 130 h150 M335 160 h150 M335 190 h120 M335 220 h140 M335 250 h100" stroke="#94a3b8" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="470" cy="60" r="22" fill="#fff" stroke="#16a34a" stroke-width="5"/>
+  <path d="M460 60 l7 8 l13 -15" fill="none" stroke="#16a34a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
