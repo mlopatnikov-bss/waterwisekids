@@ -515,10 +515,10 @@
     "postal_code": null,
     "precision": "street_number"
    },
-   "official_url": "https://parkboard.org/460/Fassnight-Pool",
-   "hours_fees_url": "https://parkboard.org/460/Fassnight-Pool",
+   "official_url": "https://www.parkboard.org/facilities/facility/details/Fassnight-Pool-5",
+   "hours_fees_url": "https://www.parkboard.org/aquatics",
    "setting": "outdoor",
-   "season": "unknown",
+   "season": "seasonal",
    "access": [
     "public_admission"
    ],
@@ -526,7 +526,7 @@
     {
      "s": "outdoor",
      "e": "open",
-     "season": "unknown",
+     "season": "seasonal",
      "o": {},
      "label": "leisure"
     }
@@ -543,14 +543,14 @@
     {
      "applies_to": "venue",
      "kind": "dates",
-     "text": "Closed for the 2026 season; 2027 dates not yet posted.",
-     "source": "https://parkboard.org/460/Fassnight-Pool"
+     "text": "Closed for the 2026 season. Check the Park Board’s aquatics page for the next season’s schedule.",
+     "source": "https://www.parkboard.org/aquatics"
     }
    ],
    "child_rules": [
     {
      "text": "The fenced splash and kiddie pool area is for children 6 and under.",
-     "source": "https://parkboard.org/460/Fassnight-Pool"
+     "source": "https://www.parkboard.org/facilities/facility/details/Fassnight-Pool-5"
     }
    ],
    "offerings": {
@@ -562,13 +562,15 @@
    "card_note": null,
    "sources": {
     "setting": [
-     "https://parkboard.org/460/Fassnight-Pool",
-     "https://parkboard.org/686/Outdoor-Pools"
+     "https://www.parkboard.org/facilities/facility/details/Fassnight-Pool-5"
     ],
-    "season": [],
+    "season": [
+     "https://www.parkboard.org/facilities/facility/details/Fassnight-Pool-5",
+     "https://www.parkboard.org/aquatics"
+    ],
     "access": {
      "public_admission": [
-      "https://parkboard.org/460/Fassnight-Pool"
+      "https://www.parkboard.org/facilities/facility/details/Fassnight-Pool-5"
      ]
     },
     "offerings": {
@@ -577,10 +579,10 @@
      "lessons": []
     },
     "address": [
-     "https://parkboard.org/460/Fassnight-Pool"
+     "https://www.parkboard.org/facilities/facility/details/Fassnight-Pool-5"
     ]
    },
-   "last_verified": "2026-10-12",
+   "last_verified": "2026-11-27",
    "verification": "official operator website",
    "added_in": "WWK-POOLS-NATIONWIDE-025"
   }
