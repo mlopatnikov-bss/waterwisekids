@@ -35,10 +35,11 @@
   margin-bottom: 16px;
 }
 
+/* Inline flow, not flex: a flex item turned the byline's text node and its
+   editor link into two side-by-side columns that wrapped independently on
+   phones, stranding the "·" separator. Meta items are text-only. */
 .article-meta-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  display: block;
 }
 
 .article h1 {
