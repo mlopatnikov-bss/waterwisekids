@@ -198,7 +198,8 @@ const SWIM_SCHOOLS_DATA = {
         "infant",
         "toddler",
         "preschool",
-        "school-age"
+        "school-age",
+        "adult"
       ],
       "indoor": true,
       "yearRound": true,
@@ -213,7 +214,8 @@ const SWIM_SCHOOLS_DATA = {
       "programs": [
         "toddler",
         "preschool",
-        "school-age"
+        "school-age",
+        "adult"
       ],
       "indoor": true,
       "yearRound": true,

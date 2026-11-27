@@ -582,8 +582,8 @@
     <div class="school-count" id="schoolCount">3 swim schools found in Alaska</div>
     <div class="schools-list" id="schoolsList">
 <div class="school-card" id="school-ymca-alaska-anchorage-ak" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">YMCA Alaska - Anchorage</h3><span class="school-chain">YMCA</span></div></div><div class="school-info"><div><strong>City:</strong> Anchorage, AK</div><div><strong>Address:</strong> 5353 Lake Otis Pkwy, Anchorage, AK 99507</div><div><strong>Phone:</strong> <a href="tel:+19075633211">(907) 563-3211</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://ymcaalaska.org/programs/aquatics/swim-lessons/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
-<div class="school-card" id="school-the-alaska-club-starfish-academy-ak" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">The Alaska Club Starfish Academy</h3><span class="school-chain">The Alaska Club</span></div></div><div class="school-info"><div><strong>City:</strong> Anchorage, AK</div><div>Street address awaiting verification — see school website.</div><div><strong>Phone:</strong> <a href="tel:+19073657393">(907) 365-7393</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.thealaskaclub.com/youth-and-family/starfish-academy-swim-lessons" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
-<div class="school-card" id="school-aquatic-foundation-of-alaska-ak" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Aquatic Foundation of Alaska</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Anchorage, AK</div><div><strong>Address:</strong> 2801 Spirit Way Drive, Anchorage, AK 99508</div><div>Phone awaiting verification — see school website.</div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span></div><div class="school-contact"><a href="https://www.swimyetiswim.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-the-alaska-club-starfish-academy-ak" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">The Alaska Club Starfish Academy</h3><span class="school-chain">The Alaska Club</span></div></div><div class="school-info"><div><strong>City:</strong> Anchorage, AK</div><div>Street address awaiting verification — see school website.</div><div><strong>Phone:</strong> <a href="tel:+19073657393">(907) 365-7393</a></div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">infant</span><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://www.thealaskaclub.com/youth-and-family/starfish-academy-swim-lessons" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
+<div class="school-card" id="school-aquatic-foundation-of-alaska-ak" data-pool-setting="unknown" data-pool-season="unknown"><div class="school-header"><div><h3 class="school-name">Aquatic Foundation of Alaska</h3><span class="school-chain">Independent</span></div></div><div class="school-info"><div><strong>City:</strong> Anchorage, AK</div><div><strong>Address:</strong> 2801 Spirit Way Drive, Anchorage, AK 99508</div><div>Phone awaiting verification — see school website.</div><div class="school-pool-attrs"><strong>Pool:</strong> Indoor/outdoor and season not yet confirmed. Check with the school.</div></div><div class="school-programs"><span class="program-badge">toddler</span><span class="program-badge">preschool</span><span class="program-badge">school-age</span><span class="program-badge">adult</span></div><div class="school-contact"><a href="https://www.swimyetiswim.com/" target="_blank" rel="noopener" class="visit-site-btn">Visit Website →</a></div></div>
 </div>
   </section>
 
@@ -717,7 +717,7 @@
     </div>
   </footer>
 
-  <script src="schools-data.js?v=20261011d017"></script>
+  <script src="schools-data.js?v=20261127ak1"></script>
   <script src="/assets/js/wwk-lesson-attrs.js?v=20261012a1"></script>
   <script>
     const STATE_CODE = "AK";
@@ -818,14 +818,6 @@
     function formatPhone(p) { return /^\+1\d{10}$/.test(p) ? '(' + p.slice(2,5) + ') ' + p.slice(5,8) + '-' + p.slice(8) : p; }
 
     function renderSchoolCard(school) {
-      const programLabels = {
-        'infant': 'Infants',
-        'toddler': 'Toddlers',
-        'preschool': 'Preschool',
-        'school-age': 'School-age',
-        'adult': 'Adults'
-      };
-
       // Show the user's private, browser-local notes
       const allReviews = JSON.parse(localStorage.getItem('swimSchoolReviews') || '{}');
       const storedReviews = allReviews[school.id] || [];
@@ -877,7 +869,7 @@
           </div>
 
           <div class="school-programs">
-            ${school.programs.map(p => `<span class="program-badge">${programLabels[p]}</span>`).join('')}
+            ${school.programs.map(p => `<span class="program-badge">${safeAttr(p)}</span>`).join('')}
           </div>
 
           <div class="school-contact">
