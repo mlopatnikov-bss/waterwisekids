@@ -28565,6 +28565,12 @@
    "conditions": [
     {
      "applies_to": "venue",
+     "kind": "other",
+     "text": "The city listed free public admission for the 2026 swim season. Check the current schedule before visiting.",
+     "source": "https://www.charlestonwv.gov/government/city-departments/parks-recreation"
+    },
+    {
+     "applies_to": "venue",
      "kind": "escort",
      "text": "Children under 12 must be accompanied by an adult.",
      "source": "https://www.charlestonwv.gov/government/city-departments/parks-recreation"
@@ -28653,7 +28659,9 @@
      "s": "outdoor",
      "e": "open",
      "season": "seasonal",
-     "o": {}
+     "o": {
+      "open_swim": "public"
+     }
     }
    ],
    "public_access": "open",
@@ -28711,7 +28719,7 @@
     }
    ],
    "offerings": {
-    "open_swim": "unknown",
+    "open_swim": "yes",
     "lap_swim": "unknown",
     "lessons": "unknown"
    },
@@ -28733,7 +28741,9 @@
      ]
     },
     "offerings": {
-     "open_swim": [],
+     "open_swim": [
+      "https://www.boparc.org/pools.html"
+     ],
      "lap_swim": [],
      "lessons": []
     },
