@@ -369,7 +369,17 @@
     var wrap=doc.querySelector('.v4-program-filters');
     if(!wrap){wrap=el('div',{'class':'v4-program-filters','aria-label':'Filter by listed program'});var labels=['All programs','infant','toddler','preschool','school-age','adult'];labels.forEach(function(label,i){var btn=el('button',{type:'button','class':'v4-chip','data-program':i?label:'','aria-pressed':i?'false':'true'},esc(label));wrap.appendChild(btn);});box.insertAdjacentElement('afterend',wrap);}
     var selected='';
-    function filter(){each(list.querySelectorAll('.school-card'),function(card){var found=!selected;each(card.querySelectorAll('.program-badge'),function(badge){if(badge.textContent.trim().toLowerCase()===selected)found=true;});card.hidden=!found;});}
+    var pluralLabels = { infant: 'infants', toddler: 'toddlers', adult: 'adults' };
+    function filter() {
+      each(list.querySelectorAll('.school-card'), function (card) {
+        var found = !selected;
+        each(card.querySelectorAll('.program-badge'), function (badge) {
+          var label = badge.textContent.trim().toLowerCase();
+          if (label === selected || label === pluralLabels[selected]) found = true;
+        });
+        card.hidden = !found;
+      });
+    }
     wrap.addEventListener('click',function(e){var btn=e.target.closest('[data-program]');if(!btn)return;selected=btn.getAttribute('data-program');each(wrap.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed',x===btn?'true':'false');});filter();});
     if(window.MutationObserver)new MutationObserver(filter).observe(list,{childList:true});
   }
