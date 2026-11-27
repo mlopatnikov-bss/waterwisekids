@@ -596,7 +596,7 @@
    },
    "official_url": "https://sgcityutah.gov/business_detail_T18_R122.php",
    "hours_fees_url": "https://sgcityutah.gov/business_detail_T18_R122.php",
-   "setting": "unknown",
+   "setting": "outdoor",
    "season": "seasonal",
    "access": [
     "public_admission",
@@ -604,7 +604,7 @@
    ],
    "components": [
     {
-     "s": "unknown",
+     "s": "outdoor",
      "e": "open",
      "season": "seasonal",
      "o": {
@@ -654,7 +654,7 @@
     {
      "applies_to": "venue",
      "kind": "dates",
-     "text": "Summer season only; open swim ran May 22 to September 7 on the current schedule.",
+     "text": "Seasonal. Check the city’s current open swim and lap swim schedules before planning a visit.",
      "source": "https://sgcityutah.gov/business_detail_T18_R122.php"
     },
     {
@@ -678,7 +678,9 @@
    "offering_details": {},
    "card_note": null,
    "sources": {
-    "setting": [],
+    "setting": [
+     "https://sgcityutah.gov/Documents/Departments/Parks%20and%20Community%20Services/Parks%20Planning/parksrecreationartstrailsmasterplan2019.pdf"
+    ],
     "season": [
      "https://sgcityutah.gov/business_detail_T18_R122.php"
     ],
