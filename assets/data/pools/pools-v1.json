@@ -14311,14 +14311,14 @@
    },
    "official_url": "https://www.cityofhastings.org/parks/hastings-aquacourt",
    "hours_fees_url": "https://www.cityofhastings.org/departments/parks-and-recreation/aquatics/rates.html",
-   "setting": "unknown",
+   "setting": "outdoor",
    "season": "seasonal",
    "access": [
     "public_admission"
    ],
    "components": [
     {
-     "s": "unknown",
+     "s": "outdoor",
      "e": "open",
      "season": "seasonal",
      "o": {
@@ -14364,7 +14364,9 @@
    "offering_details": {},
    "card_note": null,
    "sources": {
-    "setting": [],
+    "setting": [
+     "https://www.cityofhastings.org/departments/parks-and-recreation/aquatics/"
+    ],
     "season": [
      "https://www.cityofhastings.org/departments/parks-and-recreation/aquatics/rates.html",
      "https://www.cityofhastings.org/parks/hastings-aquacourt"
@@ -14412,16 +14414,16 @@
    },
    "official_url": "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Star-City-Shores-Aquatic-Center",
    "hours_fees_url": "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Fees-and-Passes",
-   "setting": "unknown",
-   "season": "unknown",
+   "setting": "outdoor",
+   "season": "seasonal",
    "access": [
     "public_admission"
    ],
    "components": [
     {
-     "s": "unknown",
+     "s": "outdoor",
      "e": "open",
-     "season": "unknown",
+     "season": "seasonal",
      "o": {
       "lessons": "unknown"
      }
@@ -14477,8 +14479,12 @@
    "offering_details": {},
    "card_note": null,
    "sources": {
-    "setting": [],
-    "season": [],
+    "setting": [
+     "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Parks-A-to-Z"
+    ],
+    "season": [
+     "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Star-City-Shores-Aquatic-Center"
+    ],
     "access": {
      "public_admission": [
       "https://www.lincoln.ne.gov/City/Departments/Parks-and-Recreation/Parks-Facilities/Public-Pools/Fees-and-Passes",
